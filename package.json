@@ -2,6 +2,7 @@
   "name": "pokopia-guide",
   "version": "0.1.0",
   "description": "RAG-powered Pokopia guide app with AI chat, maps, Pokédex, and habitat builder",
+  "type": "module",
   "scripts": {
     "scrape:habitats": "tsx scrapers/habitats.ts",
     "scrape:pokedex": "tsx scrapers/pokedex.ts",
@@ -9,6 +10,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "puppeteer": "^22.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
   },
   "keywords": ["pokopia", "pokemon", "guide", "rag", "ai"],
   "author": "Beck",

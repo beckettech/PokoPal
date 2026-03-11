@@ -1,0 +1,69 @@
+{
+  "scrapedAt": "2026-03-11T02:27:28.127Z",
+  "source": "https://game8.co/games/Pokemon-Pokopia/archives/578286",
+  "totalPokemon": 6,
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "types": [
+        "Grass",
+        "Poison"
+      ],
+      "generation": 1,
+      "source": "https://game8.co/games/Pokemon-Pokopia/archives/584907"
+    },
+    {
+      "id": 4,
+      "name": "Charmander",
+      "types": [
+        "Fire"
+      ],
+      "generation": 1,
+      "source": "https://game8.co/games/Pokemon-Pokopia/archives/584910"
+    },
+    {
+      "id": 7,
+      "name": "Squirtle",
+      "types": [
+        "Water"
+      ],
+      "generation": 1,
+      "source": "https://game8.co/games/Pokemon-Pokopia/archives/584912"
+    },
+    {
+      "id": 25,
+      "name": "Pikachu",
+      "types": [
+        "Electric"
+      ],
+      "generation": 1,
+      "source": "https://game8.co/games/Pokemon-Pokopia/archives/585510"
+    },
+    {
+      "id": 152,
+      "name": "Chikorita",
+      "types": [
+        "Grass"
+      ],
+      "generation": 2,
+      "source": "https://game8.co/games/Pokemon-Pokopia/archives/584913"
+    },
+    {
+      "id": 252,
+      "name": "Treecko",
+      "types": [
+        "Grass"
+      ],
+      "generation": 3,
+      "source": "https://game8.co/games/Pokemon-Pokopia/archives/584914"
+    }
+  ],
+  "notes": [
+    "Each Pokémon has individual page on Game8",
+    "Pages include: types, habitat, specialty, moves",
+    "300 total Pokémon from Gen 1-9",
+    "No Shiny Pokémon in Pokopia",
+    "No battles/evolution - only befriending"
+  ]
+}
