@@ -1,0 +1,210 @@
+{
+  "source": "Eurogamer - https://www.eurogamer.net/pokemon-pokopia-habitat-dex",
+  "scrapedAt": "2026-03-10",
+  "totalHabitats": 209,
+  "habitats": [
+    {
+      "id": 1,
+      "name": "Tall Grass",
+      "items": [
+        { "name": "Tall Grass", "quantity": 4 }
+      ],
+      "pokemon": [
+        { "name": "Bulbasaur" },
+        { "name": "Squirtle" },
+        { "name": "Geodude", "location": "Palette Town" },
+        { "name": "Charmander" },
+        { "name": "Oddish" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Tree-shaded Tall Grass",
+      "items": [
+        { "name": "Large Tree (Any)", "quantity": 1 },
+        { "name": "Tall Grass", "quantity": 4 }
+      ],
+      "pokemon": [
+        { "name": "Scyther" },
+        { "name": "Scizor", "location": "Palette Town" },
+        { "name": "Pinsir" },
+        { "name": "Bellsprout" },
+        { "name": "Skwovet", "location": "Palette Town" },
+        { "name": "Heracross" }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Illuminated Tall Grass",
+      "items": [
+        { "name": "Tall Grass", "quantity": 4 },
+        { "name": "Lighting (Any)", "quantity": 1 }
+      ],
+      "pokemon": [
+        { "name": "Venonat" },
+        { "name": "Venomoth" }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Pretty Flower Bed",
+      "items": [
+        { "name": "Wildflowers", "quantity": 4 }
+      ],
+      "pokemon": [
+        { "name": "Pidgey" },
+        { "name": "Pidgeotto" },
+        { "name": "Combee" },
+        { "name": "Eevee" },
+        { "name": "Magby" },
+        { "name": "Hoothoot" }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Fresh Veggie Field",
+      "items": [
+        { "name": "Vegetable Field (Any)", "quantity": 8 }
+      ],
+      "pokemon": [
+        { "name": "Drilbur" },
+        { "name": "Excadrill" },
+        { "name": "Rowlet", "location": "Palette Town" }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Berry-feast Campsite",
+      "items": [
+        { "name": "Castform Weather Charm (Sun)", "quantity": 2 },
+        { "name": "Bonfire (Lit)", "quantity": 1 },
+        { "name": "Berry Basket", "quantity": 1 },
+        { "name": "High-up Location", "quantity": 1 }
+      ],
+      "pokemon": [
+        { "name": "Charizard" }
+      ]
+    },
+    {
+      "id": 137,
+      "name": "Pink Tall Grass",
+      "items": [
+        { "name": "Pink Tall Grass", "quantity": 4 }
+      ],
+      "pokemon": [
+        { "name": "Trapinch" },
+        { "name": "Vibrava" },
+        { "name": "Flygon" },
+        { "name": "Duskull" },
+        { "name": "Swablu" }
+      ]
+    },
+    {
+      "id": 202,
+      "name": "Boundless Blue Beverage",
+      "items": [
+        { "name": "Seat (Any)", "quantity": 1 },
+        { "name": "Table (Any)", "quantity": 1 },
+        { "name": "Soda Float", "quantity": 1 }
+      ],
+      "pokemon": [
+        { "name": "Vaporeon" }
+      ]
+    },
+    {
+      "id": 203,
+      "name": "Electrifying Potatoes",
+      "items": [
+        { "name": "Seat (Any)", "quantity": 1 },
+        { "name": "Table (Any)", "quantity": 1 },
+        { "name": "Fried Potatoes", "quantity": 1 }
+      ],
+      "pokemon": [
+        { "name": "Jolteon" }
+      ]
+    },
+    {
+      "id": 204,
+      "name": "Burning-hot Spice",
+      "items": [
+        { "name": "Seat (Any)", "quantity": 1 },
+        { "name": "Table (Any)", "quantity": 1 },
+        { "name": "Pizza", "quantity": 1 }
+      ],
+      "pokemon": [
+        { "name": "Flareon" }
+      ]
+    },
+    {
+      "id": 205,
+      "name": "Elegant Daytime Treats",
+      "items": [
+        { "name": "Seat (Any)", "quantity": 1 },
+        { "name": "Table (Any)", "quantity": 1 },
+        { "name": "Afternoon Tea Set", "quantity": 1 }
+      ],
+      "pokemon": [
+        { "name": "Espeon" }
+      ]
+    },
+    {
+      "id": 206,
+      "name": "Dark-chocolate Cookies",
+      "items": [
+        { "name": "Seat (Any)", "quantity": 1 },
+        { "name": "Table (Any)", "quantity": 1 },
+        { "name": "Chocolate Cookies", "quantity": 1 }
+      ],
+      "pokemon": [
+        { "name": "Umbreon" }
+      ]
+    },
+    {
+      "id": 207,
+      "name": "Leafy Greens Sandwich",
+      "items": [
+        { "name": "Seat (Any)", "quantity": 1 },
+        { "name": "Table (Any)", "quantity": 1 },
+        { "name": "Sandwiches", "quantity": 1 }
+      ],
+      "pokemon": [
+        { "name": "Leafeon" }
+      ]
+    },
+    {
+      "id": 208,
+      "name": "Chilly Shaved Ice",
+      "items": [
+        { "name": "Seat (Any)", "quantity": 1 },
+        { "name": "Table (Any)", "quantity": 1 },
+        { "name": "Shaved Ice", "quantity": 1 }
+      ],
+      "pokemon": [
+        { "name": "Glaceon" }
+      ]
+    },
+    {
+      "id": 209,
+      "name": "Lovely Ribbon Cake",
+      "items": [
+        { "name": "Seat (Any)", "quantity": 1 },
+        { "name": "Table (Any)", "quantity": 1 },
+        { "name": "Ribbon Cake", "quantity": 1 }
+      ],
+      "pokemon": [
+        { "name": "Sylveon" }
+      ]
+    }
+  ],
+  "notes": {
+    "tbaHabitats": [146, 154],
+    "paletteTownExclusives": "Some Pokémon only spawn in Palette Town region",
+    "habitatCategories": [
+      "Tall Grass (Tall, Yellow, Red, Pink)",
+      "Flower Beds (Pretty, Tree-shaded, Hydrated, Field, Elevated, Graceful, Fluffy)",
+      "Fishing Spots (Ocean, Marsh, Hot-spring, Magma)",
+      "Fossil Displays (8 types)",
+      "Eeveelution Food Habitats (8 types)"
+    ]
+  }
+}
