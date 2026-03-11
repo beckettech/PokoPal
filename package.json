@@ -9,7 +9,8 @@
     "scrape:all": "tsx scrapers/index.ts",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next build"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
@@ -20,7 +21,7 @@
     "tsx": "^4.0.0",
     "typescript": "^5.0.0"
   },
-  "keywords": ["pokopia", "pokemon", "guide", "rag", "ai"],
+  "keywords": ["pokopia", "pokemon", "guide", "ai"],
   "author": "Beck",
   "license": "MIT"
 }
