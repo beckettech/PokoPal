@@ -1,7 +1,7 @@
 'use client'
 
 import { useAppStore } from "@/lib/store";
-import { pokemonList as pokemonData, Pokemon } from "@/lib/pokemon-data";
+import { pokemonList } from "@/lib/pokemon-data";
 import { ArrowLeft, Search, Plus, X, Eye, EyeOff, Check, Zap, MapPin, Home, Clock, Sun } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
