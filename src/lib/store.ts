@@ -24,6 +24,14 @@ interface Pokemon {
 interface AppState {
   currentPage: Page;
   setCurrentPage: (page: Page) => void;
+  // Deep-link: navigate to a page and open a specific item
+  navigateToPokemon: (pokemonId: number) => void;
+  navigateToHabitat: (habitatId: number) => void;
+  navigateToLocation: (locationId: string) => void;
+  focusedPokemonId: number | null;
+  focusedHabitatId: number | null;
+  focusedLocationId: string | null;
+  clearFocus: () => void;
   coins: number;
   addCoins: (amount: number) => void;
   spendCoins: (amount: number) => boolean;
@@ -38,6 +46,13 @@ interface AppState {
 export const useAppStore = create<AppState>()((set, get) => ({
   currentPage: "home",
   setCurrentPage: (page) => set({ currentPage: page }),
+  focusedPokemonId: null,
+  focusedHabitatId: null,
+  focusedLocationId: null,
+  navigateToPokemon: (pokemonId) => set({ currentPage: "dex", focusedPokemonId: pokemonId, focusedHabitatId: null, focusedLocationId: null }),
+  navigateToHabitat: (habitatId) => set({ currentPage: "habitat-dex", focusedHabitatId: habitatId, focusedPokemonId: null, focusedLocationId: null }),
+  navigateToLocation: (locationId) => set({ currentPage: "map", focusedLocationId: locationId, focusedPokemonId: null, focusedHabitatId: null }),
+  clearFocus: () => set({ focusedPokemonId: null, focusedHabitatId: null, focusedLocationId: null }),
   coins: 100,
   addCoins: (amount) => set((state) => ({ coins: state.coins + amount })),
   spendCoins: (amount) => {

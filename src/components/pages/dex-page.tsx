@@ -2,7 +2,7 @@
 
 import { useAppStore } from "@/lib/store";
 import { pokemonList as pokemonData, Pokemon } from "@/lib/pokemon-data";
-import { ArrowLeft, Search, Plus, X, Eye, EyeOff, Check, Zap, MapPin, Home } from "lucide-react";
+import { ArrowLeft, Search, Plus, X, Eye, EyeOff, Check, Zap, MapPin, Home, Clock, Sun } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import specialtiesData from "@/data/scraped/specialties.json";
@@ -45,11 +45,22 @@ const LOCATION_COLORS: Record<string, string> = {
 const rarities = ["Common", "Rare", "Legendary"] as const;
 
 export function DexPage() {
-  const { setCurrentPage, capturedPokemon, toggleCapturedPokemon } = useAppStore();
+  const { setCurrentPage, capturedPokemon, toggleCapturedPokemon, navigateToHabitat, navigateToLocation, focusedPokemonId, clearFocus } = useAppStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedRarity, setSelectedRarity] = useState<string | null>(null);
   const [friendFilter, setFriendFilter] = useState<"all" | "friends" | "unseen">("all");
-  const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(null);
+  const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(() => {
+    // Auto-open focused pokemon on mount
+    if (focusedPokemonId !== null) {
+      return pokemonData.find(p => p.id === focusedPokemonId) ?? null;
+    }
+    return null;
+  });
+
+  // Clear focus after opening
+  if (focusedPokemonId !== null) {
+    clearFocus();
+  }
 
   const filteredPokemon = pokemonData.filter(pokemon => {
     const matchesSearch = pokemon.name.toLowerCase().includes(searchQuery.toLowerCase());
@@ -367,11 +378,11 @@ export function DexPage() {
                 <div className="text-center mb-4">
                   <p className="text-xs text-gray-400 font-mono">#{String(selectedPokemon.nationalDex).padStart(3, '0')}</p>
                   <h2 className="text-2xl font-bold text-gray-800">{selectedPokemon.name}</h2>
-                  <div className="flex items-center justify-center gap-1.5 mt-1">
-                    {selectedPokemon.types.map(t => (
-                      <span key={t} className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{t}</span>
-                    ))}
-                  </div>
+                  <span className={`text-xs font-medium mt-1 inline-block px-2 py-0.5 rounded-full ${
+                    selectedPokemon.rarity === 'Legendary' ? 'bg-amber-100 text-amber-700' :
+                    selectedPokemon.rarity === 'Rare' ? 'bg-purple-100 text-purple-700' :
+                    'bg-gray-100 text-gray-600'
+                  }`}>{selectedPokemon.rarity}</span>
                 </div>
 
                 {/* Friend Toggle Button */}
@@ -439,18 +450,21 @@ export function DexPage() {
                     <div className="space-y-1.5">
                       {LOCATION_ORDER
                         .filter(loc => selectedPokemon.locations!.includes(loc))
-                        .map(location => (
-                          <motion.button
-                            key={location}
-                            onClick={() => { setSelectedPokemon(null); setCurrentPage("map"); }}
-                            whileTap={{ scale: 0.97 }}
-                            className={`w-full flex items-center gap-2 px-3 py-2 rounded-xl border text-left ${LOCATION_COLORS[location] || 'bg-gray-100 text-gray-700 border-gray-200'}`}
-                          >
-                            <MapPin className="w-3.5 h-3.5 shrink-0" />
-                            <span className="text-sm font-medium flex-1">{location}</span>
-                            <span className="text-[10px] opacity-60">→ Map</span>
-                          </motion.button>
-                        ))}
+                        .map(location => {
+                          const locId = location.toLowerCase().replace(/\s/g, '').replace(/'/g, '');
+                          return (
+                            <motion.button
+                              key={location}
+                              onClick={() => { setSelectedPokemon(null); navigateToLocation(locId); }}
+                              whileTap={{ scale: 0.97 }}
+                              className={`w-full flex items-center gap-2 px-3 py-2 rounded-xl border text-left ${LOCATION_COLORS[location] || 'bg-gray-100 text-gray-700 border-gray-200'}`}
+                            >
+                              <MapPin className="w-3.5 h-3.5 shrink-0" />
+                              <span className="text-sm font-medium flex-1">{location}</span>
+                              <span className="text-[10px] opacity-60">→ Map</span>
+                            </motion.button>
+                          );
+                        })}
                     </div>
                   </div>
                 )}
@@ -467,7 +481,7 @@ export function DexPage() {
                         return (
                           <motion.button
                             key={i}
-                            onClick={() => { setSelectedPokemon(null); setCurrentPage("habitat-dex"); }}
+                            onClick={() => { setSelectedPokemon(null); navigateToHabitat(hab.id); }}
                             whileTap={{ scale: 0.97 }}
                             className="flex flex-col overflow-hidden rounded-xl border border-emerald-100 bg-emerald-50 text-left"
                           >
@@ -494,12 +508,15 @@ export function DexPage() {
                   </div>
                 )}
 
-                {/* Conditions */}
+                {/* Spawn Conditions */}
                 {selectedPokemon.conditions && selectedPokemon.conditions.length > 0 && (
-                  <div className="mb-4">
-                    <h3 className="font-bold text-gray-700 text-sm mb-2">Befriend Conditions</h3>
+                  <div className="mb-5">
+                    <h3 className="font-bold text-gray-700 text-sm mb-2">Spawn Conditions Needed:</h3>
                     <div className="flex flex-wrap gap-1">
-                      {selectedPokemon.conditions.map((condition, i) => (
+                      {selectedPokemon.conditions.filter(c => {
+                        const lower = c.toLowerCase();
+                        return lower.includes('time') || lower.includes('weather') || lower.includes('sunny') || lower.includes('rain') || lower.includes('night') || lower.includes('day');
+                      }).map((condition, i) => (
                         <span key={i} className="text-xs px-3 py-1.5 bg-orange-100 text-orange-700 rounded-full border border-orange-200">
                           {condition}
                         </span>
