@@ -658,3 +658,34 @@ export const mysteryGifts: MysteryGift[] = [
   { id: 2, name: "Daily Login Bonus", description: "50 Dexter Coins for logging in today!", type: "currency", expiresAt: "Daily reset", claimed: false },
   { id: 3, name: "Rare Habitat Pack", description: "Contains materials for building a Mossy Rest Spot habitat.", type: "item", expiresAt: "March 20, 2026", claimed: true },
 ];
+
+// Specialty icon helper
+const SPECIALTY_BASE = "https://www.serebii.net/pokemonpokopia/pokedex/specialty";
+
+// Normalize specialty names to match Serebii icon filenames
+function normalizeSpecialtyName(specialty: string): string {
+  return specialty.toLowerCase()
+    .replace(/[^a-z0-9]/g, '')
+    .replace('gatherhoney', 'gatherhoney');
+}
+
+/**
+ * Get the specialty icon URL for a given specialty name
+ * @param specialty - The specialty name (e.g., "Burn", "Gather", "Fly")
+ * @returns The full URL to the specialty icon, or empty string if not found
+ */
+export function getSpecialtyIcon(specialty: string): string {
+  const normalized = normalizeSpecialtyName(specialty);
+  return `${SPECIALTY_BASE}/${normalized}.png`;
+}
+
+/**
+ * Get all specialty icon URLs for a list of specialties
+ * @param specialties - Array of specialty names
+ * @returns Array of icon URLs
+ */
+export function getSpecialtyIcons(specialties: string[]): string[] {
+  return specialties
+    .filter(s => s && s.trim().length > 0)
+    .map(getSpecialtyIcon);
+}

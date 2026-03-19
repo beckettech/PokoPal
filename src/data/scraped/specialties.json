@@ -2,218 +2,1932 @@
   {
     "name": "Appraise",
     "slug": "appraise",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/appraise.png",
     "description": "You can show lost relics you've found to Professor Tangrowth, who will appraise them for you",
     "pokemon": []
   },
   {
     "name": "Build",
     "slug": "build",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/build.png",
     "description": "Pok&eacute;mon with the Build specialty will lead your building projects",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Nidoqueen",
+        "slug": "nidoqueen"
+      },
+      {
+        "name": "Nidoking",
+        "slug": "nidoking"
+      },
+      {
+        "name": "Mankey",
+        "slug": "mankey"
+      },
+      {
+        "name": "Primeape",
+        "slug": "primeape"
+      },
+      {
+        "name": "Poliwrath",
+        "slug": "poliwrath"
+      },
+      {
+        "name": "Machop",
+        "slug": "machop"
+      },
+      {
+        "name": "Machoke",
+        "slug": "machoke"
+      },
+      {
+        "name": "Machamp",
+        "slug": "machamp"
+      },
+      {
+        "name": "Onix",
+        "slug": "onix"
+      },
+      {
+        "name": "Hitmonlee",
+        "slug": "hitmonlee"
+      },
+      {
+        "name": "Hitmonchan",
+        "slug": "hitmonchan"
+      },
+      {
+        "name": "Rhydon",
+        "slug": "rhydon"
+      },
+      {
+        "name": "Kangaskhan",
+        "slug": "kangaskhan"
+      },
+      {
+        "name": "Mr. Mime",
+        "slug": "mr.mime"
+      },
+      {
+        "name": "Sudowoodo",
+        "slug": "sudowoodo"
+      },
+      {
+        "name": "Pineco",
+        "slug": "pineco"
+      },
+      {
+        "name": "Forretress",
+        "slug": "forretress"
+      },
+      {
+        "name": "Steelix",
+        "slug": "steelix"
+      },
+      {
+        "name": "Granbull",
+        "slug": "granbull"
+      },
+      {
+        "name": "Scizor",
+        "slug": "scizor"
+      },
+      {
+        "name": "Heracross",
+        "slug": "heracross"
+      },
+      {
+        "name": "Corsola",
+        "slug": "corsola"
+      },
+      {
+        "name": "Skarmory",
+        "slug": "skarmory"
+      },
+      {
+        "name": "Tyrogue",
+        "slug": "tyrogue"
+      },
+      {
+        "name": "Hitmontop",
+        "slug": "hitmontop"
+      },
+      {
+        "name": "Tyranitar",
+        "slug": "tyranitar"
+      },
+      {
+        "name": "Combusken",
+        "slug": "combusken"
+      },
+      {
+        "name": "Blaziken",
+        "slug": "blaziken"
+      },
+      {
+        "name": "Breloom",
+        "slug": "breloom"
+      },
+      {
+        "name": "Vigoroth",
+        "slug": "vigoroth"
+      },
+      {
+        "name": "Makuhita",
+        "slug": "makuhita"
+      },
+      {
+        "name": "Hariyama",
+        "slug": "hariyama"
+      }
+    ]
   },
   {
     "name": "Bulldoze",
     "slug": "bulldoze",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/bulldoze.png",
     "description": "Pok&eacute;mon with the Bulldoze specialty can lead your demolition, rebuilding or relocation projects",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Sandshrew",
+        "slug": "sandshrew"
+      },
+      {
+        "name": "Sandslash",
+        "slug": "sandslash"
+      },
+      {
+        "name": "Nidoqueen",
+        "slug": "nidoqueen"
+      },
+      {
+        "name": "Nidoking",
+        "slug": "nidoking"
+      },
+      {
+        "name": "Diglett",
+        "slug": "diglett"
+      },
+      {
+        "name": "Dugtrio",
+        "slug": "dugtrio"
+      },
+      {
+        "name": "Machamp",
+        "slug": "machamp"
+      },
+      {
+        "name": "Geodude",
+        "slug": "geodude"
+      },
+      {
+        "name": "Graveler",
+        "slug": "graveler"
+      },
+      {
+        "name": "Golem",
+        "slug": "golem"
+      },
+      {
+        "name": "Onix",
+        "slug": "onix"
+      },
+      {
+        "name": "Cubone",
+        "slug": "cubone"
+      },
+      {
+        "name": "Marowak",
+        "slug": "marowak"
+      },
+      {
+        "name": "Rhyhorn",
+        "slug": "rhyhorn"
+      },
+      {
+        "name": "Rhydon",
+        "slug": "rhydon"
+      },
+      {
+        "name": "Tauros",
+        "slug": "tauros"
+      },
+      {
+        "name": "Aerodactyl",
+        "slug": "aerodactyl"
+      },
+      {
+        "name": "Dunsparce",
+        "slug": "dunsparce"
+      },
+      {
+        "name": "Steelix",
+        "slug": "steelix"
+      },
+      {
+        "name": "Piloswine",
+        "slug": "piloswine"
+      },
+      {
+        "name": "Phanpy",
+        "slug": "phanpy"
+      },
+      {
+        "name": "Donphan",
+        "slug": "donphan"
+      },
+      {
+        "name": "Larvitar",
+        "slug": "larvitar"
+      },
+      {
+        "name": "Pupitar",
+        "slug": "pupitar"
+      },
+      {
+        "name": "Tyranitar",
+        "slug": "tyranitar"
+      },
+      {
+        "name": "Marshtomp",
+        "slug": "marshtomp"
+      },
+      {
+        "name": "Swampert",
+        "slug": "swampert"
+      },
+      {
+        "name": "Nincada",
+        "slug": "nincada"
+      }
+    ]
   },
   {
     "name": "Burn",
     "slug": "burn",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/burn.png",
     "description": "Pok&eacute;mon with the Burn specialty can set fire to Flammable objects. They can also turn Squish clay into Brick",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Charmander",
+        "slug": "charmander"
+      },
+      {
+        "name": "Charmeleon",
+        "slug": "charmeleon"
+      },
+      {
+        "name": "Charizard",
+        "slug": "charizard"
+      },
+      {
+        "name": "Vulpix",
+        "slug": "vulpix"
+      },
+      {
+        "name": "Ninetales",
+        "slug": "ninetales"
+      },
+      {
+        "name": "Growlithe",
+        "slug": "growlithe"
+      },
+      {
+        "name": "Arcanine",
+        "slug": "arcanine"
+      },
+      {
+        "name": "Ponyta",
+        "slug": "ponyta"
+      },
+      {
+        "name": "Rapidash",
+        "slug": "rapidash"
+      },
+      {
+        "name": "Magmar",
+        "slug": "magmar"
+      },
+      {
+        "name": "Flareon",
+        "slug": "flareon"
+      },
+      {
+        "name": "Moltres",
+        "slug": "moltres"
+      },
+      {
+        "name": "Cyndaquil",
+        "slug": "cyndaquil"
+      },
+      {
+        "name": "Quilava",
+        "slug": "quilava"
+      },
+      {
+        "name": "Typhlosion",
+        "slug": "typhlosion"
+      },
+      {
+        "name": "Slugma",
+        "slug": "slugma"
+      },
+      {
+        "name": "Magcargo",
+        "slug": "magcargo"
+      },
+      {
+        "name": "Houndour",
+        "slug": "houndour"
+      },
+      {
+        "name": "Houndoom",
+        "slug": "houndoom"
+      },
+      {
+        "name": "Magby",
+        "slug": "magby"
+      },
+      {
+        "name": "Entei",
+        "slug": "entei"
+      },
+      {
+        "name": "Ho-Oh",
+        "slug": "ho-oh"
+      },
+      {
+        "name": "Torchic",
+        "slug": "torchic"
+      },
+      {
+        "name": "Combusken",
+        "slug": "combusken"
+      },
+      {
+        "name": "Blaziken",
+        "slug": "blaziken"
+      }
+    ]
   },
   {
     "name": "Chop",
     "slug": "chop",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/chop.png",
     "description": "Pok&eacute;mon with the Chop specialty can process small logs into lumber",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Charmeleon",
+        "slug": "charmeleon"
+      },
+      {
+        "name": "Beedrill",
+        "slug": "beedrill"
+      },
+      {
+        "name": "Raticate",
+        "slug": "raticate"
+      },
+      {
+        "name": "Sandslash",
+        "slug": "sandslash"
+      },
+      {
+        "name": "Parasect",
+        "slug": "parasect"
+      },
+      {
+        "name": "Machop",
+        "slug": "machop"
+      },
+      {
+        "name": "Machoke",
+        "slug": "machoke"
+      },
+      {
+        "name": "Machamp",
+        "slug": "machamp"
+      },
+      {
+        "name": "Weepinbell",
+        "slug": "weepinbell"
+      },
+      {
+        "name": "Victreebel",
+        "slug": "victreebel"
+      },
+      {
+        "name": "Farfetch'd",
+        "slug": "farfetch'd"
+      },
+      {
+        "name": "Krabby",
+        "slug": "krabby"
+      },
+      {
+        "name": "Kingler",
+        "slug": "kingler"
+      },
+      {
+        "name": "Exeggutor",
+        "slug": "exeggutor"
+      },
+      {
+        "name": "Marowak",
+        "slug": "marowak"
+      },
+      {
+        "name": "Scyther",
+        "slug": "scyther"
+      },
+      {
+        "name": "Pinsir",
+        "slug": "pinsir"
+      },
+      {
+        "name": "Kabutops",
+        "slug": "kabutops"
+      },
+      {
+        "name": "Scizor",
+        "slug": "scizor"
+      },
+      {
+        "name": "Heracross",
+        "slug": "heracross"
+      },
+      {
+        "name": "Ursaring",
+        "slug": "ursaring"
+      },
+      {
+        "name": "Grovyle",
+        "slug": "grovyle"
+      },
+      {
+        "name": "Sceptile",
+        "slug": "sceptile"
+      },
+      {
+        "name": "Nuzleaf",
+        "slug": "nuzleaf"
+      },
+      {
+        "name": "Shiftry",
+        "slug": "shiftry"
+      }
+    ]
   },
   {
     "name": "Collect",
     "slug": "collect",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/collect.png",
     "description": "Pok&eacute;mon with the Collect specialty will trade you rare things for certain items",
     "pokemon": []
   },
   {
     "name": "Crush",
     "slug": "crush",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/crush.png",
     "description": "Pok&eacute;mon with the Crush specialty can mash materials into different things",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Geodude",
+        "slug": "geodude"
+      },
+      {
+        "name": "Graveler",
+        "slug": "graveler"
+      },
+      {
+        "name": "Golem",
+        "slug": "golem"
+      },
+      {
+        "name": "Kingler",
+        "slug": "kingler"
+      },
+      {
+        "name": "Rhyhorn",
+        "slug": "rhyhorn"
+      },
+      {
+        "name": "Rhydon",
+        "slug": "rhydon"
+      },
+      {
+        "name": "Pinsir",
+        "slug": "pinsir"
+      },
+      {
+        "name": "Omastar",
+        "slug": "omastar"
+      },
+      {
+        "name": "Feraligatr",
+        "slug": "feraligatr"
+      },
+      {
+        "name": "Octillery",
+        "slug": "octillery"
+      },
+      {
+        "name": "Larvitar",
+        "slug": "larvitar"
+      },
+      {
+        "name": "Pupitar",
+        "slug": "pupitar"
+      },
+      {
+        "name": "Tyranitar",
+        "slug": "tyranitar"
+      }
+    ]
   },
   {
     "name": "Dj",
     "slug": "dj",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/dj.png",
     "description": "DJ Rotom can use the DJ specialty to play music CDs for you",
     "pokemon": []
   },
   {
     "name": "Dreamisland",
     "slug": "dreamisland",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/dreamisland.png",
     "description": "Pok&eacute;mon with the Dream Island specialty can transport you to a Dream Island",
     "pokemon": []
   },
   {
     "name": "Eat",
     "slug": "eat",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/eat.png",
     "description": "Mosslax has the Eat specialty. Something good may happen if you offer them food",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Snorlax",
+        "slug": "snorlax"
+      }
+    ]
   },
   {
     "name": "Engineer",
     "slug": "engineer",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/engineer.png",
     "description": "Tinkmaster has the Engineer specialty and can lead huge building projects",
     "pokemon": []
   },
   {
     "name": "Explode",
     "slug": "explode",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/explode.png",
     "description": "Pok&eacute;mon with the Explode specialty can be fired out of a cannon, destroying everything around them on impact",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Golem",
+        "slug": "golem"
+      },
+      {
+        "name": "Voltorb",
+        "slug": "voltorb"
+      },
+      {
+        "name": "Electrode",
+        "slug": "electrode"
+      },
+      {
+        "name": "Forretress",
+        "slug": "forretress"
+      }
+    ]
   },
   {
     "name": "Fly",
     "slug": "fly",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/fly.png",
     "description": "Pok&eacute;mon with the Fly spceialty can fly you to a Pok&eacute;mon you're searching fo",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Charizard",
+        "slug": "charizard"
+      },
+      {
+        "name": "Butterfree",
+        "slug": "butterfree"
+      },
+      {
+        "name": "Pidgey",
+        "slug": "pidgey"
+      },
+      {
+        "name": "Pidgeotto",
+        "slug": "pidgeotto"
+      },
+      {
+        "name": "Pidgeot",
+        "slug": "pidgeot"
+      },
+      {
+        "name": "Spearow",
+        "slug": "spearow"
+      },
+      {
+        "name": "Fearow",
+        "slug": "fearow"
+      },
+      {
+        "name": "Zubat",
+        "slug": "zubat"
+      },
+      {
+        "name": "Golbat",
+        "slug": "golbat"
+      },
+      {
+        "name": "Doduo",
+        "slug": "doduo"
+      },
+      {
+        "name": "Dodrio",
+        "slug": "dodrio"
+      },
+      {
+        "name": "Scyther",
+        "slug": "scyther"
+      },
+      {
+        "name": "Gyarados",
+        "slug": "gyarados"
+      },
+      {
+        "name": "Lapras",
+        "slug": "lapras"
+      },
+      {
+        "name": "Aerodactyl",
+        "slug": "aerodactyl"
+      },
+      {
+        "name": "Articuno",
+        "slug": "articuno"
+      },
+      {
+        "name": "Zapdos",
+        "slug": "zapdos"
+      },
+      {
+        "name": "Moltres",
+        "slug": "moltres"
+      },
+      {
+        "name": "Dragonair",
+        "slug": "dragonair"
+      },
+      {
+        "name": "Dragonite",
+        "slug": "dragonite"
+      },
+      {
+        "name": "Mewtwo",
+        "slug": "mewtwo"
+      },
+      {
+        "name": "Mew",
+        "slug": "mew"
+      },
+      {
+        "name": "Hoothoot",
+        "slug": "hoothoot"
+      },
+      {
+        "name": "Noctowl",
+        "slug": "noctowl"
+      },
+      {
+        "name": "Ledyba",
+        "slug": "ledyba"
+      },
+      {
+        "name": "Ledian",
+        "slug": "ledian"
+      },
+      {
+        "name": "Crobat",
+        "slug": "crobat"
+      },
+      {
+        "name": "Togetic",
+        "slug": "togetic"
+      },
+      {
+        "name": "Natu",
+        "slug": "natu"
+      },
+      {
+        "name": "Xatu",
+        "slug": "xatu"
+      },
+      {
+        "name": "Hoppip",
+        "slug": "hoppip"
+      },
+      {
+        "name": "Skiploom",
+        "slug": "skiploom"
+      },
+      {
+        "name": "Jumpluff",
+        "slug": "jumpluff"
+      },
+      {
+        "name": "Yanma",
+        "slug": "yanma"
+      },
+      {
+        "name": "Murkrow",
+        "slug": "murkrow"
+      },
+      {
+        "name": "Gligar",
+        "slug": "gligar"
+      },
+      {
+        "name": "Delibird",
+        "slug": "delibird"
+      },
+      {
+        "name": "Mantine",
+        "slug": "mantine"
+      },
+      {
+        "name": "Skarmory",
+        "slug": "skarmory"
+      },
+      {
+        "name": "Lugia",
+        "slug": "lugia"
+      },
+      {
+        "name": "Ho-Oh",
+        "slug": "ho-oh"
+      },
+      {
+        "name": "Beautifly",
+        "slug": "beautifly"
+      },
+      {
+        "name": "Shiftry",
+        "slug": "shiftry"
+      },
+      {
+        "name": "Taillow",
+        "slug": "taillow"
+      },
+      {
+        "name": "Swellow",
+        "slug": "swellow"
+      },
+      {
+        "name": "Wingull",
+        "slug": "wingull"
+      },
+      {
+        "name": "Pelipper",
+        "slug": "pelipper"
+      },
+      {
+        "name": "Masquerain",
+        "slug": "masquerain"
+      },
+      {
+        "name": "Ninjask",
+        "slug": "ninjask"
+      }
+    ]
   },
   {
     "name": "Gather",
     "slug": "gather",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/gather.png",
     "description": "Pok&eacute;mon with the Gather specialty will pick up items on the ground and put them inside a community box",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Caterpie",
+        "slug": "caterpie"
+      },
+      {
+        "name": "Butterfree",
+        "slug": "butterfree"
+      },
+      {
+        "name": "Rattata",
+        "slug": "rattata"
+      },
+      {
+        "name": "Raticate",
+        "slug": "raticate"
+      },
+      {
+        "name": "Ekans",
+        "slug": "ekans"
+      },
+      {
+        "name": "Arbok",
+        "slug": "arbok"
+      },
+      {
+        "name": "Nidoran\u2640",
+        "slug": "nidoran\u2640"
+      },
+      {
+        "name": "Nidorina",
+        "slug": "nidorina"
+      },
+      {
+        "name": "Nidoran\u2642",
+        "slug": "nidoran\u2642"
+      },
+      {
+        "name": "Nidorino",
+        "slug": "nidorino"
+      },
+      {
+        "name": "Clefairy",
+        "slug": "clefairy"
+      },
+      {
+        "name": "Clefable",
+        "slug": "clefable"
+      },
+      {
+        "name": "Paras",
+        "slug": "paras"
+      },
+      {
+        "name": "Parasect",
+        "slug": "parasect"
+      },
+      {
+        "name": "Meowth",
+        "slug": "meowth"
+      },
+      {
+        "name": "Persian",
+        "slug": "persian"
+      },
+      {
+        "name": "Doduo",
+        "slug": "doduo"
+      },
+      {
+        "name": "Dodrio",
+        "slug": "dodrio"
+      },
+      {
+        "name": "Exeggcute",
+        "slug": "exeggcute"
+      },
+      {
+        "name": "Lickitung",
+        "slug": "lickitung"
+      },
+      {
+        "name": "Eevee",
+        "slug": "eevee"
+      },
+      {
+        "name": "Dratini",
+        "slug": "dratini"
+      },
+      {
+        "name": "Dragonair",
+        "slug": "dragonair"
+      },
+      {
+        "name": "Sentret",
+        "slug": "sentret"
+      },
+      {
+        "name": "Furret",
+        "slug": "furret"
+      },
+      {
+        "name": "Ledyba",
+        "slug": "ledyba"
+      },
+      {
+        "name": "Ledian",
+        "slug": "ledian"
+      },
+      {
+        "name": "Spinarak",
+        "slug": "spinarak"
+      },
+      {
+        "name": "Ariados",
+        "slug": "ariados"
+      },
+      {
+        "name": "Cleffa",
+        "slug": "cleffa"
+      },
+      {
+        "name": "Togepi",
+        "slug": "togepi"
+      },
+      {
+        "name": "Togetic",
+        "slug": "togetic"
+      },
+      {
+        "name": "Aipom",
+        "slug": "aipom"
+      },
+      {
+        "name": "Snubbull",
+        "slug": "snubbull"
+      },
+      {
+        "name": "Granbull",
+        "slug": "granbull"
+      },
+      {
+        "name": "Shuckle",
+        "slug": "shuckle"
+      },
+      {
+        "name": "Phanpy",
+        "slug": "phanpy"
+      },
+      {
+        "name": "Donphan",
+        "slug": "donphan"
+      },
+      {
+        "name": "Miltank",
+        "slug": "miltank"
+      },
+      {
+        "name": "Zigzagoon",
+        "slug": "zigzagoon"
+      },
+      {
+        "name": "Linoone",
+        "slug": "linoone"
+      },
+      {
+        "name": "Wurmple",
+        "slug": "wurmple"
+      },
+      {
+        "name": "Beautifly",
+        "slug": "beautifly"
+      },
+      {
+        "name": "Dustox",
+        "slug": "dustox"
+      },
+      {
+        "name": "Skitty",
+        "slug": "skitty"
+      }
+    ]
   },
   {
     "name": "Gatherhoney",
     "slug": "gatherhoney",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/gatherhoney.png",
     "description": "Pok&eacute;mon with the Gather Honey specialty will give you special furniture if you bring them honey",
     "pokemon": []
   },
   {
     "name": "Generate",
     "slug": "generate",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/generate.png",
     "description": "Pok&eacute;mon with the Generate specialty can power machines with electricty",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Pikachu",
+        "slug": "pikachu"
+      },
+      {
+        "name": "Raichu",
+        "slug": "raichu"
+      },
+      {
+        "name": "Magnemite",
+        "slug": "magnemite"
+      },
+      {
+        "name": "Magneton",
+        "slug": "magneton"
+      },
+      {
+        "name": "Voltorb",
+        "slug": "voltorb"
+      },
+      {
+        "name": "Electrode",
+        "slug": "electrode"
+      },
+      {
+        "name": "Electabuzz",
+        "slug": "electabuzz"
+      },
+      {
+        "name": "Jolteon",
+        "slug": "jolteon"
+      },
+      {
+        "name": "Zapdos",
+        "slug": "zapdos"
+      },
+      {
+        "name": "Pichu",
+        "slug": "pichu"
+      },
+      {
+        "name": "Mareep",
+        "slug": "mareep"
+      },
+      {
+        "name": "Flaaffy",
+        "slug": "flaaffy"
+      },
+      {
+        "name": "Ampharos",
+        "slug": "ampharos"
+      },
+      {
+        "name": "Elekid",
+        "slug": "elekid"
+      },
+      {
+        "name": "Raikou",
+        "slug": "raikou"
+      }
+    ]
   },
   {
     "name": "Grow",
     "slug": "grow",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/grow.png",
     "description": "Pok&eacute;mon with the Grow specialty can make plants grow faster",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Bulbasaur",
+        "slug": "bulbasaur"
+      },
+      {
+        "name": "Ivysaur",
+        "slug": "ivysaur"
+      },
+      {
+        "name": "Venusaur",
+        "slug": "venusaur"
+      },
+      {
+        "name": "Oddish",
+        "slug": "oddish"
+      },
+      {
+        "name": "Gloom",
+        "slug": "gloom"
+      },
+      {
+        "name": "Vileplume",
+        "slug": "vileplume"
+      },
+      {
+        "name": "Bellsprout",
+        "slug": "bellsprout"
+      },
+      {
+        "name": "Weepinbell",
+        "slug": "weepinbell"
+      },
+      {
+        "name": "Victreebel",
+        "slug": "victreebel"
+      },
+      {
+        "name": "Exeggutor",
+        "slug": "exeggutor"
+      },
+      {
+        "name": "Tangela",
+        "slug": "tangela"
+      },
+      {
+        "name": "Chikorita",
+        "slug": "chikorita"
+      },
+      {
+        "name": "Bayleef",
+        "slug": "bayleef"
+      },
+      {
+        "name": "Meganium",
+        "slug": "meganium"
+      },
+      {
+        "name": "Bellossom",
+        "slug": "bellossom"
+      },
+      {
+        "name": "Hoppip",
+        "slug": "hoppip"
+      },
+      {
+        "name": "Skiploom",
+        "slug": "skiploom"
+      },
+      {
+        "name": "Jumpluff",
+        "slug": "jumpluff"
+      },
+      {
+        "name": "Sunkern",
+        "slug": "sunkern"
+      },
+      {
+        "name": "Sunflora",
+        "slug": "sunflora"
+      },
+      {
+        "name": "Celebi",
+        "slug": "celebi"
+      },
+      {
+        "name": "Treecko",
+        "slug": "treecko"
+      },
+      {
+        "name": "Grovyle",
+        "slug": "grovyle"
+      },
+      {
+        "name": "Sceptile",
+        "slug": "sceptile"
+      },
+      {
+        "name": "Lotad",
+        "slug": "lotad"
+      },
+      {
+        "name": "Lombre",
+        "slug": "lombre"
+      },
+      {
+        "name": "Ludicolo",
+        "slug": "ludicolo"
+      },
+      {
+        "name": "Seedot",
+        "slug": "seedot"
+      },
+      {
+        "name": "Nuzleaf",
+        "slug": "nuzleaf"
+      },
+      {
+        "name": "Shiftry",
+        "slug": "shiftry"
+      },
+      {
+        "name": "Shroomish",
+        "slug": "shroomish"
+      },
+      {
+        "name": "Breloom",
+        "slug": "breloom"
+      }
+    ]
   },
   {
     "name": "Hype",
     "slug": "hype",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/hype.png",
     "description": "Pok&eacute;mon with the Hype specialty will start dancing when they hear music, improving the mood",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Jigglypuff",
+        "slug": "jigglypuff"
+      },
+      {
+        "name": "Wigglytuff",
+        "slug": "wigglytuff"
+      },
+      {
+        "name": "Gengar",
+        "slug": "gengar"
+      },
+      {
+        "name": "Mr. Mime",
+        "slug": "mr.mime"
+      },
+      {
+        "name": "Jynx",
+        "slug": "jynx"
+      },
+      {
+        "name": "Igglybuff",
+        "slug": "igglybuff"
+      },
+      {
+        "name": "Bellossom",
+        "slug": "bellossom"
+      },
+      {
+        "name": "Politoed",
+        "slug": "politoed"
+      },
+      {
+        "name": "Misdreavus",
+        "slug": "misdreavus"
+      },
+      {
+        "name": "Smoochum",
+        "slug": "smoochum"
+      },
+      {
+        "name": "Ludicolo",
+        "slug": "ludicolo"
+      },
+      {
+        "name": "Kirlia",
+        "slug": "kirlia"
+      },
+      {
+        "name": "Whismur",
+        "slug": "whismur"
+      },
+      {
+        "name": "Loudred",
+        "slug": "loudred"
+      },
+      {
+        "name": "Exploud",
+        "slug": "exploud"
+      }
+    ]
   },
   {
     "name": "Illuminate",
     "slug": "illuminate",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/illuminate.png",
     "description": "Peakychu can use the Illuminate specialty to light up the whole town for you",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Pikachu",
+        "slug": "pikachu"
+      },
+      {
+        "name": "Staryu",
+        "slug": "staryu"
+      },
+      {
+        "name": "Starmie",
+        "slug": "starmie"
+      },
+      {
+        "name": "Chinchou",
+        "slug": "chinchou"
+      },
+      {
+        "name": "Lanturn",
+        "slug": "lanturn"
+      },
+      {
+        "name": "Ampharos",
+        "slug": "ampharos"
+      }
+    ]
   },
   {
     "name": "Litter",
     "slug": "litter",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/litter.png",
     "description": "Pok&eacute;mon with the Litter specialty will drop useful materials near their homes",
     "pokemon": []
   },
   {
     "name": "Paint",
     "slug": "paint",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/paint.png",
     "description": "Smearguru has the Paint specialty and can recolor certain items, such as furniture",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Smeargle",
+        "slug": "smeargle"
+      }
+    ]
   },
   {
     "name": "Party",
     "slug": "party",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/party.png",
     "description": "Chef Dente can use the Party specialty to help you prepare food for parties",
     "pokemon": []
   },
   {
     "name": "Rarify",
     "slug": "rarify",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/rarify.png",
     "description": "Pok&eacute;mon with the Rarify specialty can turn Star Pieces into rare Pok&eacute;metal",
     "pokemon": []
   },
   {
     "name": "Recycle",
     "slug": "recycle",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/recycle.png",
     "description": "Pok&eacute;mon with the Recycle specialty can process nonburnable garbage into iron ore and wastepaper into paper",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Grimer",
+        "slug": "grimer"
+      },
+      {
+        "name": "Muk",
+        "slug": "muk"
+      },
+      {
+        "name": "Koffing",
+        "slug": "koffing"
+      },
+      {
+        "name": "Weezing",
+        "slug": "weezing"
+      }
+    ]
   },
   {
     "name": "Search",
     "slug": "search",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/search.png",
     "description": "Pok&eacute;mon with the Search specialty can help you find buried items",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Venonat",
+        "slug": "venonat"
+      },
+      {
+        "name": "Venomoth",
+        "slug": "venomoth"
+      },
+      {
+        "name": "Golduck",
+        "slug": "golduck"
+      },
+      {
+        "name": "Growlithe",
+        "slug": "growlithe"
+      },
+      {
+        "name": "Arcanine",
+        "slug": "arcanine"
+      },
+      {
+        "name": "Alakazam",
+        "slug": "alakazam"
+      },
+      {
+        "name": "Dragonite",
+        "slug": "dragonite"
+      },
+      {
+        "name": "Sentret",
+        "slug": "sentret"
+      },
+      {
+        "name": "Furret",
+        "slug": "furret"
+      },
+      {
+        "name": "Noctowl",
+        "slug": "noctowl"
+      },
+      {
+        "name": "Yanma",
+        "slug": "yanma"
+      },
+      {
+        "name": "Espeon",
+        "slug": "espeon"
+      },
+      {
+        "name": "Umbreon",
+        "slug": "umbreon"
+      },
+      {
+        "name": "Murkrow",
+        "slug": "murkrow"
+      },
+      {
+        "name": "Slowking",
+        "slug": "slowking"
+      },
+      {
+        "name": "Unown",
+        "slug": "unown"
+      },
+      {
+        "name": "Girafarig",
+        "slug": "girafarig"
+      },
+      {
+        "name": "Sneasel",
+        "slug": "sneasel"
+      },
+      {
+        "name": "Swinub",
+        "slug": "swinub"
+      },
+      {
+        "name": "Piloswine",
+        "slug": "piloswine"
+      },
+      {
+        "name": "Houndour",
+        "slug": "houndour"
+      },
+      {
+        "name": "Houndoom",
+        "slug": "houndoom"
+      },
+      {
+        "name": "Stantler",
+        "slug": "stantler"
+      },
+      {
+        "name": "Poochyena",
+        "slug": "poochyena"
+      },
+      {
+        "name": "Mightyena",
+        "slug": "mightyena"
+      },
+      {
+        "name": "Zigzagoon",
+        "slug": "zigzagoon"
+      },
+      {
+        "name": "Linoone",
+        "slug": "linoone"
+      },
+      {
+        "name": "Shedinja",
+        "slug": "shedinja"
+      },
+      {
+        "name": "Nosepass",
+        "slug": "nosepass"
+      },
+      {
+        "name": "Skitty",
+        "slug": "skitty"
+      }
+    ]
   },
   {
     "name": "Storage",
     "slug": "storage",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/storage.png",
     "description": "Pok\u00c3\u00a9mon with the Storage specialty can hold on to your items for you",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Chansey",
+        "slug": "chansey"
+      },
+      {
+        "name": "Porygon",
+        "slug": "porygon"
+      },
+      {
+        "name": "Wobbuffet",
+        "slug": "wobbuffet"
+      },
+      {
+        "name": "Shuckle",
+        "slug": "shuckle"
+      },
+      {
+        "name": "Delibird",
+        "slug": "delibird"
+      },
+      {
+        "name": "Porygon2",
+        "slug": "porygon2"
+      },
+      {
+        "name": "Miltank",
+        "slug": "miltank"
+      },
+      {
+        "name": "Blissey",
+        "slug": "blissey"
+      }
+    ]
   },
   {
     "name": "Teleport",
     "slug": "teleport",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/teleport.png",
     "description": "Pok&eacute;mon with the Teleport specialty can instantly take you to a Pok&eacute;mon you're searching for",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Abra",
+        "slug": "abra"
+      },
+      {
+        "name": "Kadabra",
+        "slug": "kadabra"
+      },
+      {
+        "name": "Alakazam",
+        "slug": "alakazam"
+      },
+      {
+        "name": "Gastly",
+        "slug": "gastly"
+      },
+      {
+        "name": "Haunter",
+        "slug": "haunter"
+      },
+      {
+        "name": "Gengar",
+        "slug": "gengar"
+      },
+      {
+        "name": "Drowzee",
+        "slug": "drowzee"
+      },
+      {
+        "name": "Hypno",
+        "slug": "hypno"
+      },
+      {
+        "name": "Starmie",
+        "slug": "starmie"
+      },
+      {
+        "name": "Mewtwo",
+        "slug": "mewtwo"
+      },
+      {
+        "name": "Mew",
+        "slug": "mew"
+      },
+      {
+        "name": "Natu",
+        "slug": "natu"
+      },
+      {
+        "name": "Xatu",
+        "slug": "xatu"
+      },
+      {
+        "name": "Espeon",
+        "slug": "espeon"
+      },
+      {
+        "name": "Misdreavus",
+        "slug": "misdreavus"
+      },
+      {
+        "name": "Lugia",
+        "slug": "lugia"
+      },
+      {
+        "name": "Celebi",
+        "slug": "celebi"
+      },
+      {
+        "name": "Ralts",
+        "slug": "ralts"
+      },
+      {
+        "name": "Kirlia",
+        "slug": "kirlia"
+      },
+      {
+        "name": "Gardevoir",
+        "slug": "gardevoir"
+      }
+    ]
   },
   {
     "name": "Trade",
     "slug": "trade",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/trade.png",
     "description": "Pok&eacute;mon with the Trade speicalty can exchange items with you at a cash register",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Meowth",
+        "slug": "meowth"
+      },
+      {
+        "name": "Persian",
+        "slug": "persian"
+      }
+    ]
   },
   {
     "name": "Transform",
     "slug": "transform",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/transform.png",
     "description": "Ditto can improve its moves by using Transform",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Ditto",
+        "slug": "ditto"
+      },
+      {
+        "name": "Mew",
+        "slug": "mew"
+      }
+    ]
   },
   {
     "name": "Water",
     "slug": "water",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/water.png",
     "description": "Pok&eacute;mon with the Water specialty can use a full water basin to spray water on nearby fields and plants",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Squirtle",
+        "slug": "squirtle"
+      },
+      {
+        "name": "Wartortle",
+        "slug": "wartortle"
+      },
+      {
+        "name": "Blastoise",
+        "slug": "blastoise"
+      },
+      {
+        "name": "Psyduck",
+        "slug": "psyduck"
+      },
+      {
+        "name": "Golduck",
+        "slug": "golduck"
+      },
+      {
+        "name": "Poliwag",
+        "slug": "poliwag"
+      },
+      {
+        "name": "Poliwhirl",
+        "slug": "poliwhirl"
+      },
+      {
+        "name": "Poliwrath",
+        "slug": "poliwrath"
+      },
+      {
+        "name": "Tentacool",
+        "slug": "tentacool"
+      },
+      {
+        "name": "Tentacruel",
+        "slug": "tentacruel"
+      },
+      {
+        "name": "Slowpoke",
+        "slug": "slowpoke"
+      },
+      {
+        "name": "Slowbro",
+        "slug": "slowbro"
+      },
+      {
+        "name": "Seel",
+        "slug": "seel"
+      },
+      {
+        "name": "Dewgong",
+        "slug": "dewgong"
+      },
+      {
+        "name": "Shellder",
+        "slug": "shellder"
+      },
+      {
+        "name": "Cloyster",
+        "slug": "cloyster"
+      },
+      {
+        "name": "Krabby",
+        "slug": "krabby"
+      },
+      {
+        "name": "Kingler",
+        "slug": "kingler"
+      },
+      {
+        "name": "Horsea",
+        "slug": "horsea"
+      },
+      {
+        "name": "Seadra",
+        "slug": "seadra"
+      },
+      {
+        "name": "Goldeen",
+        "slug": "goldeen"
+      },
+      {
+        "name": "Seaking",
+        "slug": "seaking"
+      },
+      {
+        "name": "Staryu",
+        "slug": "staryu"
+      },
+      {
+        "name": "Starmie",
+        "slug": "starmie"
+      },
+      {
+        "name": "Magikarp",
+        "slug": "magikarp"
+      },
+      {
+        "name": "Gyarados",
+        "slug": "gyarados"
+      },
+      {
+        "name": "Lapras",
+        "slug": "lapras"
+      },
+      {
+        "name": "Vaporeon",
+        "slug": "vaporeon"
+      },
+      {
+        "name": "Omanyte",
+        "slug": "omanyte"
+      },
+      {
+        "name": "Omastar",
+        "slug": "omastar"
+      },
+      {
+        "name": "Kabuto",
+        "slug": "kabuto"
+      },
+      {
+        "name": "Kabutops",
+        "slug": "kabutops"
+      },
+      {
+        "name": "Totodile",
+        "slug": "totodile"
+      },
+      {
+        "name": "Croconaw",
+        "slug": "croconaw"
+      },
+      {
+        "name": "Feraligatr",
+        "slug": "feraligatr"
+      },
+      {
+        "name": "Chinchou",
+        "slug": "chinchou"
+      },
+      {
+        "name": "Lanturn",
+        "slug": "lanturn"
+      },
+      {
+        "name": "Marill",
+        "slug": "marill"
+      },
+      {
+        "name": "Azumarill",
+        "slug": "azumarill"
+      },
+      {
+        "name": "Politoed",
+        "slug": "politoed"
+      },
+      {
+        "name": "Wooper",
+        "slug": "wooper"
+      },
+      {
+        "name": "Quagsire",
+        "slug": "quagsire"
+      },
+      {
+        "name": "Slowking",
+        "slug": "slowking"
+      },
+      {
+        "name": "Qwilfish",
+        "slug": "qwilfish"
+      },
+      {
+        "name": "Remoraid",
+        "slug": "remoraid"
+      },
+      {
+        "name": "Octillery",
+        "slug": "octillery"
+      },
+      {
+        "name": "Mantine",
+        "slug": "mantine"
+      },
+      {
+        "name": "Kingdra",
+        "slug": "kingdra"
+      },
+      {
+        "name": "Suicune",
+        "slug": "suicune"
+      },
+      {
+        "name": "Mudkip",
+        "slug": "mudkip"
+      },
+      {
+        "name": "Marshtomp",
+        "slug": "marshtomp"
+      },
+      {
+        "name": "Swampert",
+        "slug": "swampert"
+      },
+      {
+        "name": "Lotad",
+        "slug": "lotad"
+      },
+      {
+        "name": "Lombre",
+        "slug": "lombre"
+      },
+      {
+        "name": "Ludicolo",
+        "slug": "ludicolo"
+      },
+      {
+        "name": "Wingull",
+        "slug": "wingull"
+      },
+      {
+        "name": "Pelipper",
+        "slug": "pelipper"
+      },
+      {
+        "name": "Surskit",
+        "slug": "surskit"
+      },
+      {
+        "name": "Azurill",
+        "slug": "azurill"
+      }
+    ]
   },
   {
     "name": "Yawn",
     "slug": "yawn",
-    "icon": "",
+    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/yawn.png",
     "description": "Pok&eacute;mon with the Yawn specialty can tell you how humid it is",
-    "pokemon": []
+    "pokemon": [
+      {
+        "name": "Slowpoke",
+        "slug": "slowpoke"
+      },
+      {
+        "name": "Slowbro",
+        "slug": "slowbro"
+      },
+      {
+        "name": "Drowzee",
+        "slug": "drowzee"
+      },
+      {
+        "name": "Hypno",
+        "slug": "hypno"
+      },
+      {
+        "name": "Snorlax",
+        "slug": "snorlax"
+      },
+      {
+        "name": "Slakoth",
+        "slug": "slakoth"
+      },
+      {
+        "name": "Slaking",
+        "slug": "slaking"
+      }
+    ]
   }
 ]
