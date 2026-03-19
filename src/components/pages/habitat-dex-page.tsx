@@ -7,10 +7,13 @@ import { ArrowLeft, Search, CheckCircle, Clock, Circle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import habitatsData from "@/data/scraped/habitats.json";
 
-// Build pokemon slug -> image URL map for previews
+// Build pokemon name -> image URL map for previews
 const pokemonImageMap: Record<string, string> = {};
 for (const p of pokemonList) {
   pokemonImageMap[p.name.toLowerCase()] = p.image;
+  // Also map by slug (lowercase, no spaces/punctuation)
+  const slug = p.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+  pokemonImageMap[slug] = p.image;
 }
 
 const LOCATIONS = [
@@ -205,7 +208,7 @@ export function HabitatDexPage() {
                           <div className="flex flex-wrap gap-2">
                             {habitat.pokemon.map(poke => {
                               const isCaught = capturedNames.has(poke.name.toLowerCase());
-                              const img = pokemonImageMap[poke.name.toLowerCase()];
+                              const img = pokemonImageMap[poke.name.toLowerCase()] || pokemonImageMap[poke.slug.toLowerCase()];
                               return (
                                 <motion.button
                                   key={poke.slug}

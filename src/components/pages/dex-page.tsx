@@ -1,10 +1,10 @@
 'use client'
 
 import { useAppStore } from "@/lib/store";
-import { pokemonList as pokemonData, Pokemon, getSpecialtyIcon } from "@/lib/pokemon-data";
+import { pokemonList as pokemonData, Pokemon } from "@/lib/pokemon-data";
 import { ArrowLeft, Search, Plus, X, Eye, EyeOff, Check, Zap, MapPin, Home } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import specialtiesData from "@/data/scraped/specialties.json";
 import habitatsData from "@/data/scraped/habitats.json";
 
@@ -240,24 +240,11 @@ export function DexPage() {
                     {/* Specialties */}
                     {pokemon.specialties && pokemon.specialties.length > 0 && (
                       <div className="flex items-center gap-1 mt-0.5 flex-wrap">
-                        <Bolt className="w-2.5 h-2.5 text-yellow-500 shrink-0" />
-                        <div className="flex items-center gap-0.5 flex-wrap">
-                          {pokemon.specialties.slice(0, 2).map((spec, idx) => (
-                            <div key={idx} className="flex items-center gap-0.5">
-                              <img
-                                src={getSpecialtyIcon(spec)}
-                                alt={spec}
-                                className="w-3 h-3 object-contain"
-                                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
-                              />
-                              <span className="text-[9px] text-green-600">{spec}</span>
-                              {idx < pokemon.specialties.length - 1 && idx < 1 && <span className="text-green-300">•</span>}
-                            </div>
-                          ))}
-                          {pokemon.specialties.length > 2 && (
-                            <span className="text-[9px] text-gray-400">+{pokemon.specialties.length - 2}</span>
-                          )}
-                        </div>
+                        <Zap className="w-2.5 h-2.5 text-yellow-500 shrink-0" />
+                        <span className="text-[9px] text-green-600">
+                          {pokemon.specialties.slice(0, 2).join(' • ')}
+                          {pokemon.specialties.length > 2 && ` +${pokemon.specialties.length - 2}`}
+                        </span>
                       </div>
                     )}
                     
