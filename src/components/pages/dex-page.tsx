@@ -2,9 +2,45 @@
 
 import { useAppStore } from "@/lib/store";
 import { pokemonList as pokemonData, Pokemon, getSpecialtyIcon } from "@/lib/pokemon-data";
-import { ArrowLeft, Search, Plus, X, Eye, EyeOff, Check, Bolt } from "lucide-react";
+import { ArrowLeft, Search, Plus, X, Eye, EyeOff, Check, Zap, MapPin, Home } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import specialtiesData from "@/data/scraped/specialties.json";
+import habitatsData from "@/data/scraped/habitats.json";
+
+// Build specialty lookup: name -> {description, icon}
+const specialtyMap: Record<string, { description: string; icon: string }> = {};
+for (const s of specialtiesData) {
+  specialtyMap[s.name.toLowerCase()] = {
+    description: s.description.replace(/Pok&eacute;mon/g, 'Pokémon').replace(/&eacute;/g, 'é'),
+    icon: s.icon,
+  };
+}
+
+// Habitat lookup: name -> {image, slug}
+const habitatMap: Record<string, { image: string; slug: string; id: number }> = {};
+for (const h of habitatsData) {
+  habitatMap[h.name.toLowerCase()] = { image: h.image, slug: h.slug, id: h.id };
+}
+
+// Location unlock order
+const LOCATION_ORDER = [
+  "Withered Wastelands",
+  "Bleak Beach",
+  "Rocky Ridges",
+  "Sparkling Skylands",
+  "Palette Town",
+  "Cloud Island",
+];
+
+const LOCATION_COLORS: Record<string, string> = {
+  "Withered Wastelands": "bg-amber-100 text-amber-800 border-amber-300",
+  "Bleak Beach":         "bg-blue-100 text-blue-800 border-blue-300",
+  "Rocky Ridges":        "bg-stone-100 text-stone-800 border-stone-300",
+  "Sparkling Skylands":  "bg-sky-100 text-sky-800 border-sky-300",
+  "Palette Town":        "bg-red-100 text-red-800 border-red-300",
+  "Cloud Island":        "bg-purple-100 text-purple-800 border-purple-300",
+};
 
 const rarities = ["Common", "Rare", "Legendary"] as const;
 
@@ -344,10 +380,15 @@ export function DexPage() {
                 <div className="text-center mb-4">
                   <p className="text-xs text-gray-400 font-mono">#{String(selectedPokemon.nationalDex).padStart(3, '0')}</p>
                   <h2 className="text-2xl font-bold text-gray-800">{selectedPokemon.name}</h2>
+                  <div className="flex items-center justify-center gap-1.5 mt-1">
+                    {selectedPokemon.types.map(t => (
+                      <span key={t} className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{t}</span>
+                    ))}
+                  </div>
                 </div>
 
                 {/* Friend Toggle Button */}
-                <div className="mb-4">
+                <div className="mb-5">
                   <motion.button
                     onClick={() => toggleCapturedPokemon(selectedPokemon.id)}
                     className={`w-full py-3 rounded-xl flex items-center justify-center gap-2 font-medium ${
@@ -359,32 +400,109 @@ export function DexPage() {
                     whileTap={{ scale: 0.98 }}
                   >
                     {capturedPokemon.includes(selectedPokemon.id) ? (
-                      <>
-                        <Check className="w-5 h-5" />
-                        <span>Friend!</span>
-                      </>
+                      <><Check className="w-5 h-5" /><span>Friend!</span></>
                     ) : (
-                      <>
-                        <Plus className="w-5 h-5" />
-                        <span>Add as Friend</span>
-                      </>
+                      <><Plus className="w-5 h-5" /><span>Add as Friend</span></>
                     )}
                   </motion.button>
                 </div>
 
-                {/* Specialties */}
+                {/* ── Specialties ── */}
                 {selectedPokemon.specialties && selectedPokemon.specialties.length > 0 && (
-                  <div className="mb-4">
-                    <h3 className="font-bold text-gray-700 text-sm mb-2">Specialties</h3>
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      {selectedPokemon.specialties.map((specialty, i) => (
-                        <span 
-                          key={i}
-                          className="inline-flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-full bg-green-100 text-green-700"
-                        >
-                          ⚡ {specialty}
-                        </span>
-                      ))}
+                  <div className="mb-5">
+                    <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
+                      <Zap className="w-4 h-4 text-yellow-500" /> Specialties
+                    </h3>
+                    <div className="space-y-2">
+                      {selectedPokemon.specialties.map((specialty, i) => {
+                        const info = specialtyMap[specialty.toLowerCase()];
+                        return (
+                          <div key={i} className="flex items-start gap-3 bg-green-50 rounded-xl p-3 border border-green-100">
+                            <div className="w-10 h-10 rounded-lg bg-white border border-green-200 flex items-center justify-center shrink-0">
+                              {info?.icon ? (
+                                <img
+                                  src={info.icon}
+                                  alt={specialty}
+                                  className="w-8 h-8 object-contain"
+                                  onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                                />
+                              ) : (
+                                <Zap className="w-4 h-4 text-green-500" />
+                              )}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <p className="font-semibold text-green-800 text-sm">{specialty}</p>
+                              {info?.description && (
+                                <p className="text-xs text-green-700 mt-0.5 leading-relaxed">{info.description}</p>
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* ── Map Locations (unlock order) ── */}
+                {selectedPokemon.locations && selectedPokemon.locations.length > 0 && (
+                  <div className="mb-5">
+                    <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
+                      <MapPin className="w-4 h-4 text-blue-500" /> Map Locations
+                    </h3>
+                    <div className="space-y-1.5">
+                      {LOCATION_ORDER
+                        .filter(loc => selectedPokemon.locations!.includes(loc))
+                        .map(location => (
+                          <motion.button
+                            key={location}
+                            onClick={() => { setSelectedPokemon(null); setCurrentPage("map"); }}
+                            whileTap={{ scale: 0.97 }}
+                            className={`w-full flex items-center gap-2 px-3 py-2 rounded-xl border text-left ${LOCATION_COLORS[location] || 'bg-gray-100 text-gray-700 border-gray-200'}`}
+                          >
+                            <MapPin className="w-3.5 h-3.5 shrink-0" />
+                            <span className="text-sm font-medium flex-1">{location}</span>
+                            <span className="text-[10px] opacity-60">→ Map</span>
+                          </motion.button>
+                        ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* ── Habitats with preview images ── */}
+                {selectedPokemon.habitats && selectedPokemon.habitats.length > 0 && (
+                  <div className="mb-5">
+                    <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
+                      <Home className="w-4 h-4 text-emerald-500" /> Habitats
+                    </h3>
+                    <div className="grid grid-cols-2 gap-2">
+                      {selectedPokemon.habitats.map((habitat, i) => {
+                        const hab = habitatMap[habitat.toLowerCase()];
+                        return (
+                          <motion.button
+                            key={i}
+                            onClick={() => { setSelectedPokemon(null); setCurrentPage("habitat-dex"); }}
+                            whileTap={{ scale: 0.97 }}
+                            className="flex flex-col overflow-hidden rounded-xl border border-emerald-100 bg-emerald-50 text-left"
+                          >
+                            {hab?.image && (
+                              <div className="w-full h-16 bg-gray-100 overflow-hidden">
+                                <img
+                                  src={hab.image}
+                                  alt={habitat}
+                                  className="w-full h-full object-cover"
+                                  onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                                />
+                              </div>
+                            )}
+                            <div className="p-2">
+                              <p className="text-xs font-semibold text-emerald-800 leading-tight">{habitat}</p>
+                              {hab && (
+                                <p className="text-[9px] text-emerald-600 mt-0.5">#{String(hab.id).padStart(3,'0')} → Habitat Dex</p>
+                              )}
+                            </div>
+                          </motion.button>
+                        );
+                      })}
                     </div>
                   </div>
                 )}
@@ -392,43 +510,11 @@ export function DexPage() {
                 {/* Conditions */}
                 {selectedPokemon.conditions && selectedPokemon.conditions.length > 0 && (
                   <div className="mb-4">
-                    <h3 className="font-bold text-gray-700 text-sm mb-2">Conditions</h3>
-                    <div className="flex flex-wrap gap-1 justify-center">
+                    <h3 className="font-bold text-gray-700 text-sm mb-2">Befriend Conditions</h3>
+                    <div className="flex flex-wrap gap-1">
                       {selectedPokemon.conditions.map((condition, i) => (
-                        <span key={i} className="text-xs px-3 py-1.5 bg-orange-100 text-orange-700 rounded-full">
+                        <span key={i} className="text-xs px-3 py-1.5 bg-orange-100 text-orange-700 rounded-full border border-orange-200">
                           {condition}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Habitats */}
-                {selectedPokemon.habitats && selectedPokemon.habitats.length > 0 && (
-                  <div className="mb-4">
-                    <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
-                      🏠 Habitats
-                    </h3>
-                    <div className="flex flex-wrap gap-1">
-                      {selectedPokemon.habitats.map((habitat, i) => (
-                        <span key={i} className="text-xs px-3 py-1.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-full border border-green-200">
-                          {habitat}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Map Locations */}
-                {selectedPokemon.locations && selectedPokemon.locations.length > 0 && (
-                  <div className="mb-4">
-                    <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
-                      🗺️ Map Locations
-                    </h3>
-                    <div className="flex flex-wrap gap-1">
-                      {selectedPokemon.locations.map((location, i) => (
-                        <span key={i} className="text-xs px-3 py-1.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full border border-blue-200">
-                          {location}
                         </span>
                       ))}
                     </div>
@@ -439,7 +525,7 @@ export function DexPage() {
                 {selectedPokemon.comfortNotes && (
                   <div className="mb-4">
                     <h3 className="font-bold text-gray-700 text-sm mb-2">Notes</h3>
-                    <p className="text-xs text-gray-600 bg-gray-50 rounded-xl p-3">
+                    <p className="text-xs text-gray-600 bg-gray-50 rounded-xl p-3 border border-gray-100">
                       {selectedPokemon.comfortNotes}
                     </p>
                   </div>

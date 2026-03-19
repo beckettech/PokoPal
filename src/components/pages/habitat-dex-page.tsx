@@ -3,9 +3,15 @@
 import { useState, useMemo } from "react";
 import { useAppStore } from "@/lib/store";
 import { pokemonList } from "@/lib/pokemon-data";
-import { ArrowLeft, Search, CheckCircle, Clock, Circle, Filter } from "lucide-react";
+import { ArrowLeft, Search, CheckCircle, Clock, Circle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import habitatsData from "@/data/scraped/habitats.json";
+
+// Build pokemon slug -> image URL map for previews
+const pokemonImageMap: Record<string, string> = {};
+for (const p of pokemonList) {
+  pokemonImageMap[p.name.toLowerCase()] = p.image;
+}
 
 const LOCATIONS = [
   "All",
@@ -196,22 +202,39 @@ export function HabitatDexPage() {
                             />
                           )}
                           <p className="text-xs font-semibold text-gray-700 mb-2">Residents:</p>
-                          <div className="flex flex-wrap gap-1.5">
+                          <div className="flex flex-wrap gap-2">
                             {habitat.pokemon.map(poke => {
                               const isCaught = capturedNames.has(poke.name.toLowerCase());
+                              const img = pokemonImageMap[poke.name.toLowerCase()];
                               return (
                                 <motion.button
                                   key={poke.slug}
                                   onClick={() => handlePokemonClick(poke.slug, poke.name)}
                                   whileTap={{ scale: 0.95 }}
-                                  className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium border transition-colors ${
+                                  className={`flex flex-col items-center gap-0.5 p-1.5 rounded-xl border transition-colors w-16 ${
                                     isCaught
-                                      ? "bg-green-100 text-green-700 border-green-200"
-                                      : "bg-white text-gray-700 border-gray-200"
+                                      ? "bg-green-50 border-green-200"
+                                      : "bg-white border-gray-200"
                                   }`}
                                 >
-                                  {isCaught && <CheckCircle className="w-3 h-3" />}
-                                  {poke.name}
+                                  <div className="relative w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden">
+                                    {img && (
+                                      <img
+                                        src={img}
+                                        alt={poke.name}
+                                        className="w-full h-full object-contain"
+                                        onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                                      />
+                                    )}
+                                    {isCaught && (
+                                      <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 rounded-full flex items-center justify-center">
+                                        <CheckCircle className="w-2.5 h-2.5 text-white" />
+                                      </div>
+                                    )}
+                                  </div>
+                                  <span className={`text-[9px] text-center leading-tight font-medium ${isCaught ? "text-green-700" : "text-gray-600"}`}>
+                                    {poke.name}
+                                  </span>
                                 </motion.button>
                               );
                             })}
