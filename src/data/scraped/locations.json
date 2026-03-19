@@ -1,0 +1,50 @@
+[
+  {
+    "id": "witheredwastelands",
+    "name": "-Withered Wastelands",
+    "image": "",
+    "description": "",
+    "pokemon": [],
+    "url": "https://www.serebii.net/pokemonpokopia/locations/witheredwastelands.shtml"
+  },
+  {
+    "id": "bleakbeach",
+    "name": "-Bleak Beach",
+    "image": "",
+    "description": "",
+    "pokemon": [],
+    "url": "https://www.serebii.net/pokemonpokopia/locations/bleakbeach.shtml"
+  },
+  {
+    "id": "rockyridges",
+    "name": "-Rocky Ridges",
+    "image": "",
+    "description": "",
+    "pokemon": [],
+    "url": "https://www.serebii.net/pokemonpokopia/locations/rockyridges.shtml"
+  },
+  {
+    "id": "sparklingskylands",
+    "name": "-Sparkling Skylands",
+    "image": "",
+    "description": "",
+    "pokemon": [],
+    "url": "https://www.serebii.net/pokemonpokopia/locations/sparklingskylands.shtml"
+  },
+  {
+    "id": "palettetown",
+    "name": "-Palette Town",
+    "image": "",
+    "description": "",
+    "pokemon": [],
+    "url": "https://www.serebii.net/pokemonpokopia/locations/palettetown.shtml"
+  },
+  {
+    "id": "cloudisland",
+    "name": "locations/cloudisland.shtml",
+    "image": "",
+    "description": "",
+    "pokemon": [],
+    "url": "https://www.serebii.net/pokemonpokopia/locations/cloudisland.shtml"
+  }
+]

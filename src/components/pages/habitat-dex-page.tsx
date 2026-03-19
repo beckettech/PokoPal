@@ -1,243 +1,238 @@
 'use client'
 
+import { useState, useMemo } from "react";
 import { useAppStore } from "@/lib/store";
-import { detailedHabitatList, pokemonList } from "@/lib/pokemon-data";
-import { ArrowLeft, Search, HelpCircle, Image as ImageIcon } from "lucide-react";
+import { pokemonList } from "@/lib/pokemon-data";
+import { ArrowLeft, Search, CheckCircle, Clock, Circle, Filter } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import habitatsData from "@/data/scraped/habitats.json";
+
+const LOCATIONS = [
+  "All",
+  "Withered Wastelands",
+  "Bleak Beach",
+  "Rocky Ridges",
+  "Sparkling Skylands",
+  "Palette Town",
+  "Cloud Island",
+];
+
+const LOCATION_COLORS: Record<string, string> = {
+  "Withered Wastelands": "bg-amber-800 text-amber-100",
+  "Bleak Beach": "bg-blue-500 text-white",
+  "Rocky Ridges": "bg-stone-600 text-white",
+  "Sparkling Skylands": "bg-sky-400 text-white",
+  "Palette Town": "bg-red-500 text-white",
+  "Cloud Island": "bg-purple-500 text-white",
+};
 
 export function HabitatDexPage() {
-  const { setCurrentPage } = useAppStore();
+  const { setCurrentPage, capturedPokemon, setSelectedPokemon } = useAppStore();
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedHabitat, setSelectedHabitat] = useState<typeof detailedHabitatList[0] | null>(null);
+  const [selectedLocation, setSelectedLocation] = useState("All");
+  const [expandedHabitat, setExpandedHabitat] = useState<number | null>(null);
 
-  const filteredHabitats = detailedHabitatList.filter(habitat =>
-    habitat.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // Build a set of captured Pokemon names for quick lookup
+  const capturedNames = useMemo(() => {
+    const names = new Set<string>();
+    pokemonList.forEach(p => {
+      if (capturedPokemon.includes(p.id)) {
+        names.add(p.name.toLowerCase());
+      }
+    });
+    return names;
+  }, [capturedPokemon]);
 
-  const getResidentsForHabitat = (habitatName: string) => {
-    // Find Pokemon that have this habitat in their habitats array
-    return pokemonList.filter(p => 
-      p.habitats.some(h => h.toLowerCase().includes(habitatName.toLowerCase()))
-    );
+  const getCompletionStatus = (habitatPokemon: Array<{ name: string; slug: string }>) => {
+    if (habitatPokemon.length === 0) return null;
+    const total = habitatPokemon.length;
+    const caught = habitatPokemon.filter(p => capturedNames.has(p.name.toLowerCase())).length;
+    if (caught === 0) return { label: "Not Started", icon: <Circle className="w-3 h-3" />, color: "bg-gray-200 text-gray-600" };
+    if (caught === total) return { label: "Complete!", icon: <CheckCircle className="w-3 h-3" />, color: "bg-green-100 text-green-700" };
+    return { label: `${caught}/${total}`, icon: <Clock className="w-3 h-3" />, color: "bg-yellow-100 text-yellow-700" };
+  };
+
+  const filteredHabitats = useMemo(() => {
+    return habitatsData.filter(hab => {
+      const matchesSearch = hab.name.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesLocation = selectedLocation === "All" || hab.locations.includes(selectedLocation);
+      return matchesSearch && matchesLocation;
+    });
+  }, [searchQuery, selectedLocation]);
+
+  const handlePokemonClick = (slug: string, name: string) => {
+    setCurrentPage("dex");
   };
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-green-500 to-green-600">
+    <div className="h-full flex flex-col bg-gradient-to-b from-green-500 to-green-600 overflow-hidden">
       {/* Header */}
-      <div className="pt-6 pb-2 px-4">
+      <div className="pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
           <motion.button
             onClick={() => setCurrentPage("home")}
             className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center"
-            whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
             <ArrowLeft className="w-5 h-5 text-white" />
           </motion.button>
           <h1 className="text-lg font-bold text-white">Habitat Dex</h1>
-          <div className="w-9" />
+          <div className="flex items-center gap-1 bg-white/20 px-2 py-1 rounded-full">
+            <span className="text-white text-xs font-bold">{filteredHabitats.length}</span>
+            <span className="text-white/70 text-xs">habitats</span>
+          </div>
         </div>
 
-        {/* Search Bar */}
-        <div className="relative">
+        {/* Search */}
+        <div className="relative mb-2">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
           <input
             type="text"
             placeholder="Search habitats..."
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-2.5 rounded-xl bg-white shadow-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400 text-sm"
+            onChange={e => setSearchQuery(e.target.value)}
+            className="w-full pl-9 pr-3 py-2 rounded-xl bg-white shadow text-gray-800 placeholder-gray-400 focus:outline-none text-sm"
           />
+        </div>
+
+        {/* Location filters */}
+        <div className="flex gap-1.5 overflow-x-auto pb-1 scrollbar-hide">
+          {LOCATIONS.map(loc => (
+            <motion.button
+              key={loc}
+              onClick={() => setSelectedLocation(loc)}
+              className={`px-2.5 py-1 rounded-full text-[10px] font-semibold whitespace-nowrap transition-all ${
+                selectedLocation === loc
+                  ? "bg-white text-green-700 shadow"
+                  : "bg-white/20 text-white"
+              }`}
+              whileTap={{ scale: 0.95 }}
+            >
+              {loc === "All" ? "All Locations" : loc}
+            </motion.button>
+          ))}
         </div>
       </div>
 
-      {/* Content Card */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-hidden">
-        <div className="h-full overflow-y-auto">
-          {/* Habitat List */}
-          <div className="p-3 space-y-2">
-            <AnimatePresence mode="popLayout">
-              {filteredHabitats.map((habitat, index) => (
+      {/* Content */}
+      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+        <div className="p-3 space-y-2">
+          <AnimatePresence mode="popLayout">
+            {filteredHabitats.map((habitat, index) => {
+              const status = getCompletionStatus(habitat.pokemon);
+              const isExpanded = expandedHabitat === habitat.id;
+
+              return (
                 <motion.div
                   key={habitat.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ delay: index * 0.05 }}
-                  onClick={() => setSelectedHabitat(habitat)}
-                  className="bg-gray-50 rounded-xl p-3 cursor-pointer hover:bg-gray-100 transition-colors"
+                  exit={{ opacity: 0 }}
+                  transition={{ delay: Math.min(index * 0.02, 0.3) }}
+                  className="bg-gray-50 rounded-xl overflow-hidden border border-gray-100"
                 >
-                  {/* Header */}
-                  <div className="flex items-start justify-between mb-2">
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-xs text-gray-400">#{String(habitat.id).padStart(3, '0')}</span>
-                        <h3 className="font-bold text-gray-800 text-sm">{habitat.name}</h3>
+                  {/* Habitat header - always visible */}
+                  <button
+                    className="w-full flex items-center gap-3 p-3"
+                    onClick={() => setExpandedHabitat(isExpanded ? null : habitat.id)}
+                  >
+                    {/* Habitat image */}
+                    <div className="w-16 h-16 rounded-lg overflow-hidden bg-gray-200 shrink-0">
+                      <img
+                        src={habitat.image}
+                        alt={habitat.name}
+                        className="w-full h-full object-cover"
+                        onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                      />
+                    </div>
+
+                    <div className="flex-1 text-left min-w-0">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-[10px] text-gray-400">#{String(habitat.id).padStart(3,'0')}</span>
+                        <h3 className="font-bold text-gray-800 text-sm truncate">{habitat.name}</h3>
                       </div>
-                      <span className="text-[10px] px-2 py-0.5 bg-green-100 text-green-700 rounded-full">
-                        {habitat.category}
-                      </span>
-                    </div>
-                    <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
-                      <ImageIcon className="w-6 h-6 text-gray-400" />
-                    </div>
-                  </div>
 
-                  {/* Build Items */}
-                  <div className="mb-2">
-                    <p className="text-[10px] text-gray-500 mb-1">Build Items:</p>
-                    <div className="flex flex-wrap gap-1">
-                      {habitat.buildItems.map((item, i) => (
-                        <span key={i} className="text-[10px] px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full">
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                      {/* Pokemon count + completion badge */}
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-gray-500">{habitat.pokemon.length} Pokémon</span>
+                        {status && (
+                          <span className={`flex items-center gap-1 text-[10px] px-2 py-0.5 rounded-full font-medium ${status.color}`}>
+                            {status.icon}
+                            {status.label}
+                          </span>
+                        )}
+                      </div>
 
-                  {/* Residents */}
-                  <div className="flex items-center justify-between">
-                    <p className="text-[10px] text-gray-500">
-                      {habitat.residents.length} residents
-                    </p>
-                    <div className="flex -space-x-2">
-                      {habitat.residents.slice(0, 3).map((name, i) => (
-                        <div 
-                          key={i}
-                          className="w-6 h-6 rounded-full bg-gradient-to-br from-green-400 to-green-500 border-2 border-white flex items-center justify-center text-[8px] text-white font-bold"
-                        >
-                          {name[0]}
-                        </div>
-                      ))}
-                      {habitat.residents.length > 3 && (
-                        <div className="w-6 h-6 rounded-full bg-gray-300 border-2 border-white flex items-center justify-center text-[8px] text-gray-600 font-bold">
-                          +{habitat.residents.length - 3}
+                      {/* Location tags */}
+                      {habitat.locations.length > 0 && habitat.locations.length < 6 && (
+                        <div className="flex gap-1 mt-1 flex-wrap">
+                          {habitat.locations.map(loc => (
+                            <span
+                              key={loc}
+                              className={`text-[9px] px-1.5 py-0.5 rounded-full font-medium ${LOCATION_COLORS[loc] || 'bg-gray-200 text-gray-600'}`}
+                            >
+                              {loc}
+                            </span>
+                          ))}
                         </div>
                       )}
                     </div>
-                  </div>
+                  </button>
 
-                  {/* Partial Data Warning */}
-                  {habitat.residents.some(r => r === "???") && (
-                    <div className="mt-2 flex items-center gap-1 text-[10px] text-orange-600 bg-orange-50 rounded-lg px-2 py-1">
-                      <HelpCircle className="w-3 h-3" />
-                      <span>Some data still being discovered</span>
-                    </div>
-                  )}
+                  {/* Expanded: Pokemon list */}
+                  <AnimatePresence>
+                    {isExpanded && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-3 pb-3 border-t border-gray-100">
+                          {habitat.description && (
+                            <p className="text-xs text-gray-500 mt-2 mb-2 italic"
+                              dangerouslySetInnerHTML={{ __html: habitat.description }}
+                            />
+                          )}
+                          <p className="text-xs font-semibold text-gray-700 mb-2">Residents:</p>
+                          <div className="flex flex-wrap gap-1.5">
+                            {habitat.pokemon.map(poke => {
+                              const isCaught = capturedNames.has(poke.name.toLowerCase());
+                              return (
+                                <motion.button
+                                  key={poke.slug}
+                                  onClick={() => handlePokemonClick(poke.slug, poke.name)}
+                                  whileTap={{ scale: 0.95 }}
+                                  className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium border transition-colors ${
+                                    isCaught
+                                      ? "bg-green-100 text-green-700 border-green-200"
+                                      : "bg-white text-gray-700 border-gray-200"
+                                  }`}
+                                >
+                                  {isCaught && <CheckCircle className="w-3 h-3" />}
+                                  {poke.name}
+                                </motion.button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </motion.div>
-              ))}
-            </AnimatePresence>
+              );
+            })}
+          </AnimatePresence>
 
-            {filteredHabitats.length === 0 && (
-              <div className="flex flex-col items-center justify-center h-48 text-gray-400">
-                <Search className="w-12 h-12 mb-2" />
-                <p className="text-sm">No habitats found</p>
-              </div>
-            )}
-          </div>
+          {filteredHabitats.length === 0 && (
+            <div className="flex flex-col items-center justify-center h-40 text-gray-400">
+              <Search className="w-10 h-10 mb-2 opacity-30" />
+              <p className="text-sm">No habitats found</p>
+            </div>
+          )}
         </div>
       </div>
-
-      {/* Habitat Detail Modal */}
-      <AnimatePresence>
-        {selectedHabitat && (
-          <motion.div
-            initial={{ y: '100%' }}
-            animate={{ y: 0 }}
-            exit={{ y: '100%' }}
-            className="absolute inset-x-0 bottom-0 bg-white rounded-t-3xl shadow-2xl overflow-hidden z-20"
-            style={{ maxHeight: '75%' }}
-          >
-            <div className="p-4 overflow-y-auto max-h-full">
-              {/* Handle */}
-              <div className="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-4" />
-              
-              {/* Image Slot */}
-              <div className="w-full h-32 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
-                <div className="text-center text-gray-400">
-                  <ImageIcon className="w-10 h-10 mx-auto mb-1" />
-                  <p className="text-xs">In-game screenshot slot</p>
-                </div>
-              </div>
-
-              {/* Header */}
-              <div className="mb-4">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs text-gray-400">#{String(selectedHabitat.id).padStart(3, '0')}</span>
-                  <h2 className="text-xl font-bold text-gray-800">{selectedHabitat.name}</h2>
-                </div>
-                <span className="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">
-                  {selectedHabitat.category}
-                </span>
-              </div>
-
-              {/* Build Conditions */}
-              <div className="mb-4">
-                <h3 className="font-bold text-gray-700 text-sm mb-2">Build Conditions</h3>
-                <div className="flex flex-wrap gap-1">
-                  {selectedHabitat.buildConditions.map((cond, i) => (
-                    <span key={i} className="text-xs px-2 py-1 bg-yellow-100 text-yellow-700 rounded-full">
-                      {cond}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Build Items */}
-              <div className="mb-4">
-                <h3 className="font-bold text-gray-700 text-sm mb-2">Items Required</h3>
-                <div className="flex flex-wrap gap-1">
-                  {selectedHabitat.buildItems.map((item, i) => (
-                    <span key={i} className="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Residents */}
-              <div className="mb-4">
-                <h3 className="font-bold text-gray-700 text-sm mb-2">Residents Attracted</h3>
-                <div className="grid grid-cols-3 gap-2">
-                  {selectedHabitat.residents.map((name, i) => (
-                    <div 
-                      key={i}
-                      className={`p-2 rounded-lg text-center text-xs ${
-                        name === '???' 
-                          ? 'bg-gray-100 text-gray-400' 
-                          : 'bg-green-100 text-green-700'
-                      }`}
-                    >
-                      {name}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Notes */}
-              {selectedHabitat.notes && (
-                <div className="mb-4">
-                  <h3 className="font-bold text-gray-700 text-sm mb-2">Notes</h3>
-                  <p className="text-xs text-gray-600 bg-gray-50 rounded-lg p-2">
-                    {selectedHabitat.notes}
-                  </p>
-                </div>
-              )}
-
-              {/* Close Button */}
-              <motion.button
-                onClick={() => setSelectedHabitat(null)}
-                className="w-full py-3 rounded-xl bg-green-500 text-white font-medium"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Close
-              </motion.button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }

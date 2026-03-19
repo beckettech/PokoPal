@@ -1,0 +1,219 @@
+[
+  {
+    "name": "Appraise",
+    "slug": "appraise",
+    "icon": "",
+    "description": "You can show lost relics you've found to Professor Tangrowth, who will appraise them for you",
+    "pokemon": []
+  },
+  {
+    "name": "Build",
+    "slug": "build",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Build specialty will lead your building projects",
+    "pokemon": []
+  },
+  {
+    "name": "Bulldoze",
+    "slug": "bulldoze",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Bulldoze specialty can lead your demolition, rebuilding or relocation projects",
+    "pokemon": []
+  },
+  {
+    "name": "Burn",
+    "slug": "burn",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Burn specialty can set fire to Flammable objects. They can also turn Squish clay into Brick",
+    "pokemon": []
+  },
+  {
+    "name": "Chop",
+    "slug": "chop",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Chop specialty can process small logs into lumber",
+    "pokemon": []
+  },
+  {
+    "name": "Collect",
+    "slug": "collect",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Collect specialty will trade you rare things for certain items",
+    "pokemon": []
+  },
+  {
+    "name": "Crush",
+    "slug": "crush",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Crush specialty can mash materials into different things",
+    "pokemon": []
+  },
+  {
+    "name": "Dj",
+    "slug": "dj",
+    "icon": "",
+    "description": "DJ Rotom can use the DJ specialty to play music CDs for you",
+    "pokemon": []
+  },
+  {
+    "name": "Dreamisland",
+    "slug": "dreamisland",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Dream Island specialty can transport you to a Dream Island",
+    "pokemon": []
+  },
+  {
+    "name": "Eat",
+    "slug": "eat",
+    "icon": "",
+    "description": "Mosslax has the Eat specialty. Something good may happen if you offer them food",
+    "pokemon": []
+  },
+  {
+    "name": "Engineer",
+    "slug": "engineer",
+    "icon": "",
+    "description": "Tinkmaster has the Engineer specialty and can lead huge building projects",
+    "pokemon": []
+  },
+  {
+    "name": "Explode",
+    "slug": "explode",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Explode specialty can be fired out of a cannon, destroying everything around them on impact",
+    "pokemon": []
+  },
+  {
+    "name": "Fly",
+    "slug": "fly",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Fly spceialty can fly you to a Pok&eacute;mon you're searching fo",
+    "pokemon": []
+  },
+  {
+    "name": "Gather",
+    "slug": "gather",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Gather specialty will pick up items on the ground and put them inside a community box",
+    "pokemon": []
+  },
+  {
+    "name": "Gatherhoney",
+    "slug": "gatherhoney",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Gather Honey specialty will give you special furniture if you bring them honey",
+    "pokemon": []
+  },
+  {
+    "name": "Generate",
+    "slug": "generate",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Generate specialty can power machines with electricty",
+    "pokemon": []
+  },
+  {
+    "name": "Grow",
+    "slug": "grow",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Grow specialty can make plants grow faster",
+    "pokemon": []
+  },
+  {
+    "name": "Hype",
+    "slug": "hype",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Hype specialty will start dancing when they hear music, improving the mood",
+    "pokemon": []
+  },
+  {
+    "name": "Illuminate",
+    "slug": "illuminate",
+    "icon": "",
+    "description": "Peakychu can use the Illuminate specialty to light up the whole town for you",
+    "pokemon": []
+  },
+  {
+    "name": "Litter",
+    "slug": "litter",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Litter specialty will drop useful materials near their homes",
+    "pokemon": []
+  },
+  {
+    "name": "Paint",
+    "slug": "paint",
+    "icon": "",
+    "description": "Smearguru has the Paint specialty and can recolor certain items, such as furniture",
+    "pokemon": []
+  },
+  {
+    "name": "Party",
+    "slug": "party",
+    "icon": "",
+    "description": "Chef Dente can use the Party specialty to help you prepare food for parties",
+    "pokemon": []
+  },
+  {
+    "name": "Rarify",
+    "slug": "rarify",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Rarify specialty can turn Star Pieces into rare Pok&eacute;metal",
+    "pokemon": []
+  },
+  {
+    "name": "Recycle",
+    "slug": "recycle",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Recycle specialty can process nonburnable garbage into iron ore and wastepaper into paper",
+    "pokemon": []
+  },
+  {
+    "name": "Search",
+    "slug": "search",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Search specialty can help you find buried items",
+    "pokemon": []
+  },
+  {
+    "name": "Storage",
+    "slug": "storage",
+    "icon": "",
+    "description": "Pok\u00c3\u00a9mon with the Storage specialty can hold on to your items for you",
+    "pokemon": []
+  },
+  {
+    "name": "Teleport",
+    "slug": "teleport",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Teleport specialty can instantly take you to a Pok&eacute;mon you're searching for",
+    "pokemon": []
+  },
+  {
+    "name": "Trade",
+    "slug": "trade",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Trade speicalty can exchange items with you at a cash register",
+    "pokemon": []
+  },
+  {
+    "name": "Transform",
+    "slug": "transform",
+    "icon": "",
+    "description": "Ditto can improve its moves by using Transform",
+    "pokemon": []
+  },
+  {
+    "name": "Water",
+    "slug": "water",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Water specialty can use a full water basin to spray water on nearby fields and plants",
+    "pokemon": []
+  },
+  {
+    "name": "Yawn",
+    "slug": "yawn",
+    "icon": "",
+    "description": "Pok&eacute;mon with the Yawn specialty can tell you how humid it is",
+    "pokemon": []
+  }
+]

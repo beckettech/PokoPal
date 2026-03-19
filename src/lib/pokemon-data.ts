@@ -135,7 +135,7 @@ export const habitatNames = [
   "Tropical Seaside",
 ];
 
-// Specialties from Serebii
+// Specialties from Serebii with icon URLs
 export const specialtyList = [
   "Appraise", "Build", "Bulldoze", "Burn", "Chop", "Collect", "Crush",
   "DJ", "Dream Island", "Eat", "Engineer", "Explode", "Fly", "Gather",
@@ -143,6 +143,46 @@ export const specialtyList = [
   "Paint", "Party", "Rarify", "Recycle", "Search", "Storage", "Teleport",
   "Trade", "Transform", "Water", "Yawn"
 ];
+
+// Specialty icon mapping
+export const specialtyIcons: Record<string, string> = {
+  "Appraise": "https://www.serebii.net/pokemonpokopia/specialty/appraise.png",
+  "Build": "https://www.serebii.net/pokemonpokopia/specialty/build.png",
+  "Bulldoze": "https://www.serebii.net/pokemonpokopia/specialty/bulldoze.png",
+  "Burn": "https://www.serebii.net/pokemonpokopia/specialty/burn.png",
+  "Chop": "https://www.serebii.net/pokemonpokopia/specialty/chop.png",
+  "Collect": "https://www.serebii.net/pokemonpokopia/specialty/collect.png",
+  "Crush": "https://www.serebii.net/pokemonpokopia/specialty/crush.png",
+  "DJ": "https://www.serebii.net/pokemonpokopia/specialty/dj.png",
+  "Dream Island": "https://www.serebii.net/pokemonpokopia/specialty/dreamisland.png",
+  "Eat": "https://www.serebii.net/pokemonpokopia/specialty/eat.png",
+  "Engineer": "https://www.serebii.net/pokemonpokopia/specialty/engineer.png",
+  "Explode": "https://www.serebii.net/pokemonpokopia/specialty/explode.png",
+  "Fly": "https://www.serebii.net/pokemonpokopia/specialty/fly.png",
+  "Gather": "https://www.serebii.net/pokemonpokopia/specialty/gather.png",
+  "Gather Honey": "https://www.serebii.net/pokemonpokopia/specialty/gatherhoney.png",
+  "Generate": "https://www.serebii.net/pokemonpokopia/specialty/generate.png",
+  "Grow": "https://www.serebii.net/pokemonpokopia/specialty/grow.png",
+  "Hype": "https://www.serebii.net/pokemonpokopia/specialty/hype.png",
+  "Illuminate": "https://www.serebii.net/pokemonpokopia/specialty/illuminate.png",
+  "Litter": "https://www.serebii.net/pokemonpokopia/specialty/litter.png",
+  "Paint": "https://www.serebii.net/pokemonpokopia/specialty/paint.png",
+  "Party": "https://www.serebii.net/pokemonpokopia/specialty/party.png",
+  "Rarify": "https://www.serebii.net/pokemonpokopia/specialty/rarify.png",
+  "Recycle": "https://www.serebii.net/pokemonpokopia/specialty/recycle.png",
+  "Search": "https://www.serebii.net/pokemonpokopia/specialty/search.png",
+  "Storage": "https://www.serebii.net/pokemonpokopia/specialty/storage.png",
+  "Teleport": "https://www.serebii.net/pokemonpokopia/specialty/teleport.png",
+  "Trade": "https://www.serebii.net/pokemonpokopia/specialty/trade.png",
+  "Transform": "https://www.serebii.net/pokemonpokopia/specialty/transform.png",
+  "Water": "https://www.serebii.net/pokemonpokopia/specialty/water.png",
+  "Yawn": "https://www.serebii.net/pokemonpokopia/specialty/yawn.png",
+};
+
+// Helper function to get specialty icon URL
+export function getSpecialtyIcon(specialty: string): string {
+  return specialtyIcons[specialty] || `https://www.serebii.net/pokemonpokopia/specialty/${specialty.toLowerCase().replace(' ', '')}.png`;
+}
 
 // Rarity order for filtering
 export const rarities = ["Common", "Rare", "Legendary"] as const;
