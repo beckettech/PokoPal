@@ -163,7 +163,7 @@ export function TypesPage() {
 
           {/* Rarity Guide */}
           <div className="p-4 border-t border-gray-100">
-            <h2 className="text-lg font-bold text-gray-800 mb-3">Rarity Guide</h2>
+            <h2 className="text-lg font-bold text-gray-800 mb-2">Rarity Guide</h2>
             <div className="grid grid-cols-2 gap-2">
               <div className="flex items-center gap-2 p-2 bg-gray-50 rounded-lg">
                 <span className="w-3 h-3 rounded-full bg-gray-400" />

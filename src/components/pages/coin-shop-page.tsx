@@ -136,7 +136,7 @@ export function CoinShopPage() {
           {/* Coin Packages */}
           <div className="p-3">
             <h2 className="text-sm font-bold text-gray-700 mb-2">Purchase Coins</h2>
-            <p className="text-[10px] text-gray-500 mb-3">
+            <p className="text-[10px] text-gray-500 mb-2">
               Use coins to chat with your Pokopia assistant!
             </p>
 

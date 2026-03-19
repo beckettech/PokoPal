@@ -29,7 +29,7 @@ export function MapPage() {
   return (
     <div className="h-full flex flex-col bg-gray-900">
       {/* Header */}
-      <div className="pt-12 pb-3 px-4 bg-gray-800">
+      <div className="pt-6 pb-2 px-4 bg-gray-800">
         <div className="flex items-center justify-between">
           <motion.button
             onClick={() => setCurrentPage("home")}

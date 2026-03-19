@@ -98,7 +98,7 @@ export function HomePage() {
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-red-500 via-red-600 to-red-700">
       {/* Header Section */}
-      <div className="pt-12 pb-4 px-4">
+      <div className="pt-6 pb-2 px-4">
         {/* Top Row - Blue Button, Circles, and Coins */}
         <div className="flex items-start justify-between">
           {/* Left Side: Large Blue Button + Circles */}

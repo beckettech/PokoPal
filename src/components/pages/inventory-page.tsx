@@ -109,7 +109,7 @@ export function InventoryPage() {
                   transition={{ delay: index * 0.05 }}
                 >
                   {/* Item Image */}
-                  <div className="flex justify-center mb-3">
+                  <div className="flex justify-center mb-2">
                     <motion.img
                       src={item.image}
                       alt={item.name}

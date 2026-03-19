@@ -36,7 +36,7 @@ export function MysteryGiftsPage() {
     <div className="h-full flex flex-col bg-gradient-to-b from-pink-500 to-purple-600">
       {/* Header */}
       <div className="pt-12 pb-4 px-4">
-        <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center justify-between mb-2">
           <motion.button
             onClick={() => setCurrentPage("home")}
             className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center"

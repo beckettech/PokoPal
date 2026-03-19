@@ -50,8 +50,8 @@ export function RequestsPage() {
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-yellow-500 to-yellow-600">
       {/* Header */}
-      <div className="pt-12 pb-3 px-4">
-        <div className="flex items-center justify-between mb-3">
+      <div className="pt-6 pb-2 px-4">
+        <div className="flex items-center justify-between mb-2">
           <motion.button
             onClick={() => setCurrentPage("home")}
             className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center"
