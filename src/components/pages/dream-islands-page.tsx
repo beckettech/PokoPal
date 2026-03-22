@@ -26,9 +26,9 @@ const DREAM_ISLANDS = [
       { name: "Seashell", image: `${BASE}/items/seashell.png` },
     ],
     legendaries: [
-      { name: "Raikou", image: `${BASE}/pokemon/243.png`, chance: "★ Confirmed" },
+      { name: "Raikou", image: `${BASE}/pokemon/243.png`, chance: "★ Confirmed", tip: "Look in small rooms with walls made from different materials than the surrounding area." },
     ],
-    note: "Raikou first appears during the Bleak Beach storyline, then again here.",
+    note: "First met during the Bleak Beach main story. Register it there first, then return here.",
     color: "from-yellow-400 to-yellow-600",
     textColor: "text-yellow-900",
     bgColor: "bg-yellow-50",
@@ -51,9 +51,9 @@ const DREAM_ISLANDS = [
       { name: "Squishy Clay", image: `${BASE}/items/squishyclay.png` },
     ],
     legendaries: [
-      { name: "Suicune", image: `${BASE}/pokemon/245.png`, chance: "★ Confirmed" },
+      { name: "Suicune", image: `${BASE}/pokemon/245.png`, chance: "★ Confirmed", tip: "Look in small rooms with walls made from different materials than the surrounding area." },
     ],
-    note: "Suicune randomly appears on this island.",
+    note: "Suicune appears randomly. Collect all 3 Legendary Dogs to unlock Ho-oh's Transparent Bell recipe.",
     color: "from-amber-400 to-amber-600",
     textColor: "text-amber-900",
     bgColor: "bg-amber-50",
@@ -75,9 +75,9 @@ const DREAM_ISLANDS = [
       { name: "Crystal Fragment", image: `${BASE}/items/crystalfragment.png` },
     ],
     legendaries: [
-      { name: "Volcanion", image: `${BASE}/pokemon/721.png`, chance: "★ Confirmed" },
+      { name: "Volcanion", image: `${BASE}/pokemon/721.png`, chance: "★ Confirmed", tip: "First encountered during the Rocky Ridges main quest. Register it there — then it may appear here." },
     ],
-    note: "Volcanion first appears during Rocky Ridges storyline, then again here.",
+    note: "Complete the Rocky Ridges story quest to first register Volcanion, then visit here.",
     color: "from-pink-400 to-pink-600",
     textColor: "text-pink-900",
     bgColor: "bg-pink-50",
@@ -99,9 +99,9 @@ const DREAM_ISLANDS = [
       { name: "Copper Ore", image: `${BASE}/items/copperore.png` },
     ],
     legendaries: [
-      { name: "Entei", image: `${BASE}/pokemon/244.png`, chance: "★ Confirmed" },
+      { name: "Entei", image: `${BASE}/pokemon/244.png`, chance: "★ Confirmed", tip: "Look in small rooms with walls made from different materials than the surrounding area." },
     ],
-    note: "Entei randomly appears on this island.",
+    note: "Entei appears randomly. Collect all 3 Legendary Dogs to unlock Ho-oh's Transparent Bell recipe.",
     color: "from-orange-400 to-orange-600",
     textColor: "text-orange-900",
     bgColor: "bg-orange-50",
@@ -122,9 +122,9 @@ const DREAM_ISLANDS = [
       { name: "Gold Ore", image: `${BASE}/items/goldore.png` },
     ],
     legendaries: [
-      { name: "Mewtwo", image: `${BASE}/pokemon/150.png`, chance: "★ Confirmed" },
+      { name: "Mewtwo", image: `${BASE}/pokemon/150.png`, chance: "★ Confirmed", tip: "Complete the 'Rebuild the huge building!' quest in Sparkling Skylands (build floors 2F→3F→4F), then meet Mewtwo on the roof to unlock this encounter." },
     ],
-    note: "Mewtwo first appears during Sparkling Skylands storyline, then again here.",
+    note: "Sparkling Skylands main quest required first. Build the Skyland building to the rooftop.",
     color: "from-blue-400 to-blue-600",
     textColor: "text-blue-900",
     bgColor: "bg-blue-50",
@@ -334,15 +334,22 @@ export function DreamIslandsPage() {
                             <p className={`text-[10px] font-bold uppercase tracking-wide mb-2 flex items-center gap-1 ${island.textColor} opacity-70`}>
                               <Star className="w-3 h-3 text-amber-500" /> Legendary Encounter
                             </p>
-                            <div className="flex gap-2 flex-wrap">
+                            <div className="space-y-2">
                               {island.legendaries.map(leg => (
-                                <div key={leg.name} className="flex flex-col items-center gap-1">
-                                  <div className="w-16 h-16 bg-white rounded-xl border-2 border-amber-200 shadow flex items-center justify-center">
-                                    <img src={leg.image} alt={leg.name} className="w-14 h-14 object-contain"
-                                      onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                                <div key={leg.name} className="flex items-start gap-3">
+                                  <div className="shrink-0 flex flex-col items-center gap-1">
+                                    <div className="w-16 h-16 bg-white rounded-xl border-2 border-amber-200 shadow flex items-center justify-center">
+                                      <img src={leg.image} alt={leg.name} className="w-14 h-14 object-contain"
+                                        onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                                    </div>
+                                    <span className={`text-[9px] font-bold ${island.textColor}`}>{leg.name}</span>
+                                    <span className="text-[8px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-semibold">{leg.chance}</span>
                                   </div>
-                                  <span className={`text-[9px] font-bold ${island.textColor}`}>{leg.name}</span>
-                                  <span className="text-[8px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-semibold">{leg.chance}</span>
+                                  {(leg as any).tip && (
+                                    <div className="flex-1 bg-white/60 rounded-xl p-2.5 border border-amber-100">
+                                      <p className="text-[10px] text-amber-800 leading-relaxed">💡 {(leg as any).tip}</p>
+                                    </div>
+                                  )}
                                 </div>
                               ))}
                             </div>
