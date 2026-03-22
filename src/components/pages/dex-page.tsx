@@ -129,28 +129,21 @@ export function DexPage() {
   if (selectedPokemon) {
     const isFriend = capturedPokemon.includes(selectedPokemon.id);
     return (
-      <div className="h-full flex flex-col bg-white overflow-hidden">
-        {/* Gradient header */}
-        {/* Slim colored header - just back button + name */}
-        <div className={`shrink-0 bg-gradient-to-br ${
-          selectedPokemon.rarity === "Legendary" ? "from-amber-500 to-orange-500" :
-          selectedPokemon.rarity === "Rare" ? "from-purple-500 to-violet-500" :
-          "from-gray-400 to-gray-500"
-        } pt-4 pb-4 px-4`}>
+      <div className="h-full flex flex-col bg-gray-50 overflow-hidden">
+        {/* Clean white top bar */}
+        <div className="shrink-0 bg-white px-4 pt-4 pb-3 border-b border-gray-100">
           <div className="flex items-center gap-3">
             <button
               onClick={() => setSelectedPokemon(null)}
-              className="w-9 h-9 rounded-full bg-black/20 flex items-center justify-center active:scale-90 transition-transform shrink-0"
+              className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center active:scale-90 transition-transform shrink-0"
             >
-              <ArrowLeft className="w-5 h-5 text-white" />
+              <ArrowLeft className="w-5 h-5 text-gray-600" />
             </button>
             <div className="flex-1">
-              <p className="text-xs text-white/60 font-mono">#{String(selectedPokemon.id).padStart(3, '0')}</p>
-              <h2 className="text-xl font-bold text-white leading-tight">{selectedPokemon.name}</h2>
+              <p className="text-xs text-gray-400 font-mono">#{String(selectedPokemon.id).padStart(3, '0')}</p>
+              <h2 className="text-xl font-bold text-gray-900 leading-tight">{selectedPokemon.name}</h2>
             </div>
-            <span className={`text-xs font-bold px-3 py-1 rounded-full shrink-0 ${
-              selectedPokemon.rarity === 'Legendary' ? 'bg-white text-amber-600' : 'bg-black/30 text-white'
-            }`}>
+            <span className={`text-xs font-bold px-3 py-1 rounded-full shrink-0 ${getRarityButtonStyle(selectedPokemon.rarity)}`}>
               {selectedPokemon.rarity}
             </span>
           </div>
@@ -158,10 +151,10 @@ export function DexPage() {
 
         {/* Scrollable content */}
         <div className="flex-1 overflow-y-auto">
-          <div className="bg-white pt-4 px-4 pb-8 space-y-5">
-            {/* Image + Types */}
-            <div className="flex items-center gap-4">
-              <div className={`w-20 h-20 shrink-0 rounded-2xl ${getRarityBg(selectedPokemon.rarity)} p-2 shadow-md`}>
+          <div className="pt-4 px-4 pb-8 space-y-3">
+            {/* Image card */}
+            <div className="bg-white rounded-2xl p-4 flex items-center gap-4 shadow-sm">
+              <div className={`w-24 h-24 shrink-0 rounded-2xl ${getRarityBg(selectedPokemon.rarity)} p-2`}>
                 <img
                   src={selectedPokemon.image}
                   alt={selectedPokemon.name}
@@ -171,7 +164,7 @@ export function DexPage() {
               </div>
               <div className="flex flex-wrap gap-1">
                 {selectedPokemon.types.map(t => (
-                  <span key={t} className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{t}</span>
+                  <span key={t} className="text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-600 font-medium">{t}</span>
                 ))}
               </div>
             </div>
@@ -179,8 +172,8 @@ export function DexPage() {
             {/* Friend button */}
             <button
               onClick={() => toggleCapturedPokemon(selectedPokemon.id)}
-              className={`w-full py-3 rounded-xl flex items-center justify-center gap-2 font-medium active:scale-95 transition-transform ${
-                isFriend ? 'bg-yellow-400 text-yellow-900' : 'bg-gray-100 text-gray-600 border-2 border-dashed border-gray-300'
+              className={`w-full py-3 rounded-2xl flex items-center justify-center gap-2 font-medium active:scale-95 transition-transform shadow-sm ${
+                isFriend ? 'bg-yellow-400 text-yellow-900' : 'bg-white text-gray-500 border-2 border-dashed border-gray-200'
               }`}
             >
               {isFriend ? <><Check className="w-5 h-5" /><span>Friend!</span></> : <><Plus className="w-5 h-5" /><span>Add as Friend</span></>}
