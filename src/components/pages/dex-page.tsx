@@ -131,49 +131,45 @@ export function DexPage() {
     return (
       <div className="h-full flex flex-col bg-white overflow-hidden">
         {/* Gradient header */}
+        {/* Slim colored header - just back button + name */}
         <div className={`shrink-0 bg-gradient-to-br ${
           selectedPokemon.rarity === "Legendary" ? "from-amber-500 to-orange-500" :
           selectedPokemon.rarity === "Rare" ? "from-purple-500 to-violet-500" :
           "from-gray-400 to-gray-500"
-        } pt-4 pb-3 px-4 relative`}>
-          <div className="flex items-center justify-between">
+        } pt-4 pb-4 px-4`}>
+          <div className="flex items-center gap-3">
             <button
               onClick={() => setSelectedPokemon(null)}
-              className="w-9 h-9 rounded-full bg-black/20 flex items-center justify-center active:scale-90 transition-transform"
+              className="w-9 h-9 rounded-full bg-black/20 flex items-center justify-center active:scale-90 transition-transform shrink-0"
             >
               <ArrowLeft className="w-5 h-5 text-white" />
             </button>
-            <span className={`text-xs font-bold px-3 py-1 rounded-full ${
+            <div className="flex-1">
+              <p className="text-xs text-white/60 font-mono">#{String(selectedPokemon.id).padStart(3, '0')}</p>
+              <h2 className="text-xl font-bold text-white leading-tight">{selectedPokemon.name}</h2>
+            </div>
+            <span className={`text-xs font-bold px-3 py-1 rounded-full shrink-0 ${
               selectedPokemon.rarity === 'Legendary' ? 'bg-white text-amber-600' : 'bg-black/30 text-white'
             }`}>
               {selectedPokemon.rarity}
             </span>
           </div>
-          {/* Name + number in header */}
-          <div className="text-center mt-1 mb-1">
-            <p className="text-xs text-white/60 font-mono">#{String(selectedPokemon.id).padStart(3, '0')}</p>
-            <h2 className="text-2xl font-bold text-white">{selectedPokemon.name}</h2>
-          </div>
-          <div className="flex justify-center">
-            <div className={`w-20 h-20 rounded-2xl ${getRarityBg(selectedPokemon.rarity)} p-2 shadow-xl`}>
-              <img
-                src={selectedPokemon.image}
-                alt={selectedPokemon.name}
-                className="w-full h-full object-contain"
-                style={{ filter: 'drop-shadow(0 0 2px black)' }}
-              />
-            </div>
-          </div>
         </div>
 
         {/* Scrollable content */}
-        <div className="flex-1 overflow-y-auto -mt-4">
-          <div className="bg-white rounded-t-3xl pt-4 px-4 pb-8 space-y-5">
-            {/* Types */}
-            <div className="text-center">
-              <p className="text-xs text-gray-400 font-mono sr-only">#{String(selectedPokemon.id).padStart(3, '0')}</p>
-              <h2 className="text-2xl font-bold text-gray-800 sr-only">{selectedPokemon.name}</h2>
-              <div className="flex items-center justify-center gap-1.5 mt-1">
+        <div className="flex-1 overflow-y-auto">
+          <div className="bg-white pt-4 px-4 pb-8 space-y-5">
+            {/* Image + Types */}
+            <div className="flex items-center gap-4">
+              <div className={`w-20 h-20 shrink-0 rounded-2xl ${getRarityBg(selectedPokemon.rarity)} p-2 shadow-md`}>
+                <img
+                  src={selectedPokemon.image}
+                  alt={selectedPokemon.name}
+                  className="w-full h-full object-contain"
+                  style={{ filter: 'drop-shadow(0 0 2px black)' }}
+                />
+              </div>
+              <div className="flex flex-wrap gap-1">
                 {selectedPokemon.types.map(t => (
                   <span key={t} className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{t}</span>
                 ))}
