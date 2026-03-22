@@ -1,10 +1,9 @@
 'use client'
 
 import { useAppStore } from "@/lib/store";
-import { pokemonList } from "@/lib/pokemon-data";
-import { ArrowLeft, Search, Plus, X, Eye, EyeOff, Check, Zap, MapPin, Home, Clock, Sun } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { pokemonList as pokemonData, Pokemon, getSpecialtyIcon } from "@/lib/pokemon-data";
+import { ArrowLeft, Search, Plus, Eye, EyeOff, Check, Zap, MapPin, Home, Sun, Moon, Cloud, CloudRain, CloudSnow } from "lucide-react";
+import { useState, useEffect } from "react";
 import specialtiesData from "@/data/scraped/specialties.json";
 import habitatsData from "@/data/scraped/habitats.json";
 
@@ -17,20 +16,15 @@ for (const s of specialtiesData) {
   };
 }
 
-// Habitat lookup: name -> {image, slug}
+// Habitat lookup: name -> {image, slug, id}
 const habitatMap: Record<string, { image: string; slug: string; id: number }> = {};
 for (const h of habitatsData) {
   habitatMap[h.name.toLowerCase()] = { image: h.image, slug: h.slug, id: h.id };
 }
 
-// Location unlock order
 const LOCATION_ORDER = [
-  "Withered Wastelands",
-  "Bleak Beach",
-  "Rocky Ridges",
-  "Sparkling Skylands",
-  "Palette Town",
-  "Cloud Island",
+  "Withered Wastelands", "Bleak Beach", "Rocky Ridges",
+  "Sparkling Skylands", "Palette Town", "Cloud Island",
 ];
 
 const LOCATION_COLORS: Record<string, string> = {
@@ -44,90 +38,285 @@ const LOCATION_COLORS: Record<string, string> = {
 
 const rarities = ["Common", "Rare", "Legendary"] as const;
 
+// ── Time / Weather display helpers ──
+type TimeVal = "Any" | "Day" | "Night";
+type WeatherVal = "Any" | "Sunny" | "Rainy" | "Snowy" | "Foggy" | "Cloudy";
+
+function TimeIcon({ time }: { time: TimeVal }) {
+  if (time === "Day")  return <Sun className="w-4 h-4 text-yellow-500" />;
+  if (time === "Night") return <Moon className="w-4 h-4 text-indigo-400" />;
+  return <Sun className="w-4 h-4 text-gray-400" />;
+}
+
+function WeatherIcon({ weather }: { weather: WeatherVal }) {
+  if (weather === "Sunny")  return <Sun className="w-4 h-4 text-yellow-500" />;
+  if (weather === "Rainy")  return <CloudRain className="w-4 h-4 text-blue-500" />;
+  if (weather === "Snowy")  return <CloudSnow className="w-4 h-4 text-sky-400" />;
+  if (weather === "Cloudy") return <Cloud className="w-4 h-4 text-gray-400" />;
+  if (weather === "Foggy")  return <Cloud className="w-4 h-4 text-gray-300" />;
+  return <Sun className="w-4 h-4 text-gray-400" />;
+}
+
+function ConditionsBlock({ pokemon }: { pokemon: Pokemon }) {
+  const time: TimeVal = pokemon.time ?? "Any";
+  const weather: WeatherVal = pokemon.weather ?? "Any";
+
+  return (
+    <div className="bg-orange-50 rounded-2xl p-4 border border-orange-100">
+      <h3 className="font-bold text-gray-700 text-sm mb-3">Conditions to Find</h3>
+      <div className="grid grid-cols-2 gap-3">
+        {/* Time */}
+        <div className="flex flex-col items-center gap-1.5 bg-white rounded-xl p-3 border border-orange-100">
+          <TimeIcon time={time} />
+          <span className="text-[10px] text-gray-500 uppercase tracking-wide font-semibold">Time</span>
+          <span className="text-sm font-bold text-gray-800">{time}</span>
+        </div>
+        {/* Weather */}
+        <div className="flex flex-col items-center gap-1.5 bg-white rounded-xl p-3 border border-orange-100">
+          <WeatherIcon weather={weather} />
+          <span className="text-[10px] text-gray-500 uppercase tracking-wide font-semibold">Weather</span>
+          <span className="text-sm font-bold text-gray-800">{weather}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function DexPage() {
-  const { setCurrentPage, capturedPokemon, toggleCapturedPokemon, navigateToHabitat, navigateToLocation, focusedPokemonId, clearFocus } = useAppStore();
+  const { setCurrentPage, navigateToHabitat, capturedPokemon, toggleCapturedPokemon, focusedPokemonId, clearFocus } = useAppStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedRarity, setSelectedRarity] = useState<string | null>(null);
   const [friendFilter, setFriendFilter] = useState<"all" | "friends" | "unseen">("all");
-  const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(() => {
-    // Auto-open focused pokemon on mount
-    if (focusedPokemonId !== null) {
-      return pokemonData.find(p => p.id === focusedPokemonId) ?? null;
-    }
-    return null;
-  });
+  const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(null);
 
-  // Clear focus after opening
-  if (focusedPokemonId !== null) {
-    clearFocus();
-  }
+  // Auto-open a Pokemon if navigated to via deep-link
+  useEffect(() => {
+    if (focusedPokemonId) {
+      const p = pokemonData.find(p => p.id === focusedPokemonId);
+      if (p) setSelectedPokemon(p);
+      clearFocus();
+    }
+  }, [focusedPokemonId]);
 
   const filteredPokemon = pokemonData.filter(pokemon => {
     const matchesSearch = pokemon.name.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesRarity = !selectedRarity || pokemon.rarity === selectedRarity;
-    
-    // Friend filter
     let matchesFriendFilter = true;
-    if (friendFilter === "friends") {
-      matchesFriendFilter = capturedPokemon.includes(pokemon.id);
-    } else if (friendFilter === "unseen") {
-      matchesFriendFilter = !capturedPokemon.includes(pokemon.id);
-    }
-    
+    if (friendFilter === "friends") matchesFriendFilter = capturedPokemon.includes(pokemon.id);
+    else if (friendFilter === "unseen") matchesFriendFilter = !capturedPokemon.includes(pokemon.id);
     return matchesSearch && matchesRarity && matchesFriendFilter;
   });
 
   const getRarityColor = (rarity: string) => {
-    switch (rarity) {
-      case "Legendary": return "text-amber-500";
-      case "Rare": return "text-purple-500";
-      default: return "text-gray-500";
-    }
+    if (rarity === "Legendary") return "text-amber-500";
+    if (rarity === "Rare") return "text-purple-500";
+    return "text-gray-400";
   };
 
   const getRarityBg = (rarity: string) => {
-    switch (rarity) {
-      case "Legendary": return "bg-gradient-to-br from-amber-100 to-amber-200";
-      case "Rare": return "bg-gradient-to-br from-purple-100 to-purple-200";
-      default: return "bg-gradient-to-br from-gray-100 to-gray-200";
-    }
+    if (rarity === "Legendary") return "bg-gradient-to-br from-amber-100 to-amber-200";
+    if (rarity === "Rare") return "bg-gradient-to-br from-purple-100 to-purple-200";
+    return "bg-gradient-to-br from-gray-100 to-gray-200";
   };
 
   const getRarityButtonStyle = (rarity: string) => {
-    switch (rarity) {
-      case "Legendary": return "bg-gradient-to-r from-amber-400 to-orange-400 text-white";
-      case "Rare": return "bg-gradient-to-r from-purple-400 to-violet-400 text-white";
-      default: return "bg-gradient-to-r from-gray-300 to-gray-400 text-gray-700";
-    }
+    if (rarity === "Legendary") return "bg-gradient-to-r from-amber-400 to-orange-400 text-white";
+    if (rarity === "Rare") return "bg-gradient-to-r from-purple-400 to-violet-400 text-white";
+    return "bg-gradient-to-r from-gray-300 to-gray-400 text-gray-700";
   };
 
+  // ── Full-screen Pokemon Detail ──
+  if (selectedPokemon) {
+    const isFriend = capturedPokemon.includes(selectedPokemon.id);
+    return (
+      <div className="h-full flex flex-col bg-white overflow-hidden">
+        {/* Gradient header */}
+        <div className={`shrink-0 bg-gradient-to-br ${
+          selectedPokemon.rarity === "Legendary" ? "from-amber-500 to-orange-500" :
+          selectedPokemon.rarity === "Rare" ? "from-purple-500 to-violet-500" :
+          "from-gray-400 to-gray-500"
+        } pt-6 pb-16 px-4 relative`}>
+          <button
+            onClick={() => setSelectedPokemon(null)}
+            className="w-9 h-9 rounded-full bg-black/20 flex items-center justify-center active:scale-90 transition-transform"
+          >
+            <ArrowLeft className="w-5 h-5 text-white" />
+          </button>
+          <div className="absolute top-6 right-4">
+            <span className={`text-xs font-bold px-3 py-1 rounded-full ${
+              selectedPokemon.rarity === 'Legendary' ? 'bg-white text-amber-600' : 'bg-black/30 text-white'
+            }`}>
+              {selectedPokemon.rarity}
+            </span>
+          </div>
+          <div className="flex justify-center mt-2">
+            <div className={`w-32 h-32 rounded-2xl ${getRarityBg(selectedPokemon.rarity)} p-2 shadow-xl`}>
+              <img
+                src={selectedPokemon.image}
+                alt={selectedPokemon.name}
+                className="w-full h-full object-contain"
+                style={{ filter: 'drop-shadow(0 0 2px black)' }}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Scrollable content */}
+        <div className="flex-1 overflow-y-auto -mt-10">
+          <div className="bg-white rounded-t-3xl pt-4 px-4 pb-8 space-y-5">
+            {/* Name + number */}
+            <div className="text-center">
+              <p className="text-xs text-gray-400 font-mono">#{String(selectedPokemon.id).padStart(3, '0')}</p>
+              <h2 className="text-2xl font-bold text-gray-800">{selectedPokemon.name}</h2>
+              <div className="flex items-center justify-center gap-1.5 mt-1">
+                {selectedPokemon.types.map(t => (
+                  <span key={t} className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{t}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Friend button */}
+            <button
+              onClick={() => toggleCapturedPokemon(selectedPokemon.id)}
+              className={`w-full py-3 rounded-xl flex items-center justify-center gap-2 font-medium active:scale-95 transition-transform ${
+                isFriend ? 'bg-yellow-400 text-yellow-900' : 'bg-gray-100 text-gray-600 border-2 border-dashed border-gray-300'
+              }`}
+            >
+              {isFriend ? <><Check className="w-5 h-5" /><span>Friend!</span></> : <><Plus className="w-5 h-5" /><span>Add as Friend</span></>}
+            </button>
+
+            {/* Specialties */}
+            {selectedPokemon.specialties && selectedPokemon.specialties.length > 0 && (
+              <div>
+                <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
+                  <Zap className="w-4 h-4 text-yellow-500" /> Specialties
+                </h3>
+                <div className="space-y-2">
+                  {selectedPokemon.specialties.map((specialty, i) => {
+                    const info = specialtyMap[specialty.toLowerCase()];
+                    return (
+                      <div key={i} className="flex items-start gap-3 bg-green-50 rounded-xl p-3 border border-green-100">
+                        <div className="w-10 h-10 rounded-lg bg-white border border-green-200 flex items-center justify-center shrink-0">
+                          {info?.icon ? (
+                            <img src={info.icon} alt={specialty} className="w-8 h-8 object-contain"
+                              onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                          ) : (
+                            <Zap className="w-4 h-4 text-green-500" />
+                          )}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-semibold text-green-800 text-sm">{specialty}</p>
+                          {info?.description && <p className="text-xs text-green-700 mt-0.5 leading-relaxed">{info.description}</p>}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Map Locations */}
+            {selectedPokemon.locations && selectedPokemon.locations.length > 0 && (
+              <div>
+                <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
+                  <MapPin className="w-4 h-4 text-blue-500" /> Map Locations
+                </h3>
+                <div className="space-y-1.5">
+                  {LOCATION_ORDER
+                    .filter(loc => selectedPokemon.locations!.includes(loc))
+                    .map(location => (
+                      <button
+                        key={location}
+                        onClick={() => { setSelectedPokemon(null); setCurrentPage("map"); }}
+                        className={`w-full flex items-center gap-2 px-3 py-2 rounded-xl border text-left active:scale-95 transition-transform ${LOCATION_COLORS[location] || 'bg-gray-100 text-gray-700 border-gray-200'}`}
+                      >
+                        <MapPin className="w-3.5 h-3.5 shrink-0" />
+                        <span className="text-sm font-medium flex-1">{location}</span>
+                        <span className="text-[10px] opacity-60">→ Map</span>
+                      </button>
+                    ))}
+                </div>
+              </div>
+            )}
+
+            {/* Habitats */}
+            {selectedPokemon.habitats && selectedPokemon.habitats.length > 0 && (
+              <div>
+                <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
+                  <Home className="w-4 h-4 text-emerald-500" /> Habitats
+                </h3>
+                <div className="grid grid-cols-2 gap-2">
+                  {selectedPokemon.habitats.map((habitat, i) => {
+                    const hab = habitatMap[habitat.toLowerCase()];
+                    return (
+                      <button
+                        key={i}
+                        onClick={() => {
+                          setSelectedPokemon(null);
+                          if (hab) navigateToHabitat(hab.id);
+                          else setCurrentPage("habitat-dex");
+                        }}
+                        className="flex flex-col overflow-hidden rounded-xl border border-emerald-100 bg-emerald-50 text-left active:scale-95 transition-transform"
+                      >
+                        {hab?.image && (
+                          <div className="w-full h-16 bg-gray-100 overflow-hidden">
+                            <img src={hab.image} alt={habitat} className="w-full h-full object-cover"
+                              onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                          </div>
+                        )}
+                        <div className="p-2">
+                          <p className="text-xs font-semibold text-emerald-800 leading-tight">{habitat}</p>
+                          {hab && <p className="text-[9px] text-emerald-600 mt-0.5">→ Habitat Dex</p>}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Notes */}
+            {selectedPokemon.comfortNotes && (
+              <div>
+                <h3 className="font-bold text-gray-700 text-sm mb-2">Notes</h3>
+                <p className="text-xs text-gray-600 bg-gray-50 rounded-xl p-3 border border-gray-100">{selectedPokemon.comfortNotes}</p>
+              </div>
+            )}
+
+            {/* ── Conditions to Find (time + weather) — always shown, at bottom ── */}
+            <ConditionsBlock pokemon={selectedPokemon} />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ── Pokemon List ──
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-red-500 to-red-600">
       {/* Header */}
-      <div className="pt-6 pb-2 px-4">
+      <div className="pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
-          <motion.button
+          <button
             onClick={() => setCurrentPage("home")}
-            className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center active:scale-90 transition-transform"
           >
             <ArrowLeft className="w-5 h-5 text-white" />
-          </motion.button>
+          </button>
           <h1 className="text-lg font-bold text-white">Dex</h1>
           <div className="w-9" />
         </div>
 
         <p className="text-white/70 text-xs mb-3 text-center">
-          {capturedPokemon.length} Friends / 300 Pokemon
+          {capturedPokemon.length} Friends / 300 Pokémon
         </p>
 
-        {/* Search Bar */}
+        {/* Search */}
         <div className="relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
           <input
             type="text"
-            placeholder="Search Pokemon..."
+            placeholder="Search Pokémon..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full pl-9 pr-3 py-2.5 rounded-xl bg-white shadow-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm"
@@ -136,409 +325,113 @@ export function DexPage() {
 
         {/* Friend Filter */}
         <div className="flex gap-1.5 mt-2">
-          <motion.button
-            onClick={() => setFriendFilter("all")}
-            className={`flex-1 px-2.5 py-1.5 rounded-full text-xs font-medium flex items-center justify-center gap-1 ${
-              friendFilter === "all" 
-                ? "bg-white text-red-600" 
-                : "bg-white/20 text-white"
-            }`}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <Eye className="w-3 h-3" />
-            All
-          </motion.button>
-          <motion.button
-            onClick={() => setFriendFilter("friends")}
-            className={`flex-1 px-2.5 py-1.5 rounded-full text-xs font-medium flex items-center justify-center gap-1 ${
-              friendFilter === "friends" 
-                ? "bg-yellow-400 text-yellow-900" 
-                : "bg-white/20 text-white"
-            }`}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <Check className="w-3 h-3" />
-            Friends ({capturedPokemon.length})
-          </motion.button>
-          <motion.button
-            onClick={() => setFriendFilter("unseen")}
-            className={`flex-1 px-2.5 py-1.5 rounded-full text-xs font-medium flex items-center justify-center gap-1 ${
-              friendFilter === "unseen" 
-                ? "bg-gray-600 text-white" 
-                : "bg-white/20 text-white"
-            }`}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            <EyeOff className="w-3 h-3" />
-            Unseen ({300 - capturedPokemon.length})
-          </motion.button>
+          {([
+            ["all",     "All",                                        Eye   ],
+            ["friends", `Friends (${capturedPokemon.length})`,        Check ],
+            ["unseen",  `Unseen (${300 - capturedPokemon.length})`,   EyeOff],
+          ] as const).map(([val, label, Icon]) => (
+            <button
+              key={val}
+              onClick={() => setFriendFilter(val)}
+              className={`flex-1 px-2 py-1.5 rounded-full text-xs font-medium flex items-center justify-center gap-1 active:scale-95 transition-transform ${
+                friendFilter === val
+                  ? val === "friends" ? "bg-yellow-400 text-yellow-900"
+                  : val === "unseen"  ? "bg-gray-600 text-white"
+                  : "bg-white text-red-600"
+                  : "bg-white/20 text-white"
+              }`}
+            >
+              <Icon className="w-3 h-3" />
+              {label}
+            </button>
+          ))}
         </div>
 
         {/* Rarity Filter */}
         <div className="flex gap-1.5 mt-2">
-          <motion.button
+          <button
             onClick={() => setSelectedRarity(null)}
-            className={`flex-1 px-2.5 py-1.5 rounded-full text-xs font-medium ${
-              !selectedRarity 
-                ? "bg-white text-red-600" 
-                : "bg-white/20 text-white"
-            }`}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            className={`flex-1 px-2.5 py-1.5 rounded-full text-xs font-medium active:scale-95 transition-transform ${!selectedRarity ? "bg-white text-red-600" : "bg-white/20 text-white"}`}
           >
             All
-          </motion.button>
+          </button>
           {rarities.map(rarity => (
-            <motion.button
+            <button
               key={rarity}
               onClick={() => setSelectedRarity(rarity)}
-              className={`flex-1 px-2.5 py-1.5 rounded-full text-xs font-medium ${
-                selectedRarity === rarity 
-                  ? getRarityButtonStyle(rarity)
-                  : "bg-white/20 text-white"
-              }`}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className={`flex-1 px-2.5 py-1.5 rounded-full text-xs font-medium active:scale-95 transition-transform ${selectedRarity === rarity ? getRarityButtonStyle(rarity) : "bg-white/20 text-white"}`}
             >
               {rarity}
-            </motion.button>
+            </button>
           ))}
         </div>
       </div>
 
-      {/* Pokemon List */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-hidden">
-        <div className="h-full overflow-y-auto">
-          <AnimatePresence mode="popLayout">
-            {filteredPokemon.map((pokemon, index) => {
-              const isFriend = capturedPokemon.includes(pokemon.id);
-              return (
-                <motion.div
-                  key={pokemon.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 20 }}
-                  transition={{ delay: index * 0.02 }}
-                  className="flex items-center gap-3 p-3 border-b border-gray-100"
-                >
-                  {/* Pokemon Image */}
-                  <motion.div 
-                    className={`relative w-16 h-16 shrink-0 rounded-xl ${getRarityBg(pokemon.rarity)} p-1.5 cursor-pointer`}
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    onClick={() => setSelectedPokemon(pokemon)}
-                  >
-                    <img
-                      src={pokemon.image}
-                      alt={pokemon.name}
-                      className="w-full h-full object-contain drop-shadow-sm"
-                      style={{ filter: 'drop-shadow(0 0 1px black) drop-shadow(0 0 1px black)' }}
-                    />
-                  </motion.div>
-
-                  {/* Pokemon Info */}
-                  <div className="flex-1 min-w-0" onClick={() => setSelectedPokemon(pokemon)}>
-                    <div className="flex items-center gap-2">
-                      <span className="text-[10px] text-gray-400 font-mono">#{String(pokemon.nationalDex).padStart(3, '0')}</span>
-                      <h3 className="font-bold text-gray-800 text-sm">{pokemon.name}</h3>
-                      <span className={`text-[10px] ${getRarityColor(pokemon.rarity)}`}>
-                        {pokemon.rarity}
-                      </span>
-                    </div>
-                    
-                    {/* Specialties */}
-                    {pokemon.specialties && pokemon.specialties.length > 0 && (
-                      <div className="flex items-center gap-1 mt-0.5 flex-wrap">
-                        <Zap className="w-2.5 h-2.5 text-yellow-500 shrink-0" />
-                        <span className="text-[9px] text-green-600">
-                          {pokemon.specialties.slice(0, 2).join(' • ')}
-                          {pokemon.specialties.length > 2 && ` +${pokemon.specialties.length - 2}`}
-                        </span>
-                      </div>
-                    )}
-                    
-                    {/* Habitats */}
-                    {pokemon.habitats && pokemon.habitats.length > 0 && (
-                      <p className="text-[9px] text-blue-600 mt-0.5 truncate">
-                        🏠 {pokemon.habitats[0]}
-                        {pokemon.habitats.length > 1 && ` +${pokemon.habitats.length - 1}`}
-                      </p>
-                    )}
-                    
-                    {/* Map Locations */}
-                    {pokemon.locations && pokemon.locations.length > 0 && (
-                      <p className="text-[9px] text-cyan-600 mt-0.5 truncate">
-                        🗺️ {pokemon.locations[0]}
-                        {pokemon.locations.length > 1 && ` +${pokemon.locations.length - 1}`}
-                      </p>
-                    )}
-                  </div>
-
-                  {/* Friend Toggle Button */}
-                  <motion.button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      toggleCapturedPokemon(pokemon.id);
-                    }}
-                    className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 transition-colors ${
-                      isFriend 
-                        ? 'bg-yellow-400 text-yellow-900' 
-                        : 'bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300'
-                    }`}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    {isFriend ? (
-                      <Check className="w-5 h-5" />
-                    ) : (
-                      <Plus className="w-5 h-5" />
-                    )}
-                  </motion.button>
-                </motion.div>
-              );
-            })}
-          </AnimatePresence>
-
-          {filteredPokemon.length === 0 && (
-            <div className="flex flex-col items-center justify-center h-48 text-gray-400">
-              <Search className="w-12 h-12 mb-2" />
-              <p className="text-sm">No Pokemon found</p>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Pokemon Detail Modal */}
-      <AnimatePresence>
-        {selectedPokemon && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedPokemon(null)}
-              className="absolute inset-0 bg-black/50 z-10"
-            />
-            
-            {/* Modal */}
-            <motion.div
-              initial={{ y: '100%' }}
-              animate={{ y: 0 }}
-              exit={{ y: '100%' }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="absolute inset-x-0 bottom-0 bg-white rounded-t-3xl shadow-2xl overflow-hidden z-20"
-              style={{ maxHeight: '90%' }}
+      {/* List */}
+      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+        {filteredPokemon.map((pokemon) => {
+          const isFriend = capturedPokemon.includes(pokemon.id);
+          return (
+            <div
+              key={pokemon.id}
+              className="flex items-center gap-3 p-3 border-b border-gray-100 active:bg-gray-50"
+              onClick={() => setSelectedPokemon(pokemon)}
             >
-              {/* Header with gradient */}
-              <div className={`h-40 bg-gradient-to-br ${
-                selectedPokemon.rarity === "Legendary" ? "from-amber-500 to-orange-500" :
-                selectedPokemon.rarity === "Rare" ? "from-purple-500 to-violet-500" :
-                "from-gray-400 to-gray-500"
-              } relative`}>
-                {/* X Close Button */}
-                <motion.button
-                  onClick={() => setSelectedPokemon(null)}
-                  className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center z-10"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <X className="w-5 h-5 text-white" />
-                </motion.button>
-
-                {/* Pokemon Image */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4">
-                  <div className={`w-28 h-28 rounded-2xl ${getRarityBg(selectedPokemon.rarity)} p-2 shadow-xl`}>
-                    <img
-                      src={selectedPokemon.image}
-                      alt={selectedPokemon.name}
-                      className="w-full h-full object-contain"
-                      style={{ filter: 'drop-shadow(0 0 2px black)' }}
-                    />
-                  </div>
-                </div>
-                
-                {/* Rarity badge */}
-                <div className="absolute top-3 left-3">
-                  <span className={`text-xs font-bold px-3 py-1 rounded-full ${
-                    selectedPokemon.rarity === 'Legendary'
-                      ? 'bg-white text-amber-600'
-                      : 'bg-black/30 text-white'
-                  }`}>
-                    {selectedPokemon.rarity}
-                  </span>
-                </div>
+              {/* Image */}
+              <div className={`w-16 h-16 shrink-0 rounded-xl ${getRarityBg(pokemon.rarity)} p-1.5`}>
+                <img
+                  src={pokemon.image}
+                  alt={pokemon.name}
+                  className="w-full h-full object-contain drop-shadow-sm"
+                  style={{ filter: 'drop-shadow(0 0 1px black)' }}
+                />
               </div>
 
-              {/* Content */}
-              <div className="pt-16 p-4 overflow-y-auto max-h-[calc(90vh-10rem)]">
-                {/* Name and Number */}
-                <div className="text-center mb-4">
-                  <p className="text-xs text-gray-400 font-mono">#{String(selectedPokemon.nationalDex).padStart(3, '0')}</p>
-                  <h2 className="text-2xl font-bold text-gray-800">{selectedPokemon.name}</h2>
-                  <span className={`text-xs font-medium mt-1 inline-block px-2 py-0.5 rounded-full ${
-                    selectedPokemon.rarity === 'Legendary' ? 'bg-amber-100 text-amber-700' :
-                    selectedPokemon.rarity === 'Rare' ? 'bg-purple-100 text-purple-700' :
-                    'bg-gray-100 text-gray-600'
-                  }`}>{selectedPokemon.rarity}</span>
+              {/* Info */}
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] text-gray-400 font-mono">#{String(pokemon.id).padStart(3, '0')}</span>
+                  <h3 className="font-bold text-gray-800 text-sm">{pokemon.name}</h3>
+                  <span className={`text-[10px] ${getRarityColor(pokemon.rarity)}`}>{pokemon.rarity}</span>
                 </div>
 
-                {/* Friend Toggle Button */}
-                <div className="mb-5">
-                  <motion.button
-                    onClick={() => toggleCapturedPokemon(selectedPokemon.id)}
-                    className={`w-full py-3 rounded-xl flex items-center justify-center gap-2 font-medium ${
-                      capturedPokemon.includes(selectedPokemon.id)
-                        ? 'bg-yellow-400 text-yellow-900'
-                        : 'bg-gray-100 text-gray-600 border-2 border-dashed border-gray-300'
-                    }`}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    {capturedPokemon.includes(selectedPokemon.id) ? (
-                      <><Check className="w-5 h-5" /><span>Friend!</span></>
-                    ) : (
-                      <><Plus className="w-5 h-5" /><span>Add as Friend</span></>
-                    )}
-                  </motion.button>
-                </div>
-
-                {/* ── Specialties ── */}
-                {selectedPokemon.specialties && selectedPokemon.specialties.length > 0 && (
-                  <div className="mb-5">
-                    <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
-                      <Zap className="w-4 h-4 text-yellow-500" /> Specialties
-                    </h3>
-                    <div className="space-y-2">
-                      {selectedPokemon.specialties.map((specialty, i) => {
-                        const info = specialtyMap[specialty.toLowerCase()];
-                        return (
-                          <div key={i} className="flex items-start gap-3 bg-green-50 rounded-xl p-3 border border-green-100">
-                            <div className="w-10 h-10 rounded-lg bg-white border border-green-200 flex items-center justify-center shrink-0">
-                              {info?.icon ? (
-                                <img
-                                  src={info.icon}
-                                  alt={specialty}
-                                  className="w-8 h-8 object-contain"
-                                  onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
-                                />
-                              ) : (
-                                <Zap className="w-4 h-4 text-green-500" />
-                              )}
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <p className="font-semibold text-green-800 text-sm">{specialty}</p>
-                              {info?.description && (
-                                <p className="text-xs text-green-700 mt-0.5 leading-relaxed">{info.description}</p>
-                              )}
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-
-                {/* ── Map Locations (unlock order) ── */}
-                {selectedPokemon.locations && selectedPokemon.locations.length > 0 && (
-                  <div className="mb-5">
-                    <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
-                      <MapPin className="w-4 h-4 text-blue-500" /> Map Locations
-                    </h3>
-                    <div className="space-y-1.5">
-                      {LOCATION_ORDER
-                        .filter(loc => selectedPokemon.locations!.includes(loc))
-                        .map(location => {
-                          const locId = location.toLowerCase().replace(/\s/g, '').replace(/'/g, '');
-                          return (
-                            <motion.button
-                              key={location}
-                              onClick={() => { setSelectedPokemon(null); navigateToLocation(locId); }}
-                              whileTap={{ scale: 0.97 }}
-                              className={`w-full flex items-center gap-2 px-3 py-2 rounded-xl border text-left ${LOCATION_COLORS[location] || 'bg-gray-100 text-gray-700 border-gray-200'}`}
-                            >
-                              <MapPin className="w-3.5 h-3.5 shrink-0" />
-                              <span className="text-sm font-medium flex-1">{location}</span>
-                              <span className="text-[10px] opacity-60">→ Map</span>
-                            </motion.button>
-                          );
-                        })}
-                    </div>
-                  </div>
-                )}
-
-                {/* ── Habitats with preview images ── */}
-                {selectedPokemon.habitats && selectedPokemon.habitats.length > 0 && (
-                  <div className="mb-5">
-                    <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
-                      <Home className="w-4 h-4 text-emerald-500" /> Habitats
-                    </h3>
-                    <div className="grid grid-cols-2 gap-2">
-                      {selectedPokemon.habitats.map((habitat, i) => {
-                        const hab = habitatMap[habitat.toLowerCase()];
-                        return (
-                          <motion.button
-                            key={i}
-                            onClick={() => { setSelectedPokemon(null); navigateToHabitat(hab.id); }}
-                            whileTap={{ scale: 0.97 }}
-                            className="flex flex-col overflow-hidden rounded-xl border border-emerald-100 bg-emerald-50 text-left"
-                          >
-                            {hab?.image && (
-                              <div className="w-full h-16 bg-gray-100 overflow-hidden">
-                                <img
-                                  src={hab.image}
-                                  alt={habitat}
-                                  className="w-full h-full object-cover"
-                                  onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
-                                />
-                              </div>
-                            )}
-                            <div className="p-2">
-                              <p className="text-xs font-semibold text-emerald-800 leading-tight">{habitat}</p>
-                              {hab && (
-                                <p className="text-[9px] text-emerald-600 mt-0.5">#{String(hab.id).padStart(3,'0')} → Habitat Dex</p>
-                              )}
-                            </div>
-                          </motion.button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-
-                {/* Spawn Conditions */}
-                {selectedPokemon.conditions && selectedPokemon.conditions.length > 0 && (
-                  <div className="mb-5">
-                    <h3 className="font-bold text-gray-700 text-sm mb-2">Spawn Conditions Needed:</h3>
-                    <div className="flex flex-wrap gap-1">
-                      {selectedPokemon.conditions.filter(c => {
-                        const lower = c.toLowerCase();
-                        return lower.includes('time') || lower.includes('weather') || lower.includes('sunny') || lower.includes('rain') || lower.includes('night') || lower.includes('day');
-                      }).map((condition, i) => (
-                        <span key={i} className="text-xs px-3 py-1.5 bg-orange-100 text-orange-700 rounded-full border border-orange-200">
-                          {condition}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Notes */}
-                {selectedPokemon.comfortNotes && (
-                  <div className="mb-4">
-                    <h3 className="font-bold text-gray-700 text-sm mb-2">Notes</h3>
-                    <p className="text-xs text-gray-600 bg-gray-50 rounded-xl p-3 border border-gray-100">
-                      {selectedPokemon.comfortNotes}
-                    </p>
+                {/* Specialties only */}
+                {pokemon.specialties && pokemon.specialties.length > 0 && (
+                  <div className="flex items-center gap-1 mt-0.5 flex-wrap">
+                    <Zap className="w-2.5 h-2.5 text-yellow-500 shrink-0" />
+                    {pokemon.specialties.slice(0, 2).map((spec, idx) => (
+                      <div key={idx} className="flex items-center gap-0.5">
+                        <img src={getSpecialtyIcon(spec)} alt={spec} className="w-3 h-3 object-contain"
+                          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                        <span className="text-[9px] text-green-600">{spec}</span>
+                        {idx < Math.min(pokemon.specialties!.length, 2) - 1 && <span className="text-green-300 text-[9px]">·</span>}
+                      </div>
+                    ))}
+                    {pokemon.specialties.length > 2 && <span className="text-[9px] text-gray-400">+{pokemon.specialties.length - 2}</span>}
                   </div>
                 )}
               </div>
-            </motion.div>
-          </>
+
+              {/* Friend Button */}
+              <button
+                onClick={(e) => { e.stopPropagation(); toggleCapturedPokemon(pokemon.id); }}
+                className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 active:scale-90 transition-transform ${
+                  isFriend ? 'bg-yellow-400 text-yellow-900' : 'bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300'
+                }`}
+              >
+                {isFriend ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+              </button>
+            </div>
+          );
+        })}
+
+        {filteredPokemon.length === 0 && (
+          <div className="flex flex-col items-center justify-center h-48 text-gray-400">
+            <Search className="w-12 h-12 mb-2" />
+            <p className="text-sm">No Pokémon found</p>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </div>
   );
 }

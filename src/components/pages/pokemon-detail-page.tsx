@@ -44,7 +44,7 @@ export function PokemonDetailPage() {
   return (
     <div className="h-full flex flex-col overflow-hidden" style={{ background: `linear-gradient(to bottom, ${bgColor}, ${bgColor}dd)` }}>
       {/* Header */}
-      <div className="pt-12 pb-4 px-4">
+      <div className="pt-16 pb-4 px-4">
         <div className="flex items-center justify-between">
           <motion.button
             onClick={() => setCurrentPage("pokedex")}
