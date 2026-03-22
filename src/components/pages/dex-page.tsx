@@ -135,7 +135,7 @@ export function DexPage() {
           selectedPokemon.rarity === "Legendary" ? "from-amber-500 to-orange-500" :
           selectedPokemon.rarity === "Rare" ? "from-purple-500 to-violet-500" :
           "from-gray-400 to-gray-500"
-        } pt-6 pb-16 px-4 relative`}>
+        } pt-6 pb-10 px-4 relative`}>
           <button
             onClick={() => setSelectedPokemon(null)}
             className="w-9 h-9 rounded-full bg-black/20 flex items-center justify-center active:scale-90 transition-transform"
@@ -162,7 +162,7 @@ export function DexPage() {
         </div>
 
         {/* Scrollable content */}
-        <div className="flex-1 overflow-y-auto -mt-10">
+        <div className="flex-1 overflow-y-auto -mt-6">
           <div className="bg-white rounded-t-3xl pt-4 px-4 pb-8 space-y-5">
             {/* Name + number */}
             <div className="text-center">
