@@ -135,7 +135,7 @@ export function DexPage() {
           selectedPokemon.rarity === "Legendary" ? "from-amber-500 to-orange-500" :
           selectedPokemon.rarity === "Rare" ? "from-purple-500 to-violet-500" :
           "from-gray-400 to-gray-500"
-        } pt-6 pb-4 px-4 relative`}>
+        } pt-4 pb-3 px-4 relative`}>
           <div className="flex items-center justify-between">
             <button
               onClick={() => setSelectedPokemon(null)}
@@ -150,12 +150,12 @@ export function DexPage() {
             </span>
           </div>
           {/* Name + number in header */}
-          <div className="text-center mt-2 mb-2">
+          <div className="text-center mt-1 mb-1">
             <p className="text-xs text-white/60 font-mono">#{String(selectedPokemon.id).padStart(3, '0')}</p>
             <h2 className="text-2xl font-bold text-white">{selectedPokemon.name}</h2>
           </div>
           <div className="flex justify-center">
-            <div className={`w-28 h-28 rounded-2xl ${getRarityBg(selectedPokemon.rarity)} p-2 shadow-xl`}>
+            <div className={`w-20 h-20 rounded-2xl ${getRarityBg(selectedPokemon.rarity)} p-2 shadow-xl`}>
               <img
                 src={selectedPokemon.image}
                 alt={selectedPokemon.name}
