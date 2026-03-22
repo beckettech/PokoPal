@@ -26,7 +26,7 @@ const DREAM_ISLANDS = [
       { name: "Seashell", image: `${BASE}/items/seashell.png` },
     ],
     legendaries: [
-      { name: "Raikou", image: `${BASE}/pokemon/243.png`, chance: "★ Confirmed", tip: "Look in small rooms with walls made from different materials than the surrounding area." },
+      { name: "Raikou", image: `${BASE}/pokemon/243.png`, chance: 25, tip: "Look in small rooms with walls made from different materials than the surrounding area." },
     ],
     note: "First met during the Bleak Beach main story. Register it there first, then return here.",
     color: "from-yellow-400 to-yellow-600",
@@ -51,7 +51,7 @@ const DREAM_ISLANDS = [
       { name: "Squishy Clay", image: `${BASE}/items/squishyclay.png` },
     ],
     legendaries: [
-      { name: "Suicune", image: `${BASE}/pokemon/245.png`, chance: "★ Confirmed", tip: "Look in small rooms with walls made from different materials than the surrounding area." },
+      { name: "Suicune", image: `${BASE}/pokemon/245.png`, chance: 25, tip: "Look in small rooms with walls made from different materials than the surrounding area." },
     ],
     note: "Suicune appears randomly. Collect all 3 Legendary Dogs to unlock Ho-oh's Transparent Bell recipe.",
     color: "from-amber-400 to-amber-600",
@@ -75,7 +75,7 @@ const DREAM_ISLANDS = [
       { name: "Crystal Fragment", image: `${BASE}/items/crystalfragment.png` },
     ],
     legendaries: [
-      { name: "Volcanion", image: `${BASE}/pokemon/721.png`, chance: "★ Confirmed", tip: "First encountered during the Rocky Ridges main quest. Register it there — then it may appear here." },
+      { name: "Volcanion", image: `${BASE}/pokemon/721.png`, chance: 25, tip: "First encountered during the Rocky Ridges main quest. Register it there — then it may appear here." },
     ],
     note: "Complete the Rocky Ridges story quest to first register Volcanion, then visit here.",
     color: "from-pink-400 to-pink-600",
@@ -99,7 +99,7 @@ const DREAM_ISLANDS = [
       { name: "Copper Ore", image: `${BASE}/items/copperore.png` },
     ],
     legendaries: [
-      { name: "Entei", image: `${BASE}/pokemon/244.png`, chance: "★ Confirmed", tip: "Look in small rooms with walls made from different materials than the surrounding area." },
+      { name: "Entei", image: `${BASE}/pokemon/244.png`, chance: 25, tip: "Look in small rooms with walls made from different materials than the surrounding area." },
     ],
     note: "Entei appears randomly. Collect all 3 Legendary Dogs to unlock Ho-oh's Transparent Bell recipe.",
     color: "from-orange-400 to-orange-600",
@@ -122,7 +122,7 @@ const DREAM_ISLANDS = [
       { name: "Gold Ore", image: `${BASE}/items/goldore.png` },
     ],
     legendaries: [
-      { name: "Mewtwo", image: `${BASE}/pokemon/150.png`, chance: "★ Confirmed", tip: "Complete the 'Rebuild the huge building!' quest in Sparkling Skylands (build floors 2F→3F→4F), then meet Mewtwo on the roof to unlock this encounter." },
+      { name: "Mewtwo", image: `${BASE}/pokemon/150.png`, chance: 10, tip: "Complete the 'Rebuild the huge building!' quest in Sparkling Skylands (build floors 2F→3F→4F), then meet Mewtwo on the roof to unlock this encounter." },
     ],
     note: "Sparkling Skylands main quest required first. Build the Skyland building to the rooftop.",
     color: "from-blue-400 to-blue-600",
@@ -291,7 +291,7 @@ export function DreamIslandsPage() {
                             />
                           ))}
                           <span className="text-[10px] text-amber-600 font-semibold self-center">
-                            {island.legendaries.map(l => l.name).join(", ")}
+                            {island.legendaries.map(l => `${l.name} (~${l.chance}%)`).join(", ")}
                           </span>
                         </div>
                       </div>
@@ -343,7 +343,7 @@ export function DreamIslandsPage() {
                                         onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                                     </div>
                                     <span className={`text-[9px] font-bold ${island.textColor}`}>{leg.name}</span>
-                                    <span className="text-[8px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-semibold">{leg.chance}</span>
+                                    <span className="text-[8px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-semibold">~{leg.chance}%</span>
                                   </div>
                                   {(leg as any).tip && (
                                     <div className="flex-1 bg-white/60 rounded-xl p-2.5 border border-amber-100">
