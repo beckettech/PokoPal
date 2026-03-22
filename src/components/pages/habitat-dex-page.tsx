@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import { useAppStore } from "@/lib/store";
 import { pokemonList } from "@/lib/pokemon-data";
-import { ArrowLeft, Search, CheckCircle, Clock, Circle, Eye, EyeOff } from "lucide-react";
+import { ArrowLeft, Search, CheckCircle, Clock, Circle, Eye, EyeOff, Plus, Check } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import habitatsData from "@/data/scraped/habitats.json";
 
@@ -184,20 +184,16 @@ export function HabitatDexPage() {
                       </div>
                     </button>
 
-                    {/* Discovered mark button */}
+                    {/* Discovered mark button — matches dex friend style */}
                     <button
                       onClick={() => toggleDiscovered(habitat.id)}
-                      className={`shrink-0 flex flex-col items-center gap-0.5 px-2 py-1.5 rounded-xl border text-[10px] font-bold transition-all active:scale-95 ${
+                      className={`shrink-0 w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform ${
                         isDiscovered
-                          ? 'bg-green-500 border-green-500 text-white'
-                          : 'bg-white border-gray-200 text-gray-400'
+                          ? 'bg-yellow-400 text-yellow-900'
+                          : 'bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300'
                       }`}
                     >
-                      {isDiscovered
-                        ? <CheckCircle className="w-4 h-4" />
-                        : <Circle className="w-4 h-4" />
-                      }
-                      {isDiscovered ? 'Found' : 'Mark'}
+                      {isDiscovered ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                     </button>
                   </div>
 
