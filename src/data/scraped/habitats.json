@@ -32,11 +32,8 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands",
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -81,11 +78,8 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands",
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -118,11 +112,8 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands",
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -163,11 +154,8 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands",
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -200,11 +188,7 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands"
     ],
     "buildItems": [
       "Hub",
@@ -241,11 +225,7 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands"
     ],
     "buildItems": [
       "Hub",
@@ -274,11 +254,12 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -323,11 +304,8 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands",
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -360,11 +338,7 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -393,11 +367,12 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -430,11 +405,7 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands"
     ],
     "buildItems": [
       "Hub",
@@ -463,11 +434,12 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -496,11 +468,12 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -529,11 +502,12 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -566,11 +540,8 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands",
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -595,11 +566,7 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands"
     ],
     "buildItems": [
       "Hub",
@@ -624,11 +591,12 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -653,11 +621,12 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -682,11 +651,7 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Withered Wastelands"
     ],
     "buildItems": [
       "Hub",
@@ -715,11 +680,7 @@
       }
     ],
     "locations": [
-      "-Withered Wastelands",
-      "-Bleak Beach",
-      "-Rocky Ridges",
-      "-Sparkling Skylands",
-      "-Palette Town"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -787,10 +748,6 @@
     ],
     "locations": [
       "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
       "Cloud Island"
     ],
     "buildItems": [
@@ -850,12 +807,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Withered Wastelands"
     ],
     "buildItems": [
       "Hub",
@@ -982,8 +934,7 @@
       }
     ],
     "locations": [
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -1059,11 +1010,7 @@
     ],
     "locations": [
       "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -1232,12 +1179,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Sparkling Skylands"
     ],
     "buildItems": [
       "Hub",
@@ -1292,12 +1234,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Withered Wastelands"
     ],
     "buildItems": [
       "Hub",
@@ -1604,8 +1541,7 @@
       }
     ],
     "locations": [
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -1634,8 +1570,7 @@
       }
     ],
     "locations": [
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -1660,8 +1595,7 @@
       }
     ],
     "locations": [
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -1736,12 +1670,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -1816,12 +1745,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -1850,7 +1774,11 @@
       }
     ],
     "locations": [
+      "Withered Wastelands",
       "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
       "Cloud Island"
     ],
     "buildItems": [
@@ -1876,12 +1804,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -1914,12 +1837,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -2050,12 +1968,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -2080,12 +1993,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -2156,12 +2064,8 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
       "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -2262,12 +2166,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -2296,12 +2195,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -2360,12 +2254,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -2466,12 +2355,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -2632,12 +2516,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -2704,12 +2583,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -2738,12 +2612,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -2772,12 +2641,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -2802,12 +2666,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -2870,12 +2729,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -3116,12 +2970,8 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
       "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -3146,12 +2996,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Bleak Beach"
     ],
     "buildItems": [
       "Hub",
@@ -3176,12 +3021,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -3342,12 +3182,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -3418,12 +3253,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -3520,12 +3350,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -3812,12 +3637,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -3842,12 +3662,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -3872,12 +3687,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -3936,12 +3746,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -3966,12 +3771,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -4230,12 +4030,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -4298,12 +4093,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -4336,12 +4126,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -4374,12 +4159,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -4408,12 +4188,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -4442,12 +4217,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -4514,12 +4284,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -4544,12 +4309,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -4722,12 +4482,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Sparkling Skylands"
     ],
     "buildItems": [
       "Hub",
@@ -4760,12 +4515,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Sparkling Skylands"
     ],
     "buildItems": [
       "Hub",
@@ -4882,12 +4632,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Sparkling Skylands"
     ],
     "buildItems": [
       "Hub",
@@ -5287,7 +5032,7 @@
     ],
     "locations": [
       "Palette Town",
-      "Cloud Island"
+      "Sparkling Skylands"
     ],
     "buildItems": [
       "Hub",
@@ -5316,12 +5061,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Sparkling Skylands"
     ],
     "buildItems": [
       "Hub",
@@ -5354,8 +5094,7 @@
       }
     ],
     "locations": [
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -5537,12 +5276,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Sparkling Skylands"
     ],
     "buildItems": [
       "Hub",
@@ -5567,12 +5301,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Sparkling Skylands"
     ],
     "buildItems": [
       "Hub",
@@ -5627,12 +5356,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Sparkling Skylands"
     ],
     "buildItems": [
       "Hub",
@@ -5729,12 +5453,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Sparkling Skylands"
     ],
     "buildItems": [
       "Hub",
@@ -5759,12 +5478,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Sparkling Skylands"
     ],
     "buildItems": [
       "Hub",
@@ -5789,12 +5503,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Sparkling Skylands"
     ],
     "buildItems": [
       "Hub",
@@ -5947,12 +5656,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Sparkling Skylands"
     ],
     "buildItems": [
       "Hub",
@@ -6135,12 +5839,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Withered Wastelands"
     ],
     "buildItems": [
       "Hub",
@@ -6263,12 +5962,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Withered Wastelands"
     ],
     "buildItems": [
       "Hub",
@@ -6365,12 +6059,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Rocky Ridges"
     ],
     "buildItems": [
       "Hub",
@@ -6785,8 +6474,7 @@
       }
     ],
     "locations": [
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -6811,8 +6499,7 @@
       }
     ],
     "locations": [
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -6837,8 +6524,7 @@
       }
     ],
     "locations": [
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -6863,8 +6549,7 @@
       }
     ],
     "locations": [
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -6889,8 +6574,7 @@
       }
     ],
     "locations": [
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -6915,8 +6599,7 @@
       }
     ],
     "locations": [
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -6941,8 +6624,7 @@
       }
     ],
     "locations": [
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
@@ -6967,8 +6649,7 @@
       }
     ],
     "locations": [
-      "Palette Town",
-      "Cloud Island"
+      "Palette Town"
     ],
     "buildItems": [
       "Hub",
