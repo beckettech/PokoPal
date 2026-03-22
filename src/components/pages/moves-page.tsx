@@ -36,7 +36,7 @@ export function MovesPage() {
         <div className="flex items-center justify-between mb-2">
           <motion.button
             onClick={() => setCurrentPage("home")}
-            className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center"
+            className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >

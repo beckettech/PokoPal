@@ -49,15 +49,15 @@ export function PokemonDetailPage() {
         <div className="flex items-center justify-between mb-3">
           <motion.button
             onClick={() => setCurrentPage("pokedex")}
-            className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center"
+            className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center"
             whileTap={{ scale: 0.9 }}
           >
-            <ArrowLeft className="w-5 h-5 text-white" />
+            <ArrowLeft className="w-6 h-6 text-white" />
           </motion.button>
           <div className="flex gap-2">
             <motion.button
               onClick={() => setIsFavorite(!isFavorite)}
-              className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center"
+              className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center"
               whileTap={{ scale: 0.9 }}
             >
               <Heart className={`w-4 h-4 ${isFavorite ? 'fill-red-400 text-red-400' : 'text-white'}`} />

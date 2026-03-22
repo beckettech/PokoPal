@@ -25,16 +25,16 @@ export function CloudIslandsPage() {
         <div className="flex items-center justify-between mb-2">
           <motion.button
             onClick={() => setCurrentPage("home")}
-            className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center"
+            className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <ArrowLeft className="w-5 h-5 text-white" />
+            <ArrowLeft className="w-6 h-6 text-white" />
           </motion.button>
           <h1 className="text-lg font-bold text-white">Cloud Islands</h1>
           <motion.button
             onClick={() => setCurrentPage("dream-islands")}
-            className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center"
+            className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >

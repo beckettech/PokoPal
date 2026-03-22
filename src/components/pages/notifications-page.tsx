@@ -53,7 +53,7 @@ export function NotificationsPage() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <ArrowLeft className="w-5 h-5 text-white" />
+              <ArrowLeft className="w-6 h-6 text-white" />
             </motion.button>
             <div>
               <h1 className="text-xl font-bold text-white">Notifications</h1>

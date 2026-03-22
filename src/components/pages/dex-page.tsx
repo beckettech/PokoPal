@@ -135,7 +135,7 @@ export function DexPage() {
           <div className="flex items-center gap-3">
             <button
               onClick={() => setSelectedPokemon(null)}
-              className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center active:scale-90 transition-transform shrink-0"
+              className="w-11 h-11 rounded-full bg-gray-100 flex items-center justify-center active:scale-90 transition-transform shrink-0"
             >
               <ArrowLeft className="w-5 h-5 text-gray-600" />
             </button>
@@ -294,7 +294,7 @@ export function DexPage() {
         <div className="flex items-center justify-between mb-2">
           <button
             onClick={() => setCurrentPage("home")}
-            className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center active:scale-90 transition-transform"
+            className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center active:scale-90 transition-transform"
           >
             <ArrowLeft className="w-5 h-5 text-white" />
           </button>
@@ -418,7 +418,7 @@ export function DexPage() {
               {/* Friend Button */}
               <button
                 onClick={(e) => { e.stopPropagation(); toggleCapturedPokemon(pokemon.id); }}
-                className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 active:scale-90 transition-transform ${
+                className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 active:scale-90 transition-transform ${
                   isFriend ? 'bg-yellow-400 text-yellow-900' : 'bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300'
                 }`}
               >

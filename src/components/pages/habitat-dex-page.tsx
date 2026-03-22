@@ -86,10 +86,10 @@ export function HabitatDexPage() {
         <div className="flex items-center justify-between mb-2">
           <motion.button
             onClick={() => setCurrentPage("home")}
-            className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center"
+            className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center"
             whileTap={{ scale: 0.9 }}
           >
-            <ArrowLeft className="w-5 h-5 text-white" />
+            <ArrowLeft className="w-6 h-6 text-white" />
           </motion.button>
           <h1 className="text-lg font-bold text-white">Habitat Dex</h1>
           <div className="flex items-center gap-1 bg-white/20 px-2 py-1 rounded-full">
@@ -187,7 +187,7 @@ export function HabitatDexPage() {
                     {/* Discovered mark button — matches dex friend style */}
                     <button
                       onClick={() => toggleDiscovered(habitat.id)}
-                      className={`shrink-0 w-9 h-9 rounded-full flex items-center justify-center active:scale-90 transition-transform ${
+                      className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-transform ${
                         isDiscovered
                           ? 'bg-yellow-400 text-yellow-900'
                           : 'bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300'
