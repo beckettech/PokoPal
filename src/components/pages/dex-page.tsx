@@ -135,22 +135,27 @@ export function DexPage() {
           selectedPokemon.rarity === "Legendary" ? "from-amber-500 to-orange-500" :
           selectedPokemon.rarity === "Rare" ? "from-purple-500 to-violet-500" :
           "from-gray-400 to-gray-500"
-        } pt-6 pb-10 px-4 relative`}>
-          <button
-            onClick={() => setSelectedPokemon(null)}
-            className="w-9 h-9 rounded-full bg-black/20 flex items-center justify-center active:scale-90 transition-transform"
-          >
-            <ArrowLeft className="w-5 h-5 text-white" />
-          </button>
-          <div className="absolute top-6 right-4">
+        } pt-6 pb-4 px-4 relative`}>
+          <div className="flex items-center justify-between">
+            <button
+              onClick={() => setSelectedPokemon(null)}
+              className="w-9 h-9 rounded-full bg-black/20 flex items-center justify-center active:scale-90 transition-transform"
+            >
+              <ArrowLeft className="w-5 h-5 text-white" />
+            </button>
             <span className={`text-xs font-bold px-3 py-1 rounded-full ${
               selectedPokemon.rarity === 'Legendary' ? 'bg-white text-amber-600' : 'bg-black/30 text-white'
             }`}>
               {selectedPokemon.rarity}
             </span>
           </div>
-          <div className="flex justify-center mt-2">
-            <div className={`w-32 h-32 rounded-2xl ${getRarityBg(selectedPokemon.rarity)} p-2 shadow-xl`}>
+          {/* Name + number in header */}
+          <div className="text-center mt-2 mb-2">
+            <p className="text-xs text-white/60 font-mono">#{String(selectedPokemon.id).padStart(3, '0')}</p>
+            <h2 className="text-2xl font-bold text-white">{selectedPokemon.name}</h2>
+          </div>
+          <div className="flex justify-center">
+            <div className={`w-28 h-28 rounded-2xl ${getRarityBg(selectedPokemon.rarity)} p-2 shadow-xl`}>
               <img
                 src={selectedPokemon.image}
                 alt={selectedPokemon.name}
@@ -162,12 +167,12 @@ export function DexPage() {
         </div>
 
         {/* Scrollable content */}
-        <div className="flex-1 overflow-y-auto -mt-6">
+        <div className="flex-1 overflow-y-auto -mt-4">
           <div className="bg-white rounded-t-3xl pt-4 px-4 pb-8 space-y-5">
-            {/* Name + number */}
+            {/* Types */}
             <div className="text-center">
-              <p className="text-xs text-gray-400 font-mono">#{String(selectedPokemon.id).padStart(3, '0')}</p>
-              <h2 className="text-2xl font-bold text-gray-800">{selectedPokemon.name}</h2>
+              <p className="text-xs text-gray-400 font-mono sr-only">#{String(selectedPokemon.id).padStart(3, '0')}</p>
+              <h2 className="text-2xl font-bold text-gray-800 sr-only">{selectedPokemon.name}</h2>
               <div className="flex items-center justify-center gap-1.5 mt-1">
                 {selectedPokemon.types.map(t => (
                   <span key={t} className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">{t}</span>
