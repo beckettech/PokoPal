@@ -26,7 +26,7 @@ const DREAM_ISLANDS = [
       { name: "Seashell", image: `${BASE}/items/seashell.png` },
     ],
     legendaries: [
-      { name: "Raikou", image: `${BASE}/pokemon/243.png`, chance: 25, tip: "Look in small rooms with walls made from different materials than the surrounding area." },
+      { name: "Raikou", image: `${BASE}/pokemon/243.png`, chance: 25, tip: "Search in the 2 separate caves to look for small rooms with walls made from different materials than the surrounding area." },
     ],
     note: "First met during the Bleak Beach main story. Register it there first, then return here.",
     color: "from-yellow-400 to-yellow-600",
@@ -51,7 +51,7 @@ const DREAM_ISLANDS = [
       { name: "Squishy Clay", image: `${BASE}/items/squishyclay.png` },
     ],
     legendaries: [
-      { name: "Suicune", image: `${BASE}/pokemon/245.png`, chance: 25, tip: "Look in small rooms with walls made from different materials than the surrounding area." },
+      { name: "Suicune", image: `${BASE}/pokemon/245.png`, chance: 25, tip: "Search in the 2 separate caves to look for small rooms with walls made from different materials than the surrounding area." },
     ],
     note: "Suicune appears randomly. Collect all 3 Legendary Dogs to unlock Ho-oh's Transparent Bell recipe.",
     color: "from-amber-400 to-amber-600",
@@ -99,7 +99,7 @@ const DREAM_ISLANDS = [
       { name: "Copper Ore", image: `${BASE}/items/copperore.png` },
     ],
     legendaries: [
-      { name: "Entei", image: `${BASE}/pokemon/244.png`, chance: 25, tip: "Look in small rooms with walls made from different materials than the surrounding area." },
+      { name: "Entei", image: `${BASE}/pokemon/244.png`, chance: 25, tip: "Search in the 2 separate caves to look for small rooms with walls made from different materials than the surrounding area." },
     ],
     note: "Entei appears randomly. Collect all 3 Legendary Dogs to unlock Ho-oh's Transparent Bell recipe.",
     color: "from-orange-400 to-orange-600",
