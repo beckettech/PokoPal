@@ -363,16 +363,22 @@ export function DexPage() {
 
       {/* List */}
       <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
-        {filteredPokemon.map((pokemon) => {
+        {filteredPokemon.map((pokemon, listIdx) => {
           const isFriend = capturedPokemon.includes(pokemon.id);
+          const isEven = listIdx % 2 === 0;
+          // Find habitat images from habitatsData
+          const habitatImages = (pokemon.habitats || []).slice(0, 2).map(hName => {
+            const found = habitatsData.find((h: any) => h.name === hName);
+            return { name: hName, image: found?.image || null };
+          });
           return (
             <div
               key={pokemon.id}
-              className="flex items-center gap-3 p-3 border-b border-gray-100 active:bg-gray-50"
+              className={`flex items-center gap-3 px-3 py-2.5 border-b border-gray-100 active:brightness-95 ${isEven ? 'bg-white' : 'bg-slate-50'}`}
               onClick={() => setSelectedPokemon(pokemon)}
             >
-              {/* Image */}
-              <div className={`w-16 h-16 shrink-0 rounded-xl ${getRarityBg(pokemon.rarity)} p-1.5`}>
+              {/* Pokemon Image */}
+              <div className={`w-14 h-14 shrink-0 rounded-xl ${getRarityBg(pokemon.rarity)} p-1`}>
                 <img
                   src={pokemon.image}
                   alt={pokemon.name}
@@ -383,25 +389,39 @@ export function DexPage() {
 
               {/* Info */}
               <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2">
-                  <span className="text-[10px] text-gray-400 font-mono">#{String(pokemon.id).padStart(3, '0')}</span>
-                  <h3 className="font-bold text-gray-800 text-sm">{pokemon.name}</h3>
-                  <span className={`text-[10px] ${getRarityColor(pokemon.rarity)}`}>{pokemon.rarity}</span>
+                {/* Name row */}
+                <div className="flex items-center gap-1.5 mb-0.5">
+                  <span className="text-[9px] text-gray-400 font-mono">#{String(pokemon.id).padStart(3, '0')}</span>
+                  <h3 className="font-bold text-gray-800 text-sm truncate">{pokemon.name}</h3>
+                  <span className={`text-[9px] font-semibold shrink-0 ${getRarityColor(pokemon.rarity)}`}>{pokemon.rarity}</span>
                 </div>
 
-                {/* Specialties only */}
+                {/* Specialties with images */}
                 {pokemon.specialties && pokemon.specialties.length > 0 && (
-                  <div className="flex items-center gap-1 mt-0.5 flex-wrap">
-                    <Zap className="w-2.5 h-2.5 text-yellow-500 shrink-0" />
-                    {pokemon.specialties.slice(0, 2).map((spec, idx) => (
-                      <div key={idx} className="flex items-center gap-0.5">
+                  <div className="flex items-center gap-1 mb-0.5">
+                    {pokemon.specialties.slice(0, 3).map((spec, idx) => (
+                      <div key={idx} className="flex items-center gap-0.5 bg-green-50 rounded px-1 py-0.5">
                         <img src={getSpecialtyIcon(spec)} alt={spec} className="w-3 h-3 object-contain"
                           onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
-                        <span className="text-[9px] text-green-600">{spec}</span>
-                        {idx < Math.min(pokemon.specialties!.length, 2) - 1 && <span className="text-green-300 text-[9px]">·</span>}
+                        <span className="text-[8px] text-green-700 font-medium">{spec}</span>
                       </div>
                     ))}
-                    {pokemon.specialties.length > 2 && <span className="text-[9px] text-gray-400">+{pokemon.specialties.length - 2}</span>}
+                    {pokemon.specialties.length > 3 && <span className="text-[8px] text-gray-400">+{pokemon.specialties.length - 3}</span>}
+                  </div>
+                )}
+
+                {/* Habitats with images */}
+                {habitatImages.length > 0 && (
+                  <div className="flex items-center gap-1">
+                    {habitatImages.map((h, idx) => (
+                      <div key={idx} className="flex items-center gap-0.5">
+                        {h.image && <img src={h.image} alt={h.name} className="w-3.5 h-3.5 object-cover rounded-sm"
+                          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />}
+                        <span className="text-[8px] text-blue-600 truncate max-w-[60px]">{h.name}</span>
+                        {idx < habitatImages.length - 1 && <span className="text-gray-300 text-[8px]">·</span>}
+                      </div>
+                    ))}
+                    {(pokemon.habitats || []).length > 2 && <span className="text-[8px] text-gray-400">+{(pokemon.habitats || []).length - 2}</span>}
                   </div>
                 )}
               </div>
@@ -409,11 +429,11 @@ export function DexPage() {
               {/* Friend Button */}
               <button
                 onClick={(e) => { e.stopPropagation(); toggleCapturedPokemon(pokemon.id); }}
-                className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 active:scale-90 transition-transform ${
+                className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 active:scale-90 transition-transform ${
                   isFriend ? 'bg-yellow-400 text-yellow-900' : 'bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300'
                 }`}
               >
-                {isFriend ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+                {isFriend ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
               </button>
             </div>
           );
