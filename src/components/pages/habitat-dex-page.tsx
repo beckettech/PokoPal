@@ -8,71 +8,56 @@ import { motion, AnimatePresence } from "framer-motion";
 import habitatsData from "@/data/scraped/habitats.json";
 
 // Fallback images for generic "any X" build items that don't have their own Serebii slug
+// Generic "any X" items map to a representative real item image
+// Using known-good Serebii slugs for items that exist
 const ITEM_FALLBACKS: Record<string, string> = {
-  "tree": "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png",
-  "largetree": "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png",
-  "large-tree": "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png",
-  "berrytree": "https://www.serebii.net/pokemonpokopia/items/leppiberrytree.png",
-  "berry-tree": "https://www.serebii.net/pokemonpokopia/items/leppiberrytree.png",
-  "pointytree": "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png",
-  "lighting": "https://www.serebii.net/pokemonpokopia/items/streetlight.png",
-  "lighting(any)": "https://www.serebii.net/pokemonpokopia/items/streetlight.png",
-  "lightingany": "https://www.serebii.net/pokemonpokopia/items/streetlight.png",
-  "seat": "https://www.serebii.net/pokemonpokopia/items/woodenstool.png",
-  "seat(any)": "https://www.serebii.net/pokemonpokopia/items/woodenstool.png",
-  "seatany": "https://www.serebii.net/pokemonpokopia/items/woodenstool.png",
-  "seat(wide)": "https://www.serebii.net/pokemonpokopia/items/bench.png",
-  "seatwide": "https://www.serebii.net/pokemonpokopia/items/bench.png",
-  "seat(widex1": "https://www.serebii.net/pokemonpokopia/items/bench.png",
-  "table": "https://www.serebii.net/pokemonpokopia/items/strawroundtable.png",
-  "table(any)": "https://www.serebii.net/pokemonpokopia/items/strawroundtable.png",
-  "tableany": "https://www.serebii.net/pokemonpokopia/items/strawroundtable.png",
-  "table(large)": "https://www.serebii.net/pokemonpokopia/items/longdiningtable.png",
-  "tablelarge": "https://www.serebii.net/pokemonpokopia/items/longdiningtable.png",
-  "water": "https://www.serebii.net/pokemonpokopia/items/freshwater.png",
-  "oceanwater": "https://www.serebii.net/pokemonpokopia/items/oceanwater.png",
-  "ocean-water": "https://www.serebii.net/pokemonpokopia/items/oceanwater.png",
-  "muddy-water": "https://www.serebii.net/pokemonpokopia/items/muddywater.png",
-  "muddywater": "https://www.serebii.net/pokemonpokopia/items/muddywater.png",
-  "hot-springwater": "https://www.serebii.net/pokemonpokopia/items/hotspringwater.png",
+  // Trees — "any tree" → leppa berry tree
+  "tree":           "https://www.serebii.net/pokemonpokopia/items/leppiberrytree.png",
+  "largetree":      "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png",
+  "berrytree":      "https://www.serebii.net/pokemonpokopia/items/leppiberrytree.png",
+  "pointytree":     "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png",
+  "pointytree":     "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png",
+  // Lighting — "any lighting" → streetlight / light pole
+  "lighting":       "https://www.serebii.net/pokemonpokopia/items/utilitypole.png",
+  "lightingany":    "https://www.serebii.net/pokemonpokopia/items/utilitypole.png",
+  // Seats
+  "seat":           "https://www.serebii.net/pokemonpokopia/items/woodenstool.png",
+  "seatany":        "https://www.serebii.net/pokemonpokopia/items/woodenstool.png",
+  "seatwide":       "https://www.serebii.net/pokemonpokopia/items/bench.png",
+  "seat(widex1":    "https://www.serebii.net/pokemonpokopia/items/bench.png",
+  // Tables
+  "table":          "https://www.serebii.net/pokemonpokopia/items/strawroundtable.png",
+  "tableany":       "https://www.serebii.net/pokemonpokopia/items/strawroundtable.png",
+  "tablelarge":     "https://www.serebii.net/pokemonpokopia/items/longdiningtable.png",
+  // Water
+  "water":          "https://www.serebii.net/pokemonpokopia/items/freshwater.png",
+  "oceanwater":     "https://www.serebii.net/pokemonpokopia/items/oceanwater.png",
+  "muddywater":     "https://www.serebii.net/pokemonpokopia/items/muddywater.png",
   "hotspringwater": "https://www.serebii.net/pokemonpokopia/items/hotspringwater.png",
-  "high-uplocation": "https://www.serebii.net/pokemonpokopia/items/high-uplocation.png",
+  // High-up location
   "highuplocation": "https://www.serebii.net/pokemonpokopia/items/high-uplocation.png",
-  "high-up-location": "https://www.serebii.net/pokemonpokopia/items/high-uplocation.png",
-  "hedge": "https://www.serebii.net/pokemonpokopia/items/hedge.png",
-  "bed": "https://www.serebii.net/pokemonpokopia/items/strawbed.png",
-  "bed(any)": "https://www.serebii.net/pokemonpokopia/items/strawbed.png",
-  "bedany": "https://www.serebii.net/pokemonpokopia/items/strawbed.png",
-  "sofa": "https://www.serebii.net/pokemonpokopia/items/strawsofa.png",
-  "dresser": "https://www.serebii.net/pokemonpokopia/items/simpledresser.png",
-  "dresser(any)": "https://www.serebii.net/pokemonpokopia/items/simpledresser.png",
-  "dresserany": "https://www.serebii.net/pokemonpokopia/items/simpledresser.png",
-  "lantern": "https://www.serebii.net/pokemonpokopia/items/lantern.png",
-  "slendercandle": "https://www.serebii.net/pokemonpokopia/items/slendercandle.png",
-  "eeriecandle": "https://www.serebii.net/pokemonpokopia/items/eeriecandle.png",
-  "torch": "https://www.serebii.net/pokemonpokopia/items/torch.png",
-  "campfire": "https://www.serebii.net/pokemonpokopia/items/campfire.png",
-  "firepit": "https://www.serebii.net/pokemonpokopia/items/firepit.png",
-  "pottedplant": "https://www.serebii.net/pokemonpokopia/items/pottedplant.png",
-  "pottedplant(any)": "https://www.serebii.net/pokemonpokopia/items/pottedplant.png",
-  "wastbin": "https://www.serebii.net/pokemonpokopia/items/wastebin.png",
-  "wastebin(any)": "https://www.serebii.net/pokemonpokopia/items/wastebin.png",
+  // Beds
+  "bed":            "https://www.serebii.net/pokemonpokopia/items/strawbed.png",
+  "bedany":         "https://www.serebii.net/pokemonpokopia/items/strawbed.png",
+  // Sofa
+  "sofa":           "https://www.serebii.net/pokemonpokopia/items/strawsofa.png",
+  // Dresser
+  "dresser":        "https://www.serebii.net/pokemonpokopia/items/simpledresser.png",
+  "dresserany":     "https://www.serebii.net/pokemonpokopia/items/simpledresser.png",
+  // Iron
   "ironbeamorcolumn": "https://www.serebii.net/pokemonpokopia/items/ironbeam.png",
-  "ironbeamorcolumnx3": "https://www.serebii.net/pokemonpokopia/items/ironbeam.png",
-  "ironpipes": "https://www.serebii.net/pokemonpokopia/items/ironpipe(vertical).png",
-  "punchingbag": "https://www.serebii.net/pokemonpokopia/items/punchingbag.png",
-  "punching-bag": "https://www.serebii.net/pokemonpokopia/items/punchingbag.png",
-  "tallgrass(any)": "https://www.serebii.net/pokemonpokopia/items/tallgrass.png",
-  "tallgrassany": "https://www.serebii.net/pokemonpokopia/items/tallgrass.png",
-  "doll(any)": "https://www.serebii.net/pokemonpokopia/items/pikachudoll.png",
-  "dollany": "https://www.serebii.net/pokemonpokopia/items/pikachudoll.png",
-  "toy(any)": "https://www.serebii.net/pokemonpokopia/items/toy.png",
-  "toyany": "https://www.serebii.net/pokemonpokopia/items/toy.png",
-  "seat(widex1": "https://www.serebii.net/pokemonpokopia/items/bench.png",
+  "ironpipes":      "https://www.serebii.net/pokemonpokopia/items/ironpipe(vertical).png",
+  // Generic any
+  "tallgrassany":   "https://www.serebii.net/pokemonpokopia/items/tallgrass.png",
+  "dollany":        "https://www.serebii.net/pokemonpokopia/items/pikachudoll.png",
+  "toyany":         "https://www.serebii.net/pokemonpokopia/items/toy.png",
+  "pottedplantany": "https://www.serebii.net/pokemonpokopia/items/pottedplant.png",
+  "wastebinany":    "https://www.serebii.net/pokemonpokopia/items/wastebin.png",
 };
 
 function getItemImage(slug: string, fallbackImage: string): string {
-  const key = slug.toLowerCase().replace(/\s+/g, '').replace(/-/g, '');
+  // Normalize: lowercase, strip spaces, hyphens, parens
+  const key = slug.toLowerCase().replace(/[\s\-()]/g, '');
   return ITEM_FALLBACKS[key] || ITEM_FALLBACKS[slug.toLowerCase()] || fallbackImage;
 }
 
@@ -295,7 +280,12 @@ export function HabitatDexPage() {
                                         {item.quantity}
                                       </span>
                                     </div>
-                                    <span className="text-[8px] text-center text-amber-900 font-medium max-w-[48px] leading-tight">{item.name}</span>
+                                    <span className="text-[8px] text-center text-amber-900 font-medium max-w-[48px] leading-tight">
+                                      {item.name}
+                                      {ITEM_FALLBACKS[item.slug.toLowerCase().replace(/[\s\-()]/g, '')] && (
+                                        <span className="block text-amber-500 text-[7px]">(any)</span>
+                                      )}
+                                    </span>
                                   </div>
                                 ))}
                               </div>
