@@ -179,6 +179,41 @@ export function DexPage() {
               {isFriend ? <><Check className="w-5 h-5" /><span>Friend!</span></> : <><Plus className="w-5 h-5" /><span>Add as Friend</span></>}
             </button>
 
+            {/* Habitats — moved to top */}
+            {selectedPokemon.habitats && selectedPokemon.habitats.length > 0 && (
+              <div>
+                <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
+                  <Home className="w-4 h-4 text-emerald-500" /> Habitats
+                </h3>
+                <div className="grid grid-cols-2 gap-2">
+                  {selectedPokemon.habitats.map((habitat, i) => {
+                    const hab = habitatMap[habitat.toLowerCase()];
+                    return (
+                      <button
+                        key={i}
+                        onClick={() => {
+                          if (hab) navigateToHabitat(hab.id);
+                          else setCurrentPage("habitat-dex");
+                        }}
+                        className="flex items-center gap-2 bg-emerald-50 rounded-xl p-2 border border-emerald-100 active:scale-95 transition-transform text-left"
+                      >
+                        {hab?.image && (
+                          <div className="w-10 h-10 rounded-lg overflow-hidden bg-gray-200 shrink-0">
+                            <img src={hab.image} alt={habitat} className="w-full h-full object-cover"
+                              onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                          </div>
+                        )}
+                        <div className="flex-1 min-w-0">
+                          <p className="text-xs font-semibold text-emerald-800 leading-tight truncate">{habitat}</p>
+                          {hab && <p className="text-[9px] text-emerald-600 mt-0.5">→ Habitat Dex</p>}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
             {/* Specialties */}
             {selectedPokemon.specialties && selectedPokemon.specialties.length > 0 && (
               <div>
@@ -233,41 +268,7 @@ export function DexPage() {
               </div>
             )}
 
-            {/* Habitats */}
-            {selectedPokemon.habitats && selectedPokemon.habitats.length > 0 && (
-              <div>
-                <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
-                  <Home className="w-4 h-4 text-emerald-500" /> Habitats
-                </h3>
-                <div className="grid grid-cols-2 gap-2">
-                  {selectedPokemon.habitats.map((habitat, i) => {
-                    const hab = habitatMap[habitat.toLowerCase()];
-                    return (
-                      <button
-                        key={i}
-                        onClick={() => {
-                          setSelectedPokemon(null);
-                          if (hab) navigateToHabitat(hab.id);
-                          else setCurrentPage("habitat-dex");
-                        }}
-                        className="flex flex-col overflow-hidden rounded-xl border border-emerald-100 bg-emerald-50 text-left active:scale-95 transition-transform"
-                      >
-                        {hab?.image && (
-                          <div className="w-full h-16 bg-gray-100 overflow-hidden">
-                            <img src={hab.image} alt={habitat} className="w-full h-full object-cover"
-                              onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
-                          </div>
-                        )}
-                        <div className="p-2">
-                          <p className="text-xs font-semibold text-emerald-800 leading-tight">{habitat}</p>
-                          {hab && <p className="text-[9px] text-emerald-600 mt-0.5">→ Habitat Dex</p>}
-                        </div>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
+
 
             {/* Notes */}
             {selectedPokemon.comfortNotes && (
@@ -396,19 +397,7 @@ export function DexPage() {
                   <span className={`text-[9px] font-semibold shrink-0 ${getRarityColor(pokemon.rarity)}`}>{pokemon.rarity}</span>
                 </div>
 
-                {/* Specialties with images */}
-                {pokemon.specialties && pokemon.specialties.length > 0 && (
-                  <div className="flex items-center gap-1 mb-0.5">
-                    {pokemon.specialties.slice(0, 3).map((spec, idx) => (
-                      <div key={idx} className="flex items-center gap-0.5 bg-green-50 rounded px-1 py-0.5">
-                        <img src={getSpecialtyIcon(spec)} alt={spec} className="w-3 h-3 object-contain"
-                          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
-                        <span className="text-[8px] text-green-700 font-medium">{spec}</span>
-                      </div>
-                    ))}
-                    {pokemon.specialties.length > 3 && <span className="text-[8px] text-gray-400">+{pokemon.specialties.length - 3}</span>}
-                  </div>
-                )}
+
 
                 {/* Habitats with images */}
                 {habitatImages.length > 0 && (
