@@ -208,8 +208,32 @@ export function HabitatDexPage() {
                         className="overflow-hidden"
                       >
                         <div className="px-3 pb-3 border-t border-gray-100">
+                          {/* Build Requirements — shown first */}
+                          {(habitat as any).buildItems && (habitat as any).buildItems.length > 0 && (
+                            <div className="mt-2 mb-3 bg-amber-50 rounded-xl p-2.5 border border-amber-100">
+                              <p className="text-[10px] font-bold text-amber-800 uppercase tracking-wide mb-2">🔨 Build Requirements</p>
+                              <div className="flex gap-2 flex-wrap">
+                                {(habitat as any).buildItems.map((item: any) => (
+                                  <div key={item.slug} className="flex flex-col items-center gap-1">
+                                    <div className="w-12 h-12 bg-white rounded-lg border border-amber-200 shadow-sm flex items-center justify-center relative">
+                                      <img
+                                        src={item.image}
+                                        alt={item.name}
+                                        className="w-10 h-10 object-contain"
+                                        onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                                      />
+                                      <span className="absolute -bottom-1 -right-1 bg-amber-500 text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                                        {item.quantity}
+                                      </span>
+                                    </div>
+                                    <span className="text-[8px] text-center text-amber-900 font-medium max-w-[48px] leading-tight">{item.name}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
                           {habitat.description && (
-                            <p className="text-xs text-gray-500 mt-2 mb-2 italic"
+                            <p className="text-xs text-gray-500 mb-2 italic"
                               dangerouslySetInnerHTML={{ __html: habitat.description }}
                             />
                           )}

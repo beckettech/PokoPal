@@ -36,13 +36,12 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Tall Grass",
+        "slug": "tallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tallgrass.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585094"
   },
@@ -83,13 +82,18 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Tall Grass",
+        "slug": "tallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tallgrass.png"
+      },
+      {
+        "name": "Tree",
+        "slug": "tree",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tree.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585082"
   },
@@ -118,13 +122,18 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Tall Grass",
+        "slug": "tallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tallgrass.png"
+      },
+      {
+        "name": "Large Boulder",
+        "slug": "largeboulder",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/largeboulder.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585081"
   },
@@ -161,13 +170,18 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Tall Grass",
+        "slug": "tallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tallgrass.png"
+      },
+      {
+        "name": "Water",
+        "slug": "water",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/water.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585080"
   },
@@ -195,13 +209,18 @@
       "Withered Wastelands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Tall Grass",
+        "slug": "tallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tallgrass.png"
+      },
+      {
+        "name": "Ocean water",
+        "slug": "oceanwater",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/oceanwater.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585079"
   },
@@ -233,13 +252,12 @@
       "Withered Wastelands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Tall Grass",
+        "slug": "tallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tallgrass.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585424"
   },
@@ -261,13 +279,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Tall Grass",
+        "slug": "tallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tallgrass.png"
+      },
+      {
+        "name": "Lighting",
+        "slug": "lighting",
+        "quantity": 10,
+        "image": "https://www.serebii.net/pokemonpokopia/items/lighting.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585078"
   },
@@ -308,13 +331,12 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Wildflowers",
+        "slug": "wildflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wildflowers.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585077"
   },
@@ -346,13 +368,18 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Wildflowers",
+        "slug": "wildflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wildflowers.png"
+      },
+      {
+        "name": "Berry tree",
+        "slug": "berrytree",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/berrytree.png"
+      }
     ]
   },
   {
@@ -373,13 +400,12 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Wildflowers",
+        "slug": "wildflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wildflowers.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585075"
   },
@@ -407,13 +433,12 @@
       "Withered Wastelands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Wildflowers",
+        "slug": "wildflowers",
+        "quantity": 8,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wildflowers.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585074"
   },
@@ -435,13 +460,12 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Wildflowers",
+        "slug": "wildflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wildflowers.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585413"
   },
@@ -463,13 +487,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Wildflowers",
+        "slug": "wildflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wildflowers.png"
+      },
+      {
+        "name": "Gravestone",
+        "slug": "gravestone",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/gravestone.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585414"
   },
@@ -491,13 +520,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Hedge",
+        "slug": "hedge",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/hedge.png"
+      },
+      {
+        "name": "Wildflowers",
+        "slug": "wildflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wildflowers.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585415"
   },
@@ -526,13 +560,12 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Vegetables",
+        "slug": "vegetables",
+        "quantity": 8,
+        "image": "https://www.serebii.net/pokemonpokopia/items/vegetables.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585073"
   },
@@ -552,13 +585,12 @@
       "Withered Wastelands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Campfire",
+        "slug": "campfire",
+        "quantity": 3,
+        "image": "https://www.serebii.net/pokemonpokopia/items/campfire.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585061"
   },
@@ -576,13 +608,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Campfire",
+        "slug": "campfire",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/campfire.png"
+      },
+      {
+        "name": "Straw Table",
+        "slug": "strawtable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/strawtable.png"
+      },
+      {
+        "name": "Straw stool",
+        "slug": "strawstool",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/strawstool.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585071"
   },
@@ -600,13 +643,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Water",
+        "slug": "water",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/water.png"
+      },
+      {
+        "name": "Waterfall",
+        "slug": "waterfall",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/waterfall.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585416"
   },
@@ -626,13 +680,24 @@
       "Withered Wastelands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Leppa Berry",
+        "slug": "leppaberry",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/leppaberry.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Wooden Stool",
+        "slug": "woodenstool",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/woodenstool.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585070"
   },
@@ -656,13 +721,24 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat (any)",
+        "slug": "seat(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat(any).png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Picnic basket",
+        "slug": "picnicbasket",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/picnicbasket.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585537"
   },
@@ -684,13 +760,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat (any)",
+        "slug": "seat(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat(any).png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Small vase",
+        "slug": "smallvase",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/smallvase.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585069"
   },
@@ -719,13 +806,18 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Hedge",
+        "slug": "hedge",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/hedge.png"
+      },
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585068"
   },
@@ -747,13 +839,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat (wide)",
+        "slug": "seat(wide)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat(wide).png"
+      },
+      {
+        "name": "Streetlight",
+        "slug": "streetlight",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/streetlight.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585067"
   },
@@ -773,13 +870,18 @@
       "Withered Wastelands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Punching Bag",
+        "slug": "punchingbag",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/punchingbag.png"
+      },
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585066"
   },
@@ -797,13 +899,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "First aid kit",
+        "slug": "firstaidkit",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/firstaidkit.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585065"
   },
@@ -821,13 +934,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Table (any)",
+        "slug": "table(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table(any).png"
+      },
+      {
+        "name": "Punching bag",
+        "slug": "punchingbag",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/punchingbag.png"
+      },
+      {
+        "name": "First aid kit",
+        "slug": "firstaidkit",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/firstaidkit.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585417"
   },
@@ -849,13 +973,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Arrow sign",
+        "slug": "arrowsign",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/arrowsign.png"
+      },
+      {
+        "name": "Wooden path",
+        "slug": "woodenpath",
+        "quantity": 3,
+        "image": "https://www.serebii.net/pokemonpokopia/items/woodenpath.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585064"
   },
@@ -883,13 +1012,18 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Cart",
+        "slug": "cart",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cart.png"
+      },
+      {
+        "name": "Wooden crate",
+        "slug": "woodencrate",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/woodencrate.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585063"
   },
@@ -915,13 +1049,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Log chair",
+        "slug": "logchair",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/logchair.png"
+      },
+      {
+        "name": "Cart",
+        "slug": "cart",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cart.png"
+      },
+      {
+        "name": "Tree Stump",
+        "slug": "treestump",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/treestump.png"
+      },
+      {
+        "name": "Log table",
+        "slug": "logtable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/logtable.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585062"
   },
@@ -954,13 +1105,18 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Bed",
+        "slug": "bed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/bed.png"
+      },
+      {
+        "name": "Doll (any)",
+        "slug": "doll(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/doll(any).png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585072"
   },
@@ -982,13 +1138,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Bed",
+        "slug": "bed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/bed.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Slender Candle",
+        "slug": "slendercandle",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/slendercandle.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585103"
   },
@@ -1010,13 +1177,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Gravestone",
+        "slug": "gravestone",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/gravestone.png"
+      },
+      {
+        "name": "Slender candle",
+        "slug": "slendercandle",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/slendercandle.png"
+      },
+      {
+        "name": "Plated food",
+        "slug": "platedfood",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/platedfood.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585628"
   },
@@ -1042,13 +1220,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Eerie candle",
+        "slug": "eeriecandle",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/eeriecandle.png"
+      },
+      {
+        "name": "Gravestone",
+        "slug": "gravestone",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/gravestone.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585629"
   },
@@ -1070,13 +1253,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Hedge",
+        "slug": "hedge",
+        "quantity": 6,
+        "image": "https://www.serebii.net/pokemonpokopia/items/hedge.png"
+      },
+      {
+        "name": "Chansey plant",
+        "slug": "chanseyplant",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/chanseyplant.png"
+      },
+      {
+        "name": "Seat (wide)",
+        "slug": "seat(wide)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat(wide).png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585630"
   },
@@ -1098,13 +1292,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pitcher-plant pot",
+        "slug": "pitcher-plantpot",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pitcher-plantpot.png"
+      },
+      {
+        "name": "Plated food",
+        "slug": "platedfood",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/platedfood.png"
+      },
+      {
+        "name": "Mushroom lamp",
+        "slug": "mushroomlamp",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/mushroomlamp.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586095"
   },
@@ -1122,13 +1327,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Inflatable boat",
+        "slug": "inflatableboat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/inflatableboat.png"
+      },
+      {
+        "name": "Beach Parasol",
+        "slug": "beachparasol",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/beachparasol.png"
+      },
+      {
+        "name": "Water",
+        "slug": "water",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/water.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585102"
   },
@@ -1148,13 +1364,18 @@
       "Withered Wastelands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Dry tall grass",
+        "slug": "drytallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/drytallgrass.png"
+      },
+      {
+        "name": "Smooth Rock",
+        "slug": "smoothrock",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/smoothrock.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585101"
   },
@@ -1172,13 +1393,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Streetlight",
+        "slug": "streetlight",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/streetlight.png"
+      },
+      {
+        "name": "Control unit",
+        "slug": "controlunit",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/controlunit.png"
+      },
+      {
+        "name": "Metal drum",
+        "slug": "metaldrum",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/metaldrum.png"
+      },
+      {
+        "name": "Jumbled cords",
+        "slug": "jumbledcords",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/jumbledcords.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585418"
   },
@@ -1196,13 +1434,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Wooden birdhouse",
+        "slug": "woodenbirdhouse",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/woodenbirdhouse.png"
+      },
+      {
+        "name": "Berry Basket",
+        "slug": "berrybasket",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/berrybasket.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586086"
   },
@@ -1220,13 +1463,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Castform weather charm (sun)",
+        "slug": "castformweathercharm(sun)",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/castformweathercharm(sun).png"
+      },
+      {
+        "name": "Bonfire",
+        "slug": "bonfire",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/bonfire.png"
+      },
+      {
+        "name": "Berry Basket",
+        "slug": "berrybasket",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/berrybasket.png"
+      },
+      {
+        "name": "High-up Location",
+        "slug": "high-uplocation",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/high-uplocation.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585100"
   },
@@ -1244,13 +1504,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Castform weather charm (rain)",
+        "slug": "castformweathercharm(rain)",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/castformweathercharm(rain).png"
+      },
+      {
+        "name": "Plated food",
+        "slug": "platedfood",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/platedfood.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585099"
   },
@@ -1268,13 +1533,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Castform weather charm (sun)",
+        "slug": "castformweathercharm(sun)",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/castformweathercharm(sun).png"
+      },
+      {
+        "name": "Plated food",
+        "slug": "platedfood",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/platedfood.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585419"
   },
@@ -1294,13 +1564,24 @@
       "Withered Wastelands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Professor's treasure trove",
+        "slug": "professor'streasuretrove",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/professor'streasuretrove.png"
+      },
+      {
+        "name": "Lost relic (large)",
+        "slug": "lostrelic(large)",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/lostrelic(large).png"
+      },
+      {
+        "name": "Bed (any)",
+        "slug": "bed(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/bed(any).png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586087"
   },
@@ -1326,13 +1607,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Log chair",
+        "slug": "logchair",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/logchair.png"
+      },
+      {
+        "name": "Log bed",
+        "slug": "logbed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/logbed.png"
+      },
+      {
+        "name": "Log table",
+        "slug": "logtable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/logtable.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585631"
   },
@@ -1350,13 +1642,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Berry chair",
+        "slug": "berrychair",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/berrychair.png"
+      },
+      {
+        "name": "Berry bed",
+        "slug": "berrybed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/berrybed.png"
+      },
+      {
+        "name": "Berry table",
+        "slug": "berrytable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/berrytable.png"
+      },
+      {
+        "name": "Berry table lamp",
+        "slug": "berrytablelamp",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/berrytablelamp.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586088"
   },
@@ -1374,13 +1683,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Wildflowers",
+        "slug": "wildflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wildflowers.png"
+      },
+      {
+        "name": "Garden chair",
+        "slug": "gardenchair",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/gardenchair.png"
+      },
+      {
+        "name": "Garden light",
+        "slug": "gardenlight",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/gardenlight.png"
+      },
+      {
+        "name": "Garden table",
+        "slug": "gardentable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/gardentable.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585098"
   },
@@ -1404,13 +1730,12 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Large tree",
+        "slug": "largetree",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/largetree.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585908"
   },
@@ -1434,13 +1759,30 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Antique closet",
+        "slug": "antiquecloset",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/antiquecloset.png"
+      },
+      {
+        "name": "Antique bed",
+        "slug": "antiquebed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/antiquebed.png"
+      },
+      {
+        "name": "Antique dresser",
+        "slug": "antiquedresser",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/antiquedresser.png"
+      },
+      {
+        "name": "Antique chair",
+        "slug": "antiquechair",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/antiquechair.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586089"
   },
@@ -1460,13 +1802,30 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Poke Ball Sofa",
+        "slug": "pokeballsofa",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pokeballsofa.png"
+      },
+      {
+        "name": "Poke Ball Bed",
+        "slug": "pokeballbed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pokeballbed.png"
+      },
+      {
+        "name": "Poke Ball table",
+        "slug": "pokeballtable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pokeballtable.png"
+      },
+      {
+        "name": "Poke Ball Light",
+        "slug": "pokeballlight",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pokeballlight.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586090"
   },
@@ -1492,13 +1851,12 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Yellow tall grass",
+        "slug": "yellowtallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/yellowtallgrass.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585097"
   },
@@ -1530,13 +1888,18 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Yellow tall grass",
+        "slug": "yellowtallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/yellowtallgrass.png"
+      },
+      {
+        "name": "Large tree",
+        "slug": "largetree",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/largetree.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585096"
   },
@@ -1562,13 +1925,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Yellow tall grass",
+        "slug": "yellowtallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/yellowtallgrass.png"
+      },
+      {
+        "name": "High-up location",
+        "slug": "high-uplocation",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/high-uplocation.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585095"
   },
@@ -1600,13 +1968,18 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Yellow tall grass",
+        "slug": "yellowtallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/yellowtallgrass.png"
+      },
+      {
+        "name": "Water",
+        "slug": "water",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/water.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585083"
   },
@@ -1628,13 +2001,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Yellow tall grass",
+        "slug": "yellowtallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/yellowtallgrass.png"
+      },
+      {
+        "name": "Muddy Water",
+        "slug": "muddywater",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/muddywater.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585632"
   },
@@ -1654,13 +2032,18 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Vending machine",
+        "slug": "vendingmachine",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/vendingmachine.png"
+      },
+      {
+        "name": "Yellow tall grass",
+        "slug": "yellowtallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/yellowtallgrass.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585538"
   },
@@ -1688,13 +2071,12 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seashore flowers",
+        "slug": "seashoreflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seashoreflowers.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585093"
   },
@@ -1720,13 +2102,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Large palm tree",
+        "slug": "largepalmtree",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png"
+      },
+      {
+        "name": "seashore flowers",
+        "slug": "seashoreflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seashoreflowers.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585092"
   },
@@ -1748,13 +2135,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Windmill",
+        "slug": "windmill",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/windmill.png"
+      },
+      {
+        "name": "seashore flowers",
+        "slug": "seashoreflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seashoreflowers.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585091"
   },
@@ -1776,13 +2168,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Large palm tree",
+        "slug": "largepalmtree",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png"
+      },
+      {
+        "name": "Beach chair",
+        "slug": "beachchair",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/beachchair.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585090"
   },
@@ -1802,13 +2199,24 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Large palm tree",
+        "slug": "largepalmtree",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png"
+      },
+      {
+        "name": "Hedge",
+        "slug": "hedge",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/hedge.png"
+      },
+      {
+        "name": "Ocean Water",
+        "slug": "oceanwater",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/oceanwater.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585089"
   },
@@ -1828,13 +2236,18 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Carboad boxes",
+        "slug": "carboadboxes",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/carboadboxes.png"
+      },
+      {
+        "name": "Straw bed",
+        "slug": "strawbed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/strawbed.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585088"
   },
@@ -1856,13 +2269,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Carboad boxes",
+        "slug": "carboadboxes",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/carboadboxes.png"
+      },
+      {
+        "name": "Toy",
+        "slug": "toy",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/toy.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585087"
   },
@@ -1895,13 +2313,24 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Waste bin",
+        "slug": "wastebin",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wastebin.png"
+      },
+      {
+        "name": "Sign",
+        "slug": "sign",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/sign.png"
+      },
+      {
+        "name": "Garbage bags",
+        "slug": "garbagebags",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/garbagebags.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585086"
   },
@@ -1927,13 +2356,12 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Garbage bin",
+        "slug": "garbagebin",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/garbagebin.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585085"
   },
@@ -1951,13 +2379,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Utility pole",
+        "slug": "utilitypole",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/utilitypole.png"
+      },
+      {
+        "name": "Garbage Bag",
+        "slug": "garbagebag",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/garbagebag.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585084"
   },
@@ -1985,13 +2418,18 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat (Wide)",
+        "slug": "seat(wide)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat(wide).png"
+      },
+      {
+        "name": "Garbage Bin",
+        "slug": "garbagebin",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/garbagebin.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585051"
   },
@@ -2015,13 +2453,30 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Menu board",
+        "slug": "menuboard",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/menuboard.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Plated Food",
+        "slug": "platedfood",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/platedfood.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585039"
   },
@@ -2039,13 +2494,36 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Chic chair",
+        "slug": "chicchair",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/chicchair.png"
+      },
+      {
+        "name": "Chic table",
+        "slug": "chictable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/chictable.png"
+      },
+      {
+        "name": "Small vase",
+        "slug": "smallvase",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/smallvase.png"
+      },
+      {
+        "name": "Push cart",
+        "slug": "pushcart",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pushcart.png"
+      },
+      {
+        "name": "Plated food",
+        "slug": "platedfood",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/platedfood.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586091"
   },
@@ -2069,13 +2547,24 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Wooden birdhouse",
+        "slug": "woodenbirdhouse",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/woodenbirdhouse.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Plated food",
+        "slug": "platedfood",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/platedfood.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585038"
   },
@@ -2097,13 +2586,36 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat (any)",
+        "slug": "seat(any)",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat(any).png"
+      },
+      {
+        "name": "Potted Plant",
+        "slug": "pottedplant",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pottedplant.png"
+      },
+      {
+        "name": "Counter",
+        "slug": "counter",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/counter.png"
+      },
+      {
+        "name": "Mug",
+        "slug": "mug",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/mug.png"
+      },
+      {
+        "name": "Menu board",
+        "slug": "menuboard",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/menuboard.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585539"
   },
@@ -2129,13 +2641,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Beach chair",
+        "slug": "beachchair",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/beachchair.png"
+      },
+      {
+        "name": "Beach Parasol",
+        "slug": "beachparasol",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/beachparasol.png"
+      },
+      {
+        "name": "Side table",
+        "slug": "sidetable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/sidetable.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586092"
   },
@@ -2157,13 +2680,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Spotlight",
+        "slug": "spotlight",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/spotlight.png"
+      },
+      {
+        "name": "Small Stage",
+        "slug": "smallstage",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/smallstage.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585037"
   },
@@ -2189,13 +2717,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Balloons",
+        "slug": "balloons",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/balloons.png"
+      },
+      {
+        "name": "Boo-in-the-box",
+        "slug": "boo-in-the-box",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/boo-in-the-box.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586093"
   },
@@ -2213,13 +2746,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Balloons",
+        "slug": "balloons",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/balloons.png"
+      },
+      {
+        "name": "Raichu Sign",
+        "slug": "raichusign",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/raichusign.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586094"
   },
@@ -2237,13 +2775,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Closet",
+        "slug": "closet",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/closet.png"
+      },
+      {
+        "name": "Mirror (large)",
+        "slug": "mirror(large)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/mirror(large).png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585036"
   },
@@ -2265,13 +2808,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Partition",
+        "slug": "partition",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/partition.png"
+      },
+      {
+        "name": "Closet",
+        "slug": "closet",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/closet.png"
+      },
+      {
+        "name": "Dresser",
+        "slug": "dresser",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/dresser.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586085"
   },
@@ -2295,13 +2849,24 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Knitting supplies",
+        "slug": "knittingsupplies",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/knittingsupplies.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585035"
   },
@@ -2323,13 +2888,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Shower",
+        "slug": "shower",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/shower.png"
+      },
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Hot-spring water",
+        "slug": "hot-springwater",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/hot-springwater.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585420"
   },
@@ -2357,13 +2933,30 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Large palm tree",
+        "slug": "largepalmtree",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png"
+      },
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Plated food",
+        "slug": "platedfood",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/platedfood.png"
+      },
+      {
+        "name": "Campfire",
+        "slug": "campfire",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/campfire.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585034"
   },
@@ -2387,13 +2980,18 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Cart",
+        "slug": "cart",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cart.png"
+      },
+      {
+        "name": "Cardboard boxes",
+        "slug": "cardboardboxes",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cardboardboxes.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585033"
   },
@@ -2417,13 +3015,24 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Bed",
+        "slug": "bed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/bed.png"
+      },
+      {
+        "name": "Plain chest",
+        "slug": "plainchest",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/plainchest.png"
+      },
+      {
+        "name": "First aid kit",
+        "slug": "firstaidkit",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/firstaidkit.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585909"
   },
@@ -2443,13 +3052,24 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Bed",
+        "slug": "bed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/bed.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Alarm clock",
+        "slug": "alarmclock",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/alarmclock.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585032"
   },
@@ -2471,13 +3091,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Vending machine",
+        "slug": "vendingmachine",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/vendingmachine.png"
+      },
+      {
+        "name": "Seat (Wide)",
+        "slug": "seat(wide)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat(wide).png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585633"
   },
@@ -2501,13 +3126,18 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Waste bin",
+        "slug": "wastebin",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wastebin.png"
+      },
+      {
+        "name": "Vending Machine",
+        "slug": "vendingmachine",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/vendingmachine.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585031"
   },
@@ -2529,13 +3159,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Arcade Machine",
+        "slug": "arcademachine",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/arcademachine.png"
+      },
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Punching game",
+        "slug": "punchinggame",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/punchinggame.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586096"
   },
@@ -2557,13 +3198,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Waterwheel",
+        "slug": "waterwheel",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/waterwheel.png"
+      },
+      {
+        "name": "Water",
+        "slug": "water",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/water.png"
+      },
+      {
+        "name": "Waterfall",
+        "slug": "waterfall",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/waterfall.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585030"
   },
@@ -2585,13 +3237,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Metal drum",
+        "slug": "metaldrum",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/metaldrum.png"
+      },
+      {
+        "name": "Furnace",
+        "slug": "furnace",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/furnace.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585910"
   },
@@ -2613,13 +3270,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Walkway",
+        "slug": "walkway",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/walkway.png"
+      },
+      {
+        "name": "Streetlight",
+        "slug": "streetlight",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/streetlight.png"
+      },
+      {
+        "name": "Ocean Water",
+        "slug": "oceanwater",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/oceanwater.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585018"
   },
@@ -2641,13 +3309,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Bookcase",
+        "slug": "bookcase",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/bookcase.png"
+      },
+      {
+        "name": "Chic sofa",
+        "slug": "chicsofa",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/chicsofa.png"
+      },
+      {
+        "name": "Plain table",
+        "slug": "plaintable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/plaintable.png"
+      },
+      {
+        "name": "Slender candle",
+        "slug": "slendercandle",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/slendercandle.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585028"
   },
@@ -2669,13 +3354,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Barrel",
+        "slug": "barrel",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/barrel.png"
+      },
+      {
+        "name": "Ship's wheel",
+        "slug": "ship'swheel",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/ship'swheel.png"
+      },
+      {
+        "name": "Cannon",
+        "slug": "cannon",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cannon.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585027"
   },
@@ -2708,13 +3404,18 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Cash register",
+        "slug": "cashregister",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cashregister.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585026"
   },
@@ -2734,13 +3435,18 @@
       "Bleak Beach"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Canvas",
+        "slug": "canvas",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/canvas.png"
+      },
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586097"
   },
@@ -2760,13 +3466,12 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Offering dish",
+        "slug": "offeringdish",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/offeringdish.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585421"
   },
@@ -2784,13 +3489,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pikachu sofa",
+        "slug": "pikachusofa",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pikachusofa.png"
+      },
+      {
+        "name": "Pikachu doll",
+        "slug": "pikachudoll",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pikachudoll.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585422"
   },
@@ -2808,13 +3518,36 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Cute sofa",
+        "slug": "cutesofa",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cutesofa.png"
+      },
+      {
+        "name": "Cute table",
+        "slug": "cutetable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cutetable.png"
+      },
+      {
+        "name": "Cute lamp",
+        "slug": "cutelamp",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cutelamp.png"
+      },
+      {
+        "name": "Cute bed",
+        "slug": "cutebed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cutebed.png"
+      },
+      {
+        "name": "Cute dresser",
+        "slug": "cutedresser",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cutedresser.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586098"
   },
@@ -2832,13 +3565,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Resort sofa",
+        "slug": "resortsofa",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/resortsofa.png"
+      },
+      {
+        "name": "Resort table",
+        "slug": "resorttable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/resorttable.png"
+      },
+      {
+        "name": "Resort hammock",
+        "slug": "resorthammock",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/resorthammock.png"
+      },
+      {
+        "name": "Resort light",
+        "slug": "resortlight",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/resortlight.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586099"
   },
@@ -2856,13 +3606,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Plain bed",
+        "slug": "plainbed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/plainbed.png"
+      },
+      {
+        "name": "Plain sofa",
+        "slug": "plainsofa",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/plainsofa.png"
+      },
+      {
+        "name": "Plain table",
+        "slug": "plaintable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/plaintable.png"
+      },
+      {
+        "name": "Plain lamp",
+        "slug": "plainlamp",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/plainlamp.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585634"
   },
@@ -2898,13 +3665,12 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Red tall grass",
+        "slug": "redtallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/redtallgrass.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585025"
   },
@@ -2934,13 +3700,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Red tall grass",
+        "slug": "redtallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/redtallgrass.png"
+      },
+      {
+        "name": "Large tree",
+        "slug": "largetree",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/largetree.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585024"
   },
@@ -2964,13 +3735,24 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pointy tree",
+        "slug": "pointytree",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pointytree.png"
+      },
+      {
+        "name": "Red tall grass",
+        "slug": "redtallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/redtallgrass.png"
+      },
+      {
+        "name": "Large Boulder",
+        "slug": "largeboulder",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/largeboulder.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585023"
   },
@@ -2992,13 +3774,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Red tall grass",
+        "slug": "redtallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/redtallgrass.png"
+      },
+      {
+        "name": "Water",
+        "slug": "water",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/water.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585022"
   },
@@ -3020,13 +3807,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Red tall grass",
+        "slug": "redtallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/redtallgrass.png"
+      },
+      {
+        "name": "High-up location",
+        "slug": "high-uplocation",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/high-uplocation.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585021"
   },
@@ -3050,13 +3842,18 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Sandbags",
+        "slug": "sandbags",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/sandbags.png"
+      },
+      {
+        "name": "Red tall grass",
+        "slug": "redtallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/redtallgrass.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585020"
   },
@@ -3090,13 +3887,12 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Mountain flowers",
+        "slug": "mountainflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/mountainflowers.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585019"
   },
@@ -3122,13 +3918,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pointyt ree",
+        "slug": "pointytree",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pointytree.png"
+      },
+      {
+        "name": "Mountain flowers",
+        "slug": "mountainflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/mountainflowers.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585029"
   },
@@ -3154,13 +3955,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Mountain flowers",
+        "slug": "mountainflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/mountainflowers.png"
+      },
+      {
+        "name": "Water",
+        "slug": "water",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/water.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585635"
   },
@@ -3186,13 +3992,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Mountain flowers",
+        "slug": "mountainflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/mountainflowers.png"
+      },
+      {
+        "name": "Tree stump",
+        "slug": "treestump",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/treestump.png"
+      },
+      {
+        "name": "Mushroom lamp",
+        "slug": "mushroomlamp",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/mushroomlamp.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585636"
   },
@@ -3210,13 +4027,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Vegetable field",
+        "slug": "vegetablefield",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/vegetablefield.png"
+      },
+      {
+        "name": "Wheelbarrow",
+        "slug": "wheelbarrow",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wheelbarrow.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585911"
   },
@@ -3245,13 +4067,18 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Duckweed",
+        "slug": "duckweed",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/duckweed.png"
+      },
+      {
+        "name": "Water",
+        "slug": "water",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/water.png"
+      }
     ]
   },
   {
@@ -3272,13 +4099,12 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Moss",
+        "slug": "moss",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/moss.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585059"
   },
@@ -3302,13 +4128,18 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Moss",
+        "slug": "moss",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/moss.png"
+      },
+      {
+        "name": "Mossy Boulder",
+        "slug": "mossyboulder",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/mossyboulder.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585058"
   },
@@ -3328,13 +4159,18 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Moss",
+        "slug": "moss",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/moss.png"
+      },
+      {
+        "name": "Hot-spring water",
+        "slug": "hot-springwater",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/hot-springwater.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585057"
   },
@@ -3354,13 +4190,18 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Hot-spring spout",
+        "slug": "hot-springspout",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/hot-springspout.png"
+      },
+      {
+        "name": "Hot-spring water",
+        "slug": "hot-springwater",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/hot-springwater.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585423"
   },
@@ -3378,13 +4219,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Hot-spring spout",
+        "slug": "hot-springspout",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/hot-springspout.png"
+      },
+      {
+        "name": "Water Basin",
+        "slug": "waterbasin",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/waterbasin.png"
+      },
+      {
+        "name": "Hot-spring water",
+        "slug": "hot-springwater",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/hot-springwater.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585055"
   },
@@ -3413,13 +4265,18 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Molten rock",
+        "slug": "moltenrock",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/moltenrock.png"
+      },
+      {
+        "name": "Lava",
+        "slug": "lava",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/lava.png"
+      }
     ]
   },
   {
@@ -3443,13 +4300,24 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Wheelbarrow",
+        "slug": "wheelbarrow",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wheelbarrow.png"
+      },
+      {
+        "name": "Smelting furnace",
+        "slug": "smeltingfurnace",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/smeltingfurnace.png"
+      },
+      {
+        "name": "Excavation tools",
+        "slug": "excavationtools",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/excavationtools.png"
+      }
     ]
   },
   {
@@ -3470,13 +4338,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Iron beam or column",
+        "slug": "ironbeamorcolumn",
+        "quantity": 3,
+        "image": "https://www.serebii.net/pokemonpokopia/items/ironbeamorcolumn.png"
+      },
+      {
+        "name": "Wheelbarrow",
+        "slug": "wheelbarrow",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wheelbarrow.png"
+      },
+      {
+        "name": "Sandbags",
+        "slug": "sandbags",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/sandbags.png"
+      },
+      {
+        "name": "Excavation tools",
+        "slug": "excavationtools",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/excavationtools.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585052"
   },
@@ -3498,13 +4383,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Stalagmites",
+        "slug": "stalagmites",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/stalagmites.png"
+      },
+      {
+        "name": "Moss",
+        "slug": "moss",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/moss.png"
+      },
+      {
+        "name": "Wooden crate",
+        "slug": "woodencrate",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/woodencrate.png"
+      },
+      {
+        "name": "Lantern",
+        "slug": "lantern",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/lantern.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585040"
   },
@@ -3530,13 +4432,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Barrel",
+        "slug": "barrel",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/barrel.png"
+      },
+      {
+        "name": "Wooden crate",
+        "slug": "woodencrate",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/woodencrate.png"
+      },
+      {
+        "name": "Lantern",
+        "slug": "lantern",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/lantern.png"
+      },
+      {
+        "name": "Plated food",
+        "slug": "platedfood",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/platedfood.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585050"
   },
@@ -3554,13 +4473,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat (wide)",
+        "slug": "seat(wide)",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat(wide).png"
+      },
+      {
+        "name": "Table (large)",
+        "slug": "table(large)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table(large).png"
+      },
+      {
+        "name": "Party Platter",
+        "slug": "partyplatter",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/partyplatter.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586100"
   },
@@ -3582,13 +4512,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Bread oven",
+        "slug": "breadoven",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/breadoven.png"
+      },
+      {
+        "name": "Counter",
+        "slug": "counter",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/counter.png"
+      },
+      {
+        "name": "Plated food",
+        "slug": "platedfood",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/platedfood.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585049"
   },
@@ -3606,13 +4547,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Kitchen table",
+        "slug": "kitchentable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/kitchentable.png"
+      },
+      {
+        "name": "Cooking stove",
+        "slug": "cookingstove",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cookingstove.png"
+      },
+      {
+        "name": "Frying pan",
+        "slug": "fryingpan",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/fryingpan.png"
+      },
+      {
+        "name": "Modern sink",
+        "slug": "modernsink",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/modernsink.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586101"
   },
@@ -3634,13 +4592,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Food counter",
+        "slug": "foodcounter",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/foodcounter.png"
+      },
+      {
+        "name": "Paper party cups",
+        "slug": "paperpartycups",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/paperpartycups.png"
+      },
+      {
+        "name": "Plated food",
+        "slug": "platedfood",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/platedfood.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585637"
   },
@@ -3660,13 +4629,18 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Tablet",
+        "slug": "tablet",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tablet.png"
+      },
+      {
+        "name": "Paper party cups",
+        "slug": "paperpartycups",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/paperpartycups.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585540"
   },
@@ -3688,13 +4662,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Perch",
+        "slug": "perch",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/perch.png"
+      },
+      {
+        "name": "Standing mic",
+        "slug": "standingmic",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/standingmic.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585048"
   },
@@ -3716,13 +4695,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Speaker",
+        "slug": "speaker",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/speaker.png"
+      },
+      {
+        "name": "Small stage",
+        "slug": "smallstage",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/smallstage.png"
+      },
+      {
+        "name": "Standing mic",
+        "slug": "standingmic",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/standingmic.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586102"
   },
@@ -3750,13 +4740,24 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Punching bag",
+        "slug": "punchingbag",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/punchingbag.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "CD player",
+        "slug": "cdplayer",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cdplayer.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585047"
   },
@@ -3784,13 +4785,24 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "CD Player",
+        "slug": "cdplayer",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cdplayer.png"
+      },
+      {
+        "name": "CD rack",
+        "slug": "cdrack",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cdrack.png"
+      },
+      {
+        "name": "Magazine rack",
+        "slug": "magazinerack",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/magazinerack.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586103"
   },
@@ -3814,13 +4826,24 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Post",
+        "slug": "post",
+        "quantity": 3,
+        "image": "https://www.serebii.net/pokemonpokopia/items/post.png"
+      },
+      {
+        "name": "Pedestal",
+        "slug": "pedestal",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pedestal.png"
+      },
+      {
+        "name": "Lost relic (large)",
+        "slug": "lostrelic(large)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/lostrelic(large).png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585046"
   },
@@ -3844,13 +4867,30 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Office locker",
+        "slug": "officelocker",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/officelocker.png"
+      },
+      {
+        "name": "Potted plant",
+        "slug": "pottedplant",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pottedplant.png"
+      },
+      {
+        "name": "Seat (wide",
+        "slug": "seat(wide",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat(wide.png"
+      },
+      {
+        "name": "Punching game",
+        "slug": "punchinggame",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/punchinggame.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585045"
   },
@@ -3872,13 +4912,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Hedge",
+        "slug": "hedge",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/hedge.png"
+      },
+      {
+        "name": "Moonlight dance statue",
+        "slug": "moonlightdancestatue",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/moonlightdancestatue.png"
+      },
+      {
+        "name": "Sign",
+        "slug": "sign",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/sign.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585044"
   },
@@ -3906,13 +4957,18 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Railway track",
+        "slug": "railwaytrack",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/railwaytrack.png"
+      },
+      {
+        "name": "Crossing gate",
+        "slug": "crossinggate",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/crossinggate.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585043"
   },
@@ -3932,13 +4988,42 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Cooking stove",
+        "slug": "cookingstove",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cookingstove.png"
+      },
+      {
+        "name": "Modern sink",
+        "slug": "modernsink",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/modernsink.png"
+      },
+      {
+        "name": "Plain table",
+        "slug": "plaintable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/plaintable.png"
+      },
+      {
+        "name": "Stylish Cooking Pot",
+        "slug": "stylishcookingpot",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/stylishcookingpot.png"
+      },
+      {
+        "name": "Cutting board",
+        "slug": "cuttingboard",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cuttingboard.png"
+      },
+      {
+        "name": "Plated food",
+        "slug": "platedfood",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/platedfood.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585541"
   },
@@ -3956,13 +5041,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Luxury lamp",
+        "slug": "luxurylamp",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/luxurylamp.png"
+      },
+      {
+        "name": "Luxury bed",
+        "slug": "luxurybed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/luxurybed.png"
+      },
+      {
+        "name": "Luxury sofa",
+        "slug": "luxurysofa",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/luxurysofa.png"
+      },
+      {
+        "name": "Luxury table",
+        "slug": "luxurytable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/luxurytable.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586104"
   },
@@ -3980,13 +5082,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Iron bed",
+        "slug": "ironbed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/ironbed.png"
+      },
+      {
+        "name": "Iron table",
+        "slug": "irontable",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/irontable.png"
+      },
+      {
+        "name": "Iron chair",
+        "slug": "ironchair",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/ironchair.png"
+      },
+      {
+        "name": "Lantern",
+        "slug": "lantern",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/lantern.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586075"
   },
@@ -4004,13 +5123,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Industrial bed",
+        "slug": "industrialbed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/industrialbed.png"
+      },
+      {
+        "name": "Industrial desk",
+        "slug": "industrialdesk",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/industrialdesk.png"
+      },
+      {
+        "name": "Industrial chair",
+        "slug": "industrialchair",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/industrialchair.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586066"
   },
@@ -4044,13 +5174,12 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pink tall grass",
+        "slug": "pinktallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pinktallgrass.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585412"
   },
@@ -4082,13 +5211,18 @@
       "Sparkling Skylands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pink tall grass",
+        "slug": "pinktallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pinktallgrass.png"
+      },
+      {
+        "name": "Large tree",
+        "slug": "largetree",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/largetree.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585425"
   },
@@ -4116,13 +5250,18 @@
       "Sparkling Skylands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pink tall grass",
+        "slug": "pinktallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pinktallgrass.png"
+      },
+      {
+        "name": "Water",
+        "slug": "water",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/water.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585426"
   },
@@ -4152,13 +5291,12 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pink tall grass",
+        "slug": "pinktallgrass",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pinktallgrass.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585427"
   },
@@ -4180,13 +5318,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Concrete Pipe",
+        "slug": "concretepipe",
+        "quantity": 3,
+        "image": "https://www.serebii.net/pokemonpokopia/items/concretepipe.png"
+      },
+      {
+        "name": "Tall Grass (any)",
+        "slug": "tallgrass(any)",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tallgrass(any).png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585428"
   },
@@ -4222,13 +5365,12 @@
       "Sparkling Skylands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Skyland flowers",
+        "slug": "skylandflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/skylandflowers.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585429"
   },
@@ -4258,13 +5400,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Large tree",
+        "slug": "largetree",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/largetree.png"
+      },
+      {
+        "name": "Skyland flowers",
+        "slug": "skylandflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/skylandflowers.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585430"
   },
@@ -4290,13 +5437,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Skyland flowers",
+        "slug": "skylandflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/skylandflowers.png"
+      },
+      {
+        "name": "Water",
+        "slug": "water",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/water.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585431"
   },
@@ -4314,13 +5466,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Canoe",
+        "slug": "canoe",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/canoe.png"
+      },
+      {
+        "name": "Duckweed",
+        "slug": "duckweed",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/duckweed.png"
+      },
+      {
+        "name": "Water",
+        "slug": "water",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/water.png"
+      },
+      {
+        "name": "High-up location",
+        "slug": "high-uplocation",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/high-uplocation.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585432"
   },
@@ -4338,13 +5507,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Stepping stones",
+        "slug": "steppingstones",
+        "quantity": 3,
+        "image": "https://www.serebii.net/pokemonpokopia/items/steppingstones.png"
+      },
+      {
+        "name": "Torch",
+        "slug": "torch",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/torch.png"
+      },
+      {
+        "name": "Water",
+        "slug": "water",
+        "quantity": 3,
+        "image": "https://www.serebii.net/pokemonpokopia/items/water.png"
+      },
+      {
+        "name": "Waterfall",
+        "slug": "waterfall",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/waterfall.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586067"
   },
@@ -4362,13 +5548,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Stylish hedge",
+        "slug": "stylishhedge",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/stylishhedge.png"
+      },
+      {
+        "name": "Wooden Birdhouse",
+        "slug": "woodenbirdhouse",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/woodenbirdhouse.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585433"
   },
@@ -4390,13 +5581,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Shower",
+        "slug": "shower",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/shower.png"
+      },
+      {
+        "name": "Bathtub",
+        "slug": "bathtub",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/bathtub.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585912"
   },
@@ -4414,13 +5610,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Bike",
+        "slug": "bike",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/bike.png"
+      },
+      {
+        "name": "Vending Machine",
+        "slug": "vendingmachine",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/vendingmachine.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586068"
   },
@@ -4442,13 +5643,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Stone fireplace",
+        "slug": "stonefireplace",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/stonefireplace.png"
+      },
+      {
+        "name": "Seat (wide",
+        "slug": "seat(wide",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat(wide.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585434"
   },
@@ -4470,13 +5676,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Simple cushion",
+        "slug": "simplecushion",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/simplecushion.png"
+      },
+      {
+        "name": "Crystal Ball",
+        "slug": "crystalball",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/crystalball.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585542"
   },
@@ -4498,13 +5709,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat (any)",
+        "slug": "seat(any)",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat(any).png"
+      },
+      {
+        "name": "Table (any)",
+        "slug": "table(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table(any).png"
+      },
+      {
+        "name": "Crystal Ball",
+        "slug": "crystalball",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/crystalball.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586069"
   },
@@ -4526,13 +5748,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Garbage bags",
+        "slug": "garbagebags",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/garbagebags.png"
+      },
+      {
+        "name": "Television",
+        "slug": "television",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/television.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585435"
   },
@@ -4557,13 +5784,30 @@
       "Sparkling Skylands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Iron beam or column",
+        "slug": "ironbeamorcolumn",
+        "quantity": 3,
+        "image": "https://www.serebii.net/pokemonpokopia/items/ironbeamorcolumn.png"
+      },
+      {
+        "name": "Tires",
+        "slug": "tires",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tires.png"
+      },
+      {
+        "name": "Waste bin (any)",
+        "slug": "wastebin(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wastebin(any).png"
+      },
+      {
+        "name": "Microwave oven",
+        "slug": "microwaveoven",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/microwaveoven.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586070"
   },
@@ -4587,13 +5831,30 @@
       "Sparkling Skylands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Arcanine doll",
+        "slug": "arcaninedoll",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/arcaninedoll.png"
+      },
+      {
+        "name": "Folding chair",
+        "slug": "foldingchair",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/foldingchair.png"
+      },
+      {
+        "name": "Industrial desk",
+        "slug": "industrialdesk",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/industrialdesk.png"
+      },
+      {
+        "name": "Desk light",
+        "slug": "desklight",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/desklight.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586071"
   },
@@ -4621,13 +5882,30 @@
       "Palette Town"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Iron Pipes",
+        "slug": "ironpipes",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/ironpipes.png"
+      },
+      {
+        "name": "Sewer-hole cover",
+        "slug": "sewer-holecover",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/sewer-holecover.png"
+      },
+      {
+        "name": "Excavation tools",
+        "slug": "excavationtools",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/excavationtools.png"
+      },
+      {
+        "name": "Traffic cone",
+        "slug": "trafficcone",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/trafficcone.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585913"
   },
@@ -4640,13 +5918,24 @@
     "pokemon": [],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Towel Rack",
+        "slug": "towelrack",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/towelrack.png"
+      },
+      {
+        "name": "Wall mirror",
+        "slug": "wallmirror",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wallmirror.png"
+      },
+      {
+        "name": "Sink",
+        "slug": "sink",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/sink.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585408"
   },
@@ -4664,13 +5953,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Speaker",
+        "slug": "speaker",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/speaker.png"
+      },
+      {
+        "name": "Stand",
+        "slug": "stand",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/stand.png"
+      },
+      {
+        "name": "Television",
+        "slug": "television",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/television.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586072"
   },
@@ -4692,13 +5992,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Bookcase",
+        "slug": "bookcase",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/bookcase.png"
+      },
+      {
+        "name": "Seat (any)",
+        "slug": "seat(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat(any).png"
+      },
+      {
+        "name": "Table (any)",
+        "slug": "table(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table(any).png"
+      },
+      {
+        "name": "Pencil holder",
+        "slug": "pencilholder",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pencilholder.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585397"
   },
@@ -4720,13 +6037,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Speaker",
+        "slug": "speaker",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/speaker.png"
+      },
+      {
+        "name": "Television",
+        "slug": "television",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/television.png"
+      },
+      {
+        "name": "Music mat",
+        "slug": "musicmat",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/musicmat.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585914"
   },
@@ -4744,13 +6072,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Bathtub",
+        "slug": "bathtub",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/bathtub.png"
+      },
+      {
+        "name": "Cleaning supplies",
+        "slug": "cleaningsupplies",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cleaningsupplies.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586073"
   },
@@ -4774,13 +6107,24 @@
       "Sparkling Skylands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Dresser (any)",
+        "slug": "dresser(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/dresser(any).png"
+      },
+      {
+        "name": "Seat (any)",
+        "slug": "seat(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat(any).png"
+      },
+      {
+        "name": "Humidifier",
+        "slug": "humidifier",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/humidifier.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586074"
   },
@@ -4800,13 +6144,30 @@
       "Sparkling Skylands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Bookcase",
+        "slug": "bookcase",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/bookcase.png"
+      },
+      {
+        "name": "Step stool",
+        "slug": "stepstool",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/stepstool.png"
+      },
+      {
+        "name": "Table (any)",
+        "slug": "table(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table(any).png"
+      },
+      {
+        "name": "Lighting (any)",
+        "slug": "lighting(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/lighting(any).png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586065"
   },
@@ -4824,13 +6185,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Arcade Machine",
+        "slug": "arcademachine",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/arcademachine.png"
+      },
+      {
+        "name": "Seat (any)",
+        "slug": "seat(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat(any).png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585915"
   },
@@ -4850,13 +6216,18 @@
       "Sparkling Skylands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Slide",
+        "slug": "slide",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/slide.png"
+      },
+      {
+        "name": "Toy (Any)",
+        "slug": "toy(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/toy(any).png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585398"
   },
@@ -4874,13 +6245,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Office desk",
+        "slug": "officedesk",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/officedesk.png"
+      },
+      {
+        "name": "Laptop",
+        "slug": "laptop",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/laptop.png"
+      },
+      {
+        "name": "Mug",
+        "slug": "mug",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/mug.png"
+      },
+      {
+        "name": "Office chair",
+        "slug": "officechair",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/officechair.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585399"
   },
@@ -4910,13 +6298,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Office shelf",
+        "slug": "officeshelf",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/officeshelf.png"
+      },
+      {
+        "name": "Step stool",
+        "slug": "stepstool",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/stepstool.png"
+      },
+      {
+        "name": "Cardboard boxes",
+        "slug": "cardboardboxes",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cardboardboxes.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585400"
   },
@@ -4934,13 +6333,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Science Experiment",
+        "slug": "scienceexperiment",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/scienceexperiment.png"
+      },
+      {
+        "name": "Microscope",
+        "slug": "microscope",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/microscope.png"
+      },
+      {
+        "name": "Papers",
+        "slug": "papers",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/papers.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586076"
   },
@@ -4960,13 +6370,30 @@
       "Sparkling Skylands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Whiteboard",
+        "slug": "whiteboard",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/whiteboard.png"
+      },
+      {
+        "name": "Table (any)",
+        "slug": "table(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table(any).png"
+      },
+      {
+        "name": "Jumbled cords",
+        "slug": "jumbledcords",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/jumbledcords.png"
+      },
+      {
+        "name": "Laptop",
+        "slug": "laptop",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/laptop.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585401"
   },
@@ -4986,13 +6413,18 @@
       "Sparkling Skylands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Table (any)",
+        "slug": "table(any)",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table(any).png"
+      },
+      {
+        "name": "Computer",
+        "slug": "computer",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/computer.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585543"
   },
@@ -5010,13 +6442,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Magazine rack",
+        "slug": "magazinerack",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/magazinerack.png"
+      },
+      {
+        "name": "Newspaper",
+        "slug": "newspaper",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/newspaper.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585638"
   },
@@ -5034,13 +6471,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Spotlight",
+        "slug": "spotlight",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/spotlight.png"
+      },
+      {
+        "name": "Big drum",
+        "slug": "bigdrum",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/bigdrum.png"
+      },
+      {
+        "name": "Boo-in-the-box",
+        "slug": "boo-in-the-box",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/boo-in-the-box.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585402"
   },
@@ -5062,13 +6510,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Floor switch",
+        "slug": "floorswitch",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/floorswitch.png"
+      },
+      {
+        "name": "Boo-in-thebox",
+        "slug": "boo-in-thebox",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/boo-in-thebox.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585544"
   },
@@ -5090,13 +6543,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Photo cutout board",
+        "slug": "photocutoutboard",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/photocutoutboard.png"
+      },
+      {
+        "name": "Spotlight",
+        "slug": "spotlight",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/spotlight.png"
+      },
+      {
+        "name": "High-up location",
+        "slug": "high-uplocation",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/high-uplocation.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585916"
   },
@@ -5116,13 +6580,24 @@
       "Sparkling Skylands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Slide",
+        "slug": "slide",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/slide.png"
+      },
+      {
+        "name": "Tires",
+        "slug": "tires",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tires.png"
+      },
+      {
+        "name": "Tire Toy",
+        "slug": "tiretoy",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tiretoy.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585545"
   },
@@ -5140,13 +6615,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Large tree",
+        "slug": "largetree",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/largetree.png"
+      },
+      {
+        "name": "Large boulder",
+        "slug": "largeboulder",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/largeboulder.png"
+      },
+      {
+        "name": "Table (any)",
+        "slug": "table(any)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table(any).png"
+      },
+      {
+        "name": "Cash register",
+        "slug": "cashregister",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/cashregister.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585403"
   },
@@ -5164,13 +6656,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Furnace",
+        "slug": "furnace",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/furnace.png"
+      },
+      {
+        "name": "Iron scaffold",
+        "slug": "ironscaffold",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/ironscaffold.png"
+      },
+      {
+        "name": "Iron pipes",
+        "slug": "ironpipes",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/ironpipes.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585404"
   },
@@ -5192,13 +6695,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Hanging scroll",
+        "slug": "hangingscroll",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/hangingscroll.png"
+      },
+      {
+        "name": "Strength rock",
+        "slug": "strengthrock",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/strengthrock.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585546"
   },
@@ -5216,13 +6724,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Potted plant (any)",
+        "slug": "pottedplant(any)",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pottedplant(any).png"
+      },
+      {
+        "name": "Team Rocket wall hanging",
+        "slug": "teamrocketwallhanging",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/teamrocketwallhanging.png"
+      },
+      {
+        "name": "Luxury sofa",
+        "slug": "luxurysofa",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/luxurysofa.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585405"
   },
@@ -5240,13 +6759,12 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Firepit",
+        "slug": "firepit",
+        "quantity": 9,
+        "image": "https://www.serebii.net/pokemonpokopia/items/firepit.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585917"
   },
@@ -5270,13 +6788,30 @@
       "Withered Wastelands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Arcanine doll",
+        "slug": "arcaninedoll",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/arcaninedoll.png"
+      },
+      {
+        "name": "Pikachu doll",
+        "slug": "pikachudoll",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pikachudoll.png"
+      },
+      {
+        "name": "Dragonite doll",
+        "slug": "dragonitedoll",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/dragonitedoll.png"
+      },
+      {
+        "name": "Eevee Doll",
+        "slug": "eeveedoll",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/eeveedoll.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585406"
   },
@@ -5294,13 +6829,36 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Gaming bed",
+        "slug": "gamingbed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/gamingbed.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Gaming PC",
+        "slug": "gamingpc",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/gamingpc.png"
+      },
+      {
+        "name": "Gaming Chair",
+        "slug": "gamingchair",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/gamingchair.png"
+      },
+      {
+        "name": "Gaming Fridge",
+        "slug": "gamingfridge",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/gamingfridge.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586077"
   },
@@ -5318,13 +6876,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pop art bed",
+        "slug": "popartbed",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/popartbed.png"
+      },
+      {
+        "name": "Pop art sofa",
+        "slug": "popartsofa",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/popartsofa.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586078"
   },
@@ -5342,13 +6905,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Fishing Rod",
+        "slug": "fishingrod",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/fishingrod.png"
+      },
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Water",
+        "slug": "water",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/water.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585407"
   },
@@ -5376,13 +6950,24 @@
       "Withered Wastelands"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Fishing Rod",
+        "slug": "fishingrod",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/fishingrod.png"
+      },
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Ocean Water",
+        "slug": "oceanwater",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/oceanwater.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585042"
   },
@@ -5408,13 +6993,24 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Fishing Rod",
+        "slug": "fishingrod",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/fishingrod.png"
+      },
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Muddy water",
+        "slug": "muddywater",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/muddywater.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585639"
   },
@@ -5436,13 +7032,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Fishing Rod",
+        "slug": "fishingrod",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/fishingrod.png"
+      },
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586079"
   },
@@ -5462,13 +7063,24 @@
       "Rocky Ridges"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Fishing rod",
+        "slug": "fishingrod",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/fishingrod.png"
+      },
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Lava",
+        "slug": "lava",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/lava.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585396"
   },
@@ -5486,13 +7098,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Speaker",
+        "slug": "speaker",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/speaker.png"
+      },
+      {
+        "name": "Small stage",
+        "slug": "smallstage",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/smallstage.png"
+      },
+      {
+        "name": "Cool electric guitar",
+        "slug": "coolelectricguitar",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/coolelectricguitar.png"
+      },
+      {
+        "name": "Standing mic",
+        "slug": "standingmic",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/standingmic.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586080"
   },
@@ -5510,13 +7139,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Speaker",
+        "slug": "speaker",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/speaker.png"
+      },
+      {
+        "name": "Small stage",
+        "slug": "smallstage",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/smallstage.png"
+      },
+      {
+        "name": "Cool bass guitar",
+        "slug": "coolbassguitar",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/coolbassguitar.png"
+      },
+      {
+        "name": "Standing mic",
+        "slug": "standingmic",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/standingmic.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586081"
   },
@@ -5534,13 +7180,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pedastal",
+        "slug": "pedastal",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pedastal.png"
+      },
+      {
+        "name": "Malicious Armor",
+        "slug": "maliciousarmor",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/maliciousarmor.png"
+      },
+      {
+        "name": "Stepping Stones",
+        "slug": "steppingstones",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/steppingstones.png"
+      },
+      {
+        "name": "Firepit",
+        "slug": "firepit",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/firepit.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585918"
   },
@@ -5558,13 +7221,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pedastal",
+        "slug": "pedastal",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pedastal.png"
+      },
+      {
+        "name": "Auspicious Armor",
+        "slug": "auspiciousarmor",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/auspiciousarmor.png"
+      },
+      {
+        "name": "Stepping Stones",
+        "slug": "steppingstones",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/steppingstones.png"
+      },
+      {
+        "name": "Firepit",
+        "slug": "firepit",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/firepit.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586082"
   },
@@ -5582,13 +7262,42 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pedestal",
+        "slug": "pedestal",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pedestal.png"
+      },
+      {
+        "name": "Wing fossil (head)",
+        "slug": "wingfossil(head)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wingfossil(head).png"
+      },
+      {
+        "name": "Wing fossil (body)",
+        "slug": "wingfossil(body)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wingfossil(body).png"
+      },
+      {
+        "name": "Wing fossil (left wing)",
+        "slug": "wingfossil(leftwing)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wingfossil(leftwing).png"
+      },
+      {
+        "name": "Wing fossil (right wing)",
+        "slug": "wingfossil(rightwing)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wingfossil(rightwing).png"
+      },
+      {
+        "name": "Wing fossil (tail)",
+        "slug": "wingfossil(tail)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/wingfossil(tail).png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585547"
   },
@@ -5606,13 +7315,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pedestal",
+        "slug": "pedestal",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pedestal.png"
+      },
+      {
+        "name": "Skull Fossil",
+        "slug": "skullfossil",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/skullfossil.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586083"
   },
@@ -5630,13 +7344,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pedestal",
+        "slug": "pedestal",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pedestal.png"
+      },
+      {
+        "name": "Headbutt fossil (head)",
+        "slug": "headbuttfossil(head)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/headbuttfossil(head).png"
+      },
+      {
+        "name": "Headbutt fossil (body)",
+        "slug": "headbuttfossil(body)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/headbuttfossil(body).png"
+      },
+      {
+        "name": "Headbutt fossil (tail)",
+        "slug": "headbuttfossil(tail)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/headbuttfossil(tail).png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585919"
   },
@@ -5654,13 +7385,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pedestal",
+        "slug": "pedestal",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pedestal.png"
+      },
+      {
+        "name": "Armor Fossil",
+        "slug": "armorfossil",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/armorfossil.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585548"
   },
@@ -5678,13 +7414,30 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pedestal",
+        "slug": "pedestal",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pedestal.png"
+      },
+      {
+        "name": "Shield fossil (head)",
+        "slug": "shieldfossil(head)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/shieldfossil(head).png"
+      },
+      {
+        "name": "Shield fossil (body)",
+        "slug": "shieldfossil(body)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/shieldfossil(body).png"
+      },
+      {
+        "name": "Shield fossil (tail)",
+        "slug": "shieldfossil(tail)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/shieldfossil(tail).png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585549"
   },
@@ -5702,13 +7455,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pedestal",
+        "slug": "pedestal",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pedestal.png"
+      },
+      {
+        "name": "Jaw Fossil",
+        "slug": "jawfossil",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/jawfossil.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585920"
   },
@@ -5726,13 +7484,36 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pedestal",
+        "slug": "pedestal",
+        "quantity": 2,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pedestal.png"
+      },
+      {
+        "name": "Despot fossil (head)",
+        "slug": "despotfossil(head)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/despotfossil(head).png"
+      },
+      {
+        "name": "Despot fossil (body)",
+        "slug": "despotfossil(body)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/despotfossil(body).png"
+      },
+      {
+        "name": "Despot fossil (legs)",
+        "slug": "despotfossil(legs)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/despotfossil(legs).png"
+      },
+      {
+        "name": "Despot fossil(tail)",
+        "slug": "despotfossil(tail)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/despotfossil(tail).png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585041"
   },
@@ -5750,13 +7531,18 @@
     ],
     "locations": [],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pedestal",
+        "slug": "pedestal",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pedestal.png"
+      },
+      {
+        "name": "Sail Fossil",
+        "slug": "sailfossil",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/sailfossil.png"
+      }
     ],
     "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586084"
   },
@@ -5781,13 +7567,30 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Pedestal",
+        "slug": "pedestal",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pedestal.png"
+      },
+      {
+        "name": "Tundra fossil (head)",
+        "slug": "tundrafossil(head)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tundrafossil(head).png"
+      },
+      {
+        "name": "Tundra fossil (body)",
+        "slug": "tundrafossil(body)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tundrafossil(body).png"
+      },
+      {
+        "name": "Tundra fossil (tail)",
+        "slug": "tundrafossil(tail)",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/tundrafossil(tail).png"
+      }
     ]
   },
   {
@@ -5807,13 +7610,24 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Soda Float",
+        "slug": "sodafloat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/sodafloat.png"
+      }
     ]
   },
   {
@@ -5833,13 +7647,24 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Fried Potatoes",
+        "slug": "friedpotatoes",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/friedpotatoes.png"
+      }
     ]
   },
   {
@@ -5859,13 +7684,24 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Pizza",
+        "slug": "pizza",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/pizza.png"
+      }
     ]
   },
   {
@@ -5885,13 +7721,24 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Afternoon tea set",
+        "slug": "afternoonteaset",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/afternoonteaset.png"
+      }
     ]
   },
   {
@@ -5911,13 +7758,24 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Chocolate cookies",
+        "slug": "chocolatecookies",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/chocolatecookies.png"
+      }
     ]
   },
   {
@@ -5937,13 +7795,24 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Sandwiches",
+        "slug": "sandwiches",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/sandwiches.png"
+      }
     ]
   },
   {
@@ -5963,13 +7832,24 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      },
+      {
+        "name": "Shaved ice",
+        "slug": "shavedice",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/shavedice.png"
+      }
     ]
   },
   {
@@ -5989,13 +7869,18 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Seat",
+        "slug": "seat",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/seat.png"
+      },
+      {
+        "name": "Table",
+        "slug": "table",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/table.png"
+      }
     ]
   },
   {
@@ -6027,13 +7912,12 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Dandy flowers",
+        "slug": "dandyflowers",
+        "quantity": 4,
+        "image": "https://www.serebii.net/pokemonpokopia/items/dandyflowers.png"
+      }
     ]
   },
   {
@@ -6057,13 +7941,24 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Flower backpack",
+        "slug": "flowerbackpack",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/flowerbackpack.png"
+      },
+      {
+        "name": "Hoppip water bottle",
+        "slug": "hoppipwaterbottle",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/hoppipwaterbottle.png"
+      },
+      {
+        "name": "Lunch box",
+        "slug": "lunchbox",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/lunchbox.png"
+      }
     ]
   },
   {
@@ -6087,13 +7982,30 @@
       "Cloud Island"
     ],
     "buildItems": [
-      "Hub",
-      "DP",
-      "BW",
-      "Van Gogh",
-      "Rift",
-      "Boosts",
-      "Completion"
+      {
+        "name": "Dandy flowers",
+        "slug": "dandyflowers",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/dandyflowers.png"
+      },
+      {
+        "name": "Flower cushion",
+        "slug": "flowercushion",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/flowercushion.png"
+      },
+      {
+        "name": "Lunch box",
+        "slug": "lunchbox",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/lunchbox.png"
+      },
+      {
+        "name": "Flowery table setting",
+        "slug": "flowerytablesetting",
+        "quantity": 1,
+        "image": "https://www.serebii.net/pokemonpokopia/items/flowerytablesetting.png"
+      }
     ]
   }
 ]
