@@ -58,24 +58,32 @@ function WeatherIcon({ weather }: { weather: WeatherVal }) {
 }
 
 function ConditionsBlock({ pokemon }: { pokemon: Pokemon }) {
-  const time: TimeVal = pokemon.time ?? "Any";
-  const weather: WeatherVal = pokemon.weather ?? "Any";
+  // Support both array form (scraped data) and string form (legacy)
+  const rawTimes: string[] = Array.isArray((pokemon as any).time) ? (pokemon as any).time : pokemon.time ? [pokemon.time] : [];
+  const rawWeathers: string[] = Array.isArray((pokemon as any).weather) ? (pokemon as any).weather : pokemon.weather ? [pokemon.weather] : [];
+
+  const allTimes = ["Morning", "Day", "Evening", "Night"];
+  const allWeathers = ["Sun", "Cloud", "Rain"];
+
+  const anyTime = rawTimes.length === 0 || allTimes.every(t => rawTimes.includes(t));
+  const anyWeather = rawWeathers.length === 0 || allWeathers.every(w => rawWeathers.includes(w));
+
+  const timeLabel = anyTime ? "Any Time" : rawTimes.join(", ");
+  const weatherLabel = anyWeather ? "Any Weather" : rawWeathers.join(", ");
 
   return (
     <div className="bg-orange-50 rounded-2xl p-4 border border-orange-100">
       <h3 className="font-bold text-gray-700 text-sm mb-3">Conditions to Find</h3>
       <div className="grid grid-cols-2 gap-3">
-        {/* Time */}
         <div className="flex flex-col items-center gap-1.5 bg-white rounded-xl p-3 border border-orange-100">
-          <TimeIcon time={time} />
+          <span className="text-xl">{anyTime ? "🕐" : "🌅"}</span>
           <span className="text-[10px] text-gray-500 uppercase tracking-wide font-semibold">Time</span>
-          <span className="text-sm font-bold text-gray-800">{time}</span>
+          <span className="text-xs font-bold text-gray-800 text-center">{timeLabel}</span>
         </div>
-        {/* Weather */}
         <div className="flex flex-col items-center gap-1.5 bg-white rounded-xl p-3 border border-orange-100">
-          <WeatherIcon weather={weather} />
+          <span className="text-xl">{anyWeather ? "🌤" : "🌧"}</span>
           <span className="text-[10px] text-gray-500 uppercase tracking-wide font-semibold">Weather</span>
-          <span className="text-sm font-bold text-gray-800">{weather}</span>
+          <span className="text-xs font-bold text-gray-800 text-center">{weatherLabel}</span>
         </div>
       </div>
     </div>
@@ -186,7 +194,7 @@ export function DexPage() {
                             className="flex items-center gap-1.5 bg-emerald-50 rounded-lg px-2 py-1 border border-emerald-100 active:scale-95 transition-transform text-left w-full"
                           >
                             {hab?.image && (
-                              <img src={hab.image} alt={habitat} className="w-6 h-6 object-cover rounded shrink-0"
+                              <img src={hab.image} alt={habitat} className="w-10 h-10 object-cover rounded-lg shrink-0"
                                 onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                             )}
                             <span className="text-[10px] font-semibold text-emerald-800 truncate">{habitat}</span>
