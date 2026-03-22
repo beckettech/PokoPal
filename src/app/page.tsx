@@ -47,7 +47,9 @@ export default function Home() {
 
   return (
     <main className="h-screen bg-gradient-to-b from-red-500 to-red-700 overflow-hidden">
-      {renderPage()}
+      <div key={currentPage} className="h-full">
+        {renderPage()}
+      </div>
     </main>
   );
 }

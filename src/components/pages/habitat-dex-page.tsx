@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useAppStore } from "@/lib/store";
 import { pokemonList } from "@/lib/pokemon-data";
 import { ArrowLeft, Search, CheckCircle, Clock, Circle } from "lucide-react";
@@ -36,10 +36,18 @@ const LOCATION_COLORS: Record<string, string> = {
 };
 
 export function HabitatDexPage() {
-  const { setCurrentPage, capturedPokemon, setSelectedPokemon } = useAppStore();
+  const { setCurrentPage, navigateToPokemon, capturedPokemon, setSelectedPokemon, focusedHabitatId, clearFocus } = useAppStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("All");
   const [expandedHabitat, setExpandedHabitat] = useState<number | null>(null);
+
+  // Auto-expand a habitat if navigated to via deep-link
+  useEffect(() => {
+    if (focusedHabitatId) {
+      setExpandedHabitat(focusedHabitatId);
+      clearFocus();
+    }
+  }, [focusedHabitatId]);
 
   // Build a set of captured Pokemon names for quick lookup
   const capturedNames = useMemo(() => {
@@ -70,7 +78,10 @@ export function HabitatDexPage() {
   }, [searchQuery, selectedLocation]);
 
   const handlePokemonClick = (slug: string, name: string) => {
-    setCurrentPage("dex");
+    // Find the Pokemon by name and deep-link to it in dex
+    const p = pokemonList.find(p => p.name.toLowerCase() === name.toLowerCase() || p.name.toLowerCase().replace(/[^a-z0-9]/g, '') === slug.toLowerCase());
+    if (p) navigateToPokemon(p.id);
+    else setCurrentPage("dex");
   };
 
   return (
