@@ -11,24 +11,23 @@ import habitatsData from "@/data/scraped/habitats.json";
 // Generic "any X" items map to a representative real item image
 // Using known-good Serebii slugs for items that exist
 const ITEM_FALLBACKS: Record<string, string> = {
-  // Trees — "any tree" → leppa berry tree
-  "tree":           "https://www.serebii.net/pokemonpokopia/items/leppiberrytree.png",
+  // Trees — "any tree" → large palm tree (confirmed 200)
+  "tree":           "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png",
   "largetree":      "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png",
-  "berrytree":      "https://www.serebii.net/pokemonpokopia/items/leppiberrytree.png",
-  "pointytree":     "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png",
+  "berrytree":      "https://www.serebii.net/pokemonpokopia/items/chestotree.png",
   "pointytree":     "https://www.serebii.net/pokemonpokopia/items/largepalmtree.png",
   // Lighting — "any lighting" → streetlight / light pole
   "lighting":       "https://www.serebii.net/pokemonpokopia/items/utilitypole.png",
   "lightingany":    "https://www.serebii.net/pokemonpokopia/items/utilitypole.png",
-  // Seats
-  "seat":           "https://www.serebii.net/pokemonpokopia/items/woodenstool.png",
-  "seatany":        "https://www.serebii.net/pokemonpokopia/items/woodenstool.png",
-  "seatwide":       "https://www.serebii.net/pokemonpokopia/items/bench.png",
-  "seat(widex1":    "https://www.serebii.net/pokemonpokopia/items/bench.png",
+  // Seats (bench 404, use seat or logchair)
+  "seat":           "https://www.serebii.net/pokemonpokopia/items/seat.png",
+  "seatany":        "https://www.serebii.net/pokemonpokopia/items/seat.png",
+  "seatwide":       "https://www.serebii.net/pokemonpokopia/items/seat.png",
+  "seat(widex1":    "https://www.serebii.net/pokemonpokopia/items/seat.png",
   // Tables
-  "table":          "https://www.serebii.net/pokemonpokopia/items/strawroundtable.png",
-  "tableany":       "https://www.serebii.net/pokemonpokopia/items/strawroundtable.png",
-  "tablelarge":     "https://www.serebii.net/pokemonpokopia/items/longdiningtable.png",
+  "table":          "https://www.serebii.net/pokemonpokopia/items/table.png",
+  "tableany":       "https://www.serebii.net/pokemonpokopia/items/table.png",
+  "tablelarge":     "https://www.serebii.net/pokemonpokopia/items/table.png",
   // Water
   "water":          "https://www.serebii.net/pokemonpokopia/items/freshwater.png",
   "oceanwater":     "https://www.serebii.net/pokemonpokopia/items/oceanwater.png",
@@ -37,22 +36,22 @@ const ITEM_FALLBACKS: Record<string, string> = {
   // High-up location
   "highuplocation": "https://www.serebii.net/pokemonpokopia/items/high-uplocation.png",
   // Beds
-  "bed":            "https://www.serebii.net/pokemonpokopia/items/strawbed.png",
-  "bedany":         "https://www.serebii.net/pokemonpokopia/items/strawbed.png",
+  "bed":            "https://www.serebii.net/pokemonpokopia/items/plainbed.png",
+  "bedany":         "https://www.serebii.net/pokemonpokopia/items/plainbed.png",
   // Sofa
-  "sofa":           "https://www.serebii.net/pokemonpokopia/items/strawsofa.png",
-  // Dresser
-  "dresser":        "https://www.serebii.net/pokemonpokopia/items/simpledresser.png",
-  "dresserany":     "https://www.serebii.net/pokemonpokopia/items/simpledresser.png",
+  "sofa":           "https://www.serebii.net/pokemonpokopia/items/plainsofa.png",
+  // Dresser — use industrial chair as placeholder chair, logchair for seat
+  "dresser":        "https://www.serebii.net/pokemonpokopia/items/logchair.png",
+  "dresserany":     "https://www.serebii.net/pokemonpokopia/items/logchair.png",
   // Iron
   "ironbeamorcolumn": "https://www.serebii.net/pokemonpokopia/items/ironbeam.png",
-  "ironpipes":      "https://www.serebii.net/pokemonpokopia/items/ironpipe(vertical).png",
+  "ironpipes":      "https://www.serebii.net/pokemonpokopia/items/ironbeam.png",
   // Generic any
   "tallgrassany":   "https://www.serebii.net/pokemonpokopia/items/tallgrass.png",
   "dollany":        "https://www.serebii.net/pokemonpokopia/items/pikachudoll.png",
   "toyany":         "https://www.serebii.net/pokemonpokopia/items/toy.png",
   "pottedplantany": "https://www.serebii.net/pokemonpokopia/items/pottedplant.png",
-  "wastebinany":    "https://www.serebii.net/pokemonpokopia/items/wastebin.png",
+  "wastebinany":    "https://www.serebii.net/pokemonpokopia/items/garbagebin.png",
 };
 
 function getItemImage(slug: string, fallbackImage: string): string {
