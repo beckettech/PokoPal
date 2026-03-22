@@ -44,79 +44,65 @@ export function PokemonDetailPage() {
   return (
     <div className="h-full flex flex-col overflow-hidden" style={{ background: `linear-gradient(to bottom, ${bgColor}, ${bgColor}dd)` }}>
       {/* Header */}
-      <div className="pb-4 px-4" style={{ paddingTop: 'max(4rem, env(safe-area-inset-top, 0px) + 1rem)' }}>
-        <div className="flex items-center justify-between">
+      <div className="pt-4 pb-4 px-4 shrink-0">
+        {/* Top row: back + actions */}
+        <div className="flex items-center justify-between mb-3">
           <motion.button
             onClick={() => setCurrentPage("pokedex")}
-            className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center"
-            whileHover={{ scale: 1.1 }}
+            className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center"
             whileTap={{ scale: 0.9 }}
           >
             <ArrowLeft className="w-5 h-5 text-white" />
           </motion.button>
-          
           <div className="flex gap-2">
             <motion.button
               onClick={() => setIsFavorite(!isFavorite)}
-              className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center"
-              whileHover={{ scale: 1.1 }}
+              className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center"
               whileTap={{ scale: 0.9 }}
             >
-              <Heart className={`w-5 h-5 ${isFavorite ? 'fill-red-400 text-red-400' : 'text-white'}`} />
-            </motion.button>
-            <motion.button
-              className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Share2 className="w-5 h-5 text-white" />
+              <Heart className={`w-4 h-4 ${isFavorite ? 'fill-red-400 text-red-400' : 'text-white'}`} />
             </motion.button>
           </div>
         </div>
 
-        {/* Pokemon Name & Number */}
-        <div className="mt-4 text-center">
-          <div className="flex items-center justify-center gap-2">
-            <p className="text-white/60 font-medium">#{String(pokemon.id).padStart(3, '0')}</p>
-            <span className={`px-2 py-0.5 rounded-full text-xs text-white ${getRarityColor(pokemon.rarity)}`}>
-              {pokemon.rarity}
-            </span>
-          </div>
-          <h1 className="text-3xl font-bold text-white mt-1">{pokemon.name}</h1>
-          <div className="flex justify-center gap-2 mt-2">
-            {pokemon.types.map(type => (
-              <span
-                key={type}
-                className="px-4 py-1 rounded-full text-sm font-medium text-white bg-white/20"
+        {/* Image + Name side by side */}
+        <div className="flex items-center gap-4">
+          <motion.div
+            className="relative w-20 h-20 shrink-0"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", stiffness: 200 }}
+          >
+            <img
+              src={pokemon.image}
+              alt={pokemon.name}
+              className="w-full h-full object-contain drop-shadow-2xl"
+            />
+            {isCaptured && (
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg"
               >
-                {type}
+                <Star className="w-3 h-3 text-yellow-800 fill-yellow-800" />
+              </motion.div>
+            )}
+          </motion.div>
+          <div>
+            <p className="text-white/60 text-xs font-mono">#{String(pokemon.id).padStart(3, '0')}</p>
+            <h1 className="text-2xl font-bold text-white leading-tight">{pokemon.name}</h1>
+            <div className="flex gap-1 mt-1 flex-wrap">
+              <span className={`px-2 py-0.5 rounded-full text-xs text-white ${getRarityColor(pokemon.rarity)}`}>
+                {pokemon.rarity}
               </span>
-            ))}
+              {pokemon.types.map(type => (
+                <span key={type} className="px-2 py-0.5 rounded-full text-xs font-medium text-white bg-white/20">
+                  {type}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
-
-        {/* Pokemon Image */}
-        <motion.div 
-          className="relative w-40 h-40 mx-auto mt-4"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ type: "spring", stiffness: 200 }}
-        >
-          <img
-            src={pokemon.image}
-            alt={pokemon.name}
-            className="w-full h-full object-contain drop-shadow-2xl"
-          />
-          {isCaptured && (
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg"
-            >
-              <Star className="w-5 h-5 text-yellow-800 fill-yellow-800" />
-            </motion.div>
-          )}
-        </motion.div>
       </div>
 
       {/* Content Card */}
