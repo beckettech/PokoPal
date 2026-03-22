@@ -151,7 +151,7 @@ export function CoinShopPage() {
                     onClick={() => handlePurchase(pkg)}
                     disabled={selectedPackage !== null}
                     className={`relative p-3 rounded-xl text-white overflow-hidden bg-gradient-to-br ${pkg.color} ${
-                      pkg.popular ? 'col-span-2' : ''
+                      pkg.popular || pkg.id === 1 ? 'col-span-2' : ''
                     }`}
                     whileHover={{ scale: selectedPackage ? 1 : 1.02 }}
                     whileTap={{ scale: selectedPackage ? 1 : 0.98 }}
@@ -216,7 +216,7 @@ export function CoinShopPage() {
             <div className="bg-amber-50 rounded-xl p-3">
               <h3 className="text-xs font-bold text-amber-800 mb-1">What are Coins?</h3>
               <p className="text-xs text-amber-700">
-                Coins let you chat with your Pokopia assistant. Each message costs 1 coin. 
+                Coins let you chat with Dexter, your Pokopia assistant. Each message costs 1 coin. 
                 You started with 100 coins for free!
               </p>
             </div>

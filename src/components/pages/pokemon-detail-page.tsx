@@ -1,8 +1,8 @@
 'use client'
 
 import { useAppStore } from "@/lib/store";
-import { pokemonList, typeColors, habitats, habitatColors } from "@/lib/pokemon-data";
-import { ArrowLeft, Heart, Share2, Star, Weight, Ruler, Zap, Shield, Swords, MapPin, Clock } from "lucide-react";
+import { pokemonList, typeColors } from "@/lib/pokemon-data";
+import { ArrowLeft, Heart, Star, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -65,8 +65,8 @@ export function PokemonDetailPage() {
           </div>
         </div>
 
-        {/* Image + Name side by side */}
-        <div className="flex items-center gap-4">
+        {/* Image + Name + Habitats row */}
+        <div className="flex items-start gap-3">
           <motion.div
             className="relative w-20 h-20 shrink-0"
             initial={{ scale: 0 }}
@@ -88,9 +88,9 @@ export function PokemonDetailPage() {
               </motion.div>
             )}
           </motion.div>
-          <div>
+          <div className="flex-1 min-w-0">
             <p className="text-white/60 text-xs font-mono">#{String(pokemon.id).padStart(3, '0')}</p>
-            <h1 className="text-2xl font-bold text-white leading-tight">{pokemon.name}</h1>
+            <h1 className="text-xl font-bold text-white leading-tight">{pokemon.name}</h1>
             <div className="flex gap-1 mt-1 flex-wrap">
               <span className={`px-2 py-0.5 rounded-full text-xs text-white ${getRarityColor(pokemon.rarity)}`}>
                 {pokemon.rarity}
@@ -101,6 +101,16 @@ export function PokemonDetailPage() {
                 </span>
               ))}
             </div>
+            {/* Habitats inline */}
+            {pokemon.habitats && pokemon.habitats.length > 0 && (
+              <div className="flex flex-wrap gap-1 mt-2">
+                {pokemon.habitats.map((h: string) => (
+                  <span key={h} className="text-[10px] px-2 py-0.5 rounded-full bg-white/20 text-white font-medium">
+                    {h}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -118,51 +128,33 @@ export function PokemonDetailPage() {
             <p className="text-gray-600 text-sm leading-relaxed">{pokemon.description}</p>
           </div>
 
-          {/* Habitats Section */}
-          <div className="px-6 py-4 border-t border-gray-100">
-            <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
-              <MapPin className="w-4 h-4" />
-              Habitats
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {pokemon.habitats.map(h => {
-                const habitat = habitats.find(hab => hab.id === h);
-                return (
-                  <motion.div
-                    key={h}
-                    className="flex items-center gap-2 px-3 py-2 rounded-xl"
-                    style={{ backgroundColor: `${habitat?.color}20` }}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <span className="text-lg">{habitat?.icon}</span>
-                    <span className="text-sm font-medium" style={{ color: habitat?.color }}>
-                      {habitat?.name}
-                    </span>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Conditions */}
-          {pokemon.conditions && pokemon.conditions.length > 0 && (
-            <div className="px-6 py-4 border-t border-gray-100">
-              <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                Spawn Conditions
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {pokemon.conditions.map(condition => (
-                  <span
-                    key={condition}
-                    className="px-3 py-1.5 bg-orange-100 text-orange-600 rounded-full text-sm font-medium"
-                  >
-                    {condition}
+          {/* Conditions: Time + Weather */}
+          {(() => {
+            const times: string[] = (pokemon as any).time || [];
+            const weathers: string[] = (pokemon as any).weather || [];
+            const allTimes = ["Morning","Day","Evening","Night"];
+            const allWeathers = ["Sun","Cloud","Rain"];
+            const anyTime = allTimes.every(t => times.includes(t)) || times.length === 0;
+            const anyWeather = allWeathers.every(w => weathers.includes(w)) || weathers.length === 0;
+            const timeLabel = anyTime ? "Any Time" : times.join(", ");
+            const weatherLabel = anyWeather ? "Any Weather" : weathers.join(", ");
+            return (
+              <div className="px-6 py-4 border-t border-gray-100">
+                <h3 className="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                  <Clock className="w-4 h-4" />
+                  Conditions to Find
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+                    🕐 {timeLabel}
                   </span>
-                ))}
+                  <span className="px-3 py-1.5 bg-sky-100 text-sky-700 rounded-full text-sm font-medium">
+                    🌤 {weatherLabel}
+                  </span>
+                </div>
               </div>
-            </div>
-          )}
+            );
+          })()}
 
           {/* Capture Status */}
           <div className="px-6 py-4 border-t border-gray-100">

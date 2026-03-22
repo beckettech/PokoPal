@@ -41,6 +41,8 @@ interface AppState {
   addCapturedPokemon: (id: number) => void;
   toggleCapturedPokemon: (id: number) => void;
   isPokemonCaptured: (id: number) => boolean;
+  visitedIslands: string[];
+  toggleVisitedIsland: (id: string) => void;
 }
 
 export const useAppStore = create<AppState>()((set, get) => ({
@@ -77,4 +79,10 @@ export const useAppStore = create<AppState>()((set, get) => ({
       : [...state.capturedPokemon, id] 
   })),
   isPokemonCaptured: (id) => get().capturedPokemon.includes(id),
+  visitedIslands: [],
+  toggleVisitedIsland: (id) => set((state) => ({
+    visitedIslands: state.visitedIslands.includes(id)
+      ? state.visitedIslands.filter(i => i !== id)
+      : [...state.visitedIslands, id]
+  })),
 }));

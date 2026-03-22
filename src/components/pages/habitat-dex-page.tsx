@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import { useAppStore } from "@/lib/store";
 import { pokemonList } from "@/lib/pokemon-data";
-import { ArrowLeft, Search, CheckCircle, Clock, Circle } from "lucide-react";
+import { ArrowLeft, Search, CheckCircle, Clock, Circle, Eye, EyeOff } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import habitatsData from "@/data/scraped/habitats.json";
 
@@ -16,30 +16,14 @@ for (const p of pokemonList) {
   pokemonImageMap[slug] = p.image;
 }
 
-const LOCATIONS = [
-  "All",
-  "Withered Wastelands",
-  "Bleak Beach",
-  "Rocky Ridges",
-  "Sparkling Skylands",
-  "Palette Town",
-  "Cloud Island",
-];
 
-const LOCATION_COLORS: Record<string, string> = {
-  "Withered Wastelands": "bg-amber-800 text-amber-100",
-  "Bleak Beach": "bg-blue-500 text-white",
-  "Rocky Ridges": "bg-stone-600 text-white",
-  "Sparkling Skylands": "bg-sky-400 text-white",
-  "Palette Town": "bg-red-500 text-white",
-  "Cloud Island": "bg-purple-500 text-white",
-};
 
 export function HabitatDexPage() {
   const { setCurrentPage, navigateToPokemon, capturedPokemon, setSelectedPokemon, focusedHabitatId, clearFocus } = useAppStore();
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedLocation, setSelectedLocation] = useState("All");
+  const [sortFilter, setSortFilter] = useState<"all" | "discovered" | "undiscovered">("all");
   const [expandedHabitat, setExpandedHabitat] = useState<number | null>(null);
+  const [discoveredHabitats, setDiscoveredHabitats] = useState<Set<number>>(new Set());
 
   // Auto-expand a habitat if navigated to via deep-link
   useEffect(() => {
@@ -69,13 +53,24 @@ export function HabitatDexPage() {
     return { label: `${caught}/${total}`, icon: <Clock className="w-3 h-3" />, color: "bg-yellow-100 text-yellow-700" };
   };
 
+  const toggleDiscovered = (id: number) => {
+    setDiscoveredHabitats(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
   const filteredHabitats = useMemo(() => {
     return habitatsData.filter(hab => {
       const matchesSearch = hab.name.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesLocation = selectedLocation === "All" || hab.locations.includes(selectedLocation);
-      return matchesSearch && matchesLocation;
+      const isDiscovered = discoveredHabitats.has(hab.id);
+      if (sortFilter === "discovered" && !isDiscovered) return false;
+      if (sortFilter === "undiscovered" && isDiscovered) return false;
+      return matchesSearch;
     });
-  }, [searchQuery, selectedLocation]);
+  }, [searchQuery, sortFilter, discoveredHabitats]);
 
   const handlePokemonClick = (slug: string, name: string) => {
     // Find the Pokemon by name and deep-link to it in dex
@@ -98,8 +93,7 @@ export function HabitatDexPage() {
           </motion.button>
           <h1 className="text-lg font-bold text-white">Habitat Dex</h1>
           <div className="flex items-center gap-1 bg-white/20 px-2 py-1 rounded-full">
-            <span className="text-white text-xs font-bold">{filteredHabitats.length}</span>
-            <span className="text-white/70 text-xs">habitats</span>
+            <span className="text-white text-xs font-bold">{discoveredHabitats.size}/{habitatsData.length}</span>
           </div>
         </div>
 
@@ -115,20 +109,22 @@ export function HabitatDexPage() {
           />
         </div>
 
-        {/* Location filters */}
-        <div className="flex gap-1.5 overflow-x-auto pb-1 scrollbar-hide">
-          {LOCATIONS.map(loc => (
+        {/* Discovered/Undiscovered filter */}
+        <div className="flex gap-1.5 pb-1">
+          {(["all", "discovered", "undiscovered"] as const).map(f => (
             <motion.button
-              key={loc}
-              onClick={() => setSelectedLocation(loc)}
-              className={`px-2.5 py-1 rounded-full text-[10px] font-semibold whitespace-nowrap transition-all ${
-                selectedLocation === loc
+              key={f}
+              onClick={() => setSortFilter(f)}
+              className={`px-3 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap transition-all flex items-center gap-1 ${
+                sortFilter === f
                   ? "bg-white text-green-700 shadow"
                   : "bg-white/20 text-white"
               }`}
               whileTap={{ scale: 0.95 }}
             >
-              {loc === "All" ? "All Locations" : loc}
+              {f === "all" && "All"}
+              {f === "discovered" && <><Eye className="w-3 h-3" />Discovered</>}
+              {f === "undiscovered" && <><EyeOff className="w-3 h-3" />Undiscovered</>}
             </motion.button>
           ))}
         </div>
@@ -141,6 +137,7 @@ export function HabitatDexPage() {
             {filteredHabitats.map((habitat, index) => {
               const status = getCompletionStatus(habitat.pokemon);
               const isExpanded = expandedHabitat === habitat.id;
+              const isDiscovered = discoveredHabitats.has(habitat.id);
 
               return (
                 <motion.div
@@ -149,24 +146,27 @@ export function HabitatDexPage() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   transition={{ delay: Math.min(index * 0.02, 0.3) }}
-                  className="bg-gray-50 rounded-xl overflow-hidden border border-gray-100"
+                  className={`bg-gray-50 rounded-xl overflow-hidden border transition-colors ${isDiscovered ? 'border-green-200 bg-green-50/30' : 'border-gray-100'}`}
                 >
                   {/* Habitat header - always visible */}
-                  <button
-                    className="w-full flex items-center gap-3 p-3"
-                    onClick={() => setExpandedHabitat(isExpanded ? null : habitat.id)}
-                  >
-                    {/* Habitat image */}
-                    <div className="w-16 h-16 rounded-lg overflow-hidden bg-gray-200 shrink-0">
+                  <div className="flex items-center gap-3 p-3">
+                    {/* Habitat image - tap to expand */}
+                    <button
+                      className="w-16 h-16 rounded-lg overflow-hidden bg-gray-200 shrink-0"
+                      onClick={() => setExpandedHabitat(isExpanded ? null : habitat.id)}
+                    >
                       <img
                         src={habitat.image}
                         alt={habitat.name}
                         className="w-full h-full object-cover"
                         onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
                       />
-                    </div>
+                    </button>
 
-                    <div className="flex-1 text-left min-w-0">
+                    <button
+                      className="flex-1 text-left min-w-0"
+                      onClick={() => setExpandedHabitat(isExpanded ? null : habitat.id)}
+                    >
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-[10px] text-gray-400">#{String(habitat.id).padStart(3,'0')}</span>
                         <h3 className="font-bold text-gray-800 text-sm truncate">{habitat.name}</h3>
@@ -182,22 +182,24 @@ export function HabitatDexPage() {
                           </span>
                         )}
                       </div>
+                    </button>
 
-                      {/* Location tags */}
-                      {habitat.locations.length > 0 && habitat.locations.length < 6 && (
-                        <div className="flex gap-1 mt-1 flex-wrap">
-                          {habitat.locations.map(loc => (
-                            <span
-                              key={loc}
-                              className={`text-[9px] px-1.5 py-0.5 rounded-full font-medium ${LOCATION_COLORS[loc] || 'bg-gray-200 text-gray-600'}`}
-                            >
-                              {loc}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </button>
+                    {/* Discovered mark button */}
+                    <button
+                      onClick={() => toggleDiscovered(habitat.id)}
+                      className={`shrink-0 flex flex-col items-center gap-0.5 px-2 py-1.5 rounded-xl border text-[10px] font-bold transition-all active:scale-95 ${
+                        isDiscovered
+                          ? 'bg-green-500 border-green-500 text-white'
+                          : 'bg-white border-gray-200 text-gray-400'
+                      }`}
+                    >
+                      {isDiscovered
+                        ? <CheckCircle className="w-4 h-4" />
+                        : <Circle className="w-4 h-4" />
+                      }
+                      {isDiscovered ? 'Found' : 'Mark'}
+                    </button>
+                  </div>
 
                   {/* Expanded: Pokemon list */}
                   <AnimatePresence>

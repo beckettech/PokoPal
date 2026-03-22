@@ -43,7 +43,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585094"
   },
   {
     "id": 2,
@@ -89,7 +90,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585082"
   },
   {
     "id": 3,
@@ -123,7 +125,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585081"
   },
   {
     "id": 4,
@@ -165,7 +168,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585080"
   },
   {
     "id": 5,
@@ -198,7 +202,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585079"
   },
   {
     "id": 6,
@@ -235,7 +240,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585424"
   },
   {
     "id": 7,
@@ -253,14 +259,7 @@
         "slug": "venomoth"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -269,7 +268,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585078"
   },
   {
     "id": 8,
@@ -315,7 +315,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585077"
   },
   {
     "id": 9,
@@ -338,6 +339,10 @@
       }
     ],
     "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
       "Palette Town"
     ],
     "buildItems": [
@@ -366,14 +371,7 @@
         "slug": "illumise"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -382,7 +380,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585075"
   },
   {
     "id": 11,
@@ -415,7 +414,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585074"
   },
   {
     "id": 12,
@@ -433,14 +433,7 @@
         "slug": "parasect"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -449,7 +442,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585413"
   },
   {
     "id": 13,
@@ -467,14 +461,7 @@
         "slug": "marowak"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -483,7 +470,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585414"
   },
   {
     "id": 14,
@@ -501,14 +489,7 @@
         "slug": "parasect"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -517,7 +498,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585415"
   },
   {
     "id": 15,
@@ -551,7 +533,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585073"
   },
   {
     "id": 16,
@@ -576,7 +559,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585061"
   },
   {
     "id": 17,
@@ -590,14 +574,7 @@
         "slug": "charmeleon"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -606,7 +583,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585071"
   },
   {
     "id": 18,
@@ -620,14 +598,7 @@
         "slug": "tyrogue"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -636,7 +607,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585416"
   },
   {
     "id": 19,
@@ -661,7 +633,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585070"
   },
   {
     "id": 20,
@@ -690,7 +663,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585537"
   },
   {
     "id": 21,
@@ -708,14 +682,7 @@
         "slug": "victreebel"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -724,7 +691,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585069"
   },
   {
     "id": 22,
@@ -758,7 +726,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585068"
   },
   {
     "id": 23,
@@ -776,14 +745,7 @@
         "slug": "venomoth"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -792,7 +754,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585067"
   },
   {
     "id": 24,
@@ -817,7 +780,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585066"
   },
   {
     "id": 25,
@@ -831,14 +795,7 @@
         "slug": "hitmonlee"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -847,7 +804,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585065"
   },
   {
     "id": 26,
@@ -861,14 +819,7 @@
         "slug": "hitmontop"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -877,7 +828,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585417"
   },
   {
     "id": 27,
@@ -895,14 +847,7 @@
         "slug": "shelloseastsea"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -911,7 +856,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585064"
   },
   {
     "id": 28,
@@ -944,7 +890,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585063"
   },
   {
     "id": 29,
@@ -966,14 +913,7 @@
         "slug": "haxorus"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -982,7 +922,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585062"
   },
   {
     "id": 30,
@@ -1020,7 +961,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585072"
   },
   {
     "id": 31,
@@ -1038,14 +980,7 @@
         "slug": "noctowl"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1054,7 +989,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585103"
   },
   {
     "id": 32,
@@ -1072,14 +1008,7 @@
         "slug": "lampent"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1088,7 +1017,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585628"
   },
   {
     "id": 33,
@@ -1110,14 +1040,7 @@
         "slug": "chandelure"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1126,7 +1049,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585629"
   },
   {
     "id": 34,
@@ -1144,14 +1068,7 @@
         "slug": "bellossom"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1160,7 +1077,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585630"
   },
   {
     "id": 35,
@@ -1178,9 +1096,7 @@
         "slug": "victreebel"
       }
     ],
-    "locations": [
-      "Sparkling Skylands"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1189,7 +1105,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586095"
   },
   {
     "id": 36,
@@ -1203,14 +1120,7 @@
         "slug": "blastoise"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1219,7 +1129,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585102"
   },
   {
     "id": 37,
@@ -1244,7 +1155,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585101"
   },
   {
     "id": 38,
@@ -1258,14 +1170,7 @@
         "slug": "magnemite"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1274,7 +1179,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585418"
   },
   {
     "id": 39,
@@ -1288,14 +1194,7 @@
         "slug": "pidgeot"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1304,7 +1203,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586086"
   },
   {
     "id": 40,
@@ -1318,14 +1218,7 @@
         "slug": "charizard"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1334,7 +1227,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585100"
   },
   {
     "id": 41,
@@ -1348,14 +1242,7 @@
         "slug": "goomy"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1364,7 +1251,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585099"
   },
   {
     "id": 42,
@@ -1378,14 +1266,7 @@
         "slug": "cacnea"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1394,7 +1275,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585419"
   },
   {
     "id": 43,
@@ -1409,12 +1291,7 @@
       }
     ],
     "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
+      "Withered Wastelands"
     ],
     "buildItems": [
       "Hub",
@@ -1424,7 +1301,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586087"
   },
   {
     "id": 44,
@@ -1446,14 +1324,7 @@
         "slug": "haxorus"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1462,7 +1333,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585631"
   },
   {
     "id": 45,
@@ -1476,14 +1348,7 @@
         "slug": "goodra"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1492,7 +1357,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586088"
   },
   {
     "id": 46,
@@ -1506,14 +1372,7 @@
         "slug": "venusaur"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1522,7 +1381,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585098"
   },
   {
     "id": 47,
@@ -1551,7 +1411,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585908"
   },
   {
     "id": 48,
@@ -1580,7 +1441,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586089"
   },
   {
     "id": 49,
@@ -1605,7 +1467,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586090"
   },
   {
     "id": 50,
@@ -1627,14 +1490,7 @@
         "slug": "ariados"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1643,7 +1499,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585097"
   },
   {
     "id": 51,
@@ -1680,7 +1537,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585096"
   },
   {
     "id": 52,
@@ -1702,14 +1560,7 @@
         "slug": "crobat"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1718,7 +1569,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585095"
   },
   {
     "id": 53,
@@ -1755,7 +1607,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585083"
   },
   {
     "id": 54,
@@ -1773,14 +1626,7 @@
         "slug": "clodsire"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1789,7 +1635,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585632"
   },
   {
     "id": 55,
@@ -1814,7 +1661,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585538"
   },
   {
     "id": 56,
@@ -1847,7 +1695,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585093"
   },
   {
     "id": 57,
@@ -1869,14 +1718,7 @@
         "slug": "exeggutor"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1885,7 +1727,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585092"
   },
   {
     "id": 58,
@@ -1903,14 +1746,7 @@
         "slug": "pelipper"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1919,7 +1755,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585091"
   },
   {
     "id": 59,
@@ -1937,14 +1774,7 @@
         "slug": "exeggutor"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -1953,7 +1783,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585090"
   },
   {
     "id": 60,
@@ -1978,7 +1809,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585089"
   },
   {
     "id": 61,
@@ -2003,7 +1835,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585088"
   },
   {
     "id": 62,
@@ -2021,14 +1854,7 @@
         "slug": "azurill"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2037,7 +1863,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585087"
   },
   {
     "id": 63,
@@ -2075,7 +1902,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585086"
   },
   {
     "id": 64,
@@ -2097,14 +1925,7 @@
         "slug": "magnezone"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2113,7 +1934,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585085"
   },
   {
     "id": 65,
@@ -2127,14 +1949,7 @@
         "slug": "crobat"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2143,7 +1958,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585084"
   },
   {
     "id": 66,
@@ -2176,7 +1992,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585051"
   },
   {
     "id": 67,
@@ -2205,7 +2022,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585039"
   },
   {
     "id": 68,
@@ -2219,14 +2037,7 @@
         "slug": "empoleon"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2235,7 +2046,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586091"
   },
   {
     "id": 69,
@@ -2264,7 +2076,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585038"
   },
   {
     "id": 70,
@@ -2282,14 +2095,7 @@
         "slug": "pawmot"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2298,7 +2104,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585539"
   },
   {
     "id": 71,
@@ -2320,14 +2127,7 @@
         "slug": "tatsugiristretchyform"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2336,7 +2136,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586092"
   },
   {
     "id": 72,
@@ -2354,9 +2155,7 @@
         "slug": "electivire"
       }
     ],
-    "locations": [
-      "Rocky Ridges"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2365,7 +2164,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585037"
   },
   {
     "id": 73,
@@ -2387,14 +2187,7 @@
         "slug": "gengar"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2403,7 +2196,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586093"
   },
   {
     "id": 74,
@@ -2417,14 +2211,7 @@
         "slug": "flaaffy"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2433,7 +2220,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586094"
   },
   {
     "id": 75,
@@ -2447,14 +2235,7 @@
         "slug": "minccino"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2463,7 +2244,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585036"
   },
   {
     "id": 76,
@@ -2481,14 +2263,7 @@
         "slug": "cinccino"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2497,7 +2272,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586085"
   },
   {
     "id": 77,
@@ -2526,7 +2302,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585035"
   },
   {
     "id": 78,
@@ -2544,14 +2321,7 @@
         "slug": "golduck"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2560,7 +2330,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585420"
   },
   {
     "id": 79,
@@ -2593,7 +2364,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585034"
   },
   {
     "id": 80,
@@ -2622,7 +2394,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585033"
   },
   {
     "id": 81,
@@ -2651,7 +2424,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585909"
   },
   {
     "id": 82,
@@ -2676,7 +2450,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585032"
   },
   {
     "id": 83,
@@ -2694,14 +2469,7 @@
         "slug": "charjabug"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2710,7 +2478,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585633"
   },
   {
     "id": 84,
@@ -2739,7 +2508,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585031"
   },
   {
     "id": 85,
@@ -2757,14 +2527,7 @@
         "slug": "magnezone"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2773,7 +2536,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586096"
   },
   {
     "id": 86,
@@ -2791,14 +2555,7 @@
         "slug": "empoleon"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2807,7 +2564,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585030"
   },
   {
     "id": 87,
@@ -2825,14 +2583,7 @@
         "slug": "blaziken"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2841,7 +2592,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585910"
   },
   {
     "id": 88,
@@ -2859,14 +2611,7 @@
         "slug": "azumarill"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2875,7 +2620,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585018"
   },
   {
     "id": 89,
@@ -2893,14 +2639,7 @@
         "slug": "haunter"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2909,7 +2648,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585028"
   },
   {
     "id": 90,
@@ -2927,14 +2667,7 @@
         "slug": "electrode"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -2943,7 +2676,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585027"
   },
   {
     "id": 91,
@@ -2981,7 +2715,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585026"
   },
   {
     "id": 92,
@@ -3006,7 +2741,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586097"
   },
   {
     "id": 93,
@@ -3031,7 +2767,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585421"
   },
   {
     "id": 94,
@@ -3045,14 +2782,7 @@
         "slug": "mimikyu"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3061,7 +2791,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585422"
   },
   {
     "id": 95,
@@ -3075,14 +2806,7 @@
         "slug": "blissey"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3091,7 +2815,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586098"
   },
   {
     "id": 96,
@@ -3105,14 +2830,7 @@
         "slug": "absol"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3121,7 +2839,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586099"
   },
   {
     "id": 97,
@@ -3135,14 +2854,7 @@
         "slug": "ampharos"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3151,7 +2863,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585634"
   },
   {
     "id": 98,
@@ -3192,7 +2905,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585025"
   },
   {
     "id": 99,
@@ -3218,14 +2932,7 @@
         "slug": "sudowoodo"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3234,7 +2941,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585024"
   },
   {
     "id": 100,
@@ -3263,7 +2971,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585023"
   },
   {
     "id": 101,
@@ -3281,14 +2990,7 @@
         "slug": "lombre"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3297,7 +2999,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585022"
   },
   {
     "id": 102,
@@ -3315,14 +3018,7 @@
         "slug": "chatot"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3331,7 +3027,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585021"
   },
   {
     "id": 103,
@@ -3360,7 +3057,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585020"
   },
   {
     "id": 104,
@@ -3390,14 +3088,7 @@
         "slug": "dachsbun"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3406,7 +3097,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585019"
   },
   {
     "id": 105,
@@ -3428,14 +3120,7 @@
         "slug": "volcarona"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3444,7 +3129,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585029"
   },
   {
     "id": 106,
@@ -3466,14 +3152,7 @@
         "slug": "politoed"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3482,7 +3161,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585635"
   },
   {
     "id": 107,
@@ -3504,14 +3184,7 @@
         "slug": "politoed"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3520,7 +3193,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585636"
   },
   {
     "id": 108,
@@ -3534,14 +3208,7 @@
         "slug": "tyranitar"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3550,7 +3217,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585911"
   },
   {
     "id": 109,
@@ -3602,14 +3270,7 @@
         "slug": "tyranitar"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3618,7 +3279,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585059"
   },
   {
     "id": 111,
@@ -3647,7 +3309,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585058"
   },
   {
     "id": 112,
@@ -3672,7 +3335,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585057"
   },
   {
     "id": 113,
@@ -3697,7 +3361,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585423"
   },
   {
     "id": 114,
@@ -3711,14 +3376,7 @@
         "slug": "politoed"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3727,7 +3385,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585055"
   },
   {
     "id": 115,
@@ -3746,7 +3405,12 @@
       }
     ],
     "locations": [
-      "Rocky Ridges"
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -3771,7 +3435,12 @@
       }
     ],
     "locations": [
-      "Rocky Ridges"
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -3799,14 +3468,7 @@
         "slug": "machamp"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3815,7 +3477,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585052"
   },
   {
     "id": 118,
@@ -3833,14 +3496,7 @@
         "slug": "glimmora"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3849,7 +3505,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585040"
   },
   {
     "id": 119,
@@ -3871,14 +3528,7 @@
         "slug": "glimmora"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3887,7 +3537,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585050"
   },
   {
     "id": 120,
@@ -3901,14 +3552,7 @@
         "slug": "swalot"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3917,7 +3561,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586100"
   },
   {
     "id": 121,
@@ -3935,14 +3580,7 @@
         "slug": "dachsbun"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3951,7 +3589,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585049"
   },
   {
     "id": 122,
@@ -3965,14 +3604,7 @@
         "slug": "magmortar"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -3981,7 +3613,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586101"
   },
   {
     "id": 123,
@@ -3999,14 +3632,7 @@
         "slug": "sudowoodo"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4015,7 +3641,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585637"
   },
   {
     "id": 124,
@@ -4040,7 +3667,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585540"
   },
   {
     "id": 125,
@@ -4058,14 +3686,7 @@
         "slug": "honchkrow"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4074,7 +3695,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585048"
   },
   {
     "id": 126,
@@ -4092,9 +3714,7 @@
         "slug": "wigglytuff"
       }
     ],
-    "locations": [
-      "Rocky Ridges"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4103,7 +3723,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586102"
   },
   {
     "id": 127,
@@ -4136,7 +3757,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585047"
   },
   {
     "id": 128,
@@ -4169,7 +3791,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586103"
   },
   {
     "id": 129,
@@ -4198,7 +3821,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585046"
   },
   {
     "id": 130,
@@ -4227,7 +3851,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585045"
   },
   {
     "id": 131,
@@ -4245,14 +3870,7 @@
         "slug": "clefable"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4261,7 +3879,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585044"
   },
   {
     "id": 132,
@@ -4294,7 +3913,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585043"
   },
   {
     "id": 133,
@@ -4319,7 +3939,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585541"
   },
   {
     "id": 134,
@@ -4333,14 +3954,7 @@
         "slug": "gholdengo"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4349,7 +3963,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586104"
   },
   {
     "id": 135,
@@ -4363,14 +3978,7 @@
         "slug": "coalossal"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4379,7 +3987,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586075"
   },
   {
     "id": 136,
@@ -4393,14 +4002,7 @@
         "slug": "decidueye"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4409,7 +4011,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586066"
   },
   {
     "id": 137,
@@ -4439,14 +4042,7 @@
         "slug": "flygon"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4455,7 +4051,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585412"
   },
   {
     "id": 138,
@@ -4492,7 +4089,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585425"
   },
   {
     "id": 139,
@@ -4525,7 +4123,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585426"
   },
   {
     "id": 140,
@@ -4551,14 +4150,7 @@
         "slug": "corviknight"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4567,7 +4159,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585427"
   },
   {
     "id": 141,
@@ -4585,14 +4178,7 @@
         "slug": "quilava"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4601,7 +4187,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585428"
   },
   {
     "id": 142,
@@ -4642,7 +4229,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585429"
   },
   {
     "id": 143,
@@ -4668,14 +4256,7 @@
         "slug": "serperior"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4684,7 +4265,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585430"
   },
   {
     "id": 144,
@@ -4706,14 +4288,7 @@
         "slug": "dragonair"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4722,7 +4297,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585431"
   },
   {
     "id": 145,
@@ -4736,14 +4312,7 @@
         "slug": "dragonite"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4752,7 +4321,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585432"
   },
   {
     "id": 146,
@@ -4766,14 +4336,7 @@
         "slug": "gyarados"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4782,7 +4345,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586067"
   },
   {
     "id": 147,
@@ -4796,14 +4360,7 @@
         "slug": "altaria"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4812,7 +4369,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585433"
   },
   {
     "id": 148,
@@ -4830,14 +4388,7 @@
         "slug": "dragonair"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4846,7 +4397,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585912"
   },
   {
     "id": 149,
@@ -4860,14 +4412,7 @@
         "slug": "beldum"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4876,7 +4421,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586068"
   },
   {
     "id": 150,
@@ -4894,14 +4440,7 @@
         "slug": "typhlosion"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4910,7 +4449,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585434"
   },
   {
     "id": 151,
@@ -4928,14 +4468,7 @@
         "slug": "alakazam"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4944,7 +4477,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585542"
   },
   {
     "id": 152,
@@ -4962,14 +4496,7 @@
         "slug": "kadabra"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -4978,7 +4505,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586069"
   },
   {
     "id": 153,
@@ -4996,14 +4524,7 @@
         "slug": "dusknoir"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5012,7 +4533,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585435"
   },
   {
     "id": 154,
@@ -5042,7 +4564,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586070"
   },
   {
     "id": 155,
@@ -5071,7 +4594,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586071"
   },
   {
     "id": 156,
@@ -5104,7 +4628,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585913"
   },
   {
     "id": 157,
@@ -5113,14 +4638,7 @@
     "image": "https://www.serebii.net/pokemonpokopia/habitatdex/157.png",
     "description": "Washing your face and drying it off with a towel feels refreshing. Check out how you look in the mirror!",
     "pokemon": [],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5129,7 +4647,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585408"
   },
   {
     "id": 158,
@@ -5143,14 +4662,7 @@
         "slug": "mismagius"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5159,7 +4671,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586072"
   },
   {
     "id": 159,
@@ -5177,14 +4690,7 @@
         "slug": "kirlia"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5193,7 +4699,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585397"
   },
   {
     "id": 160,
@@ -5211,14 +4718,7 @@
         "slug": "noivern"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5227,7 +4727,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585914"
   },
   {
     "id": 161,
@@ -5241,14 +4742,7 @@
         "slug": "poliwag"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5257,7 +4751,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586073"
   },
   {
     "id": 162,
@@ -5286,7 +4781,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586074"
   },
   {
     "id": 163,
@@ -5311,7 +4807,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586065"
   },
   {
     "id": 164,
@@ -5325,14 +4822,7 @@
         "slug": "porygon-z"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5341,7 +4831,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585915"
   },
   {
     "id": 165,
@@ -5366,7 +4857,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585398"
   },
   {
     "id": 166,
@@ -5380,14 +4872,7 @@
         "slug": "porygon2"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5396,7 +4881,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585399"
   },
   {
     "id": 167,
@@ -5422,14 +4908,7 @@
         "slug": "dragapult"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5438,7 +4917,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585400"
   },
   {
     "id": 168,
@@ -5452,9 +4932,7 @@
         "slug": "alakazam"
       }
     ],
-    "locations": [
-      "Sparkling Skylands"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5463,7 +4941,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586076"
   },
   {
     "id": 169,
@@ -5488,7 +4967,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585401"
   },
   {
     "id": 170,
@@ -5513,7 +4993,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585543"
   },
   {
     "id": 171,
@@ -5527,14 +5008,7 @@
         "slug": "serperior"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5543,7 +5017,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585638"
   },
   {
     "id": 172,
@@ -5557,14 +5032,7 @@
         "slug": "meowscarada"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5573,7 +5041,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585402"
   },
   {
     "id": 173,
@@ -5591,14 +5060,7 @@
         "slug": "greninja"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5607,7 +5069,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585544"
   },
   {
     "id": 174,
@@ -5625,14 +5088,7 @@
         "slug": "minun"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5641,7 +5097,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585916"
   },
   {
     "id": 175,
@@ -5666,7 +5123,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585545"
   },
   {
     "id": 176,
@@ -5680,14 +5138,7 @@
         "slug": "raichu"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5696,7 +5147,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585403"
   },
   {
     "id": 177,
@@ -5710,14 +5162,7 @@
         "slug": "conkeldurr"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5726,7 +5171,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585404"
   },
   {
     "id": 178,
@@ -5744,14 +5190,7 @@
         "slug": "gallade"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5760,7 +5199,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585546"
   },
   {
     "id": 179,
@@ -5774,14 +5214,7 @@
         "slug": "persian"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5790,7 +5223,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585405"
   },
   {
     "id": 180,
@@ -5804,14 +5238,7 @@
         "slug": "ninetales"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5820,7 +5247,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585917"
   },
   {
     "id": 181,
@@ -5849,7 +5277,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585406"
   },
   {
     "id": 182,
@@ -5863,14 +5292,7 @@
         "slug": "metagross"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5879,7 +5301,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586077"
   },
   {
     "id": 183,
@@ -5893,14 +5316,7 @@
         "slug": "typhlosion"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5909,7 +5325,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586078"
   },
   {
     "id": 184,
@@ -5923,14 +5340,7 @@
         "slug": "slowking"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -5939,7 +5349,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585407"
   },
   {
     "id": 185,
@@ -5972,7 +5383,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585042"
   },
   {
     "id": 186,
@@ -5994,14 +5406,7 @@
         "slug": "clodsire"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -6010,7 +5415,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585639"
   },
   {
     "id": 187,
@@ -6028,14 +5434,7 @@
         "slug": "lombre"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -6044,7 +5443,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586079"
   },
   {
     "id": 188,
@@ -6069,7 +5469,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585396"
   },
   {
     "id": 189,
@@ -6083,14 +5484,7 @@
         "slug": "toxtricityampedform"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -6099,7 +5493,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586080"
   },
   {
     "id": 190,
@@ -6113,14 +5508,7 @@
         "slug": "toxtricitylowkeyform"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -6129,7 +5517,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586081"
   },
   {
     "id": 191,
@@ -6143,14 +5532,7 @@
         "slug": "ceruledge"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -6159,7 +5541,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585918"
   },
   {
     "id": 192,
@@ -6173,14 +5556,7 @@
         "slug": "armarouge"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -6189,7 +5565,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586082"
   },
   {
     "id": 193,
@@ -6203,14 +5580,7 @@
         "slug": "aerodactyl"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -6219,7 +5589,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585547"
   },
   {
     "id": 194,
@@ -6233,14 +5604,7 @@
         "slug": "cranidos"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -6249,7 +5613,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586083"
   },
   {
     "id": 195,
@@ -6263,14 +5628,7 @@
         "slug": "rampardos"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -6279,7 +5637,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585919"
   },
   {
     "id": 196,
@@ -6293,14 +5652,7 @@
         "slug": "shieldon"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -6309,7 +5661,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585548"
   },
   {
     "id": 197,
@@ -6323,14 +5676,7 @@
         "slug": "bastiodon"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -6339,7 +5685,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585549"
   },
   {
     "id": 198,
@@ -6353,14 +5700,7 @@
         "slug": "tyrunt"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -6369,7 +5709,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585920"
   },
   {
     "id": 199,
@@ -6383,14 +5724,7 @@
         "slug": "tyrantrum"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -6399,7 +5733,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/585041"
   },
   {
     "id": 200,
@@ -6413,14 +5748,7 @@
         "slug": "amaura"
       }
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "buildItems": [
       "Hub",
       "DP",
@@ -6429,7 +5757,8 @@
       "Rift",
       "Boosts",
       "Completion"
-    ]
+    ],
+    "game8Url": "https://game8.co/games/Pokemon-Pokopia/archives/586084"
   },
   {
     "id": 201,
@@ -6474,7 +5803,8 @@
       }
     ],
     "locations": [
-      "Palette Town"
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -6499,7 +5829,8 @@
       }
     ],
     "locations": [
-      "Palette Town"
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -6524,7 +5855,8 @@
       }
     ],
     "locations": [
-      "Palette Town"
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -6549,7 +5881,8 @@
       }
     ],
     "locations": [
-      "Palette Town"
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -6574,7 +5907,8 @@
       }
     ],
     "locations": [
-      "Palette Town"
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -6599,7 +5933,8 @@
       }
     ],
     "locations": [
-      "Palette Town"
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -6624,7 +5959,8 @@
       }
     ],
     "locations": [
-      "Palette Town"
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
@@ -6649,7 +5985,8 @@
       }
     ],
     "locations": [
-      "Palette Town"
+      "Palette Town",
+      "Cloud Island"
     ],
     "buildItems": [
       "Hub",
