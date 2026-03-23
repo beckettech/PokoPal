@@ -502,16 +502,6 @@ const _rawPokemonList: RawPokemon[] = [
   { id: 250, nationalDex: null, name: "Ho-Oh", types: ["???"], habitats: [], image: "https://www.serebii.net/pokemonpokopia/pokemon/250.png", rarity: "Legendary", specialties: ["???"], locations: [], time: "Any", weather: "Any" },
   { id: 150, nationalDex: null, name: "Mewtwo", types: ["Teleport"], habitats: [], image: "https://www.serebii.net/pokemonpokopia/pokemon/150.png", rarity: "Legendary", specialties: ["Teleport"], locations: [], time: "Any", weather: "Any" },
   { id: 151, nationalDex: null, name: "Mew", types: ["Teleport"], habitats: [], image: "https://www.serebii.net/pokemonpokopia/pokemon/151.png", rarity: "Legendary", specialties: ["Teleport"], locations: [], time: "Any", weather: "Any" },
-  { id: 251, nationalDex: null, name: "Celebi", types: ["???"], habitats: [], image: "https://www.serebii.net/pokemonpokopia/pokemon/251.png", rarity: "Legendary", specialties: ["???"], locations: [], time: "Any", weather: "Any" },
-  { id: 377, nationalDex: null, name: "Regirock", types: ["Build"], habitats: [], image: "https://www.serebii.net/pokemonpokopia/pokemon/377.png", rarity: "Legendary", specialties: ["Build"], locations: [], time: "Any", weather: "Any" },
-  { id: 378, nationalDex: null, name: "Regice", types: ["Water"], habitats: [], image: "https://www.serebii.net/pokemonpokopia/pokemon/378.png", rarity: "Legendary", specialties: ["Water"], locations: [], time: "Any", weather: "Any" },
-  { id: 379, nationalDex: null, name: "Registeel", types: ["Build"], habitats: [], image: "https://www.serebii.net/pokemonpokopia/pokemon/379.png", rarity: "Legendary", specialties: ["Build"], locations: [], time: "Any", weather: "Any" },
-  { id: 380, nationalDex: null, name: "Latias", types: ["Fly"], habitats: [], image: "https://www.serebii.net/pokemonpokopia/pokemon/380.png", rarity: "Legendary", specialties: ["Fly"], locations: [], time: "Any", weather: "Any" },
-  { id: 381, nationalDex: null, name: "Latios", types: ["Fly"], habitats: [], image: "https://www.serebii.net/pokemonpokopia/pokemon/381.png", rarity: "Legendary", specialties: ["Fly"], locations: [], time: "Any", weather: "Any" },
-  { id: 383, nationalDex: null, name: "Groudon", types: ["Build"], habitats: [], image: "https://www.serebii.net/pokemonpokopia/pokemon/383.png", rarity: "Legendary", specialties: ["Build"], locations: [], time: "Any", weather: "Any" },
-  { id: 384, nationalDex: null, name: "Rayquaza", types: ["Fly"], habitats: [], image: "https://www.serebii.net/pokemonpokopia/pokemon/384.png", rarity: "Legendary", specialties: ["Fly"], locations: [], time: "Any", weather: "Any" },
-  { id: 385, nationalDex: null, name: "Jirachi", types: ["???"], habitats: [], image: "https://www.serebii.net/pokemonpokopia/pokemon/385.png", rarity: "Legendary", specialties: ["???"], locations: [], time: "Any", weather: "Any" },
-  { id: 386, nationalDex: null, name: "Deoxys", types: ["???"], habitats: [], image: "https://www.serebii.net/pokemonpokopia/pokemon/386.png", rarity: "Legendary", specialties: ["???"], locations: [], time: "Any", weather: "Any" },
 ];
 
 export const pokemonList: Pokemon[] = _rawPokemonList.map(pokemon => ({

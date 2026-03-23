@@ -164,12 +164,6 @@ export function DexPage() {
               </div>
               <div className="flex-1 min-w-0">
                 {/* Habitats — name above image */}
-                {selectedPokemon.rarity === "Legendary" && (!selectedPokemon.habitats || selectedPokemon.habitats.length === 0) && (
-                  <div className="flex items-center gap-2 bg-amber-50 rounded-xl px-3 py-2 border border-amber-100">
-                    <span className="text-base">✨</span>
-                    <span className="text-xs font-semibold text-amber-700">Story-based Legendary — appears through main story events, not habitats</span>
-                  </div>
-                )}
                 {selectedPokemon.habitats && selectedPokemon.habitats.length > 0 && (
                   <div>
                     <p className="text-[10px] font-bold text-emerald-700 uppercase tracking-wide mb-1.5">Habitats</p>
