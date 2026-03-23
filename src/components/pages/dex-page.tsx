@@ -58,40 +58,24 @@ function WeatherIcon({ weather }: { weather: WeatherVal }) {
 }
 
 function ConditionsBlock({ pokemon }: { pokemon: Pokemon }) {
-  // Data is stored as comma-separated string e.g. "Morning,Day,Evening,Night"
-  const rawTime = (pokemon as any).time ?? "";
-  const rawWeather = (pokemon as any).weather ?? "";
-
-  // Split comma-separated string or handle array
-  const times: string[] = Array.isArray(rawTime)
-    ? rawTime
-    : rawTime ? String(rawTime).split(",").map((s: string) => s.trim()) : [];
-  const weathers: string[] = Array.isArray(rawWeather)
-    ? rawWeather
-    : rawWeather ? String(rawWeather).split(",").map((s: string) => s.trim()) : [];
-
-  const allTimes = ["Morning", "Day", "Evening", "Night"];
-  const allWeathers = ["Sun", "Cloud", "Rain"];
-
-  const anyTime = times.length === 0 || allTimes.every(t => times.includes(t));
-  const anyWeather = weathers.length === 0 || allWeathers.every(w => weathers.includes(w));
-
-  const timeLabel = anyTime ? "Any Time" : times.join(", ");
-  const weatherLabel = anyWeather ? "Any Weather" : weathers.join(", ");
+  const time: TimeVal = pokemon.time ?? "Any";
+  const weather: WeatherVal = pokemon.weather ?? "Any";
 
   return (
     <div className="bg-orange-50 rounded-2xl p-4 border border-orange-100">
       <h3 className="font-bold text-gray-700 text-sm mb-3">Conditions to Find</h3>
       <div className="grid grid-cols-2 gap-3">
+        {/* Time */}
         <div className="flex flex-col items-center gap-1.5 bg-white rounded-xl p-3 border border-orange-100">
-          <span className="text-xl">{anyTime ? "🕐" : "🌅"}</span>
+          <TimeIcon time={time} />
           <span className="text-[10px] text-gray-500 uppercase tracking-wide font-semibold">Time</span>
-          <span className="text-xs font-bold text-gray-800 text-center">{timeLabel}</span>
+          <span className="text-sm font-bold text-gray-800">{time}</span>
         </div>
+        {/* Weather */}
         <div className="flex flex-col items-center gap-1.5 bg-white rounded-xl p-3 border border-orange-100">
-          <span className="text-xl">{anyWeather ? "🌤" : "🌧"}</span>
+          <WeatherIcon weather={weather} />
           <span className="text-[10px] text-gray-500 uppercase tracking-wide font-semibold">Weather</span>
-          <span className="text-xs font-bold text-gray-800 text-center">{weatherLabel}</span>
+          <span className="text-sm font-bold text-gray-800">{weather}</span>
         </div>
       </div>
     </div>
