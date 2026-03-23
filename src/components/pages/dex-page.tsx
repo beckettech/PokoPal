@@ -58,18 +58,26 @@ function WeatherIcon({ weather }: { weather: WeatherVal }) {
 }
 
 function ConditionsBlock({ pokemon }: { pokemon: Pokemon }) {
-  // Support both array form (scraped data) and string form (legacy)
-  const rawTimes: string[] = Array.isArray((pokemon as any).time) ? (pokemon as any).time : pokemon.time ? [pokemon.time] : [];
-  const rawWeathers: string[] = Array.isArray((pokemon as any).weather) ? (pokemon as any).weather : pokemon.weather ? [pokemon.weather] : [];
+  // Data is stored as comma-separated string e.g. "Morning,Day,Evening,Night"
+  const rawTime = (pokemon as any).time ?? "";
+  const rawWeather = (pokemon as any).weather ?? "";
+
+  // Split comma-separated string or handle array
+  const times: string[] = Array.isArray(rawTime)
+    ? rawTime
+    : rawTime ? String(rawTime).split(",").map((s: string) => s.trim()) : [];
+  const weathers: string[] = Array.isArray(rawWeather)
+    ? rawWeather
+    : rawWeather ? String(rawWeather).split(",").map((s: string) => s.trim()) : [];
 
   const allTimes = ["Morning", "Day", "Evening", "Night"];
   const allWeathers = ["Sun", "Cloud", "Rain"];
 
-  const anyTime = rawTimes.length === 0 || allTimes.every(t => rawTimes.includes(t));
-  const anyWeather = rawWeathers.length === 0 || allWeathers.every(w => rawWeathers.includes(w));
+  const anyTime = times.length === 0 || allTimes.every(t => times.includes(t));
+  const anyWeather = weathers.length === 0 || allWeathers.every(w => weathers.includes(w));
 
-  const timeLabel = anyTime ? "Any Time" : rawTimes.join(", ");
-  const weatherLabel = anyWeather ? "Any Weather" : rawWeathers.join(", ");
+  const timeLabel = anyTime ? "Any Time" : times.join(", ");
+  const weatherLabel = anyWeather ? "Any Weather" : weathers.join(", ");
 
   return (
     <div className="bg-orange-50 rounded-2xl p-4 border border-orange-100">
