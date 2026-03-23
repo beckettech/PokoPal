@@ -330,23 +330,158 @@ for (const p of oldData) {
   oldByName[p.name.toLowerCase()] = p;
 }
 
-// Helper: get image URL from Pokopia ID and name
+// National dex numbers for image URLs (Serebii uses national dex for /pokemonpokopia/pokemon/ images)
+const NATIONAL_DEX = {
+  "Bulbasaur": 1, "Ivysaur": 2, "Venusaur": 3, "Charmander": 4, "Charmeleon": 5,
+  "Charizard": 6, "Squirtle": 7, "Wartortle": 8, "Blastoise": 9,
+  "Pidgey": 16, "Pidgeotto": 17, "Pidgeot": 18,
+  "Oddish": 43, "Gloom": 44, "Vileplume": 45, "Bellossom": 182,
+  "Paras": 46, "Parasect": 47, "Venonat": 48, "Venomoth": 49,
+  "Bellsprout": 69, "Weepinbell": 70, "Victreebel": 71,
+  "Slowpoke": 79, "Slowbro": 80, "Slowking": 199,
+  "Magnemite": 81, "Magneton": 82, "Magnezone": 462,
+  "Onix": 95, "Steelix": 208,
+  "Cubone": 104, "Marowak": 105,
+  "Tyrogue": 236, "Hitmonlee": 106, "Hitmonchan": 107, "Hitmontop": 237,
+  "Koffing": 109, "Weezing": 110,
+  "Tangela": 114, "Tangrowth": 465, "Professor Tangrowth": 465,
+  "Scyther": 123, "Scizor": 212,
+  "Pinsir": 127,
+  "Magikarp": 129, "Gyarados": 130,
+  "Ditto": 132,
+  "Hoothoot": 163, "Noctowl": 164,
+  "Heracross": 214,
+  "Volbeat": 313, "Illumise": 314,
+  "Gulpin": 316, "Swalot": 317,
+  "Cacnea": 331, "Cacturne": 332,
+  "Combee": 415, "Vespiquen": 416,
+  "Shellos": 422, "Shellos East Sea": 422,
+  "Gastrodon": 423, "Gastrodon East Sea": 423,
+  "Drifloon": 425, "Drifblim": 426,
+  "Drilbur": 529, "Excadrill": 530,
+  "Timburr": 532, "Gurdurr": 533, "Conkeldurr": 534,
+  "Litwick": 607, "Lampent": 608, "Chandelure": 609,
+  "Axew": 610, "Fraxure": 611, "Haxorus": 612,
+  "Goomy": 704, "Sliggoo": 705, "Goodra": 706,
+  "Cramorant": 845,
+  "Pichu": 172, "Pikachu": 25, "Peakychu": 25, "Raichu": 26,
+  "Zubat": 41, "Golbat": 42, "Crobat": 169,
+  "Meowth": 52, "Persian": 53,
+  "Psyduck": 54, "Golduck": 55,
+  "Growlithe": 58, "Arcanine": 59,
+  "Farfetch'd": 83,
+  "Grimer": 88, "Muk": 89,
+  "Gastly": 92, "Haunter": 93, "Gengar": 94,
+  "Voltorb": 100, "Electrode": 101,
+  "Exeggcute": 102, "Exeggutor": 103,
+  "Happiny": 440, "Chansey": 113, "Blissey": 242,
+  "Elekid": 239, "Electabuzz": 125, "Electivire": 466,
+  "Lapras": 131,
+  "Munchlax": 446, "Snorlax": 143, "Mosslax": 143,
+  "Spinarak": 167, "Ariados": 168,
+  "Mareep": 179, "Flaaffy": 180, "Ampharos": 181,
+  "Azurill": 298, "Marill": 183, "Azumarill": 184,
+  "Paldean Wooper": 194, "Clodsire": 980,
+  "Smeargle": 235,
+  "Torchic": 255, "Combusken": 256, "Blaziken": 257,
+  "Wingull": 278, "Pelipper": 279,
+  "Makuhita": 296, "Hariyama": 297,
+  "Absol": 359,
+  "Piplup": 393, "Prinplup": 394, "Empoleon": 395,
+  "Audino": 531,
+  "Trubbish": 568, "Garbodor": 569,
+  "Zorua": 570, "Zoroark": 571,
+  "Minccino": 572, "Cinccino": 573,
+  "Grubbin": 736, "Charjabug": 737, "Vikavolt": 738,
+  "Mimikyu": 778,
+  "Pawmi": 921, "Pawmo": 922, "Pawmot": 923,
+  "Tatsugiri Curly Form": 978, "Tatsugiri Droopy Form": 978, "Tatsugiri Stretchy Form": 978,
+  "Ekans": 23, "Arbok": 24,
+  "Cleffa": 173, "Clefairy": 35, "Clefable": 36,
+  "Igglybuff": 174, "Jigglypuff": 39, "Wigglytuff": 40,
+  "Diglett": 50, "Dugtrio": 51,
+  "Machop": 66, "Machoke": 67, "Machamp": 68,
+  "Geodude": 74, "Graveler": 75, "Golem": 76,
+  "Magby": 240, "Magmar": 126, "Magmortar": 467,
+  "Bonsly": 438, "Sudowoodo": 185,
+  "Murkrow": 198, "Honchkrow": 430,
+  "Larvitar": 246, "Pupitar": 247, "Tyranitar": 248,
+  "Lotad": 270, "Lombre": 271, "Ludicolo": 272,
+  "Mawile": 303,
+  "Torkoal": 324,
+  "Kricketot": 401, "Kricketune": 402,
+  "Chatot": 441,
+  "Riolu": 447, "Lucario": 448,
+  "Stereo Rotom": 479,
+  "Larvesta": 636, "Volcarona": 637,
+  "Rowlet": 722, "Dartrix": 723, "Decidueye": 724,
+  "Scorbunny": 813, "Raboot": 814, "Cinderace": 815,
+  "Skwovet": 819, "Greedent": 820,
+  "Rolycoly": 840, "Carkol": 841, "Coalossal": 842,
+  "Toxel": 848, "Toxtricity Amped Form": 849, "Toxtricity Low Key Form": 849,
+  "Fidough": 926, "Dachsbun": 927,
+  "Charcadet": 935, "Armarouge": 936, "Ceruledge": 937,
+  "Glimmet": 969, "Glimmora": 970,
+  "Gimmighoul": 999, "Gholdengo": 1000,
+  "Vulpix": 37, "Ninetales": 38,
+  "Poliwag": 60, "Poliwhirl": 61, "Poliwrath": 62, "Politoed": 186,
+  "Abra": 63, "Kadabra": 64, "Alakazam": 65,
+  "Mime Jr.": 439, "Mr. Mime": 122,
+  "Porygon": 137, "Porygon2": 233, "Porygon-Z": 474,
+  "Dratini": 147, "Dragonair": 148, "Dragonite": 149,
+  "Cyndaquil": 155, "Quilava": 156, "Typhlosion": 157,
+  "Misdreavus": 200, "Mismagius": 429,
+  "Girafarig": 203, "Farigiraf": 981,
+  "Ralts": 280, "Kirlia": 281, "Gardevoir": 282, "Gallade": 475,
+  "Plusle": 311, "Minun": 312,
+  "Trapinch": 328, "Vibrava": 329, "Flygon": 330,
+  "Swablu": 333, "Altaria": 334,
+  "Duskull": 355, "Dusclops": 356, "Dusknoir": 477,
+  "Beldum": 374, "Metang": 375, "Metagross": 376,
+  "Snivy": 495, "Servine": 496, "Serperior": 497,
+  "Froakie": 656, "Frogadier": 657, "Greninja": 658,
+  "Dedenne": 702,
+  "Noibat": 714, "Noivern": 715,
+  "Rookidee": 821, "Corvisquire": 822, "Corviknight": 823,
+  "Dreepy": 885, "Drakloak": 886, "Dragapult": 887,
+  "Sprigatito": 906, "Floragato": 907, "Meowscarada": 908,
+  "Wattrel": 940, "Kilowattrel": 941,
+  "Tinkatink": 957, "Tinkatuff": 958, "Tinkaton": 959,
+  "Aerodactyl": 142,
+  "Cranidos": 408, "Rampardos": 409,
+  "Shieldon": 410, "Bastiodon": 411,
+  "Tyrunt": 696, "Tyrantrum": 697,
+  "Amaura": 698, "Aurorus": 699,
+  "Eevee": 133, "Vaporeon": 134, "Jolteon": 135, "Flareon": 136,
+  "Espeon": 196, "Umbreon": 197, "Leafeon": 470, "Glaceon": 471, "Sylveon": 700,
+  "Kyogre": 382,
+  "Raikou": 243, "Entei": 244, "Suicune": 245,
+  "Volcanion": 721,
+  "Articuno": 144, "Zapdos": 145, "Moltres": 146,
+  "Lugia": 249, "Ho-Oh": 250,
+  "Mewtwo": 150, "Mew": 151,
+};
+
+// Helper: get image URL — Serebii uses national dex numbers for image files
 function getImage(pokopiaId, name) {
-  // Serebii uses the Pokopia ID for their image URLs
-  const padded = String(pokopiaId).padStart(3, '0');
-  const slug = name.toLowerCase().replace(/[^a-z0-9]/g, '');
-  // Try slug variant for special forms
+  const nat = NATIONAL_DEX[name];
+  const padded = nat ? String(nat).padStart(3, '0') : String(pokopiaId).padStart(3, '0');
+  // Special form suffixes
   if (name.includes('East Sea')) return `https://www.serebii.net/pokemonpokopia/pokemon/${padded}-eastsea.png`;
   if (name.includes('Amped')) return `https://www.serebii.net/pokemonpokopia/pokemon/${padded}-amped.png`;
   if (name.includes('Low Key')) return `https://www.serebii.net/pokemonpokopia/pokemon/${padded}-lowkey.png`;
   if (name.includes('Curly')) return `https://www.serebii.net/pokemonpokopia/pokemon/${padded}-curly.png`;
   if (name.includes('Droopy')) return `https://www.serebii.net/pokemonpokopia/pokemon/${padded}-droopy.png`;
   if (name.includes('Stretchy')) return `https://www.serebii.net/pokemonpokopia/pokemon/${padded}-stretchy.png`;
-  if (name === 'Peakychu') return `https://www.serebii.net/pokemonpokopia/pokemon/${padded}-peakychu.png`;
+  if (name === 'Peakychu') return `https://www.serebii.net/pokemonpokopia/pokemon/025-peakychu.png`;
   if (name === 'Mosslax') return `https://www.serebii.net/pokemonpokopia/pokemon/143-mosslax.png`;
-  if (name === 'Stereo Rotom') return `https://www.serebii.net/pokemonpokopia/pokemon/${padded}-stereorotom.png`;
-  if (name === 'Professor Tangrowth') return `https://www.serebii.net/pokemonpokopia/pokemon/${padded}-professortangrowth.png`;
-  if (name === 'Paldean Wooper') return `https://www.serebii.net/pokemonpokopia/pokemon/${padded}-paldean.png`;
+  if (name === 'Stereo Rotom') return `https://www.serebii.net/pokemonpokopia/pokemon/479-stereorotom.png`;
+  if (name === 'Professor Tangrowth') return `https://www.serebii.net/pokemonpokopia/pokemon/465-professortangrowth.png`;
+  if (name === 'Paldean Wooper') return `https://www.serebii.net/pokemonpokopia/pokemon/194-paldean.png`;
+  if (name === 'Gimmighoul') return `https://www.serebii.net/pokemonpokopia/pokemon/999.png`;
+  if (name === 'Gholdengo') return `https://www.serebii.net/pokemonpokopia/pokemon/1000.png`;
+  if (name === 'Clodsire') return `https://www.serebii.net/pokemonpokopia/pokemon/980.png`;
+  if (name === 'Farigiraf') return `https://www.serebii.net/pokemonpokopia/pokemon/981.png`;
   return `https://www.serebii.net/pokemonpokopia/pokemon/${padded}.png`;
 }
 
