@@ -163,9 +163,9 @@ export function HomePage() {
       {/* Red Bottom Tab with Stats and Chat Button */}
       <div className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 pb-2">
         {/* Stats Row */}
-        <div className="h-20 flex items-center px-3 relative">
-          {/* Left stats */}
-          <div className="flex gap-5 flex-1 justify-start pl-1">
+        <div className="h-20 flex items-center relative">
+          {/* Left stats — evenly spaced from left edge to center */}
+          <div className="flex flex-1 justify-around pr-14">
             <button onClick={() => setCurrentPage("dex")} className="text-center active:scale-95 transition-transform">
               <p className="text-xl font-bold text-white">{capturedPokemon.length}</p>
               <p className="text-[9px] text-white/80">Friends</p>
@@ -187,8 +187,8 @@ export function HomePage() {
             </button>
           </div>
 
-          {/* Right stats */}
-          <div className="flex gap-5 flex-1 justify-end pr-1">
+          {/* Right stats — evenly spaced from center to right edge */}
+          <div className="flex flex-1 justify-around pl-14">
             <button onClick={() => setCurrentPage("relics")} className="text-center active:scale-95 transition-transform">
               <p className="text-xl font-bold text-white">{foundRelics.length}</p>
               <p className="text-[9px] text-white/80">Relics</p>

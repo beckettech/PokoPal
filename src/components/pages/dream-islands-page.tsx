@@ -60,30 +60,6 @@ const DREAM_ISLANDS = [
     chipColor: "bg-amber-100 text-amber-800",
   },
   {
-    id: "clefairy",
-    name: "Clefairy Island",
-    doll: { name: "Clefairy Doll", image: "/items/clefairydoll.png" },
-    materials: [
-      { name: "Cave Mushrooms", image: "/items/cavemushrooms.png" },
-      { name: "Copper Ore", image: "/items/copperore.png" },
-      { name: "Limestone", image: "/items/limestone.png" },
-      { name: "Stone", image: "/items/stone.png" },
-    ],
-    rareItems: [
-      { name: "Glowing Stone", image: "/items/glowingstone.png" },
-      { name: "Crystal Fragment", image: "/items/crystalfragment.png" },
-    ],
-    legendaries: [
-      { name: "Volcanion", image: "/pokemon/721.png", chance: 25, tip: "First encountered during the Rocky Ridges main quest. Register it there — then it may appear here." },
-    ],
-    note: "Complete the Rocky Ridges story quest to first register Volcanion, then visit here.",
-    color: "from-pink-400 to-pink-600",
-    textColor: "text-pink-900",
-    bgColor: "bg-pink-50",
-    borderColor: "border-pink-300",
-    chipColor: "bg-pink-100 text-pink-800",
-  },
-  {
     id: "arcanine",
     name: "Arcanine Island",
     doll: { name: "Arcanine Doll", image: "/items/arcaninedoll.png" },
@@ -106,6 +82,30 @@ const DREAM_ISLANDS = [
     bgColor: "bg-orange-50",
     borderColor: "border-orange-300",
     chipColor: "bg-orange-100 text-orange-800",
+  },
+  {
+    id: "clefairy",
+    name: "Clefairy Island",
+    doll: { name: "Clefairy Doll", image: "/items/clefairydoll.png" },
+    materials: [
+      { name: "Cave Mushrooms", image: "/items/cavemushrooms.png" },
+      { name: "Copper Ore", image: "/items/copperore.png" },
+      { name: "Limestone", image: "/items/limestone.png" },
+      { name: "Stone", image: "/items/stone.png" },
+    ],
+    rareItems: [
+      { name: "Glowing Stone", image: "/items/glowingstone.png" },
+      { name: "Crystal Fragment", image: "/items/crystalfragment.png" },
+    ],
+    legendaries: [
+      { name: "Volcanion", image: "/pokemon/721.png", chance: 25, tip: "First encountered during the Rocky Ridges main quest. Register it there — then it may appear here." },
+    ],
+    note: "Complete the Rocky Ridges story quest to first register Volcanion, then visit here.",
+    color: "from-pink-400 to-pink-600",
+    textColor: "text-pink-900",
+    bgColor: "bg-pink-50",
+    borderColor: "border-pink-300",
+    chipColor: "bg-pink-100 text-pink-800",
   },
   {
     id: "dragonite",
