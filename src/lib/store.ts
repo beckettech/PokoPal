@@ -46,6 +46,12 @@ interface AppState {
   toggleVisitedIsland: (id: string) => void;
   discoveredHabitats: number[];
   toggleDiscoveredHabitat: (id: number) => void;
+  visitedLocations: string[];
+  toggleVisitedLocation: (id: string) => void;
+  foundRelics: string[];
+  toggleFoundRelic: (id: string) => void;
+  foundFossils: string[];
+  toggleFoundFossil: (id: string) => void;
 }
 
 export const useAppStore = create<AppState>()(
@@ -96,6 +102,24 @@ export const useAppStore = create<AppState>()(
           ? state.discoveredHabitats.filter(h => h !== id)
           : [...state.discoveredHabitats, id]
       })),
+      visitedLocations: [],
+      toggleVisitedLocation: (id) => set((state) => ({
+        visitedLocations: state.visitedLocations.includes(id)
+          ? state.visitedLocations.filter(l => l !== id)
+          : [...state.visitedLocations, id]
+      })),
+      foundRelics: [],
+      toggleFoundRelic: (id) => set((state) => ({
+        foundRelics: state.foundRelics.includes(id)
+          ? state.foundRelics.filter(r => r !== id)
+          : [...state.foundRelics, id]
+      })),
+      foundFossils: [],
+      toggleFoundFossil: (id) => set((state) => ({
+        foundFossils: state.foundFossils.includes(id)
+          ? state.foundFossils.filter(f => f !== id)
+          : [...state.foundFossils, id]
+      })),
     }),
     {
       name: "pokopia-storage",
@@ -103,6 +127,9 @@ export const useAppStore = create<AppState>()(
         capturedPokemon: state.capturedPokemon,
         visitedIslands: state.visitedIslands,
         discoveredHabitats: state.discoveredHabitats,
+        visitedLocations: state.visitedLocations,
+        foundRelics: state.foundRelics,
+        foundFossils: state.foundFossils,
         coins: state.coins,
       }),
     }

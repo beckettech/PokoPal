@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ArrowLeft, CheckCircle, Circle } from "lucide-react";
 import { useAppStore } from "@/lib/store";
 
+
 // Lost Relics from Pokopia
 const RELICS = [
   { id: "r1",  name: "Broken Pot",         description: "A cracked clay pot. Someone treasured this once.", location: "Withered Wastelands" },
@@ -34,29 +35,11 @@ const FOSSILS = [
 ];
 
 export function RelicsPage() {
-  const { setCurrentPage } = useAppStore();
-  const [foundRelics, setFoundRelics] = useState<Set<string>>(new Set());
-  const [foundFossils, setFoundFossils] = useState<Set<string>>(new Set());
+  const { setCurrentPage, foundRelics, toggleFoundRelic, foundFossils, toggleFoundFossil } = useAppStore();
   const [activeTab, setActiveTab] = useState<"relics" | "fossils">("relics");
 
-  const toggleRelic = (id: string) => {
-    setFoundRelics(prev => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id); else next.add(id);
-      return next;
-    });
-  };
-
-  const toggleFossil = (id: string) => {
-    setFoundFossils(prev => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id); else next.add(id);
-      return next;
-    });
-  };
-
-  const relicProgress = `${foundRelics.size}/${RELICS.length}`;
-  const fossilProgress = `${foundFossils.size}/${FOSSILS.length}`;
+  const relicProgress = `${foundRelics.length}/${RELICS.length}`;
+  const fossilProgress = `${foundFossils.length}/${FOSSILS.length}`;
 
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-amber-700 to-amber-800 overflow-hidden">
@@ -109,11 +92,11 @@ export function RelicsPage() {
             <>
               <p className="text-xs text-gray-400 text-center mb-3">Tap a relic to mark it as found</p>
               {RELICS.map(relic => {
-                const found = foundRelics.has(relic.id);
+                const found = foundRelics.includes(relic.id);
                 return (
                   <button
                     key={relic.id}
-                    onClick={() => toggleRelic(relic.id)}
+                    onClick={() => toggleFoundRelic(relic.id)}
                     className={`w-full flex items-center gap-3 p-3 rounded-xl border transition-all active:scale-[0.98] text-left ${
                       found
                         ? "bg-amber-50 border-amber-200"
@@ -145,11 +128,11 @@ export function RelicsPage() {
             <>
               <p className="text-xs text-gray-400 text-center mb-3">Track fossil Pokémon you've restored</p>
               {FOSSILS.map(fossil => {
-                const found = foundFossils.has(fossil.id);
+                const found = foundFossils.includes(fossil.id);
                 return (
                   <button
                     key={fossil.id}
-                    onClick={() => toggleFossil(fossil.id)}
+                    onClick={() => toggleFoundFossil(fossil.id)}
                     className={`w-full flex items-center gap-3 p-3 rounded-xl border transition-all active:scale-[0.98] text-left ${
                       found
                         ? "bg-green-50 border-green-200"

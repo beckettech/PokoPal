@@ -92,8 +92,15 @@ const menuItems = [
   },
 ];
 
+const TOTAL_POKEMON = 300;
+const TOTAL_HABITATS = 209; // total habitat dex entries
+const TOTAL_RELICS = 12;
+const TOTAL_FOSSILS = 9;
+const TOTAL_LOCATIONS = 6;
+const TOTAL = TOTAL_POKEMON + TOTAL_HABITATS + TOTAL_RELICS + TOTAL_FOSSILS + TOTAL_LOCATIONS;
+
 export function HomePage() {
-  const { setCurrentPage, coins, capturedPokemon } = useAppStore();
+  const { setCurrentPage, coins, capturedPokemon, discoveredHabitats, foundRelics, foundFossils, visitedLocations } = useAppStore();
 
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-red-500 via-red-600 to-red-700">
@@ -154,35 +161,61 @@ export function HomePage() {
       </div>
 
       {/* Red Bottom Tab with Stats and Chat Button */}
-      <div className="h-20 bg-gradient-to-r from-red-500 via-red-600 to-red-500 flex items-center justify-between px-6 relative">
-        {/* Friends - Left Side - Clickable */}
-        <button
-          onClick={() => setCurrentPage("dex")}
-          className="text-center active:scale-95 transition-transform"
-        >
-          <p className="text-xl font-bold text-white">{capturedPokemon.length}</p>
-          <p className="text-[10px] text-white/80">Friends</p>
-        </button>
+      <div className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 pb-2">
+        {/* Stats Row */}
+        <div className="h-16 flex items-center justify-between px-4 relative">
+          {/* Friends */}
+          <button onClick={() => setCurrentPage("dex")} className="text-center active:scale-95 transition-transform">
+            <p className="text-lg font-bold text-white">{capturedPokemon.length}</p>
+            <p className="text-[9px] text-white/80">Friends</p>
+          </button>
 
-        {/* Chat Button - Center - Larger and Lower */}
-        <div className="absolute left-1/2 -translate-x-1/2 -top-4 flex flex-col items-center">
-          <button
-            onClick={() => setCurrentPage("chat")}
-            className="w-20 h-20 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 shadow-2xl flex flex-col items-center justify-center border-4 border-white active:scale-95 transition-transform"
-          >
-            <MessageCircle className="w-8 h-8 text-white" />
-            <span className="text-[8px] font-semibold text-white/90 mt-0.5">Ask Anything</span>
+          {/* Habitats */}
+          <button onClick={() => setCurrentPage("habitat-dex")} className="text-center active:scale-95 transition-transform">
+            <p className="text-lg font-bold text-white">{discoveredHabitats.length}</p>
+            <p className="text-[9px] text-white/80">Habitats</p>
+          </button>
+
+          {/* Chat Button - Center */}
+          <div className="absolute left-1/2 -translate-x-1/2 -top-5">
+            <button
+              onClick={() => setCurrentPage("chat")}
+              className="w-16 h-16 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 shadow-2xl flex flex-col items-center justify-center border-4 border-white active:scale-95 transition-transform"
+            >
+              <MessageCircle className="w-6 h-6 text-white" />
+              <span className="text-[7px] font-semibold text-white/90 mt-0.5">Ask Anything</span>
+            </button>
+          </div>
+
+          {/* Relics */}
+          <button onClick={() => setCurrentPage("relics")} className="text-center active:scale-95 transition-transform">
+            <p className="text-lg font-bold text-white">{foundRelics.length}</p>
+            <p className="text-[9px] text-white/80">Relics</p>
+          </button>
+
+          {/* Locations */}
+          <button onClick={() => setCurrentPage("map")} className="text-center active:scale-95 transition-transform">
+            <p className="text-lg font-bold text-white">{visitedLocations.length}</p>
+            <p className="text-[9px] text-white/80">Locations</p>
           </button>
         </div>
 
-        {/* Habitats - Right Side - Clickable */}
-        <button
-          onClick={() => setCurrentPage("habitat-dex")}
-          className="text-center active:scale-95 transition-transform"
-        >
-          <p className="text-xl font-bold text-white">8</p>
-          <p className="text-[10px] text-white/80">Habitats</p>
-        </button>
+        {/* Progress Bar */}
+        {(() => {
+          const done = capturedPokemon.length + discoveredHabitats.length + foundRelics.length + foundFossils.length + visitedLocations.length;
+          const pct = Math.min(100, Math.round((done / TOTAL) * 100));
+          return (
+            <div className="mx-4 mb-1">
+              <div className="w-full h-2 bg-white/20 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-full transition-all duration-500"
+                  style={{ width: `${pct}%` }}
+                />
+              </div>
+              <p className="text-center text-[10px] text-white/70 mt-0.5 font-medium">{pct}% complete</p>
+            </div>
+          );
+        })()}
       </div>
     </div>
   );
