@@ -75,9 +75,9 @@ const menuItems = [
     hasNotification: false 
   },
   { 
-    id: "moves", 
+    id: "relics", 
     icon: Zap, 
-    label: "Moves",
+    label: "Relics",
     color: "bg-gradient-to-br from-orange-400 to-orange-500",
     shadowColor: "shadow-orange-500/30",
     hasNotification: false 

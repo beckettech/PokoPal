@@ -10,7 +10,7 @@ export type Page =
   | "requests" 
   | "cloud-islands" 
   | "dream-islands" 
-  | "moves" 
+  | "relics" 
   | "mystery-gifts" 
   | "chat"
   | "coin-shop";

@@ -8,7 +8,7 @@ import { MapPage } from "@/components/pages/map-page";
 import { RequestsPage } from "@/components/pages/requests-page";
 import { CloudIslandsPage } from "@/components/pages/cloud-islands-page";
 import { DreamIslandsPage } from "@/components/pages/dream-islands-page";
-import { MovesPage } from "@/components/pages/moves-page";
+import { RelicsPage } from "@/components/pages/relics-page";
 import { MysteryGiftsPage } from "@/components/pages/mystery-gifts-page";
 import { ChatPage } from "@/components/pages/chat-page";
 import { CoinShopPage } from "@/components/pages/coin-shop-page";
@@ -32,8 +32,8 @@ export default function Home() {
         return <CloudIslandsPage />;
       case "dream-islands":
         return <DreamIslandsPage />;
-      case "moves":
-        return <MovesPage />;
+      case "relics":
+        return <RelicsPage />;
       case "mystery-gifts":
         return <MysteryGiftsPage />;
       case "chat":
