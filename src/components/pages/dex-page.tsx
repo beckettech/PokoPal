@@ -376,6 +376,7 @@ export function DexPage() {
                   alt={pokemon.name}
                   className="w-full h-full object-contain drop-shadow-sm"
                   style={{ filter: 'drop-shadow(0 0 1px black)' }}
+                  loading="lazy"
                 />
               </div>
 

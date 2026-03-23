@@ -46,6 +46,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className="h-full">
+      <head>
+        {/* Preconnect to Serebii for faster image loading */}
+        <link rel="preconnect" href="https://www.serebii.net" />
+        <link rel="dns-prefetch" href="https://www.serebii.net" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground h-full`}
       >
