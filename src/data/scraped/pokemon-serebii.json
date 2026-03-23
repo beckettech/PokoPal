@@ -15601,7 +15601,8 @@
     ],
     "idealHabitat": null,
     "favorites": [],
-    "habitats": []
+    "habitats": [],
+    "rarity": "Legendary"
   },
   {
     "slug": "raikou",
@@ -15614,7 +15615,8 @@
     ],
     "idealHabitat": null,
     "favorites": [],
-    "habitats": []
+    "habitats": [],
+    "rarity": "Legendary"
   },
   {
     "slug": "entei",
@@ -15627,7 +15629,8 @@
     ],
     "idealHabitat": null,
     "favorites": [],
-    "habitats": []
+    "habitats": [],
+    "rarity": "Legendary"
   },
   {
     "slug": "suicune",
@@ -15640,7 +15643,8 @@
     ],
     "idealHabitat": null,
     "favorites": [],
-    "habitats": []
+    "habitats": [],
+    "rarity": "Legendary"
   },
   {
     "slug": "volcanion",
@@ -15653,7 +15657,8 @@
     ],
     "idealHabitat": null,
     "favorites": [],
-    "habitats": []
+    "habitats": [],
+    "rarity": "Legendary"
   },
   {
     "slug": "articuno",
@@ -15666,7 +15671,8 @@
     ],
     "idealHabitat": null,
     "favorites": [],
-    "habitats": []
+    "habitats": [],
+    "rarity": "Legendary"
   },
   {
     "slug": "zapdos",
@@ -15679,7 +15685,8 @@
     ],
     "idealHabitat": null,
     "favorites": [],
-    "habitats": []
+    "habitats": [],
+    "rarity": "Legendary"
   },
   {
     "slug": "moltres",
@@ -15692,7 +15699,8 @@
     ],
     "idealHabitat": null,
     "favorites": [],
-    "habitats": []
+    "habitats": [],
+    "rarity": "Legendary"
   },
   {
     "slug": "lugia",
@@ -15705,7 +15713,8 @@
     ],
     "idealHabitat": null,
     "favorites": [],
-    "habitats": []
+    "habitats": [],
+    "rarity": "Legendary"
   },
   {
     "slug": "ho-oh",
@@ -15718,7 +15727,8 @@
     ],
     "idealHabitat": null,
     "favorites": [],
-    "habitats": []
+    "habitats": [],
+    "rarity": "Legendary"
   },
   {
     "slug": "mewtwo",
@@ -15731,7 +15741,8 @@
     ],
     "idealHabitat": null,
     "favorites": [],
-    "habitats": []
+    "habitats": [],
+    "rarity": "Legendary"
   },
   {
     "slug": "mew",
@@ -15744,6 +15755,7 @@
     ],
     "idealHabitat": null,
     "favorites": [],
-    "habitats": []
+    "habitats": [],
+    "rarity": "Legendary"
   }
 ]
