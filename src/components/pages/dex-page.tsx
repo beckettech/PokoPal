@@ -1,5 +1,6 @@
 'use client'
 
+// Dex Page - v2.0.1 (cache-bust)
 import { useAppStore } from "@/lib/store";
 import { pokemonList as pokemonData, Pokemon, getSpecialtyIcon } from "@/lib/pokemon-data";
 import { ArrowLeft, Search, Plus, Eye, EyeOff, Check, Zap, MapPin, Home, Sun, Moon, Cloud, CloudRain, CloudSnow } from "lucide-react";
