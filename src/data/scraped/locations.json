@@ -2,7 +2,7 @@
   {
     "id": "witheredwastelands",
     "name": "Withered Wastelands",
-    "image": "https://www.serebii.net/pokemonpokopia/locations/witheredwastelands.jpg",
+    "image": "/locations/witheredwastelands.jpg",
     "description": "A barren wasteland with withered grass.",
     "pokemon": [
       {
@@ -1002,7 +1002,7 @@
   {
     "id": "bleakbeach",
     "name": "Bleak Beach",
-    "image": "https://www.serebii.net/pokemonpokopia/locations/bleakbeach.jpg",
+    "image": "/locations/bleakbeach.jpg",
     "description": "A desolate beach with crashing waves.",
     "pokemon": [
       {
@@ -1994,7 +1994,7 @@
   {
     "id": "rockyridges",
     "name": "Rocky Ridges",
-    "image": "https://www.serebii.net/pokemonpokopia/locations/rockyridges.jpg",
+    "image": "/locations/rockyridges.jpg",
     "description": "Rugged mountain terrain with steep rocky ridges.",
     "pokemon": [
       {
@@ -2986,7 +2986,7 @@
   {
     "id": "sparklingskylands",
     "name": "Sparkling Skylands",
-    "image": "https://www.serebii.net/pokemonpokopia/locations/sparklingskylands.jpg",
+    "image": "/locations/sparklingskylands.jpg",
     "description": "Floating islands high in the sky.",
     "pokemon": [
       {
@@ -3978,7 +3978,7 @@
   {
     "id": "palettetown",
     "name": "Palette Town",
-    "image": "https://www.serebii.net/pokemonpokopia/locations/palettetown.jpg",
+    "image": "/locations/palettetown.jpg",
     "description": "A small peaceful starting town.",
     "pokemon": [
       {
@@ -5030,7 +5030,7 @@
   {
     "id": "cloudisland",
     "name": "Cloud Island",
-    "image": "https://www.serebii.net/pokemonpokopia/locations/cloudisland.jpg",
+    "image": "/locations/cloudisland.jpg",
     "description": "A mysterious island floating among the clouds.",
     "pokemon": [
       {

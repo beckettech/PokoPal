@@ -2,14 +2,14 @@
   {
     "name": "Appraise",
     "slug": "appraise",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/appraise.png",
+    "icon": "/specialties/appraise.png",
     "description": "You can show lost relics you've found to Professor Tangrowth, who will appraise them for you",
     "pokemon": []
   },
   {
     "name": "Build",
     "slug": "build",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/build.png",
+    "icon": "/specialties/build.png",
     "description": "Pok&eacute;mon with the Build specialty will lead your building projects",
     "pokemon": [
       {
@@ -145,7 +145,7 @@
   {
     "name": "Bulldoze",
     "slug": "bulldoze",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/bulldoze.png",
+    "icon": "/specialties/bulldoze.png",
     "description": "Pok&eacute;mon with the Bulldoze specialty can lead your demolition, rebuilding or relocation projects",
     "pokemon": [
       {
@@ -265,7 +265,7 @@
   {
     "name": "Burn",
     "slug": "burn",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/burn.png",
+    "icon": "/specialties/burn.png",
     "description": "Pok&eacute;mon with the Burn specialty can set fire to Flammable objects. They can also turn Squish clay into Brick",
     "pokemon": [
       {
@@ -373,7 +373,7 @@
   {
     "name": "Chop",
     "slug": "chop",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/chop.png",
+    "icon": "/specialties/chop.png",
     "description": "Pok&eacute;mon with the Chop specialty can process small logs into lumber",
     "pokemon": [
       {
@@ -481,14 +481,14 @@
   {
     "name": "Collect",
     "slug": "collect",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/collect.png",
+    "icon": "/specialties/collect.png",
     "description": "Pok&eacute;mon with the Collect specialty will trade you rare things for certain items",
     "pokemon": []
   },
   {
     "name": "Crush",
     "slug": "crush",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/crush.png",
+    "icon": "/specialties/crush.png",
     "description": "Pok&eacute;mon with the Crush specialty can mash materials into different things",
     "pokemon": [
       {
@@ -548,21 +548,21 @@
   {
     "name": "Dj",
     "slug": "dj",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/dj.png",
+    "icon": "/specialties/dj.png",
     "description": "DJ Rotom can use the DJ specialty to play music CDs for you",
     "pokemon": []
   },
   {
     "name": "Dreamisland",
     "slug": "dreamisland",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/dreamisland.png",
+    "icon": "/specialties/dreamisland.png",
     "description": "Pok&eacute;mon with the Dream Island specialty can transport you to a Dream Island",
     "pokemon": []
   },
   {
     "name": "Eat",
     "slug": "eat",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/eat.png",
+    "icon": "/specialties/eat.png",
     "description": "Mosslax has the Eat specialty. Something good may happen if you offer them food",
     "pokemon": [
       {
@@ -574,14 +574,14 @@
   {
     "name": "Engineer",
     "slug": "engineer",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/engineer.png",
+    "icon": "/specialties/engineer.png",
     "description": "Tinkmaster has the Engineer specialty and can lead huge building projects",
     "pokemon": []
   },
   {
     "name": "Explode",
     "slug": "explode",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/explode.png",
+    "icon": "/specialties/explode.png",
     "description": "Pok&eacute;mon with the Explode specialty can be fired out of a cannon, destroying everything around them on impact",
     "pokemon": [
       {
@@ -605,7 +605,7 @@
   {
     "name": "Fly",
     "slug": "fly",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/fly.png",
+    "icon": "/specialties/fly.png",
     "description": "Pok&eacute;mon with the Fly spceialty can fly you to a Pok&eacute;mon you're searching fo",
     "pokemon": [
       {
@@ -809,7 +809,7 @@
   {
     "name": "Gather",
     "slug": "gather",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/gather.png",
+    "icon": "/specialties/gather.png",
     "description": "Pok&eacute;mon with the Gather specialty will pick up items on the ground and put them inside a community box",
     "pokemon": [
       {
@@ -837,16 +837,16 @@
         "slug": "arbok"
       },
       {
-        "name": "Nidoran\u2640",
-        "slug": "nidoran\u2640"
+        "name": "Nidoran♀",
+        "slug": "nidoran♀"
       },
       {
         "name": "Nidorina",
         "slug": "nidorina"
       },
       {
-        "name": "Nidoran\u2642",
-        "slug": "nidoran\u2642"
+        "name": "Nidoran♂",
+        "slug": "nidoran♂"
       },
       {
         "name": "Nidorino",
@@ -997,14 +997,14 @@
   {
     "name": "Gatherhoney",
     "slug": "gatherhoney",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/gatherhoney.png",
+    "icon": "/specialties/gatherhoney.png",
     "description": "Pok&eacute;mon with the Gather Honey specialty will give you special furniture if you bring them honey",
     "pokemon": []
   },
   {
     "name": "Generate",
     "slug": "generate",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/generate.png",
+    "icon": "/specialties/generate.png",
     "description": "Pok&eacute;mon with the Generate specialty can power machines with electricty",
     "pokemon": [
       {
@@ -1072,7 +1072,7 @@
   {
     "name": "Grow",
     "slug": "grow",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/grow.png",
+    "icon": "/specialties/grow.png",
     "description": "Pok&eacute;mon with the Grow specialty can make plants grow faster",
     "pokemon": [
       {
@@ -1208,7 +1208,7 @@
   {
     "name": "Hype",
     "slug": "hype",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/hype.png",
+    "icon": "/specialties/hype.png",
     "description": "Pok&eacute;mon with the Hype specialty will start dancing when they hear music, improving the mood",
     "pokemon": [
       {
@@ -1276,7 +1276,7 @@
   {
     "name": "Illuminate",
     "slug": "illuminate",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/illuminate.png",
+    "icon": "/specialties/illuminate.png",
     "description": "Peakychu can use the Illuminate specialty to light up the whole town for you",
     "pokemon": [
       {
@@ -1308,14 +1308,14 @@
   {
     "name": "Litter",
     "slug": "litter",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/litter.png",
+    "icon": "/specialties/litter.png",
     "description": "Pok&eacute;mon with the Litter specialty will drop useful materials near their homes",
     "pokemon": []
   },
   {
     "name": "Paint",
     "slug": "paint",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/paint.png",
+    "icon": "/specialties/paint.png",
     "description": "Smearguru has the Paint specialty and can recolor certain items, such as furniture",
     "pokemon": [
       {
@@ -1327,21 +1327,21 @@
   {
     "name": "Party",
     "slug": "party",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/party.png",
+    "icon": "/specialties/party.png",
     "description": "Chef Dente can use the Party specialty to help you prepare food for parties",
     "pokemon": []
   },
   {
     "name": "Rarify",
     "slug": "rarify",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/rarify.png",
+    "icon": "/specialties/rarify.png",
     "description": "Pok&eacute;mon with the Rarify specialty can turn Star Pieces into rare Pok&eacute;metal",
     "pokemon": []
   },
   {
     "name": "Recycle",
     "slug": "recycle",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/recycle.png",
+    "icon": "/specialties/recycle.png",
     "description": "Pok&eacute;mon with the Recycle specialty can process nonburnable garbage into iron ore and wastepaper into paper",
     "pokemon": [
       {
@@ -1365,7 +1365,7 @@
   {
     "name": "Search",
     "slug": "search",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/search.png",
+    "icon": "/specialties/search.png",
     "description": "Pok&eacute;mon with the Search specialty can help you find buried items",
     "pokemon": [
       {
@@ -1493,8 +1493,8 @@
   {
     "name": "Storage",
     "slug": "storage",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/storage.png",
-    "description": "Pok\u00c3\u00a9mon with the Storage specialty can hold on to your items for you",
+    "icon": "/specialties/storage.png",
+    "description": "PokÃ©mon with the Storage specialty can hold on to your items for you",
     "pokemon": [
       {
         "name": "Chansey",
@@ -1533,7 +1533,7 @@
   {
     "name": "Teleport",
     "slug": "teleport",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/teleport.png",
+    "icon": "/specialties/teleport.png",
     "description": "Pok&eacute;mon with the Teleport specialty can instantly take you to a Pok&eacute;mon you're searching for",
     "pokemon": [
       {
@@ -1621,7 +1621,7 @@
   {
     "name": "Trade",
     "slug": "trade",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/trade.png",
+    "icon": "/specialties/trade.png",
     "description": "Pok&eacute;mon with the Trade speicalty can exchange items with you at a cash register",
     "pokemon": [
       {
@@ -1637,7 +1637,7 @@
   {
     "name": "Transform",
     "slug": "transform",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/transform.png",
+    "icon": "/specialties/transform.png",
     "description": "Ditto can improve its moves by using Transform",
     "pokemon": [
       {
@@ -1653,7 +1653,7 @@
   {
     "name": "Water",
     "slug": "water",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/water.png",
+    "icon": "/specialties/water.png",
     "description": "Pok&eacute;mon with the Water specialty can use a full water basin to spray water on nearby fields and plants",
     "pokemon": [
       {
@@ -1897,7 +1897,7 @@
   {
     "name": "Yawn",
     "slug": "yawn",
-    "icon": "https://www.serebii.net/pokemonpokopia/pokedex/specialty/yawn.png",
+    "icon": "/specialties/yawn.png",
     "description": "Pok&eacute;mon with the Yawn specialty can tell you how humid it is",
     "pokemon": [
       {

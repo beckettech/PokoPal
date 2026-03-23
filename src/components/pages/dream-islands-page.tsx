@@ -5,7 +5,6 @@ import { ArrowLeft, Star, Sparkles, Info, Eye, EyeOff, Plus, Check } from "lucid
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useMemo } from "react";
 
-const BASE = "https://www.serebii.net/pokemonpokopia";
 
 const DREAM_ISLANDS = [
   {
