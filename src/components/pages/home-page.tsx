@@ -163,41 +163,41 @@ export function HomePage() {
       {/* Red Bottom Tab with Stats and Chat Button */}
       <div className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 pb-2">
         {/* Stats Row */}
-        <div className="h-16 flex items-center justify-between px-4 relative">
-          {/* Friends */}
-          <button onClick={() => setCurrentPage("dex")} className="text-center active:scale-95 transition-transform">
-            <p className="text-lg font-bold text-white">{capturedPokemon.length}</p>
-            <p className="text-[9px] text-white/80">Friends</p>
-          </button>
-
-          {/* Habitats */}
-          <button onClick={() => setCurrentPage("habitat-dex")} className="text-center active:scale-95 transition-transform">
-            <p className="text-lg font-bold text-white">{discoveredHabitats.length}</p>
-            <p className="text-[9px] text-white/80">Habitats</p>
-          </button>
-
-          {/* Chat Button - Center */}
-          <div className="absolute left-1/2 -translate-x-1/2 -top-5">
-            <button
-              onClick={() => setCurrentPage("chat")}
-              className="w-16 h-16 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 shadow-2xl flex flex-col items-center justify-center border-4 border-white active:scale-95 transition-transform"
-            >
-              <MessageCircle className="w-6 h-6 text-white" />
-              <span className="text-[7px] font-semibold text-white/90 mt-0.5">Ask Anything</span>
+        <div className="h-20 flex items-center px-3 relative">
+          {/* Left stats */}
+          <div className="flex gap-5 flex-1 justify-start pl-1">
+            <button onClick={() => setCurrentPage("dex")} className="text-center active:scale-95 transition-transform">
+              <p className="text-xl font-bold text-white">{capturedPokemon.length}</p>
+              <p className="text-[9px] text-white/80">Friends</p>
+            </button>
+            <button onClick={() => setCurrentPage("habitat-dex")} className="text-center active:scale-95 transition-transform">
+              <p className="text-xl font-bold text-white">{discoveredHabitats.length}</p>
+              <p className="text-[9px] text-white/80">Habitats</p>
             </button>
           </div>
 
-          {/* Relics */}
-          <button onClick={() => setCurrentPage("relics")} className="text-center active:scale-95 transition-transform">
-            <p className="text-lg font-bold text-white">{foundRelics.length}</p>
-            <p className="text-[9px] text-white/80">Relics</p>
-          </button>
+          {/* Chat Button - Center, floats up */}
+          <div className="absolute left-1/2 -translate-x-1/2 -top-8">
+            <button
+              onClick={() => setCurrentPage("chat")}
+              className="w-24 h-24 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 shadow-2xl flex flex-col items-center justify-center border-4 border-white active:scale-95 transition-transform"
+            >
+              <MessageCircle className="w-9 h-9 text-white" />
+              <span className="text-[9px] font-semibold text-white/90 mt-1">Ask Anything</span>
+            </button>
+          </div>
 
-          {/* Locations */}
-          <button onClick={() => setCurrentPage("map")} className="text-center active:scale-95 transition-transform">
-            <p className="text-lg font-bold text-white">{visitedLocations.length}</p>
-            <p className="text-[9px] text-white/80">Locations</p>
-          </button>
+          {/* Right stats */}
+          <div className="flex gap-5 flex-1 justify-end pr-1">
+            <button onClick={() => setCurrentPage("relics")} className="text-center active:scale-95 transition-transform">
+              <p className="text-xl font-bold text-white">{foundRelics.length}</p>
+              <p className="text-[9px] text-white/80">Relics</p>
+            </button>
+            <button onClick={() => setCurrentPage("map")} className="text-center active:scale-95 transition-transform">
+              <p className="text-xl font-bold text-white">{visitedLocations.length}</p>
+              <p className="text-[9px] text-white/80">Locations</p>
+            </button>
+          </div>
         </div>
 
         {/* Progress Bar */}
