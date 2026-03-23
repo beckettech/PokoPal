@@ -194,6 +194,7 @@ export const rarities = ["Common", "Rare", "Legendary"] as const;
 // All 300 Pokemon in Pokopia Dex order
 // Specialties from Serebii: Grow, Build, Chop, Burn, Water, Gather, Generate, etc.
 // Note: locations are added dynamically from the pokemonToLocations mapping
+// IMPORTANT: Only Pokopia dex pokemon (IDs matched to Serebii image URLs) — no national dex IDs >300
 const _rawPokemonList: RawPokemon[] = [
   { id: 1, nationalDex: null, name: "Bulbasaur", types: ["Grow"], habitats: ["Tall Grass","Bench with greenery"], image: "https://www.serebii.net/pokemonpokopia/pokemon/001.png", rarity: "Common", specialties: ["Grow"], locations: ["Withered Wastelands","Palette Town","Cloud Island"], time: "Any", weather: "Any" },
   { id: 2, nationalDex: null, name: "Ivysaur", types: ["Grow"], habitats: ["Field of Flowers","Bench with greenery"], image: "https://www.serebii.net/pokemonpokopia/pokemon/002.png", rarity: "Rare", specialties: ["Grow"], locations: ["Withered Wastelands","Cloud Island"], time: "Any", weather: "Any" },
