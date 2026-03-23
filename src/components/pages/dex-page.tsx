@@ -168,7 +168,7 @@ export function DexPage() {
         {/* Scrollable content */}
         <div className="flex-1 overflow-y-auto">
           <div className="pt-4 px-4 pb-8 space-y-3">
-            {/* Image card — image left, types + habitats right */}
+            {/* Image card — image left, habitats right (no redundant specialty/type tags) */}
             <div className="bg-white rounded-2xl p-4 flex items-start gap-4 shadow-sm">
               <div className={`w-24 h-24 shrink-0 rounded-2xl ${getRarityBg(selectedPokemon.rarity)} p-2`}>
                 <img
@@ -179,17 +179,11 @@ export function DexPage() {
                 />
               </div>
               <div className="flex-1 min-w-0">
-                {/* Types */}
-                <div className="flex flex-wrap gap-1 mb-2">
-                  {selectedPokemon.types.map(t => (
-                    <span key={t} className="text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-600 font-medium">{t}</span>
-                  ))}
-                </div>
-                {/* Habitats inline */}
+                {/* Habitats — name above image */}
                 {selectedPokemon.habitats && selectedPokemon.habitats.length > 0 && (
                   <div>
-                    <p className="text-[10px] font-bold text-emerald-700 uppercase tracking-wide mb-1">Habitats</p>
-                    <div className="flex flex-col gap-1">
+                    <p className="text-[10px] font-bold text-emerald-700 uppercase tracking-wide mb-1.5">Habitats</p>
+                    <div className="flex flex-col gap-1.5">
                       {selectedPokemon.habitats.map((habitat: string, i: number) => {
                         const hab = habitatMap[habitat.toLowerCase()];
                         return (
@@ -199,13 +193,13 @@ export function DexPage() {
                               if (hab) navigateToHabitat(hab.id);
                               else setCurrentPage("habitat-dex");
                             }}
-                            className="flex items-center gap-1.5 bg-emerald-50 rounded-lg px-2 py-1 border border-emerald-100 active:scale-95 transition-transform text-left w-full"
+                            className="flex items-center gap-2 bg-emerald-50 rounded-xl border border-emerald-100 active:scale-95 transition-transform text-left w-full overflow-hidden"
                           >
                             {hab?.image && (
-                              <img src={hab.image} alt={habitat} className="w-10 h-10 object-cover rounded-lg shrink-0"
+                              <img src={hab.image} alt={habitat} className="w-14 h-14 object-cover shrink-0"
                                 onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                             )}
-                            <span className="text-[10px] font-semibold text-emerald-800 truncate">{habitat}</span>
+                            <span className="text-xs font-semibold text-emerald-800 leading-tight pr-1">{habitat}</span>
                           </button>
                         );
                       })}
