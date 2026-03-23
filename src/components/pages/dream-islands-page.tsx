@@ -3,7 +3,7 @@
 import { useAppStore } from "@/lib/store";
 import { ArrowLeft, Star, Sparkles, Info, Eye, EyeOff, Plus, Check } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 const BASE = "https://www.serebii.net/pokemonpokopia";
 
@@ -166,27 +166,19 @@ const DREAM_ISLANDS = [
 ];
 
 export function DreamIslandsPage() {
-  const { setCurrentPage } = useAppStore();
-  const [visitedIslands, setVisitedIslands] = useState<Set<string>>(new Set());
+  const { setCurrentPage, visitedIslands, toggleVisitedIsland } = useAppStore();
   const [expandedIsland, setExpandedIsland] = useState<string | null>(null);
   const [sortFilter, setSortFilter] = useState<"all" | "visited" | "unvisited">("all");
 
-  const toggleVisited = (id: string, e?: React.MouseEvent) => {
-    e?.stopPropagation();
-    setVisitedIslands(prev => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
-  };
+  // Convert array to Set for quick lookup
+  const visitedSet = useMemo(() => new Set(visitedIslands), [visitedIslands]);
 
   const toggleExpand = (id: string) => {
     setExpandedIsland(prev => prev === id ? null : id);
   };
 
   const filteredIslands = DREAM_ISLANDS.filter(island => {
-    const visited = visitedIslands.has(island.id);
+    const visited = visitedSet.has(island.id);
     if (sortFilter === "visited") return visited;
     if (sortFilter === "unvisited") return !visited;
     return true;
@@ -209,7 +201,7 @@ export function DreamIslandsPage() {
             Dream Islands
           </h1>
           <div className="flex items-center gap-1 bg-white/20 px-2 py-1 rounded-full">
-            <span className="text-white text-xs font-bold">{visitedIslands.size}/{DREAM_ISLANDS.length}</span>
+            <span className="text-white text-xs font-bold">{visitedSet.size}/{DREAM_ISLANDS.length}</span>
           </div>
         </div>
         {/* Filter pills */}
@@ -246,7 +238,7 @@ export function DreamIslandsPage() {
         {/* Island list */}
         <div className="px-3 pb-4 space-y-2">
           {filteredIslands.map((island, index) => {
-            const visited = visitedIslands.has(island.id);
+            const visited = visitedSet.has(island.id);
             const expanded = expandedIsland === island.id;
 
             return (
@@ -300,7 +292,7 @@ export function DreamIslandsPage() {
 
                   {/* Mark visited — dex friend button style */}
                   <button
-                    onClick={(e) => toggleVisited(island.id, e)}
+                    onClick={(e) => { e.stopPropagation(); toggleVisitedIsland(island.id); }}
                     className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-transform ${
                       visited
                         ? 'bg-yellow-400 text-yellow-900'

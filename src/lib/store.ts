@@ -1,5 +1,6 @@
 // Pokopia Store - State management for the app
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 export type Page = 
   | "home" 
@@ -43,46 +44,67 @@ interface AppState {
   isPokemonCaptured: (id: number) => boolean;
   visitedIslands: string[];
   toggleVisitedIsland: (id: string) => void;
+  discoveredHabitats: number[];
+  toggleDiscoveredHabitat: (id: number) => void;
 }
 
-export const useAppStore = create<AppState>()((set, get) => ({
-  currentPage: "home",
-  setCurrentPage: (page) => set({ currentPage: page }),
-  focusedPokemonId: null,
-  focusedHabitatId: null,
-  focusedLocationId: null,
-  navigateToPokemon: (pokemonId) => set({ currentPage: "dex", focusedPokemonId: pokemonId, focusedHabitatId: null, focusedLocationId: null }),
-  navigateToHabitat: (habitatId) => set({ currentPage: "habitat-dex", focusedHabitatId: habitatId, focusedPokemonId: null, focusedLocationId: null }),
-  navigateToLocation: (locationId) => set({ currentPage: "map", focusedLocationId: locationId, focusedPokemonId: null, focusedHabitatId: null }),
-  clearFocus: () => set({ focusedPokemonId: null, focusedHabitatId: null, focusedLocationId: null }),
-  coins: 100,
-  addCoins: (amount) => set((state) => ({ coins: state.coins + amount })),
-  spendCoins: (amount) => {
-    const current = get().coins;
-    if (current >= amount) {
-      set({ coins: current - amount });
-      return true;
+export const useAppStore = create<AppState>()(
+  persist(
+    (set, get) => ({
+      currentPage: "home",
+      setCurrentPage: (page) => set({ currentPage: page }),
+      focusedPokemonId: null,
+      focusedHabitatId: null,
+      focusedLocationId: null,
+      navigateToPokemon: (pokemonId) => set({ currentPage: "dex", focusedPokemonId: pokemonId, focusedHabitatId: null, focusedLocationId: null }),
+      navigateToHabitat: (habitatId) => set({ currentPage: "habitat-dex", focusedHabitatId: habitatId, focusedPokemonId: null, focusedLocationId: null }),
+      navigateToLocation: (locationId) => set({ currentPage: "map", focusedLocationId: locationId, focusedPokemonId: null, focusedHabitatId: null }),
+      clearFocus: () => set({ focusedPokemonId: null, focusedHabitatId: null, focusedLocationId: null }),
+      coins: 100,
+      addCoins: (amount) => set((state) => ({ coins: state.coins + amount })),
+      spendCoins: (amount) => {
+        const current = get().coins;
+        if (current >= amount) {
+          set({ coins: current - amount });
+          return true;
+        }
+        return false;
+      },
+      selectedPokemon: null,
+      setSelectedPokemon: (pokemon) => set({ selectedPokemon: pokemon }),
+      capturedPokemon: [1, 4, 7, 25, 133],
+      addCapturedPokemon: (id) => set((state) => ({ 
+        capturedPokemon: state.capturedPokemon.includes(id) 
+          ? state.capturedPokemon 
+          : [...state.capturedPokemon, id] 
+      })),
+      toggleCapturedPokemon: (id) => set((state) => ({ 
+        capturedPokemon: state.capturedPokemon.includes(id) 
+          ? state.capturedPokemon.filter(pid => pid !== id)
+          : [...state.capturedPokemon, id] 
+      })),
+      isPokemonCaptured: (id) => get().capturedPokemon.includes(id),
+      visitedIslands: [],
+      toggleVisitedIsland: (id) => set((state) => ({
+        visitedIslands: state.visitedIslands.includes(id)
+          ? state.visitedIslands.filter(i => i !== id)
+          : [...state.visitedIslands, id]
+      })),
+      discoveredHabitats: [],
+      toggleDiscoveredHabitat: (id) => set((state) => ({
+        discoveredHabitats: state.discoveredHabitats.includes(id)
+          ? state.discoveredHabitats.filter(h => h !== id)
+          : [...state.discoveredHabitats, id]
+      })),
+    }),
+    {
+      name: "pokopia-storage",
+      partialize: (state) => ({
+        capturedPokemon: state.capturedPokemon,
+        visitedIslands: state.visitedIslands,
+        discoveredHabitats: state.discoveredHabitats,
+        coins: state.coins,
+      }),
     }
-    return false;
-  },
-  selectedPokemon: null,
-  setSelectedPokemon: (pokemon) => set({ selectedPokemon: pokemon }),
-  capturedPokemon: [1, 4, 7, 25, 133],
-  addCapturedPokemon: (id) => set((state) => ({ 
-    capturedPokemon: state.capturedPokemon.includes(id) 
-      ? state.capturedPokemon 
-      : [...state.capturedPokemon, id] 
-  })),
-  toggleCapturedPokemon: (id) => set((state) => ({ 
-    capturedPokemon: state.capturedPokemon.includes(id) 
-      ? state.capturedPokemon.filter(pid => pid !== id)
-      : [...state.capturedPokemon, id] 
-  })),
-  isPokemonCaptured: (id) => get().capturedPokemon.includes(id),
-  visitedIslands: [],
-  toggleVisitedIsland: (id) => set((state) => ({
-    visitedIslands: state.visitedIslands.includes(id)
-      ? state.visitedIslands.filter(i => i !== id)
-      : [...state.visitedIslands, id]
-  })),
-}));
+  )
+);

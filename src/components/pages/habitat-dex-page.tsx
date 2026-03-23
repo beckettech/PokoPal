@@ -72,11 +72,13 @@ for (const p of pokemonList) {
 
 
 export function HabitatDexPage() {
-  const { setCurrentPage, navigateToPokemon, capturedPokemon, setSelectedPokemon, focusedHabitatId, clearFocus } = useAppStore();
+  const { setCurrentPage, navigateToPokemon, capturedPokemon, setSelectedPokemon, focusedHabitatId, clearFocus, discoveredHabitats, toggleDiscoveredHabitat } = useAppStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [sortFilter, setSortFilter] = useState<"all" | "discovered" | "undiscovered">("all");
   const [expandedHabitat, setExpandedHabitat] = useState<number | null>(null);
-  const [discoveredHabitats, setDiscoveredHabitats] = useState<Set<number>>(new Set());
+
+  // Convert array to Set for quick lookup
+  const discoveredSet = useMemo(() => new Set(discoveredHabitats), [discoveredHabitats]);
 
   // Auto-expand a habitat if navigated to via deep-link
   useEffect(() => {
@@ -106,24 +108,15 @@ export function HabitatDexPage() {
     return { label: `${caught}/${total}`, icon: <Clock className="w-3 h-3" />, color: "bg-yellow-100 text-yellow-700" };
   };
 
-  const toggleDiscovered = (id: number) => {
-    setDiscoveredHabitats(prev => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
-  };
-
   const filteredHabitats = useMemo(() => {
     return habitatsData.filter(hab => {
       const matchesSearch = hab.name.toLowerCase().includes(searchQuery.toLowerCase());
-      const isDiscovered = discoveredHabitats.has(hab.id);
+      const isDiscovered = discoveredSet.has(hab.id);
       if (sortFilter === "discovered" && !isDiscovered) return false;
       if (sortFilter === "undiscovered" && isDiscovered) return false;
       return matchesSearch;
     });
-  }, [searchQuery, sortFilter, discoveredHabitats]);
+  }, [searchQuery, sortFilter, discoveredSet]);
 
   const handlePokemonClick = (slug: string, name: string) => {
     // Find the Pokemon by name and deep-link to it in dex
@@ -146,7 +139,7 @@ export function HabitatDexPage() {
           </motion.button>
           <h1 className="text-lg font-bold text-white">Habitat Dex</h1>
           <div className="flex items-center gap-1 bg-white/20 px-2 py-1 rounded-full">
-            <span className="text-white text-xs font-bold">{discoveredHabitats.size}/{habitatsData.length}</span>
+            <span className="text-white text-xs font-bold">{discoveredSet.size}/{habitatsData.length}</span>
           </div>
         </div>
 
@@ -190,7 +183,7 @@ export function HabitatDexPage() {
             {filteredHabitats.map((habitat, index) => {
               const status = getCompletionStatus(habitat.pokemon);
               const isExpanded = expandedHabitat === habitat.id;
-              const isDiscovered = discoveredHabitats.has(habitat.id);
+              const isDiscovered = discoveredSet.has(habitat.id);
 
               return (
                 <motion.div
@@ -239,7 +232,7 @@ export function HabitatDexPage() {
 
                     {/* Discovered mark button — matches dex friend style */}
                     <button
-                      onClick={() => toggleDiscovered(habitat.id)}
+                      onClick={() => toggleDiscoveredHabitat(habitat.id)}
                       className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-transform ${
                         isDiscovered
                           ? 'bg-yellow-400 text-yellow-900'
