@@ -366,7 +366,7 @@ export function DexPage() {
           });
           return (
             <div
-              key={pokemon.id}
+              key={`${pokemon.id}-${pokemon.name}`}
               className={`flex items-center gap-3 px-3 py-2.5 border-b border-gray-100 active:brightness-95 ${isEven ? 'bg-white' : 'bg-slate-50'}`}
               onClick={() => setSelectedPokemon(pokemon)}
             >
