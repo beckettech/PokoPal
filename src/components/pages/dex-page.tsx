@@ -157,10 +157,9 @@ export function DexPage() {
             <div className="bg-white rounded-2xl p-4 flex items-start gap-4 shadow-sm">
               <div className={`w-24 h-24 shrink-0 rounded-2xl ${getRarityBg(selectedPokemon.rarity)} p-2`}>
                 <img
-                  src={selectedPokemon.image}
+                  src={isFriend ? selectedPokemon.image.replace('/pokemon/', '/pokemon-original/') : selectedPokemon.image}
                   alt={selectedPokemon.name}
                   className="w-full h-full object-contain"
-                  style={{ filter: 'drop-shadow(0 0 2px black)' }}
                 />
               </div>
               <div className="flex-1 min-w-0">
@@ -373,10 +372,9 @@ export function DexPage() {
               {/* Pokemon Image */}
               <div className={`w-14 h-14 shrink-0 rounded-xl ${getRarityBg(pokemon.rarity)} p-1`}>
                 <img
-                  src={pokemon.image}
+                  src={isFriend ? pokemon.image.replace('/pokemon/', '/pokemon-original/') : pokemon.image}
                   alt={pokemon.name}
                   className="w-full h-full object-contain drop-shadow-sm"
-                  style={{ filter: 'drop-shadow(0 0 1px black)' }}
                   loading="lazy"
                 />
               </div>
