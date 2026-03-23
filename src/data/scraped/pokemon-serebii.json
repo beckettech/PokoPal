@@ -182,7 +182,46 @@
   },
   {
     "slug": "charmander",
-    "error": "Navigation timeout of 30000 ms exceeded"
+    "name": "Charmander",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/004.png",
+    "pokopiaId": 4,
+    "nationalDex": null,
+    "specialties": [
+      "Burn"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tall Grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [],
+    "rarity": "Common"
   },
   {
     "slug": "charmeleon",
@@ -2142,7 +2181,7 @@
     "slug": "professortangrowth",
     "name": "Professor Tangrowth",
     "image": "https://www.serebii.net/pokemonpokopia/pokemon/465-professortangrowth.png",
-    "pokopiaId": null,
+    "pokopiaId": 465,
     "nationalDex": null,
     "specialties": [
       "Appraise"
@@ -2178,14 +2217,7 @@
       "Cloud",
       "Rain"
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "rarity": "Common"
   },
   {
@@ -3080,7 +3112,7 @@
     "slug": "shelloseastsea",
     "name": "Shellos East Sea",
     "image": "https://www.serebii.net/pokemonpokopia/pokemon/422-shelloseastsea.png",
-    "pokopiaId": null,
+    "pokopiaId": 422,
     "nationalDex": null,
     "specialties": [
       "Water"
@@ -3116,14 +3148,7 @@
       "Cloud",
       "Rain"
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "rarity": "Common"
   },
   {
@@ -3176,7 +3201,7 @@
     "slug": "gastrodoneastsea",
     "name": "Gastrodon East Sea",
     "image": "https://www.serebii.net/pokemonpokopia/pokemon/423-gastrodoneastsea.png",
-    "pokopiaId": null,
+    "pokopiaId": 423,
     "nationalDex": null,
     "specialties": [
       "Water",
@@ -3213,14 +3238,7 @@
       "Cloud",
       "Rain"
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "rarity": "Rare"
   },
   {
@@ -5809,7 +5827,7 @@
     "slug": "mosslax",
     "name": "Mosslax",
     "image": "https://www.serebii.net/pokemonpokopia/pokemon/143-mosslax.png",
-    "pokopiaId": null,
+    "pokopiaId": 143,
     "nationalDex": null,
     "specialties": [
       "Eat"
@@ -5845,9 +5863,7 @@
       "Cloud",
       "Rain"
     ],
-    "locations": [
-      "Rocky Ridges"
-    ],
+    "locations": [],
     "rarity": "Common"
   },
   {
@@ -6352,7 +6368,7 @@
     "slug": "paldeanwooper",
     "name": "Paldean Wooper",
     "image": "https://www.serebii.net/pokemonpokopia/pokemon/194-p.png",
-    "pokopiaId": null,
+    "pokopiaId": 194,
     "nationalDex": null,
     "specialties": [
       "Litter"
@@ -6388,10 +6404,7 @@
       "Cloud",
       "Rain"
     ],
-    "locations": [
-      "Bleak Beach",
-      "Cloud Island"
-    ],
+    "locations": [],
     "rarity": "Common"
   },
   {
@@ -6463,7 +6476,7 @@
     "slug": "smeargle",
     "name": "Smeargle",
     "image": "https://www.serebii.net/pokemonpokopia/pokemon/235-smearguru.png",
-    "pokopiaId": null,
+    "pokopiaId": 235,
     "nationalDex": null,
     "specialties": [
       "Paint"
@@ -6499,9 +6512,7 @@
       "Cloud",
       "Rain"
     ],
-    "locations": [
-      "Bleak Beach"
-    ],
+    "locations": [],
     "rarity": "Common"
   },
   {
@@ -7889,7 +7900,7 @@
     "slug": "tatsugiricurlyform",
     "name": "Tatsugiri Curly Form",
     "image": "https://www.serebii.net/pokemonpokopia/pokemon/978-tatsugiricurlyform.png",
-    "pokopiaId": null,
+    "pokopiaId": 978,
     "nationalDex": null,
     "specialties": [
       "Trade"
@@ -7925,21 +7936,14 @@
       "Cloud",
       "Rain"
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "rarity": "Rare"
   },
   {
     "slug": "tatsugiridroopyform",
     "name": "Tatsugiri Droopy Form",
     "image": "https://www.serebii.net/pokemonpokopia/pokemon/978-tatsugiridroopyform.png",
-    "pokopiaId": null,
+    "pokopiaId": 978,
     "nationalDex": null,
     "specialties": [
       "Trade"
@@ -7975,21 +7979,14 @@
       "Cloud",
       "Rain"
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "rarity": "Rare"
   },
   {
     "slug": "tatsugiristretchyform",
     "name": "Tatsugiri Stretchy Form",
     "image": "https://www.serebii.net/pokemonpokopia/pokemon/978-tatsugiristretchyform.png",
-    "pokopiaId": null,
+    "pokopiaId": 978,
     "nationalDex": null,
     "specialties": [
       "Trade"
@@ -8025,14 +8022,7 @@
       "Cloud",
       "Rain"
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "rarity": "Rare"
   },
   {
@@ -9983,7 +9973,7 @@
     "slug": "stereorotom",
     "name": "Stereo Rotom",
     "image": "https://www.serebii.net/pokemonpokopia/pokemon/479-stereorotom.png",
-    "pokopiaId": null,
+    "pokopiaId": 479,
     "nationalDex": null,
     "specialties": [
       "DJ"
@@ -10019,14 +10009,7 @@
       "Cloud",
       "Rain"
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "rarity": "Rare"
   },
   {
@@ -10511,7 +10494,7 @@
     "slug": "greedent",
     "name": "Greedent",
     "image": "https://www.serebii.net/pokemonpokopia/pokemon/820-cook.png",
-    "pokopiaId": null,
+    "pokopiaId": 820,
     "nationalDex": null,
     "specialties": [
       "Party"
@@ -10547,9 +10530,7 @@
       "Cloud",
       "Rain"
     ],
-    "locations": [
-      "Rocky Ridges"
-    ],
+    "locations": [],
     "rarity": "Common"
   },
   {
@@ -10753,7 +10734,7 @@
     "slug": "toxtricityampedform",
     "name": "Toxtricity Amped Form",
     "image": "https://www.serebii.net/pokemonpokopia/pokemon/849-toxtricityampedform.png",
-    "pokopiaId": null,
+    "pokopiaId": 849,
     "nationalDex": null,
     "specialties": [
       "Generate",
@@ -10790,21 +10771,14 @@
       "Cloud",
       "Rain"
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "rarity": "Common"
   },
   {
     "slug": "toxtricitylowkeyform",
     "name": "Toxtricity Low Key Form",
     "image": "https://www.serebii.net/pokemonpokopia/pokemon/849-toxtricitylowkeyform.png",
-    "pokopiaId": null,
+    "pokopiaId": 849,
     "nationalDex": null,
     "specialties": [
       "Generate",
@@ -10841,14 +10815,7 @@
       "Cloud",
       "Rain"
     ],
-    "locations": [
-      "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
-      "Palette Town",
-      "Cloud Island"
-    ],
+    "locations": [],
     "rarity": "Rare"
   },
   {
@@ -14716,7 +14683,7 @@
     "slug": "tinkaton",
     "name": "Tinkaton",
     "image": "https://www.serebii.net/pokemonpokopia/pokemon/959-tinkmeister.png",
-    "pokopiaId": null,
+    "pokopiaId": 959,
     "nationalDex": null,
     "specialties": [
       "Engineer"
@@ -14752,10 +14719,7 @@
       "Cloud",
       "Rain"
     ],
-    "locations": [
-      "Palette Town",
-      "Sparkling Skylands"
-    ],
+    "locations": [],
     "rarity": "Common"
   },
   {
