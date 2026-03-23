@@ -471,3 +471,4 @@ export function getSpecialtyIcons(specialties: string[]): string[] {
     .filter(s => s && s.trim().length > 0)
     .map(getSpecialtyIcon);
 }
+// Mon Mar 23 11:11:24 AM EDT 2026
