@@ -423,13 +423,17 @@ export interface CloudIslandPost {
   likes: number;
   isDream: boolean;
   isFeatured: boolean;
+  isOfficial?: boolean;
   createdAt: string;
 }
 
 export const cloudIslandsPosts: CloudIslandPost[] = [
-  { id: 1, islandCode: "PKOP-DEV-001", title: "Developer's Paradise", description: "The official Pokopia developer showcase island. Featuring all habitat types and hidden secrets!", author: "Pokopia Team", screenshots: [], likes: 9999, isDream: true, isFeatured: true, createdAt: "2026-03-01" },
-  { id: 2, islandCode: "LAPR-2024", title: "Lapras Lagoon", description: "A beautiful tropical paradise with waterfalls and hot springs. Perfect for water types!", author: "TrainerBlue", screenshots: [], likes: 342, isDream: true, isFeatured: false, createdAt: "2026-03-10" },
-  { id: 3, islandCode: "ROCK-8888", title: "Rocky Mountain High", description: "Mountain-themed island with caves, boulders, and rare Tyranitar sightings!", author: "RockMaster", screenshots: [], likes: 156, isDream: false, isFeatured: false, createdAt: "2026-03-12" },
+  // Official Serebii islands with fake likes to stay at top
+  { id: 1, islandCode: "EIKO-001", title: "EIKO City", description: "Official EIKO City Cloud Island - A beautiful urban paradise with modern amenities and plenty of Pokemon habitats!", author: "Official", screenshots: [], likes: 9999, isDream: true, isFeatured: true, isOfficial: true, createdAt: "2026-03-01" },
+  { id: 2, islandCode: "SASH-001", title: "Sashihara Island", description: "Official Sashihara Island - A serene natural sanctuary perfect for relaxing with your Pokemon friends!", author: "Official", screenshots: [], likes: 9998, isDream: true, isFeatured: true, isOfficial: true, createdAt: "2026-03-01" },
+  // Community islands
+  { id: 3, islandCode: "LAPR-2024", title: "Lapras Lagoon", description: "A beautiful tropical paradise with waterfalls and hot springs. Perfect for water types!", author: "TrainerBlue", screenshots: [], likes: 342, isDream: true, isFeatured: false, createdAt: "2026-03-10" },
+  { id: 4, islandCode: "ROCK-8888", title: "Rocky Mountain High", description: "Mountain-themed island with caves, boulders, and rare Tyranitar sightings!", author: "RockMaster", screenshots: [], likes: 156, isDream: false, isFeatured: false, createdAt: "2026-03-12" },
 ];
 
 // Mystery Gifts
