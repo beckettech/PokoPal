@@ -1,237 +1,340 @@
 'use client'
 
-import { useAppStore } from "@/lib/store";
-import { ArrowLeft, Send, Coins, Sparkles, Lightbulb, MapPin, HelpCircle, Bot, User } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
+import { ArrowLeft, Send, Coins, Sparkles, Loader2 } from "lucide-react";
+import { useAppStore } from "@/lib/store";
+import { motion, AnimatePresence } from "framer-motion";
+
+// Dexter avatar
+const DEXTER_AVATAR = "🤖";
 
 interface Message {
-  id: number;
+  id: string;
   role: "user" | "assistant";
   content: string;
+  timestamp: number;
 }
 
-const suggestedPrompts = [
-  { icon: MapPin, text: "Where can I find Tyranitar?", color: "bg-green-100 text-green-700" },
-  { icon: Lightbulb, text: "How do I build a Hot Spring?", color: "bg-orange-100 text-orange-700" },
-  { icon: HelpCircle, text: "What's the best habitat for Eevee?", color: "bg-purple-100 text-purple-700" },
-  { icon: Sparkles, text: "Tips for rare Pokémon?", color: "bg-pink-100 text-pink-700" },
-];
-
 export function ChatPage() {
-  const { setCurrentPage, coins, spendCoins } = useAppStore();
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: 0,
-      role: "assistant",
-      content: "Hey there, Trainer! 👋 I'm Dexter, your Pokopia guide! I can help you find residents, build habitats, or explore the island. What would you like to know?",
-    }
-  ]);
+  const { setCurrentPage, coins, chatMessages, addChatMessage, spendCoins, capturedPokemon, ownedItems, discoveredHabitats } = useAppStore();
   const [input, setInput] = useState("");
-  const [isTyping, setIsTyping] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [streamingContent, setStreamingContent] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  const scrollToBottom = () => {
+  // Scroll to bottom on new messages
+  useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [chatMessages, streamingContent]);
+
+  // Build user progress summary for context
+  const getUserProgress = () => {
+    return `Friends: ${capturedPokemon.length}, Items owned: ${ownedItems.length}, Habitats discovered: ${discoveredHabitats.length}`;
   };
 
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+  const handleSend = async () => {
+    if (!input.trim() || isLoading) return;
+    if (coins < 100) {
+      alert("Not enough coins! You need 100 coins per question.");
+      return;
+    }
 
-  const handleSend = (text?: string) => {
-    const messageText = text || input.trim();
-    if (!messageText || coins < 1) return;
-
-    // Spend a coin
-    spendCoins(1);
-
-    // Add user message
-    const userMessage: Message = {
-      id: Date.now(),
-      role: "user",
-      content: messageText,
-    };
-    setMessages(prev => [...prev, userMessage]);
+    const userMessage = input.trim();
     setInput("");
-    setIsTyping(true);
+    
+    // Add user message
+    addChatMessage({ role: "user", content: userMessage });
+    
+    // Deduct coins
+    const success = spendCoins(100);
+    if (!success) return;
 
-    // Simulate AI response
-    setTimeout(() => {
-      const responses: Record<string, string> = {
-        "Where can I find Tyranitar?": "Great question! Tyranitar is a **Very Rare** Pokémon that can be found in the **Mossy Rest Spot** habitat. You'll need:\n\n• 4x Moss blocks\n• Patience (it may take several real-life days to appear!)\n\n💡 Tip: Building multiple Mossy Rest Spots increases your chances!",
-        "How do I build a Hot Spring?": "To build a **Hot Spring** habitat, you'll need:\n\n🧱 2x Hot Spring Water tiles\n🪑 1x Shower\n💺 1x Any Seat\n\nThis habitat attracts **Psyduck, Golduck, and Torkoal**! Perfect for water-loving Pokémon.",
-        "What's the best habitat for Eevee?": "Eevee loves the **Pretty Flower Bed** habitat! 🌸\n\n**Build Requirements:**\n• 4x Wildflowers\n\n**Special Note:** Eevee only appears in Palette Town! Make sure to build your habitat there.\n\nEevee can evolve into multiple forms based on different conditions!",
-        "Tips for rare Pokémon?": "Here are my top tips for rare Pokémon! 🌟\n\n1. **Build Multiple Habitats** - More habitats = more spawn chances\n2. **Check Conditions** - Some need specific weather or time\n3. **Location Matters** - Palette Town has exclusive spawns\n4. **Be Patient** - Very Rare Pokémon can take days!\n5. **Use Weather Charms** - Castform items help control conditions",
+    setIsLoading(true);
+    setStreamingContent("");
+
+    try {
+      // Build context based on query
+      const context = await buildContext(userMessage);
+      
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          messages: [...chatMessages, { role: "user", content: userMessage }].map(m => ({
+            role: m.role,
+            content: m.content
+          })),
+          context,
+          userProgress: getUserProgress(),
+        }),
+      });
+
+      if (!response.ok) throw new Error("Failed to get response");
+
+      // Read streaming response
+      const reader = response.body?.getReader();
+      if (!reader) throw new Error("No reader");
+
+      let fullContent = "";
+      const decoder = new TextDecoder();
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        const chunk = decoder.decode(value);
+        const lines = chunk.split("\n").filter(line => line.startsWith("data: "));
+
+        for (const line of lines) {
+          const data = line.slice(6);
+          if (data === "[DONE]") continue;
+          
+          try {
+            const parsed = JSON.parse(data);
+            if (parsed.content) {
+              fullContent += parsed.content;
+              setStreamingContent(fullContent);
+            }
+          } catch {
+            // Skip invalid
+          }
+        }
+      }
+
+      // Add assistant message
+      addChatMessage({ role: "assistant", content: fullContent });
+      setStreamingContent("");
+    } catch (error) {
+      console.error("Chat error:", error);
+      addChatMessage({ role: "assistant", content: "Sorry, I had trouble processing that. Please try again!" });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Parse message for [[links]]
+  const renderMessage = (content: string) => {
+    const linkRegex = /\[\[(Dex|Habitat|Items): ([^\]]+)\]\]/g;
+    const parts: (string | JSX.Element)[] = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = linkRegex.exec(content)) !== null) {
+      // Add text before match
+      if (match.index > lastIndex) {
+        parts.push(content.slice(lastIndex, match.index));
+      }
+      
+      const [full, type, name] = match;
+      const handleClick = () => {
+        if (type === "Dex") {
+          setCurrentPage("dex");
+        } else if (type === "Habitat") {
+          setCurrentPage("habitat-dex");
+        } else if (type === "Items") {
+          setCurrentPage("items");
+        }
       };
+      
+      parts.push(
+        <button
+          key={match.index}
+          onClick={handleClick}
+          className="text-cyan-600 font-medium hover:underline"
+        >
+          {name}
+        </button>
+      );
+      lastIndex = match.index + full.length;
+    }
 
-      const assistantMessage: Message = {
-        id: Date.now() + 1,
-        role: "assistant",
-        content: responses[messageText] || "I'd be happy to help with that! Let me look into it for you. 📚\n\nFeel free to ask about specific residents, habitats, or island-building tips!",
-      };
+    // Add remaining text
+    if (lastIndex < content.length) {
+      parts.push(content.slice(lastIndex));
+    }
 
-      setMessages(prev => [...prev, assistantMessage]);
-      setIsTyping(false);
-    }, 1500);
+    return parts;
   };
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-violet-600 to-purple-700">
+    <div className="h-full flex flex-col bg-gradient-to-b from-cyan-600 to-blue-700">
       {/* Header */}
-      <div className="pt-12 pb-2 px-4 shrink-0">
-        <div className="flex items-center justify-between mb-2">
-          <motion.button
+      <div className="pt-6 pb-3 px-4 shrink-0">
+        <div className="flex items-center justify-between mb-3">
+          <button
             onClick={() => setCurrentPage("home")}
-            className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center active:scale-90 transition-transform"
           >
             <ArrowLeft className="w-6 h-6 text-white" />
-          </motion.button>
+          </button>
           
-          <div className="text-center">
-            <h1 className="text-lg font-bold text-white flex items-center gap-1">
-              <Bot className="w-5 h-5" />
-              Dexter
-            </h1>
-            <p className="text-[10px] text-white/60">Your Pokopia Guide</p>
+          <div className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-xl">
+              {DEXTER_AVATAR}
+            </div>
+            <div>
+              <h1 className="text-lg font-bold text-white">Dexter</h1>
+              <p className="text-[10px] text-white/70">Your Pokédex Assistant</p>
+            </div>
           </div>
 
-          <motion.button
-            onClick={() => setCurrentPage("coin-shop")}
-            className="flex items-center gap-1 bg-white/20 px-2.5 py-1 rounded-full"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Coins className="w-3.5 h-3.5 text-yellow-400" />
-            <span className="text-xs font-bold text-white">{coins}</span>
-          </motion.button>
+          <div className="flex items-center gap-1 bg-yellow-400 px-3 py-1.5 rounded-full">
+            <Coins className="w-4 h-4 text-yellow-800" />
+            <span className="text-sm font-bold text-yellow-900">{coins}</span>
+          </div>
+        </div>
+
+        {/* Cost indicator */}
+        <div className="flex items-center justify-center gap-1 text-white/60 text-xs">
+          <Sparkles className="w-3 h-3" />
+          <span>100 coins per question</span>
         </div>
       </div>
 
-      {/* Messages Card */}
-      <div className="flex-1 bg-white rounded-t-[2rem] flex flex-col overflow-hidden min-h-0">
-        {/* Messages Area */}
-        <div className="flex-1 overflow-y-auto p-3 space-y-3">
-          <AnimatePresence>
-            {messages.map((message) => (
-              <motion.div
-                key={message.id}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                className={`flex gap-2 ${message.role === "user" ? "flex-row-reverse" : ""}`}
-              >
-                {/* Avatar */}
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
-                  message.role === "user" 
-                    ? "bg-purple-500" 
-                    : "bg-gradient-to-br from-violet-500 to-purple-600"
-                }`}>
-                  {message.role === "user" 
-                    ? <User className="w-4 h-4 text-white" />
-                    : <Bot className="w-4 h-4 text-white" />
-                  }
-                </div>
-
-                {/* Message Bubble */}
-                <div className={`max-w-[75%] rounded-2xl p-2.5 text-sm ${
-                  message.role === "user" 
-                    ? "bg-purple-500 text-white rounded-tr-md" 
-                    : "bg-gray-100 text-gray-800 rounded-tl-md"
-                }`}>
-                  <div className="whitespace-pre-line text-xs leading-relaxed">
-                    {message.content}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-
-          {/* Typing Indicator */}
-          {isTyping && (
+      {/* Messages */}
+      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+        <div className="p-4 space-y-4">
+          {/* Welcome message */}
+          {chatMessages.length === 0 && !streamingContent && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="flex gap-2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center py-8"
             >
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
-                <Bot className="w-4 h-4 text-white" />
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                {DEXTER_AVATAR}
               </div>
-              <div className="bg-gray-100 rounded-2xl rounded-tl-md p-2.5">
-                <div className="flex gap-1">
-                  <motion.span 
-                    className="w-2 h-2 bg-gray-400 rounded-full"
-                    animate={{ y: [0, -5, 0] }}
-                    transition={{ duration: 0.5, repeat: Infinity, delay: 0 }}
-                  />
-                  <motion.span 
-                    className="w-2 h-2 bg-gray-400 rounded-full"
-                    animate={{ y: [0, -5, 0] }}
-                    transition={{ duration: 0.5, repeat: Infinity, delay: 0.15 }}
-                  />
-                  <motion.span 
-                    className="w-2 h-2 bg-gray-400 rounded-full"
-                    animate={{ y: [0, -5, 0] }}
-                    transition={{ duration: 0.5, repeat: Infinity, delay: 0.3 }}
-                  />
+              <h2 className="text-lg font-bold text-gray-800 mb-2">Hi, I'm Dexter!</h2>
+              <p className="text-sm text-gray-500 max-w-xs mx-auto">
+                Ask me about Pokémon locations, habitats, items, or anything Pokopia!
+              </p>
+              <div className="mt-4 space-y-2">
+                <p className="text-xs text-gray-400">Try asking:</p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {["Where can I find Pikachu?", "How do I build a hot spring?", "What items do I need for a garden?"].map(q => (
+                    <button
+                      key={q}
+                      onClick={() => setInput(q)}
+                      className="text-xs bg-gray-100 px-3 py-1.5 rounded-full text-gray-600 hover:bg-gray-200"
+                    >
+                      {q}
+                    </button>
+                  ))}
                 </div>
               </div>
             </motion.div>
           )}
 
+          {/* Chat messages */}
+          <AnimatePresence>
+            {chatMessages.map((msg) => (
+              <motion.div
+                key={msg.id}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+              >
+                <div
+                  className={`max-w-[80%] rounded-2xl px-4 py-2 ${
+                    msg.role === "user"
+                      ? "bg-cyan-500 text-white"
+                      : "bg-gray-100 text-gray-800"
+                  }`}
+                >
+                  <p className="text-sm whitespace-pre-wrap">{renderMessage(msg.content)}</p>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+
+          {/* Streaming response */}
+          {streamingContent && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex justify-start"
+            >
+              <div className="max-w-[80%] rounded-2xl px-4 py-2 bg-gray-100 text-gray-800">
+                <p className="text-sm whitespace-pre-wrap">{renderMessage(streamingContent)}</p>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Loading indicator */}
+          {isLoading && !streamingContent && (
+            <div className="flex justify-start">
+              <div className="bg-gray-100 rounded-2xl px-4 py-3">
+                <Loader2 className="w-5 h-5 text-gray-400 animate-spin" />
+              </div>
+            </div>
+          )}
+
           <div ref={messagesEndRef} />
         </div>
+      </div>
 
-        {/* Suggested Prompts */}
-        {messages.length === 1 && (
-          <div className="px-3 pb-2 shrink-0">
-            <p className="text-[10px] text-gray-500 mb-2">Suggested prompts:</p>
-            <div className="flex flex-wrap gap-1.5">
-              {suggestedPrompts.map((prompt, index) => (
-                <motion.button
-                  key={index}
-                  onClick={() => handleSend(prompt.text)}
-                  className={`text-[10px] px-2.5 py-1.5 rounded-full ${prompt.color} flex items-center gap-1`}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <prompt.icon className="w-3 h-3" />
-                  {prompt.text}
-                </motion.button>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Input Area */}
-        <div className="p-3 border-t border-gray-100 bg-white shrink-0">
-          <div className="flex items-center gap-2">
-            <input
-              type="text"
-              placeholder={coins < 1 ? "No coins - tap shop above" : "Ask anything..."}
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleSend()}
-              disabled={coins < 1}
-              className="flex-1 px-3 py-2.5 bg-gray-100 rounded-xl text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 disabled:opacity-50"
-            />
-            <motion.button
-              onClick={() => handleSend()}
-              disabled={!input.trim() || coins < 1}
-              className="w-10 h-10 rounded-xl bg-gradient-to-r from-violet-500 to-purple-600 flex items-center justify-center disabled:opacity-50"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Send className="w-5 h-5 text-white" />
-            </motion.button>
-          </div>
-          <p className="text-[10px] text-gray-400 text-center mt-1.5">
-            1 message = 1 coin • {coins} coins remaining
-          </p>
+      {/* Input */}
+      <div className="bg-white border-t border-gray-200 p-4">
+        <div className="flex gap-2">
+          <input
+            ref={inputRef}
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && handleSend()}
+            placeholder="Ask Dexter anything..."
+            disabled={isLoading}
+            className="flex-1 px-4 py-3 rounded-xl bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 disabled:opacity-50"
+          />
+          <button
+            onClick={handleSend}
+            disabled={!input.trim() || isLoading || coins < 100}
+            className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all ${
+              input.trim() && !isLoading && coins >= 100
+                ? "bg-cyan-500 text-white"
+                : "bg-gray-200 text-gray-400"
+            }`}
+          >
+            <Send className="w-5 h-5" />
+          </button>
         </div>
+        {coins < 100 && (
+          <p className="text-xs text-red-500 text-center mt-2">Not enough coins! Visit the shop to get more.</p>
+        )}
       </div>
     </div>
   );
+}
+
+// Build context based on query keywords
+async function buildContext(query: string): Promise<any> {
+  const q = query.toLowerCase();
+  const context: any = {};
+
+  // Load data based on query keywords
+  if (q.includes("pokemon") || q.includes("find") || q.includes("catch") || q.includes("where")) {
+    try {
+      const res = await fetch("/pokemon-data.json");
+      context.pokemon = await res.json();
+    } catch {}
+  }
+
+  if (q.includes("habitat") || q.includes("build") || q.includes("home") || q.includes("house")) {
+    try {
+      const res = await fetch("/habitats.json");
+      const data = await res.json();
+      context.habitat = data.slice(0, 50); // Limit for context
+    } catch {}
+  }
+
+  if (q.includes("item") || q.includes("get") || q.includes("material") || q.includes("need")) {
+    try {
+      const res = await fetch("/items.json");
+      const data = await res.json();
+      context.items = data.flatMap((c: any) => c.items).slice(0, 100);
+    } catch {}
+  }
+
+  return context;
 }
