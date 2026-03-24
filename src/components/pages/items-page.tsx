@@ -55,10 +55,20 @@ export function ItemsPage() {
     fetch("/items.json")
       .then(res => res.json())
       .then((data: ItemCategory[]) => {
-        setItemsData(data);
+        // Sort: Lost Relics (L), Lost Relics (S), Fossils first, then alphabetically
+        const priorityCategories = ['lost-relics-l', 'lost-relics-s', 'fossils'];
+        const sorted = data.sort((a, b) => {
+          const aPriority = priorityCategories.indexOf(a.slug);
+          const bPriority = priorityCategories.indexOf(b.slug);
+          if (aPriority !== -1 && bPriority !== -1) return aPriority - bPriority;
+          if (aPriority !== -1) return -1;
+          if (bPriority !== -1) return 1;
+          return 0; // keep original order for others
+        });
+        setItemsData(sorted);
         // Default to first category
-        if (data.length > 0 && !selectedCategory) {
-          setSelectedCategory(data[0].slug);
+        if (sorted.length > 0 && !selectedCategory) {
+          setSelectedCategory(sorted[0].slug);
         }
         setLoading(false);
       })
