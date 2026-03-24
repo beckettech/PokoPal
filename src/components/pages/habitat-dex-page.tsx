@@ -11,14 +11,14 @@ import habitatsData from "@/data/scraped/habitats.json";
 // Generic "any X" items map to a representative real item image
 // Using known-good Serebii slugs for items that exist
 const ITEM_FALLBACKS: Record<string, string> = {
-  // Trees — "any tree" → large palm tree (confirmed 200)
-  "tree":           "/items/largepalmtree.png",
+  // Trees — "any tree" → leppa berry tree (berry tree)
+  "tree":           "/items/leppatree.png",
   "largetree":      "/items/largepalmtree.png",
-  "berrytree":      "/items/chestotree.png",
+  "berrytree":      "/items/leppatree.png",
   "pointytree":     "/items/largepalmtree.png",
-  // Lighting — "any lighting" → streetlight / light pole
-  "lighting":       "/items/utilitypole.png",
-  "lightingany":    "/items/utilitypole.png",
+  // Lighting — "any lighting" → mushroom lamp
+  "lighting":       "/items/mushroomlamp.png",
+  "lightingany":    "/items/mushroomlamp.png",
   // Seats (bench 404, use seat or logchair)
   "seat":           "/items/seat.png",
   "seatany":        "/items/seat.png",
@@ -28,8 +28,8 @@ const ITEM_FALLBACKS: Record<string, string> = {
   "table":          "/items/table.png",
   "tableany":       "/items/table.png",
   "tablelarge":     "/items/table.png",
-  // Water
-  "water":          "/items/freshwater.png",
+  // Water — "any water" → ocean water
+  "water":          "/items/oceanwater.png",
   "oceanwater":     "/items/oceanwater.png",
   "muddywater":     "/items/muddywater.png",
   "hotspringwater": "/items/hotspringwater.png",
