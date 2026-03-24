@@ -1,12 +1,27 @@
 'use client'
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { ArrowLeft, Plus, Check, Search, X } from "lucide-react";
 import { useAppStore } from "@/lib/store";
-import itemsData from "@/data/scraped/items.json";
 
-type ItemCategory = typeof itemsData[0];
-type Item = typeof itemsData[0]["items"][0];
+type Item = {
+  slug: string;
+  name: string;
+  description: string;
+  tag: string | null;
+  note: string | null;
+  image: string;
+  locations: Array<{ slug: string; name: string; method: string | null }>;
+  methods: string[];
+  category?: string;
+  categorySlug?: string;
+};
+
+type ItemCategory = {
+  name: string;
+  slug: string;
+  items: Item[];
+};
 
 const CATEGORY_ICONS: Record<string, string> = {
   materials: "⛏️",
@@ -28,16 +43,32 @@ const CATEGORY_ICONS: Record<string, string> = {
 
 export function ItemsPage() {
   const { setCurrentPage, ownedItems, toggleOwnedItem } = useAppStore();
+  const [itemsData, setItemsData] = useState<ItemCategory[]>([]);
+  const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
+
+  // Fetch items at runtime
+  useEffect(() => {
+    fetch("/items.json")
+      .then(res => res.json())
+      .then(data => {
+        setItemsData(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error("Failed to load items:", err);
+        setLoading(false);
+      });
+  }, []);
 
   // Flatten all items with category info
   const allItems = useMemo(() => {
     return itemsData.flatMap(cat => 
       cat.items.map(item => ({ ...item, category: cat.name, categorySlug: cat.slug }))
     );
-  }, []);
+  }, [itemsData]);
 
   // Filter items by category and search
   const filteredItems = useMemo(() => {
@@ -54,14 +85,38 @@ export function ItemsPage() {
   const groupedItems = useMemo(() => {
     const groups: Record<string, Item[]> = {};
     filteredItems.forEach(item => {
-      if (!groups[item.category]) groups[item.category] = [];
-      groups[item.category].push(item);
+      if (!groups[item.category!]) groups[item.category!] = [];
+      groups[item.category!].push(item);
     });
     return groups;
   }, [filteredItems]);
 
   const totalOwned = ownedItems.length;
   const totalItems = allItems.length;
+
+  if (loading) {
+    return (
+      <div className="h-full flex flex-col bg-gradient-to-b from-orange-500 to-orange-600 overflow-hidden">
+        <div className="pt-6 pb-3 px-4 shrink-0">
+          <div className="flex items-center justify-between mb-3">
+            <button
+              onClick={() => setCurrentPage("home")}
+              className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center"
+            >
+              <ArrowLeft className="w-6 h-6 text-white" />
+            </button>
+            <h1 className="text-lg font-bold text-white">Items</h1>
+            <div className="bg-white/20 px-3 py-1 rounded-full">
+              <span className="text-white text-xs font-bold">...</span>
+            </div>
+          </div>
+        </div>
+        <div className="flex-1 bg-white rounded-t-[2rem] flex items-center justify-center">
+          <p className="text-gray-400">Loading items...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-orange-500 to-orange-600 overflow-hidden">
