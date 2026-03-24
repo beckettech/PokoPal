@@ -181,6 +181,14 @@ export const useAppStore = create<AppState>()(
     }),
     {
       name: "pokopia-storage",
+      version: 2,
+      migrate: (persistedState: any, version: number) => {
+        // Migrate: give users 1000 coins if they have less than 100 (old default was 0 or 100)
+        if (persistedState.coins < 100) {
+          persistedState.coins = 1000;
+        }
+        return persistedState;
+      },
       partialize: (state) => ({
         capturedPokemon: state.capturedPokemon,
         visitedIslands: state.visitedIslands,
