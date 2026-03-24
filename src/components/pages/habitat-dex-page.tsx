@@ -32,7 +32,7 @@ const ITEM_FALLBACKS: Record<string, string> = {
   "water":          "/items/oceanwater.png",
   "oceanwater":     "/items/oceanwater.png",
   "muddywater":     "/items/muddywater.png",
-  "hotspringwater": "/items/hotspringwater.png",
+  "hotspringwater": "/items/hot-springwater.png",
   // High-up location
   "highuplocation": "/items/high-uplocation.png",
   // Beds
@@ -259,8 +259,8 @@ export function HabitatDexPage() {
                             <div className="mt-2 mb-3 bg-amber-50 rounded-xl p-2.5 border border-amber-100">
                               <p className="text-[10px] font-bold text-amber-800 uppercase tracking-wide mb-2">🔨 Build Requirements</p>
                               <div className="flex gap-2 flex-wrap">
-                                {(habitat as any).buildItems.map((item: any) => (
-                                  <div key={item.slug} className="flex flex-col items-center gap-1">
+                                {(habitat as any).buildItems.map((item: any, idx: number) => (
+                                  <div key={`${habitat.id}-${item.slug}-${idx}`} className="flex flex-col items-center gap-1">
                                     <div className="w-12 h-12 bg-white rounded-lg border border-amber-200 shadow-sm flex items-center justify-center relative">
                                       <img
                                         src={getItemImage(item.slug, item.image)}
