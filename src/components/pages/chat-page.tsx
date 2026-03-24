@@ -19,14 +19,13 @@ export function ChatPage() {
   const { setCurrentPage, coins, chatMessages, addChatMessage, spendCoins, addCoins, capturedPokemon, ownedItems, discoveredHabitats } = useAppStore();
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [streamingContent, setStreamingContent] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Scroll to bottom on new messages
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [chatMessages, streamingContent]);
+  }, [chatMessages]);
 
   // Build user progress summary for context
   const getUserProgress = () => {
@@ -47,7 +46,6 @@ export function ChatPage() {
     addChatMessage({ role: "user", content: userMessage });
 
     setIsLoading(true);
-    setStreamingContent("");
 
     let coinDeducted = false;
     try {
@@ -77,41 +75,14 @@ export function ChatPage() {
       spendCoins(100);
       coinDeducted = true;
 
-      // Read streaming response
-      const reader = response.body?.getReader();
-      if (!reader) throw new Error("No reader");
-
-      let fullContent = "";
-      const decoder = new TextDecoder();
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        const chunk = decoder.decode(value);
-        const lines = chunk.split("\n").filter(line => line.startsWith("data: "));
-
-        for (const line of lines) {
-          const data = line.slice(6);
-          if (data === "[DONE]") continue;
-          
-          try {
-            const parsed = JSON.parse(data);
-            if (parsed.content) {
-              fullContent += parsed.content;
-              setStreamingContent(fullContent);
-            }
-          } catch {
-            // Skip invalid
-          }
-        }
-      }
+      // Parse JSON response
+      const data = await response.json();
+      const fullContent = data.content;
 
       if (!fullContent) throw new Error("Empty response");
 
       // Add assistant message
       addChatMessage({ role: "assistant", content: fullContent });
-      setStreamingContent("");
     } catch (error) {
       console.error("Chat error:", error);
       addChatMessage({ role: "assistant", content: "Hmm, I couldn't reach my knowledge base. Please try again!" });
@@ -205,7 +176,7 @@ export function ChatPage() {
       <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
         <div className="p-4 space-y-4">
           {/* Welcome message */}
-          {chatMessages.length === 0 && !streamingContent && (
+          {chatMessages.length === 0 && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -257,21 +228,8 @@ export function ChatPage() {
             ))}
           </AnimatePresence>
 
-          {/* Streaming response */}
-          {streamingContent && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="flex justify-start"
-            >
-              <div className="max-w-[80%] rounded-2xl px-4 py-2 bg-gray-100 text-gray-800">
-                <p className="text-sm whitespace-pre-wrap">{renderMessage(streamingContent)}</p>
-              </div>
-            </motion.div>
-          )}
-
           {/* Loading indicator */}
-          {isLoading && !streamingContent && (
+          {isLoading && (
             <div className="flex justify-start">
               <div className="bg-gray-100 rounded-2xl px-4 py-3">
                 <Loader2 className="w-5 h-5 text-gray-400 animate-spin" />

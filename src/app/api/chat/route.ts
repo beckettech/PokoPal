@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
       ...messages.slice(-10), // Keep last 10 messages for context
     ];
 
-    // Call OpenRouter with streaming
+    // Call OpenRouter (non-streaming for now to debug)
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -59,7 +59,6 @@ export async function POST(req: NextRequest) {
         model: MODEL,
         messages: apiMessages,
         max_tokens: 500,
-        stream: true,
       }),
     });
 
@@ -72,56 +71,15 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Stream the response
-    const encoder = new TextEncoder();
-    const stream = new ReadableStream({
-      async start(controller) {
-        const reader = response.body?.getReader();
-        if (!reader) {
-          controller.close();
-          return;
-        }
+    const data = await response.json();
+    const content = data.choices?.[0]?.message?.content;
+    
+    if (!content) {
+      console.error("No content in response:", data);
+      return NextResponse.json({ error: "No response content" }, { status: 500 });
+    }
 
-        try {
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-
-            const chunk = new TextDecoder().decode(value);
-            const lines = chunk.split("\n").filter(line => line.startsWith("data: "));
-
-            for (const line of lines) {
-              const data = line.slice(6);
-              if (data === "[DONE]") {
-                controller.enqueue(encoder.encode("data: [DONE]\n\n"));
-                continue;
-              }
-
-              try {
-                const parsed = JSON.parse(data);
-                const content = parsed.choices?.[0]?.delta?.content;
-                if (content) {
-                  controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content })}\n\n`));
-                }
-              } catch {
-                // Skip invalid JSON
-              }
-            }
-          }
-        } finally {
-          reader.releaseLock();
-          controller.close();
-        }
-      },
-    });
-
-    return new Response(stream, {
-      headers: {
-        "Content-Type": "text/event-stream",
-        "Cache-Control": "no-cache",
-        "Connection": "keep-alive",
-      },
-    });
+    return NextResponse.json({ content });
   } catch (error) {
     console.error("Chat API error:", error);
     return NextResponse.json(
