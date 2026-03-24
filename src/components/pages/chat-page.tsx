@@ -49,9 +49,6 @@ export function ChatPage() {
 
     let coinDeducted = false;
     try {
-      // Build context based on query
-      const context = await buildContext(userMessage);
-      
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -60,7 +57,6 @@ export function ChatPage() {
             role: m.role,
             content: m.content
           })),
-          context,
           userProgress: getUserProgress(),
         }),
       });
@@ -272,36 +268,4 @@ export function ChatPage() {
       </div>
     </div>
   );
-}
-
-// Build context based on query keywords
-async function buildContext(query: string): Promise<any> {
-  const q = query.toLowerCase();
-  const context: any = {};
-
-  // Load data based on query keywords
-  if (q.includes("pokemon") || q.includes("find") || q.includes("catch") || q.includes("where")) {
-    try {
-      const res = await fetch("/pokemon-data.json");
-      context.pokemon = await res.json();
-    } catch {}
-  }
-
-  if (q.includes("habitat") || q.includes("build") || q.includes("home") || q.includes("house")) {
-    try {
-      const res = await fetch("/habitats.json");
-      const data = await res.json();
-      context.habitat = data.slice(0, 50); // Limit for context
-    } catch {}
-  }
-
-  if (q.includes("item") || q.includes("get") || q.includes("material") || q.includes("need")) {
-    try {
-      const res = await fetch("/items.json");
-      const data = await res.json();
-      context.items = data.flatMap((c: any) => c.items).slice(0, 100);
-    } catch {}
-  }
-
-  return context;
 }

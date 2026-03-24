@@ -1,0 +1,6094 @@
+[
+  {
+    "id": "witheredwastelands",
+    "name": "Withered Wastelands",
+    "image": "/locations/witheredwastelands.jpg",
+    "description": "A barren wasteland with withered grass.",
+    "pokemon": [
+      {
+        "name": "abra",
+        "slug": "abra"
+      },
+      {
+        "name": "absol",
+        "slug": "absol"
+      },
+      {
+        "name": "aerodactyl",
+        "slug": "aerodactyl"
+      },
+      {
+        "name": "alakazam",
+        "slug": "alakazam"
+      },
+      {
+        "name": "altaria",
+        "slug": "altaria"
+      },
+      {
+        "name": "amaura",
+        "slug": "amaura"
+      },
+      {
+        "name": "ampharos",
+        "slug": "ampharos"
+      },
+      {
+        "name": "arbok",
+        "slug": "arbok"
+      },
+      {
+        "name": "arcanine",
+        "slug": "arcanine"
+      },
+      {
+        "name": "ariados",
+        "slug": "ariados"
+      },
+      {
+        "name": "audino",
+        "slug": "audino"
+      },
+      {
+        "name": "aurorus",
+        "slug": "aurorus"
+      },
+      {
+        "name": "axew",
+        "slug": "axew"
+      },
+      {
+        "name": "azumarill",
+        "slug": "azumarill"
+      },
+      {
+        "name": "azurill",
+        "slug": "azurill"
+      },
+      {
+        "name": "bastiodon",
+        "slug": "bastiodon"
+      },
+      {
+        "name": "beldum",
+        "slug": "beldum"
+      },
+      {
+        "name": "bellossom",
+        "slug": "bellossom"
+      },
+      {
+        "name": "bellsprout",
+        "slug": "bellsprout"
+      },
+      {
+        "name": "blastoise",
+        "slug": "blastoise"
+      },
+      {
+        "name": "blaziken",
+        "slug": "blaziken"
+      },
+      {
+        "name": "blissey",
+        "slug": "blissey"
+      },
+      {
+        "name": "bonsly",
+        "slug": "bonsly"
+      },
+      {
+        "name": "bulbasaur",
+        "slug": "bulbasaur"
+      },
+      {
+        "name": "cacnea",
+        "slug": "cacnea"
+      },
+      {
+        "name": "cacturne",
+        "slug": "cacturne"
+      },
+      {
+        "name": "carkol",
+        "slug": "carkol"
+      },
+      {
+        "name": "ceruledge",
+        "slug": "ceruledge"
+      },
+      {
+        "name": "chandelure",
+        "slug": "chandelure"
+      },
+      {
+        "name": "chansey",
+        "slug": "chansey"
+      },
+      {
+        "name": "charcadet",
+        "slug": "charcadet"
+      },
+      {
+        "name": "charizard",
+        "slug": "charizard"
+      },
+      {
+        "name": "charjabug",
+        "slug": "charjabug"
+      },
+      {
+        "name": "charmander",
+        "slug": "charmander"
+      },
+      {
+        "name": "charmeleon",
+        "slug": "charmeleon"
+      },
+      {
+        "name": "chatot",
+        "slug": "chatot"
+      },
+      {
+        "name": "cinccino",
+        "slug": "cinccino"
+      },
+      {
+        "name": "cinderace",
+        "slug": "cinderace"
+      },
+      {
+        "name": "clefable",
+        "slug": "clefable"
+      },
+      {
+        "name": "clefairy",
+        "slug": "clefairy"
+      },
+      {
+        "name": "cleffa",
+        "slug": "cleffa"
+      },
+      {
+        "name": "clodsire",
+        "slug": "clodsire"
+      },
+      {
+        "name": "coalossal",
+        "slug": "coalossal"
+      },
+      {
+        "name": "combee",
+        "slug": "combee"
+      },
+      {
+        "name": "combusken",
+        "slug": "combusken"
+      },
+      {
+        "name": "conkeldurr",
+        "slug": "conkeldurr"
+      },
+      {
+        "name": "corviknight",
+        "slug": "corviknight"
+      },
+      {
+        "name": "corvisquire",
+        "slug": "corvisquire"
+      },
+      {
+        "name": "cranidos",
+        "slug": "cranidos"
+      },
+      {
+        "name": "crobat",
+        "slug": "crobat"
+      },
+      {
+        "name": "cubone",
+        "slug": "cubone"
+      },
+      {
+        "name": "cyndaquil",
+        "slug": "cyndaquil"
+      },
+      {
+        "name": "dachsbun",
+        "slug": "dachsbun"
+      },
+      {
+        "name": "dartrix",
+        "slug": "dartrix"
+      },
+      {
+        "name": "decidueye",
+        "slug": "decidueye"
+      },
+      {
+        "name": "dedenne",
+        "slug": "dedenne"
+      },
+      {
+        "name": "diglett",
+        "slug": "diglett"
+      },
+      {
+        "name": "dragapult",
+        "slug": "dragapult"
+      },
+      {
+        "name": "dragonair",
+        "slug": "dragonair"
+      },
+      {
+        "name": "dragonite",
+        "slug": "dragonite"
+      },
+      {
+        "name": "drakloak",
+        "slug": "drakloak"
+      },
+      {
+        "name": "dratini",
+        "slug": "dratini"
+      },
+      {
+        "name": "dreepy",
+        "slug": "dreepy"
+      },
+      {
+        "name": "drifblim",
+        "slug": "drifblim"
+      },
+      {
+        "name": "drifloon",
+        "slug": "drifloon"
+      },
+      {
+        "name": "drilbur",
+        "slug": "drilbur"
+      },
+      {
+        "name": "dugtrio",
+        "slug": "dugtrio"
+      },
+      {
+        "name": "dusclops",
+        "slug": "dusclops"
+      },
+      {
+        "name": "dusknoir",
+        "slug": "dusknoir"
+      },
+      {
+        "name": "duskull",
+        "slug": "duskull"
+      },
+      {
+        "name": "eevee",
+        "slug": "eevee"
+      },
+      {
+        "name": "ekans",
+        "slug": "ekans"
+      },
+      {
+        "name": "electabuzz",
+        "slug": "electabuzz"
+      },
+      {
+        "name": "electivire",
+        "slug": "electivire"
+      },
+      {
+        "name": "electrode",
+        "slug": "electrode"
+      },
+      {
+        "name": "elekid",
+        "slug": "elekid"
+      },
+      {
+        "name": "empoleon",
+        "slug": "empoleon"
+      },
+      {
+        "name": "excadrill",
+        "slug": "excadrill"
+      },
+      {
+        "name": "exeggcute",
+        "slug": "exeggcute"
+      },
+      {
+        "name": "exeggutor",
+        "slug": "exeggutor"
+      },
+      {
+        "name": "farigiraf",
+        "slug": "farigiraf"
+      },
+      {
+        "name": "fidough",
+        "slug": "fidough"
+      },
+      {
+        "name": "flaaffy",
+        "slug": "flaaffy"
+      },
+      {
+        "name": "floragato",
+        "slug": "floragato"
+      },
+      {
+        "name": "flygon",
+        "slug": "flygon"
+      },
+      {
+        "name": "fraxure",
+        "slug": "fraxure"
+      },
+      {
+        "name": "froakie",
+        "slug": "froakie"
+      },
+      {
+        "name": "frogadier",
+        "slug": "frogadier"
+      },
+      {
+        "name": "gallade",
+        "slug": "gallade"
+      },
+      {
+        "name": "garbodor",
+        "slug": "garbodor"
+      },
+      {
+        "name": "gardevoir",
+        "slug": "gardevoir"
+      },
+      {
+        "name": "gastly",
+        "slug": "gastly"
+      },
+      {
+        "name": "gastrodon",
+        "slug": "gastrodon"
+      },
+      {
+        "name": "gengar",
+        "slug": "gengar"
+      },
+      {
+        "name": "gholdengo",
+        "slug": "gholdengo"
+      },
+      {
+        "name": "gimmighoul",
+        "slug": "gimmighoul"
+      },
+      {
+        "name": "girafarig",
+        "slug": "girafarig"
+      },
+      {
+        "name": "glimmet",
+        "slug": "glimmet"
+      },
+      {
+        "name": "glimmora",
+        "slug": "glimmora"
+      },
+      {
+        "name": "gloom",
+        "slug": "gloom"
+      },
+      {
+        "name": "golduck",
+        "slug": "golduck"
+      },
+      {
+        "name": "golem",
+        "slug": "golem"
+      },
+      {
+        "name": "goodra",
+        "slug": "goodra"
+      },
+      {
+        "name": "goomy",
+        "slug": "goomy"
+      },
+      {
+        "name": "graveler",
+        "slug": "graveler"
+      },
+      {
+        "name": "greedent",
+        "slug": "greedent"
+      },
+      {
+        "name": "greninja",
+        "slug": "greninja"
+      },
+      {
+        "name": "grimer",
+        "slug": "grimer"
+      },
+      {
+        "name": "growlithe",
+        "slug": "growlithe"
+      },
+      {
+        "name": "grubbin",
+        "slug": "grubbin"
+      },
+      {
+        "name": "gulpin",
+        "slug": "gulpin"
+      },
+      {
+        "name": "gurdurr",
+        "slug": "gurdurr"
+      },
+      {
+        "name": "gyarados",
+        "slug": "gyarados"
+      },
+      {
+        "name": "happiny",
+        "slug": "happiny"
+      },
+      {
+        "name": "hariyama",
+        "slug": "hariyama"
+      },
+      {
+        "name": "haunter",
+        "slug": "haunter"
+      },
+      {
+        "name": "haxorus",
+        "slug": "haxorus"
+      },
+      {
+        "name": "heracross",
+        "slug": "heracross"
+      },
+      {
+        "name": "hitmonchan",
+        "slug": "hitmonchan"
+      },
+      {
+        "name": "hitmonlee",
+        "slug": "hitmonlee"
+      },
+      {
+        "name": "hitmontop",
+        "slug": "hitmontop"
+      },
+      {
+        "name": "honchkrow",
+        "slug": "honchkrow"
+      },
+      {
+        "name": "hoothoot",
+        "slug": "hoothoot"
+      },
+      {
+        "name": "igglybuff",
+        "slug": "igglybuff"
+      },
+      {
+        "name": "illumise",
+        "slug": "illumise"
+      },
+      {
+        "name": "ivysaur",
+        "slug": "ivysaur"
+      },
+      {
+        "name": "jigglypuff",
+        "slug": "jigglypuff"
+      },
+      {
+        "name": "kadabra",
+        "slug": "kadabra"
+      },
+      {
+        "name": "kilowattrel",
+        "slug": "kilowattrel"
+      },
+      {
+        "name": "kirlia",
+        "slug": "kirlia"
+      },
+      {
+        "name": "kricketot",
+        "slug": "kricketot"
+      },
+      {
+        "name": "kricketune",
+        "slug": "kricketune"
+      },
+      {
+        "name": "lampent",
+        "slug": "lampent"
+      },
+      {
+        "name": "lapras",
+        "slug": "lapras"
+      },
+      {
+        "name": "larvesta",
+        "slug": "larvesta"
+      },
+      {
+        "name": "larvitar",
+        "slug": "larvitar"
+      },
+      {
+        "name": "litwick",
+        "slug": "litwick"
+      },
+      {
+        "name": "lombre",
+        "slug": "lombre"
+      },
+      {
+        "name": "lotad",
+        "slug": "lotad"
+      },
+      {
+        "name": "lucario",
+        "slug": "lucario"
+      },
+      {
+        "name": "ludicolo",
+        "slug": "ludicolo"
+      },
+      {
+        "name": "machamp",
+        "slug": "machamp"
+      },
+      {
+        "name": "machoke",
+        "slug": "machoke"
+      },
+      {
+        "name": "magby",
+        "slug": "magby"
+      },
+      {
+        "name": "magikarp",
+        "slug": "magikarp"
+      },
+      {
+        "name": "magmar",
+        "slug": "magmar"
+      },
+      {
+        "name": "magmortar",
+        "slug": "magmortar"
+      },
+      {
+        "name": "magnemite",
+        "slug": "magnemite"
+      },
+      {
+        "name": "magneton",
+        "slug": "magneton"
+      },
+      {
+        "name": "magnezone",
+        "slug": "magnezone"
+      },
+      {
+        "name": "makuhita",
+        "slug": "makuhita"
+      },
+      {
+        "name": "mareep",
+        "slug": "mareep"
+      },
+      {
+        "name": "marill",
+        "slug": "marill"
+      },
+      {
+        "name": "marowak",
+        "slug": "marowak"
+      },
+      {
+        "name": "meowscarada",
+        "slug": "meowscarada"
+      },
+      {
+        "name": "meowth",
+        "slug": "meowth"
+      },
+      {
+        "name": "metagross",
+        "slug": "metagross"
+      },
+      {
+        "name": "metang",
+        "slug": "metang"
+      },
+      {
+        "name": "mimikyu",
+        "slug": "mimikyu"
+      },
+      {
+        "name": "minccino",
+        "slug": "minccino"
+      },
+      {
+        "name": "minun",
+        "slug": "minun"
+      },
+      {
+        "name": "misdreavus",
+        "slug": "misdreavus"
+      },
+      {
+        "name": "mismagius",
+        "slug": "mismagius"
+      },
+      {
+        "name": "muk",
+        "slug": "muk"
+      },
+      {
+        "name": "murkrow",
+        "slug": "murkrow"
+      },
+      {
+        "name": "ninetales",
+        "slug": "ninetales"
+      },
+      {
+        "name": "noctowl",
+        "slug": "noctowl"
+      },
+      {
+        "name": "noibat",
+        "slug": "noibat"
+      },
+      {
+        "name": "oddish",
+        "slug": "oddish"
+      },
+      {
+        "name": "onix",
+        "slug": "onix"
+      },
+      {
+        "name": "paras",
+        "slug": "paras"
+      },
+      {
+        "name": "parasect",
+        "slug": "parasect"
+      },
+      {
+        "name": "pawmi",
+        "slug": "pawmi"
+      },
+      {
+        "name": "pawmo",
+        "slug": "pawmo"
+      },
+      {
+        "name": "pawmot",
+        "slug": "pawmot"
+      },
+      {
+        "name": "persian",
+        "slug": "persian"
+      },
+      {
+        "name": "pichu",
+        "slug": "pichu"
+      },
+      {
+        "name": "pidgeot",
+        "slug": "pidgeot"
+      },
+      {
+        "name": "pidgeotto",
+        "slug": "pidgeotto"
+      },
+      {
+        "name": "pidgey",
+        "slug": "pidgey"
+      },
+      {
+        "name": "pinsir",
+        "slug": "pinsir"
+      },
+      {
+        "name": "piplup",
+        "slug": "piplup"
+      },
+      {
+        "name": "plusle",
+        "slug": "plusle"
+      },
+      {
+        "name": "politoed",
+        "slug": "politoed"
+      },
+      {
+        "name": "poliwag",
+        "slug": "poliwag"
+      },
+      {
+        "name": "poliwhirl",
+        "slug": "poliwhirl"
+      },
+      {
+        "name": "poliwrath",
+        "slug": "poliwrath"
+      },
+      {
+        "name": "porygon",
+        "slug": "porygon"
+      },
+      {
+        "name": "prinplup",
+        "slug": "prinplup"
+      },
+      {
+        "name": "psyduck",
+        "slug": "psyduck"
+      },
+      {
+        "name": "pupitar",
+        "slug": "pupitar"
+      },
+      {
+        "name": "quilava",
+        "slug": "quilava"
+      },
+      {
+        "name": "raboot",
+        "slug": "raboot"
+      },
+      {
+        "name": "raichu",
+        "slug": "raichu"
+      },
+      {
+        "name": "ralts",
+        "slug": "ralts"
+      },
+      {
+        "name": "rampardos",
+        "slug": "rampardos"
+      },
+      {
+        "name": "riolu",
+        "slug": "riolu"
+      },
+      {
+        "name": "rolycoly",
+        "slug": "rolycoly"
+      },
+      {
+        "name": "rookidee",
+        "slug": "rookidee"
+      },
+      {
+        "name": "scorbunny",
+        "slug": "scorbunny"
+      },
+      {
+        "name": "scyther",
+        "slug": "scyther"
+      },
+      {
+        "name": "serperior",
+        "slug": "serperior"
+      },
+      {
+        "name": "servine",
+        "slug": "servine"
+      },
+      {
+        "name": "shellos",
+        "slug": "shellos"
+      },
+      {
+        "name": "shieldon",
+        "slug": "shieldon"
+      },
+      {
+        "name": "sliggoo",
+        "slug": "sliggoo"
+      },
+      {
+        "name": "slowbro",
+        "slug": "slowbro"
+      },
+      {
+        "name": "slowking",
+        "slug": "slowking"
+      },
+      {
+        "name": "slowpoke",
+        "slug": "slowpoke"
+      },
+      {
+        "name": "smeargle",
+        "slug": "smeargle"
+      },
+      {
+        "name": "snivy",
+        "slug": "snivy"
+      },
+      {
+        "name": "spinarak",
+        "slug": "spinarak"
+      },
+      {
+        "name": "sprigatito",
+        "slug": "sprigatito"
+      },
+      {
+        "name": "squirtle",
+        "slug": "squirtle"
+      },
+      {
+        "name": "steelix",
+        "slug": "steelix"
+      },
+      {
+        "name": "sudowoodo",
+        "slug": "sudowoodo"
+      },
+      {
+        "name": "swablu",
+        "slug": "swablu"
+      },
+      {
+        "name": "swalot",
+        "slug": "swalot"
+      },
+      {
+        "name": "timburr",
+        "slug": "timburr"
+      },
+      {
+        "name": "tinkaton",
+        "slug": "tinkaton"
+      },
+      {
+        "name": "torchic",
+        "slug": "torchic"
+      },
+      {
+        "name": "torkoal",
+        "slug": "torkoal"
+      },
+      {
+        "name": "toxel",
+        "slug": "toxel"
+      },
+      {
+        "name": "trapinch",
+        "slug": "trapinch"
+      },
+      {
+        "name": "trubbish",
+        "slug": "trubbish"
+      },
+      {
+        "name": "typhlosion",
+        "slug": "typhlosion"
+      },
+      {
+        "name": "tyranitar",
+        "slug": "tyranitar"
+      },
+      {
+        "name": "tyrantrum",
+        "slug": "tyrantrum"
+      },
+      {
+        "name": "tyrogue",
+        "slug": "tyrogue"
+      },
+      {
+        "name": "tyrunt",
+        "slug": "tyrunt"
+      },
+      {
+        "name": "venomoth",
+        "slug": "venomoth"
+      },
+      {
+        "name": "venonat",
+        "slug": "venonat"
+      },
+      {
+        "name": "venusaur",
+        "slug": "venusaur"
+      },
+      {
+        "name": "vespiquen",
+        "slug": "vespiquen"
+      },
+      {
+        "name": "vibrava",
+        "slug": "vibrava"
+      },
+      {
+        "name": "victreebel",
+        "slug": "victreebel"
+      },
+      {
+        "name": "vileplume",
+        "slug": "vileplume"
+      },
+      {
+        "name": "volbeat",
+        "slug": "volbeat"
+      },
+      {
+        "name": "volcarona",
+        "slug": "volcarona"
+      },
+      {
+        "name": "voltorb",
+        "slug": "voltorb"
+      },
+      {
+        "name": "vulpix",
+        "slug": "vulpix"
+      },
+      {
+        "name": "wartortle",
+        "slug": "wartortle"
+      },
+      {
+        "name": "wattrel",
+        "slug": "wattrel"
+      },
+      {
+        "name": "weepinbell",
+        "slug": "weepinbell"
+      },
+      {
+        "name": "wigglytuff",
+        "slug": "wigglytuff"
+      },
+      {
+        "name": "wingull",
+        "slug": "wingull"
+      },
+      {
+        "name": "zorua",
+        "slug": "zorua"
+      },
+      {
+        "name": "zubat",
+        "slug": "zubat"
+      }
+    ]
+  },
+  {
+    "id": "bleakbeach",
+    "name": "Bleak Beach",
+    "image": "/locations/bleakbeach.jpg",
+    "description": "A desolate beach with crashing waves.",
+    "pokemon": [
+      {
+        "name": "abra",
+        "slug": "abra"
+      },
+      {
+        "name": "absol",
+        "slug": "absol"
+      },
+      {
+        "name": "aerodactyl",
+        "slug": "aerodactyl"
+      },
+      {
+        "name": "alakazam",
+        "slug": "alakazam"
+      },
+      {
+        "name": "altaria",
+        "slug": "altaria"
+      },
+      {
+        "name": "amaura",
+        "slug": "amaura"
+      },
+      {
+        "name": "ampharos",
+        "slug": "ampharos"
+      },
+      {
+        "name": "arbok",
+        "slug": "arbok"
+      },
+      {
+        "name": "arcanine",
+        "slug": "arcanine"
+      },
+      {
+        "name": "ariados",
+        "slug": "ariados"
+      },
+      {
+        "name": "audino",
+        "slug": "audino"
+      },
+      {
+        "name": "aurorus",
+        "slug": "aurorus"
+      },
+      {
+        "name": "axew",
+        "slug": "axew"
+      },
+      {
+        "name": "azumarill",
+        "slug": "azumarill"
+      },
+      {
+        "name": "azurill",
+        "slug": "azurill"
+      },
+      {
+        "name": "bastiodon",
+        "slug": "bastiodon"
+      },
+      {
+        "name": "beldum",
+        "slug": "beldum"
+      },
+      {
+        "name": "bellossom",
+        "slug": "bellossom"
+      },
+      {
+        "name": "bellsprout",
+        "slug": "bellsprout"
+      },
+      {
+        "name": "blastoise",
+        "slug": "blastoise"
+      },
+      {
+        "name": "blaziken",
+        "slug": "blaziken"
+      },
+      {
+        "name": "blissey",
+        "slug": "blissey"
+      },
+      {
+        "name": "bonsly",
+        "slug": "bonsly"
+      },
+      {
+        "name": "bulbasaur",
+        "slug": "bulbasaur"
+      },
+      {
+        "name": "cacnea",
+        "slug": "cacnea"
+      },
+      {
+        "name": "cacturne",
+        "slug": "cacturne"
+      },
+      {
+        "name": "carkol",
+        "slug": "carkol"
+      },
+      {
+        "name": "ceruledge",
+        "slug": "ceruledge"
+      },
+      {
+        "name": "chandelure",
+        "slug": "chandelure"
+      },
+      {
+        "name": "chansey",
+        "slug": "chansey"
+      },
+      {
+        "name": "charcadet",
+        "slug": "charcadet"
+      },
+      {
+        "name": "charizard",
+        "slug": "charizard"
+      },
+      {
+        "name": "charjabug",
+        "slug": "charjabug"
+      },
+      {
+        "name": "charmander",
+        "slug": "charmander"
+      },
+      {
+        "name": "charmeleon",
+        "slug": "charmeleon"
+      },
+      {
+        "name": "chatot",
+        "slug": "chatot"
+      },
+      {
+        "name": "cinccino",
+        "slug": "cinccino"
+      },
+      {
+        "name": "cinderace",
+        "slug": "cinderace"
+      },
+      {
+        "name": "clefable",
+        "slug": "clefable"
+      },
+      {
+        "name": "clefairy",
+        "slug": "clefairy"
+      },
+      {
+        "name": "cleffa",
+        "slug": "cleffa"
+      },
+      {
+        "name": "clodsire",
+        "slug": "clodsire"
+      },
+      {
+        "name": "coalossal",
+        "slug": "coalossal"
+      },
+      {
+        "name": "combee",
+        "slug": "combee"
+      },
+      {
+        "name": "combusken",
+        "slug": "combusken"
+      },
+      {
+        "name": "conkeldurr",
+        "slug": "conkeldurr"
+      },
+      {
+        "name": "corviknight",
+        "slug": "corviknight"
+      },
+      {
+        "name": "corvisquire",
+        "slug": "corvisquire"
+      },
+      {
+        "name": "cranidos",
+        "slug": "cranidos"
+      },
+      {
+        "name": "crobat",
+        "slug": "crobat"
+      },
+      {
+        "name": "cubone",
+        "slug": "cubone"
+      },
+      {
+        "name": "cyndaquil",
+        "slug": "cyndaquil"
+      },
+      {
+        "name": "dachsbun",
+        "slug": "dachsbun"
+      },
+      {
+        "name": "dartrix",
+        "slug": "dartrix"
+      },
+      {
+        "name": "decidueye",
+        "slug": "decidueye"
+      },
+      {
+        "name": "dedenne",
+        "slug": "dedenne"
+      },
+      {
+        "name": "diglett",
+        "slug": "diglett"
+      },
+      {
+        "name": "dragapult",
+        "slug": "dragapult"
+      },
+      {
+        "name": "dragonair",
+        "slug": "dragonair"
+      },
+      {
+        "name": "dragonite",
+        "slug": "dragonite"
+      },
+      {
+        "name": "drakloak",
+        "slug": "drakloak"
+      },
+      {
+        "name": "dratini",
+        "slug": "dratini"
+      },
+      {
+        "name": "dreepy",
+        "slug": "dreepy"
+      },
+      {
+        "name": "drifblim",
+        "slug": "drifblim"
+      },
+      {
+        "name": "drifloon",
+        "slug": "drifloon"
+      },
+      {
+        "name": "drilbur",
+        "slug": "drilbur"
+      },
+      {
+        "name": "dugtrio",
+        "slug": "dugtrio"
+      },
+      {
+        "name": "dusclops",
+        "slug": "dusclops"
+      },
+      {
+        "name": "dusknoir",
+        "slug": "dusknoir"
+      },
+      {
+        "name": "duskull",
+        "slug": "duskull"
+      },
+      {
+        "name": "eevee",
+        "slug": "eevee"
+      },
+      {
+        "name": "ekans",
+        "slug": "ekans"
+      },
+      {
+        "name": "electabuzz",
+        "slug": "electabuzz"
+      },
+      {
+        "name": "electivire",
+        "slug": "electivire"
+      },
+      {
+        "name": "electrode",
+        "slug": "electrode"
+      },
+      {
+        "name": "elekid",
+        "slug": "elekid"
+      },
+      {
+        "name": "empoleon",
+        "slug": "empoleon"
+      },
+      {
+        "name": "excadrill",
+        "slug": "excadrill"
+      },
+      {
+        "name": "exeggcute",
+        "slug": "exeggcute"
+      },
+      {
+        "name": "exeggutor",
+        "slug": "exeggutor"
+      },
+      {
+        "name": "farigiraf",
+        "slug": "farigiraf"
+      },
+      {
+        "name": "fidough",
+        "slug": "fidough"
+      },
+      {
+        "name": "flaaffy",
+        "slug": "flaaffy"
+      },
+      {
+        "name": "floragato",
+        "slug": "floragato"
+      },
+      {
+        "name": "flygon",
+        "slug": "flygon"
+      },
+      {
+        "name": "fraxure",
+        "slug": "fraxure"
+      },
+      {
+        "name": "froakie",
+        "slug": "froakie"
+      },
+      {
+        "name": "frogadier",
+        "slug": "frogadier"
+      },
+      {
+        "name": "gallade",
+        "slug": "gallade"
+      },
+      {
+        "name": "garbodor",
+        "slug": "garbodor"
+      },
+      {
+        "name": "gardevoir",
+        "slug": "gardevoir"
+      },
+      {
+        "name": "gastly",
+        "slug": "gastly"
+      },
+      {
+        "name": "gastrodon",
+        "slug": "gastrodon"
+      },
+      {
+        "name": "gengar",
+        "slug": "gengar"
+      },
+      {
+        "name": "gholdengo",
+        "slug": "gholdengo"
+      },
+      {
+        "name": "gimmighoul",
+        "slug": "gimmighoul"
+      },
+      {
+        "name": "girafarig",
+        "slug": "girafarig"
+      },
+      {
+        "name": "glimmet",
+        "slug": "glimmet"
+      },
+      {
+        "name": "glimmora",
+        "slug": "glimmora"
+      },
+      {
+        "name": "gloom",
+        "slug": "gloom"
+      },
+      {
+        "name": "golduck",
+        "slug": "golduck"
+      },
+      {
+        "name": "golem",
+        "slug": "golem"
+      },
+      {
+        "name": "goodra",
+        "slug": "goodra"
+      },
+      {
+        "name": "goomy",
+        "slug": "goomy"
+      },
+      {
+        "name": "graveler",
+        "slug": "graveler"
+      },
+      {
+        "name": "greedent",
+        "slug": "greedent"
+      },
+      {
+        "name": "greninja",
+        "slug": "greninja"
+      },
+      {
+        "name": "grimer",
+        "slug": "grimer"
+      },
+      {
+        "name": "growlithe",
+        "slug": "growlithe"
+      },
+      {
+        "name": "grubbin",
+        "slug": "grubbin"
+      },
+      {
+        "name": "gurdurr",
+        "slug": "gurdurr"
+      },
+      {
+        "name": "gyarados",
+        "slug": "gyarados"
+      },
+      {
+        "name": "happiny",
+        "slug": "happiny"
+      },
+      {
+        "name": "hariyama",
+        "slug": "hariyama"
+      },
+      {
+        "name": "haunter",
+        "slug": "haunter"
+      },
+      {
+        "name": "haxorus",
+        "slug": "haxorus"
+      },
+      {
+        "name": "heracross",
+        "slug": "heracross"
+      },
+      {
+        "name": "hitmonchan",
+        "slug": "hitmonchan"
+      },
+      {
+        "name": "hitmonlee",
+        "slug": "hitmonlee"
+      },
+      {
+        "name": "hitmontop",
+        "slug": "hitmontop"
+      },
+      {
+        "name": "honchkrow",
+        "slug": "honchkrow"
+      },
+      {
+        "name": "hoothoot",
+        "slug": "hoothoot"
+      },
+      {
+        "name": "igglybuff",
+        "slug": "igglybuff"
+      },
+      {
+        "name": "illumise",
+        "slug": "illumise"
+      },
+      {
+        "name": "ivysaur",
+        "slug": "ivysaur"
+      },
+      {
+        "name": "jigglypuff",
+        "slug": "jigglypuff"
+      },
+      {
+        "name": "kadabra",
+        "slug": "kadabra"
+      },
+      {
+        "name": "kilowattrel",
+        "slug": "kilowattrel"
+      },
+      {
+        "name": "kirlia",
+        "slug": "kirlia"
+      },
+      {
+        "name": "kricketot",
+        "slug": "kricketot"
+      },
+      {
+        "name": "kricketune",
+        "slug": "kricketune"
+      },
+      {
+        "name": "lampent",
+        "slug": "lampent"
+      },
+      {
+        "name": "lapras",
+        "slug": "lapras"
+      },
+      {
+        "name": "larvesta",
+        "slug": "larvesta"
+      },
+      {
+        "name": "larvitar",
+        "slug": "larvitar"
+      },
+      {
+        "name": "litwick",
+        "slug": "litwick"
+      },
+      {
+        "name": "lombre",
+        "slug": "lombre"
+      },
+      {
+        "name": "lotad",
+        "slug": "lotad"
+      },
+      {
+        "name": "lucario",
+        "slug": "lucario"
+      },
+      {
+        "name": "ludicolo",
+        "slug": "ludicolo"
+      },
+      {
+        "name": "machamp",
+        "slug": "machamp"
+      },
+      {
+        "name": "machoke",
+        "slug": "machoke"
+      },
+      {
+        "name": "magby",
+        "slug": "magby"
+      },
+      {
+        "name": "magikarp",
+        "slug": "magikarp"
+      },
+      {
+        "name": "magmar",
+        "slug": "magmar"
+      },
+      {
+        "name": "magmortar",
+        "slug": "magmortar"
+      },
+      {
+        "name": "magnemite",
+        "slug": "magnemite"
+      },
+      {
+        "name": "magneton",
+        "slug": "magneton"
+      },
+      {
+        "name": "magnezone",
+        "slug": "magnezone"
+      },
+      {
+        "name": "makuhita",
+        "slug": "makuhita"
+      },
+      {
+        "name": "mareep",
+        "slug": "mareep"
+      },
+      {
+        "name": "marill",
+        "slug": "marill"
+      },
+      {
+        "name": "marowak",
+        "slug": "marowak"
+      },
+      {
+        "name": "meowscarada",
+        "slug": "meowscarada"
+      },
+      {
+        "name": "meowth",
+        "slug": "meowth"
+      },
+      {
+        "name": "metagross",
+        "slug": "metagross"
+      },
+      {
+        "name": "metang",
+        "slug": "metang"
+      },
+      {
+        "name": "mimikyu",
+        "slug": "mimikyu"
+      },
+      {
+        "name": "minccino",
+        "slug": "minccino"
+      },
+      {
+        "name": "minun",
+        "slug": "minun"
+      },
+      {
+        "name": "misdreavus",
+        "slug": "misdreavus"
+      },
+      {
+        "name": "mismagius",
+        "slug": "mismagius"
+      },
+      {
+        "name": "muk",
+        "slug": "muk"
+      },
+      {
+        "name": "murkrow",
+        "slug": "murkrow"
+      },
+      {
+        "name": "ninetales",
+        "slug": "ninetales"
+      },
+      {
+        "name": "noctowl",
+        "slug": "noctowl"
+      },
+      {
+        "name": "noibat",
+        "slug": "noibat"
+      },
+      {
+        "name": "oddish",
+        "slug": "oddish"
+      },
+      {
+        "name": "onix",
+        "slug": "onix"
+      },
+      {
+        "name": "paras",
+        "slug": "paras"
+      },
+      {
+        "name": "parasect",
+        "slug": "parasect"
+      },
+      {
+        "name": "pawmi",
+        "slug": "pawmi"
+      },
+      {
+        "name": "pawmo",
+        "slug": "pawmo"
+      },
+      {
+        "name": "pawmot",
+        "slug": "pawmot"
+      },
+      {
+        "name": "persian",
+        "slug": "persian"
+      },
+      {
+        "name": "pidgeot",
+        "slug": "pidgeot"
+      },
+      {
+        "name": "pidgeotto",
+        "slug": "pidgeotto"
+      },
+      {
+        "name": "pidgey",
+        "slug": "pidgey"
+      },
+      {
+        "name": "pinsir",
+        "slug": "pinsir"
+      },
+      {
+        "name": "piplup",
+        "slug": "piplup"
+      },
+      {
+        "name": "plusle",
+        "slug": "plusle"
+      },
+      {
+        "name": "politoed",
+        "slug": "politoed"
+      },
+      {
+        "name": "poliwag",
+        "slug": "poliwag"
+      },
+      {
+        "name": "poliwhirl",
+        "slug": "poliwhirl"
+      },
+      {
+        "name": "poliwrath",
+        "slug": "poliwrath"
+      },
+      {
+        "name": "porygon",
+        "slug": "porygon"
+      },
+      {
+        "name": "prinplup",
+        "slug": "prinplup"
+      },
+      {
+        "name": "psyduck",
+        "slug": "psyduck"
+      },
+      {
+        "name": "pupitar",
+        "slug": "pupitar"
+      },
+      {
+        "name": "quilava",
+        "slug": "quilava"
+      },
+      {
+        "name": "raboot",
+        "slug": "raboot"
+      },
+      {
+        "name": "raichu",
+        "slug": "raichu"
+      },
+      {
+        "name": "ralts",
+        "slug": "ralts"
+      },
+      {
+        "name": "rampardos",
+        "slug": "rampardos"
+      },
+      {
+        "name": "riolu",
+        "slug": "riolu"
+      },
+      {
+        "name": "rolycoly",
+        "slug": "rolycoly"
+      },
+      {
+        "name": "rookidee",
+        "slug": "rookidee"
+      },
+      {
+        "name": "scorbunny",
+        "slug": "scorbunny"
+      },
+      {
+        "name": "scyther",
+        "slug": "scyther"
+      },
+      {
+        "name": "serperior",
+        "slug": "serperior"
+      },
+      {
+        "name": "servine",
+        "slug": "servine"
+      },
+      {
+        "name": "shellos",
+        "slug": "shellos"
+      },
+      {
+        "name": "shieldon",
+        "slug": "shieldon"
+      },
+      {
+        "name": "sliggoo",
+        "slug": "sliggoo"
+      },
+      {
+        "name": "slowbro",
+        "slug": "slowbro"
+      },
+      {
+        "name": "slowking",
+        "slug": "slowking"
+      },
+      {
+        "name": "slowpoke",
+        "slug": "slowpoke"
+      },
+      {
+        "name": "smeargle",
+        "slug": "smeargle"
+      },
+      {
+        "name": "snivy",
+        "slug": "snivy"
+      },
+      {
+        "name": "spinarak",
+        "slug": "spinarak"
+      },
+      {
+        "name": "sprigatito",
+        "slug": "sprigatito"
+      },
+      {
+        "name": "squirtle",
+        "slug": "squirtle"
+      },
+      {
+        "name": "steelix",
+        "slug": "steelix"
+      },
+      {
+        "name": "sudowoodo",
+        "slug": "sudowoodo"
+      },
+      {
+        "name": "swablu",
+        "slug": "swablu"
+      },
+      {
+        "name": "swalot",
+        "slug": "swalot"
+      },
+      {
+        "name": "timburr",
+        "slug": "timburr"
+      },
+      {
+        "name": "tinkaton",
+        "slug": "tinkaton"
+      },
+      {
+        "name": "torchic",
+        "slug": "torchic"
+      },
+      {
+        "name": "torkoal",
+        "slug": "torkoal"
+      },
+      {
+        "name": "toxel",
+        "slug": "toxel"
+      },
+      {
+        "name": "trapinch",
+        "slug": "trapinch"
+      },
+      {
+        "name": "trubbish",
+        "slug": "trubbish"
+      },
+      {
+        "name": "typhlosion",
+        "slug": "typhlosion"
+      },
+      {
+        "name": "tyranitar",
+        "slug": "tyranitar"
+      },
+      {
+        "name": "tyrantrum",
+        "slug": "tyrantrum"
+      },
+      {
+        "name": "tyrogue",
+        "slug": "tyrogue"
+      },
+      {
+        "name": "tyrunt",
+        "slug": "tyrunt"
+      },
+      {
+        "name": "venomoth",
+        "slug": "venomoth"
+      },
+      {
+        "name": "venonat",
+        "slug": "venonat"
+      },
+      {
+        "name": "venusaur",
+        "slug": "venusaur"
+      },
+      {
+        "name": "vespiquen",
+        "slug": "vespiquen"
+      },
+      {
+        "name": "vibrava",
+        "slug": "vibrava"
+      },
+      {
+        "name": "victreebel",
+        "slug": "victreebel"
+      },
+      {
+        "name": "vileplume",
+        "slug": "vileplume"
+      },
+      {
+        "name": "volbeat",
+        "slug": "volbeat"
+      },
+      {
+        "name": "volcarona",
+        "slug": "volcarona"
+      },
+      {
+        "name": "voltorb",
+        "slug": "voltorb"
+      },
+      {
+        "name": "vulpix",
+        "slug": "vulpix"
+      },
+      {
+        "name": "wartortle",
+        "slug": "wartortle"
+      },
+      {
+        "name": "wattrel",
+        "slug": "wattrel"
+      },
+      {
+        "name": "weepinbell",
+        "slug": "weepinbell"
+      },
+      {
+        "name": "wigglytuff",
+        "slug": "wigglytuff"
+      },
+      {
+        "name": "wingull",
+        "slug": "wingull"
+      },
+      {
+        "name": "zorua",
+        "slug": "zorua"
+      },
+      {
+        "name": "zubat",
+        "slug": "zubat"
+      }
+    ]
+  },
+  {
+    "id": "rockyridges",
+    "name": "Rocky Ridges",
+    "image": "/locations/rockyridges.jpg",
+    "description": "Rugged mountain terrain with steep rocky ridges.",
+    "pokemon": [
+      {
+        "name": "abra",
+        "slug": "abra"
+      },
+      {
+        "name": "absol",
+        "slug": "absol"
+      },
+      {
+        "name": "aerodactyl",
+        "slug": "aerodactyl"
+      },
+      {
+        "name": "alakazam",
+        "slug": "alakazam"
+      },
+      {
+        "name": "altaria",
+        "slug": "altaria"
+      },
+      {
+        "name": "amaura",
+        "slug": "amaura"
+      },
+      {
+        "name": "ampharos",
+        "slug": "ampharos"
+      },
+      {
+        "name": "arbok",
+        "slug": "arbok"
+      },
+      {
+        "name": "arcanine",
+        "slug": "arcanine"
+      },
+      {
+        "name": "ariados",
+        "slug": "ariados"
+      },
+      {
+        "name": "audino",
+        "slug": "audino"
+      },
+      {
+        "name": "aurorus",
+        "slug": "aurorus"
+      },
+      {
+        "name": "axew",
+        "slug": "axew"
+      },
+      {
+        "name": "azumarill",
+        "slug": "azumarill"
+      },
+      {
+        "name": "azurill",
+        "slug": "azurill"
+      },
+      {
+        "name": "bastiodon",
+        "slug": "bastiodon"
+      },
+      {
+        "name": "beldum",
+        "slug": "beldum"
+      },
+      {
+        "name": "bellossom",
+        "slug": "bellossom"
+      },
+      {
+        "name": "bellsprout",
+        "slug": "bellsprout"
+      },
+      {
+        "name": "blastoise",
+        "slug": "blastoise"
+      },
+      {
+        "name": "blaziken",
+        "slug": "blaziken"
+      },
+      {
+        "name": "blissey",
+        "slug": "blissey"
+      },
+      {
+        "name": "bonsly",
+        "slug": "bonsly"
+      },
+      {
+        "name": "bulbasaur",
+        "slug": "bulbasaur"
+      },
+      {
+        "name": "cacnea",
+        "slug": "cacnea"
+      },
+      {
+        "name": "cacturne",
+        "slug": "cacturne"
+      },
+      {
+        "name": "carkol",
+        "slug": "carkol"
+      },
+      {
+        "name": "ceruledge",
+        "slug": "ceruledge"
+      },
+      {
+        "name": "chandelure",
+        "slug": "chandelure"
+      },
+      {
+        "name": "chansey",
+        "slug": "chansey"
+      },
+      {
+        "name": "charcadet",
+        "slug": "charcadet"
+      },
+      {
+        "name": "charizard",
+        "slug": "charizard"
+      },
+      {
+        "name": "charjabug",
+        "slug": "charjabug"
+      },
+      {
+        "name": "charmander",
+        "slug": "charmander"
+      },
+      {
+        "name": "charmeleon",
+        "slug": "charmeleon"
+      },
+      {
+        "name": "chatot",
+        "slug": "chatot"
+      },
+      {
+        "name": "cinccino",
+        "slug": "cinccino"
+      },
+      {
+        "name": "cinderace",
+        "slug": "cinderace"
+      },
+      {
+        "name": "clefable",
+        "slug": "clefable"
+      },
+      {
+        "name": "clefairy",
+        "slug": "clefairy"
+      },
+      {
+        "name": "cleffa",
+        "slug": "cleffa"
+      },
+      {
+        "name": "clodsire",
+        "slug": "clodsire"
+      },
+      {
+        "name": "coalossal",
+        "slug": "coalossal"
+      },
+      {
+        "name": "combee",
+        "slug": "combee"
+      },
+      {
+        "name": "combusken",
+        "slug": "combusken"
+      },
+      {
+        "name": "conkeldurr",
+        "slug": "conkeldurr"
+      },
+      {
+        "name": "corviknight",
+        "slug": "corviknight"
+      },
+      {
+        "name": "corvisquire",
+        "slug": "corvisquire"
+      },
+      {
+        "name": "cranidos",
+        "slug": "cranidos"
+      },
+      {
+        "name": "crobat",
+        "slug": "crobat"
+      },
+      {
+        "name": "cubone",
+        "slug": "cubone"
+      },
+      {
+        "name": "cyndaquil",
+        "slug": "cyndaquil"
+      },
+      {
+        "name": "dachsbun",
+        "slug": "dachsbun"
+      },
+      {
+        "name": "dartrix",
+        "slug": "dartrix"
+      },
+      {
+        "name": "decidueye",
+        "slug": "decidueye"
+      },
+      {
+        "name": "dedenne",
+        "slug": "dedenne"
+      },
+      {
+        "name": "diglett",
+        "slug": "diglett"
+      },
+      {
+        "name": "dragapult",
+        "slug": "dragapult"
+      },
+      {
+        "name": "dragonair",
+        "slug": "dragonair"
+      },
+      {
+        "name": "dragonite",
+        "slug": "dragonite"
+      },
+      {
+        "name": "drakloak",
+        "slug": "drakloak"
+      },
+      {
+        "name": "dratini",
+        "slug": "dratini"
+      },
+      {
+        "name": "dreepy",
+        "slug": "dreepy"
+      },
+      {
+        "name": "drifblim",
+        "slug": "drifblim"
+      },
+      {
+        "name": "drifloon",
+        "slug": "drifloon"
+      },
+      {
+        "name": "drilbur",
+        "slug": "drilbur"
+      },
+      {
+        "name": "dugtrio",
+        "slug": "dugtrio"
+      },
+      {
+        "name": "dusclops",
+        "slug": "dusclops"
+      },
+      {
+        "name": "dusknoir",
+        "slug": "dusknoir"
+      },
+      {
+        "name": "duskull",
+        "slug": "duskull"
+      },
+      {
+        "name": "eevee",
+        "slug": "eevee"
+      },
+      {
+        "name": "ekans",
+        "slug": "ekans"
+      },
+      {
+        "name": "electabuzz",
+        "slug": "electabuzz"
+      },
+      {
+        "name": "electivire",
+        "slug": "electivire"
+      },
+      {
+        "name": "electrode",
+        "slug": "electrode"
+      },
+      {
+        "name": "elekid",
+        "slug": "elekid"
+      },
+      {
+        "name": "empoleon",
+        "slug": "empoleon"
+      },
+      {
+        "name": "excadrill",
+        "slug": "excadrill"
+      },
+      {
+        "name": "exeggcute",
+        "slug": "exeggcute"
+      },
+      {
+        "name": "exeggutor",
+        "slug": "exeggutor"
+      },
+      {
+        "name": "farigiraf",
+        "slug": "farigiraf"
+      },
+      {
+        "name": "fidough",
+        "slug": "fidough"
+      },
+      {
+        "name": "flaaffy",
+        "slug": "flaaffy"
+      },
+      {
+        "name": "floragato",
+        "slug": "floragato"
+      },
+      {
+        "name": "flygon",
+        "slug": "flygon"
+      },
+      {
+        "name": "fraxure",
+        "slug": "fraxure"
+      },
+      {
+        "name": "froakie",
+        "slug": "froakie"
+      },
+      {
+        "name": "frogadier",
+        "slug": "frogadier"
+      },
+      {
+        "name": "gallade",
+        "slug": "gallade"
+      },
+      {
+        "name": "garbodor",
+        "slug": "garbodor"
+      },
+      {
+        "name": "gardevoir",
+        "slug": "gardevoir"
+      },
+      {
+        "name": "gastly",
+        "slug": "gastly"
+      },
+      {
+        "name": "gastrodon",
+        "slug": "gastrodon"
+      },
+      {
+        "name": "gengar",
+        "slug": "gengar"
+      },
+      {
+        "name": "gholdengo",
+        "slug": "gholdengo"
+      },
+      {
+        "name": "gimmighoul",
+        "slug": "gimmighoul"
+      },
+      {
+        "name": "girafarig",
+        "slug": "girafarig"
+      },
+      {
+        "name": "glimmet",
+        "slug": "glimmet"
+      },
+      {
+        "name": "glimmora",
+        "slug": "glimmora"
+      },
+      {
+        "name": "gloom",
+        "slug": "gloom"
+      },
+      {
+        "name": "golduck",
+        "slug": "golduck"
+      },
+      {
+        "name": "golem",
+        "slug": "golem"
+      },
+      {
+        "name": "goodra",
+        "slug": "goodra"
+      },
+      {
+        "name": "goomy",
+        "slug": "goomy"
+      },
+      {
+        "name": "graveler",
+        "slug": "graveler"
+      },
+      {
+        "name": "greedent",
+        "slug": "greedent"
+      },
+      {
+        "name": "greninja",
+        "slug": "greninja"
+      },
+      {
+        "name": "grimer",
+        "slug": "grimer"
+      },
+      {
+        "name": "growlithe",
+        "slug": "growlithe"
+      },
+      {
+        "name": "grubbin",
+        "slug": "grubbin"
+      },
+      {
+        "name": "gurdurr",
+        "slug": "gurdurr"
+      },
+      {
+        "name": "gyarados",
+        "slug": "gyarados"
+      },
+      {
+        "name": "happiny",
+        "slug": "happiny"
+      },
+      {
+        "name": "hariyama",
+        "slug": "hariyama"
+      },
+      {
+        "name": "haunter",
+        "slug": "haunter"
+      },
+      {
+        "name": "haxorus",
+        "slug": "haxorus"
+      },
+      {
+        "name": "heracross",
+        "slug": "heracross"
+      },
+      {
+        "name": "hitmonchan",
+        "slug": "hitmonchan"
+      },
+      {
+        "name": "hitmonlee",
+        "slug": "hitmonlee"
+      },
+      {
+        "name": "hitmontop",
+        "slug": "hitmontop"
+      },
+      {
+        "name": "honchkrow",
+        "slug": "honchkrow"
+      },
+      {
+        "name": "hoothoot",
+        "slug": "hoothoot"
+      },
+      {
+        "name": "igglybuff",
+        "slug": "igglybuff"
+      },
+      {
+        "name": "illumise",
+        "slug": "illumise"
+      },
+      {
+        "name": "ivysaur",
+        "slug": "ivysaur"
+      },
+      {
+        "name": "jigglypuff",
+        "slug": "jigglypuff"
+      },
+      {
+        "name": "kadabra",
+        "slug": "kadabra"
+      },
+      {
+        "name": "kilowattrel",
+        "slug": "kilowattrel"
+      },
+      {
+        "name": "kirlia",
+        "slug": "kirlia"
+      },
+      {
+        "name": "kricketot",
+        "slug": "kricketot"
+      },
+      {
+        "name": "kricketune",
+        "slug": "kricketune"
+      },
+      {
+        "name": "lampent",
+        "slug": "lampent"
+      },
+      {
+        "name": "lapras",
+        "slug": "lapras"
+      },
+      {
+        "name": "larvesta",
+        "slug": "larvesta"
+      },
+      {
+        "name": "larvitar",
+        "slug": "larvitar"
+      },
+      {
+        "name": "litwick",
+        "slug": "litwick"
+      },
+      {
+        "name": "lombre",
+        "slug": "lombre"
+      },
+      {
+        "name": "lotad",
+        "slug": "lotad"
+      },
+      {
+        "name": "lucario",
+        "slug": "lucario"
+      },
+      {
+        "name": "ludicolo",
+        "slug": "ludicolo"
+      },
+      {
+        "name": "machamp",
+        "slug": "machamp"
+      },
+      {
+        "name": "machoke",
+        "slug": "machoke"
+      },
+      {
+        "name": "magby",
+        "slug": "magby"
+      },
+      {
+        "name": "magikarp",
+        "slug": "magikarp"
+      },
+      {
+        "name": "magmar",
+        "slug": "magmar"
+      },
+      {
+        "name": "magmortar",
+        "slug": "magmortar"
+      },
+      {
+        "name": "magnemite",
+        "slug": "magnemite"
+      },
+      {
+        "name": "magneton",
+        "slug": "magneton"
+      },
+      {
+        "name": "magnezone",
+        "slug": "magnezone"
+      },
+      {
+        "name": "makuhita",
+        "slug": "makuhita"
+      },
+      {
+        "name": "mareep",
+        "slug": "mareep"
+      },
+      {
+        "name": "marill",
+        "slug": "marill"
+      },
+      {
+        "name": "marowak",
+        "slug": "marowak"
+      },
+      {
+        "name": "meowscarada",
+        "slug": "meowscarada"
+      },
+      {
+        "name": "meowth",
+        "slug": "meowth"
+      },
+      {
+        "name": "metagross",
+        "slug": "metagross"
+      },
+      {
+        "name": "metang",
+        "slug": "metang"
+      },
+      {
+        "name": "mimikyu",
+        "slug": "mimikyu"
+      },
+      {
+        "name": "minccino",
+        "slug": "minccino"
+      },
+      {
+        "name": "minun",
+        "slug": "minun"
+      },
+      {
+        "name": "misdreavus",
+        "slug": "misdreavus"
+      },
+      {
+        "name": "mismagius",
+        "slug": "mismagius"
+      },
+      {
+        "name": "muk",
+        "slug": "muk"
+      },
+      {
+        "name": "murkrow",
+        "slug": "murkrow"
+      },
+      {
+        "name": "ninetales",
+        "slug": "ninetales"
+      },
+      {
+        "name": "noctowl",
+        "slug": "noctowl"
+      },
+      {
+        "name": "noibat",
+        "slug": "noibat"
+      },
+      {
+        "name": "oddish",
+        "slug": "oddish"
+      },
+      {
+        "name": "onix",
+        "slug": "onix"
+      },
+      {
+        "name": "paras",
+        "slug": "paras"
+      },
+      {
+        "name": "parasect",
+        "slug": "parasect"
+      },
+      {
+        "name": "pawmi",
+        "slug": "pawmi"
+      },
+      {
+        "name": "pawmo",
+        "slug": "pawmo"
+      },
+      {
+        "name": "pawmot",
+        "slug": "pawmot"
+      },
+      {
+        "name": "persian",
+        "slug": "persian"
+      },
+      {
+        "name": "pidgeot",
+        "slug": "pidgeot"
+      },
+      {
+        "name": "pidgeotto",
+        "slug": "pidgeotto"
+      },
+      {
+        "name": "pidgey",
+        "slug": "pidgey"
+      },
+      {
+        "name": "pinsir",
+        "slug": "pinsir"
+      },
+      {
+        "name": "piplup",
+        "slug": "piplup"
+      },
+      {
+        "name": "plusle",
+        "slug": "plusle"
+      },
+      {
+        "name": "politoed",
+        "slug": "politoed"
+      },
+      {
+        "name": "poliwag",
+        "slug": "poliwag"
+      },
+      {
+        "name": "poliwhirl",
+        "slug": "poliwhirl"
+      },
+      {
+        "name": "poliwrath",
+        "slug": "poliwrath"
+      },
+      {
+        "name": "porygon",
+        "slug": "porygon"
+      },
+      {
+        "name": "prinplup",
+        "slug": "prinplup"
+      },
+      {
+        "name": "psyduck",
+        "slug": "psyduck"
+      },
+      {
+        "name": "pupitar",
+        "slug": "pupitar"
+      },
+      {
+        "name": "quilava",
+        "slug": "quilava"
+      },
+      {
+        "name": "raboot",
+        "slug": "raboot"
+      },
+      {
+        "name": "raichu",
+        "slug": "raichu"
+      },
+      {
+        "name": "ralts",
+        "slug": "ralts"
+      },
+      {
+        "name": "rampardos",
+        "slug": "rampardos"
+      },
+      {
+        "name": "riolu",
+        "slug": "riolu"
+      },
+      {
+        "name": "rolycoly",
+        "slug": "rolycoly"
+      },
+      {
+        "name": "rookidee",
+        "slug": "rookidee"
+      },
+      {
+        "name": "scorbunny",
+        "slug": "scorbunny"
+      },
+      {
+        "name": "scyther",
+        "slug": "scyther"
+      },
+      {
+        "name": "serperior",
+        "slug": "serperior"
+      },
+      {
+        "name": "servine",
+        "slug": "servine"
+      },
+      {
+        "name": "shellos",
+        "slug": "shellos"
+      },
+      {
+        "name": "shieldon",
+        "slug": "shieldon"
+      },
+      {
+        "name": "sliggoo",
+        "slug": "sliggoo"
+      },
+      {
+        "name": "slowbro",
+        "slug": "slowbro"
+      },
+      {
+        "name": "slowking",
+        "slug": "slowking"
+      },
+      {
+        "name": "slowpoke",
+        "slug": "slowpoke"
+      },
+      {
+        "name": "smeargle",
+        "slug": "smeargle"
+      },
+      {
+        "name": "snivy",
+        "slug": "snivy"
+      },
+      {
+        "name": "spinarak",
+        "slug": "spinarak"
+      },
+      {
+        "name": "sprigatito",
+        "slug": "sprigatito"
+      },
+      {
+        "name": "squirtle",
+        "slug": "squirtle"
+      },
+      {
+        "name": "steelix",
+        "slug": "steelix"
+      },
+      {
+        "name": "sudowoodo",
+        "slug": "sudowoodo"
+      },
+      {
+        "name": "swablu",
+        "slug": "swablu"
+      },
+      {
+        "name": "swalot",
+        "slug": "swalot"
+      },
+      {
+        "name": "timburr",
+        "slug": "timburr"
+      },
+      {
+        "name": "tinkaton",
+        "slug": "tinkaton"
+      },
+      {
+        "name": "torchic",
+        "slug": "torchic"
+      },
+      {
+        "name": "torkoal",
+        "slug": "torkoal"
+      },
+      {
+        "name": "toxel",
+        "slug": "toxel"
+      },
+      {
+        "name": "trapinch",
+        "slug": "trapinch"
+      },
+      {
+        "name": "trubbish",
+        "slug": "trubbish"
+      },
+      {
+        "name": "typhlosion",
+        "slug": "typhlosion"
+      },
+      {
+        "name": "tyranitar",
+        "slug": "tyranitar"
+      },
+      {
+        "name": "tyrantrum",
+        "slug": "tyrantrum"
+      },
+      {
+        "name": "tyrogue",
+        "slug": "tyrogue"
+      },
+      {
+        "name": "tyrunt",
+        "slug": "tyrunt"
+      },
+      {
+        "name": "venomoth",
+        "slug": "venomoth"
+      },
+      {
+        "name": "venonat",
+        "slug": "venonat"
+      },
+      {
+        "name": "venusaur",
+        "slug": "venusaur"
+      },
+      {
+        "name": "vespiquen",
+        "slug": "vespiquen"
+      },
+      {
+        "name": "vibrava",
+        "slug": "vibrava"
+      },
+      {
+        "name": "victreebel",
+        "slug": "victreebel"
+      },
+      {
+        "name": "vileplume",
+        "slug": "vileplume"
+      },
+      {
+        "name": "volbeat",
+        "slug": "volbeat"
+      },
+      {
+        "name": "volcarona",
+        "slug": "volcarona"
+      },
+      {
+        "name": "voltorb",
+        "slug": "voltorb"
+      },
+      {
+        "name": "vulpix",
+        "slug": "vulpix"
+      },
+      {
+        "name": "wartortle",
+        "slug": "wartortle"
+      },
+      {
+        "name": "wattrel",
+        "slug": "wattrel"
+      },
+      {
+        "name": "weepinbell",
+        "slug": "weepinbell"
+      },
+      {
+        "name": "wigglytuff",
+        "slug": "wigglytuff"
+      },
+      {
+        "name": "wingull",
+        "slug": "wingull"
+      },
+      {
+        "name": "zorua",
+        "slug": "zorua"
+      },
+      {
+        "name": "zubat",
+        "slug": "zubat"
+      }
+    ]
+  },
+  {
+    "id": "sparklingskylands",
+    "name": "Sparkling Skylands",
+    "image": "/locations/sparklingskylands.jpg",
+    "description": "Floating islands high in the sky.",
+    "pokemon": [
+      {
+        "name": "abra",
+        "slug": "abra"
+      },
+      {
+        "name": "absol",
+        "slug": "absol"
+      },
+      {
+        "name": "aerodactyl",
+        "slug": "aerodactyl"
+      },
+      {
+        "name": "alakazam",
+        "slug": "alakazam"
+      },
+      {
+        "name": "altaria",
+        "slug": "altaria"
+      },
+      {
+        "name": "amaura",
+        "slug": "amaura"
+      },
+      {
+        "name": "ampharos",
+        "slug": "ampharos"
+      },
+      {
+        "name": "arbok",
+        "slug": "arbok"
+      },
+      {
+        "name": "arcanine",
+        "slug": "arcanine"
+      },
+      {
+        "name": "ariados",
+        "slug": "ariados"
+      },
+      {
+        "name": "audino",
+        "slug": "audino"
+      },
+      {
+        "name": "aurorus",
+        "slug": "aurorus"
+      },
+      {
+        "name": "axew",
+        "slug": "axew"
+      },
+      {
+        "name": "azumarill",
+        "slug": "azumarill"
+      },
+      {
+        "name": "azurill",
+        "slug": "azurill"
+      },
+      {
+        "name": "bastiodon",
+        "slug": "bastiodon"
+      },
+      {
+        "name": "beldum",
+        "slug": "beldum"
+      },
+      {
+        "name": "bellossom",
+        "slug": "bellossom"
+      },
+      {
+        "name": "bellsprout",
+        "slug": "bellsprout"
+      },
+      {
+        "name": "blastoise",
+        "slug": "blastoise"
+      },
+      {
+        "name": "blaziken",
+        "slug": "blaziken"
+      },
+      {
+        "name": "blissey",
+        "slug": "blissey"
+      },
+      {
+        "name": "bonsly",
+        "slug": "bonsly"
+      },
+      {
+        "name": "bulbasaur",
+        "slug": "bulbasaur"
+      },
+      {
+        "name": "cacnea",
+        "slug": "cacnea"
+      },
+      {
+        "name": "cacturne",
+        "slug": "cacturne"
+      },
+      {
+        "name": "carkol",
+        "slug": "carkol"
+      },
+      {
+        "name": "ceruledge",
+        "slug": "ceruledge"
+      },
+      {
+        "name": "chandelure",
+        "slug": "chandelure"
+      },
+      {
+        "name": "chansey",
+        "slug": "chansey"
+      },
+      {
+        "name": "charcadet",
+        "slug": "charcadet"
+      },
+      {
+        "name": "charizard",
+        "slug": "charizard"
+      },
+      {
+        "name": "charjabug",
+        "slug": "charjabug"
+      },
+      {
+        "name": "charmander",
+        "slug": "charmander"
+      },
+      {
+        "name": "charmeleon",
+        "slug": "charmeleon"
+      },
+      {
+        "name": "chatot",
+        "slug": "chatot"
+      },
+      {
+        "name": "cinccino",
+        "slug": "cinccino"
+      },
+      {
+        "name": "cinderace",
+        "slug": "cinderace"
+      },
+      {
+        "name": "clefable",
+        "slug": "clefable"
+      },
+      {
+        "name": "clefairy",
+        "slug": "clefairy"
+      },
+      {
+        "name": "cleffa",
+        "slug": "cleffa"
+      },
+      {
+        "name": "clodsire",
+        "slug": "clodsire"
+      },
+      {
+        "name": "coalossal",
+        "slug": "coalossal"
+      },
+      {
+        "name": "combee",
+        "slug": "combee"
+      },
+      {
+        "name": "combusken",
+        "slug": "combusken"
+      },
+      {
+        "name": "conkeldurr",
+        "slug": "conkeldurr"
+      },
+      {
+        "name": "corviknight",
+        "slug": "corviknight"
+      },
+      {
+        "name": "corvisquire",
+        "slug": "corvisquire"
+      },
+      {
+        "name": "cranidos",
+        "slug": "cranidos"
+      },
+      {
+        "name": "crobat",
+        "slug": "crobat"
+      },
+      {
+        "name": "cubone",
+        "slug": "cubone"
+      },
+      {
+        "name": "cyndaquil",
+        "slug": "cyndaquil"
+      },
+      {
+        "name": "dachsbun",
+        "slug": "dachsbun"
+      },
+      {
+        "name": "dartrix",
+        "slug": "dartrix"
+      },
+      {
+        "name": "decidueye",
+        "slug": "decidueye"
+      },
+      {
+        "name": "dedenne",
+        "slug": "dedenne"
+      },
+      {
+        "name": "diglett",
+        "slug": "diglett"
+      },
+      {
+        "name": "dragapult",
+        "slug": "dragapult"
+      },
+      {
+        "name": "dragonair",
+        "slug": "dragonair"
+      },
+      {
+        "name": "dragonite",
+        "slug": "dragonite"
+      },
+      {
+        "name": "drakloak",
+        "slug": "drakloak"
+      },
+      {
+        "name": "dratini",
+        "slug": "dratini"
+      },
+      {
+        "name": "dreepy",
+        "slug": "dreepy"
+      },
+      {
+        "name": "drifblim",
+        "slug": "drifblim"
+      },
+      {
+        "name": "drifloon",
+        "slug": "drifloon"
+      },
+      {
+        "name": "drilbur",
+        "slug": "drilbur"
+      },
+      {
+        "name": "dugtrio",
+        "slug": "dugtrio"
+      },
+      {
+        "name": "dusclops",
+        "slug": "dusclops"
+      },
+      {
+        "name": "dusknoir",
+        "slug": "dusknoir"
+      },
+      {
+        "name": "duskull",
+        "slug": "duskull"
+      },
+      {
+        "name": "eevee",
+        "slug": "eevee"
+      },
+      {
+        "name": "ekans",
+        "slug": "ekans"
+      },
+      {
+        "name": "electabuzz",
+        "slug": "electabuzz"
+      },
+      {
+        "name": "electivire",
+        "slug": "electivire"
+      },
+      {
+        "name": "electrode",
+        "slug": "electrode"
+      },
+      {
+        "name": "elekid",
+        "slug": "elekid"
+      },
+      {
+        "name": "empoleon",
+        "slug": "empoleon"
+      },
+      {
+        "name": "excadrill",
+        "slug": "excadrill"
+      },
+      {
+        "name": "exeggcute",
+        "slug": "exeggcute"
+      },
+      {
+        "name": "exeggutor",
+        "slug": "exeggutor"
+      },
+      {
+        "name": "farigiraf",
+        "slug": "farigiraf"
+      },
+      {
+        "name": "fidough",
+        "slug": "fidough"
+      },
+      {
+        "name": "flaaffy",
+        "slug": "flaaffy"
+      },
+      {
+        "name": "floragato",
+        "slug": "floragato"
+      },
+      {
+        "name": "flygon",
+        "slug": "flygon"
+      },
+      {
+        "name": "fraxure",
+        "slug": "fraxure"
+      },
+      {
+        "name": "froakie",
+        "slug": "froakie"
+      },
+      {
+        "name": "frogadier",
+        "slug": "frogadier"
+      },
+      {
+        "name": "gallade",
+        "slug": "gallade"
+      },
+      {
+        "name": "garbodor",
+        "slug": "garbodor"
+      },
+      {
+        "name": "gardevoir",
+        "slug": "gardevoir"
+      },
+      {
+        "name": "gastly",
+        "slug": "gastly"
+      },
+      {
+        "name": "gastrodon",
+        "slug": "gastrodon"
+      },
+      {
+        "name": "gengar",
+        "slug": "gengar"
+      },
+      {
+        "name": "gholdengo",
+        "slug": "gholdengo"
+      },
+      {
+        "name": "gimmighoul",
+        "slug": "gimmighoul"
+      },
+      {
+        "name": "girafarig",
+        "slug": "girafarig"
+      },
+      {
+        "name": "glimmet",
+        "slug": "glimmet"
+      },
+      {
+        "name": "glimmora",
+        "slug": "glimmora"
+      },
+      {
+        "name": "gloom",
+        "slug": "gloom"
+      },
+      {
+        "name": "golduck",
+        "slug": "golduck"
+      },
+      {
+        "name": "golem",
+        "slug": "golem"
+      },
+      {
+        "name": "goodra",
+        "slug": "goodra"
+      },
+      {
+        "name": "goomy",
+        "slug": "goomy"
+      },
+      {
+        "name": "graveler",
+        "slug": "graveler"
+      },
+      {
+        "name": "greedent",
+        "slug": "greedent"
+      },
+      {
+        "name": "greninja",
+        "slug": "greninja"
+      },
+      {
+        "name": "grimer",
+        "slug": "grimer"
+      },
+      {
+        "name": "growlithe",
+        "slug": "growlithe"
+      },
+      {
+        "name": "grubbin",
+        "slug": "grubbin"
+      },
+      {
+        "name": "gurdurr",
+        "slug": "gurdurr"
+      },
+      {
+        "name": "gyarados",
+        "slug": "gyarados"
+      },
+      {
+        "name": "happiny",
+        "slug": "happiny"
+      },
+      {
+        "name": "hariyama",
+        "slug": "hariyama"
+      },
+      {
+        "name": "haunter",
+        "slug": "haunter"
+      },
+      {
+        "name": "haxorus",
+        "slug": "haxorus"
+      },
+      {
+        "name": "heracross",
+        "slug": "heracross"
+      },
+      {
+        "name": "hitmonchan",
+        "slug": "hitmonchan"
+      },
+      {
+        "name": "hitmonlee",
+        "slug": "hitmonlee"
+      },
+      {
+        "name": "hitmontop",
+        "slug": "hitmontop"
+      },
+      {
+        "name": "honchkrow",
+        "slug": "honchkrow"
+      },
+      {
+        "name": "hoothoot",
+        "slug": "hoothoot"
+      },
+      {
+        "name": "igglybuff",
+        "slug": "igglybuff"
+      },
+      {
+        "name": "illumise",
+        "slug": "illumise"
+      },
+      {
+        "name": "ivysaur",
+        "slug": "ivysaur"
+      },
+      {
+        "name": "jigglypuff",
+        "slug": "jigglypuff"
+      },
+      {
+        "name": "kadabra",
+        "slug": "kadabra"
+      },
+      {
+        "name": "kilowattrel",
+        "slug": "kilowattrel"
+      },
+      {
+        "name": "kirlia",
+        "slug": "kirlia"
+      },
+      {
+        "name": "kricketot",
+        "slug": "kricketot"
+      },
+      {
+        "name": "kricketune",
+        "slug": "kricketune"
+      },
+      {
+        "name": "lampent",
+        "slug": "lampent"
+      },
+      {
+        "name": "lapras",
+        "slug": "lapras"
+      },
+      {
+        "name": "larvesta",
+        "slug": "larvesta"
+      },
+      {
+        "name": "larvitar",
+        "slug": "larvitar"
+      },
+      {
+        "name": "litwick",
+        "slug": "litwick"
+      },
+      {
+        "name": "lombre",
+        "slug": "lombre"
+      },
+      {
+        "name": "lotad",
+        "slug": "lotad"
+      },
+      {
+        "name": "lucario",
+        "slug": "lucario"
+      },
+      {
+        "name": "ludicolo",
+        "slug": "ludicolo"
+      },
+      {
+        "name": "machamp",
+        "slug": "machamp"
+      },
+      {
+        "name": "machoke",
+        "slug": "machoke"
+      },
+      {
+        "name": "magby",
+        "slug": "magby"
+      },
+      {
+        "name": "magikarp",
+        "slug": "magikarp"
+      },
+      {
+        "name": "magmar",
+        "slug": "magmar"
+      },
+      {
+        "name": "magmortar",
+        "slug": "magmortar"
+      },
+      {
+        "name": "magnemite",
+        "slug": "magnemite"
+      },
+      {
+        "name": "magneton",
+        "slug": "magneton"
+      },
+      {
+        "name": "magnezone",
+        "slug": "magnezone"
+      },
+      {
+        "name": "makuhita",
+        "slug": "makuhita"
+      },
+      {
+        "name": "mareep",
+        "slug": "mareep"
+      },
+      {
+        "name": "marill",
+        "slug": "marill"
+      },
+      {
+        "name": "marowak",
+        "slug": "marowak"
+      },
+      {
+        "name": "meowscarada",
+        "slug": "meowscarada"
+      },
+      {
+        "name": "meowth",
+        "slug": "meowth"
+      },
+      {
+        "name": "metagross",
+        "slug": "metagross"
+      },
+      {
+        "name": "metang",
+        "slug": "metang"
+      },
+      {
+        "name": "mimikyu",
+        "slug": "mimikyu"
+      },
+      {
+        "name": "minccino",
+        "slug": "minccino"
+      },
+      {
+        "name": "minun",
+        "slug": "minun"
+      },
+      {
+        "name": "misdreavus",
+        "slug": "misdreavus"
+      },
+      {
+        "name": "mismagius",
+        "slug": "mismagius"
+      },
+      {
+        "name": "muk",
+        "slug": "muk"
+      },
+      {
+        "name": "murkrow",
+        "slug": "murkrow"
+      },
+      {
+        "name": "ninetales",
+        "slug": "ninetales"
+      },
+      {
+        "name": "noctowl",
+        "slug": "noctowl"
+      },
+      {
+        "name": "noibat",
+        "slug": "noibat"
+      },
+      {
+        "name": "oddish",
+        "slug": "oddish"
+      },
+      {
+        "name": "onix",
+        "slug": "onix"
+      },
+      {
+        "name": "paras",
+        "slug": "paras"
+      },
+      {
+        "name": "parasect",
+        "slug": "parasect"
+      },
+      {
+        "name": "pawmi",
+        "slug": "pawmi"
+      },
+      {
+        "name": "pawmo",
+        "slug": "pawmo"
+      },
+      {
+        "name": "pawmot",
+        "slug": "pawmot"
+      },
+      {
+        "name": "persian",
+        "slug": "persian"
+      },
+      {
+        "name": "pidgeot",
+        "slug": "pidgeot"
+      },
+      {
+        "name": "pidgeotto",
+        "slug": "pidgeotto"
+      },
+      {
+        "name": "pidgey",
+        "slug": "pidgey"
+      },
+      {
+        "name": "pinsir",
+        "slug": "pinsir"
+      },
+      {
+        "name": "piplup",
+        "slug": "piplup"
+      },
+      {
+        "name": "plusle",
+        "slug": "plusle"
+      },
+      {
+        "name": "politoed",
+        "slug": "politoed"
+      },
+      {
+        "name": "poliwag",
+        "slug": "poliwag"
+      },
+      {
+        "name": "poliwhirl",
+        "slug": "poliwhirl"
+      },
+      {
+        "name": "poliwrath",
+        "slug": "poliwrath"
+      },
+      {
+        "name": "porygon",
+        "slug": "porygon"
+      },
+      {
+        "name": "prinplup",
+        "slug": "prinplup"
+      },
+      {
+        "name": "psyduck",
+        "slug": "psyduck"
+      },
+      {
+        "name": "pupitar",
+        "slug": "pupitar"
+      },
+      {
+        "name": "quilava",
+        "slug": "quilava"
+      },
+      {
+        "name": "raboot",
+        "slug": "raboot"
+      },
+      {
+        "name": "raichu",
+        "slug": "raichu"
+      },
+      {
+        "name": "ralts",
+        "slug": "ralts"
+      },
+      {
+        "name": "rampardos",
+        "slug": "rampardos"
+      },
+      {
+        "name": "riolu",
+        "slug": "riolu"
+      },
+      {
+        "name": "rolycoly",
+        "slug": "rolycoly"
+      },
+      {
+        "name": "rookidee",
+        "slug": "rookidee"
+      },
+      {
+        "name": "scorbunny",
+        "slug": "scorbunny"
+      },
+      {
+        "name": "scyther",
+        "slug": "scyther"
+      },
+      {
+        "name": "serperior",
+        "slug": "serperior"
+      },
+      {
+        "name": "servine",
+        "slug": "servine"
+      },
+      {
+        "name": "shellos",
+        "slug": "shellos"
+      },
+      {
+        "name": "shieldon",
+        "slug": "shieldon"
+      },
+      {
+        "name": "sliggoo",
+        "slug": "sliggoo"
+      },
+      {
+        "name": "slowbro",
+        "slug": "slowbro"
+      },
+      {
+        "name": "slowking",
+        "slug": "slowking"
+      },
+      {
+        "name": "slowpoke",
+        "slug": "slowpoke"
+      },
+      {
+        "name": "smeargle",
+        "slug": "smeargle"
+      },
+      {
+        "name": "snivy",
+        "slug": "snivy"
+      },
+      {
+        "name": "spinarak",
+        "slug": "spinarak"
+      },
+      {
+        "name": "sprigatito",
+        "slug": "sprigatito"
+      },
+      {
+        "name": "squirtle",
+        "slug": "squirtle"
+      },
+      {
+        "name": "steelix",
+        "slug": "steelix"
+      },
+      {
+        "name": "sudowoodo",
+        "slug": "sudowoodo"
+      },
+      {
+        "name": "swablu",
+        "slug": "swablu"
+      },
+      {
+        "name": "swalot",
+        "slug": "swalot"
+      },
+      {
+        "name": "timburr",
+        "slug": "timburr"
+      },
+      {
+        "name": "tinkaton",
+        "slug": "tinkaton"
+      },
+      {
+        "name": "torchic",
+        "slug": "torchic"
+      },
+      {
+        "name": "torkoal",
+        "slug": "torkoal"
+      },
+      {
+        "name": "toxel",
+        "slug": "toxel"
+      },
+      {
+        "name": "trapinch",
+        "slug": "trapinch"
+      },
+      {
+        "name": "trubbish",
+        "slug": "trubbish"
+      },
+      {
+        "name": "typhlosion",
+        "slug": "typhlosion"
+      },
+      {
+        "name": "tyranitar",
+        "slug": "tyranitar"
+      },
+      {
+        "name": "tyrantrum",
+        "slug": "tyrantrum"
+      },
+      {
+        "name": "tyrogue",
+        "slug": "tyrogue"
+      },
+      {
+        "name": "tyrunt",
+        "slug": "tyrunt"
+      },
+      {
+        "name": "venomoth",
+        "slug": "venomoth"
+      },
+      {
+        "name": "venonat",
+        "slug": "venonat"
+      },
+      {
+        "name": "venusaur",
+        "slug": "venusaur"
+      },
+      {
+        "name": "vespiquen",
+        "slug": "vespiquen"
+      },
+      {
+        "name": "vibrava",
+        "slug": "vibrava"
+      },
+      {
+        "name": "victreebel",
+        "slug": "victreebel"
+      },
+      {
+        "name": "vileplume",
+        "slug": "vileplume"
+      },
+      {
+        "name": "volbeat",
+        "slug": "volbeat"
+      },
+      {
+        "name": "volcarona",
+        "slug": "volcarona"
+      },
+      {
+        "name": "voltorb",
+        "slug": "voltorb"
+      },
+      {
+        "name": "vulpix",
+        "slug": "vulpix"
+      },
+      {
+        "name": "wartortle",
+        "slug": "wartortle"
+      },
+      {
+        "name": "wattrel",
+        "slug": "wattrel"
+      },
+      {
+        "name": "weepinbell",
+        "slug": "weepinbell"
+      },
+      {
+        "name": "wigglytuff",
+        "slug": "wigglytuff"
+      },
+      {
+        "name": "wingull",
+        "slug": "wingull"
+      },
+      {
+        "name": "zorua",
+        "slug": "zorua"
+      },
+      {
+        "name": "zubat",
+        "slug": "zubat"
+      }
+    ]
+  },
+  {
+    "id": "palettetown",
+    "name": "Palette Town",
+    "image": "/locations/palettetown.jpg",
+    "description": "A small peaceful starting town.",
+    "pokemon": [
+      {
+        "name": "abra",
+        "slug": "abra"
+      },
+      {
+        "name": "absol",
+        "slug": "absol"
+      },
+      {
+        "name": "aerodactyl",
+        "slug": "aerodactyl"
+      },
+      {
+        "name": "alakazam",
+        "slug": "alakazam"
+      },
+      {
+        "name": "altaria",
+        "slug": "altaria"
+      },
+      {
+        "name": "amaura",
+        "slug": "amaura"
+      },
+      {
+        "name": "ampharos",
+        "slug": "ampharos"
+      },
+      {
+        "name": "arbok",
+        "slug": "arbok"
+      },
+      {
+        "name": "arcanine",
+        "slug": "arcanine"
+      },
+      {
+        "name": "ariados",
+        "slug": "ariados"
+      },
+      {
+        "name": "audino",
+        "slug": "audino"
+      },
+      {
+        "name": "aurorus",
+        "slug": "aurorus"
+      },
+      {
+        "name": "axew",
+        "slug": "axew"
+      },
+      {
+        "name": "azumarill",
+        "slug": "azumarill"
+      },
+      {
+        "name": "azurill",
+        "slug": "azurill"
+      },
+      {
+        "name": "bastiodon",
+        "slug": "bastiodon"
+      },
+      {
+        "name": "beldum",
+        "slug": "beldum"
+      },
+      {
+        "name": "bellossom",
+        "slug": "bellossom"
+      },
+      {
+        "name": "bellsprout",
+        "slug": "bellsprout"
+      },
+      {
+        "name": "blastoise",
+        "slug": "blastoise"
+      },
+      {
+        "name": "blaziken",
+        "slug": "blaziken"
+      },
+      {
+        "name": "blissey",
+        "slug": "blissey"
+      },
+      {
+        "name": "bonsly",
+        "slug": "bonsly"
+      },
+      {
+        "name": "bulbasaur",
+        "slug": "bulbasaur"
+      },
+      {
+        "name": "cacnea",
+        "slug": "cacnea"
+      },
+      {
+        "name": "cacturne",
+        "slug": "cacturne"
+      },
+      {
+        "name": "carkol",
+        "slug": "carkol"
+      },
+      {
+        "name": "ceruledge",
+        "slug": "ceruledge"
+      },
+      {
+        "name": "chandelure",
+        "slug": "chandelure"
+      },
+      {
+        "name": "chansey",
+        "slug": "chansey"
+      },
+      {
+        "name": "charcadet",
+        "slug": "charcadet"
+      },
+      {
+        "name": "charizard",
+        "slug": "charizard"
+      },
+      {
+        "name": "charjabug",
+        "slug": "charjabug"
+      },
+      {
+        "name": "charmander",
+        "slug": "charmander"
+      },
+      {
+        "name": "charmeleon",
+        "slug": "charmeleon"
+      },
+      {
+        "name": "chatot",
+        "slug": "chatot"
+      },
+      {
+        "name": "cinccino",
+        "slug": "cinccino"
+      },
+      {
+        "name": "cinderace",
+        "slug": "cinderace"
+      },
+      {
+        "name": "clefable",
+        "slug": "clefable"
+      },
+      {
+        "name": "clefairy",
+        "slug": "clefairy"
+      },
+      {
+        "name": "cleffa",
+        "slug": "cleffa"
+      },
+      {
+        "name": "clodsire",
+        "slug": "clodsire"
+      },
+      {
+        "name": "coalossal",
+        "slug": "coalossal"
+      },
+      {
+        "name": "combee",
+        "slug": "combee"
+      },
+      {
+        "name": "combusken",
+        "slug": "combusken"
+      },
+      {
+        "name": "conkeldurr",
+        "slug": "conkeldurr"
+      },
+      {
+        "name": "corviknight",
+        "slug": "corviknight"
+      },
+      {
+        "name": "corvisquire",
+        "slug": "corvisquire"
+      },
+      {
+        "name": "cramorant",
+        "slug": "cramorant"
+      },
+      {
+        "name": "cranidos",
+        "slug": "cranidos"
+      },
+      {
+        "name": "crobat",
+        "slug": "crobat"
+      },
+      {
+        "name": "cubone",
+        "slug": "cubone"
+      },
+      {
+        "name": "cyndaquil",
+        "slug": "cyndaquil"
+      },
+      {
+        "name": "dachsbun",
+        "slug": "dachsbun"
+      },
+      {
+        "name": "dartrix",
+        "slug": "dartrix"
+      },
+      {
+        "name": "decidueye",
+        "slug": "decidueye"
+      },
+      {
+        "name": "dedenne",
+        "slug": "dedenne"
+      },
+      {
+        "name": "diglett",
+        "slug": "diglett"
+      },
+      {
+        "name": "dragapult",
+        "slug": "dragapult"
+      },
+      {
+        "name": "dragonair",
+        "slug": "dragonair"
+      },
+      {
+        "name": "dragonite",
+        "slug": "dragonite"
+      },
+      {
+        "name": "drakloak",
+        "slug": "drakloak"
+      },
+      {
+        "name": "dratini",
+        "slug": "dratini"
+      },
+      {
+        "name": "dreepy",
+        "slug": "dreepy"
+      },
+      {
+        "name": "drifblim",
+        "slug": "drifblim"
+      },
+      {
+        "name": "drifloon",
+        "slug": "drifloon"
+      },
+      {
+        "name": "drilbur",
+        "slug": "drilbur"
+      },
+      {
+        "name": "dugtrio",
+        "slug": "dugtrio"
+      },
+      {
+        "name": "dusclops",
+        "slug": "dusclops"
+      },
+      {
+        "name": "dusknoir",
+        "slug": "dusknoir"
+      },
+      {
+        "name": "duskull",
+        "slug": "duskull"
+      },
+      {
+        "name": "eevee",
+        "slug": "eevee"
+      },
+      {
+        "name": "ekans",
+        "slug": "ekans"
+      },
+      {
+        "name": "electabuzz",
+        "slug": "electabuzz"
+      },
+      {
+        "name": "electivire",
+        "slug": "electivire"
+      },
+      {
+        "name": "electrode",
+        "slug": "electrode"
+      },
+      {
+        "name": "elekid",
+        "slug": "elekid"
+      },
+      {
+        "name": "empoleon",
+        "slug": "empoleon"
+      },
+      {
+        "name": "excadrill",
+        "slug": "excadrill"
+      },
+      {
+        "name": "exeggcute",
+        "slug": "exeggcute"
+      },
+      {
+        "name": "exeggutor",
+        "slug": "exeggutor"
+      },
+      {
+        "name": "farigiraf",
+        "slug": "farigiraf"
+      },
+      {
+        "name": "fidough",
+        "slug": "fidough"
+      },
+      {
+        "name": "flaaffy",
+        "slug": "flaaffy"
+      },
+      {
+        "name": "floragato",
+        "slug": "floragato"
+      },
+      {
+        "name": "flygon",
+        "slug": "flygon"
+      },
+      {
+        "name": "fraxure",
+        "slug": "fraxure"
+      },
+      {
+        "name": "froakie",
+        "slug": "froakie"
+      },
+      {
+        "name": "frogadier",
+        "slug": "frogadier"
+      },
+      {
+        "name": "gallade",
+        "slug": "gallade"
+      },
+      {
+        "name": "garbodor",
+        "slug": "garbodor"
+      },
+      {
+        "name": "gardevoir",
+        "slug": "gardevoir"
+      },
+      {
+        "name": "gastly",
+        "slug": "gastly"
+      },
+      {
+        "name": "gastrodon",
+        "slug": "gastrodon"
+      },
+      {
+        "name": "gengar",
+        "slug": "gengar"
+      },
+      {
+        "name": "geodude",
+        "slug": "geodude"
+      },
+      {
+        "name": "gholdengo",
+        "slug": "gholdengo"
+      },
+      {
+        "name": "gimmighoul",
+        "slug": "gimmighoul"
+      },
+      {
+        "name": "girafarig",
+        "slug": "girafarig"
+      },
+      {
+        "name": "glimmet",
+        "slug": "glimmet"
+      },
+      {
+        "name": "glimmora",
+        "slug": "glimmora"
+      },
+      {
+        "name": "gloom",
+        "slug": "gloom"
+      },
+      {
+        "name": "golduck",
+        "slug": "golduck"
+      },
+      {
+        "name": "golem",
+        "slug": "golem"
+      },
+      {
+        "name": "goodra",
+        "slug": "goodra"
+      },
+      {
+        "name": "goomy",
+        "slug": "goomy"
+      },
+      {
+        "name": "graveler",
+        "slug": "graveler"
+      },
+      {
+        "name": "greedent",
+        "slug": "greedent"
+      },
+      {
+        "name": "greninja",
+        "slug": "greninja"
+      },
+      {
+        "name": "grimer",
+        "slug": "grimer"
+      },
+      {
+        "name": "growlithe",
+        "slug": "growlithe"
+      },
+      {
+        "name": "grubbin",
+        "slug": "grubbin"
+      },
+      {
+        "name": "gurdurr",
+        "slug": "gurdurr"
+      },
+      {
+        "name": "gyarados",
+        "slug": "gyarados"
+      },
+      {
+        "name": "happiny",
+        "slug": "happiny"
+      },
+      {
+        "name": "hariyama",
+        "slug": "hariyama"
+      },
+      {
+        "name": "haunter",
+        "slug": "haunter"
+      },
+      {
+        "name": "haxorus",
+        "slug": "haxorus"
+      },
+      {
+        "name": "heracross",
+        "slug": "heracross"
+      },
+      {
+        "name": "hitmonchan",
+        "slug": "hitmonchan"
+      },
+      {
+        "name": "hitmonlee",
+        "slug": "hitmonlee"
+      },
+      {
+        "name": "hitmontop",
+        "slug": "hitmontop"
+      },
+      {
+        "name": "honchkrow",
+        "slug": "honchkrow"
+      },
+      {
+        "name": "hoothoot",
+        "slug": "hoothoot"
+      },
+      {
+        "name": "igglybuff",
+        "slug": "igglybuff"
+      },
+      {
+        "name": "illumise",
+        "slug": "illumise"
+      },
+      {
+        "name": "ivysaur",
+        "slug": "ivysaur"
+      },
+      {
+        "name": "jigglypuff",
+        "slug": "jigglypuff"
+      },
+      {
+        "name": "kadabra",
+        "slug": "kadabra"
+      },
+      {
+        "name": "kilowattrel",
+        "slug": "kilowattrel"
+      },
+      {
+        "name": "kirlia",
+        "slug": "kirlia"
+      },
+      {
+        "name": "koffing",
+        "slug": "koffing"
+      },
+      {
+        "name": "kricketot",
+        "slug": "kricketot"
+      },
+      {
+        "name": "kricketune",
+        "slug": "kricketune"
+      },
+      {
+        "name": "lampent",
+        "slug": "lampent"
+      },
+      {
+        "name": "lapras",
+        "slug": "lapras"
+      },
+      {
+        "name": "larvesta",
+        "slug": "larvesta"
+      },
+      {
+        "name": "larvitar",
+        "slug": "larvitar"
+      },
+      {
+        "name": "litwick",
+        "slug": "litwick"
+      },
+      {
+        "name": "lombre",
+        "slug": "lombre"
+      },
+      {
+        "name": "lotad",
+        "slug": "lotad"
+      },
+      {
+        "name": "lucario",
+        "slug": "lucario"
+      },
+      {
+        "name": "ludicolo",
+        "slug": "ludicolo"
+      },
+      {
+        "name": "machamp",
+        "slug": "machamp"
+      },
+      {
+        "name": "machoke",
+        "slug": "machoke"
+      },
+      {
+        "name": "machop",
+        "slug": "machop"
+      },
+      {
+        "name": "magby",
+        "slug": "magby"
+      },
+      {
+        "name": "magikarp",
+        "slug": "magikarp"
+      },
+      {
+        "name": "magmar",
+        "slug": "magmar"
+      },
+      {
+        "name": "magmortar",
+        "slug": "magmortar"
+      },
+      {
+        "name": "magnemite",
+        "slug": "magnemite"
+      },
+      {
+        "name": "magneton",
+        "slug": "magneton"
+      },
+      {
+        "name": "magnezone",
+        "slug": "magnezone"
+      },
+      {
+        "name": "makuhita",
+        "slug": "makuhita"
+      },
+      {
+        "name": "mareep",
+        "slug": "mareep"
+      },
+      {
+        "name": "marill",
+        "slug": "marill"
+      },
+      {
+        "name": "marowak",
+        "slug": "marowak"
+      },
+      {
+        "name": "mawile",
+        "slug": "mawile"
+      },
+      {
+        "name": "meowscarada",
+        "slug": "meowscarada"
+      },
+      {
+        "name": "meowth",
+        "slug": "meowth"
+      },
+      {
+        "name": "metagross",
+        "slug": "metagross"
+      },
+      {
+        "name": "metang",
+        "slug": "metang"
+      },
+      {
+        "name": "mimikyu",
+        "slug": "mimikyu"
+      },
+      {
+        "name": "minccino",
+        "slug": "minccino"
+      },
+      {
+        "name": "minun",
+        "slug": "minun"
+      },
+      {
+        "name": "misdreavus",
+        "slug": "misdreavus"
+      },
+      {
+        "name": "mismagius",
+        "slug": "mismagius"
+      },
+      {
+        "name": "muk",
+        "slug": "muk"
+      },
+      {
+        "name": "munchlax",
+        "slug": "munchlax"
+      },
+      {
+        "name": "murkrow",
+        "slug": "murkrow"
+      },
+      {
+        "name": "ninetales",
+        "slug": "ninetales"
+      },
+      {
+        "name": "noctowl",
+        "slug": "noctowl"
+      },
+      {
+        "name": "noibat",
+        "slug": "noibat"
+      },
+      {
+        "name": "oddish",
+        "slug": "oddish"
+      },
+      {
+        "name": "onix",
+        "slug": "onix"
+      },
+      {
+        "name": "paras",
+        "slug": "paras"
+      },
+      {
+        "name": "parasect",
+        "slug": "parasect"
+      },
+      {
+        "name": "pawmi",
+        "slug": "pawmi"
+      },
+      {
+        "name": "pawmo",
+        "slug": "pawmo"
+      },
+      {
+        "name": "pawmot",
+        "slug": "pawmot"
+      },
+      {
+        "name": "persian",
+        "slug": "persian"
+      },
+      {
+        "name": "pidgeot",
+        "slug": "pidgeot"
+      },
+      {
+        "name": "pidgeotto",
+        "slug": "pidgeotto"
+      },
+      {
+        "name": "pidgey",
+        "slug": "pidgey"
+      },
+      {
+        "name": "pikachu",
+        "slug": "pikachu"
+      },
+      {
+        "name": "pinsir",
+        "slug": "pinsir"
+      },
+      {
+        "name": "piplup",
+        "slug": "piplup"
+      },
+      {
+        "name": "plusle",
+        "slug": "plusle"
+      },
+      {
+        "name": "politoed",
+        "slug": "politoed"
+      },
+      {
+        "name": "poliwag",
+        "slug": "poliwag"
+      },
+      {
+        "name": "poliwhirl",
+        "slug": "poliwhirl"
+      },
+      {
+        "name": "poliwrath",
+        "slug": "poliwrath"
+      },
+      {
+        "name": "porygon",
+        "slug": "porygon"
+      },
+      {
+        "name": "prinplup",
+        "slug": "prinplup"
+      },
+      {
+        "name": "psyduck",
+        "slug": "psyduck"
+      },
+      {
+        "name": "pupitar",
+        "slug": "pupitar"
+      },
+      {
+        "name": "quilava",
+        "slug": "quilava"
+      },
+      {
+        "name": "raboot",
+        "slug": "raboot"
+      },
+      {
+        "name": "raichu",
+        "slug": "raichu"
+      },
+      {
+        "name": "ralts",
+        "slug": "ralts"
+      },
+      {
+        "name": "rampardos",
+        "slug": "rampardos"
+      },
+      {
+        "name": "riolu",
+        "slug": "riolu"
+      },
+      {
+        "name": "rolycoly",
+        "slug": "rolycoly"
+      },
+      {
+        "name": "rookidee",
+        "slug": "rookidee"
+      },
+      {
+        "name": "rowlet",
+        "slug": "rowlet"
+      },
+      {
+        "name": "scizor",
+        "slug": "scizor"
+      },
+      {
+        "name": "scorbunny",
+        "slug": "scorbunny"
+      },
+      {
+        "name": "scyther",
+        "slug": "scyther"
+      },
+      {
+        "name": "serperior",
+        "slug": "serperior"
+      },
+      {
+        "name": "servine",
+        "slug": "servine"
+      },
+      {
+        "name": "shellos",
+        "slug": "shellos"
+      },
+      {
+        "name": "shieldon",
+        "slug": "shieldon"
+      },
+      {
+        "name": "skwovet",
+        "slug": "skwovet"
+      },
+      {
+        "name": "sliggoo",
+        "slug": "sliggoo"
+      },
+      {
+        "name": "slowbro",
+        "slug": "slowbro"
+      },
+      {
+        "name": "slowking",
+        "slug": "slowking"
+      },
+      {
+        "name": "slowpoke",
+        "slug": "slowpoke"
+      },
+      {
+        "name": "smeargle",
+        "slug": "smeargle"
+      },
+      {
+        "name": "snivy",
+        "slug": "snivy"
+      },
+      {
+        "name": "spinarak",
+        "slug": "spinarak"
+      },
+      {
+        "name": "sprigatito",
+        "slug": "sprigatito"
+      },
+      {
+        "name": "squirtle",
+        "slug": "squirtle"
+      },
+      {
+        "name": "steelix",
+        "slug": "steelix"
+      },
+      {
+        "name": "sudowoodo",
+        "slug": "sudowoodo"
+      },
+      {
+        "name": "swablu",
+        "slug": "swablu"
+      },
+      {
+        "name": "swalot",
+        "slug": "swalot"
+      },
+      {
+        "name": "tangela",
+        "slug": "tangela"
+      },
+      {
+        "name": "timburr",
+        "slug": "timburr"
+      },
+      {
+        "name": "tinkatink",
+        "slug": "tinkatink"
+      },
+      {
+        "name": "tinkaton",
+        "slug": "tinkaton"
+      },
+      {
+        "name": "tinkatuff",
+        "slug": "tinkatuff"
+      },
+      {
+        "name": "torchic",
+        "slug": "torchic"
+      },
+      {
+        "name": "torkoal",
+        "slug": "torkoal"
+      },
+      {
+        "name": "toxel",
+        "slug": "toxel"
+      },
+      {
+        "name": "trapinch",
+        "slug": "trapinch"
+      },
+      {
+        "name": "trubbish",
+        "slug": "trubbish"
+      },
+      {
+        "name": "typhlosion",
+        "slug": "typhlosion"
+      },
+      {
+        "name": "tyranitar",
+        "slug": "tyranitar"
+      },
+      {
+        "name": "tyrantrum",
+        "slug": "tyrantrum"
+      },
+      {
+        "name": "tyrogue",
+        "slug": "tyrogue"
+      },
+      {
+        "name": "tyrunt",
+        "slug": "tyrunt"
+      },
+      {
+        "name": "venomoth",
+        "slug": "venomoth"
+      },
+      {
+        "name": "venonat",
+        "slug": "venonat"
+      },
+      {
+        "name": "venusaur",
+        "slug": "venusaur"
+      },
+      {
+        "name": "vespiquen",
+        "slug": "vespiquen"
+      },
+      {
+        "name": "vibrava",
+        "slug": "vibrava"
+      },
+      {
+        "name": "victreebel",
+        "slug": "victreebel"
+      },
+      {
+        "name": "vikavolt",
+        "slug": "vikavolt"
+      },
+      {
+        "name": "vileplume",
+        "slug": "vileplume"
+      },
+      {
+        "name": "volbeat",
+        "slug": "volbeat"
+      },
+      {
+        "name": "volcarona",
+        "slug": "volcarona"
+      },
+      {
+        "name": "voltorb",
+        "slug": "voltorb"
+      },
+      {
+        "name": "vulpix",
+        "slug": "vulpix"
+      },
+      {
+        "name": "wartortle",
+        "slug": "wartortle"
+      },
+      {
+        "name": "wattrel",
+        "slug": "wattrel"
+      },
+      {
+        "name": "weepinbell",
+        "slug": "weepinbell"
+      },
+      {
+        "name": "weezing",
+        "slug": "weezing"
+      },
+      {
+        "name": "wigglytuff",
+        "slug": "wigglytuff"
+      },
+      {
+        "name": "wingull",
+        "slug": "wingull"
+      },
+      {
+        "name": "zorua",
+        "slug": "zorua"
+      },
+      {
+        "name": "zubat",
+        "slug": "zubat"
+      }
+    ]
+  },
+  {
+    "id": "cloudisland",
+    "name": "Cloud Island",
+    "image": "/locations/cloudisland.jpg",
+    "description": "A mysterious island floating among the clouds.",
+    "pokemon": [
+      {
+        "name": "abra",
+        "slug": "abra"
+      },
+      {
+        "name": "absol",
+        "slug": "absol"
+      },
+      {
+        "name": "aerodactyl",
+        "slug": "aerodactyl"
+      },
+      {
+        "name": "alakazam",
+        "slug": "alakazam"
+      },
+      {
+        "name": "altaria",
+        "slug": "altaria"
+      },
+      {
+        "name": "amaura",
+        "slug": "amaura"
+      },
+      {
+        "name": "ampharos",
+        "slug": "ampharos"
+      },
+      {
+        "name": "arbok",
+        "slug": "arbok"
+      },
+      {
+        "name": "arcanine",
+        "slug": "arcanine"
+      },
+      {
+        "name": "ariados",
+        "slug": "ariados"
+      },
+      {
+        "name": "audino",
+        "slug": "audino"
+      },
+      {
+        "name": "aurorus",
+        "slug": "aurorus"
+      },
+      {
+        "name": "axew",
+        "slug": "axew"
+      },
+      {
+        "name": "azumarill",
+        "slug": "azumarill"
+      },
+      {
+        "name": "azurill",
+        "slug": "azurill"
+      },
+      {
+        "name": "bastiodon",
+        "slug": "bastiodon"
+      },
+      {
+        "name": "beldum",
+        "slug": "beldum"
+      },
+      {
+        "name": "bellossom",
+        "slug": "bellossom"
+      },
+      {
+        "name": "bellsprout",
+        "slug": "bellsprout"
+      },
+      {
+        "name": "blastoise",
+        "slug": "blastoise"
+      },
+      {
+        "name": "blaziken",
+        "slug": "blaziken"
+      },
+      {
+        "name": "blissey",
+        "slug": "blissey"
+      },
+      {
+        "name": "bonsly",
+        "slug": "bonsly"
+      },
+      {
+        "name": "bulbasaur",
+        "slug": "bulbasaur"
+      },
+      {
+        "name": "cacnea",
+        "slug": "cacnea"
+      },
+      {
+        "name": "cacturne",
+        "slug": "cacturne"
+      },
+      {
+        "name": "carkol",
+        "slug": "carkol"
+      },
+      {
+        "name": "ceruledge",
+        "slug": "ceruledge"
+      },
+      {
+        "name": "chandelure",
+        "slug": "chandelure"
+      },
+      {
+        "name": "chansey",
+        "slug": "chansey"
+      },
+      {
+        "name": "charcadet",
+        "slug": "charcadet"
+      },
+      {
+        "name": "charizard",
+        "slug": "charizard"
+      },
+      {
+        "name": "charjabug",
+        "slug": "charjabug"
+      },
+      {
+        "name": "charmander",
+        "slug": "charmander"
+      },
+      {
+        "name": "charmeleon",
+        "slug": "charmeleon"
+      },
+      {
+        "name": "chatot",
+        "slug": "chatot"
+      },
+      {
+        "name": "cinccino",
+        "slug": "cinccino"
+      },
+      {
+        "name": "cinderace",
+        "slug": "cinderace"
+      },
+      {
+        "name": "clefable",
+        "slug": "clefable"
+      },
+      {
+        "name": "clefairy",
+        "slug": "clefairy"
+      },
+      {
+        "name": "cleffa",
+        "slug": "cleffa"
+      },
+      {
+        "name": "clodsire",
+        "slug": "clodsire"
+      },
+      {
+        "name": "coalossal",
+        "slug": "coalossal"
+      },
+      {
+        "name": "combee",
+        "slug": "combee"
+      },
+      {
+        "name": "combusken",
+        "slug": "combusken"
+      },
+      {
+        "name": "conkeldurr",
+        "slug": "conkeldurr"
+      },
+      {
+        "name": "corviknight",
+        "slug": "corviknight"
+      },
+      {
+        "name": "corvisquire",
+        "slug": "corvisquire"
+      },
+      {
+        "name": "cramorant",
+        "slug": "cramorant"
+      },
+      {
+        "name": "cranidos",
+        "slug": "cranidos"
+      },
+      {
+        "name": "crobat",
+        "slug": "crobat"
+      },
+      {
+        "name": "cubone",
+        "slug": "cubone"
+      },
+      {
+        "name": "cyndaquil",
+        "slug": "cyndaquil"
+      },
+      {
+        "name": "dachsbun",
+        "slug": "dachsbun"
+      },
+      {
+        "name": "dartrix",
+        "slug": "dartrix"
+      },
+      {
+        "name": "decidueye",
+        "slug": "decidueye"
+      },
+      {
+        "name": "dedenne",
+        "slug": "dedenne"
+      },
+      {
+        "name": "diglett",
+        "slug": "diglett"
+      },
+      {
+        "name": "dragapult",
+        "slug": "dragapult"
+      },
+      {
+        "name": "dragonair",
+        "slug": "dragonair"
+      },
+      {
+        "name": "dragonite",
+        "slug": "dragonite"
+      },
+      {
+        "name": "drakloak",
+        "slug": "drakloak"
+      },
+      {
+        "name": "dratini",
+        "slug": "dratini"
+      },
+      {
+        "name": "dreepy",
+        "slug": "dreepy"
+      },
+      {
+        "name": "drifblim",
+        "slug": "drifblim"
+      },
+      {
+        "name": "drifloon",
+        "slug": "drifloon"
+      },
+      {
+        "name": "drilbur",
+        "slug": "drilbur"
+      },
+      {
+        "name": "dugtrio",
+        "slug": "dugtrio"
+      },
+      {
+        "name": "dusclops",
+        "slug": "dusclops"
+      },
+      {
+        "name": "dusknoir",
+        "slug": "dusknoir"
+      },
+      {
+        "name": "duskull",
+        "slug": "duskull"
+      },
+      {
+        "name": "eevee",
+        "slug": "eevee"
+      },
+      {
+        "name": "ekans",
+        "slug": "ekans"
+      },
+      {
+        "name": "electabuzz",
+        "slug": "electabuzz"
+      },
+      {
+        "name": "electivire",
+        "slug": "electivire"
+      },
+      {
+        "name": "electrode",
+        "slug": "electrode"
+      },
+      {
+        "name": "elekid",
+        "slug": "elekid"
+      },
+      {
+        "name": "empoleon",
+        "slug": "empoleon"
+      },
+      {
+        "name": "excadrill",
+        "slug": "excadrill"
+      },
+      {
+        "name": "exeggcute",
+        "slug": "exeggcute"
+      },
+      {
+        "name": "exeggutor",
+        "slug": "exeggutor"
+      },
+      {
+        "name": "farigiraf",
+        "slug": "farigiraf"
+      },
+      {
+        "name": "fidough",
+        "slug": "fidough"
+      },
+      {
+        "name": "flaaffy",
+        "slug": "flaaffy"
+      },
+      {
+        "name": "floragato",
+        "slug": "floragato"
+      },
+      {
+        "name": "flygon",
+        "slug": "flygon"
+      },
+      {
+        "name": "fraxure",
+        "slug": "fraxure"
+      },
+      {
+        "name": "froakie",
+        "slug": "froakie"
+      },
+      {
+        "name": "frogadier",
+        "slug": "frogadier"
+      },
+      {
+        "name": "gallade",
+        "slug": "gallade"
+      },
+      {
+        "name": "garbodor",
+        "slug": "garbodor"
+      },
+      {
+        "name": "gardevoir",
+        "slug": "gardevoir"
+      },
+      {
+        "name": "gastly",
+        "slug": "gastly"
+      },
+      {
+        "name": "gastrodon",
+        "slug": "gastrodon"
+      },
+      {
+        "name": "gengar",
+        "slug": "gengar"
+      },
+      {
+        "name": "geodude",
+        "slug": "geodude"
+      },
+      {
+        "name": "gholdengo",
+        "slug": "gholdengo"
+      },
+      {
+        "name": "gimmighoul",
+        "slug": "gimmighoul"
+      },
+      {
+        "name": "girafarig",
+        "slug": "girafarig"
+      },
+      {
+        "name": "glimmet",
+        "slug": "glimmet"
+      },
+      {
+        "name": "glimmora",
+        "slug": "glimmora"
+      },
+      {
+        "name": "gloom",
+        "slug": "gloom"
+      },
+      {
+        "name": "golduck",
+        "slug": "golduck"
+      },
+      {
+        "name": "golem",
+        "slug": "golem"
+      },
+      {
+        "name": "goodra",
+        "slug": "goodra"
+      },
+      {
+        "name": "goomy",
+        "slug": "goomy"
+      },
+      {
+        "name": "graveler",
+        "slug": "graveler"
+      },
+      {
+        "name": "greedent",
+        "slug": "greedent"
+      },
+      {
+        "name": "greninja",
+        "slug": "greninja"
+      },
+      {
+        "name": "grimer",
+        "slug": "grimer"
+      },
+      {
+        "name": "growlithe",
+        "slug": "growlithe"
+      },
+      {
+        "name": "grubbin",
+        "slug": "grubbin"
+      },
+      {
+        "name": "gulpin",
+        "slug": "gulpin"
+      },
+      {
+        "name": "gurdurr",
+        "slug": "gurdurr"
+      },
+      {
+        "name": "gyarados",
+        "slug": "gyarados"
+      },
+      {
+        "name": "happiny",
+        "slug": "happiny"
+      },
+      {
+        "name": "hariyama",
+        "slug": "hariyama"
+      },
+      {
+        "name": "haunter",
+        "slug": "haunter"
+      },
+      {
+        "name": "haxorus",
+        "slug": "haxorus"
+      },
+      {
+        "name": "heracross",
+        "slug": "heracross"
+      },
+      {
+        "name": "hitmonchan",
+        "slug": "hitmonchan"
+      },
+      {
+        "name": "hitmonlee",
+        "slug": "hitmonlee"
+      },
+      {
+        "name": "hitmontop",
+        "slug": "hitmontop"
+      },
+      {
+        "name": "honchkrow",
+        "slug": "honchkrow"
+      },
+      {
+        "name": "hoothoot",
+        "slug": "hoothoot"
+      },
+      {
+        "name": "igglybuff",
+        "slug": "igglybuff"
+      },
+      {
+        "name": "illumise",
+        "slug": "illumise"
+      },
+      {
+        "name": "ivysaur",
+        "slug": "ivysaur"
+      },
+      {
+        "name": "jigglypuff",
+        "slug": "jigglypuff"
+      },
+      {
+        "name": "kadabra",
+        "slug": "kadabra"
+      },
+      {
+        "name": "kilowattrel",
+        "slug": "kilowattrel"
+      },
+      {
+        "name": "kirlia",
+        "slug": "kirlia"
+      },
+      {
+        "name": "koffing",
+        "slug": "koffing"
+      },
+      {
+        "name": "kricketot",
+        "slug": "kricketot"
+      },
+      {
+        "name": "kricketune",
+        "slug": "kricketune"
+      },
+      {
+        "name": "lampent",
+        "slug": "lampent"
+      },
+      {
+        "name": "lapras",
+        "slug": "lapras"
+      },
+      {
+        "name": "larvesta",
+        "slug": "larvesta"
+      },
+      {
+        "name": "larvitar",
+        "slug": "larvitar"
+      },
+      {
+        "name": "litwick",
+        "slug": "litwick"
+      },
+      {
+        "name": "lombre",
+        "slug": "lombre"
+      },
+      {
+        "name": "lotad",
+        "slug": "lotad"
+      },
+      {
+        "name": "lucario",
+        "slug": "lucario"
+      },
+      {
+        "name": "ludicolo",
+        "slug": "ludicolo"
+      },
+      {
+        "name": "machamp",
+        "slug": "machamp"
+      },
+      {
+        "name": "machoke",
+        "slug": "machoke"
+      },
+      {
+        "name": "machop",
+        "slug": "machop"
+      },
+      {
+        "name": "magby",
+        "slug": "magby"
+      },
+      {
+        "name": "magikarp",
+        "slug": "magikarp"
+      },
+      {
+        "name": "magmar",
+        "slug": "magmar"
+      },
+      {
+        "name": "magmortar",
+        "slug": "magmortar"
+      },
+      {
+        "name": "magnemite",
+        "slug": "magnemite"
+      },
+      {
+        "name": "magneton",
+        "slug": "magneton"
+      },
+      {
+        "name": "magnezone",
+        "slug": "magnezone"
+      },
+      {
+        "name": "makuhita",
+        "slug": "makuhita"
+      },
+      {
+        "name": "mareep",
+        "slug": "mareep"
+      },
+      {
+        "name": "marill",
+        "slug": "marill"
+      },
+      {
+        "name": "marowak",
+        "slug": "marowak"
+      },
+      {
+        "name": "mawile",
+        "slug": "mawile"
+      },
+      {
+        "name": "meowscarada",
+        "slug": "meowscarada"
+      },
+      {
+        "name": "meowth",
+        "slug": "meowth"
+      },
+      {
+        "name": "metagross",
+        "slug": "metagross"
+      },
+      {
+        "name": "metang",
+        "slug": "metang"
+      },
+      {
+        "name": "mimikyu",
+        "slug": "mimikyu"
+      },
+      {
+        "name": "minccino",
+        "slug": "minccino"
+      },
+      {
+        "name": "minun",
+        "slug": "minun"
+      },
+      {
+        "name": "misdreavus",
+        "slug": "misdreavus"
+      },
+      {
+        "name": "mismagius",
+        "slug": "mismagius"
+      },
+      {
+        "name": "muk",
+        "slug": "muk"
+      },
+      {
+        "name": "munchlax",
+        "slug": "munchlax"
+      },
+      {
+        "name": "murkrow",
+        "slug": "murkrow"
+      },
+      {
+        "name": "ninetales",
+        "slug": "ninetales"
+      },
+      {
+        "name": "noctowl",
+        "slug": "noctowl"
+      },
+      {
+        "name": "noibat",
+        "slug": "noibat"
+      },
+      {
+        "name": "oddish",
+        "slug": "oddish"
+      },
+      {
+        "name": "onix",
+        "slug": "onix"
+      },
+      {
+        "name": "paras",
+        "slug": "paras"
+      },
+      {
+        "name": "parasect",
+        "slug": "parasect"
+      },
+      {
+        "name": "pawmi",
+        "slug": "pawmi"
+      },
+      {
+        "name": "pawmo",
+        "slug": "pawmo"
+      },
+      {
+        "name": "pawmot",
+        "slug": "pawmot"
+      },
+      {
+        "name": "persian",
+        "slug": "persian"
+      },
+      {
+        "name": "pichu",
+        "slug": "pichu"
+      },
+      {
+        "name": "pidgeot",
+        "slug": "pidgeot"
+      },
+      {
+        "name": "pidgeotto",
+        "slug": "pidgeotto"
+      },
+      {
+        "name": "pidgey",
+        "slug": "pidgey"
+      },
+      {
+        "name": "pikachu",
+        "slug": "pikachu"
+      },
+      {
+        "name": "pinsir",
+        "slug": "pinsir"
+      },
+      {
+        "name": "piplup",
+        "slug": "piplup"
+      },
+      {
+        "name": "plusle",
+        "slug": "plusle"
+      },
+      {
+        "name": "politoed",
+        "slug": "politoed"
+      },
+      {
+        "name": "poliwag",
+        "slug": "poliwag"
+      },
+      {
+        "name": "poliwhirl",
+        "slug": "poliwhirl"
+      },
+      {
+        "name": "poliwrath",
+        "slug": "poliwrath"
+      },
+      {
+        "name": "porygon",
+        "slug": "porygon"
+      },
+      {
+        "name": "prinplup",
+        "slug": "prinplup"
+      },
+      {
+        "name": "psyduck",
+        "slug": "psyduck"
+      },
+      {
+        "name": "pupitar",
+        "slug": "pupitar"
+      },
+      {
+        "name": "quilava",
+        "slug": "quilava"
+      },
+      {
+        "name": "raboot",
+        "slug": "raboot"
+      },
+      {
+        "name": "raichu",
+        "slug": "raichu"
+      },
+      {
+        "name": "ralts",
+        "slug": "ralts"
+      },
+      {
+        "name": "rampardos",
+        "slug": "rampardos"
+      },
+      {
+        "name": "riolu",
+        "slug": "riolu"
+      },
+      {
+        "name": "rolycoly",
+        "slug": "rolycoly"
+      },
+      {
+        "name": "rookidee",
+        "slug": "rookidee"
+      },
+      {
+        "name": "rowlet",
+        "slug": "rowlet"
+      },
+      {
+        "name": "scizor",
+        "slug": "scizor"
+      },
+      {
+        "name": "scorbunny",
+        "slug": "scorbunny"
+      },
+      {
+        "name": "scyther",
+        "slug": "scyther"
+      },
+      {
+        "name": "serperior",
+        "slug": "serperior"
+      },
+      {
+        "name": "servine",
+        "slug": "servine"
+      },
+      {
+        "name": "shellos",
+        "slug": "shellos"
+      },
+      {
+        "name": "shieldon",
+        "slug": "shieldon"
+      },
+      {
+        "name": "skwovet",
+        "slug": "skwovet"
+      },
+      {
+        "name": "sliggoo",
+        "slug": "sliggoo"
+      },
+      {
+        "name": "slowbro",
+        "slug": "slowbro"
+      },
+      {
+        "name": "slowking",
+        "slug": "slowking"
+      },
+      {
+        "name": "slowpoke",
+        "slug": "slowpoke"
+      },
+      {
+        "name": "smeargle",
+        "slug": "smeargle"
+      },
+      {
+        "name": "snivy",
+        "slug": "snivy"
+      },
+      {
+        "name": "spinarak",
+        "slug": "spinarak"
+      },
+      {
+        "name": "sprigatito",
+        "slug": "sprigatito"
+      },
+      {
+        "name": "squirtle",
+        "slug": "squirtle"
+      },
+      {
+        "name": "steelix",
+        "slug": "steelix"
+      },
+      {
+        "name": "sudowoodo",
+        "slug": "sudowoodo"
+      },
+      {
+        "name": "swablu",
+        "slug": "swablu"
+      },
+      {
+        "name": "swalot",
+        "slug": "swalot"
+      },
+      {
+        "name": "tangela",
+        "slug": "tangela"
+      },
+      {
+        "name": "tangrowth",
+        "slug": "tangrowth"
+      },
+      {
+        "name": "timburr",
+        "slug": "timburr"
+      },
+      {
+        "name": "tinkatink",
+        "slug": "tinkatink"
+      },
+      {
+        "name": "tinkaton",
+        "slug": "tinkaton"
+      },
+      {
+        "name": "tinkatuff",
+        "slug": "tinkatuff"
+      },
+      {
+        "name": "torchic",
+        "slug": "torchic"
+      },
+      {
+        "name": "torkoal",
+        "slug": "torkoal"
+      },
+      {
+        "name": "toxel",
+        "slug": "toxel"
+      },
+      {
+        "name": "trapinch",
+        "slug": "trapinch"
+      },
+      {
+        "name": "trubbish",
+        "slug": "trubbish"
+      },
+      {
+        "name": "typhlosion",
+        "slug": "typhlosion"
+      },
+      {
+        "name": "tyranitar",
+        "slug": "tyranitar"
+      },
+      {
+        "name": "tyrantrum",
+        "slug": "tyrantrum"
+      },
+      {
+        "name": "tyrogue",
+        "slug": "tyrogue"
+      },
+      {
+        "name": "tyrunt",
+        "slug": "tyrunt"
+      },
+      {
+        "name": "venomoth",
+        "slug": "venomoth"
+      },
+      {
+        "name": "venonat",
+        "slug": "venonat"
+      },
+      {
+        "name": "venusaur",
+        "slug": "venusaur"
+      },
+      {
+        "name": "vespiquen",
+        "slug": "vespiquen"
+      },
+      {
+        "name": "vibrava",
+        "slug": "vibrava"
+      },
+      {
+        "name": "victreebel",
+        "slug": "victreebel"
+      },
+      {
+        "name": "vikavolt",
+        "slug": "vikavolt"
+      },
+      {
+        "name": "vileplume",
+        "slug": "vileplume"
+      },
+      {
+        "name": "volbeat",
+        "slug": "volbeat"
+      },
+      {
+        "name": "volcarona",
+        "slug": "volcarona"
+      },
+      {
+        "name": "voltorb",
+        "slug": "voltorb"
+      },
+      {
+        "name": "vulpix",
+        "slug": "vulpix"
+      },
+      {
+        "name": "wartortle",
+        "slug": "wartortle"
+      },
+      {
+        "name": "wattrel",
+        "slug": "wattrel"
+      },
+      {
+        "name": "weepinbell",
+        "slug": "weepinbell"
+      },
+      {
+        "name": "weezing",
+        "slug": "weezing"
+      },
+      {
+        "name": "wigglytuff",
+        "slug": "wigglytuff"
+      },
+      {
+        "name": "wingull",
+        "slug": "wingull"
+      },
+      {
+        "name": "zorua",
+        "slug": "zorua"
+      },
+      {
+        "name": "zubat",
+        "slug": "zubat"
+      }
+    ]
+  }
+]

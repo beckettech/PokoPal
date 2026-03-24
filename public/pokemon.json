@@ -1,0 +1,8127 @@
+[
+  {
+    "slug": "bulbasaur",
+    "name": "Bulbasaur",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/001.png",
+    "pokopiaId": 1,
+    "nationalDex": null,
+    "specialties": [
+      "Grow"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tall Grass",
+      "Bench with greenery"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "ivysaur",
+    "name": "Ivysaur",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/002.png",
+    "pokopiaId": 2,
+    "nationalDex": null,
+    "specialties": [
+      "Grow"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Field of Flowers",
+      "Bench with greenery"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "venusaur",
+    "name": "Venusaur",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/003.png",
+    "pokopiaId": 3,
+    "nationalDex": null,
+    "specialties": [
+      "Grow",
+      "Litter"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Field of Flowers",
+      "Garden Terrace"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "charmander",
+    "name": "Charmander",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/004.png",
+    "pokopiaId": 4,
+    "nationalDex": null,
+    "specialties": [
+      "Burn"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tall Grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [],
+    "rarity": "Common"
+  },
+  {
+    "slug": "charmeleon",
+    "name": "Charmeleon",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/005.png",
+    "pokopiaId": 5,
+    "nationalDex": null,
+    "specialties": [
+      "Burn"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Campsite"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "charizard",
+    "name": "Charizard",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/006.png",
+    "pokopiaId": 6,
+    "nationalDex": null,
+    "specialties": [
+      "Burn",
+      "Fly"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tall Grass",
+      "Berry-feast Campsite"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "squirtle",
+    "name": "Squirtle",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/007.png",
+    "pokopiaId": 7,
+    "nationalDex": null,
+    "specialties": [
+      "Water"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tall Grass",
+      "Hydrated tall grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "wartortle",
+    "name": "Wartortle",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/008.png",
+    "pokopiaId": 8,
+    "nationalDex": null,
+    "specialties": [
+      "Water"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Hydrated tall grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "blastoise",
+    "name": "Blastoise",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/009.png",
+    "pokopiaId": 9,
+    "nationalDex": null,
+    "specialties": [
+      "Water",
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Hydrated tall grass",
+      "Floating in the shade"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "pidgey",
+    "name": "Pidgey",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/016.png",
+    "pokopiaId": 16,
+    "nationalDex": null,
+    "specialties": [
+      "Fly",
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Elevated tall grass",
+      "Pretty flower bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "pidgeotto",
+    "name": "Pidgeotto",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/017.png",
+    "pokopiaId": 17,
+    "nationalDex": null,
+    "specialties": [
+      "Fly",
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Elevated tall grass",
+      "Pretty flower bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "pidgeot",
+    "name": "Pidgeot",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/018.png",
+    "pokopiaId": 18,
+    "nationalDex": null,
+    "specialties": [
+      "Fly",
+      "Chop"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Luxury chirp-chirp meal"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "ekans",
+    "name": "Ekans",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/023.png",
+    "pokopiaId": 23,
+    "nationalDex": null,
+    "specialties": [
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Hydrated graceful flower bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "arbok",
+    "name": "Arbok",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/024.png",
+    "pokopiaId": 24,
+    "nationalDex": null,
+    "specialties": [
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Hydrated graceful flower bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "pikachu",
+    "name": "Pikachu",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/025.png",
+    "pokopiaId": 25,
+    "nationalDex": null,
+    "specialties": [
+      "Generate"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Picnic Set"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Palette Town"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "raichu",
+    "name": "Raichu",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/026.png",
+    "pokopiaId": 26,
+    "nationalDex": null,
+    "specialties": [
+      "Generate",
+      "Hype"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Nature's market"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "clefairy",
+    "name": "Clefairy",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/035.png",
+    "pokopiaId": 35,
+    "nationalDex": null,
+    "specialties": [
+      "Hype"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Graceful flower bed",
+      "Bronze landmark"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "clefable",
+    "name": "Clefable",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/036.png",
+    "pokopiaId": 36,
+    "nationalDex": null,
+    "specialties": [
+      "Hype",
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Graceful flower bed",
+      "Bronze landmark"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "vulpix",
+    "name": "Vulpix",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/037.png",
+    "pokopiaId": 37,
+    "nationalDex": null,
+    "specialties": [
+      "Burn"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Fluffy flower bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Sparkling Skylands"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "ninetales",
+    "name": "Ninetales",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/038.png",
+    "pokopiaId": 38,
+    "nationalDex": null,
+    "specialties": [
+      "Burn"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Fluffy flower bed",
+      "Nine flames"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Sparkling Skylands"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "jigglypuff",
+    "name": "Jigglypuff",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/039.png",
+    "pokopiaId": 39,
+    "nationalDex": null,
+    "specialties": [
+      "Hype"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Flower garden stump stage",
+      "Recital stage"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "wigglytuff",
+    "name": "Wigglytuff",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/040.png",
+    "pokopiaId": 40,
+    "nationalDex": null,
+    "specialties": [
+      "Hype",
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Recital stage"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "zubat",
+    "name": "Zubat",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/041.png",
+    "pokopiaId": 41,
+    "nationalDex": null,
+    "specialties": [
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tree-shaded Yellow tall grass",
+      "Park bench"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "golbat",
+    "name": "Golbat",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/042.png",
+    "pokopiaId": 42,
+    "nationalDex": null,
+    "specialties": [
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tree-shaded Yellow tall grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "oddish",
+    "name": "Oddish",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/043.png",
+    "pokopiaId": 43,
+    "nationalDex": null,
+    "specialties": [
+      "Grow"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tall Grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "gloom",
+    "name": "Gloom",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/044.png",
+    "pokopiaId": 44,
+    "nationalDex": null,
+    "specialties": [
+      "Grow"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tropical vibes"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "vileplume",
+    "name": "Vileplume",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/045.png",
+    "pokopiaId": 45,
+    "nationalDex": null,
+    "specialties": [
+      "Grow",
+      "Litter"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Chansey Resting area"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "paras",
+    "name": "Paras",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/046.png",
+    "pokopiaId": 46,
+    "nationalDex": null,
+    "specialties": [
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Elevated flower bed",
+      "Flower garden"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "parasect",
+    "name": "Parasect",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/047.png",
+    "pokopiaId": 47,
+    "nationalDex": null,
+    "specialties": [
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Elevated flower bed",
+      "Flower garden"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "venonat",
+    "name": "Venonat",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/048.png",
+    "pokopiaId": 48,
+    "nationalDex": null,
+    "specialties": [
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Illuminated tall grass",
+      "Illuminated bench"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "venomoth",
+    "name": "Venomoth",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/049.png",
+    "pokopiaId": 49,
+    "nationalDex": null,
+    "specialties": [
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Illuminated tall grass",
+      "Illuminated bench"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "diglett",
+    "name": "Diglett",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/050.png",
+    "pokopiaId": 50,
+    "nationalDex": null,
+    "specialties": [
+      "Hype"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tree-shaded red tall grass",
+      "Container snacking"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "dugtrio",
+    "name": "Dugtrio",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/051.png",
+    "pokopiaId": 51,
+    "nationalDex": null,
+    "specialties": [
+      "Hype",
+      "Crush"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tree-shaded red tall grass",
+      "House party"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "meowth",
+    "name": "Meowth",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/052.png",
+    "pokopiaId": 52,
+    "nationalDex": null,
+    "specialties": [
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Resting spot",
+      "Working the register"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach",
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "persian",
+    "name": "Persian",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/053.png",
+    "pokopiaId": 53,
+    "nationalDex": null,
+    "specialties": [
+      "Trade",
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Evil organization HQ"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "psyduck",
+    "name": "Psyduck",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/054.png",
+    "pokopiaId": 54,
+    "nationalDex": null,
+    "specialties": [
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Hot-spring shower"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "golduck",
+    "name": "Golduck",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/055.png",
+    "pokopiaId": 55,
+    "nationalDex": null,
+    "specialties": [
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Hot-spring shower"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "growlithe",
+    "name": "Growlithe",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/058.png",
+    "pokopiaId": 58,
+    "nationalDex": null,
+    "specialties": [
+      "Burn",
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Perpetual mess",
+      "Resort meal prep"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "arcanine",
+    "name": "Arcanine",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/059.png",
+    "pokopiaId": 59,
+    "nationalDex": null,
+    "specialties": [
+      "Burn",
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Mini museum",
+      "Magma fishing spot"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Rocky Ridges"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "poliwag",
+    "name": "Poliwag",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/060.png",
+    "pokopiaId": 60,
+    "nationalDex": null,
+    "specialties": [
+      "Water"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Squeaky clean"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "poliwhirl",
+    "name": "Poliwhirl",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/061.png",
+    "pokopiaId": 61,
+    "nationalDex": null,
+    "specialties": [
+      "Water"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Hydrated fluffy flower bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "poliwrath",
+    "name": "Poliwrath",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/062.png",
+    "pokopiaId": 62,
+    "nationalDex": null,
+    "specialties": [
+      "Water",
+      "Build"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Sewer hole inspection",
+      "Dojo training"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "abra",
+    "name": "Abra",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/063.png",
+    "pokopiaId": 63,
+    "nationalDex": null,
+    "specialties": [
+      "Teleport"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Surging psychic power",
+      "Fortune-teller's table"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "kadabra",
+    "name": "Kadabra",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/064.png",
+    "pokopiaId": 64,
+    "nationalDex": null,
+    "specialties": [
+      "Teleport"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Fortune-teller's table"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "alakazam",
+    "name": "Alakazam",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/065.png",
+    "pokopiaId": 65,
+    "nationalDex": null,
+    "specialties": [
+      "Teleport",
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Surging psychic power",
+      "Experiment Space"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "machop",
+    "name": "Machop",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/066.png",
+    "pokopiaId": 66,
+    "nationalDex": null,
+    "specialties": [
+      "Build",
+      "Gather"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Boulder-shaded Tall Grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "machoke",
+    "name": "Machoke",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/067.png",
+    "pokopiaId": 67,
+    "nationalDex": null,
+    "specialties": [
+      "Build",
+      "Gather"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Grassy training field",
+      "Box to the rhythm"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Rocky Ridges"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "machamp",
+    "name": "Machamp",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/068.png",
+    "pokopiaId": 68,
+    "nationalDex": null,
+    "specialties": [
+      "Build",
+      "Gather"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Grassy training field",
+      "Clink-clang iron construction"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Rocky Ridges"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "bellsprout",
+    "name": "Bellsprout",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/069.png",
+    "pokopiaId": 69,
+    "nationalDex": null,
+    "specialties": [
+      "Grow",
+      "Litter"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tree-shaded tall grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "weepinbell",
+    "name": "Weepinbell",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/070.png",
+    "pokopiaId": 70,
+    "nationalDex": null,
+    "specialties": [
+      "Grow",
+      "Litter"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Flowery table",
+      "Irresistible scent and glow"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "victreebel",
+    "name": "Victreebel",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/071.png",
+    "pokopiaId": 71,
+    "nationalDex": null,
+    "specialties": [
+      "Grow",
+      "Chop"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Flowery table",
+      "Irresistible scent and glow"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "geodude",
+    "name": "Geodude",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/074.png",
+    "pokopiaId": 74,
+    "nationalDex": null,
+    "specialties": [
+      "Crush"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tall Grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "graveler",
+    "name": "Graveler",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/075.png",
+    "pokopiaId": 75,
+    "nationalDex": null,
+    "specialties": [
+      "Crush"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Mossy boulder"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Rocky Ridges"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "golem",
+    "name": "Golem",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/076.png",
+    "pokopiaId": 76,
+    "nationalDex": null,
+    "specialties": [
+      "Crush",
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Mossy boulder"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Rocky Ridges"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "slowpoke",
+    "name": "Slowpoke",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/079.png",
+    "pokopiaId": 79,
+    "nationalDex": null,
+    "specialties": [
+      "Water",
+      "Yawn"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Seaside Tall Grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "slowbro",
+    "name": "Slowbro",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/080.png",
+    "pokopiaId": 80,
+    "nationalDex": null,
+    "specialties": [
+      "Water",
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Seaside Tall Grass",
+      "Bed with a plush"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "magnemite",
+    "name": "Magnemite",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/081.png",
+    "pokopiaId": 81,
+    "nationalDex": null,
+    "specialties": [
+      "Generate"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Factory Storage"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "magneton",
+    "name": "Magneton",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/082.png",
+    "pokopiaId": 82,
+    "nationalDex": null,
+    "specialties": [
+      "Generate"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Trash can central",
+      "Mini Game Corner"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "farfetch'd",
+    "name": "Farfetch'd",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/083.png",
+    "pokopiaId": 83,
+    "nationalDex": null,
+    "specialties": [
+      "Chop",
+      "Build"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "All packed up"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "grimer",
+    "name": "Grimer",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/088.png",
+    "pokopiaId": 88,
+    "nationalDex": null,
+    "specialties": [
+      "Litter"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Marsh fishing spot"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "muk",
+    "name": "Muk",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/089.png",
+    "pokopiaId": 89,
+    "nationalDex": null,
+    "specialties": [
+      "Litter"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Marsh fishing spot"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "gastly",
+    "name": "Gastly",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/092.png",
+    "pokopiaId": 92,
+    "nationalDex": null,
+    "specialties": [
+      "Gather",
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Spooky study"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "haunter",
+    "name": "Haunter",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/093.png",
+    "pokopiaId": 93,
+    "nationalDex": null,
+    "specialties": [
+      "Gather",
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Surprise in store",
+      "Spooky study"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "gengar",
+    "name": "Gengar",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/094.png",
+    "pokopiaId": 94,
+    "nationalDex": null,
+    "specialties": [
+      "Gather",
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Surprise in store"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "onix",
+    "name": "Onix",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/095.png",
+    "pokopiaId": 95,
+    "nationalDex": null,
+    "specialties": [
+      "Crush",
+      "Bulldoze"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Smooth tall grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "voltorb",
+    "name": "Voltorb",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/100.png",
+    "pokopiaId": 100,
+    "nationalDex": null,
+    "specialties": [
+      "Generate",
+      "Explode"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Park bench",
+      "Playing pirate"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "electrode",
+    "name": "Electrode",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/101.png",
+    "pokopiaId": 101,
+    "nationalDex": null,
+    "specialties": [
+      "Generate",
+      "Explode"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Park bench",
+      "Playing pirate"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "exeggcute",
+    "name": "Exeggcute",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/102.png",
+    "pokopiaId": 102,
+    "nationalDex": null,
+    "specialties": [
+      "Grow",
+      "Teleport"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tropical vibes",
+      "Shaded beach",
+      "Red tall grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Rocky Ridges"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "exeggutor",
+    "name": "Exeggutor",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/103.png",
+    "pokopiaId": 103,
+    "nationalDex": null,
+    "specialties": [
+      "Grow",
+      "Teleport"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tropical vibes",
+      "Shaded beach"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "cubone",
+    "name": "Cubone",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/104.png",
+    "pokopiaId": 104,
+    "nationalDex": null,
+    "specialties": [
+      "Build"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Grave with flowers"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "marowak",
+    "name": "Marowak",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/105.png",
+    "pokopiaId": 105,
+    "nationalDex": null,
+    "specialties": [
+      "Build"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Grave with flowers"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "hitmonlee",
+    "name": "Hitmonlee",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/106.png",
+    "pokopiaId": 106,
+    "nationalDex": null,
+    "specialties": [
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Urgent Care"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "hitmonchan",
+    "name": "Hitmonchan",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/107.png",
+    "pokopiaId": 107,
+    "nationalDex": null,
+    "specialties": [
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Exercise resting spot"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "koffing",
+    "name": "Koffing",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/109.png",
+    "pokopiaId": 109,
+    "nationalDex": null,
+    "specialties": [
+      "Recycle"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Trash collection site"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Palette Town",
+      "Bleak Beach"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "weezing",
+    "name": "Weezing",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/110.png",
+    "pokopiaId": 110,
+    "nationalDex": null,
+    "specialties": [
+      "Recycle"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Good old-fashioned antiques",
+      "Trash collection site"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Palette Town",
+      "Bleak Beach"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "chansey",
+    "name": "Chansey",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/113.png",
+    "pokopiaId": 113,
+    "nationalDex": null,
+    "specialties": [
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Full recovery"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "tangela",
+    "name": "Tangela",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/114.png",
+    "pokopiaId": 114,
+    "nationalDex": null,
+    "specialties": [
+      "Grow",
+      "Litter"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Nothin' but Poke Balls"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "mr.mime",
+    "name": "Mr. Mime",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/122.png",
+    "pokopiaId": 122,
+    "nationalDex": null,
+    "specialties": [
+      "Gather",
+      "Build"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Spotless Washing station"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "scyther",
+    "name": "Scyther",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/123.png",
+    "pokopiaId": 123,
+    "nationalDex": null,
+    "specialties": [
+      "Chop"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tree-shaded tall grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "electabuzz",
+    "name": "Electabuzz",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/125.png",
+    "pokopiaId": 125,
+    "nationalDex": null,
+    "specialties": [
+      "Generate"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Trash can central",
+      "Light-up stage"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "magmar",
+    "name": "Magmar",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/126.png",
+    "pokopiaId": 126,
+    "nationalDex": null,
+    "specialties": [
+      "Burn"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Digging and burning"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "pinsir",
+    "name": "Pinsir",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/127.png",
+    "pokopiaId": 127,
+    "nationalDex": null,
+    "specialties": [
+      "Chop",
+      "Build"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tree-shaded tall grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "magikarp",
+    "name": "Magikarp",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/129.png",
+    "pokopiaId": 129,
+    "nationalDex": null,
+    "specialties": [
+      "???"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Ocean fishing spot"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "gyarados",
+    "name": "Gyarados",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/130.png",
+    "pokopiaId": 130,
+    "nationalDex": null,
+    "specialties": [
+      "Water"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Illuminated waterfall"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "lapras",
+    "name": "Lapras",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/131.png",
+    "pokopiaId": 131,
+    "nationalDex": null,
+    "specialties": [
+      "Water"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tropical seaside"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "ditto",
+    "name": "Ditto",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/132.png",
+    "pokopiaId": 132,
+    "nationalDex": null,
+    "specialties": [
+      "Transform"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": []
+  },
+  {
+    "slug": "eevee",
+    "name": "Eevee",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/133.png",
+    "pokopiaId": 133,
+    "nationalDex": null,
+    "specialties": [
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Pretty flower bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "vaporeon",
+    "name": "Vaporeon",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/134.png",
+    "pokopiaId": 134,
+    "nationalDex": null,
+    "specialties": [
+      "Water"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Boundless blue beverage"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "jolteon",
+    "name": "Jolteon",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/135.png",
+    "pokopiaId": 135,
+    "nationalDex": null,
+    "specialties": [
+      "Generate"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Electrifying potatoes"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "flareon",
+    "name": "Flareon",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/136.png",
+    "pokopiaId": 136,
+    "nationalDex": null,
+    "specialties": [
+      "Burn"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Burning-hot spice"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "porygon",
+    "name": "Porygon",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/137.png",
+    "pokopiaId": 137,
+    "nationalDex": null,
+    "specialties": [
+      "Recycle"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Researcher's desk"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Sparkling Skylands"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "aerodactyl",
+    "name": "Aerodactyl",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/142.png",
+    "pokopiaId": 142,
+    "nationalDex": null,
+    "specialties": [
+      "Fly"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Wing Fossil Display"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "mosslax",
+    "name": "Mosslax",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/143-mosslax.png",
+    "pokopiaId": 143,
+    "nationalDex": null,
+    "specialties": [
+      "Eat"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Gourmet's altar"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [],
+    "rarity": "Common"
+  },
+  {
+    "slug": "articuno",
+    "name": "Articuno",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/144.png",
+    "pokopiaId": 144,
+    "nationalDex": null,
+    "specialties": [
+      "Fly"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [],
+    "rarity": "Legendary"
+  },
+  {
+    "slug": "zapdos",
+    "name": "Zapdos",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/145.png",
+    "pokopiaId": 145,
+    "nationalDex": null,
+    "specialties": [
+      "Fly"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [],
+    "rarity": "Legendary"
+  },
+  {
+    "slug": "moltres",
+    "name": "Moltres",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/146.png",
+    "pokopiaId": 146,
+    "nationalDex": null,
+    "specialties": [
+      "Fly"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [],
+    "rarity": "Legendary"
+  },
+  {
+    "slug": "dratini",
+    "name": "Dratini",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/147.png",
+    "pokopiaId": 147,
+    "nationalDex": null,
+    "specialties": [
+      "Water"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Hydrated fluffy flower bed",
+      "Simple bathroom"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "dragonair",
+    "name": "Dragonair",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/148.png",
+    "pokopiaId": 148,
+    "nationalDex": null,
+    "specialties": [
+      "Water"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Hydrated fluffy flower bed",
+      "Simple bathroom"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "dragonite",
+    "name": "Dragonite",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/149.png",
+    "pokopiaId": 149,
+    "nationalDex": null,
+    "specialties": [
+      "Water",
+      "Fly"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Waterside dinghy"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "mewtwo",
+    "name": "Mewtwo",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/150.png",
+    "pokopiaId": 150,
+    "nationalDex": null,
+    "specialties": [
+      "Teleport"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [],
+    "rarity": "Legendary"
+  },
+  {
+    "slug": "mew",
+    "name": "Mew",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/151.png",
+    "pokopiaId": 151,
+    "nationalDex": null,
+    "specialties": [
+      "Teleport"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [],
+    "rarity": "Legendary"
+  },
+  {
+    "slug": "cyndaquil",
+    "name": "Cyndaquil",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/155.png",
+    "pokopiaId": 155,
+    "nationalDex": null,
+    "specialties": [
+      "Burn"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Concrete pipe secret base"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "quilava",
+    "name": "Quilava",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/156.png",
+    "pokopiaId": 156,
+    "nationalDex": null,
+    "specialties": [
+      "Burn"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Concrete pipe secret base",
+      "Fireplace nap spot"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "typhlosion",
+    "name": "Typhlosion",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/157.png",
+    "pokopiaId": 157,
+    "nationalDex": null,
+    "specialties": [
+      "Burn",
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Fireplace nap spot",
+      "Top pop"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "hoothoot",
+    "name": "Hoothoot",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/163.png",
+    "pokopiaId": 163,
+    "nationalDex": null,
+    "specialties": [
+      "Trade",
+      "Fly"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Elevated tall grass",
+      "Pretty flower bed",
+      "Gently lit bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "noctowl",
+    "name": "Noctowl",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/164.png",
+    "pokopiaId": 164,
+    "nationalDex": null,
+    "specialties": [
+      "Trade",
+      "Fly"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Elevated tall grass",
+      "Gently lit bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night",
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "spinarak",
+    "name": "Spinarak",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/167.png",
+    "pokopiaId": 167,
+    "nationalDex": null,
+    "specialties": [
+      "Litter"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Yellow tall grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "ariados",
+    "name": "Ariados",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/168.png",
+    "pokopiaId": 168,
+    "nationalDex": null,
+    "specialties": [
+      "Litter"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Yellow tall grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "crobat",
+    "name": "Crobat",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/169.png",
+    "pokopiaId": 169,
+    "nationalDex": null,
+    "specialties": [
+      "Search",
+      "Chop"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Elevated yellow tall grass",
+      "Trash disposal site"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "pichu",
+    "name": "Pichu",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/172.png",
+    "pokopiaId": 172,
+    "nationalDex": null,
+    "specialties": [
+      "Generate"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Picnic Set"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "cleffa",
+    "name": "Cleffa",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/173.png",
+    "pokopiaId": 173,
+    "nationalDex": null,
+    "specialties": [
+      "Hype"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Graceful flower bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "igglybuff",
+    "name": "Igglybuff",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/174.png",
+    "pokopiaId": 174,
+    "nationalDex": null,
+    "specialties": [
+      "Hype"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Flower garden stump stage"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "mareep",
+    "name": "Mareep",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/179.png",
+    "pokopiaId": 179,
+    "nationalDex": null,
+    "specialties": [
+      "Generate",
+      "Litter"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Overgrowth vending machine",
+      "Knitting station"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "flaaffy",
+    "name": "Flaaffy",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/180.png",
+    "pokopiaId": 180,
+    "nationalDex": null,
+    "specialties": [
+      "Generate",
+      "Litter"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Night festival venue",
+      "Knitting station"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "ampharos",
+    "name": "Ampharos",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/181.png",
+    "pokopiaId": 181,
+    "nationalDex": null,
+    "specialties": [
+      "Generate",
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Plain life"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "bellossom",
+    "name": "Bellossom",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/182.png",
+    "pokopiaId": 182,
+    "nationalDex": null,
+    "specialties": [
+      "Grow",
+      "Hype"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Chansey Resting area"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "marill",
+    "name": "Marill",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/183.png",
+    "pokopiaId": 183,
+    "nationalDex": null,
+    "specialties": [
+      "Water",
+      "Hype"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Hydrated yellow tall grass",
+      "Dock"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "azumarill",
+    "name": "Azumarill",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/184.png",
+    "pokopiaId": 184,
+    "nationalDex": null,
+    "specialties": [
+      "Water",
+      "Build"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Dock"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "sudowoodo",
+    "name": "Sudowoodo",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/185.png",
+    "pokopiaId": 185,
+    "nationalDex": null,
+    "specialties": [
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tree-shaded red tall grass",
+      "House party"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "politoed",
+    "name": "Politoed",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/186.png",
+    "pokopiaId": 186,
+    "nationalDex": null,
+    "specialties": [
+      "Water",
+      "Hype"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Hydrated graceful flower bed",
+      "Flower garden stump stage",
+      "Harmonious hot spring"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "paldeanwooper",
+    "name": "Paldean Wooper",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/194-p.png",
+    "pokopiaId": 194,
+    "nationalDex": null,
+    "specialties": [
+      "Litter"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Marshy tall grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [],
+    "rarity": "Common"
+  },
+  {
+    "slug": "espeon",
+    "name": "Espeon",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/196.png",
+    "pokopiaId": 196,
+    "nationalDex": null,
+    "specialties": [
+      "Gather"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Elegant daytime treats"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "umbreon",
+    "name": "Umbreon",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/197.png",
+    "pokopiaId": 197,
+    "nationalDex": null,
+    "specialties": [
+      "Search"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Dark-chocolate cookies"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "murkrow",
+    "name": "Murkrow",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/198.png",
+    "pokopiaId": 198,
+    "nationalDex": null,
+    "specialties": [
+      "Trade",
+      "Fly"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Elevated red tall grass",
+      "Tree-shaded graceful flower bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "slowking",
+    "name": "Slowking",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/199.png",
+    "pokopiaId": 199,
+    "nationalDex": null,
+    "specialties": [
+      "Water",
+      "Teleport"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Seaside Tall Grass",
+      "Bed with a plush",
+      "Fishing pond"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "misdreavus",
+    "name": "Misdreavus",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/200.png",
+    "pokopiaId": 200,
+    "nationalDex": null,
+    "specialties": [
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Fluffy flower bed",
+      "Office storeroom"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Sparkling Skylands"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "girafarig",
+    "name": "Girafarig",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/203.png",
+    "pokopiaId": 203,
+    "nationalDex": null,
+    "specialties": [
+      "Gather"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tree-shaded fluffy flower bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "steelix",
+    "name": "Steelix",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/208.png",
+    "pokopiaId": 208,
+    "nationalDex": null,
+    "specialties": [
+      "Crush",
+      "Bulldoze"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Clink-clang iron construction"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "scizor",
+    "name": "Scizor",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/212.png",
+    "pokopiaId": 212,
+    "nationalDex": null,
+    "specialties": [
+      "Chop"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tree-shaded tall grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "heracross",
+    "name": "Heracross",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/214.png",
+    "pokopiaId": 214,
+    "nationalDex": null,
+    "specialties": [
+      "Chop",
+      "Build"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tree-shaded tall grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "porygon2",
+    "name": "Porygon2",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/233.png",
+    "pokopiaId": 233,
+    "nationalDex": null,
+    "specialties": [
+      "Recycle"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Work desk"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "smeargle",
+    "name": "Smeargle",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/235-smearguru.png",
+    "pokopiaId": 235,
+    "nationalDex": null,
+    "specialties": [
+      "Paint"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tiny Atelier"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [],
+    "rarity": "Common"
+  },
+  {
+    "slug": "tyrogue",
+    "name": "Tyrogue",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/236.png",
+    "pokopiaId": 236,
+    "nationalDex": null,
+    "specialties": [
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Training waterfall"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "hitmontop",
+    "name": "Hitmontop",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/237.png",
+    "pokopiaId": 237,
+    "nationalDex": null,
+    "specialties": [
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Gym first aid"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "elekid",
+    "name": "Elekid",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/239.png",
+    "pokopiaId": 239,
+    "nationalDex": null,
+    "specialties": [
+      "Generate"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Vending machine set"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "magby",
+    "name": "Magby",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/240.png",
+    "pokopiaId": 240,
+    "nationalDex": null,
+    "specialties": [
+      "Burn"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Pretty flower bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Palette Town"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "blissey",
+    "name": "Blissey",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/242.png",
+    "pokopiaId": 242,
+    "nationalDex": null,
+    "specialties": [
+      "Trade",
+      "Litter"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Cuteness overload"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "raikou",
+    "name": "Raikou",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/243.png",
+    "pokopiaId": 243,
+    "nationalDex": null,
+    "specialties": [
+      "Generate"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [],
+    "rarity": "Legendary"
+  },
+  {
+    "slug": "entei",
+    "name": "Entei",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/244.png",
+    "pokopiaId": 244,
+    "nationalDex": null,
+    "specialties": [
+      "Burn"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [],
+    "rarity": "Legendary"
+  },
+  {
+    "slug": "suicune",
+    "name": "Suicune",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/245.png",
+    "pokopiaId": 245,
+    "nationalDex": null,
+    "specialties": [
+      "Water"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [],
+    "rarity": "Legendary"
+  },
+  {
+    "slug": "larvitar",
+    "name": "Larvitar",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/246.png",
+    "pokopiaId": 246,
+    "nationalDex": null,
+    "specialties": [
+      "Crush",
+      "Bulldoze"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Mossy rest spot"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "pupitar",
+    "name": "Pupitar",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/247.png",
+    "pokopiaId": 247,
+    "nationalDex": null,
+    "specialties": [
+      "Crush",
+      "Bulldoze"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tree-shaded pink tall grass"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Sparkling Skylands"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "tyranitar",
+    "name": "Tyranitar",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/248.png",
+    "pokopiaId": 248,
+    "nationalDex": null,
+    "specialties": [
+      "Crush",
+      "Bulldoze"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Toil in the soil",
+      "Mossy rest spot"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "lugia",
+    "name": "Lugia",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/249.png",
+    "pokopiaId": 249,
+    "nationalDex": null,
+    "specialties": [
+      "???"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [],
+    "rarity": "Legendary"
+  },
+  {
+    "slug": "ho-oh",
+    "name": "Ho-Oh",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/250.png",
+    "pokopiaId": 250,
+    "nationalDex": null,
+    "specialties": [
+      "???"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [],
+    "rarity": "Legendary"
+  },
+  {
+    "slug": "torchic",
+    "name": "Torchic",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/255.png",
+    "pokopiaId": 255,
+    "nationalDex": null,
+    "specialties": [
+      "Burn"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Chirp-chirp meal",
+      "Resort meal prep"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "combusken",
+    "name": "Combusken",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/256.png",
+    "pokopiaId": 256,
+    "nationalDex": null,
+    "specialties": [
+      "Burn",
+      "Build"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Resort meal prep",
+      "Furnace Spot"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "blaziken",
+    "name": "Blaziken",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/257.png",
+    "pokopiaId": 257,
+    "nationalDex": null,
+    "specialties": [
+      "Burn",
+      "Build"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Chirp-chirp meal",
+      "Furnace Spot"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "lotad",
+    "name": "Lotad",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/270.png",
+    "pokopiaId": 270,
+    "nationalDex": null,
+    "specialties": [
+      "Water"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Hydrated red tall grass",
+      "Uplifting duckweed",
+      "Hot-spring Fishing Spot"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "lombre",
+    "name": "Lombre",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/271.png",
+    "pokopiaId": 271,
+    "nationalDex": null,
+    "specialties": [
+      "Water"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Hydrated red tall grass",
+      "Hot-spring Fishing Spot"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "ludicolo",
+    "name": "Ludicolo",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/272.png",
+    "pokopiaId": 272,
+    "nationalDex": null,
+    "specialties": [
+      "Water",
+      "Hype"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Uplifting duckweed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "wingull",
+    "name": "Wingull",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/278.png",
+    "pokopiaId": 278,
+    "nationalDex": null,
+    "specialties": [
+      "Water",
+      "Fly"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Elevated yellow tall grass",
+      "Windy Flower Bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "pelipper",
+    "name": "Pelipper",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/279.png",
+    "pokopiaId": 279,
+    "nationalDex": null,
+    "specialties": [
+      "Water",
+      "Fly"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Elevated yellow tall grass",
+      "Windy Flower Bed"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "ralts",
+    "name": "Ralts",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/280.png",
+    "pokopiaId": 280,
+    "nationalDex": null,
+    "specialties": [
+      "Teleport"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Study Area"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "kirlia",
+    "name": "Kirlia",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/281.png",
+    "pokopiaId": 281,
+    "nationalDex": null,
+    "specialties": [
+      "Teleport"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Study Area",
+      "Moisturizing makeup stand"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Sparkling Skylands"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "gardevoir",
+    "name": "Gardevoir",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/282.png",
+    "pokopiaId": 282,
+    "nationalDex": null,
+    "specialties": [
+      "Teleport",
+      "Trade"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Moisturizing makeup stand",
+      "Mini library"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Sparkling Skylands"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "makuhita",
+    "name": "Makuhita",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/296.png",
+    "pokopiaId": 296,
+    "nationalDex": null,
+    "specialties": [
+      "Build",
+      "Bulldoze"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tree-shaded Yellow tall grass",
+      "All packed up"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Common"
+  },
+  {
+    "slug": "hariyama",
+    "name": "Hariyama",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/297.png",
+    "pokopiaId": 297,
+    "nationalDex": null,
+    "specialties": [
+      "Build",
+      "Bulldoze"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Tree-shaded Yellow tall grass",
+      "All packed up"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Rare"
+  },
+  {
+    "slug": "azurill",
+    "name": "Azurill",
+    "image": "https://www.serebii.net/pokemonpokopia/pokemon/298.png",
+    "pokopiaId": 298,
+    "nationalDex": null,
+    "specialties": [
+      "Water",
+      "Hype"
+    ],
+    "idealHabitat": null,
+    "favorites": [],
+    "habitats": [
+      "Hydrated yellow tall grass",
+      "Perpetual mess"
+    ],
+    "timeWeatherPerHabitat": [
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      },
+      {
+        "times": [
+          "Morning",
+          "Day",
+          "Evening",
+          "Night"
+        ],
+        "weathers": [
+          "Sun",
+          "Cloud",
+          "Rain"
+        ]
+      }
+    ],
+    "time": [
+      "Morning",
+      "Day",
+      "Evening",
+      "Night"
+    ],
+    "weather": [
+      "Sun",
+      "Cloud",
+      "Rain"
+    ],
+    "locations": [
+      "Bleak Beach"
+    ],
+    "rarity": "Common"
+  }
+]
