@@ -207,7 +207,7 @@ export function ItemsPage() {
                 </h2>
               )}
               
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-3 gap-2">
                 {items.map(item => {
                   const owned = ownedItems.includes(item.slug);
                   return (
@@ -250,13 +250,13 @@ export function ItemsPage() {
                           e.stopPropagation();
                           toggleOwnedItem(item.slug);
                         }}
-                        className={`absolute bottom-2 right-2 w-7 h-7 rounded-full flex items-center justify-center transition-all ${
+                        className={`absolute bottom-1 right-1 w-9 h-9 rounded-full flex items-center justify-center transition-all ${
                           owned
                             ? "bg-gray-200 text-gray-400"
                             : "bg-orange-500 text-white"
                         }`}
                       >
-                        {owned ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                        {owned ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
                       </button>
                     </button>
                   );
