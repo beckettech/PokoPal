@@ -75,7 +75,7 @@ const menuItems = [
     hasNotification: false 
   },
   { 
-    id: "relics", 
+    id: "items", 
     icon: Package, 
     label: "Items",
     color: "bg-gradient-to-br from-orange-400 to-orange-500",
@@ -94,13 +94,12 @@ const menuItems = [
 
 const TOTAL_POKEMON = 300;
 const TOTAL_HABITATS = 209; // total habitat dex entries
-const TOTAL_RELICS = 12;
-const TOTAL_FOSSILS = 9;
+const TOTAL_ITEMS = 1511; // from scraped items.json
 const TOTAL_LOCATIONS = 6;
-const TOTAL = TOTAL_POKEMON + TOTAL_HABITATS + TOTAL_RELICS + TOTAL_FOSSILS + TOTAL_LOCATIONS;
+const TOTAL = TOTAL_POKEMON + TOTAL_HABITATS + TOTAL_ITEMS + TOTAL_LOCATIONS;
 
 export function HomePage() {
-  const { setCurrentPage, coins, capturedPokemon, discoveredHabitats, foundRelics, foundFossils, visitedLocations } = useAppStore();
+  const { setCurrentPage, coins, capturedPokemon, discoveredHabitats, ownedItems, visitedLocations } = useAppStore();
 
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-red-500 via-red-600 to-red-700">
@@ -189,8 +188,8 @@ export function HomePage() {
 
           {/* Right stats — evenly spaced from center to right edge */}
           <div className="flex flex-1 justify-around pl-14">
-            <button onClick={() => setCurrentPage("relics")} className="text-center active:scale-95 transition-transform">
-              <p className="text-xl font-bold text-white">{foundRelics.length}</p>
+            <button onClick={() => setCurrentPage("items")} className="text-center active:scale-95 transition-transform">
+              <p className="text-xl font-bold text-white">{ownedItems.length}</p>
               <p className="text-[9px] text-white/80">Items</p>
             </button>
             <button onClick={() => setCurrentPage("map")} className="text-center active:scale-95 transition-transform">
@@ -202,7 +201,7 @@ export function HomePage() {
 
         {/* Progress Bar */}
         {(() => {
-          const done = capturedPokemon.length + discoveredHabitats.length + foundRelics.length + foundFossils.length + visitedLocations.length;
+          const done = capturedPokemon.length + discoveredHabitats.length + ownedItems.length + visitedLocations.length;
           const pct = Math.min(100, Math.round((done / TOTAL) * 100));
           return (
             <div className="mx-4 mb-1">

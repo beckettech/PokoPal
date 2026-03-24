@@ -11,6 +11,7 @@ export type Page =
   | "cloud-islands" 
   | "dream-islands" 
   | "relics" 
+  | "items"
   | "mystery-gifts" 
   | "chat"
   | "coin-shop";
@@ -52,6 +53,8 @@ interface AppState {
   toggleFoundRelic: (id: string) => void;
   foundFossils: string[];
   toggleFoundFossil: (id: string) => void;
+  ownedItems: string[];
+  toggleOwnedItem: (slug: string) => void;
 }
 
 export const useAppStore = create<AppState>()(
@@ -120,6 +123,12 @@ export const useAppStore = create<AppState>()(
           ? state.foundFossils.filter(f => f !== id)
           : [...state.foundFossils, id]
       })),
+      ownedItems: [],
+      toggleOwnedItem: (slug) => set((state) => ({
+        ownedItems: state.ownedItems.includes(slug)
+          ? state.ownedItems.filter(s => s !== slug)
+          : [...state.ownedItems, slug]
+      })),
     }),
     {
       name: "pokopia-storage",
@@ -130,6 +139,7 @@ export const useAppStore = create<AppState>()(
         visitedLocations: state.visitedLocations,
         foundRelics: state.foundRelics,
         foundFossils: state.foundFossils,
+        ownedItems: state.ownedItems,
         coins: state.coins,
       }),
     }
