@@ -4899,7 +4899,9 @@
     "idealHabitat": null,
     "favorites": [],
     "habitats": [],
-    "rarity": "Legendary"
+    "rarity": "Legendary",
+    "obtainMethod": "Build the Freezing Chambers in Palette Town. Get the kit from the eastern island (Yellow Poké Ball on a plinth). Materials: Stone x50, Ice x50, Crystal Fragments x10, Pokémetal x10. Requires Build and Water specialty Pokémon. Articuno appears inside once built.",
+    "habitatBuilt": "Freezing Chambers"
   },
   {
     "slug": "zapdos",
@@ -4913,7 +4915,9 @@
     "idealHabitat": null,
     "favorites": [],
     "habitats": [],
-    "rarity": "Legendary"
+    "rarity": "Legendary",
+    "obtainMethod": "Build the Abandoned Power Plant in Palette Town. Get the kit from the southern island mountain top (Yellow Poké Ball on a plinth). Materials: Copper Ingots x50, Iron Ingots x50, Sealass Fragments x50, Bricks x50, Pokémetal x10. Requires Build, Crush, Fly, and Generate specialty Pokémon. Zapdos appears inside once built.",
+    "habitatBuilt": "Abandoned Power Plant"
   },
   {
     "slug": "moltres",
@@ -4927,7 +4931,9 @@
     "idealHabitat": null,
     "favorites": [],
     "habitats": [],
-    "rarity": "Legendary"
+    "rarity": "Legendary",
+    "obtainMethod": "Build the Altar of Flame in Palette Town. Get the kit from the northwestern island (Yellow Poké Ball on a plinth). Materials: Copper Ingots x50, Gold Ingots x50, Lava Rocks x50, Pokémetal x10. Requires Build specialty Pokémon. Moltres appears inside once built.",
+    "habitatBuilt": "Altar of Flame"
   },
   {
     "slug": "dratini",
@@ -5120,7 +5126,8 @@
     "idealHabitat": null,
     "favorites": [],
     "habitats": [],
-    "rarity": "Legendary"
+    "rarity": "Legendary",
+    "obtainMethod": "Found in Sparkling Skylands. Complete Tinkatuff's storyline and restore the Skyland Building (one floor per day). First encounter adds to Pokédex. To befriend: find on a Dragonite Dream Island behind breakable walls. No habitat needed."
   },
   {
     "slug": "mew",
@@ -5134,7 +5141,8 @@
     "idealHabitat": null,
     "favorites": [],
     "habitats": [],
-    "rarity": "Legendary"
+    "rarity": "Legendary",
+    "obtainMethod": "Collect 27 Mysterious Slates (shiny ground spots, use Search specialty + Dowsing Machine). Find the Unown Mural in Withered Wastelands (break rocky wall right of path near Horsea Fountain, then left through another wall). Match slate symbols to mural slots. Mew appears from portal."
   },
   {
     "slug": "cyndaquil",
@@ -7059,7 +7067,8 @@
     "idealHabitat": null,
     "favorites": [],
     "habitats": [],
-    "rarity": "Legendary"
+    "rarity": "Legendary",
+    "obtainMethod": "Found on Ocean Dream Island (use Pikachu Doll). Check Pokédex filters to confirm presence (look for '?' entry). Break steel blocks in central caves to reach. Can be housed in Tall Grass or other habitats."
   },
   {
     "slug": "entei",
@@ -7073,7 +7082,8 @@
     "idealHabitat": null,
     "favorites": [],
     "habitats": [],
-    "rarity": "Legendary"
+    "rarity": "Legendary",
+    "obtainMethod": "Found on Volcanic Dream Island (use Arcanine Doll). Check Pokédex filters to confirm presence (look for '?' entry). Break Lava Blocks in central mountain caves to reach. Can be housed in Tall Grass or other habitats."
   },
   {
     "slug": "suicune",
@@ -7087,7 +7097,8 @@
     "idealHabitat": null,
     "favorites": [],
     "habitats": [],
-    "rarity": "Legendary"
+    "rarity": "Legendary",
+    "obtainMethod": "Found on Wasteland Dream Island (use Eevee Doll). Check Pokédex filters to confirm presence (look for '?' entry). Break Ice blocks in central rocky caves to reach. Can be housed in Tall Grass or other habitats."
   },
   {
     "slug": "larvitar",
@@ -7263,7 +7274,8 @@
     "idealHabitat": null,
     "favorites": [],
     "habitats": [],
-    "rarity": "Legendary"
+    "rarity": "Legendary",
+    "obtainMethod": "Befriend Articuno, Zapdos, and Moltres first. This unlocks Tidal Bell recipe. Craft it with 5 Silver Feathers (dropped by Lugia flying overhead - use Cut to pick up) and 5 Rare Pokémetal. Ring the bell when Lugia flies overhead. Cannot be housed in a habitat."
   },
   {
     "slug": "ho-oh",
@@ -7277,7 +7289,8 @@
     "idealHabitat": null,
     "favorites": [],
     "habitats": [],
-    "rarity": "Legendary"
+    "rarity": "Legendary",
+    "obtainMethod": "Befriend Raikou, Entei, and Suicune first. This unlocks Clear Bell recipe. Craft it with 5 Rainbow Feathers (dropped by Ho-Oh flying overhead - use Water Gun to pick up) and 5 Rare Pokémetal. Ring the bell when Ho-Oh flies overhead. Cannot be housed in a habitat."
   },
   {
     "slug": "torchic",

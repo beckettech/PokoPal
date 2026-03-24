@@ -150,6 +150,17 @@ export function DexPage() {
           </div>
         </div>
 
+        {/* Legendary Obtain Method - special callout */}
+        {(selectedPokemon as any).obtainMethod && (
+          <div className="mx-4 mt-3 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-3">
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-lg">✨</span>
+              <h3 className="font-bold text-amber-800 text-sm">How to Obtain</h3>
+            </div>
+            <p className="text-xs text-amber-900 leading-relaxed">{(selectedPokemon as any).obtainMethod}</p>
+          </div>
+        )}
+
         {/* Scrollable content */}
         <div className="flex-1 overflow-y-auto">
           <div className="pt-4 px-4 pb-8 space-y-3">

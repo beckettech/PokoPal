@@ -124,24 +124,40 @@ function buildContext(query: string): string {
     const relevantPokemon = pokemonData.filter((p: any) => {
       const name = (p.name || "").toLowerCase();
       const locations = (p.locations || []).join(" ").toLowerCase();
+      const obtainMethod = (p.obtainMethod || "").toLowerCase();
       return q.includes(name) || name.includes(q.split(" ")[0]) || 
-             (q.includes("where") && locations.length > 0 && q.split(" ").some(w => locations.includes(w)));
+             (q.includes("where") && locations.length > 0 && q.split(" ").some(w => locations.includes(w))) ||
+             obtainMethod.includes(q);
     }).slice(0, 3);
     
     if (relevantPokemon.length > 0) {
       parts.push(`Relevant Pokemon:\n${JSON.stringify(relevantPokemon, null, 2)}`);
     }
     
-    // If asking "where is X", search for that Pokemon
+    // If asking "where is X" or "how to get X", search for that Pokemon
     const whereMatch = q.match(/where (?:can i find |is |are )?(?:a )?(\w+)/);
-    if (whereMatch) {
-      const searchName = whereMatch[1].toLowerCase();
+    const howToMatch = q.match(/how (?:do i |to )?(?:get |find |obtain |catch )?(?:a )?(\w+)/);
+    const legendaryMatch = q.match(/(?:articuno|zapdos|moltres|mewtwo|mew|lugia|ho-?oh|raikou|entei|suicune)/);
+    
+    if (whereMatch || howToMatch || legendaryMatch) {
+      const searchName = (whereMatch?.[1] || howToMatch?.[1] || legendaryMatch?.[0] || "").toLowerCase();
       const found = pokemonData.find((p: any) => 
-        (p.name || "").toLowerCase().includes(searchName)
+        (p.name || "").toLowerCase().includes(searchName) ||
+        (p.obtainMethod || "").toLowerCase().includes(searchName)
       );
       if (found && !relevantPokemon.includes(found)) {
         parts.push(`Pokemon "${found.name}":\n${JSON.stringify(found, null, 2)}`);
       }
+    }
+    
+    // Special handling for legendary queries
+    if (q.includes("legendary") || q.includes("how to get") || q.includes("how do i get")) {
+      const legendaries = pokemonData.filter((p: any) => p.rarity === "Legendary");
+      parts.push(`All Legendary Pokemon:\n${JSON.stringify(legendaries.map((p: any) => ({
+        name: p.name,
+        obtainMethod: p.obtainMethod,
+        habitatBuilt: p.habitatBuilt
+      })), null, 2)}`);
     }
   }
   
