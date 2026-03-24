@@ -262,7 +262,7 @@ export function ItemsPage() {
                   </button>
 
                   {/* Item image */}
-                  <div className={`w-14 h-14 rounded-lg flex items-center justify-center mb-2 ${!owned ? "opacity-60" : ""}`}>
+                  <div className="w-14 h-14 rounded-lg flex items-center justify-center mb-2">
                     <img 
                       src={item.image} 
                       alt={item.name} 
@@ -274,7 +274,7 @@ export function ItemsPage() {
                   </div>
 
                   {/* Name */}
-                  <span className={`text-xs font-bold text-center line-clamp-2 ${owned ? "text-gray-800" : "text-gray-500"}`}>
+                  <span className="text-xs font-bold text-center line-clamp-2 text-gray-800">
                     {item.name}
                   </span>
                 </button>
