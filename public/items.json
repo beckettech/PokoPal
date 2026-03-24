@@ -22610,25 +22610,25 @@
       {
         "slug": "rainbowfeather",
         "name": "Rainbow Feather",
-        "description": "A mysterious feather that shines with a rainbow light. Looks like it fell from a Pokémon flying in the sky...",
+        "description": "A mysterious feather that shines with a rainbow light. Ho-Oh flies over the sky randomly and drops this feather. Use Water Gun on it when it's on the ground before you can pick it up.",
         "tag": null,
-        "note": null,
+        "note": "Use Water Gun to pick up",
         "image": "/items/rainbowfeather.png",
         "locations": [],
         "methods": [
-          "From Ho-Oh"
+          "Dropped by Ho-Oh flying overhead - use Water Gun to collect"
         ]
       },
       {
         "slug": "silverfeather",
         "name": "Silver Feather",
-        "description": "A mysterious feather that shines with a silver light. Looks like it fell from a Pokémon flying in the sky...",
+        "description": "A mysterious feather that shines with a silver light. Lugia flies over the sky randomly and drops this feather. Use Cut on it when it's on the ground before you can pick it up.",
         "tag": null,
-        "note": null,
+        "note": "Use Cut to pick up",
         "image": "/items/silverfeather.png",
         "locations": [],
         "methods": [
-          "From Lugia"
+          "Dropped by Lugia flying overhead - use Cut to collect"
         ]
       },
       {

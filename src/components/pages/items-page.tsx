@@ -358,10 +358,11 @@ export function ItemsPage() {
               </div>
             )}
 
-            {/* Note */}
+            {/* Note / Special Mechanic */}
             {selectedItem.note && (
-              <div className="bg-yellow-50 rounded-lg p-3">
-                <p className="text-xs text-yellow-800">💡 {selectedItem.note}</p>
+              <div className="bg-orange-50 border border-orange-200 rounded-xl p-3">
+                <p className="text-xs font-bold text-orange-700 mb-1">⚠️ Special Mechanic</p>
+                <p className="text-xs text-orange-800">{selectedItem.note}</p>
               </div>
             )}
 
