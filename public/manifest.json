@@ -1,0 +1,17 @@
+{
+  "name": "Pokopia Guide",
+  "short_name": "Pokopia",
+  "description": "Your ultimate Pokémon companion app",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#EF4444",
+  "theme_color": "#EF4444",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

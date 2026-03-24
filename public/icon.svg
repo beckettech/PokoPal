@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Rounded square background -->
+  <rect width="512" height="512" rx="96" fill="#EF4444"/>
+  
+  <!-- Gradient overlay -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F87171"/>
+      <stop offset="100%" style="stop-color:#DC2626"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#bgGrad)"/>
+  
+  <!-- Mini homepage layout -->
+  
+  <!-- Header bar -->
+  <rect x="32" y="32" width="448" height="80" rx="16" fill="rgba(255,255,255,0.2)"/>
+  
+  <!-- Profile circle (top left) -->
+  <circle cx="80" cy="72" r="28" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="80" cy="72" r="20" fill="rgba(255,255,255,0.5)"/>
+  
+  <!-- Coins indicator (top right) -->
+  <rect x="380" y="52" width="80" height="40" rx="20" fill="#FBBF24"/>
+  <circle cx="408" cy="72" r="10" fill="#92400E"/>
+  
+  <!-- Content area (white rounded rect) -->
+  <rect x="32" y="128" width="448" height="352" rx="32" fill="white"/>
+  
+  <!-- Grid of squares (representing menu items) -->
+  <!-- Row 1 -->
+  <rect x="64" y="160" width="120" height="100" rx="16" fill="#F3F4F6"/>
+  <rect x="200" y="160" width="120" height="100" rx="16" fill="#F3F4F6"/>
+  <rect x="336" y="160" width="120" height="100" rx="16" fill="#F3F4F6"/>
+  
+  <!-- Row 2 -->
+  <rect x="64" y="276" width="120" height="100" rx="16" fill="#F3F4F6"/>
+  <rect x="200" y="276" width="120" height="100" rx="16" fill="#F3F4F6"/>
+  <rect x="336" y="276" width="120" height="100" rx="16" fill="#F3F4F6"/>
+  
+  <!-- Mini icons in squares -->
+  <!-- Pokeball icon -->
+  <circle cx="124" cy="210" r="24" fill="none" stroke="#EF4444" stroke-width="6"/>
+  <line x1="100" y1="210" x2="148" y2="210" stroke="#EF4444" stroke-width="6"/>
+  
+  <!-- Star icon -->
+  <polygon points="260,182 270,202 292,202 274,216 282,238 260,224 238,238 246,216 228,202 250,202" fill="#F59E0B"/>
+  
+  <!-- Map pin -->
+  <ellipse cx="396" cy="220" rx="16" ry="8" fill="#10B981"/>
+  <circle cx="396" cy="200" r="20" fill="#10B981"/>
+  <circle cx="396" cy="200" r="10" fill="white"/>
+  
+  <!-- Chat bubble -->
+  <rect x="80" y="300" width="80" height="56" rx="12" fill="#06B6D4"/>
+  <polygon points="110,356 130,356 120,376" fill="#06B6D4"/>
+  
+  <!-- Items box -->
+  <rect x="216" y="300" width="80" height="56" rx="12" fill="#F97316"/>
+  <rect x="240" y="316" width="32" height="24" rx="4" fill="white"/>
+  
+  <!-- Mystery gift -->
+  <rect x="352" y="300" width="80" height="56" rx="12" fill="#8B5CF6"/>
+  <circle cx="392" cy="320" r="16" fill="white"/>
+  <rect x="384" y="332" width="16" height="12" rx="2" fill="white"/>
+</svg>
