@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useMemo, useEffect } from "react";
-import { ArrowLeft, Plus, Check, Search, X } from "lucide-react";
+import { ArrowLeft, Plus, Check, Search, X, Filter } from "lucide-react";
 import { useAppStore } from "@/lib/store";
 
 type Item = {
@@ -47,14 +47,19 @@ export function ItemsPage() {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [ownedFilter, setOwnedFilter] = useState<"all" | "owned" | "unowned">("all");
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
 
   // Fetch items at runtime
   useEffect(() => {
     fetch("/items.json")
       .then(res => res.json())
-      .then(data => {
+      .then((data: ItemCategory[]) => {
         setItemsData(data);
+        // Default to first category
+        if (data.length > 0 && !selectedCategory) {
+          setSelectedCategory(data[0].slug);
+        }
         setLoading(false);
       })
       .catch(err => {
@@ -70,29 +75,26 @@ export function ItemsPage() {
     );
   }, [itemsData]);
 
-  // Filter items by category and search
+  // Filter items by category, search, and owned status
   const filteredItems = useMemo(() => {
     return allItems.filter(item => {
-      const matchesCategory = !selectedCategory || item.categorySlug === selectedCategory;
+      const matchesCategory = selectedCategory === item.categorySlug;
       const matchesSearch = !searchQuery || 
         item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.description.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchesCategory && matchesSearch;
+      const isOwned = ownedItems.includes(item.slug);
+      const matchesOwned = ownedFilter === "all" || 
+        (ownedFilter === "owned" && isOwned) ||
+        (ownedFilter === "unowned" && !isOwned);
+      return matchesCategory && matchesSearch && matchesOwned;
     });
-  }, [allItems, selectedCategory, searchQuery]);
-
-  // Group filtered items by category for display
-  const groupedItems = useMemo(() => {
-    const groups: Record<string, Item[]> = {};
-    filteredItems.forEach(item => {
-      if (!groups[item.category!]) groups[item.category!] = [];
-      groups[item.category!].push(item);
-    });
-    return groups;
-  }, [filteredItems]);
+  }, [allItems, selectedCategory, searchQuery, ownedFilter, ownedItems]);
 
   const totalOwned = ownedItems.length;
   const totalItems = allItems.length;
+
+  // Get current category info
+  const currentCategory = itemsData.find(c => c.slug === selectedCategory);
 
   if (loading) {
     return (
@@ -157,16 +159,6 @@ export function ItemsPage() {
 
         {/* Category Tabs */}
         <div className="flex gap-1.5 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide">
-          <button
-            onClick={() => setSelectedCategory(null)}
-            className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
-              selectedCategory === null
-                ? "bg-white text-orange-600"
-                : "bg-white/20 text-white"
-            }`}
-          >
-            All ({totalItems})
-          </button>
           {itemsData.map(cat => {
             const icon = CATEGORY_ICONS[cat.slug] || "📦";
             const count = cat.items.length;
@@ -180,10 +172,44 @@ export function ItemsPage() {
                     : "bg-white/20 text-white"
                 }`}
               >
-                {icon} {cat.name} ({count})
+                {icon} {cat.name}
               </button>
             );
           })}
+        </div>
+
+        {/* Owned/Unowned Filter */}
+        <div className="flex gap-1.5 mt-2">
+          <button
+            onClick={() => setOwnedFilter("all")}
+            className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
+              ownedFilter === "all"
+                ? "bg-white text-orange-600"
+                : "bg-white/20 text-white"
+            }`}
+          >
+            All ({currentCategory?.items.length || 0})
+          </button>
+          <button
+            onClick={() => setOwnedFilter("owned")}
+            className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
+              ownedFilter === "owned"
+                ? "bg-green-500 text-white"
+                : "bg-white/20 text-white"
+            }`}
+          >
+            ✓ Owned ({currentCategory?.items.filter(i => ownedItems.includes(i.slug)).length || 0})
+          </button>
+          <button
+            onClick={() => setOwnedFilter("unowned")}
+            className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
+              ownedFilter === "unowned"
+                ? "bg-gray-600 text-white"
+                : "bg-white/20 text-white"
+            }`}
+          >
+            ? Unowned ({currentCategory?.items.filter(i => !ownedItems.includes(i.slug)).length || 0})
+          </button>
         </div>
       </div>
 
@@ -196,74 +222,55 @@ export function ItemsPage() {
             {searchQuery && ` matching "${searchQuery}"`}
           </p>
 
-          {/* Grouped items */}
-          {Object.entries(groupedItems).map(([category, items]) => (
-            <div key={category} className="mb-4">
-              {!selectedCategory && (
-                <h2 className="text-sm font-bold text-gray-500 mb-2 flex items-center gap-2">
-                  <span>{CATEGORY_ICONS[items[0]?.categorySlug] || "📦"}</span>
-                  {category}
-                  <span className="text-gray-400 font-normal">({items.length})</span>
-                </h2>
-              )}
-              
-              <div className="grid grid-cols-3 gap-2">
-                {items.map(item => {
-                  const owned = ownedItems.includes(item.slug);
-                  return (
-                    <button
-                      key={item.slug}
-                      onClick={() => setSelectedItem(item)}
-                      className={`relative flex flex-col items-center p-3 rounded-xl border transition-all active:scale-[0.98] ${
-                        owned
-                          ? "bg-orange-50 border-orange-200"
-                          : "bg-gray-50 border-gray-100"
-                      }`}
-                    >
-                      {/* Item image */}
-                      <div className={`w-14 h-14 rounded-lg flex items-center justify-center mb-2 ${!owned ? "opacity-60" : ""}`}>
-                        <img 
-                          src={item.image} 
-                          alt={item.name} 
-                          className="w-12 h-12 object-contain"
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).src = "/items/clefairydoll.png";
-                          }}
-                        />
-                      </div>
+          {/* Items Grid */}
+          <div className="grid grid-cols-3 gap-2">
+            {filteredItems.map(item => {
+              const owned = ownedItems.includes(item.slug);
+              return (
+                <button
+                  key={item.slug}
+                  onClick={() => setSelectedItem(item)}
+                  className={`relative flex flex-col items-center p-3 rounded-xl border transition-all active:scale-[0.98] ${
+                    owned
+                      ? "bg-orange-50 border-orange-200"
+                      : "bg-gray-50 border-gray-100"
+                  }`}
+                >
+                  {/* + button - top right */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggleOwnedItem(item.slug);
+                    }}
+                    className={`absolute top-1 right-1 w-8 h-8 rounded-full flex items-center justify-center transition-all ${
+                      owned
+                        ? "bg-orange-500 text-white"
+                        : "bg-gray-200 text-gray-500"
+                    }`}
+                  >
+                    {owned ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                  </button>
 
-                      {/* Name */}
-                      <span className={`text-xs font-bold text-center line-clamp-2 ${owned ? "text-gray-800" : "text-gray-500"}`}>
-                        {item.name}
-                      </span>
+                  {/* Item image */}
+                  <div className={`w-14 h-14 rounded-lg flex items-center justify-center mb-2 ${!owned ? "opacity-60" : ""}`}>
+                    <img 
+                      src={item.image} 
+                      alt={item.name} 
+                      className="w-12 h-12 object-contain"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = "/items/clefairydoll.png";
+                      }}
+                    />
+                  </div>
 
-                      {/* Owned badge */}
-                      {owned && (
-                        <div className="absolute top-2 right-2 w-5 h-5 bg-orange-500 rounded-full flex items-center justify-center">
-                          <Check className="w-3 h-3 text-white" />
-                        </div>
-                      )}
-
-                      {/* + button */}
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          toggleOwnedItem(item.slug);
-                        }}
-                        className={`absolute bottom-1 right-1 w-9 h-9 rounded-full flex items-center justify-center transition-all ${
-                          owned
-                            ? "bg-gray-200 text-gray-400"
-                            : "bg-orange-500 text-white"
-                        }`}
-                      >
-                        {owned ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
-                      </button>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+                  {/* Name */}
+                  <span className={`text-xs font-bold text-center line-clamp-2 ${owned ? "text-gray-800" : "text-gray-500"}`}>
+                    {item.name}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
 
           {filteredItems.length === 0 && (
             <div className="text-center py-12 text-gray-400">
