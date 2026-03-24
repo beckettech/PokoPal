@@ -16,7 +16,7 @@ interface Message {
 }
 
 export function ChatPage() {
-  const { setCurrentPage, coins, chatMessages, addChatMessage, spendCoins, capturedPokemon, ownedItems, discoveredHabitats } = useAppStore();
+  const { setCurrentPage, coins, chatMessages, addChatMessage, spendCoins, addCoins, capturedPokemon, ownedItems, discoveredHabitats } = useAppStore();
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [streamingContent, setStreamingContent] = useState("");
@@ -45,14 +45,11 @@ export function ChatPage() {
     
     // Add user message
     addChatMessage({ role: "user", content: userMessage });
-    
-    // Deduct coins
-    const success = spendCoins(100);
-    if (!success) return;
 
     setIsLoading(true);
     setStreamingContent("");
 
+    let coinDeducted = false;
     try {
       // Build context based on query
       const context = await buildContext(userMessage);
@@ -70,7 +67,15 @@ export function ChatPage() {
         }),
       });
 
-      if (!response.ok) throw new Error("Failed to get response");
+      if (!response.ok) {
+        const errText = await response.text();
+        console.error("API error:", response.status, errText);
+        throw new Error(`API error ${response.status}`);
+      }
+
+      // Only deduct coins on success
+      spendCoins(100);
+      coinDeducted = true;
 
       // Read streaming response
       const reader = response.body?.getReader();
@@ -102,12 +107,16 @@ export function ChatPage() {
         }
       }
 
+      if (!fullContent) throw new Error("Empty response");
+
       // Add assistant message
       addChatMessage({ role: "assistant", content: fullContent });
       setStreamingContent("");
     } catch (error) {
       console.error("Chat error:", error);
-      addChatMessage({ role: "assistant", content: "Sorry, I had trouble processing that. Please try again!" });
+      addChatMessage({ role: "assistant", content: "Hmm, I couldn't reach my knowledge base. Please try again!" });
+      // Refund coins if we already deducted but got no response
+      if (coinDeducted) addCoins(100);
     } finally {
       setIsLoading(false);
     }

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY?.trim();
 const MODEL = "openai/gpt-4o-mini"; // Cheap and fast
 
 // Dexter's system prompt
@@ -65,10 +65,10 @@ export async function POST(req: NextRequest) {
 
     if (!response.ok) {
       const error = await response.text();
-      console.error("OpenRouter error:", error);
+      console.error("OpenRouter error:", response.status, error);
       return NextResponse.json(
-        { error: "Failed to get response" },
-        { status: 500 }
+        { error: `OpenRouter error: ${response.status}` },
+        { status: response.status }
       );
     }
 
