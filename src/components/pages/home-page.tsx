@@ -8,7 +8,7 @@ import {
   ClipboardList, 
   Cloud, 
   Star, 
-  Zap, 
+  Package, 
   Gift, 
   MessageCircle,
   Coins
@@ -76,8 +76,8 @@ const menuItems = [
   },
   { 
     id: "relics", 
-    icon: Zap, 
-    label: "Relics",
+    icon: Package, 
+    label: "Items",
     color: "bg-gradient-to-br from-orange-400 to-orange-500",
     shadowColor: "shadow-orange-500/30",
     hasNotification: false 
@@ -191,7 +191,7 @@ export function HomePage() {
           <div className="flex flex-1 justify-around pl-14">
             <button onClick={() => setCurrentPage("relics")} className="text-center active:scale-95 transition-transform">
               <p className="text-xl font-bold text-white">{foundRelics.length}</p>
-              <p className="text-[9px] text-white/80">Relics</p>
+              <p className="text-[9px] text-white/80">Items</p>
             </button>
             <button onClick={() => setCurrentPage("map")} className="text-center active:scale-95 transition-transform">
               <p className="text-xl font-bold text-white">{visitedLocations.length}</p>

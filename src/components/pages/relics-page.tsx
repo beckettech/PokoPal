@@ -52,7 +52,7 @@ export function RelicsPage() {
           >
             <ArrowLeft className="w-6 h-6 text-white" />
           </button>
-          <h1 className="text-lg font-bold text-white">Lost Relics</h1>
+          <h1 className="text-lg font-bold text-white">Items</h1>
           <div className="bg-white/20 px-3 py-1 rounded-full">
             <span className="text-white text-xs font-bold">
               {activeTab === "relics" ? relicProgress : fossilProgress}
