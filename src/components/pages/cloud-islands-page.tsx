@@ -459,7 +459,8 @@ function IslandCard({
 
         <div className="flex-1 min-w-0 text-left">
           <h3 className="font-bold text-sm text-gray-800 truncate">{island.title}</h3>
-          <code className="text-xs text-gray-500 font-mono">{island.islandCode}</code>
+          <code className="text-base text-cyan-600 font-mono font-semibold">{island.islandCode}</code>
+          <p className="text-xs text-gray-500 line-clamp-2 mt-0.5">{island.description}</p>
         </div>
 
         {/* Save button inline */}
