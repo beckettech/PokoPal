@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { ArrowLeft, Send, Coins, Sparkles, Loader2 } from "lucide-react";
 import { useAppStore } from "@/lib/store";
 import { motion, AnimatePresence } from "framer-motion";
-import { pokemonData } from "@/lib/pokemon-data";
+import { pokemonList } from "@/lib/pokemon-data";
 import habitatsData from "@/data/scraped/habitats.json";
 
 // Dexter avatar
@@ -107,7 +107,7 @@ export function ChatPage() {
       const [full, type, name] = match;
       const handleClick = () => {
         if (type === "Dex") {
-          const pokemon = pokemonData.find(p => p.name.toLowerCase() === name.toLowerCase());
+          const pokemon = pokemonList.find(p => p.name.toLowerCase() === name.toLowerCase());
           if (pokemon) {
             navigateToPokemon(pokemon.id);
           } else {
