@@ -229,7 +229,7 @@ export function HabitatDexPage() {
 
                     {/* Discovered button */}
                     <button
-                      onClick={() => toggleDiscoveredHabitat(habitat.id)}
+                      onClick={() => { toggleDiscoveredHabitat(habitat.id); setSortFilter("all"); }}
                       className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-transform ${
                         isDiscovered
                           ? 'bg-yellow-400 text-yellow-900'
