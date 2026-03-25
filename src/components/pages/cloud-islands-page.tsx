@@ -346,10 +346,25 @@ function IslandCard({
       <div className="p-3">
         {/* Main row */}
         <div className="flex items-start gap-3">
-          {/* Image */}
-          <div className="w-16 h-16 rounded-xl bg-gray-200 shrink-0 overflow-hidden">
-            {island.screenshots[0] ? (
-              <img src={island.screenshots[0]} alt={island.title} className="w-full h-full object-cover" />
+          {/* Images - show grid if multiple, single if one */}
+          <div className={`shrink-0 overflow-hidden ${
+            island.screenshots.length >= 3 ? "w-20 h-20 grid grid-cols-2 gap-0.5" :
+            island.screenshots.length === 2 ? "w-20 h-20 grid grid-cols-1 gap-0.5" :
+            "w-16 h-16 rounded-xl bg-gray-200"
+          }`}>
+            {island.screenshots.length > 0 ? (
+              island.screenshots.slice(0, 3).map((img, i) => (
+                <img 
+                  key={i} 
+                  src={img} 
+                  alt={island.title} 
+                  className={`object-cover ${
+                    island.screenshots.length === 1 ? "w-full h-full rounded-xl" :
+                    island.screenshots.length === 2 ? "w-full h-10" :
+                    i === 0 ? "w-full h-10 col-span-2" : "w-full h-10"
+                  }`} 
+                />
+              ))
             ) : (
               <div className="w-full h-full flex items-center justify-center">
                 <Image className="w-6 h-6 text-gray-400" />
