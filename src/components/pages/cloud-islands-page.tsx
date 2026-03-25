@@ -2,7 +2,7 @@
 
 import { useAppStore } from "@/lib/store";
 import { cloudIslandsPosts, CloudIslandPost } from "@/lib/pokemon-data";
-import { ArrowLeft, Copy, Check, Bookmark, Plus, X, Upload, Image, Key, BadgeCheck, TrendingUp, Clock } from "lucide-react";
+import { ArrowLeft, Copy, Check, Bookmark, Plus, X, Upload, Image, Key, BadgeCheck, TrendingUp, Clock, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 
@@ -10,6 +10,7 @@ export function CloudIslandsPage() {
   const { setCurrentPage, savedIslands = [], toggleSavedIsland } = useAppStore() as any;
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<"popular" | "recent">("popular");
+  const [filterBy, setFilterBy] = useState<"all" | "saved">("all");
   const [showPostModal, setShowPostModal] = useState(false);
   const [postForm, setPostForm] = useState({ title: "", description: "", islandCode: "" });
   const [postImages, setPostImages] = useState<string[]>([]);
@@ -71,8 +72,13 @@ export function CloudIslandsPage() {
     }
   };
 
+  // Filter: all or saved only
+  const filteredIslands = filterBy === "saved" 
+    ? cloudIslandsPosts.filter(i => savedIslands.includes(i.islandCode))
+    : cloudIslandsPosts;
+
   // Sort: popular (saves) or recent (createdAt)
-  const sortedIslands = [...cloudIslandsPosts].sort((a, b) => {
+  const sortedIslands = [...filteredIslands].sort((a, b) => {
     if (sortBy === "popular") return b.likes - a.likes;
     return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
   });
@@ -116,6 +122,27 @@ export function CloudIslandsPage() {
           >
             <Clock className="w-3.5 h-3.5" />
             Recent
+          </button>
+        </div>
+
+        {/* Saved Filter */}
+        <div className="flex gap-1.5 mt-2">
+          <button
+            onClick={() => setFilterBy("all")}
+            className={`px-3 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap transition-all ${
+              filterBy === "all" ? "bg-white text-cyan-600" : "bg-white/20 text-white"
+            }`}
+          >
+            All
+          </button>
+          <button
+            onClick={() => setFilterBy("saved")}
+            className={`px-3 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap transition-all flex items-center gap-1 ${
+              filterBy === "saved" ? "bg-yellow-400 text-yellow-900" : "bg-white/20 text-white"
+            }`}
+          >
+            <Bookmark className="w-3 h-3" />
+            Saved ({savedIslands.length})
           </button>
         </div>
       </div>
