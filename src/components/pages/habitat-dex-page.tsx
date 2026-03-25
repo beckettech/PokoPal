@@ -337,7 +337,8 @@ export function HabitatDexPage() {
                     <div className="flex flex-wrap gap-2">
                       {habitat.pokemon.map(poke => {
                         const isCaught = capturedNames.has(poke.name.toLowerCase());
-                        const img = pokemonImageMap[poke.name.toLowerCase()] || pokemonImageMap[poke.slug.toLowerCase()];
+                        const baseImg = pokemonImageMap[poke.name.toLowerCase()] || pokemonImageMap[poke.slug.toLowerCase()];
+                        const img = isCaught && baseImg ? baseImg.replace('/pokemon/', '/pokemon-original/') : baseImg;
                         return (
                           <motion.button
                             key={poke.slug}
