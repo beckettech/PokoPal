@@ -109,15 +109,25 @@ export function HabitatDexPage() {
     return { label: `${caught}/${total}`, icon: <Clock className="w-3 h-3" />, color: "bg-yellow-100 text-yellow-700" };
   };
 
+  // Snapshot of discovered habitats when filter was last changed
+  // This prevents items from jumping around when toggling while filtered
+  const [filterSnapshot, setFilterSnapshot] = useState<Set<number>>(() => new Set(discoveredHabitats));
+  
+  // Update snapshot only when user explicitly changes filter
+  const handleFilterChange = (newFilter: "all" | "discovered" | "undiscovered") => {
+    setFilterSnapshot(new Set(discoveredHabitats));
+    setSortFilter(newFilter);
+  };
+
   const filteredHabitats = useMemo(() => {
     return habitatsData.filter(hab => {
       const matchesSearch = hab.name.toLowerCase().includes(searchQuery.toLowerCase());
-      const isDiscovered = discoveredSet.has(hab.id);
+      const isDiscovered = filterSnapshot.has(hab.id);
       if (sortFilter === "discovered" && !isDiscovered) return false;
       if (sortFilter === "undiscovered" && isDiscovered) return false;
       return matchesSearch;
     });
-  }, [searchQuery, sortFilter, discoveredSet]);
+  }, [searchQuery, sortFilter, filterSnapshot]);
 
   const handlePokemonClick = (slug: string, name: string) => {
     // Find the Pokemon by name and deep-link to it in dex
@@ -161,7 +171,7 @@ export function HabitatDexPage() {
           {(["all", "discovered", "undiscovered"] as const).map(f => (
             <motion.button
               key={f}
-              onClick={() => setSortFilter(f)}
+              onClick={() => handleFilterChange(f)}
               className={`px-3 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap transition-all flex items-center gap-1 ${
                 sortFilter === f
                   ? "bg-white text-green-700 shadow"
@@ -229,7 +239,7 @@ export function HabitatDexPage() {
 
                     {/* Discovered button */}
                     <button
-                      onClick={() => { toggleDiscoveredHabitat(habitat.id); setSortFilter("all"); }}
+                      onClick={() => toggleDiscoveredHabitat(habitat.id)}
                       className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-transform ${
                         isDiscovered
                           ? 'bg-yellow-400 text-yellow-900'
