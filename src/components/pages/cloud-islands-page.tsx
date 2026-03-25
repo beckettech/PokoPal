@@ -346,12 +346,14 @@ function IslandCard({
       <div className="p-3">
         {/* Main row */}
         <div className="flex items-start gap-3">
-          {/* Image placeholder */}
-          <div className="w-16 h-16 rounded-xl bg-gray-200 shrink-0 flex items-center justify-center overflow-hidden">
+          {/* Image */}
+          <div className="w-16 h-16 rounded-xl bg-gray-200 shrink-0 overflow-hidden">
             {island.screenshots[0] ? (
-              <img src={island.screenshots[0]} className="w-full h-full object-cover" />
+              <img src={island.screenshots[0]} alt={island.title} className="w-full h-full object-cover" />
             ) : (
-              <Image className="w-6 h-6 text-gray-400" />
+              <div className="w-full h-full flex items-center justify-center">
+                <Image className="w-6 h-6 text-gray-400" />
+              </div>
             )}
           </div>
 
