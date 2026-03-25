@@ -24,18 +24,18 @@ const REWARD_ICONS: Record<string, string> = {
   item:    "🎁",
 };
 
-const AREAS = ["All", "Withered Wastelands", "Bleak Beach", "Rocky Ridges", "Sparkling Skylands"];
+const AREAS = ["Withered Wastelands", "Bleak Beach", "Rocky Ridges", "Sparkling Skylands"];
 
 export function RequestsPage() {
   const { setCurrentPage, completedRequests = [], inProgressRequests = [], toggleCompletedRequest, toggleInProgressRequest } = useAppStore() as any;
   const [search, setSearch] = useState("");
-  const [areaFilter, setAreaFilter] = useState("All");
+  const [areaFilter, setAreaFilter] = useState("Withered Wastelands");
   const [statusFilter, setStatusFilter] = useState<"all" | "todo" | "in-progress" | "done">("all");
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const filtered = requestsJson.filter((r) => {
     const matchSearch = !search || r.name.toLowerCase().includes(search.toLowerCase());
-    const matchArea = areaFilter === "All" || r.area === areaFilter || r.area === "All Areas";
+    const matchArea = r.area === areaFilter || r.area === "All Areas";
     const isCompleted = completedRequests.includes(r.id);
     const isInProgress = inProgressRequests.includes(r.id);
     if (statusFilter === "todo") return matchSearch && matchArea && !isCompleted && !isInProgress;
@@ -116,7 +116,7 @@ export function RequestsPage() {
                   areaFilter === area ? "bg-yellow-500 text-white" : "bg-gray-100 text-gray-600"
                 }`}
               >
-                {area === "All" ? "All Areas" : area.split(" ").slice(-1)[0]}
+                {area.split(" ").slice(-1)[0]}
               </button>
             ))}
           </div>
