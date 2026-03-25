@@ -462,24 +462,17 @@ function IslandCard({
           <code className="text-xs text-gray-500 font-mono">{island.islandCode}</code>
         </div>
 
-        {/* Save count */}
-        <div className="flex items-center gap-1 text-xs text-gray-400 shrink-0">
-          <Bookmark className="w-3 h-3" />
-          <span>{island.likes.toLocaleString()}</span>
-        </div>
-      </button>
-
-      {/* Bottom row - save button */}
-      <div className="flex items-center justify-end mt-2 pt-2 border-t border-gray-100">
+        {/* Save button inline */}
         <button
           onClick={(e) => { e.stopPropagation(); onToggleSave(); }}
-          className={`w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-all ${
+          className={`shrink-0 w-12 h-12 rounded-full flex flex-col items-center justify-center active:scale-90 transition-all ${
             isSaved ? "bg-yellow-400 text-yellow-900" : "bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300"
           }`}
         >
           {isSaved ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+          <span className="text-[8px] mt-0.5">{island.likes}</span>
         </button>
-      </div>
+      </button>
     </motion.div>
   );
 }
