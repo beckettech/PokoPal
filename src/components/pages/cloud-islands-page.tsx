@@ -29,13 +29,13 @@ export function CloudIslandsPage() {
     const files = e.target.files;
     if (!files) return;
     const newImages: string[] = [];
-    Array.from(files).slice(0, 3 - postImages.length).forEach(file => {
+    Array.from(files).slice(0, 4 - postImages.length).forEach(file => {
       const reader = new FileReader();
       reader.onload = (ev) => {
         if (ev.target?.result) {
           newImages.push(ev.target.result as string);
-          if (newImages.length === Math.min(files.length, 3 - postImages.length)) {
-            setPostImages(prev => [...prev, ...newImages].slice(0, 3));
+          if (newImages.length === Math.min(files.length, 4 - postImages.length)) {
+            setPostImages(prev => [...prev, ...newImages].slice(0, 4));
           }
         }
       };
@@ -216,11 +216,13 @@ export function CloudIslandsPage() {
                     <div className={`grid gap-2 ${
                       selectedIsland.screenshots.length === 1 ? "grid-cols-1" :
                       selectedIsland.screenshots.length === 2 ? "grid-cols-2" :
+                      selectedIsland.screenshots.length === 3 ? "grid-cols-2" :
                       "grid-cols-2"
                     }`}>
                       {selectedIsland.screenshots.map((img, i) => (
                         <div key={i} className={`rounded-xl overflow-hidden bg-gray-100 ${
-                          selectedIsland.screenshots.length === 3 && i === 0 ? "col-span-2" : ""
+                          (selectedIsland.screenshots.length === 3 && i === 0) ? "col-span-2" :
+                          (selectedIsland.screenshots.length === 4 && i === 0) ? "col-span-2" : ""
                         }`}>
                           <img src={img} alt={selectedIsland.title} className="w-full h-auto object-cover" />
                         </div>
@@ -361,8 +363,8 @@ export function CloudIslandsPage() {
 
                   {/* Images */}
                   <div className="mb-5">
-                    <label className="block text-xs font-medium text-gray-600 mb-2">Screenshots * (1-3)</label>
-                    <div className="flex gap-2">
+                    <label className="block text-xs font-medium text-gray-600 mb-2">Screenshots * (1-4)</label>
+                    <div className="flex gap-2 flex-wrap">
                       {postImages.map((img, i) => (
                         <div key={i} className="relative w-20 h-20 rounded-lg overflow-hidden bg-gray-100">
                           <img src={img} className="w-full h-full object-cover" />
@@ -374,7 +376,7 @@ export function CloudIslandsPage() {
                           </button>
                         </div>
                       ))}
-                      {postImages.length < 3 && (
+                      {postImages.length < 4 && (
                         <button
                           onClick={() => fileInputRef.current?.click()}
                           className="w-20 h-20 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-gray-400"
