@@ -4,6 +4,8 @@ import { useState, useRef, useEffect } from "react";
 import { ArrowLeft, Send, Coins, Sparkles, Loader2 } from "lucide-react";
 import { useAppStore } from "@/lib/store";
 import { motion, AnimatePresence } from "framer-motion";
+import { pokemonData } from "@/lib/pokemon-data";
+import habitatsData from "@/data/scraped/habitats.json";
 
 // Dexter avatar
 const DEXTER_AVATAR = "🤖";
@@ -16,7 +18,7 @@ interface Message {
 }
 
 export function ChatPage() {
-  const { setCurrentPage, coins, chatMessages, addChatMessage, spendCoins, addCoins, capturedPokemon, ownedItems, discoveredHabitats } = useAppStore();
+  const { setCurrentPage, coins, chatMessages, addChatMessage, spendCoins, addCoins, capturedPokemon, ownedItems, discoveredHabitats, navigateToPokemon, navigateToHabitat } = useAppStore();
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -105,9 +107,19 @@ export function ChatPage() {
       const [full, type, name] = match;
       const handleClick = () => {
         if (type === "Dex") {
-          setCurrentPage("dex");
+          const pokemon = pokemonData.find(p => p.name.toLowerCase() === name.toLowerCase());
+          if (pokemon) {
+            navigateToPokemon(pokemon.id);
+          } else {
+            setCurrentPage("dex");
+          }
         } else if (type === "Habitat") {
-          setCurrentPage("habitat-dex");
+          const habitat = habitatsData.find(h => h.name.toLowerCase() === name.toLowerCase());
+          if (habitat) {
+            navigateToHabitat(habitat.id);
+          } else {
+            setCurrentPage("habitat-dex");
+          }
         } else if (type === "Items") {
           setCurrentPage("items");
         }
