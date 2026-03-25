@@ -144,11 +144,6 @@ export function RequestsPage() {
                   className="w-full flex items-center gap-3 px-3 py-3 text-left"
                   onClick={() => setExpandedId(isExpanded ? null : request.id)}
                 >
-                  {/* Important indicator removed */}
-                  {false && (
-                    <div
-                  )}
-
                   <div className="flex-1 min-w-0">
                     <p className={`text-sm font-semibold truncate ${isCompleted ? "line-through text-gray-400" : "text-gray-800"}`}>
                       {request.name}
