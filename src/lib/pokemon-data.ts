@@ -428,10 +428,12 @@ export interface CloudIslandPost {
 }
 
 export const cloudIslandsPosts: CloudIslandPost[] = [
+  // Featured community island
+  { id: 0, islandCode: "PXQC-G03S", title: "Pokemon Info Board", description: "The ultimate resource island! Complete habitat guides, item locations, and rare Pokemon spawns all in one place. Updated weekly with new finds.", author: "InfoMaster", screenshots: [], likes: 2847, isDream: false, isFeatured: true, isOfficial: false, createdAt: "2026-03-01" },
   // Developer Islands (official)
-  { id: 1, islandCode: "POKO-PIA", title: "Pokopia Dev Island", description: "Official developer showcase island with unique furniture, statues, fountains, and a special Ditto bathtub! Great for reference photos.", author: "Developer", screenshots: [], likes: 9999, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
-  { id: 2, islandCode: "EIKO-CITY", title: "EIKO City", description: "Features rare Plusle & Minun habitats, urban design inspiration, and unique garden ornaments. Take reference photos for 3D printing!", author: "Developer", screenshots: [], likes: 9998, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
-  { id: 3, islandCode: "TEST-DEVS", title: "Dev Test Island", description: "Experimental island with advanced terrain sculpting, water features, and elevated builds. Perfect for learning advanced techniques.", author: "Developer", screenshots: [], likes: 9997, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
+  { id: 1, islandCode: "POKO-PIA", title: "Pokopia Dev Island", description: "Official developer showcase island with unique furniture, statues, fountains, and a special Ditto bathtub! Great for reference photos.", author: "Developer", screenshots: [], likes: 312, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
+  { id: 2, islandCode: "EIKO-CITY", title: "EIKO City", description: "Features rare Plusle & Minun habitats, urban design inspiration, and unique garden ornaments. Take reference photos for 3D printing!", author: "Developer", screenshots: [], likes: 248, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
+  { id: 3, islandCode: "TEST-DEVS", title: "Dev Test Island", description: "Experimental island with advanced terrain sculpting, water features, and elevated builds. Perfect for learning advanced techniques.", author: "Developer", screenshots: [], likes: 156, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
 ];
 
 // Mystery Gifts

@@ -60,6 +60,8 @@ interface AppState {
   isPokemonCaptured: (id: number) => boolean;
   visitedIslands: string[];
   toggleVisitedIsland: (id: string) => void;
+  savedIslands: string[];
+  toggleSavedIsland: (id: string) => void;
   discoveredHabitats: number[];
   toggleDiscoveredHabitat: (id: number) => void;
   visitedLocations: string[];
@@ -154,6 +156,12 @@ export const useAppStore = create<AppState>()(
           ? state.visitedIslands.filter(i => i !== id)
           : [...state.visitedIslands, id]
       })),
+      savedIslands: [],
+      toggleSavedIsland: (id) => set((state) => ({
+        savedIslands: state.savedIslands.includes(id)
+          ? state.savedIslands.filter(i => i !== id)
+          : [...state.savedIslands, id]
+      })),
       discoveredHabitats: [],
       toggleDiscoveredHabitat: (id) => set((state) => ({
         discoveredHabitats: state.discoveredHabitats.includes(id)
@@ -220,6 +228,7 @@ export const useAppStore = create<AppState>()(
       partialize: (state) => ({
         capturedPokemon: state.capturedPokemon,
         visitedIslands: state.visitedIslands,
+        savedIslands: state.savedIslands,
         discoveredHabitats: state.discoveredHabitats,
         visitedLocations: state.visitedLocations,
         foundRelics: state.foundRelics,
