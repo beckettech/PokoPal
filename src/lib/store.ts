@@ -74,6 +74,8 @@ interface AppState {
   toggleCompletedRequest: (id: string) => void;
   inProgressRequests: string[];
   toggleInProgressRequest: (id: string) => void;
+  claimedGifts: string[];
+  toggleClaimedGift: (id: string) => void;
 }
 
 export const useAppStore = create<AppState>()(
@@ -182,6 +184,12 @@ export const useAppStore = create<AppState>()(
           ? state.ownedItems.filter(s => s !== slug)
           : [...state.ownedItems, slug]
       })),
+      claimedGifts: [],
+      toggleClaimedGift: (id) => set((state) => ({
+        claimedGifts: state.claimedGifts.includes(id)
+          ? state.claimedGifts.filter(g => g !== id)
+          : [...state.claimedGifts, id]
+      })),
       completedRequests: [],
       toggleCompletedRequest: (id) => set((state) => ({
         completedRequests: state.completedRequests.includes(id)
@@ -223,6 +231,7 @@ export const useAppStore = create<AppState>()(
         chatMessages: state.chatMessages,
         completedRequests: state.completedRequests,
         inProgressRequests: state.inProgressRequests,
+        claimedGifts: state.claimedGifts,
       }),
     }
   )

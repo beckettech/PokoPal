@@ -1,151 +1,164 @@
 'use client'
 
 import { useAppStore } from "@/lib/store";
-import { mysteryGifts } from "@/lib/pokemon-data";
-import { ArrowLeft, Gift, Clock, CheckCircle, Coins, Package, Sparkles } from "lucide-react";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { ArrowLeft, Gift, Check, Plus, Clock, Wifi, Hash } from "lucide-react";
 
-const typeIcons: Record<string, typeof Gift> = {
-  item: Package,
-  pokemon: Sparkles,
-  currency: Coins,
-  special: Gift,
-};
-
-const typeColors: Record<string, string> = {
-  item: "from-blue-400 to-blue-500",
-  pokemon: "from-purple-400 to-purple-500",
-  currency: "from-yellow-400 to-yellow-500",
-  special: "from-pink-400 to-pink-500",
-};
+const GIFTS = [
+  {
+    id: "commemorative-gift-set",
+    name: "Pokopia Release Commemorative Gift Set",
+    method: "Serial Code",
+    methodType: "code" as const,
+    items: ["2× Leppa Berry", "2× Fresh Carrot", "2× Beans"],
+    itemImages: ["/items/leppaberry.png", "/items/freshcarrot.png", "/items/beans.png"],
+    codeNote: "Code from Japanese Pokémon Info account on X (available until March 5, 2026)",
+    availability: "Feb 27, 2026 – Feb 28, 2027",
+    active: true,
+  },
+  {
+    id: "ditto-rug",
+    name: "Ditto Rug",
+    method: "Internet",
+    methodType: "internet" as const,
+    items: ["Ditto Rug (decorative item)"],
+    itemImages: ["/items/dittorug.png"],
+    codeNote: "Early purchase bonus — also obtainable through normal gameplay",
+    availability: "Mar 5, 2026 – Jan 31, 2027",
+    active: true,
+  },
+];
 
 export function MysteryGiftsPage() {
-  const { setCurrentPage } = useAppStore();
-  const [gifts, setGifts] = useState(mysteryGifts);
+  const { setCurrentPage, claimedGifts = [], toggleClaimedGift } = useAppStore() as any;
 
-  const handleClaim = (id: number) => {
-    setGifts(prev => prev.map(g => 
-      g.id === id ? { ...g, claimed: true } : g
-    ));
-  };
-
-  const unclaimedCount = gifts.filter(g => !g.claimed).length;
+  const claimedCount = GIFTS.filter(g => claimedGifts.includes(g.id)).length;
 
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-pink-500 to-purple-600">
       {/* Header */}
-      <div className="pt-12 pb-4 px-4">
-        <div className="flex items-center justify-between mb-2">
-          <motion.button
+      <div className="pt-6 pb-3 px-4 shrink-0">
+        <div className="flex items-center justify-between mb-3">
+          <button
             onClick={() => setCurrentPage("home")}
-            className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center active:scale-90 transition-transform"
           >
             <ArrowLeft className="w-6 h-6 text-white" />
-          </motion.button>
+          </button>
           <h1 className="text-lg font-bold text-white">Mystery Gifts</h1>
-          <div className="w-9" />
+          <div className="w-11" />
         </div>
 
-        {/* Gift Animation */}
-        <motion.div 
-          className="flex justify-center"
-          animate={{ 
-            y: [0, -10, 0],
-            rotate: [-5, 5, -5]
-          }}
-          transition={{ 
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        >
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center shadow-lg">
-            <Gift className="w-8 h-8 text-white" />
+        {/* Stats */}
+        <div className="flex items-center justify-center gap-4">
+          <div className="text-center">
+            <p className="text-2xl font-bold text-white">{claimedCount}</p>
+            <p className="text-[10px] text-white/70">Claimed</p>
           </div>
-        </motion.div>
+          <div className="w-px h-8 bg-white/30" />
+          <div className="text-center">
+            <p className="text-2xl font-bold text-white">{GIFTS.length - claimedCount}</p>
+            <p className="text-[10px] text-white/70">Unclaimed</p>
+          </div>
+        </div>
 
-        {unclaimedCount > 0 && (
-          <p className="text-center text-white/80 text-xs mt-2">
-            🎁 {unclaimedCount} gift{unclaimedCount > 1 ? 's' : ''} waiting for you!
-          </p>
-        )}
+        {/* How to claim note */}
+        <p className="text-center text-white/60 text-[10px] mt-2">
+          Claim at the PC outside any Pokémon Center → Get Items
+        </p>
       </div>
 
-      {/* Content Card */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-hidden">
-        <div className="h-full overflow-y-auto">
-          <div className="p-3 space-y-3">
-            {gifts.map((gift, index) => {
-              const Icon = typeIcons[gift.type] || Gift;
-              const colorClass = typeColors[gift.type] || "from-gray-400 to-gray-500";
+      {/* Content */}
+      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+        <div className="p-4 space-y-3">
+          {GIFTS.map((gift) => {
+            const isClaimed = claimedGifts.includes(gift.id);
+            return (
+              <div
+                key={gift.id}
+                className={`rounded-2xl border p-4 transition-all ${
+                  isClaimed ? "bg-green-50 border-green-200" : "bg-white border-gray-100 shadow-sm"
+                }`}
+              >
+                {/* Top row */}
+                <div className="flex items-start gap-3">
+                  {/* Gift icon */}
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${
+                    isClaimed ? "bg-green-100" : "bg-gradient-to-br from-pink-400 to-purple-500"
+                  }`}>
+                    <Gift className={`w-6 h-6 ${isClaimed ? "text-green-500" : "text-white"}`} />
+                  </div>
 
-              return (
-                <motion.div
-                  key={gift.id}
-                  className={`rounded-xl p-3 relative overflow-hidden ${
-                    gift.claimed ? 'bg-gray-100' : 'bg-white shadow-lg border border-gray-100'
-                  }`}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  {gift.claimed && (
-                    <div className="absolute inset-0 bg-gray-100/50 flex items-center justify-center">
-                      <div className="bg-green-500 text-white px-4 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-                        <CheckCircle className="w-4 h-4" />
-                        Claimed
-                      </div>
-                    </div>
-                  )}
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-bold text-sm leading-tight ${isClaimed ? "text-gray-500" : "text-gray-800"}`}>
+                      {gift.name}
+                    </h3>
 
-                  <div className="flex items-start gap-3">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${colorClass} flex items-center justify-center shrink-0`}>
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-
-                    <div className="flex-1">
-                      <h3 className="font-bold text-gray-800">{gift.name}</h3>
-                      <p className="text-xs text-gray-500 mt-0.5">{gift.description}</p>
-                      
-                      <div className="flex items-center justify-between mt-2">
-                        <div className="flex items-center gap-1 text-xs text-gray-400">
-                          <Clock className="w-3.5 h-3.5" />
-                          <span>Expires: {gift.expiresAt}</span>
-                        </div>
-
-                        {!gift.claimed && (
-                          <motion.button
-                            onClick={() => handleClaim(gift.id)}
-                            className="px-4 py-1.5 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs font-medium rounded-full"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                          >
-                            Claim
-                          </motion.button>
-                        )}
-                      </div>
+                    {/* Method badge */}
+                    <div className="flex items-center gap-1.5 mt-1">
+                      {gift.methodType === "code"
+                        ? <Hash className="w-3 h-3 text-blue-500" />
+                        : <Wifi className="w-3 h-3 text-purple-500" />
+                      }
+                      <span className={`text-[11px] font-medium ${
+                        gift.methodType === "code" ? "text-blue-600" : "text-purple-600"
+                      }`}>
+                        {gift.method}
+                      </span>
                     </div>
                   </div>
-                </motion.div>
-              );
-            })}
 
-            {/* Event Banner */}
-            <motion.div
-              className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl p-4 text-white text-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-            >
-              <Sparkles className="w-8 h-8 mx-auto mb-2" />
-              <h3 className="font-bold">Spring Celebration Event!</h3>
-              <p className="text-xs text-white/80 mt-1">
-                Check back daily for new mystery gifts
-              </p>
-            </motion.div>
+                  {/* Claimed button */}
+                  <button
+                    onClick={() => toggleClaimedGift(gift.id)}
+                    className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 active:scale-90 transition-all ${
+                      isClaimed
+                        ? "bg-green-500 text-white"
+                        : "bg-gray-100 text-gray-400"
+                    }`}
+                  >
+                    {isClaimed ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+                  </button>
+                </div>
+
+                {/* Items */}
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {gift.items.map((item, i) => (
+                    <div key={i} className="flex items-center gap-1.5 bg-gray-50 border border-gray-100 rounded-xl px-2.5 py-1.5">
+                      {gift.itemImages[i] && (
+                        <img
+                          src={gift.itemImages[i]}
+                          alt={item}
+                          className="w-6 h-6 object-contain"
+                          onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                        />
+                      )}
+                      <span className="text-xs text-gray-700 font-medium">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Details */}
+                <div className="mt-3 space-y-1.5">
+                  <div className="flex items-start gap-1.5 text-xs text-gray-500">
+                    <Clock className="w-3.5 h-3.5 shrink-0 mt-0.5 text-gray-400" />
+                    <span>{gift.availability}</span>
+                  </div>
+                  <p className="text-xs text-gray-400 pl-5">{gift.codeNote}</p>
+                </div>
+              </div>
+            );
+          })}
+
+          {/* Info card */}
+          <div className="bg-purple-50 border border-purple-100 rounded-2xl p-4">
+            <p className="text-xs font-bold text-purple-800 mb-2">📋 How to Redeem</p>
+            <ul className="space-y-1 text-xs text-purple-700">
+              <li>1. Play for ~30 min to unlock Pokémon Center access</li>
+              <li>2. Go to the PC outside any Pokémon Center</li>
+              <li>3. Select <strong>Get Items</strong></li>
+              <li>4. Choose <strong>Via Internet</strong> or <strong>Via Serial Code</strong></li>
+              <li>5. Nintendo account required (no Online subscription needed)</li>
+            </ul>
           </div>
         </div>
       </div>
