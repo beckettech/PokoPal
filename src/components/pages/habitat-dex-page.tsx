@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, useEffect, useRef } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useAppStore } from "@/lib/store";
 import { pokemonList } from "@/lib/pokemon-data";
 import { ArrowLeft, Search, CheckCircle, Clock, Circle, Eye, EyeOff, Plus, Check } from "lucide-react";
@@ -72,24 +72,20 @@ for (const p of pokemonList) {
 
 
 export function HabitatDexPage() {
-  const { setCurrentPage, navigateToPokemon, capturedPokemon, setSelectedPokemon, focusedHabitatId, clearFocus, discoveredHabitats, toggleDiscoveredHabitat } = useAppStore();
+  const { setCurrentPage, navigateToPokemon, capturedPokemon, focusedHabitatId, clearFocus, discoveredHabitats, toggleDiscoveredHabitat } = useAppStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [sortFilter, setSortFilter] = useState<"all" | "discovered" | "undiscovered">("all");
-  const [expandedHabitat, setExpandedHabitat] = useState<number | null>(null);
-  const expandedRef = useRef<HTMLDivElement | null>(null);
+  const [selectedHabitat, setSelectedHabitat] = useState<typeof habitatsData[0] | null>(null);
 
   // Convert array to Set for quick lookup
   const discoveredSet = useMemo(() => new Set(discoveredHabitats), [discoveredHabitats]);
 
-  // Auto-expand and scroll to habitat if navigated to via deep-link
+  // Auto-open fullscreen if navigated to via deep-link
   useEffect(() => {
     if (focusedHabitatId) {
-      setExpandedHabitat(focusedHabitatId);
+      const hab = habitatsData.find(h => h.id === focusedHabitatId);
+      if (hab) setSelectedHabitat(hab);
       clearFocus();
-      // Scroll after render
-      setTimeout(() => {
-        expandedRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
-      }, 100);
     }
   }, [focusedHabitatId]);
 
@@ -131,7 +127,7 @@ export function HabitatDexPage() {
   };
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-green-500 to-green-600 overflow-hidden">
+    <div className="h-full flex flex-col bg-gradient-to-b from-green-500 to-green-600 overflow-hidden relative">
       {/* Header */}
       <div className="pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
@@ -181,31 +177,28 @@ export function HabitatDexPage() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Content — List */}
       <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
         <div className="p-3 space-y-2">
           <AnimatePresence mode="popLayout">
             {filteredHabitats.map((habitat, index) => {
               const status = getCompletionStatus(habitat.pokemon);
-              const isExpanded = expandedHabitat === habitat.id;
               const isDiscovered = discoveredSet.has(habitat.id);
 
               return (
                 <motion.div
                   key={habitat.id}
-                  ref={isExpanded ? expandedRef : null}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   transition={{ delay: Math.min(index * 0.02, 0.3) }}
                   className={`bg-gray-50 rounded-xl overflow-hidden border transition-colors ${isDiscovered ? 'border-green-200 bg-green-50/30' : 'border-gray-100'}`}
                 >
-                  {/* Habitat header - always visible */}
                   <div className="flex items-center gap-3 p-3">
-                    {/* Habitat image - tap to expand */}
+                    {/* Tap image or name → fullscreen detail */}
                     <button
-                      className="w-16 h-16 rounded-lg overflow-hidden bg-gray-200 shrink-0"
-                      onClick={() => setExpandedHabitat(isExpanded ? null : habitat.id)}
+                      className="w-16 h-16 rounded-lg overflow-hidden bg-gray-200 shrink-0 active:scale-95 transition-transform"
+                      onClick={() => setSelectedHabitat(habitat)}
                     >
                       <img
                         src={habitat.image}
@@ -217,14 +210,12 @@ export function HabitatDexPage() {
 
                     <button
                       className="flex-1 text-left min-w-0"
-                      onClick={() => setExpandedHabitat(isExpanded ? null : habitat.id)}
+                      onClick={() => setSelectedHabitat(habitat)}
                     >
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-[10px] text-gray-400">#{String(habitat.id).padStart(3,'0')}</span>
                         <h3 className="font-bold text-gray-800 text-sm truncate">{habitat.name}</h3>
                       </div>
-
-                      {/* Pokemon count + completion badge */}
                       <div className="flex items-center gap-2">
                         <span className="text-xs text-gray-500">{habitat.pokemon.length} Pokémon</span>
                         {status && (
@@ -236,7 +227,7 @@ export function HabitatDexPage() {
                       </div>
                     </button>
 
-                    {/* Discovered mark button — matches dex friend style */}
+                    {/* Discovered button */}
                     <button
                       onClick={() => toggleDiscoveredHabitat(habitat.id)}
                       className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-transform ${
@@ -248,94 +239,6 @@ export function HabitatDexPage() {
                       {isDiscovered ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                     </button>
                   </div>
-
-                  {/* Expanded: Pokemon list */}
-                  <AnimatePresence>
-                    {isExpanded && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="px-3 pb-3 border-t border-gray-100">
-                          {/* Build Requirements — shown first */}
-                          {(habitat as any).buildItems && (habitat as any).buildItems.length > 0 && (
-                            <div className="mt-2 mb-3 bg-amber-50 rounded-xl p-2.5 border border-amber-100">
-                              <p className="text-[10px] font-bold text-amber-800 uppercase tracking-wide mb-2">🔨 Build Requirements</p>
-                              <div className="flex gap-2 flex-wrap">
-                                {(habitat as any).buildItems.map((item: any, idx: number) => (
-                                  <div key={`${habitat.id}-${item.slug}-${idx}`} className="flex flex-col items-center gap-1">
-                                    <div className="w-12 h-12 bg-white rounded-lg border border-amber-200 shadow-sm flex items-center justify-center relative">
-                                      <img
-                                        src={getItemImage(item.slug, item.image)}
-                                        alt={item.name}
-                                        className="w-10 h-10 object-contain"
-                                        onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
-                                      />
-                                      <span className="absolute -bottom-1 -right-1 bg-amber-500 text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
-                                        {item.quantity}
-                                      </span>
-                                    </div>
-                                    <span className="text-[8px] text-center text-amber-900 font-medium max-w-[48px] leading-tight">
-                                      {item.name}
-                                      {ITEM_FALLBACKS[item.slug.toLowerCase().replace(/[\s\-()]/g, '')] && (
-                                        <span className="block text-amber-500 text-[7px]">(any)</span>
-                                      )}
-                                    </span>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          )}
-                          {habitat.description && (
-                            <p className="text-xs text-gray-500 mb-2 italic"
-                              dangerouslySetInnerHTML={{ __html: habitat.description }}
-                            />
-                          )}
-                          <p className="text-xs font-semibold text-gray-700 mb-2">Residents:</p>
-                          <div className="flex flex-wrap gap-2">
-                            {habitat.pokemon.map(poke => {
-                              const isCaught = capturedNames.has(poke.name.toLowerCase());
-                              const img = pokemonImageMap[poke.name.toLowerCase()] || pokemonImageMap[poke.slug.toLowerCase()];
-                              return (
-                                <motion.button
-                                  key={poke.slug}
-                                  onClick={() => handlePokemonClick(poke.slug, poke.name)}
-                                  whileTap={{ scale: 0.95 }}
-                                  className={`flex flex-col items-center gap-0.5 p-1.5 rounded-xl border transition-colors w-16 ${
-                                    isCaught
-                                      ? "bg-green-50 border-green-200"
-                                      : "bg-white border-gray-200"
-                                  }`}
-                                >
-                                  <div className="relative w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden">
-                                    {img && (
-                                      <img
-                                        src={img}
-                                        alt={poke.name}
-                                        className="w-full h-full object-contain"
-                                        onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
-                                      />
-                                    )}
-                                    {isCaught && (
-                                      <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 rounded-full flex items-center justify-center">
-                                        <CheckCircle className="w-2.5 h-2.5 text-white" />
-                                      </div>
-                                    )}
-                                  </div>
-                                  <span className={`text-[9px] text-center leading-tight font-medium ${isCaught ? "text-green-700" : "text-gray-600"}`}>
-                                    {poke.name}
-                                  </span>
-                                </motion.button>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
                 </motion.div>
               );
             })}
@@ -349,6 +252,126 @@ export function HabitatDexPage() {
           )}
         </div>
       </div>
+
+      {/* Fullscreen Detail View */}
+      {selectedHabitat && (() => {
+        const habitat = selectedHabitat;
+        const isDiscovered = discoveredSet.has(habitat.id);
+        return (
+          <div className="absolute inset-0 bg-gray-50 flex flex-col overflow-hidden z-10">
+            {/* Header */}
+            <div className="shrink-0 bg-white px-4 pt-4 pb-3 border-b border-gray-100">
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => setSelectedHabitat(null)}
+                  className="w-11 h-11 rounded-full bg-gray-100 flex items-center justify-center active:scale-90 transition-transform shrink-0"
+                >
+                  <ArrowLeft className="w-5 h-5 text-gray-600" />
+                </button>
+                <div className="flex-1">
+                  <p className="text-xs text-gray-400 font-mono">#{String(habitat.id).padStart(3,'0')}</p>
+                  <h2 className="text-xl font-bold text-gray-900 leading-tight">{habitat.name}</h2>
+                </div>
+                <button
+                  onClick={() => toggleDiscoveredHabitat(habitat.id)}
+                  className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-transform ${
+                    isDiscovered ? 'bg-yellow-400 text-yellow-900' : 'bg-gray-100 text-gray-400'
+                  }`}
+                >
+                  {isDiscovered ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+                </button>
+              </div>
+            </div>
+
+            {/* Scrollable content */}
+            <div className="flex-1 overflow-y-auto">
+              <div className="pt-4 px-4 pb-8 space-y-4">
+                {/* Hero image */}
+                <div className="w-full h-40 bg-gray-200 rounded-2xl overflow-hidden">
+                  <img
+                    src={habitat.image}
+                    alt={habitat.name}
+                    className="w-full h-full object-cover"
+                    onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                  />
+                </div>
+
+                {/* Description */}
+                {habitat.description && (
+                  <p className="text-sm text-gray-600 italic"
+                    dangerouslySetInnerHTML={{ __html: habitat.description }}
+                  />
+                )}
+
+                {/* Build Requirements */}
+                {(habitat as any).buildItems && (habitat as any).buildItems.length > 0 && (
+                  <div className="bg-amber-50 rounded-2xl p-3 border border-amber-100">
+                    <p className="text-xs font-bold text-amber-800 uppercase tracking-wide mb-3">🔨 Build Requirements</p>
+                    <div className="flex gap-2 flex-wrap">
+                      {(habitat as any).buildItems.map((item: any, idx: number) => (
+                        <div key={`${habitat.id}-${item.slug}-${idx}`} className="flex flex-col items-center gap-1">
+                          <div className="w-14 h-14 bg-white rounded-xl border border-amber-200 shadow-sm flex items-center justify-center relative">
+                            <img
+                              src={getItemImage(item.slug, item.image)}
+                              alt={item.name}
+                              className="w-11 h-11 object-contain"
+                              onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                            />
+                            <span className="absolute -bottom-1 -right-1 bg-amber-500 text-white text-[9px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                              {item.quantity}
+                            </span>
+                          </div>
+                          <span className="text-[9px] text-center text-amber-900 font-medium max-w-[56px] leading-tight">{item.name}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Pokémon Residents */}
+                {habitat.pokemon.length > 0 && (
+                  <div>
+                    <p className="text-sm font-bold text-gray-700 mb-3">
+                      Residents <span className="text-gray-400 font-normal text-xs">({habitat.pokemon.length})</span>
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {habitat.pokemon.map(poke => {
+                        const isCaught = capturedNames.has(poke.name.toLowerCase());
+                        const img = pokemonImageMap[poke.name.toLowerCase()] || pokemonImageMap[poke.slug.toLowerCase()];
+                        return (
+                          <motion.button
+                            key={poke.slug}
+                            onClick={() => handlePokemonClick(poke.slug, poke.name)}
+                            whileTap={{ scale: 0.95 }}
+                            className={`flex flex-col items-center gap-1 p-2 rounded-xl border transition-colors w-[72px] ${
+                              isCaught ? "bg-green-50 border-green-200" : "bg-white border-gray-200"
+                            }`}
+                          >
+                            <div className="relative w-11 h-11 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden">
+                              {img && (
+                                <img src={img} alt={poke.name} className="w-full h-full object-contain"
+                                  onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                              )}
+                              {isCaught && (
+                                <div className="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                                  <CheckCircle className="w-3 h-3 text-white" />
+                                </div>
+                              )}
+                            </div>
+                            <span className={`text-[9px] text-center leading-tight font-medium ${isCaught ? "text-green-700" : "text-gray-600"}`}>
+                              {poke.name}
+                            </span>
+                          </motion.button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        );
+      })()}
     </div>
   );
 }
