@@ -150,19 +150,8 @@ export function CloudIslandsPage() {
       {/* Content */}
       <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
         <div className="p-3 space-y-2">
-          {sortedIslands.map((island, index) => (
-            <IslandCard
-              key={island.id}
-              island={island}
-              index={index}
-              isSaved={savedIslands.includes(island.islandCode)}
-              onSelect={() => setSelectedIsland(island)}
-              onToggleSave={() => toggleSavedIsland(island.islandCode)}
-            />
-          ))}
-
-          {/* How to visit */}
-          <div className="bg-cyan-50 border border-cyan-100 rounded-2xl p-4 mt-4">
+          {/* How to visit - at top */}
+          <div className="bg-cyan-50 border border-cyan-100 rounded-2xl p-4">
             <div className="flex items-center gap-2 mb-2">
               <Key className="w-4 h-4 text-cyan-600" />
               <h3 className="font-bold text-cyan-900 text-sm">How to Visit Islands</h3>
@@ -173,6 +162,17 @@ export function CloudIslandsPage() {
               <li>3. Enter island code • Requires Nintendo Switch Online</li>
             </ol>
           </div>
+
+          {sortedIslands.map((island, index) => (
+            <IslandCard
+              key={island.id}
+              island={island}
+              index={index}
+              isSaved={savedIslands.includes(island.islandCode)}
+              onSelect={() => setSelectedIsland(island)}
+              onToggleSave={() => toggleSavedIsland(island.islandCode)}
+            />
+          ))}
         </div>
       </div>
 
