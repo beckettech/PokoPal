@@ -2,321 +2,186 @@
 
 import { useAppStore } from "@/lib/store";
 import { cloudIslandsPosts } from "@/lib/pokemon-data";
-import { ArrowLeft, Heart, Share2, ChevronRight, TrendingUp, Clock, Star, X, Upload, Check, BadgeCheck } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useRef } from "react";
+import { ArrowLeft, Copy, Check, Eye, Globe, Key, Info, BadgeCheck, MapPin, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export function CloudIslandsPage() {
   const { setCurrentPage } = useAppStore();
-  const [sortBy, setSortBy] = useState<"recent" | "popular">("popular"); // Default to popular
-  const [showShareModal, setShowShareModal] = useState(false);
-  const [shareForm, setShareForm] = useState({ title: "", description: "", islandCode: "" });
-  const [shareImages, setShareImages] = useState<string[]>([]);
-  const [submitted, setSubmitted] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [copiedCode, setCopiedCode] = useState<string | null>(null);
+  const [visitedIslands, setVisitedIslands] = useState<string[]>([]);
 
-  const sortedPosts = [...cloudIslandsPosts].sort((a, b) => {
-    if (sortBy === "popular") return b.likes - a.likes;
-    return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-  });
-
-  const featuredPosts = sortedPosts.filter(p => p.isFeatured);
-  const regularPosts = sortedPosts.filter(p => !p.isFeatured);
-
-  const handleShareSubmit = () => {
-    setSubmitted(true);
-    setTimeout(() => {
-      setShowShareModal(false);
-      setSubmitted(false);
-      setShareForm({ title: "", description: "", islandCode: "" });
-      setShareImages([]);
-    }, 1500);
+  const handleCopy = (code: string) => {
+    navigator.clipboard.writeText(code);
+    setCopiedCode(code);
+    setTimeout(() => setCopiedCode(null), 2000);
   };
 
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (files) {
-      const newImages: string[] = [];
-      Array.from(files).slice(0, 3 - shareImages.length).forEach(file => {
-        const reader = new FileReader();
-        reader.onload = (ev) => {
-          if (ev.target?.result) {
-            newImages.push(ev.target.result as string);
-            if (newImages.length === Math.min(files.length, 3 - shareImages.length)) {
-              setShareImages(prev => [...prev, ...newImages].slice(0, 3));
-            }
-          }
-        };
-        reader.readAsDataURL(file);
-      });
-    }
+  const toggleVisited = (code: string) => {
+    setVisitedIslands(prev =>
+      prev.includes(code) ? prev.filter(c => c !== code) : [...prev, code]
+    );
   };
+
+  const devIslands = cloudIslandsPosts.filter(p => p.isOfficial);
+  const visitedCount = visitedIslands.length;
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-cyan-500 to-cyan-600">
+    <div className="h-full flex flex-col bg-gradient-to-b from-cyan-500 to-blue-600">
       {/* Header */}
-      <div className="pt-6 pb-2 px-4">
-        <div className="flex items-center justify-between mb-2">
-          <motion.button
+      <div className="pt-6 pb-3 px-4 shrink-0">
+        <div className="flex items-center justify-between mb-3">
+          <button
             onClick={() => setCurrentPage("home")}
-            className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center active:scale-90 transition-transform"
           >
             <ArrowLeft className="w-6 h-6 text-white" />
-          </motion.button>
+          </button>
           <h1 className="text-lg font-bold text-white">Cloud Islands</h1>
-          <motion.button
-            onClick={() => setCurrentPage("dream-islands")}
-            className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Star className="w-5 h-5 text-white" />
-          </motion.button>
+          <div className="w-11" />
         </div>
 
-        {/* Sort Toggle - Recent on left, Popular on right (default) */}
-        <div className="flex gap-2 bg-white/20 rounded-xl p-1">
-          <button
-            onClick={() => setSortBy("recent")}
-            className={`flex-1 py-1.5 rounded-lg text-xs font-medium flex items-center justify-center gap-1 transition-all ${
-              sortBy === "recent" ? "bg-white text-cyan-600" : "text-white"
-            }`}
-          >
-            <Clock className="w-3.5 h-3.5" />
-            Recent
-          </button>
-          <button
-            onClick={() => setSortBy("popular")}
-            className={`flex-1 py-1.5 rounded-lg text-xs font-medium flex items-center justify-center gap-1 transition-all ${
-              sortBy === "popular" ? "bg-white text-cyan-600" : "text-white"
-            }`}
-          >
-            <TrendingUp className="w-3.5 h-3.5" />
-            Popular
-          </button>
-        </div>
-      </div>
-
-      {/* Content Card */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-hidden">
-        <div className="h-full overflow-y-auto">
-          {/* Featured Posts */}
-          {featuredPosts.map((post) => (
-            <motion.div
-              key={post.id}
-              className="p-3"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
-              <div className={`rounded-xl p-3 text-white ${post.isOfficial ? 'bg-gradient-to-br from-amber-500 to-orange-500' : 'bg-gradient-to-br from-purple-500 to-pink-500'}`}>
-                <div className="flex items-center gap-1 mb-2">
-                  {post.isOfficial ? (
-                    <BadgeCheck className="w-4 h-4 text-white" />
-                  ) : (
-                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  )}
-                  <span className="text-xs font-medium">{post.isOfficial ? 'Official' : 'Featured'}</span>
-                </div>
-                <h3 className="font-bold text-lg">{post.title}</h3>
-                <p className="text-xs text-white/80 mt-1">{post.description}</p>
-                <div className="flex items-center justify-between mt-3">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs bg-white/20 px-2 py-1 rounded-lg font-mono">
-                      {post.islandCode}
-                    </span>
-                    <span className="text-xs">by {post.author}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Heart className="w-4 h-4 fill-red-400 text-red-400" />
-                    <span className="text-xs">{post.likes.toLocaleString()}</span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-
-          {/* Regular Posts */}
-          <div className="p-3 space-y-3">
-            {regularPosts.map((post, index) => (
-              <motion.div
-                key={post.id}
-                className="bg-gray-50 rounded-xl p-3"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.05 }}
-              >
-                {/* Screenshots Grid */}
-                <div className="grid grid-cols-4 gap-1 mb-2">
-                  {post.screenshots.length > 0 ? (
-                    post.screenshots.slice(0, 4).map((_, i) => (
-                      <div key={i} className="aspect-square bg-gray-200 rounded-lg" />
-                    ))
-                  ) : (
-                    [1, 2, 3, 4].map((i) => (
-                      <div key={i} className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center">
-                        <span className="text-xs text-gray-400">{i}</span>
-                      </div>
-                    ))
-                  )}
-                </div>
-
-                {/* Content */}
-                <h3 className="font-bold text-gray-800 text-sm">{post.title}</h3>
-                <p className="text-xs text-gray-500 mt-1 line-clamp-2">{post.description}</p>
-
-                {/* Footer */}
-                <div className="flex items-center justify-between mt-2">
-                  <span className="text-xs font-mono bg-gray-200 px-2 py-0.5 rounded text-gray-600">
-                    {post.islandCode}
-                  </span>
-                  <div className="flex items-center gap-3">
-                    <span className="text-xs text-gray-400">{post.author}</span>
-                    <div className="flex items-center gap-1">
-                      <Heart className="w-3.5 h-3.5 text-gray-400" />
-                      <span className="text-xs text-gray-500">{post.likes}</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+        {/* Stats */}
+        <div className="flex items-center justify-center gap-6">
+          <div className="text-center">
+            <p className="text-2xl font-bold text-white">{visitedCount}</p>
+            <p className="text-[10px] text-white/70">Visited</p>
+          </div>
+          <div className="w-px h-8 bg-white/30" />
+          <div className="text-center">
+            <p className="text-2xl font-bold text-white">{devIslands.length - visitedCount}</p>
+            <p className="text-[10px] text-white/70">Unvisited</p>
           </div>
         </div>
       </div>
 
-      {/* Share Button */}
-      <button
-        onClick={() => setShowShareModal(true)}
-        className="absolute bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full shadow-lg flex items-center justify-center"
-      >
-        <Share2 className="w-6 h-6 text-white" />
-      </button>
-
-      {/* Share Modal */}
-      <AnimatePresence>
-        {showShareModal && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-black/50 flex items-end z-50"
-            onClick={() => setShowShareModal(false)}
-          >
-            <motion.div
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "100%" }}
-              className="w-full bg-white rounded-t-[2rem] p-6 max-h-[85vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-bold text-gray-800">Share Your Island</h2>
-                <button onClick={() => setShowShareModal(false)}>
-                  <X className="w-6 h-6 text-gray-400" />
-                </button>
+      {/* Content */}
+      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+        <div className="p-4 space-y-4">
+          {/* How to Visit Guide */}
+          <div className="bg-cyan-50 border border-cyan-100 rounded-2xl p-4">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-8 h-8 rounded-lg bg-cyan-100 flex items-center justify-center">
+                <Info className="w-4 h-4 text-cyan-600" />
               </div>
+              <h3 className="font-bold text-cyan-900">How to Visit</h3>
+            </div>
+            <ol className="space-y-2 text-xs text-cyan-800">
+              <li className="flex gap-2">
+                <span className="w-5 h-5 rounded-full bg-cyan-200 text-cyan-700 flex items-center justify-center text-[10px] font-bold shrink-0">1</span>
+                <span>Buy <strong>Mysterious Goggles</strong> from PC Shop (unlocks at Environment Level 3)</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="w-5 h-5 rounded-full bg-cyan-200 text-cyan-700 flex items-center justify-center text-[10px] font-bold shrink-0">2</span>
+                <span>Use Goggles from Inventory to view other players' islands</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="w-5 h-5 rounded-full bg-cyan-200 text-cyan-700 flex items-center justify-center text-[10px] font-bold shrink-0">3</span>
+                <span>Enter the island code you want to visit</span>
+              </li>
+            </ol>
+            <div className="mt-3 flex items-center gap-2 text-[11px] text-amber-700 bg-amber-50 rounded-lg px-2.5 py-1.5">
+              <Key className="w-3.5 h-3.5" />
+              <span>Requires Nintendo Switch Online subscription</span>
+            </div>
+          </div>
 
-              {submitted ? (
-                <div className="flex flex-col items-center justify-center py-12">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                    <Check className="w-8 h-8 text-green-500" />
-                  </div>
-                  <p className="text-lg font-bold text-gray-800">Submitted!</p>
-                  <p className="text-sm text-gray-500">Your island will be reviewed shortly</p>
-                </div>
-              ) : (
-                <>
-                  {/* Title */}
-                  <div className="mb-4">
-                    <label className="block text-xs font-medium text-gray-600 mb-1">Title</label>
-                    <input
-                      type="text"
-                      value={shareForm.title}
-                      onChange={(e) => setShareForm({ ...shareForm, title: e.target.value })}
-                      placeholder="My Awesome Island"
-                      className="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                    />
-                  </div>
+          {/* Developer Islands */}
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <BadgeCheck className="w-4 h-4 text-amber-500" />
+              <h2 className="font-bold text-gray-800">Developer Islands</h2>
+            </div>
 
-                  {/* Description */}
-                  <div className="mb-4">
-                    <label className="block text-xs font-medium text-gray-600 mb-1">Description</label>
-                    <textarea
-                      value={shareForm.description}
-                      onChange={(e) => setShareForm({ ...shareForm, description: e.target.value })}
-                      placeholder="Describe your island..."
-                      rows={3}
-                      className="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 resize-none"
-                    />
-                  </div>
-
-                  {/* Island Code */}
-                  <div className="mb-4">
-                    <label className="block text-xs font-medium text-gray-600 mb-1">Island Code</label>
-                    <input
-                      type="text"
-                      value={shareForm.islandCode}
-                      onChange={(e) => setShareForm({ ...shareForm, islandCode: e.target.value.toUpperCase() })}
-                      placeholder="XXXX-0000"
-                      maxLength={9}
-                      className="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-cyan-500 uppercase"
-                    />
-                  </div>
-
-                  {/* Image Upload */}
-                  <div className="mb-6">
-                    <label className="block text-xs font-medium text-gray-600 mb-2">Screenshots (up to 3)</label>
-                    <div className="flex gap-2">
-                      {shareImages.map((img, i) => (
-                        <div key={i} className="relative w-20 h-20 rounded-lg overflow-hidden bg-gray-100">
-                          <img src={img} className="w-full h-full object-cover" />
-                          <button
-                            onClick={() => setShareImages(shareImages.filter((_, idx) => idx !== i))}
-                            className="absolute top-1 right-1 w-5 h-5 bg-black/50 rounded-full flex items-center justify-center"
-                          >
-                            <X className="w-3 h-3 text-white" />
-                          </button>
-                        </div>
-                      ))}
-                      {shareImages.length < 3 && (
-                        <button
-                          onClick={() => fileInputRef.current?.click()}
-                          className="w-20 h-20 rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center text-gray-400"
-                        >
-                          <Upload className="w-5 h-5" />
-                          <span className="text-[10px] mt-1">Upload</span>
-                        </button>
-                      )}
-                    </div>
-                    <input
-                      ref={fileInputRef}
-                      type="file"
-                      accept="image/*"
-                      multiple
-                      onChange={handleImageUpload}
-                      className="hidden"
-                    />
-                  </div>
-
-                  {/* Submit */}
-                  <button
-                    onClick={handleShareSubmit}
-                    disabled={!shareForm.title || !shareForm.islandCode}
-                    className={`w-full py-3 rounded-xl font-bold text-sm transition-all ${
-                      shareForm.title && shareForm.islandCode
-                        ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white"
-                        : "bg-gray-100 text-gray-400"
+            <div className="space-y-3">
+              {devIslands.map((island, index) => {
+                const isVisited = visitedIslands.includes(island.islandCode);
+                return (
+                  <motion.div
+                    key={island.id}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className={`rounded-2xl border p-4 transition-all ${
+                      isVisited ? "bg-green-50 border-green-200" : "bg-white border-gray-100 shadow-sm"
                     }`}
                   >
-                    Submit Island
-                  </button>
-                </>
-              )}
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                    {/* Top row */}
+                    <div className="flex items-start gap-3">
+                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${
+                        isVisited ? "bg-green-100" : "bg-gradient-to-br from-amber-400 to-orange-500"
+                      }`}>
+                        <MapPin className={`w-6 h-6 ${isVisited ? "text-green-500" : "text-white"}`} />
+                      </div>
+
+                      <div className="flex-1 min-w-0">
+                        <h3 className={`font-bold text-sm ${isVisited ? "text-gray-500" : "text-gray-800"}`}>
+                          {island.title}
+                        </h3>
+                        <p className="text-xs text-gray-500 mt-0.5 line-clamp-2">{island.description}</p>
+                      </div>
+
+                      {/* Visited button */}
+                      <button
+                        onClick={() => toggleVisited(island.islandCode)}
+                        className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 active:scale-90 transition-all ${
+                          isVisited ? "bg-green-500 text-white" : "bg-gray-100 text-gray-400"
+                        }`}
+                      >
+                        <Eye className="w-5 h-5" />
+                      </button>
+                    </div>
+
+                    {/* Code row */}
+                    <div className="mt-3 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <code className="px-3 py-1.5 bg-gray-100 rounded-lg text-sm font-mono text-gray-700">
+                          {island.islandCode}
+                        </code>
+                        <button
+                          onClick={() => handleCopy(island.islandCode)}
+                          className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center active:scale-90 transition-transform"
+                        >
+                          {copiedCode === island.islandCode ? (
+                            <Check className="w-4 h-4 text-green-500" />
+                          ) : (
+                            <Copy className="w-4 h-4 text-gray-500" />
+                          )}
+                        </button>
+                      </div>
+                      <span className="text-[10px] text-gray-400">by {island.author}</span>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Tips */}
+          <div className="bg-purple-50 border border-purple-100 rounded-2xl p-4">
+            <div className="flex items-center gap-2 mb-2">
+              <Sparkles className="w-4 h-4 text-purple-500" />
+              <h3 className="font-bold text-purple-900 text-sm">Tips</h3>
+            </div>
+            <ul className="space-y-1.5 text-xs text-purple-800">
+              <li>• Take <strong>Reference Photos</strong> of furniture to 3D print at your own Pokémon Center</li>
+              <li>• Dev islands have rare habitats like <strong>Plusle & Minun</strong> for your Habitat Dex</li>
+              <li>• Look for unique items: Pokémon statues, fountains, the Ditto bathtub</li>
+              <li>• Your items from main story don't carry over — it's a fresh start</li>
+            </ul>
+          </div>
+
+          {/* What is Cloud Island */}
+          <div className="bg-gray-50 border border-gray-100 rounded-2xl p-4">
+            <h3 className="font-bold text-gray-800 text-sm mb-2">What are Cloud Islands?</h3>
+            <p className="text-xs text-gray-600 leading-relaxed">
+              Cloud Islands are online sandbox maps where you can sculpt your own island from scratch.
+              All materials from every biome are available, and any Pokémon can be summoned.
+              Items stay on the island even after friends visit. Your Pokédex and recipes carry over.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

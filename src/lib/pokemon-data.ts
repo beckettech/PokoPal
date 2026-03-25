@@ -428,12 +428,10 @@ export interface CloudIslandPost {
 }
 
 export const cloudIslandsPosts: CloudIslandPost[] = [
-  // Official Serebii islands with fake likes to stay at top
-  { id: 1, islandCode: "EIKO-001", title: "EIKO City", description: "Official EIKO City Cloud Island - A beautiful urban paradise with modern amenities and plenty of Pokemon habitats!", author: "Official", screenshots: [], likes: 9999, isDream: true, isFeatured: true, isOfficial: true, createdAt: "2026-03-01" },
-  { id: 2, islandCode: "SASH-001", title: "Sashihara Island", description: "Official Sashihara Island - A serene natural sanctuary perfect for relaxing with your Pokemon friends!", author: "Official", screenshots: [], likes: 9998, isDream: true, isFeatured: true, isOfficial: true, createdAt: "2026-03-01" },
-  // Community islands
-  { id: 3, islandCode: "LAPR-2024", title: "Lapras Lagoon", description: "A beautiful tropical paradise with waterfalls and hot springs. Perfect for water types!", author: "TrainerBlue", screenshots: [], likes: 342, isDream: true, isFeatured: false, createdAt: "2026-03-10" },
-  { id: 4, islandCode: "ROCK-8888", title: "Rocky Mountain High", description: "Mountain-themed island with caves, boulders, and rare Tyranitar sightings!", author: "RockMaster", screenshots: [], likes: 156, isDream: false, isFeatured: false, createdAt: "2026-03-12" },
+  // Developer Islands (official)
+  { id: 1, islandCode: "POKO-PIA", title: "Pokopia Dev Island", description: "Official developer showcase island with unique furniture, statues, fountains, and a special Ditto bathtub! Great for reference photos.", author: "Developer", screenshots: [], likes: 9999, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
+  { id: 2, islandCode: "EIKO-CITY", title: "EIKO City", description: "Features rare Plusle & Minun habitats, urban design inspiration, and unique garden ornaments. Take reference photos for 3D printing!", author: "Developer", screenshots: [], likes: 9998, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
+  { id: 3, islandCode: "TEST-DEVS", title: "Dev Test Island", description: "Experimental island with advanced terrain sculpting, water features, and elevated builds. Perfect for learning advanced techniques.", author: "Developer", screenshots: [], likes: 9997, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
 ];
 
 // Mystery Gifts
