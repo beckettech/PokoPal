@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 
 export function CloudIslandsPage() {
-  const { setCurrentPage, savedIslands = [], toggleSavedIsland, visitedIslands = [], toggleVisitedIsland } = useAppStore() as any;
+  const { setCurrentPage, savedIslands = [], toggleSavedIsland } = useAppStore() as any;
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<"popular" | "recent">("popular");
   const [showPostModal, setShowPostModal] = useState(false);
@@ -129,11 +129,9 @@ export function CloudIslandsPage() {
               island={island}
               index={index}
               isSaved={savedIslands.includes(island.islandCode)}
-              isVisited={visitedIslands.includes(island.islandCode)}
               copiedCode={copiedCode}
               onCopy={handleCopy}
               onToggleSave={() => toggleSavedIsland(island.islandCode)}
-              onToggleVisit={() => toggleVisitedIsland(island.islandCode)}
             />
           ))}
 
@@ -289,20 +287,16 @@ function IslandCard({
   island,
   index,
   isSaved,
-  isVisited,
   copiedCode,
   onCopy,
   onToggleSave,
-  onToggleVisit,
 }: {
   island: CloudIslandPost;
   index: number;
   isSaved: boolean;
-  isVisited: boolean;
   copiedCode: string | null;
   onCopy: (code: string) => void;
   onToggleSave: () => void;
-  onToggleVisit: () => void;
 }) {
   return (
     <motion.div
@@ -311,7 +305,7 @@ function IslandCard({
       transition={{ delay: index * 0.05 }}
       className={`rounded-2xl border overflow-hidden ${
         island.isOfficial ? "bg-purple-50/50 border-purple-100" :
-        isVisited ? "bg-green-50/50 border-green-100" : "bg-white border-gray-100"
+        isSaved ? "bg-yellow-50/50 border-yellow-200" : "bg-white border-gray-100"
       }`}
     >
       {/* Official badge */}
@@ -360,31 +354,19 @@ function IslandCard({
 
         {/* Bottom action row */}
         <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
-          <div className="flex items-center gap-1">
-            <button
-              onClick={onToggleSave}
-              className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium transition-all ${
-                isSaved ? "bg-cyan-500 text-white" : "bg-gray-100 text-gray-500"
-              }`}
-            >
-              <Bookmark className={`w-3.5 h-3.5 ${isSaved ? "fill-current" : ""}`} />
-              Save
-            </button>
-            <button
-              onClick={onToggleVisit}
-              className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium transition-all ${
-                isVisited ? "bg-green-500 text-white" : "bg-gray-100 text-gray-500"
-              }`}
-            >
-              <Check className="w-3.5 h-3.5" />
-              Visited
-            </button>
-          </div>
-
           <div className="flex items-center gap-1 text-xs text-gray-500">
             <Bookmark className="w-3.5 h-3.5" />
-            <span className="font-medium">{island.likes.toLocaleString()}</span>
+            <span className="font-medium">{island.likes.toLocaleString()} saves</span>
           </div>
+
+          <button
+            onClick={onToggleSave}
+            className={`w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-all ${
+              isSaved ? "bg-yellow-400 text-yellow-900" : "bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300"
+            }`}
+          >
+            {isSaved ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+          </button>
         </div>
       </div>
     </motion.div>
