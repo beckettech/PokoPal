@@ -7,7 +7,7 @@ import locationsData from "@/data/scraped/locations.json";
 import habitatsData from "@/data/scraped/habitats.json";
 
 const LOCATION_COLORS: Record<string, { bg: string; badge: string; text: string }> = {
-  "Withered Wastelands": { bg: "from-amber-700 to-amber-900", badge: "bg-amber-700", text: "text-amber-100" },
+  "Withered Wastelands": { bg: "from-green-600 to-green-800", badge: "bg-green-700", text: "text-green-100" },
   "Bleak Beach":         { bg: "from-blue-400 to-blue-600",   badge: "bg-blue-500",   text: "text-white" },
   "Rocky Ridges":        { bg: "from-stone-500 to-stone-700", badge: "bg-stone-600",  text: "text-white" },
   "Sparkling Skylands":  { bg: "from-sky-400 to-sky-600",     badge: "bg-sky-500",    text: "text-white" },
@@ -135,20 +135,16 @@ export function MapPage() {
                         ? <ChevronUp className="w-5 h-5 text-white/70" />
                         : <ChevronDown className="w-5 h-5 text-white/70" />
                       }
+                      <button
+                        onClick={(e) => { e.stopPropagation(); toggleVisitedLocation(location.id); }}
+                        className={`w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-all ${
+                          isVisited ? "bg-yellow-400 text-yellow-900" : "bg-white/30 text-white/70 border-2 border-dashed border-white/50"
+                        }`}
+                      >
+                        {isVisited ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+                      </button>
                     </div>
                   </div>
-                </div>
-
-                {/* Bottom row - mark visited button */}
-                <div className="flex items-center justify-end px-3 py-2 bg-white border-t border-gray-100">
-                  <button
-                    onClick={() => toggleVisitedLocation(location.id)}
-                    className={`w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-all ${
-                      isVisited ? "bg-yellow-400 text-yellow-900" : "bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300"
-                    }`}
-                  >
-                    {isVisited ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
-                  </button>
                 </div>
 
                 {/* Expanded habitat list */}
