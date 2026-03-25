@@ -10,6 +10,36 @@
     "isImportant": true
   },
   {
+    "id": "rebuild-pokemon-center-bb",
+    "name": "Rebuild the Pokémon Center",
+    "giver": "Professor Tangrowth",
+    "area": "Bleak Beach",
+    "task": "Raise Environment Level to 3 → buy rebuilding kit from shop (1000 Life Coins). Gather: 20 Lumber, 20 Stones, 10 Leaves, 10 Vine Ropes. Submit materials + Pokémon at site → wait one day.",
+    "rewardType": "unlock",
+    "reward": "Pokémon Center restored",
+    "isImportant": true
+  },
+  {
+    "id": "rebuild-pokemon-center-rr",
+    "name": "Rebuild the Pokémon Center",
+    "giver": "Professor Tangrowth",
+    "area": "Rocky Ridges",
+    "task": "Raise Environment Level to 3 → buy rebuilding kit from shop (1000 Life Coins). Gather: 20 Lumber, 20 Stones, 10 Leaves, 10 Vine Ropes. Submit materials + Pokémon at site → wait one day.",
+    "rewardType": "unlock",
+    "reward": "Pokémon Center restored",
+    "isImportant": true
+  },
+  {
+    "id": "rebuild-pokemon-center-ss",
+    "name": "Rebuild the Pokémon Center",
+    "giver": "Professor Tangrowth",
+    "area": "Sparkling Skylands",
+    "task": "Raise Environment Level to 3 → buy rebuilding kit from shop (1000 Life Coins). Gather: 20 Lumber, 20 Stones, 10 Leaves, 10 Vine Ropes. Submit materials + Pokémon at site → wait one day.",
+    "rewardType": "unlock",
+    "reward": "Pokémon Center restored",
+    "isImportant": true
+  },
+  {
     "id": "yawn-up-a-storm",
     "name": "Yawn Up a Storm",
     "giver": "Professor Tangrowth",

@@ -94,7 +94,7 @@ const menuItems = [
 
 const TOTAL_POKEMON = 300;
 const TOTAL_HABITATS = 209; // total habitat dex entries
-const TOTAL_REQUESTS = 57; // from scraped requests.json
+const TOTAL_REQUESTS = 60; // 57 scraped + 3 rebuild pokemon center (all areas)
 const TOTAL_LOCATIONS = 6;
 const TOTAL = TOTAL_POKEMON + TOTAL_HABITATS + TOTAL_REQUESTS + TOTAL_LOCATIONS;
 

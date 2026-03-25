@@ -1,7 +1,7 @@
 'use client'
 
 import { useAppStore } from "@/lib/store";
-import { ArrowLeft, Search, Check, Plus, Clock, ChevronDown, ChevronUp, Star } from "lucide-react";
+import { ArrowLeft, Search, Check, Plus, Clock, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import requestsJson from "../../../public/requests.json";
 
@@ -144,9 +144,9 @@ export function RequestsPage() {
                   className="w-full flex items-center gap-3 px-3 py-3 text-left"
                   onClick={() => setExpandedId(isExpanded ? null : request.id)}
                 >
-                  {/* Important star */}
-                  {(request as any).isImportant && (
-                    <Star className="w-3.5 h-3.5 text-yellow-400 shrink-0 fill-yellow-400" />
+                  {/* Important indicator removed */}
+                  {false && (
+                    <div
                   )}
 
                   <div className="flex-1 min-w-0">
