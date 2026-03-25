@@ -428,11 +428,10 @@ export interface CloudIslandPost {
 }
 
 export const cloudIslandsPosts: CloudIslandPost[] = [
-  // Featured community island
-  { id: 0, islandCode: "PXQCG03S", title: "Pokemon Info Board", description: "The ultimate resource island! Complete habitat guides, item locations, and rare Pokemon spawns all in one place. Updated weekly with new finds.", author: "InfoMaster", screenshots: ["/islands/PXQCG03S.png"], likes: 2847, isDream: false, isFeatured: true, isOfficial: false, createdAt: "2026-03-01" },
-  // Developer Islands (official)
-  { id: 1, islandCode: "MGL483P4", title: "Pokopia Dev Island", description: "Official developer showcase island with unique furniture, statues, fountains, and a special Ditto bathtub! Great for reference photos.", author: "Developer", screenshots: ["/islands/MGL483P4.png"], likes: 312, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
-  { id: 2, islandCode: "QBRK7FVM", title: "EIKO City", description: "Features rare Plusle & Minun habitats, urban design inspiration, and unique garden ornaments. Take reference photos for 3D printing!", author: "Developer", screenshots: ["/islands/QBRK7FVM.png"], likes: 248, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
+  // Official islands
+  { id: 0, islandCode: "PXQCG03S", title: "Pokemon Info Board", description: "The ultimate resource island! Complete habitat guides, item locations, and rare Pokemon spawns all in one place. Updated weekly with new finds.", author: "Official", screenshots: ["/islands/PXQCG03S.png"], likes: 2847, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-01" },
+  { id: 1, islandCode: "MGL483P4", title: "Pokopia Dev Island", description: "Official developer showcase island with unique furniture, statues, fountains, and a special Ditto bathtub! Great for reference photos.", author: "Official", screenshots: ["/islands/MGL483P4.png"], likes: 312, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
+  { id: 2, islandCode: "QBRK7FVM", title: "EIKO City", description: "Features rare Plusle & Minun habitats, urban design inspiration, and unique garden ornaments. Take reference photos for 3D printing!", author: "Official", screenshots: ["/islands/QBRK7FVM.png"], likes: 248, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
 ];
 
 // Mystery Gifts

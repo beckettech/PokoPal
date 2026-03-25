@@ -2,7 +2,7 @@
 
 import { useAppStore } from "@/lib/store";
 import { cloudIslandsPosts, CloudIslandPost } from "@/lib/pokemon-data";
-import { ArrowLeft, Copy, Check, Bookmark, Plus, X, Upload, Image, Key, BadgeCheck, TrendingUp, Clock, Heart } from "lucide-react";
+import { ArrowLeft, Copy, Check, Bookmark, Plus, X, Upload, Image, Key, BadgeCheck, TrendingUp, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 
@@ -11,6 +11,7 @@ export function CloudIslandsPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<"popular" | "recent">("popular");
   const [filterBy, setFilterBy] = useState<"all" | "saved">("all");
+  const [selectedIsland, setSelectedIsland] = useState<CloudIslandPost | null>(null);
   const [showPostModal, setShowPostModal] = useState(false);
   const [postForm, setPostForm] = useState({ title: "", description: "", islandCode: "" });
   const [postImages, setPostImages] = useState<string[]>([]);
@@ -46,7 +47,6 @@ export function CloudIslandsPage() {
     if (!postForm.title || !postForm.islandCode || postImages.length === 0) return;
     setSubmitting(true);
     
-    // Send to API for email review
     try {
       await fetch("/api/submit-island", {
         method: "POST",
@@ -84,7 +84,7 @@ export function CloudIslandsPage() {
   });
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-cyan-500 to-blue-600">
+    <div className="h-full flex flex-col bg-gradient-to-b from-cyan-500 to-blue-600 relative">
       {/* Header */}
       <div className="pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
@@ -149,21 +149,20 @@ export function CloudIslandsPage() {
 
       {/* Content */}
       <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
-        <div className="p-3 space-y-3">
+        <div className="p-3 space-y-2">
           {sortedIslands.map((island, index) => (
             <IslandCard
               key={island.id}
               island={island}
               index={index}
               isSaved={savedIslands.includes(island.islandCode)}
-              copiedCode={copiedCode}
-              onCopy={handleCopy}
+              onSelect={() => setSelectedIsland(island)}
               onToggleSave={() => toggleSavedIsland(island.islandCode)}
             />
           ))}
 
           {/* How to visit */}
-          <div className="bg-cyan-50 border border-cyan-100 rounded-2xl p-4">
+          <div className="bg-cyan-50 border border-cyan-100 rounded-2xl p-4 mt-4">
             <div className="flex items-center gap-2 mb-2">
               <Key className="w-4 h-4 text-cyan-600" />
               <h3 className="font-bold text-cyan-900 text-sm">How to Visit Islands</h3>
@@ -176,6 +175,118 @@ export function CloudIslandsPage() {
           </div>
         </div>
       </div>
+
+      {/* Fullscreen Detail View */}
+      <AnimatePresence>
+        {selectedIsland && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="absolute inset-0 bg-white z-20"
+          >
+            <div className="h-full flex flex-col">
+              {/* Header */}
+              <div className="shrink-0 bg-gradient-to-b from-cyan-500 to-blue-600 pt-6 pb-3 px-4">
+                <div className="flex items-center justify-between">
+                  <button
+                    onClick={() => setSelectedIsland(null)}
+                    className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center active:scale-90 transition-transform"
+                  >
+                    <ArrowLeft className="w-6 h-6 text-white" />
+                  </button>
+                  <h1 className="text-lg font-bold text-white">{selectedIsland.title}</h1>
+                  <div className="w-11" />
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="flex-1 overflow-y-auto">
+                <div className="p-4 space-y-4">
+                  {/* Official Badge */}
+                  {selectedIsland.isOfficial && (
+                    <div className="flex items-center gap-2 text-purple-600 bg-purple-50 border border-purple-100 rounded-xl px-3 py-2">
+                      <BadgeCheck className="w-4 h-4" />
+                      <span className="text-xs font-bold">Official Island</span>
+                    </div>
+                  )}
+
+                  {/* Images */}
+                  {selectedIsland.screenshots.length > 0 && (
+                    <div className={`grid gap-2 ${
+                      selectedIsland.screenshots.length === 1 ? "grid-cols-1" :
+                      selectedIsland.screenshots.length === 2 ? "grid-cols-2" :
+                      "grid-cols-2"
+                    }`}>
+                      {selectedIsland.screenshots.map((img, i) => (
+                        <div key={i} className={`rounded-xl overflow-hidden bg-gray-100 ${
+                          selectedIsland.screenshots.length === 3 && i === 0 ? "col-span-2" : ""
+                        }`}>
+                          <img src={img} alt={selectedIsland.title} className="w-full h-auto object-cover" />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Island Code */}
+                  <div className="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
+                    <code className="flex-1 px-3 py-2 bg-white rounded-lg text-lg font-mono text-gray-800 border border-gray-200">
+                      {selectedIsland.islandCode}
+                    </code>
+                    <button
+                      onClick={() => handleCopy(selectedIsland.islandCode)}
+                      className="w-12 h-12 rounded-xl bg-cyan-500 flex items-center justify-center active:scale-90 transition-transform"
+                    >
+                      {copiedCode === selectedIsland.islandCode ? (
+                        <Check className="w-6 h-6 text-white" />
+                      ) : (
+                        <Copy className="w-6 h-6 text-white" />
+                      )}
+                    </button>
+                  </div>
+
+                  {/* Stats */}
+                  <div className="flex items-center justify-between bg-gray-50 rounded-xl px-4 py-3">
+                    <div className="flex items-center gap-2 text-gray-600">
+                      <Bookmark className="w-4 h-4" />
+                      <span className="text-sm font-medium">{selectedIsland.likes.toLocaleString()} saves</span>
+                    </div>
+                    <span className="text-xs text-gray-400">by {selectedIsland.author}</span>
+                  </div>
+
+                  {/* Description */}
+                  <div>
+                    <h3 className="font-bold text-gray-800 text-sm mb-2">About</h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">{selectedIsland.description}</p>
+                  </div>
+
+                  {/* Save Button */}
+                  <button
+                    onClick={() => toggleSavedIsland(selectedIsland.islandCode)}
+                    className={`w-full py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all ${
+                      savedIslands.includes(selectedIsland.islandCode)
+                        ? "bg-yellow-400 text-yellow-900"
+                        : "bg-gray-100 text-gray-600"
+                    }`}
+                  >
+                    {savedIslands.includes(selectedIsland.islandCode) ? (
+                      <>
+                        <Check className="w-5 h-5" />
+                        Saved
+                      </>
+                    ) : (
+                      <>
+                        <Plus className="w-5 h-5" />
+                        Save Island
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Post Modal */}
       <AnimatePresence>
@@ -309,109 +420,65 @@ export function CloudIslandsPage() {
   );
 }
 
-// Island Card Component
+// Island Card Component - simplified preview
 function IslandCard({
   island,
   index,
   isSaved,
-  copiedCode,
-  onCopy,
+  onSelect,
   onToggleSave,
 }: {
   island: CloudIslandPost;
   index: number;
   isSaved: boolean;
-  copiedCode: string | null;
-  onCopy: (code: string) => void;
+  onSelect: () => void;
   onToggleSave: () => void;
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 15 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.05 }}
-      className={`rounded-2xl border overflow-hidden ${
-        island.isOfficial ? "bg-purple-50/50 border-purple-100" :
-        isSaved ? "bg-yellow-50/50 border-yellow-200" : "bg-white border-gray-100"
+      transition={{ delay: index * 0.03 }}
+      className={`rounded-2xl border p-3 transition-all ${
+        island.isOfficial ? "bg-purple-50/30 border-purple-100" :
+        isSaved ? "bg-yellow-50/30 border-yellow-200" : "bg-white border-gray-100"
       }`}
     >
-      {/* Official badge */}
-      {island.isOfficial && (
-        <div className="flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-bold bg-purple-100 text-purple-700">
-          <BadgeCheck className="w-3 h-3" />
-          OFFICIAL
-        </div>
-      )}
-
-      <div className="p-3">
-        {/* Main row */}
-        <div className="flex items-start gap-3">
-          {/* Images - show grid if multiple, single if one */}
-          <div className={`shrink-0 overflow-hidden ${
-            island.screenshots.length >= 3 ? "w-20 h-20 grid grid-cols-2 gap-0.5" :
-            island.screenshots.length === 2 ? "w-20 h-20 grid grid-cols-1 gap-0.5" :
-            "w-16 h-16 rounded-xl bg-gray-200"
-          }`}>
-            {island.screenshots.length > 0 ? (
-              island.screenshots.slice(0, 3).map((img, i) => (
-                <img 
-                  key={i} 
-                  src={img} 
-                  alt={island.title} 
-                  className={`object-cover ${
-                    island.screenshots.length === 1 ? "w-full h-full rounded-xl" :
-                    island.screenshots.length === 2 ? "w-full h-10" :
-                    i === 0 ? "w-full h-10 col-span-2" : "w-full h-10"
-                  }`} 
-                />
-              ))
-            ) : (
-              <div className="w-full h-full flex items-center justify-center">
-                <Image className="w-6 h-6 text-gray-400" />
-              </div>
-            )}
-          </div>
-
-          <div className="flex-1 min-w-0">
-            <h3 className="font-bold text-sm text-gray-800 leading-tight">{island.title}</h3>
-            <p className="text-xs text-gray-500 mt-0.5 line-clamp-2">{island.description}</p>
-
-            {/* Code + stats */}
-            <div className="flex items-center gap-2 mt-2">
-              <code className="px-2 py-1 bg-gray-100 rounded text-xs font-mono text-gray-700">
-                {island.islandCode}
-              </code>
-              <button
-                onClick={() => onCopy(island.islandCode)}
-                className="w-6 h-6 rounded bg-gray-100 flex items-center justify-center"
-              >
-                {copiedCode === island.islandCode ? (
-                  <Check className="w-3 h-3 text-green-500" />
-                ) : (
-                  <Copy className="w-3 h-3 text-gray-500" />
-                )}
-              </button>
-              <span className="text-[10px] text-gray-400 ml-auto">by {island.author}</span>
+      {/* Main row - tap to open detail */}
+      <button onClick={onSelect} className="w-full flex items-center gap-3">
+        {/* Image */}
+        <div className="w-14 h-14 rounded-xl bg-gray-200 shrink-0 overflow-hidden">
+          {island.screenshots[0] ? (
+            <img src={island.screenshots[0]} alt={island.title} className="w-full h-full object-cover" />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <Image className="w-5 h-5 text-gray-400" />
             </div>
-          </div>
+          )}
         </div>
 
-        {/* Bottom action row */}
-        <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-100">
-          <div className="flex items-center gap-1 text-xs text-gray-500">
-            <Bookmark className="w-3.5 h-3.5" />
-            <span className="font-medium">{island.likes.toLocaleString()} saves</span>
-          </div>
-
-          <button
-            onClick={onToggleSave}
-            className={`w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-all ${
-              isSaved ? "bg-yellow-400 text-yellow-900" : "bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300"
-            }`}
-          >
-            {isSaved ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
-          </button>
+        <div className="flex-1 min-w-0 text-left">
+          <h3 className="font-bold text-sm text-gray-800 truncate">{island.title}</h3>
+          <code className="text-xs text-gray-500 font-mono">{island.islandCode}</code>
         </div>
+
+        {/* Save count */}
+        <div className="flex items-center gap-1 text-xs text-gray-400 shrink-0">
+          <Bookmark className="w-3 h-3" />
+          <span>{island.likes.toLocaleString()}</span>
+        </div>
+      </button>
+
+      {/* Bottom row - save button */}
+      <div className="flex items-center justify-end mt-2 pt-2 border-t border-gray-100">
+        <button
+          onClick={(e) => { e.stopPropagation(); onToggleSave(); }}
+          className={`w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-all ${
+            isSaved ? "bg-yellow-400 text-yellow-900" : "bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300"
+          }`}
+        >
+          {isSaved ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+        </button>
       </div>
     </motion.div>
   );
