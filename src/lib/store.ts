@@ -70,6 +70,10 @@ interface AppState {
   toggleFoundFossil: (id: string) => void;
   ownedItems: string[];
   toggleOwnedItem: (slug: string) => void;
+  completedRequests: string[];
+  toggleCompletedRequest: (id: string) => void;
+  inProgressRequests: string[];
+  toggleInProgressRequest: (id: string) => void;
 }
 
 export const useAppStore = create<AppState>()(
@@ -178,6 +182,22 @@ export const useAppStore = create<AppState>()(
           ? state.ownedItems.filter(s => s !== slug)
           : [...state.ownedItems, slug]
       })),
+      completedRequests: [],
+      toggleCompletedRequest: (id) => set((state) => ({
+        completedRequests: state.completedRequests.includes(id)
+          ? state.completedRequests.filter(r => r !== id)
+          : [...state.completedRequests, id],
+        // Remove from in-progress when marking complete
+        inProgressRequests: state.completedRequests.includes(id)
+          ? state.inProgressRequests
+          : state.inProgressRequests.filter(r => r !== id),
+      })),
+      inProgressRequests: [],
+      toggleInProgressRequest: (id) => set((state) => ({
+        inProgressRequests: state.inProgressRequests.includes(id)
+          ? state.inProgressRequests.filter(r => r !== id)
+          : [...state.inProgressRequests, id]
+      })),
     }),
     {
       name: "pokopia-storage",
@@ -201,6 +221,8 @@ export const useAppStore = create<AppState>()(
         loginStreak: state.loginStreak,
         lastLoginDate: state.lastLoginDate,
         chatMessages: state.chatMessages,
+        completedRequests: state.completedRequests,
+        inProgressRequests: state.inProgressRequests,
       }),
     }
   )

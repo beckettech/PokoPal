@@ -1,0 +1,530 @@
+[
+  {
+    "id": "rebuild-pokemon-center-ww",
+    "name": "Rebuild the Pokémon Center",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wastelands",
+    "task": "Raise Environment Level to 3 → buy rebuilding kit from shop (1000 Life Coins). Gather: 20 Lumber, 20 Stones, 10 Leaves, 10 Vine Ropes. Befriend Scyther for lumber/Cut. Complete Yawn Up a Storm first to get Onix (Bulldoze). Submit materials + Pokémon at site → wait one day.",
+    "rewardType": "unlock",
+    "reward": "Pokémon Center restored",
+    "isImportant": true
+  },
+  {
+    "id": "yawn-up-a-storm",
+    "name": "Yawn Up a Storm",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wastelands",
+    "task": "Raise humidity to 100 for Slowpoke's yawn: 1) Use Water Gun on grass/soil tiles. 2) Use Rock Smash to unblock water sources and create rivers. 3) Buy Horsea Fountains from PC shop and place in ponds. 4) Plant wildflower fields (use Bulbasaur to grow instantly). 5) Revive 10 withered trees with Water Gun. 6) Move Squirtle into Hydrated Tall Grass habitat. 7) Set up Rain Dance Site (2 Castform Weather Charms + wooden plate + food). Then get Slowpoke to yawn → follow roar north → rebuild docks to reach Kyogre → rescue Onix!",
+    "rewardType": "story",
+    "reward": "Rain event + Kyogre encounter + Onix rescued",
+    "isImportant": true
+  },
+  {
+    "id": "brighten-things-up",
+    "name": "Brighten Things Up",
+    "giver": "Professor Tangrowth",
+    "area": "Bleak Beach",
+    "task": "Wake up Mosslax by reaching 100 brightness points: 1) Light streetlights with Generate Pokémon (Pawmi/Pawmo). 2) Set up Resort Meal Prep habitat for Torchic (chair + campfire + food plate under palm). 3) Activate windmill by the cave. 4) Connect waterwheel to east of cave via utility poles. 5) Light up lighthouse (4 spotlights + Generate Pokémon). 6) Connect furnace via utility poles. 7) Place Seashell Lamps in Mosslax's cave, connect to power. 8) Charge up Peakychu at charging station (5 bulbs lit). Peakychu uses Illuminate → Raikou's thunder wakes Mosslax!",
+    "rewardType": "story",
+    "reward": "Mosslax awakens + Raikou encounter",
+    "isImportant": true
+  },
+  {
+    "id": "team-initiation-challenge",
+    "name": "Do the...Team Initiation Challenge",
+    "giver": "Machine (Sand-Covered Building)",
+    "area": "Withered Wastelands",
+    "task": "Complete 9 fetch quest challenges from the machine on the coast. Requires completing all 4 Raise the Environment Level requests first. Bring various items to the building for each challenge.",
+    "rewardType": "story",
+    "reward": "9 badges + story completion",
+    "isImportant": true
+  },
+  {
+    "id": "time-to-party",
+    "name": "Time to Party!",
+    "giver": "DJ Rotom",
+    "area": "Rocky Ridges",
+    "task": "Increase the mood by 100 points. Find a CD for Rotom, appraise a Lost Relic for Tangrowth, bring Ludicolo to Rotom, make 5 Party Platters with Chef Dente. Cook curry (15 Leppa Berry, 15 Wheat, 15 Beans, 5 Honey) with 5 Pokémon. Volcanion appears!",
+    "rewardType": "story",
+    "reward": "Story progression + Volcanion appears",
+    "isImportant": true
+  },
+  {
+    "id": "rebuild-huge-building",
+    "name": "Rebuild the Huge Building",
+    "giver": "Tinkaton / Tinkamaster",
+    "area": "Sparkling Skylands",
+    "task": "Rebuild all three floors of the destroyed Celadon Department Store. 2F: 25 Concrete, 10 Glass, 5 Pokémetal, 10 Iron Ingots + 6 Pokémon (incl. Tangrowth). 3F: 25 Concrete, 10 Glass, 10 Glowing Stone, 15 Copper Ingots + 10 Pokémon (incl. Chef Dente). 4F: 40 Concrete, 10 Glass, 10 Paper, 10 Brick, 10 Lumber + 15 Pokémon (incl. Peakychu). Mewtwo appears on rooftop!",
+    "rewardType": "story",
+    "reward": "Mewtwo encounter on rooftop",
+    "isImportant": true
+  },
+  {
+    "id": "make-hamburger-steak",
+    "name": "Make a Hamburger Steak",
+    "giver": "Chef Dente",
+    "area": "Rocky Ridges",
+    "task": "Use a frying pan to make hamburger steak and chow down!",
+    "rewardType": "recipe",
+    "reward": "Hamburger Steak recipe"
+  },
+  {
+    "id": "househunting",
+    "name": "Househunting",
+    "giver": "Charmander",
+    "area": "Withered Wastelands",
+    "task": "Build a leaf den, then invite Charmander to move in.",
+    "rewardType": "unlock",
+    "reward": "Charmander moves in"
+  },
+  {
+    "id": "build-orange-hut",
+    "name": "Build an Orange Hut",
+    "giver": "Unknown",
+    "area": "Bleak Beach",
+    "task": "Use a building kit to build an orange hut.",
+    "rewardType": "unlock",
+    "reward": "Orange Hut built"
+  },
+  {
+    "id": "make-a-waterfall",
+    "name": "Make a Waterfall",
+    "giver": "Unknown",
+    "area": "Bleak Beach",
+    "task": "Suck up water and pour it from the top of the cliff into the pond below to create a waterfall!",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "make-a-salad",
+    "name": "Make a Salad",
+    "giver": "Dartrix",
+    "area": "Rocky Ridges",
+    "task": "Use a cutting board to make a salad!",
+    "rewardType": "recipe",
+    "reward": "Salad recipe"
+  },
+  {
+    "id": "cut-down-fence",
+    "name": "Cut Down that Fence",
+    "giver": "Unknown",
+    "area": "Rocky Ridges",
+    "task": "Power up Cut and destroy the fence blocking the path.",
+    "rewardType": "unlock",
+    "reward": "Path unblocked"
+  },
+  {
+    "id": "make-bread",
+    "name": "Make Bread",
+    "giver": "Unknown",
+    "area": "Rocky Ridges",
+    "task": "Use a bread oven to make bread, then eat it!",
+    "rewardType": "recipe",
+    "reward": "Bread recipe"
+  },
+  {
+    "id": "bring-alarm-clocks",
+    "name": "Bring Back Some Alarm Clocks",
+    "giver": "Dragonite",
+    "area": "Sparkling Skylands",
+    "task": "Place five alarm clocks for Dragonite!",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "bread-bowl-please",
+    "name": "Bread Bowl, Please",
+    "giver": "Gyarados",
+    "area": "Sparkling Skylands",
+    "task": "Make a bread bowl for Gyarados!",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "wanted-perch",
+    "name": "Wanted - Perch",
+    "giver": "Dartrix",
+    "area": "Rocky Ridges",
+    "task": "Place a perch near Dartrix's home. Craft using 2 Small Logs and 1 Leaf.",
+    "rewardType": "recipe",
+    "reward": "Cutting Board recipe"
+  },
+  {
+    "id": "build-a-house",
+    "name": "Build a House",
+    "giver": "Various",
+    "area": "All Areas",
+    "task": "Build a house and put three different pieces of furniture inside.",
+    "rewardType": "unlock",
+    "reward": "Story progression"
+  },
+  {
+    "id": "make-shredded-salad",
+    "name": "Make a Shredded Salad",
+    "giver": "Dartrix",
+    "area": "Rocky Ridges",
+    "task": "Make 1 shredded salad for Dartrix.",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "investigate-source-of-music",
+    "name": "Investigate the Source of Music",
+    "giver": "Unknown",
+    "area": "Rocky Ridges",
+    "task": "Go deeper into the mountain to find the source of music!",
+    "rewardType": "story",
+    "reward": "Discovery"
+  },
+  {
+    "id": "brighter-is-better",
+    "name": "Brighter is Better",
+    "giver": "Meowth",
+    "area": "Bleak Beach",
+    "task": "Brighten up Meowth's home by placing 2 mushroom lamps.",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "show-off-rainbow-feather",
+    "name": "Show Off a Rainbow Feather",
+    "giver": "Gimmighoul",
+    "area": "Rocky Ridges",
+    "task": "Pick up a Rainbow Feather and show it to Gimmighoul. (Rainbow Feathers dropped by Ho-Oh — use Water Gun to collect.)",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "talk-to-graveler",
+    "name": "Talk to Graveler",
+    "giver": "Graveler",
+    "area": "Rocky Ridges",
+    "task": "Make a mossy boulder habitat, place 4 moss around mossy boulder, then talk to Graveler!",
+    "rewardType": "move",
+    "reward": "Rollout move + Graveler befriendable"
+  },
+  {
+    "id": "follow-dragonite",
+    "name": "Follow Dragonite",
+    "giver": "Dragonite",
+    "area": "Sparkling Skylands",
+    "task": "Use Glide to follow Dragonite to the neighboring island!",
+    "rewardType": "unlock",
+    "reward": "New island access"
+  },
+  {
+    "id": "make-concrete",
+    "name": "Make Concrete",
+    "giver": "Tinkmaster",
+    "area": "Sparkling Skylands",
+    "task": "Make six bricks of concrete and show them to Tinkmaster!",
+    "rewardType": "unlock",
+    "reward": "Construction unlocked"
+  },
+  {
+    "id": "spelunking-time",
+    "name": "Spelunking Time",
+    "giver": "Gardevoir",
+    "area": "Sparkling Skylands",
+    "task": "Go with Gardevoir into the cave and find out what's in there.",
+    "rewardType": "story",
+    "reward": "Discovery"
+  },
+  {
+    "id": "to-the-big-building",
+    "name": "To the Big Building",
+    "giver": "Tinkmaster",
+    "area": "Sparkling Skylands",
+    "task": "Go with Tinkmaster to the huge building on the center island!",
+    "rewardType": "story",
+    "reward": "Story progression"
+  },
+  {
+    "id": "top-of-the-ladder",
+    "name": "What's at the Top of the Ladder",
+    "giver": "Unknown",
+    "area": "Sparkling Skylands",
+    "task": "Climb the ladder and check out the elevator platform at the top!",
+    "rewardType": "unlock",
+    "reward": "Elevator platform access"
+  },
+  {
+    "id": "crush-a-leppa-berry",
+    "name": "Crush a Leppa Berry",
+    "giver": "Smearguru",
+    "area": "Bleak Beach",
+    "task": "Show Smearguru a crushed Leppa Berry.",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "soak-the-soil",
+    "name": "Soak the Soil",
+    "giver": "Drilbur",
+    "area": "Withered Wastelands",
+    "task": "Water the dry ground near Drilbur!",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "help-make-home-magnemite",
+    "name": "Help Make a Home (Magnemite)",
+    "giver": "Magnemite",
+    "area": "Withered Wastelands",
+    "task": "Make a factory habitat, then invite Magnemite to live there!",
+    "rewardType": "comfort",
+    "reward": "Magnemite moves in"
+  },
+  {
+    "id": "help-make-home-tangrowth",
+    "name": "Help Make a Home (Professor Tangrowth)",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wastelands",
+    "task": "Make a professor's treasure trove habitat, then invite Professor Tangrowth to live there!",
+    "rewardType": "comfort",
+    "reward": "Tangrowth moves in"
+  },
+  {
+    "id": "fresh-carrots-please",
+    "name": "Fresh Carrots, Please",
+    "giver": "Gulpin",
+    "area": "Withered Wastelands",
+    "task": "Give 1 fresh carrot to Gulpin.",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "to-the-other-side-of-wall",
+    "name": "To the Other Side of the Wall",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wastelands",
+    "task": "Use Rock Smash to break through the stone wall, then bring Professor Tangrowth to the other side!",
+    "rewardType": "unlock",
+    "reward": "Access to new area"
+  },
+  {
+    "id": "find-slowpoke",
+    "name": "Find Slowpoke",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wastelands",
+    "task": "Find Slowpoke and bring them to Professor Tangrowth.",
+    "rewardType": "unlock",
+    "reward": "Slowpoke joins"
+  },
+  {
+    "id": "help-me-make-home-magikarp",
+    "name": "Help Me Make a Home (Magikarp)",
+    "giver": "Magikarp",
+    "area": "Withered Wastelands",
+    "task": "Make an ocean fishing spot habitat, then invite Magikarp to live there!",
+    "rewardType": "comfort",
+    "reward": "Magikarp moves in"
+  },
+  {
+    "id": "check-whats-up-there",
+    "name": "Check What's Up There",
+    "giver": "Hitmonchan",
+    "area": "Withered Wastelands",
+    "task": "Check what's on top of the hill and report your findings to Hitmonchan!",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "investigate-the-cave",
+    "name": "Investigate the Cave",
+    "giver": "Unknown",
+    "area": "Withered Wastelands",
+    "task": "Investigate the cave by the beach!",
+    "rewardType": "comfort",
+    "reward": "Discovery"
+  },
+  {
+    "id": "honey-please",
+    "name": "Honey, Please",
+    "giver": "Vespiquen",
+    "area": "Withered Wastelands",
+    "task": "Give 3 jars of honey to Vespiquen.",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "grow-some-beans",
+    "name": "Grow Some Beans",
+    "giver": "Hitmonchan",
+    "area": "Withered Wastelands",
+    "task": "Grow 3 bean pods for Hitmonchan.",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "place-ditto-flag",
+    "name": "Place the Ditto Flag",
+    "giver": "Unknown",
+    "area": "Withered Wastelands",
+    "task": "Place a Ditto flag on a house to make it yours!",
+    "rewardType": "unlock",
+    "reward": "House ownership"
+  },
+  {
+    "id": "clean-up-the-mud",
+    "name": "Clean Up the Mud",
+    "giver": "Meowth",
+    "area": "Bleak Beach",
+    "task": "Wash away the muddy mess near Meowth's shack.",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "flowers-in-planter",
+    "name": "Flowers in the Planter",
+    "giver": "Unknown",
+    "area": "Bleak Beach",
+    "task": "Make flowers bloom in a planter you made!",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "swimming-time",
+    "name": "Swimming Time",
+    "giver": "Lapras / Piplup",
+    "area": "Bleak Beach",
+    "task": "Learn from Lapras how to swim, then go swimming with Piplup.",
+    "rewardType": "move",
+    "reward": "Surf move"
+  },
+  {
+    "id": "show-off-toy-blocks",
+    "name": "Show Off Some Toy Blocks",
+    "giver": "Zorua",
+    "area": "Bleak Beach",
+    "task": "Make toy blocks and show them to Zorua.",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "find-a-doll",
+    "name": "Find a Doll",
+    "giver": "Drifloon",
+    "area": "Withered Wastelands",
+    "task": "Find a doll and show it to Drifloon.",
+    "rewardType": "unlock",
+    "reward": "Dream Islands unlocked"
+  },
+  {
+    "id": "move-over-boulder",
+    "name": "Move Over, Boulder",
+    "giver": "Unknown",
+    "area": "Rocky Ridges",
+    "task": "Use Strength to move the huge rock to the designated location.",
+    "rewardType": "move",
+    "reward": "Strength move"
+  },
+  {
+    "id": "mysterious-noises",
+    "name": "What Made Those Mysterious Noises",
+    "giver": "Trubbish",
+    "area": "Bleak Beach",
+    "task": "Figure out the source of those mysterious noises Trubbish heard.",
+    "rewardType": "story",
+    "reward": "Discovery"
+  },
+  {
+    "id": "water-dry-grass",
+    "name": "Water Dry Grass",
+    "giver": "Unknown",
+    "area": "Withered Wastelands",
+    "task": "Use Water Gun to revive 10 patches of dry tall grass!",
+    "rewardType": "move",
+    "reward": "Leafage move"
+  },
+  {
+    "id": "make-mini-bookcase",
+    "name": "Make a Mini Bookcase",
+    "giver": "Unknown",
+    "area": "Sparkling Skylands",
+    "task": "Make four mini bookcases and place them wherever you like.",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "help-me-make-home",
+    "name": "Help Me Make a Home",
+    "giver": "Various Pokémon",
+    "area": "Withered Wastelands",
+    "task": "Make a habitat, then invite the requester to live there.",
+    "rewardType": "comfort",
+    "reward": "Pokémon moves in"
+  },
+  {
+    "id": "leppa-berries-please",
+    "name": "Leppa Berries, Please",
+    "giver": "Squirtle / Bulbasaur",
+    "area": "Withered Wastelands",
+    "task": "Pick up Leppa Berry and give it to Squirtle or Bulbasaur.",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "follow-bulbasaur",
+    "name": "Follow Bulbasaur",
+    "giver": "Bulbasaur",
+    "area": "Withered Wastelands",
+    "task": "Follow Bulbasaur.",
+    "rewardType": "unlock",
+    "reward": "Workbench access and recipes"
+  },
+  {
+    "id": "light-the-campfire",
+    "name": "Light the Campfire",
+    "giver": "Unknown",
+    "area": "Withered Wastelands",
+    "task": "Use Follow Me to light the campfire.",
+    "rewardType": "comfort",
+    "reward": "Comfort increase"
+  },
+  {
+    "id": "raise-comfort-level",
+    "name": "Raise the Comfort Level",
+    "giver": "Bulbasaur",
+    "area": "Withered Wastelands",
+    "task": "Raise Bulbasaur's comfort level and unlock new challenges.",
+    "rewardType": "unlock",
+    "reward": "New challenges unlocked"
+  },
+  {
+    "id": "a-bed-for-a-buddy",
+    "name": "A Bed for a Buddy",
+    "giver": "Bulbasaur",
+    "area": "Withered Wastelands",
+    "task": "Make a straw bed out of leaves for Bulbasaur.",
+    "rewardType": "recipe",
+    "reward": "Straw Bed recipe"
+  },
+  {
+    "id": "build-leaf-den",
+    "name": "Build a Leaf Den",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wastelands",
+    "task": "Buy a leaf den kit from the PC shop and build it!",
+    "rewardType": "unlock",
+    "reward": "Housing available"
+  },
+  {
+    "id": "find-fire-pokemon",
+    "name": "Find a Pokémon Who Can Use Fire",
+    "giver": "Unknown",
+    "area": "Withered Wastelands",
+    "task": "Make a tall grass habitat and find a Pokémon who can use fire!",
+    "rewardType": "unlock",
+    "reward": "Fire Pokémon found"
+  },
+  {
+    "id": "raise-environment-level-3",
+    "name": "Raise the Environment Level to 3",
+    "giver": "System",
+    "area": "Withered Wastelands",
+    "task": "Raise the environment level to 3 so you can buy the Pokémon Center rebuilding kit.",
+    "rewardType": "unlock",
+    "reward": "PC shop + rebuilding kit available"
+  }
+]
