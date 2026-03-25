@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { useAppStore } from "@/lib/store";
 import { pokemonList } from "@/lib/pokemon-data";
 import { ArrowLeft, Search, CheckCircle, Clock, Circle, Eye, EyeOff, Plus, Check } from "lucide-react";
@@ -76,15 +76,20 @@ export function HabitatDexPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortFilter, setSortFilter] = useState<"all" | "discovered" | "undiscovered">("all");
   const [expandedHabitat, setExpandedHabitat] = useState<number | null>(null);
+  const expandedRef = useRef<HTMLDivElement | null>(null);
 
   // Convert array to Set for quick lookup
   const discoveredSet = useMemo(() => new Set(discoveredHabitats), [discoveredHabitats]);
 
-  // Auto-expand a habitat if navigated to via deep-link
+  // Auto-expand and scroll to habitat if navigated to via deep-link
   useEffect(() => {
     if (focusedHabitatId) {
       setExpandedHabitat(focusedHabitatId);
       clearFocus();
+      // Scroll after render
+      setTimeout(() => {
+        expandedRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 100);
     }
   }, [focusedHabitatId]);
 
@@ -188,6 +193,7 @@ export function HabitatDexPage() {
               return (
                 <motion.div
                   key={habitat.id}
+                  ref={isExpanded ? expandedRef : null}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}

@@ -25,7 +25,7 @@ for (const habitat of habitatsData) {
 }
 
 export function MapPage() {
-  const { setCurrentPage } = useAppStore();
+  const { setCurrentPage, navigateToHabitat } = useAppStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [expandedLocation, setExpandedLocation] = useState<string | null>(null);
 
@@ -114,7 +114,7 @@ export function MapPage() {
                           {habitats.map(habitat => (
                             <button
                               key={habitat.id}
-                              onClick={() => setCurrentPage("habitat-dex")}
+                              onClick={() => navigateToHabitat(habitat.id)}
                               className="flex flex-col overflow-hidden rounded-xl border border-emerald-100 bg-white text-left active:scale-95 transition-transform shadow-sm"
                             >
                               {habitat.image && (
