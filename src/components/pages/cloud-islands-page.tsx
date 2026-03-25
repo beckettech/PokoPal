@@ -2,13 +2,14 @@
 
 import { useAppStore } from "@/lib/store";
 import { cloudIslandsPosts, CloudIslandPost } from "@/lib/pokemon-data";
-import { ArrowLeft, Copy, Check, Bookmark, Plus, X, Upload, Image, Key, BadgeCheck, Star, Crown } from "lucide-react";
+import { ArrowLeft, Copy, Check, Bookmark, Plus, X, Upload, Image, Key, BadgeCheck, TrendingUp, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 
 export function CloudIslandsPage() {
   const { setCurrentPage, savedIslands = [], toggleSavedIsland, visitedIslands = [], toggleVisitedIsland } = useAppStore() as any;
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
+  const [sortBy, setSortBy] = useState<"popular" | "recent">("popular");
   const [showPostModal, setShowPostModal] = useState(false);
   const [postForm, setPostForm] = useState({ title: "", description: "", islandCode: "" });
   const [postImages, setPostImages] = useState<string[]>([]);
@@ -70,17 +71,16 @@ export function CloudIslandsPage() {
     }
   };
 
-  // Sort: featured first, then by saves
+  // Sort: popular (saves) or recent (createdAt)
   const sortedIslands = [...cloudIslandsPosts].sort((a, b) => {
-    if (a.isFeatured && !b.isFeatured) return -1;
-    if (!a.isFeatured && b.isFeatured) return 1;
-    return b.likes - a.likes;
+    if (sortBy === "popular") return b.likes - a.likes;
+    return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
   });
 
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-cyan-500 to-blue-600">
       {/* Header */}
-      <div className="pt-6 pb-3 px-4 shrink-0">
+      <div className="pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
           <button
             onClick={() => setCurrentPage("home")}
@@ -97,9 +97,27 @@ export function CloudIslandsPage() {
           </button>
         </div>
 
-        <p className="text-center text-white/70 text-xs">
-          Share your island • Discover community builds • Save favorites
-        </p>
+        {/* Sort Toggle */}
+        <div className="flex gap-2 bg-white/20 rounded-xl p-1">
+          <button
+            onClick={() => setSortBy("popular")}
+            className={`flex-1 py-1.5 rounded-lg text-xs font-medium flex items-center justify-center gap-1 transition-all ${
+              sortBy === "popular" ? "bg-white text-cyan-600" : "text-white"
+            }`}
+          >
+            <TrendingUp className="w-3.5 h-3.5" />
+            Popular
+          </button>
+          <button
+            onClick={() => setSortBy("recent")}
+            className={`flex-1 py-1.5 rounded-lg text-xs font-medium flex items-center justify-center gap-1 transition-all ${
+              sortBy === "recent" ? "bg-white text-cyan-600" : "text-white"
+            }`}
+          >
+            <Clock className="w-3.5 h-3.5" />
+            Recent
+          </button>
+        </div>
       </div>
 
       {/* Content */}
@@ -286,26 +304,21 @@ function IslandCard({
   onToggleSave: () => void;
   onToggleVisit: () => void;
 }) {
-  const isTop = island.islandCode === "PXQC-G03S";
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
       className={`rounded-2xl border overflow-hidden ${
-        isTop ? "bg-gradient-to-br from-amber-50 to-yellow-50 border-amber-200" :
         island.isOfficial ? "bg-purple-50/50 border-purple-100" :
         isVisited ? "bg-green-50/50 border-green-100" : "bg-white border-gray-100"
       }`}
     >
-      {/* Top badge row */}
-      {(isTop || island.isOfficial) && (
-        <div className={`flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-bold ${
-          isTop ? "bg-amber-100 text-amber-700" : "bg-purple-100 text-purple-700"
-        }`}>
-          {isTop ? <Crown className="w-3 h-3" /> : <BadgeCheck className="w-3 h-3" />}
-          {isTop ? "TOP SAVED" : "OFFICIAL"}
+      {/* Official badge */}
+      {island.isOfficial && (
+        <div className="flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-bold bg-purple-100 text-purple-700">
+          <BadgeCheck className="w-3 h-3" />
+          OFFICIAL
         </div>
       )}
 
