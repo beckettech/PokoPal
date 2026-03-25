@@ -447,12 +447,12 @@ function IslandCard({
       {/* Main row - tap to open detail */}
       <button onClick={onSelect} className="w-full flex items-center gap-3">
         {/* Image */}
-        <div className="w-14 h-14 rounded-xl bg-gray-200 shrink-0 overflow-hidden">
+        <div className="w-24 h-24 rounded-xl bg-gray-200 shrink-0 overflow-hidden">
           {island.screenshots[0] ? (
             <img src={island.screenshots[0]} alt={island.title} className="w-full h-full object-cover" />
           ) : (
             <div className="w-full h-full flex items-center justify-center">
-              <Image className="w-5 h-5 text-gray-400" />
+              <Image className="w-8 h-8 text-gray-400" />
             </div>
           )}
         </div>
