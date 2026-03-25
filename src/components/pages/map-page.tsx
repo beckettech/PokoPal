@@ -90,17 +90,18 @@ export function MapPage() {
       {/* Content */}
       <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
         <div className="p-3 space-y-3">
-          {filteredLocations.map((location) => {
+          {filteredLocations.map((location, idx) => {
             const colors = LOCATION_COLORS[location.name] || { bg: "from-gray-400 to-gray-600", badge: "bg-gray-500", text: "text-white" };
             const isExpanded = expandedLocation === location.id;
             const isVisited = visitedLocations.includes(location.id);
             const habitats = locationHabitats[location.name] || [];
+            const isEven = idx % 2 === 0;
 
             return (
               <div
                 key={location.id}
                 className={`rounded-xl overflow-hidden shadow-sm border ${
-                  isVisited ? "border-yellow-200 bg-yellow-50/30" : "border-gray-100"
+                  isVisited ? "border-yellow-200 bg-yellow-50/30" : isEven ? "border-gray-100 bg-white" : "border-gray-100 bg-slate-50"
                 }`}
               >
                 {/* Location header */}
