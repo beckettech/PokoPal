@@ -190,7 +190,6 @@ export function HabitatDexPage() {
       {/* Content — List */}
       <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
         <div className="p-3 space-y-2">
-          <AnimatePresence mode="popLayout">
             {filteredHabitats.map((habitat, index) => {
               const status = getCompletionStatus(habitat.pokemon);
               const isDiscovered = discoveredSet.has(habitat.id);
@@ -200,7 +199,6 @@ export function HabitatDexPage() {
                   key={habitat.id}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0 }}
                   transition={{ delay: Math.min(index * 0.02, 0.3) }}
                   className={`bg-gray-50 rounded-xl overflow-hidden border transition-colors ${isDiscovered ? 'border-green-200 bg-green-50/30' : 'border-gray-100'}`}
                 >
@@ -252,7 +250,6 @@ export function HabitatDexPage() {
                 </motion.div>
               );
             })}
-          </AnimatePresence>
 
           {filteredHabitats.length === 0 && (
             <div className="flex flex-col items-center justify-center h-40 text-gray-400">
