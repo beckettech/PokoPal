@@ -1,48 +1,47 @@
 'use client'
 
 import { useAppStore } from "@/lib/store";
-import { ArrowLeft, Search, Check, Plus, Loader2, Clock, Sparkles, Swords, BookOpen, Gift } from "lucide-react";
-import { useState, useEffect } from "react";
+import { ArrowLeft, Search, Check, Plus, Clock, ChevronDown, ChevronUp, Star } from "lucide-react";
+import { useState } from "react";
 import requestsJson from "../../../public/requests.json";
 
 type Request = typeof requestsJson[0];
 
 const AREA_COLORS: Record<string, string> = {
   "Withered Wastelands": "bg-amber-100 text-amber-800 border-amber-200",
-  "Bleak Beach": "bg-blue-100 text-blue-800 border-blue-200",
-  "Rocky Ridges": "bg-stone-100 text-stone-800 border-stone-200",
-  "Sparkling Skylands": "bg-sky-100 text-sky-800 border-sky-200",
+  "Bleak Beach":         "bg-blue-100 text-blue-800 border-blue-200",
+  "Rocky Ridges":        "bg-stone-100 text-stone-800 border-stone-200",
+  "Sparkling Skylands":  "bg-sky-100 text-sky-800 border-sky-200",
+  "All Areas":           "bg-gray-100 text-gray-700 border-gray-200",
 };
 
-const REWARD_ICONS: Record<string, { icon: string; label: string; color: string }> = {
-  move:    { icon: "⚡", label: "Move",    color: "bg-yellow-100 text-yellow-800" },
-  unlock:  { icon: "🔓", label: "Unlock",  color: "bg-green-100 text-green-800" },
-  recipe:  { icon: "📖", label: "Recipe",  color: "bg-orange-100 text-orange-800" },
-  comfort: { icon: "💛", label: "Comfort", color: "bg-pink-100 text-pink-800" },
-  story:   { icon: "⭐", label: "Story",   color: "bg-purple-100 text-purple-800" },
-  item:    { icon: "🎁", label: "Item",    color: "bg-teal-100 text-teal-800" },
+const REWARD_ICONS: Record<string, string> = {
+  move:    "⚡",
+  unlock:  "🔓",
+  recipe:  "📖",
+  comfort: "💛",
+  story:   "⭐",
+  item:    "🎁",
 };
 
 const AREAS = ["All", "Withered Wastelands", "Bleak Beach", "Rocky Ridges", "Sparkling Skylands"];
-const REWARD_FILTERS = ["All", "move", "unlock", "recipe", "comfort", "story", "item"];
 
 export function RequestsPage() {
   const { setCurrentPage, completedRequests = [], inProgressRequests = [], toggleCompletedRequest, toggleInProgressRequest } = useAppStore() as any;
   const [search, setSearch] = useState("");
   const [areaFilter, setAreaFilter] = useState("All");
-  const [rewardFilter, setRewardFilter] = useState("All");
   const [statusFilter, setStatusFilter] = useState<"all" | "todo" | "in-progress" | "done">("all");
+  const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const filtered = requestsJson.filter((r) => {
-    const matchSearch = !search || r.name.toLowerCase().includes(search.toLowerCase()) || r.task.toLowerCase().includes(search.toLowerCase());
-    const matchArea = areaFilter === "All" || r.area === areaFilter;
-    const matchReward = rewardFilter === "All" || r.rewardType === rewardFilter;
+    const matchSearch = !search || r.name.toLowerCase().includes(search.toLowerCase());
+    const matchArea = areaFilter === "All" || r.area === areaFilter || r.area === "All Areas";
     const isCompleted = completedRequests.includes(r.id);
     const isInProgress = inProgressRequests.includes(r.id);
-    if (statusFilter === "todo") return matchSearch && matchArea && matchReward && !isCompleted && !isInProgress;
-    if (statusFilter === "in-progress") return matchSearch && matchArea && matchReward && isInProgress && !isCompleted;
-    if (statusFilter === "done") return matchSearch && matchArea && matchReward && isCompleted;
-    return matchSearch && matchArea && matchReward;
+    if (statusFilter === "todo") return matchSearch && matchArea && !isCompleted && !isInProgress;
+    if (statusFilter === "in-progress") return matchSearch && matchArea && isInProgress && !isCompleted;
+    if (statusFilter === "done") return matchSearch && matchArea && isCompleted;
+    return matchSearch && matchArea;
   });
 
   const totalCompleted = completedRequests.length;
@@ -67,14 +66,14 @@ export function RequestsPage() {
         {/* Stats */}
         <div className="grid grid-cols-3 gap-2 mb-3">
           {[
-            { label: "To Do", count: totalTodo, filter: "todo" as const, color: "bg-white/20" },
-            { label: "In Progress", count: totalInProgress, filter: "in-progress" as const, color: "bg-white/30" },
-            { label: "Completed", count: totalCompleted, filter: "done" as const, color: "bg-white/20" },
-          ].map(({ label, count, filter, color }) => (
+            { label: "To Do",       count: totalTodo,       filter: "todo"        as const },
+            { label: "In Progress", count: totalInProgress, filter: "in-progress" as const },
+            { label: "Completed",   count: totalCompleted,  filter: "done"        as const },
+          ].map(({ label, count, filter }) => (
             <button
               key={filter}
               onClick={() => setStatusFilter(statusFilter === filter ? "all" : filter)}
-              className={`${color} ${statusFilter === filter ? "ring-2 ring-white" : ""} rounded-xl p-2 text-center active:scale-95 transition-all`}
+              className={`bg-white/20 ${statusFilter === filter ? "ring-2 ring-white" : ""} rounded-xl p-2 text-center active:scale-95 transition-all`}
             >
               <p className="text-xl font-bold text-white">{count}</p>
               <p className="text-[10px] text-white/80">{label}</p>
@@ -94,7 +93,7 @@ export function RequestsPage() {
 
       {/* Content */}
       <div className="flex-1 bg-white rounded-t-[2rem] overflow-hidden flex flex-col">
-        {/* Search + Filters */}
+        {/* Search + Area Filter */}
         <div className="px-4 pt-4 pb-2 shrink-0 space-y-2">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -107,7 +106,7 @@ export function RequestsPage() {
             />
           </div>
 
-          {/* Area filter */}
+          {/* Area filter only */}
           <div className="flex gap-1.5 overflow-x-auto pb-0.5 scrollbar-hide">
             {AREAS.map(area => (
               <button
@@ -121,112 +120,90 @@ export function RequestsPage() {
               </button>
             ))}
           </div>
-
-          {/* Reward filter */}
-          <div className="flex gap-1.5 overflow-x-auto pb-0.5 scrollbar-hide">
-            {REWARD_FILTERS.map(r => {
-              const info = r === "All" ? null : REWARD_ICONS[r];
-              return (
-                <button
-                  key={r}
-                  onClick={() => setRewardFilter(r)}
-                  className={`shrink-0 text-xs px-3 py-1.5 rounded-full font-medium transition-all ${
-                    rewardFilter === r ? "bg-yellow-500 text-white" : "bg-gray-100 text-gray-600"
-                  }`}
-                >
-                  {info ? `${info.icon} ${info.label}` : "All Rewards"}
-                </button>
-              );
-            })}
-          </div>
         </div>
 
         {/* Requests list */}
         <div className="flex-1 overflow-y-auto px-4 pb-6 space-y-2">
-          <p className="text-xs text-gray-400 mb-2">{filtered.length} requests</p>
+          <p className="text-xs text-gray-400 mb-1">{filtered.length} requests</p>
           {filtered.map((request) => {
             const isCompleted = completedRequests.includes(request.id);
             const isInProgress = !isCompleted && inProgressRequests.includes(request.id);
-            const rewardInfo = REWARD_ICONS[request.rewardType];
+            const isExpanded = expandedId === request.id;
 
             return (
               <div
                 key={request.id}
-                className={`rounded-2xl border p-3 transition-all ${
-                  isCompleted
-                    ? "bg-green-50 border-green-200"
-                    : isInProgress
-                    ? "bg-yellow-50 border-yellow-200"
-                    : "bg-white border-gray-100"
+                className={`rounded-2xl border transition-all ${
+                  isCompleted  ? "bg-green-50 border-green-200" :
+                  isInProgress ? "bg-yellow-50 border-yellow-200" :
+                                 "bg-white border-gray-100"
                 }`}
               >
-                <div className="flex items-start gap-3">
-                  {/* Status buttons */}
-                  <div className="flex flex-col gap-1.5 pt-0.5 shrink-0">
-                    {/* In-progress button */}
-                    <button
-                      onClick={() => !isCompleted && toggleInProgressRequest(request.id)}
-                      disabled={isCompleted}
-                      className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
-                        isCompleted
-                          ? "bg-gray-100 text-gray-300"
-                          : isInProgress
-                          ? "bg-yellow-400 text-white"
-                          : "bg-gray-100 text-gray-400 active:scale-90"
-                      }`}
-                    >
-                      <Clock className="w-4 h-4" />
-                    </button>
+                {/* Collapsed row — tap to expand */}
+                <button
+                  className="w-full flex items-center gap-3 px-3 py-3 text-left"
+                  onClick={() => setExpandedId(isExpanded ? null : request.id)}
+                >
+                  {/* Important star */}
+                  {(request as any).isImportant && (
+                    <Star className="w-3.5 h-3.5 text-yellow-400 shrink-0 fill-yellow-400" />
+                  )}
 
-                    {/* Complete button */}
-                    <button
-                      onClick={() => toggleCompletedRequest(request.id)}
-                      className={`w-8 h-8 rounded-full flex items-center justify-center transition-all active:scale-90 ${
-                        isCompleted
-                          ? "bg-green-500 text-white"
-                          : "bg-gray-100 text-gray-400"
-                      }`}
-                    >
-                      {isCompleted ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
-                    </button>
-                  </div>
-
-                  {/* Content */}
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-1.5 flex-wrap mb-1">
-                      <h3 className={`font-bold text-sm ${isCompleted ? "text-gray-400 line-through" : "text-gray-800"}`}>
-                        {request.name}
-                      </h3>
-                    </div>
-
-                    {/* Task description */}
-                    <p className={`text-xs leading-relaxed mb-2 ${isCompleted ? "text-gray-400" : "text-gray-600"}`}>
-                      {request.task}
+                    <p className={`text-sm font-semibold truncate ${isCompleted ? "line-through text-gray-400" : "text-gray-800"}`}>
+                      {request.name}
                     </p>
-
-                    {/* Tags row */}
-                    <div className="flex items-center gap-1.5 flex-wrap">
-                      {/* Area badge */}
+                    <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
                       <span className={`text-[10px] px-2 py-0.5 rounded-full border ${AREA_COLORS[request.area] || "bg-gray-100 text-gray-600"}`}>
                         {request.area}
                       </span>
-
-                      {/* Reward badge */}
-                      {rewardInfo && (
-                        <span className={`text-[10px] px-2 py-0.5 rounded-full ${rewardInfo.color}`}>
-                          {rewardInfo.icon} {request.reward}
-                        </span>
-                      )}
-
-                      {/* Giver */}
-                      {request.giver && request.giver !== "Unknown" && (
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-gray-100 text-gray-500">
-                          👤 {request.giver}
-                        </span>
-                      )}
+                      <span className="text-[10px] text-gray-400">
+                        {REWARD_ICONS[request.rewardType]} {request.reward}
+                      </span>
                     </div>
                   </div>
-                </div>
+
+                  <ChevronDown className={`w-4 h-4 text-gray-400 shrink-0 transition-transform ${isExpanded ? "rotate-180" : ""}`} />
+                </button>
+
+                {/* Expanded detail */}
+                {isExpanded && (
+                  <div className="px-3 pb-3 border-t border-gray-100 pt-3 space-y-3">
+                    {/* Task description */}
+                    <p className="text-xs text-gray-600 leading-relaxed">{request.task}</p>
+
+                    {/* Giver */}
+                    {request.giver && request.giver !== "Unknown" && (
+                      <p className="text-[11px] text-gray-400">👤 Given by: <span className="text-gray-600 font-medium">{request.giver}</span></p>
+                    )}
+
+                    {/* Action buttons */}
+                    <div className="flex gap-2 pt-1">
+                      <button
+                        onClick={() => !isCompleted && toggleInProgressRequest(request.id)}
+                        disabled={isCompleted}
+                        className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-semibold transition-all ${
+                          isCompleted  ? "bg-gray-100 text-gray-300" :
+                          isInProgress ? "bg-yellow-400 text-white" :
+                                         "bg-gray-100 text-gray-600 active:scale-95"
+                        }`}
+                      >
+                        <Clock className="w-3.5 h-3.5" />
+                        {isInProgress ? "In Progress" : "Mark In Progress"}
+                      </button>
+
+                      <button
+                        onClick={() => toggleCompletedRequest(request.id)}
+                        className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-semibold transition-all active:scale-95 ${
+                          isCompleted ? "bg-green-500 text-white" : "bg-gray-100 text-gray-600"
+                        }`}
+                      >
+                        {isCompleted ? <Check className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
+                        {isCompleted ? "Completed" : "Mark Complete"}
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             );
           })}
