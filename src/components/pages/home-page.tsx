@@ -104,7 +104,7 @@ export function HomePage() {
   const { setCurrentPage, coins, capturedPokemon, discoveredHabitats, completedRequests, visitedLocations } = useAppStore();
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-red-500 via-red-600 to-red-700 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900">
+    <div className="h-full flex flex-col bg-gradient-to-b from-red-500 via-red-600 to-red-700">
       {/* Header Section */}
       <div className="pt-6 pb-2 px-4">
         {/* Top Row - Blue Button, Circles, and Coins */}
@@ -170,7 +170,7 @@ export function HomePage() {
       </div>
 
       {/* Red Bottom Tab with Stats and Chat Button */}
-      <div className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 dark:from-gray-800 dark:via-gray-800 dark:to-gray-800 pb-2">
+      <div className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 pb-2">
         {/* Stats Row */}
         <div className="h-20 flex items-center relative">
           {/* Left stats — evenly spaced from left edge to center */}
