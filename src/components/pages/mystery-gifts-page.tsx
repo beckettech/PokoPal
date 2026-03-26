@@ -132,18 +132,18 @@ export function MysteryGiftsPage() {
                           onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
                         />
                       )}
-                      <span className="text-xs text-gray-700 font-medium">{item}</span>
+                      <span className="text-xs text-gray-700 dark:text-gray-200 font-medium">{item}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Details */}
                 <div className="mt-3 space-y-1.5">
-                  <div className="flex items-start gap-1.5 text-xs text-gray-500">
+                  <div className="flex items-start gap-1.5 text-xs text-gray-500 dark:text-gray-400">
                     <Clock className="w-3.5 h-3.5 shrink-0 mt-0.5 text-gray-400 dark:text-gray-500" />
                     <span>{gift.availability}</span>
                   </div>
-                  <p className="text-xs text-gray-400 pl-5">{gift.codeNote}</p>
+                  <p className="text-xs text-gray-400 dark:text-gray-500 pl-5">{gift.codeNote}</p>
                 </div>
               </div>
             );
