@@ -9,7 +9,7 @@ import { getApiUrl } from "@/lib/api-config";
 import habitatsData from "@/data/scraped/habitats.json";
 
 // Dexter avatar
-const DEXTER_AVATAR = "🤖";
+const DEXTER_AVATAR = "/logo.svg";
 
 interface Message {
   id: string;
@@ -159,8 +159,8 @@ export function ChatPage() {
           </button>
           
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-xl">
-              {DEXTER_AVATAR}
+            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+              <img src={DEXTER_AVATAR} alt="Dexter" className="w-8 h-8 object-contain" />
             </div>
             <div>
               <h1 className="text-lg font-bold text-white">Dexter</h1>
@@ -191,8 +191,8 @@ export function ChatPage() {
               animate={{ opacity: 1, y: 0 }}
               className="text-center py-8"
             >
-              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
-                {DEXTER_AVATAR}
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center overflow-hidden mx-auto mb-4">
+                <img src={DEXTER_AVATAR} alt="Dexter" className="w-12 h-12 object-contain" />
               </div>
               <h2 className="text-lg font-bold text-gray-800 mb-2">Hi, I'm Dexter!</h2>
               <p className="text-sm text-gray-500 max-w-xs mx-auto">
@@ -201,7 +201,7 @@ export function ChatPage() {
               <div className="mt-4 space-y-2">
                 <p className="text-xs text-gray-400">Try asking:</p>
                 <div className="flex flex-wrap gap-2 justify-center">
-                  {["Where can I find Pikachu?", "How do I build a hot spring?", "What items do I need for a garden?"].map(q => (
+                  {["Where do I find tomatoes?", "How to rebuild pokemon center?", "Where can I find Pikachu?"].map(q => (
                     <button
                       key={q}
                       onClick={() => setInput(q)}
