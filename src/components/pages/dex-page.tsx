@@ -317,7 +317,7 @@ export function DexPage() {
 
   // ── Pokemon List ──
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-red-500 to-red-600 dark:from-gray-800 dark:to-gray-900">
+    <div className="h-full flex flex-col bg-gradient-to-b from-red-500 to-red-600">
       {/* Header */}
       <div className="pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
