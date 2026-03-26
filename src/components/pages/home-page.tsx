@@ -2,6 +2,7 @@
 
 // Pokopia Guide - Main Home Page
 import { useAppStore } from "@/lib/store";
+import { useState, useEffect } from "react";
 import { 
   TreePine, 
   Map, 
@@ -13,7 +14,8 @@ import {
   MessageCircle,
   Coins,
   Sparkles,
-  Settings
+  Settings,
+  X
 } from "lucide-react";
 
 // Pokedex/Calculator icon for Dex
@@ -102,6 +104,21 @@ const TOTAL = TOTAL_POKEMON + TOTAL_HABITATS + TOTAL_REQUESTS + TOTAL_LOCATIONS;
 
 export function HomePage() {
   const { setCurrentPage, coins, capturedPokemon, discoveredHabitats, completedRequests, visitedLocations } = useAppStore();
+  const isLoggedIn = useAppStore((s) => s.user.isLoggedIn);
+  const [showAccountNudge, setShowAccountNudge] = useState(false);
+
+  // Show nudge once for users without an account
+  useEffect(() => {
+    if (!isLoggedIn && !localStorage.getItem('pokopia_nudge_dismissed')) {
+      const timer = setTimeout(() => setShowAccountNudge(true), 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [isLoggedIn]);
+
+  const dismissNudge = () => {
+    setShowAccountNudge(false);
+    localStorage.setItem('pokopia_nudge_dismissed', 'true');
+  };
 
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-red-500 via-red-600 to-red-700">
@@ -146,6 +163,28 @@ export function HomePage() {
           </div>
         </div>
       </div>
+
+      {/* Account Nudge - first time users */}
+      {showAccountNudge && (
+        <div className="mx-4 mt-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl p-3 flex items-center gap-3 shadow-lg">
+          <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center shrink-0">
+            <Settings className="w-5 h-5 text-white" />
+          </div>
+          <div className="flex-1">
+            <p className="text-white font-bold text-sm">Create an Account</p>
+            <p className="text-white/80 text-[11px]">Save your progress & post to Cloud Islands</p>
+          </div>
+          <button
+            onClick={() => { setCurrentPage("account"); dismissNudge(); }}
+            className="px-3 py-1.5 bg-white rounded-full text-indigo-600 font-bold text-xs active:scale-95 transition-transform shrink-0"
+          >
+            Sign Up
+          </button>
+          <button onClick={dismissNudge} className="text-white/50 active:text-white p-1">
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+      )}
 
       {/* Main Content Card - Apps fill space */}
       <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] shadow-2xl overflow-hidden flex flex-col">
