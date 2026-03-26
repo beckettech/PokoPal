@@ -20,37 +20,34 @@ export function MobileAdBanner() {
         const isNative = Capacitor.isNativePlatform();
         setIsMobile(isNative);
 
-        if (isNative) {
-          // Initialize RevenueCat if API key is available
-          if (REVENUECAT_CONFIG.apiKey) {
-            try {
-              await Purchases.configure({
-                apiKey: REVENUECAT_CONFIG.apiKey,
-              });
+        // Initialize AdMob on both native and web
+        if (REVENUECAT_CONFIG.apiKey && isNative) {
+          try {
+            await Purchases.configure({
+              apiKey: REVENUECAT_CONFIG.apiKey,
+            });
 
-              // Check if user has active entitlement
-              const { customerInfo } = await Purchases.getCustomerInfo();
-              const hasPro = customerInfo.activeSubscriptions.includes(
-                REVENUECAT_CONFIG.entitlements.pro
-              );
+            const { customerInfo } = await Purchases.getCustomerInfo();
+            const hasPro = customerInfo.activeSubscriptions.includes(
+              REVENUECAT_CONFIG.entitlements.pro
+            );
 
-              if (hasPro && !user.isPremium) {
-                setPremium(true);
-              }
-            } catch (e) {
-              console.log('RevenueCat not configured or purchase check failed');
+            if (hasPro && !user.isPremium) {
+              setPremium(true);
             }
+          } catch (e) {
+            console.log('RevenueCat not configured or purchase check failed');
           }
+        }
 
-          // Initialize AdMob
-          await AdMob.initialize({
-            requestTrackingAuthorization: true,
-            testingMode: process.env.NODE_ENV === 'development',
-          });
+        // Initialize AdMob (works on both native and web)
+        await AdMob.initialize({
+          requestTrackingAuthorization: true,
+          testingMode: process.env.NODE_ENV === 'development',
+        });
 
-          if (!user.adsRemoved) {
-            await showBannerAd();
-          }
+        if (!user.adsRemoved) {
+          await showBannerAd();
         }
       } catch (error) {
         console.log('Not running in Capacitor or AdMob not available');
@@ -127,9 +124,6 @@ export function MobileAdBanner() {
     }
   };
 
-  // Don't render anything on web
-  if (!isMobile) return null;
-
   // Admin ad override
   if (isAdmin && adminForceAds === "hide") return null;
 
@@ -139,12 +133,12 @@ export function MobileAdBanner() {
   return (
     <div
       className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 dark:border-gray-700 px-3 py-2 flex items-center justify-between safe-area-bottom"
-      onClick={() => setShowRemoveOption(!showRemoveOption)}
+      onClick={() => isMobile && setShowRemoveOption(!showRemoveOption)}
     >
       <div className="flex-1 h-[50px] flex items-center justify-center text-gray-400 dark:text-gray-500 text-xs">
         <span>Advertisement</span>
       </div>
-      {showRemoveOption && (
+      {showRemoveOption && isMobile && (
         <button
           onClick={(e) => {
             e.stopPropagation();
