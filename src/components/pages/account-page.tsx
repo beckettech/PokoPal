@@ -1,11 +1,11 @@
 'use client';
 
 import { useAppStore } from "@/lib/store";
-import { ArrowLeft, User, Crown, RefreshCw, Info } from "lucide-react";
+import { ArrowLeft, User, Crown, RefreshCw, Info, Moon, Sun } from "lucide-react";
 import { useState } from "react";
 
 export function AccountPage() {
-  const { setCurrentPage, user, setPremium, restorePurchases } = useAppStore();
+  const { setCurrentPage, user, setPremium, restorePurchases, darkMode, toggleDarkMode } = useAppStore();
   const [isRestoring, setIsRestoring] = useState(false);
 
   const handleRestorePurchases = async () => {
@@ -51,6 +51,22 @@ export function AccountPage() {
       <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
         <div className="p-4 space-y-4">
           
+          {/* Dark Mode Toggle */}
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden">
+            <div className="p-4 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                {darkMode ? <Moon className="w-5 h-5 text-indigo-400" /> : <Sun className="w-5 h-5 text-amber-500" />}
+                <span className="font-medium text-gray-900 dark:text-white text-sm">Dark Mode</span>
+              </div>
+              <button
+                onClick={toggleDarkMode}
+                className={`w-12 h-7 rounded-full transition-colors duration-200 ${darkMode ? 'bg-indigo-500' : 'bg-gray-300'}`}
+              >
+                <div className={`w-5 h-5 bg-white rounded-full shadow-sm transition-transform duration-200 ${darkMode ? 'translate-x-6' : 'translate-x-1'}`} />
+              </button>
+            </div>
+          </div>
+
           {/* Account Section */}
           <div className="bg-gray-50 rounded-xl overflow-hidden">
             <div className="px-4 py-3 border-b border-gray-100">

@@ -90,9 +90,11 @@ interface AppState {
   toggleClaimedGift: (id: string) => void;
   // User/Account
   user: UserState;
+  darkMode: boolean;
   setPremium: (isPremium: boolean) => void;
   setAdsRemoved: (removed: boolean) => void;
   restorePurchases: () => void;
+  toggleDarkMode: () => void;
 }
 
 export const useAppStore = create<AppState>()(
@@ -237,6 +239,14 @@ export const useAppStore = create<AppState>()(
         adsRemoved: false,
         lastPurchaseRestore: null,
       },
+      darkMode: false,
+      toggleDarkMode: () => set((state) => {
+        const next = !state.darkMode;
+        if (typeof document !== 'undefined') {
+          document.documentElement.classList.toggle('dark', next);
+        }
+        return { darkMode: next };
+      }),
       setPremium: (isPremium) => set((state) => ({
         user: {
           ...state.user,
@@ -285,6 +295,7 @@ export const useAppStore = create<AppState>()(
         inProgressRequests: state.inProgressRequests,
         claimedGifts: state.claimedGifts,
         user: state.user,
+        darkMode: state.darkMode,
       }),
     }
   )

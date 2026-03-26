@@ -18,6 +18,7 @@ import { MobileAdBanner } from "@/components/MobileAdBanner";
 
 export default function Home() {
   const currentPage = useAppStore((state) => state.currentPage);
+  const darkMode = useAppStore((state) => state.darkMode);
   
   const renderPage = () => {
     switch (currentPage) {
@@ -53,7 +54,7 @@ export default function Home() {
   };
 
   return (
-    <main className="h-screen bg-gradient-to-b from-red-500 to-red-700 overflow-hidden">
+    <main className={`h-screen overflow-hidden ${darkMode ? 'dark bg-gray-900' : 'bg-gradient-to-b from-red-500 to-red-700'}`}>
       <div key={currentPage} className="h-full">
         {renderPage()}
       </div>
