@@ -37,8 +37,8 @@ export function ChatPage() {
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
-    if (!handle) {
-      alert("Please set your @handle in Account settings first!");
+    if (!useAppStore.getState().user.isLoggedIn) {
+      alert("Please create an account to use Dexter! Go to Account to sign up.");
       return;
     }
     if (coins < 100) {

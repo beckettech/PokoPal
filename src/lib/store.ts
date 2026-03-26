@@ -1,6 +1,7 @@
 // Pokopia Store - State management for the app
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import { getApiUrl } from "./api-config";
 
 export type Page = 
   | "home" 
@@ -38,6 +39,9 @@ interface UserState {
   premiumPurchaseDate: string | null;
   adsRemoved: boolean;
   lastPurchaseRestore: string | null;
+  email: string | null;
+  isLoggedIn: boolean;
+  authToken: string | null;
 }
 
 interface AppState {
@@ -97,6 +101,9 @@ interface AppState {
   restorePurchases: () => void;
   toggleDarkMode: () => void;
   setHandle: (handle: string) => void;
+  signUp: (email: string, password: string, handle: string) => Promise<boolean>;
+  signIn: (email: string, password: string) => Promise<boolean>;
+  signOut: () => void;
 }
 
 export const useAppStore = create<AppState>()(
@@ -240,6 +247,9 @@ export const useAppStore = create<AppState>()(
         premiumPurchaseDate: null,
         adsRemoved: false,
         lastPurchaseRestore: null,
+        email: null,
+        isLoggedIn: false,
+        authToken: null,
       },
       darkMode: false,
       handle: "",
@@ -270,6 +280,49 @@ export const useAppStore = create<AppState>()(
           ...state.user,
           lastPurchaseRestore: new Date().toISOString(),
         }
+      })),
+      signUp: async (email, password, handle) => {
+        try {
+          const res = await fetch(getApiUrl("/api/auth/signup"), {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password, handle }),
+          });
+          const data = await res.json();
+          if (data.success) {
+            set((state) => ({
+              user: { ...state.user, email, isLoggedIn: true, authToken: data.token },
+              handle,
+            }));
+            return true;
+          }
+          return false;
+        } catch {
+          return false;
+        }
+      },
+      signIn: async (email, password) => {
+        try {
+          const res = await fetch(getApiUrl("/api/auth/login"), {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password }),
+          });
+          const data = await res.json();
+          if (data.success) {
+            set((state) => ({
+              user: { ...state.user, email, isLoggedIn: true, authToken: data.token },
+              handle: data.user?.handle || state.handle,
+            }));
+            return true;
+          }
+          return false;
+        } catch {
+          return false;
+        }
+      },
+      signOut: () => set((state) => ({
+        user: { ...state.user, email: null, isLoggedIn: false, authToken: null },
       })),
     }),
     {

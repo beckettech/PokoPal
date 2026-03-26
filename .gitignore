@@ -48,6 +48,7 @@ test
 prompt
 
 server.log
+data/users.json
 # Skills directory
 /skills/
 # Mobile build output

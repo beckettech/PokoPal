@@ -46,8 +46,8 @@ export function CloudIslandsPage() {
 
   const handleSubmitPost = async () => {
     if (!postForm.title || !postForm.islandCode || postImages.length === 0) return;
-    if (!handle) {
-      alert("Please set your @handle in Account settings first!");
+    if (!useAppStore.getState().user.isLoggedIn) {
+      alert("Please create an account first! Go to Account to sign up.");
       return;
     }
     setSubmitting(true);
