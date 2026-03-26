@@ -118,6 +118,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    overscroll-behavior: none;
   }
 }
 
@@ -152,6 +153,7 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 /* Prevent text selection on interactive elements */
