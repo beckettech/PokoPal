@@ -8007,5 +8007,137 @@
         "image": "/items/flowerytablesetting.png"
       }
     ]
+  },
+  {
+    "id": 210,
+    "slug": "freezingchambers",
+    "name": "Freezing Chambers",
+    "image": "/habitats/legendary-articuno.png",
+    "description": "A legendary ice chamber that attracts Articuno. Build in Palette Town using the kit from the eastern island.",
+    "pokemon": [
+      {
+        "name": "Articuno",
+        "slug": "articuno"
+      }
+    ],
+    "locations": ["Palette Town"],
+    "buildItems": [
+      {
+        "name": "Stone",
+        "slug": "stone",
+        "quantity": 50,
+        "image": "/items/stone.png"
+      },
+      {
+        "name": "Ice",
+        "slug": "ice",
+        "quantity": 50,
+        "image": "/items/ice.png"
+      },
+      {
+        "name": "Crystal Fragments",
+        "slug": "crystalfragments",
+        "quantity": 10,
+        "image": "/items/crystalfragments.png"
+      },
+      {
+        "name": "Pokémetal",
+        "slug": "pokemetal",
+        "quantity": 10,
+        "image": "/items/pokemetal.png"
+      }
+    ],
+    "requirements": "Build and Water specialty Pokémon",
+    "legendaryInfo": "Get the kit from the eastern island (Yellow Poké Ball on a plinth). Articuno appears inside once built."
+  },
+  {
+    "id": 211,
+    "slug": "abandonedpowerplant",
+    "name": "Abandoned Power Plant",
+    "image": "/habitats/legendary-zapdos.png",
+    "description": "A legendary power plant that attracts Zapdos. Build in Palette Town using the kit from the southern island mountain.",
+    "pokemon": [
+      {
+        "name": "Zapdos",
+        "slug": "zapdos"
+      }
+    ],
+    "locations": ["Palette Town"],
+    "buildItems": [
+      {
+        "name": "Copper Ingots",
+        "slug": "copperingots",
+        "quantity": 50,
+        "image": "/items/copperingots.png"
+      },
+      {
+        "name": "Iron Ingots",
+        "slug": "ironingots",
+        "quantity": 50,
+        "image": "/items/ironingots.png"
+      },
+      {
+        "name": "Sealass Fragments",
+        "slug": "sealassfragments",
+        "quantity": 50,
+        "image": "/items/sealassfragments.png"
+      },
+      {
+        "name": "Bricks",
+        "slug": "bricks",
+        "quantity": 50,
+        "image": "/items/bricks.png"
+      },
+      {
+        "name": "Pokémetal",
+        "slug": "pokemetal",
+        "quantity": 10,
+        "image": "/items/pokemetal.png"
+      }
+    ],
+    "requirements": "Build, Crush, Fly, and Generate specialty Pokémon",
+    "legendaryInfo": "Get the kit from the southern island mountain top (Yellow Poké Ball on a plinth). Zapdos appears inside once built."
+  },
+  {
+    "id": 212,
+    "slug": "altarofflame",
+    "name": "Altar of Flame",
+    "image": "/habitats/legendary-moltres.png",
+    "description": "A legendary fire altar that attracts Moltres. Build in Palette Town using the kit from the northwestern island.",
+    "pokemon": [
+      {
+        "name": "Moltres",
+        "slug": "moltres"
+      }
+    ],
+    "locations": ["Palette Town"],
+    "buildItems": [
+      {
+        "name": "Copper Ingots",
+        "slug": "copperingots",
+        "quantity": 50,
+        "image": "/items/copperingots.png"
+      },
+      {
+        "name": "Gold Ingots",
+        "slug": "goldingots",
+        "quantity": 50,
+        "image": "/items/goldingots.png"
+      },
+      {
+        "name": "Lava Rocks",
+        "slug": "lavarocks",
+        "quantity": 50,
+        "image": "/items/lavarocks.png"
+      },
+      {
+        "name": "Pokémetal",
+        "slug": "pokemetal",
+        "quantity": 10,
+        "image": "/items/pokemetal.png"
+      }
+    ],
+    "requirements": "Build specialty Pokémon",
+    "legendaryInfo": "Get the kit from the northwestern island (Yellow Poké Ball on a plinth). Moltres appears inside once built."
   }
 ]

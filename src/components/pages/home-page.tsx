@@ -11,7 +11,8 @@ import {
   Package, 
   Gift, 
   MessageCircle,
-  Coins
+  Coins,
+  Sparkles
 } from "lucide-react";
 
 // Pokedex/Calculator icon for Dex
@@ -89,6 +90,14 @@ const menuItems = [
     color: "bg-gradient-to-br from-pink-400 to-pink-500",
     shadowColor: "shadow-pink-500/30",
     hasNotification: true 
+  },
+  { 
+    id: "legendaries", 
+    icon: Sparkles, 
+    label: "Legendaries",
+    color: "bg-gradient-to-br from-purple-500 to-indigo-600",
+    shadowColor: "shadow-purple-500/30",
+    hasNotification: false 
   },
 ];
 
