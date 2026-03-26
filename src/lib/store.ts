@@ -96,6 +96,8 @@ interface AppState {
   user: UserState;
   darkMode: boolean;
   handle: string; // User's @handle for community features
+  visitedPages: string[];
+  markPageVisited: (page: string) => void;
   setPremium: (isPremium: boolean) => void;
   setAdsRemoved: (removed: boolean) => void;
   restorePurchases: () => void;
@@ -253,6 +255,12 @@ export const useAppStore = create<AppState>()(
       },
       darkMode: false,
       handle: "",
+      visitedPages: [],
+      markPageVisited: (page) => set((state) => ({
+        visitedPages: state.visitedPages.includes(page)
+          ? state.visitedPages
+          : [...state.visitedPages, page]
+      })),
       setHandle: (handle) => set({ handle }),
       toggleDarkMode: () => set((state) => {
         const next = !state.darkMode;
@@ -354,6 +362,7 @@ export const useAppStore = create<AppState>()(
         user: state.user,
         darkMode: state.darkMode,
         handle: state.handle,
+        visitedPages: state.visitedPages,
       }),
     }
   )

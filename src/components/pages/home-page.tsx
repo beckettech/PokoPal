@@ -36,7 +36,6 @@ const menuItems = [
     label: "Dex",
     color: "bg-gradient-to-br from-red-500 to-red-600",
     shadowColor: "shadow-red-500/30",
-    hasNotification: false 
   },
   { 
     id: "habitat-dex", 
@@ -44,7 +43,6 @@ const menuItems = [
     label: "Habitat Dex",
     color: "bg-gradient-to-br from-green-400 to-green-500",
     shadowColor: "shadow-green-500/30",
-    hasNotification: true 
   },
   { 
     id: "map", 
@@ -52,7 +50,6 @@ const menuItems = [
     label: "Map",
     color: "bg-gradient-to-br from-blue-400 to-blue-500",
     shadowColor: "shadow-blue-500/30",
-    hasNotification: false 
   },
   { 
     id: "requests", 
@@ -60,7 +57,6 @@ const menuItems = [
     label: "Requests",
     color: "bg-gradient-to-br from-yellow-400 to-yellow-500",
     shadowColor: "shadow-yellow-500/30",
-    hasNotification: true 
   },
   { 
     id: "cloud-islands", 
@@ -68,7 +64,6 @@ const menuItems = [
     label: "Cloud Islands",
     color: "bg-gradient-to-br from-cyan-400 to-cyan-500",
     shadowColor: "shadow-cyan-500/30",
-    hasNotification: false 
   },
   { 
     id: "dream-islands", 
@@ -76,7 +71,6 @@ const menuItems = [
     label: "Dream Islands",
     color: "bg-gradient-to-br from-purple-400 to-purple-500",
     shadowColor: "shadow-purple-500/30",
-    hasNotification: false 
   },
   { 
     id: "items", 
@@ -84,7 +78,6 @@ const menuItems = [
     label: "Items",
     color: "bg-gradient-to-br from-orange-400 to-orange-500",
     shadowColor: "shadow-orange-500/30",
-    hasNotification: false 
   },
   { 
     id: "mystery-gifts", 
@@ -92,7 +85,6 @@ const menuItems = [
     label: "Mystery Gifts",
     color: "bg-gradient-to-br from-pink-400 to-pink-500",
     shadowColor: "shadow-pink-500/30",
-    hasNotification: true 
   },
 ];
 
@@ -105,7 +97,11 @@ const TOTAL = TOTAL_POKEMON + TOTAL_HABITATS + TOTAL_REQUESTS + TOTAL_LOCATIONS;
 export function HomePage() {
   const { setCurrentPage, coins, capturedPokemon, discoveredHabitats, completedRequests, visitedLocations } = useAppStore();
   const isLoggedIn = useAppStore((s) => s.user.isLoggedIn);
+  const visitedPages = useAppStore((s) => s.visitedPages);
   const [showAccountNudge, setShowAccountNudge] = useState(false);
+
+  // Dynamic notification: true if page not yet visited
+  const getPageNotification = (pageId: string) => !visitedPages.includes(pageId);
 
   // Show nudge once for users without an account
   useEffect(() => {
@@ -197,7 +193,7 @@ export function HomePage() {
                 onClick={() => setCurrentPage(item.id as any)}
                 className={`relative rounded-xl ${item.color} ${item.shadowColor} shadow-lg flex flex-col items-center justify-center gap-2 active:scale-95 transition-transform`}
               >
-                {item.hasNotification && (
+                {getPageNotification(item.id) && (
                   <span className="absolute top-2 right-2 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white animate-pulse" />
                 )}
                 <item.icon className="w-10 h-10 text-white drop-shadow-md" />

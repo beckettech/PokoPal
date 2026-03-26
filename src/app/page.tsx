@@ -19,6 +19,12 @@ import { MobileAdBanner } from "@/components/MobileAdBanner";
 export default function Home() {
   const currentPage = useAppStore((state) => state.currentPage);
   const darkMode = useAppStore((state) => state.darkMode);
+  const markPageVisited = useAppStore((state) => state.markPageVisited);
+
+  // Track page visits for notification badges
+  if (currentPage !== "home") {
+    markPageVisited(currentPage);
+  }
   
   const renderPage = () => {
     switch (currentPage) {
