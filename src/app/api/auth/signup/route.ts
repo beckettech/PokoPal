@@ -1,22 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readFile, writeFile, mkdir } from "fs/promises";
-import path from "path";
-
-const USERS_FILE = path.join(process.cwd(), "data", "users.json");
-
-async function getUsers() {
-  try {
-    const data = await readFile(USERS_FILE, "utf-8");
-    return JSON.parse(data);
-  } catch {
-    return [];
-  }
-}
-
-async function saveUsers(users: any[]) {
-  await mkdir(path.dirname(USERS_FILE), { recursive: true });
-  await writeFile(USERS_FILE, JSON.stringify(users, null, 2));
-}
+import { readUsersDB, writeUsersDB } from "@/lib/auth-db";
 
 export async function POST(req: NextRequest) {
   try {
@@ -34,10 +17,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: "Handle must be at least 2 characters with no spaces" }, { status: 400 });
     }
 
-    const users = await getUsers();
+    const db = await readUsersDB();
 
     // Check duplicate email
-    if (users.some((u: any) => u.email === email.toLowerCase())) {
+    if (db.users.some((u: any) => u.email === email.toLowerCase())) {
       return NextResponse.json({ success: false, error: "Email already registered" }, { status: 409 });
     }
 
@@ -50,10 +33,11 @@ export async function POST(req: NextRequest) {
       handle: handle.toLowerCase().replace("@", ""),
       token,
       createdAt: new Date().toISOString(),
+      chatHistory: [],
     };
 
-    users.push(newUser);
-    await saveUsers(users);
+    db.users.push(newUser);
+    await writeUsersDB(db);
 
     return NextResponse.json({
       success: true,

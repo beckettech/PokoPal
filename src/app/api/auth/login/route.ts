@@ -1,17 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { readFile } from "fs/promises";
-import path from "path";
-
-const USERS_FILE = path.join(process.cwd(), "data", "users.json");
-
-async function getUsers() {
-  try {
-    const data = await readFile(USERS_FILE, "utf-8");
-    return JSON.parse(data);
-  } catch {
-    return [];
-  }
-}
+import { readUsersDB, writeUsersDB } from "@/lib/auth-db";
 
 export async function POST(req: NextRequest) {
   try {
@@ -21,14 +9,17 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: "Email and password required" }, { status: 400 });
     }
 
-    const users = await getUsers();
-    const user = users.find((u: any) => u.email === email.toLowerCase());
+    const db = await readUsersDB();
+    const user = db.users.find((u: any) => u.email === email.toLowerCase());
 
     if (!user || user.password !== btoa(password)) {
       return NextResponse.json({ success: false, error: "Invalid email or password" }, { status: 401 });
     }
 
+    // Rotate token on login
     const token = crypto.randomUUID();
+    user.token = token;
+    await writeUsersDB(db);
 
     return NextResponse.json({
       success: true,

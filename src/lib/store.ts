@@ -331,6 +331,8 @@ export const useAppStore = create<AppState>()(
       },
       signOut: () => set((state) => ({
         user: { ...state.user, email: null, isLoggedIn: false, authToken: null },
+        chatMessages: [],
+        handle: "",
       })),
     }),
     {

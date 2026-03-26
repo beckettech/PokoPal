@@ -21,10 +21,48 @@ interface Message {
 
 export function ChatPage() {
   const { setCurrentPage, coins, chatMessages, addChatMessage, spendCoins, addCoins, capturedPokemon, ownedItems, discoveredHabitats, navigateToPokemon, navigateToHabitat, handle } = useAppStore();
+  const authToken = useAppStore((s) => s.user.authToken);
+  const isLoggedIn = useAppStore((s) => s.user.isLoggedIn);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [historyLoaded, setHistoryLoaded] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Load chat history from server when user is logged in
+  useEffect(() => {
+    if (isLoggedIn && authToken && !historyLoaded) {
+      fetch(getApiUrl(`/api/chat/history?token=${authToken}`))
+        .then(res => res.json())
+        .then(data => {
+          if (data.messages && data.messages.length > 0) {
+            // Load server messages into store (only if local is empty)
+            const store = useAppStore.getState();
+            if (store.chatMessages.length === 0) {
+              data.messages.forEach((m: any) => {
+                addChatMessage({ role: m.role, content: m.content });
+              });
+            }
+          }
+          setHistoryLoaded(true);
+        })
+        .catch(() => setHistoryLoaded(true));
+    }
+    if (!isLoggedIn) setHistoryLoaded(true);
+  }, [isLoggedIn, authToken, historyLoaded]);
+
+  // Save chat messages to server after they change
+  useEffect(() => {
+    if (isLoggedIn && authToken && historyLoaded && chatMessages.length > 0) {
+      // Debounce save
+      const lastMsg = chatMessages[chatMessages.length - 1];
+      fetch(getApiUrl("/api/chat/history"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token: authToken, message: { role: lastMsg.role, content: lastMsg.content } }),
+      }).catch(() => {});
+    }
+  }, [chatMessages, isLoggedIn, authToken, historyLoaded]);
 
   // Scroll to bottom on new messages
   useEffect(() => {
