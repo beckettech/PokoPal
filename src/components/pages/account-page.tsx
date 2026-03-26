@@ -18,6 +18,7 @@ export function AccountPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [authHandle, setAuthHandle] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [authError, setAuthError] = useState("");
   const [authLoading, setAuthLoading] = useState(false);
   const [editingHandle, setEditingHandle] = useState(false);
@@ -219,7 +220,10 @@ export function AccountPage() {
                     {authTab === "signup" && (
                       <div className="relative">
                         <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-                        <input type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} placeholder="Confirm Password" className={`${inputClass} pl-10`} />
+                        <input type={showConfirmPassword ? "text" : "password"} value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} placeholder="Confirm Password" className={`${inputClass} pl-10 pr-10`} />
+                        <button onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="absolute right-3 top-1/2 -translate-y-1/2">
+                          {showConfirmPassword ? <EyeOffIcon className="w-4 h-4 text-gray-400" /> : <EyeIcon className="w-4 h-4 text-gray-400" />}
+                        </button>
                       </div>
                     )}
                     <button
