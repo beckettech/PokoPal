@@ -49,6 +49,8 @@ prompt
 
 server.log
 data/users.json
+data/admin-config.json
+data/reports.json
 # Skills directory
 /skills/
 # Mobile build output

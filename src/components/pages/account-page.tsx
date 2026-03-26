@@ -1,12 +1,15 @@
 'use client';
 
 import { useAppStore } from "@/lib/store";
-import { ArrowLeft, User, Crown, RefreshCw, Info, Moon, Sun, Mail, AtSign, LogOut, Lock, Eye, EyeOff } from "lucide-react";
-import { useState } from "react";
+import { ArrowLeft, User, Crown, RefreshCw, Info, Moon, Sun, Mail, AtSign, LogOut, Lock, Eye, EyeOff, Bug, Shield, Eye as EyeIcon, EyeOff as EyeOffIcon } from "lucide-react";
+import { useState, useRef } from "react";
+import { ReportIssueModal } from "@/components/ReportIssueModal";
 
 export function AccountPage() {
-  const { setCurrentPage, user, setPremium, restorePurchases, darkMode, toggleDarkMode, handle, setHandle, signUp, signIn, signOut, isLoggedIn } = useAppStore();
+  const { setCurrentPage, user, setPremium, restorePurchases, darkMode, toggleDarkMode, handle, setHandle, signUp, signIn, signOut, isLoggedIn, isAdmin, godMode, setGodMode, adminForceAds, setAdminForceAds } = useAppStore();
   const [isRestoring, setIsRestoring] = useState(false);
+  const [adminRevealed, setAdminRevealed] = useState(false);
+  const tapCount = useRef(0);
 
   // Auth form state
   const [authTab, setAuthTab] = useState<"signup" | "login">("signup");
@@ -19,6 +22,7 @@ export function AccountPage() {
   const [authLoading, setAuthLoading] = useState(false);
   const [editingHandle, setEditingHandle] = useState(false);
   const [handleDraft, setHandleDraft] = useState("");
+  const [reportModalOpen, setReportModalOpen] = useState(false);
 
   const handleRestorePurchases = async () => {
     setIsRestoring(true);
@@ -99,6 +103,15 @@ export function AccountPage() {
               </button>
             </div>
           </div>
+
+          {/* Report Issue */}
+          <button
+            onClick={() => setReportModalOpen(true)}
+            className="w-full bg-gray-50 dark:bg-gray-800 rounded-xl p-4 flex items-center gap-3 active:scale-[0.98] transition-transform"
+          >
+            <Bug className="w-5 h-5 text-red-500" />
+            <span className="font-medium text-gray-900 dark:text-white text-sm">Report an Issue</span>
+          </button>
 
           {/* Account Section */}
           <div className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden">
@@ -275,7 +288,19 @@ export function AccountPage() {
             <div className="p-4 space-y-2">
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-600 dark:text-gray-400">Version</span>
-                <span className="text-xs text-gray-400 dark:text-gray-500">1.0.0</span>
+                <span
+                  className="text-xs text-gray-400 dark:text-gray-500 cursor-pointer select-none"
+                  onClick={() => {
+                    tapCount.current++;
+                    if (tapCount.current >= 5 && isAdmin && !adminRevealed) {
+                      setAdminRevealed(true);
+                      tapCount.current = 0;
+                    }
+                    setTimeout(() => { if (tapCount.current < 5) tapCount.current = 0; }, 2000);
+                  }}
+                >
+                  Pokopia Guide v1.0.0
+                </span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-gray-600 dark:text-gray-400">Developer</span>
@@ -284,9 +309,57 @@ export function AccountPage() {
             </div>
           </div>
 
+          {/* Hidden Admin Section */}
+          {adminRevealed && isAdmin && (
+            <div className="bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20 rounded-xl overflow-hidden border border-purple-200 dark:border-purple-700">
+              <div className="px-4 py-3 border-b border-purple-100 dark:border-purple-700/50">
+                <h2 className="font-bold text-purple-900 dark:text-purple-300 flex items-center gap-2">
+                  <Shield className="w-4 h-4" />
+                  Admin Settings
+                </h2>
+              </div>
+              <div className="p-4 space-y-3">
+                {/* Ad Control */}
+                <div>
+                  <p className="text-xs font-medium text-gray-600 dark:text-gray-400 mb-2">Ad Override (your session only)</p>
+                  <div className="flex gap-2">
+                    {(["default", "show", "hide"] as const).map(opt => (
+                      <button
+                        key={opt}
+                        onClick={() => setAdminForceAds(opt)}
+                        className={`flex-1 py-1.5 text-xs font-medium rounded-lg transition-all ${
+                          adminForceAds === opt
+                            ? 'bg-purple-600 text-white'
+                            : 'bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700'
+                        }`}
+                      >
+                        {opt === 'default' ? 'Default' : opt === 'show' ? 'Force Show' : 'Force Hide'}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* God Mode */}
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-medium text-gray-800 dark:text-gray-200">God Mode</p>
+                    <p className="text-[10px] text-gray-500">Floating admin toolbar</p>
+                  </div>
+                  <button
+                    onClick={() => setGodMode(!godMode)}
+                    className={`w-12 h-7 rounded-full transition-colors ${godMode ? 'bg-purple-600' : 'bg-gray-300 dark:bg-gray-600'}`}
+                  >
+                    <div className={`w-5 h-5 bg-white rounded-full shadow-sm transition-transform ${godMode ? 'translate-x-6' : 'translate-x-1'}`} />
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
           <div className="h-4" />
         </div>
       </div>
+      <ReportIssueModal open={reportModalOpen} onClose={() => setReportModalOpen(false)} />
     </div>
   );
 }

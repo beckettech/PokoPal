@@ -17,6 +17,8 @@ import { ChatPage } from "@/components/pages/chat-page";
 import { CoinShopPage } from "@/components/pages/coin-shop-page";
 import { AccountPage } from "@/components/pages/account-page";
 import { MobileAdBanner } from "@/components/MobileAdBanner";
+import { BroadcastBanner } from "@/components/BroadcastBanner";
+import { AdminToolbar } from "@/components/AdminToolbar";
 
 export default function Home() {
   const currentPage = useAppStore((state) => state.currentPage);
@@ -79,6 +81,8 @@ export default function Home() {
         {renderPage()}
       </div>
       <MobileAdBanner />
+      <BroadcastBanner />
+      <AdminToolbar />
     </main>
   );
 }

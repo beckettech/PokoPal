@@ -44,6 +44,12 @@ interface UserState {
   authToken: string | null;
 }
 
+// Admin state
+interface AdminConfig {
+  broadcastMessage: string | null;
+  dataVersion: number;
+}
+
 interface AppState {
   currentPage: Page;
   setCurrentPage: (page: Page) => void;
@@ -106,6 +112,16 @@ interface AppState {
   signUp: (email: string, password: string, handle: string) => Promise<boolean>;
   signIn: (email: string, password: string) => Promise<boolean>;
   signOut: () => void;
+  // Admin (not persisted)
+  isAdmin: boolean;
+  adminConfig: AdminConfig;
+  godMode: boolean;
+  adminForceAds: "default" | "show" | "hide";
+  setAdminConfig: (config: Partial<AdminConfig>) => void;
+  setIsAdmin: (val: boolean) => void;
+  setGodMode: (val: boolean) => void;
+  setAdminForceAds: (val: "default" | "show" | "hide") => void;
+  fetchAdminConfig: () => Promise<void>;
 }
 
 export const useAppStore = create<AppState>()(
@@ -318,10 +334,24 @@ export const useAppStore = create<AppState>()(
           });
           const data = await res.json();
           if (data.success) {
+            const isAdmin = data.user?.isAdmin || false;
             set((state) => ({
               user: { ...state.user, email, isLoggedIn: true, authToken: data.token },
               handle: data.user?.handle || state.handle,
+              isAdmin,
             }));
+            if (isAdmin) {
+              // Fetch admin config in background
+              try {
+                const res = await fetch(getApiUrl("/api/admin/config"), {
+                  headers: { Authorization: `Bearer ${data.token}` },
+                });
+                if (res.ok) {
+                  const config = await res.json();
+                  set({ adminConfig: { broadcastMessage: config.broadcastMessage, dataVersion: config.dataVersion } });
+                }
+              } catch { /* ignore */ }
+            }
             return true;
           }
           return false;
@@ -333,11 +363,37 @@ export const useAppStore = create<AppState>()(
         user: { ...state.user, email: null, isLoggedIn: false, authToken: null },
         chatMessages: [],
         handle: "",
+        isAdmin: false,
+        godMode: false,
       })),
+      // Admin
+      isAdmin: false,
+      adminConfig: { broadcastMessage: null, dataVersion: 1 },
+      godMode: false,
+      adminForceAds: "default",
+      setAdminConfig: (config) => set((state) => ({
+        adminConfig: { ...state.adminConfig, ...config },
+      })),
+      setIsAdmin: (val) => set({ isAdmin: val }),
+      setGodMode: (val) => set({ godMode: val }),
+      setAdminForceAds: (val) => set({ adminForceAds: val }),
+      fetchAdminConfig: async () => {
+        try {
+          const token = get().user.authToken;
+          if (!token) return;
+          const res = await fetch(getApiUrl("/api/admin/config"), {
+            headers: { Authorization: `Bearer ${token}` },
+          });
+          if (res.ok) {
+            const data = await res.json();
+            set({ adminConfig: { broadcastMessage: data.broadcastMessage, dataVersion: data.dataVersion } });
+          }
+        } catch { /* ignore */ }
+      },
     }),
     {
       name: "pokopia-storage",
-      version: 2,
+      version: 3,
       migrate: (persistedState: any, version: number) => {
         // Migrate: give users 1000 coins if they have less than 100 (old default was 0 or 100)
         if (persistedState.coins < 100) {
@@ -365,6 +421,7 @@ export const useAppStore = create<AppState>()(
         darkMode: state.darkMode,
         handle: state.handle,
         visitedPages: state.visitedPages,
+        adminForceAds: state.adminForceAds,
       }),
     }
   )

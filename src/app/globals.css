@@ -175,3 +175,11 @@ html {
 input, textarea, select {
   font-size: 16px !important; /* Minimum 16px prevents iOS zoom on focus */
 }
+
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}

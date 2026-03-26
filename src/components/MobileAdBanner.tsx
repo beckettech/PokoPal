@@ -7,7 +7,7 @@ import { ADMOB_CONFIG, REVENUECAT_CONFIG } from '@/lib/purchases';
 import { useAppStore } from '@/lib/store';
 
 export function MobileAdBanner() {
-  const { user, setPremium, setAdsRemoved } = useAppStore();
+  const { user, setPremium, setAdsRemoved, isAdmin, adminForceAds } = useAppStore();
   const [isMobile, setIsMobile] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showRemoveOption, setShowRemoveOption] = useState(false);
@@ -130,8 +130,11 @@ export function MobileAdBanner() {
   // Don't render anything on web
   if (!isMobile) return null;
 
-  // Don't render if ads are removed
-  if (user.adsRemoved) return null;
+  // Admin ad override
+  if (isAdmin && adminForceAds === "hide") return null;
+
+  // Don't render if ads are removed (unless admin forces show)
+  if (user.adsRemoved && !(isAdmin && adminForceAds === "show")) return null;
 
   return (
     <div

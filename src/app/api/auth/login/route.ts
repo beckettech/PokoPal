@@ -16,6 +16,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: "Invalid email or password" }, { status: 401 });
     }
 
+    // Auto-admin for hardcoded email
+    if (user.email === "becketthoefling@gmail.com") {
+      user.isAdmin = true;
+    }
+
     // Rotate token on login
     const token = crypto.randomUUID();
     user.token = token;
@@ -24,7 +29,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({
       success: true,
       token,
-      user: { email: user.email, handle: user.handle },
+      user: { email: user.email, handle: user.handle, isAdmin: user.isAdmin || false },
     });
   } catch (error) {
     console.error("Login error:", error);
