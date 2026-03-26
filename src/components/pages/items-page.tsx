@@ -274,7 +274,7 @@ export function ItemsPage() {
                   </div>
 
                   {/* Name */}
-                  <span className="text-xs font-bold text-center line-clamp-2 text-gray-800">
+                  <span className="text-xs font-bold text-center line-clamp-2 text-gray-800 dark:text-gray-100">
                     {item.name}
                   </span>
                 </button>
@@ -310,8 +310,8 @@ export function ItemsPage() {
                 />
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-bold text-gray-800">{selectedItem.name}</h3>
-                <p className="text-xs text-gray-400">{selectedItem.category}</p>
+                <h3 className="text-lg font-bold text-gray-800 dark:text-white">{selectedItem.name}</h3>
+                <p className="text-xs text-gray-400 dark:text-gray-400">{selectedItem.category}</p>
                 {selectedItem.tag && (
                   <span className="inline-block mt-1 text-[10px] bg-gray-100 dark:bg-gray-700 text-gray-600 px-2 py-0.5 rounded-full">
                     {selectedItem.tag}
@@ -352,7 +352,7 @@ export function ItemsPage() {
                 <h4 className="text-xs font-bold text-gray-500 dark:text-gray-400 dark:text-gray-500 mb-2">💡 How to Get</h4>
                 <div className="space-y-1">
                   {selectedItem.methods.map((method, i) => (
-                    <p key={i} className="text-xs text-gray-600">• {method}</p>
+                    <p key={i} className="text-xs text-gray-600 dark:text-gray-300">• {method}</p>
                   ))}
                 </div>
               </div>

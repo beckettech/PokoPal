@@ -162,7 +162,7 @@ export function HabitatDexPage() {
             placeholder="Search habitats..."
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-2 rounded-xl bg-white dark:bg-gray-800 shadow text-gray-800 placeholder-gray-400 focus:outline-none text-sm"
+            className="w-full pl-9 pr-3 py-2 rounded-xl bg-white dark:bg-gray-800 shadow text-gray-800 dark:text-gray-100 placeholder-gray-400 focus:outline-none text-sm"
           />
         </div>
 

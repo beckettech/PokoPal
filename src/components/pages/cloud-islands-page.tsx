@@ -100,7 +100,7 @@ export function CloudIslandsPage() {
             onClick={() => setShowPostModal(true)}
             className="w-11 h-11 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center active:scale-90 transition-transform shadow-lg"
           >
-            <Plus className="w-6 h-6 text-cyan-600" />
+            <Plus className="w-6 h-6 text-cyan-600 dark:text-cyan-400" />
           </button>
         </div>
 
@@ -109,7 +109,7 @@ export function CloudIslandsPage() {
           <button
             onClick={() => setSortBy("popular")}
             className={`flex-1 py-1.5 rounded-lg text-xs font-medium flex items-center justify-center gap-1 transition-all ${
-              sortBy === "popular" ? "bg-white dark:bg-gray-800 text-cyan-600" : "text-white"
+              sortBy === "popular" ? "bg-white dark:bg-gray-800 text-cyan-600 dark:text-cyan-400" : "text-white"
             }`}
           >
             <TrendingUp className="w-3.5 h-3.5" />
@@ -118,7 +118,7 @@ export function CloudIslandsPage() {
           <button
             onClick={() => setSortBy("recent")}
             className={`flex-1 py-1.5 rounded-lg text-xs font-medium flex items-center justify-center gap-1 transition-all ${
-              sortBy === "recent" ? "bg-white dark:bg-gray-800 text-cyan-600" : "text-white"
+              sortBy === "recent" ? "bg-white dark:bg-gray-800 text-cyan-600 dark:text-cyan-400" : "text-white"
             }`}
           >
             <Clock className="w-3.5 h-3.5" />
@@ -131,7 +131,7 @@ export function CloudIslandsPage() {
           <button
             onClick={() => setFilterBy("all")}
             className={`px-3 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap transition-all ${
-              filterBy === "all" ? "bg-white dark:bg-gray-800 text-cyan-600" : "bg-white/20 text-white"
+              filterBy === "all" ? "bg-white dark:bg-gray-800 text-cyan-600 dark:text-cyan-400" : "bg-white/20 text-white"
             }`}
           >
             All
@@ -154,10 +154,10 @@ export function CloudIslandsPage() {
           {/* How to visit - at top */}
           <div className="bg-cyan-50 border border-cyan-100 rounded-2xl p-4">
             <div className="flex items-center gap-2 mb-2">
-              <Key className="w-4 h-4 text-cyan-600" />
-              <h3 className="font-bold text-cyan-900 text-sm">How to Visit Islands</h3>
+              <Key className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
+              <h3 className="font-bold text-cyan-900 dark:text-cyan-300 text-sm">How to Visit Islands</h3>
             </div>
-            <ol className="space-y-1.5 text-xs text-cyan-800">
+            <ol className="space-y-1.5 text-xs text-cyan-800 dark:text-cyan-400">
               <li>1. Buy <strong>Mysterious Goggles</strong> from PC Shop (Env Level 3)</li>
               <li>2. Use Goggles to browse other players' islands</li>
               <li>3. Enter island code • Requires Nintendo Switch Online</li>
@@ -206,7 +206,7 @@ export function CloudIslandsPage() {
                 <div className="p-4 space-y-4">
                   {/* Official Badge */}
                   {selectedIsland.isOfficial && (
-                    <div className="flex items-center gap-2 text-purple-600 bg-purple-50 border border-purple-100 rounded-xl px-3 py-2">
+                    <div className="flex items-center gap-2 text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/30 border border-purple-100 dark:border-purple-700 rounded-xl px-3 py-2">
                       <BadgeCheck className="w-4 h-4" />
                       <span className="text-xs font-bold">Official Island</span>
                     </div>
@@ -233,7 +233,7 @@ export function CloudIslandsPage() {
 
                   {/* Island Code */}
                   <div className="flex items-center gap-3 bg-gray-50 dark:bg-gray-900 rounded-xl p-3">
-                    <code className="flex-1 px-3 py-2 bg-white dark:bg-gray-800 rounded-lg text-lg font-mono text-gray-800 border border-gray-200">
+                    <code className="flex-1 px-3 py-2 bg-white dark:bg-gray-800 rounded-lg text-lg font-mono text-gray-800 dark:text-gray-100 border border-gray-200 dark:border-gray-600">
                       {selectedIsland.islandCode}
                     </code>
                     <button
@@ -250,11 +250,11 @@ export function CloudIslandsPage() {
 
                   {/* Stats */}
                   <div className="flex items-center justify-between bg-gray-50 dark:bg-gray-900 rounded-xl px-4 py-3">
-                    <div className="flex items-center gap-2 text-gray-600">
+                    <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                       <Bookmark className="w-4 h-4" />
                       <span className="text-sm font-medium">{selectedIsland.likes.toLocaleString()} saves</span>
                     </div>
-                    <span className="text-xs text-gray-400">by {selectedIsland.author}</span>
+                    <span className="text-xs text-gray-400 dark:text-gray-500">by {selectedIsland.author}</span>
                   </div>
 
                   {/* Description */}
@@ -269,7 +269,7 @@ export function CloudIslandsPage() {
                     className={`w-full py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all ${
                       savedIslands.includes(selectedIsland.islandCode)
                         ? "bg-yellow-400 text-yellow-900"
-                        : "bg-gray-100 dark:bg-gray-700 text-gray-600"
+                        : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
                     }`}
                   >
                     {savedIslands.includes(selectedIsland.islandCode) ? (
@@ -309,7 +309,7 @@ export function CloudIslandsPage() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-bold text-gray-800">Share Your Island</h2>
+                <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100">Share Your Island</h2>
                 <button onClick={() => setShowPostModal(false)}>
                   <X className="w-6 h-6 text-gray-400 dark:text-gray-500" />
                 </button>
@@ -320,7 +320,7 @@ export function CloudIslandsPage() {
                   <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-3">
                     <Check className="w-7 h-7 text-green-500" />
                   </div>
-                  <p className="font-bold text-gray-800">Submitted for Review!</p>
+                  <p className="font-bold text-gray-800 dark:text-gray-100">Submitted for Review!</p>
                   <p className="text-xs text-gray-500 dark:text-gray-400 dark:text-gray-500 mt-1">We'll email you once it's approved</p>
                 </div>
               ) : (
@@ -462,8 +462,8 @@ function IslandCard({
 
         <div className="flex-1 min-w-0 text-left">
           <h3 className="font-bold text-sm text-gray-800 dark:text-gray-100 truncate">{island.title}</h3>
-          <code className="text-base text-cyan-600 font-mono font-semibold">{island.islandCode}</code>
-          <p className="text-xs text-gray-500 line-clamp-2 mt-0.5">{island.description}</p>
+          <code className="text-base text-cyan-600 dark:text-cyan-400 font-mono font-semibold">{island.islandCode}</code>
+          <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mt-0.5">{island.description}</p>
         </div>
 
         {/* Save button inline */}
