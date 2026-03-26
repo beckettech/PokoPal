@@ -5,17 +5,6 @@ import { ArrowLeft, Gift, Check, Plus, Clock, Wifi, Hash } from "lucide-react";
 
 const GIFTS = [
   {
-    id: "commemorative-gift-set",
-    name: "Pokopia Release Commemorative Gift Set",
-    method: "Serial Code",
-    methodType: "code" as const,
-    items: ["2× Leppa Berry", "2× Fresh Carrot", "2× Beans"],
-    itemImages: ["/items/leppaberry.png", "/items/freshcarrot.png", "/items/beans.png"],
-    codeNote: "Code from Japanese Pokémon Info account on X (available until March 5, 2026)",
-    availability: "Feb 27, 2026 – Feb 28, 2027",
-    active: true,
-  },
-  {
     id: "ditto-rug",
     name: "Ditto Rug",
     method: "Internet",
