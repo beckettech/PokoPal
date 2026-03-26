@@ -32,7 +32,7 @@ const menuItems = [
     id: "dex", 
     icon: PokedexIcon, 
     label: "Dex",
-    color: "bg-gradient-to-br from-red-500 to-red-600",
+    color: "bg-gradient-to-br from-red-500 to-red-600 dark:from-gray-800 dark:to-gray-900",
     shadowColor: "shadow-red-500/30",
     hasNotification: false 
   },
@@ -104,7 +104,7 @@ export function HomePage() {
   const { setCurrentPage, coins, capturedPokemon, discoveredHabitats, completedRequests, visitedLocations } = useAppStore();
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-red-500 via-red-600 to-red-700">
+    <div className="h-full flex flex-col bg-gradient-to-b from-red-500 via-red-600 to-red-700 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900">
       {/* Header Section */}
       <div className="pt-6 pb-2 px-4">
         {/* Top Row - Blue Button, Circles, and Coins */}
@@ -148,7 +148,7 @@ export function HomePage() {
       </div>
 
       {/* Main Content Card - Apps fill space */}
-      <div className="flex-1 bg-white rounded-t-[2rem] shadow-2xl overflow-hidden flex flex-col">
+      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] shadow-2xl overflow-hidden flex flex-col">
         {/* Grid Menu - 2x4 Grid - Square apps Filling Space */}
         <div className="flex-1 p-3 flex flex-col">
           <div className="grid grid-cols-2 gap-2 flex-1 auto-rows-fr">
@@ -170,7 +170,7 @@ export function HomePage() {
       </div>
 
       {/* Red Bottom Tab with Stats and Chat Button */}
-      <div className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 pb-2">
+      <div className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 dark:from-gray-800 dark:via-gray-800 dark:to-gray-800 pb-2">
         {/* Stats Row */}
         <div className="h-20 flex items-center relative">
           {/* Left stats — evenly spaced from left edge to center */}

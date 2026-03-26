@@ -42,7 +42,7 @@ export function RelicsPage() {
   const fossilProgress = `${foundFossils.length}/${FOSSILS.length}`;
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-amber-700 to-amber-800 overflow-hidden">
+    <div className="h-full flex flex-col bg-gradient-to-b from-amber-700 to-amber-800 dark:from-amber-900 dark:to-amber-950 overflow-hidden">
       {/* Header */}
       <div className="pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-3">
@@ -66,7 +66,7 @@ export function RelicsPage() {
             onClick={() => setActiveTab("relics")}
             className={`flex-1 py-2 rounded-xl text-sm font-bold transition-all ${
               activeTab === "relics"
-                ? "bg-white text-amber-700"
+                ? "bg-white dark:bg-gray-800 text-amber-700"
                 : "bg-white/20 text-white"
             }`}
           >
@@ -76,7 +76,7 @@ export function RelicsPage() {
             onClick={() => setActiveTab("fossils")}
             className={`flex-1 py-2 rounded-xl text-sm font-bold transition-all ${
               activeTab === "fossils"
-                ? "bg-white text-amber-700"
+                ? "bg-white dark:bg-gray-800 text-amber-700"
                 : "bg-white/20 text-white"
             }`}
           >
@@ -86,11 +86,11 @@ export function RelicsPage() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
         <div className="p-4 space-y-2">
           {activeTab === "relics" && (
             <>
-              <p className="text-xs text-gray-400 text-center mb-3">Tap a relic to mark it as found</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500 text-center mb-3">Tap a relic to mark it as found</p>
               {RELICS.map(relic => {
                 const found = foundRelics.includes(relic.id);
                 return (
@@ -100,7 +100,7 @@ export function RelicsPage() {
                     className={`w-full flex items-center gap-3 p-3 rounded-xl border transition-all active:scale-[0.98] text-left ${
                       found
                         ? "bg-amber-50 border-amber-200"
-                        : "bg-gray-50 border-gray-100"
+                        : "bg-gray-50 dark:bg-gray-900 border-gray-100"
                     }`}
                   >
                     <div className={`text-2xl shrink-0 ${found ? "" : "grayscale opacity-40"}`}>🏺</div>
@@ -111,7 +111,7 @@ export function RelicsPage() {
                         </span>
                         {found && <span className="text-[10px] bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full font-semibold">Found!</span>}
                       </div>
-                      <p className="text-xs text-gray-400 truncate">{relic.description}</p>
+                      <p className="text-xs text-gray-400 dark:text-gray-500 truncate">{relic.description}</p>
                       <p className="text-[10px] text-blue-500 font-medium mt-0.5">{relic.location}</p>
                     </div>
                     {found
@@ -126,7 +126,7 @@ export function RelicsPage() {
 
           {activeTab === "fossils" && (
             <>
-              <p className="text-xs text-gray-400 text-center mb-3">Track fossil Pokémon you've restored</p>
+              <p className="text-xs text-gray-400 dark:text-gray-500 text-center mb-3">Track fossil Pokémon you've restored</p>
               {FOSSILS.map(fossil => {
                 const found = foundFossils.includes(fossil.id);
                 return (
@@ -136,7 +136,7 @@ export function RelicsPage() {
                     className={`w-full flex items-center gap-3 p-3 rounded-xl border transition-all active:scale-[0.98] text-left ${
                       found
                         ? "bg-green-50 border-green-200"
-                        : "bg-gray-50 border-gray-100"
+                        : "bg-gray-50 dark:bg-gray-900 border-gray-100"
                     }`}
                   >
                     <div className={`w-12 h-12 rounded-xl shrink-0 flex items-center justify-center bg-gray-100 ${!found ? "grayscale opacity-50" : ""}`}>
@@ -144,10 +144,10 @@ export function RelicsPage() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2">
-                        <span className={`font-bold text-sm ${found ? "text-gray-800" : "text-gray-400"}`}>
+                        <span className={`font-bold text-sm ${found ? "text-gray-800 dark:text-gray-100" : "text-gray-400"}`}>
                           {fossil.name}
                         </span>
-                        <span className="text-[9px] text-gray-400 font-mono">#{String(fossil.dex).padStart(3, '0')}</span>
+                        <span className="text-[9px] text-gray-400 dark:text-gray-500 font-mono">#{String(fossil.dex).padStart(3, '0')}</span>
                         {found && <span className="text-[10px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-semibold">Restored!</span>}
                       </div>
                       <p className="text-[11px] text-amber-600 font-medium">{fossil.fossilItem}</p>

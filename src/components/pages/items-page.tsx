@@ -108,7 +108,7 @@ export function ItemsPage() {
 
   if (loading) {
     return (
-      <div className="h-full flex flex-col bg-gradient-to-b from-orange-500 to-orange-600 overflow-hidden">
+      <div className="h-full flex flex-col bg-gradient-to-b from-orange-500 to-orange-600 dark:from-orange-900 dark:to-orange-950 overflow-hidden">
         <div className="pt-6 pb-3 px-4 shrink-0">
           <div className="flex items-center justify-between mb-3">
             <button
@@ -123,7 +123,7 @@ export function ItemsPage() {
             </div>
           </div>
         </div>
-        <div className="flex-1 bg-white rounded-t-[2rem] flex items-center justify-center">
+        <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] flex items-center justify-center">
           <p className="text-gray-400">Loading items...</p>
         </div>
       </div>
@@ -131,7 +131,7 @@ export function ItemsPage() {
   }
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-orange-500 to-orange-600 overflow-hidden">
+    <div className="h-full flex flex-col bg-gradient-to-b from-orange-500 to-orange-600 dark:from-orange-900 dark:to-orange-950 overflow-hidden">
       {/* Header */}
       <div className="pt-6 pb-3 px-4 shrink-0">
         <div className="flex items-center justify-between mb-3">
@@ -149,20 +149,20 @@ export function ItemsPage() {
 
         {/* Search */}
         <div className="relative mb-3">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500" />
           <input
             type="text"
             placeholder="Search items..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-white text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50"
+            className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-white dark:bg-gray-800 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50"
           />
           {searchQuery && (
             <button
               onClick={() => setSearchQuery("")}
               className="absolute right-3 top-1/2 -translate-y-1/2"
             >
-              <X className="w-4 h-4 text-gray-400" />
+              <X className="w-4 h-4 text-gray-400 dark:text-gray-500" />
             </button>
           )}
         </div>
@@ -178,7 +178,7 @@ export function ItemsPage() {
                 onClick={() => setSelectedCategory(cat.slug)}
                 className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
                   selectedCategory === cat.slug
-                    ? "bg-white text-orange-600"
+                    ? "bg-white dark:bg-gray-800 text-orange-600"
                     : "bg-white/20 text-white"
                 }`}
               >
@@ -194,7 +194,7 @@ export function ItemsPage() {
             onClick={() => setOwnedFilter("all")}
             className={`px-3 py-1 rounded-full text-xs font-medium transition-all ${
               ownedFilter === "all"
-                ? "bg-white text-orange-600"
+                ? "bg-white dark:bg-gray-800 text-orange-600"
                 : "bg-white/20 text-white"
             }`}
           >
@@ -224,10 +224,10 @@ export function ItemsPage() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
         <div className="p-4">
           {/* Results count */}
-          <p className="text-xs text-gray-400 mb-3">
+          <p className="text-xs text-gray-400 dark:text-gray-500 mb-3">
             {filteredItems.length} item{filteredItems.length !== 1 ? "s" : ""}
             {searchQuery && ` matching "${searchQuery}"`}
           </p>
@@ -243,7 +243,7 @@ export function ItemsPage() {
                   className={`relative flex flex-col items-center p-3 rounded-xl border transition-all active:scale-[0.98] ${
                     owned
                       ? "bg-orange-50 border-orange-200"
-                      : "bg-gray-50 border-gray-100"
+                      : "bg-gray-50 dark:bg-gray-900 border-gray-100"
                   }`}
                 >
                   {/* + button - top right */}
@@ -295,11 +295,11 @@ export function ItemsPage() {
       {selectedItem && (
         <div className="absolute inset-0 bg-black/50 flex items-end z-50" onClick={() => setSelectedItem(null)}>
           <div 
-            className="w-full bg-white rounded-t-[2rem] p-6 max-h-[80vh] overflow-y-auto"
+            className="w-full bg-white dark:bg-gray-800 rounded-t-[2rem] p-6 max-h-[80vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start gap-4 mb-4">
-              <div className="w-20 h-20 bg-gray-100 rounded-xl flex items-center justify-center shrink-0">
+              <div className="w-20 h-20 bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center shrink-0">
                 <img 
                   src={selectedItem.image} 
                   alt={selectedItem.name} 
@@ -313,7 +313,7 @@ export function ItemsPage() {
                 <h3 className="text-lg font-bold text-gray-800">{selectedItem.name}</h3>
                 <p className="text-xs text-gray-400">{selectedItem.category}</p>
                 {selectedItem.tag && (
-                  <span className="inline-block mt-1 text-[10px] bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">
+                  <span className="inline-block mt-1 text-[10px] bg-gray-100 dark:bg-gray-700 text-gray-600 px-2 py-0.5 rounded-full">
                     {selectedItem.tag}
                   </span>
                 )}
@@ -323,19 +323,19 @@ export function ItemsPage() {
                 className={`w-12 h-12 rounded-full flex items-center justify-center transition-all ${
                   ownedItems.includes(selectedItem.slug)
                     ? "bg-orange-500 text-white"
-                    : "bg-gray-100 text-gray-400"
+                    : "bg-gray-100 dark:bg-gray-700 text-gray-400"
                 }`}
               >
                 {ownedItems.includes(selectedItem.slug) ? <Check className="w-6 h-6" /> : <Plus className="w-6 h-6" />}
               </button>
             </div>
 
-            <p className="text-sm text-gray-600 mb-4">{selectedItem.description}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">{selectedItem.description}</p>
 
             {/* Locations */}
             {selectedItem.locations.length > 0 && (
               <div className="mb-4">
-                <h4 className="text-xs font-bold text-gray-500 mb-2">📍 Locations</h4>
+                <h4 className="text-xs font-bold text-gray-500 dark:text-gray-400 dark:text-gray-500 mb-2">📍 Locations</h4>
                 <div className="flex flex-wrap gap-1.5">
                   {selectedItem.locations.map((loc, i) => (
                     <span key={i} className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full">
@@ -349,7 +349,7 @@ export function ItemsPage() {
             {/* Methods */}
             {selectedItem.methods.length > 0 && (
               <div className="mb-4">
-                <h4 className="text-xs font-bold text-gray-500 mb-2">💡 How to Get</h4>
+                <h4 className="text-xs font-bold text-gray-500 dark:text-gray-400 dark:text-gray-500 mb-2">💡 How to Get</h4>
                 <div className="space-y-1">
                   {selectedItem.methods.map((method, i) => (
                     <p key={i} className="text-xs text-gray-600">• {method}</p>
@@ -368,7 +368,7 @@ export function ItemsPage() {
 
             <button
               onClick={() => setSelectedItem(null)}
-              className="w-full mt-4 py-3 bg-gray-100 rounded-xl text-gray-600 font-bold text-sm"
+              className="w-full mt-4 py-3 bg-gray-100 dark:bg-gray-700 rounded-xl text-gray-600 font-bold text-sm"
             >
               Close
             </button>

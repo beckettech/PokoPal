@@ -34,7 +34,7 @@ export function MysteryGiftsPage() {
   const claimedCount = GIFTS.filter(g => claimedGifts.includes(g.id)).length;
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-pink-500 to-purple-600">
+    <div className="h-full flex flex-col bg-gradient-to-b from-pink-500 to-purple-600 dark:from-pink-900 dark:to-purple-950">
       {/* Header */}
       <div className="pt-6 pb-3 px-4 shrink-0">
         <div className="flex items-center justify-between mb-3">
@@ -68,7 +68,7 @@ export function MysteryGiftsPage() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
         <div className="p-4 space-y-3">
           {GIFTS.map((gift) => {
             const isClaimed = claimedGifts.includes(gift.id);
@@ -76,7 +76,7 @@ export function MysteryGiftsPage() {
               <div
                 key={gift.id}
                 className={`rounded-2xl border p-4 transition-all ${
-                  isClaimed ? "bg-green-50 border-green-200" : "bg-white border-gray-100 shadow-sm"
+                  isClaimed ? "bg-green-50 border-green-200" : "bg-white dark:bg-gray-800 border-gray-100 shadow-sm"
                 }`}
               >
                 {/* Top row */}
@@ -89,7 +89,7 @@ export function MysteryGiftsPage() {
                   </div>
 
                   <div className="flex-1 min-w-0">
-                    <h3 className={`font-bold text-sm leading-tight ${isClaimed ? "text-gray-500" : "text-gray-800"}`}>
+                    <h3 className={`font-bold text-sm leading-tight ${isClaimed ? "text-gray-500 dark:text-gray-400 dark:text-gray-500" : "text-gray-800"}`}>
                       {gift.name}
                     </h3>
 
@@ -113,7 +113,7 @@ export function MysteryGiftsPage() {
                     className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 active:scale-90 transition-all ${
                       isClaimed
                         ? "bg-green-500 text-white"
-                        : "bg-gray-100 text-gray-400"
+                        : "bg-gray-100 dark:bg-gray-700 text-gray-400"
                     }`}
                   >
                     {isClaimed ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
@@ -123,7 +123,7 @@ export function MysteryGiftsPage() {
                 {/* Items */}
                 <div className="mt-3 flex flex-wrap gap-2">
                   {gift.items.map((item, i) => (
-                    <div key={i} className="flex items-center gap-1.5 bg-gray-50 border border-gray-100 rounded-xl px-2.5 py-1.5">
+                    <div key={i} className="flex items-center gap-1.5 bg-gray-50 dark:bg-gray-900 border border-gray-100 rounded-xl px-2.5 py-1.5">
                       {gift.itemImages[i] && (
                         <img
                           src={gift.itemImages[i]}
@@ -140,7 +140,7 @@ export function MysteryGiftsPage() {
                 {/* Details */}
                 <div className="mt-3 space-y-1.5">
                   <div className="flex items-start gap-1.5 text-xs text-gray-500">
-                    <Clock className="w-3.5 h-3.5 shrink-0 mt-0.5 text-gray-400" />
+                    <Clock className="w-3.5 h-3.5 shrink-0 mt-0.5 text-gray-400 dark:text-gray-500" />
                     <span>{gift.availability}</span>
                   </div>
                   <p className="text-xs text-gray-400 pl-5">{gift.codeNote}</p>

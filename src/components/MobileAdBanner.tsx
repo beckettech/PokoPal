@@ -135,10 +135,10 @@ export function MobileAdBanner() {
 
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 px-3 py-2 flex items-center justify-between safe-area-bottom"
+      className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur border-t border-gray-200 dark:border-gray-700 px-3 py-2 flex items-center justify-between safe-area-bottom"
       onClick={() => setShowRemoveOption(!showRemoveOption)}
     >
-      <div className="flex-1 h-[50px] flex items-center justify-center text-gray-400 text-xs">
+      <div className="flex-1 h-[50px] flex items-center justify-center text-gray-400 dark:text-gray-500 text-xs">
         <span>Advertisement</span>
       </div>
       {showRemoveOption && (

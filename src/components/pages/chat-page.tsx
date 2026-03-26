@@ -147,7 +147,7 @@ export function ChatPage() {
   };
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-cyan-600 to-blue-700">
+    <div className="h-full flex flex-col bg-gradient-to-b from-cyan-600 to-blue-700 dark:from-cyan-900 dark:to-blue-950">
       {/* Header */}
       <div className="pt-6 pb-3 px-4 shrink-0">
         <div className="flex items-center justify-between mb-3">
@@ -159,7 +159,7 @@ export function ChatPage() {
           </button>
           
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
+            <div className="w-10 h-10 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center overflow-hidden">
               <img src={DEXTER_AVATAR} alt="Dexter" className="w-8 h-8 object-contain" />
             </div>
             <div>
@@ -182,7 +182,7 @@ export function ChatPage() {
       </div>
 
       {/* Messages */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
         <div className="p-4 space-y-4">
           {/* Welcome message */}
           {chatMessages.length === 0 && (
@@ -194,7 +194,7 @@ export function ChatPage() {
               <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center overflow-hidden mx-auto mb-4">
                 <img src={DEXTER_AVATAR} alt="Dexter" className="w-12 h-12 object-contain" />
               </div>
-              <h2 className="text-lg font-bold text-gray-800 mb-2">Hi, I'm Dexter!</h2>
+              <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-2">Hi, I'm Dexter!</h2>
               <p className="text-sm text-gray-500 max-w-xs mx-auto">
                 Ask me about Pokémon locations, habitats, items, or anything Pokopia!
               </p>
@@ -205,7 +205,7 @@ export function ChatPage() {
                     <button
                       key={q}
                       onClick={() => setInput(q)}
-                      className="text-xs bg-gray-100 px-3 py-1.5 rounded-full text-gray-600 hover:bg-gray-200"
+                      className="text-xs bg-gray-100 dark:bg-gray-700 px-3 py-1.5 rounded-full text-gray-600 hover:bg-gray-200"
                     >
                       {q}
                     </button>
@@ -228,7 +228,7 @@ export function ChatPage() {
                   className={`max-w-[80%] rounded-2xl px-4 py-2 ${
                     msg.role === "user"
                       ? "bg-cyan-500 text-white"
-                      : "bg-gray-100 text-gray-800"
+                      : "bg-gray-100 dark:bg-gray-700 text-gray-800"
                   }`}
                 >
                   <p className="text-sm whitespace-pre-wrap">{renderMessage(msg.content)}</p>
@@ -240,7 +240,7 @@ export function ChatPage() {
           {/* Loading indicator */}
           {isLoading && (
             <div className="flex justify-start">
-              <div className="bg-gray-100 rounded-2xl px-4 py-3">
+              <div className="bg-gray-100 dark:bg-gray-700 rounded-2xl px-4 py-3">
                 <Loader2 className="w-5 h-5 text-gray-400 animate-spin" />
               </div>
             </div>
@@ -251,7 +251,7 @@ export function ChatPage() {
       </div>
 
       {/* Input */}
-      <div className="bg-white border-t border-gray-200 p-4">
+      <div className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 p-4">
         <div className="flex gap-2">
           <input
             ref={inputRef}
@@ -261,7 +261,7 @@ export function ChatPage() {
             onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && handleSend()}
             placeholder="Ask Dexter anything..."
             disabled={isLoading}
-            className="flex-1 px-4 py-3 rounded-xl bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 disabled:opacity-50"
+            className="flex-1 px-4 py-3 rounded-xl bg-gray-100 dark:bg-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 disabled:opacity-50"
           />
           <button
             onClick={handleSend}

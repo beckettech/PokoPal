@@ -70,7 +70,7 @@ export function CoinShopPage() {
   };
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-amber-500 to-yellow-600">
+    <div className="h-full flex flex-col bg-gradient-to-b from-amber-500 to-yellow-600 dark:from-amber-900 dark:to-yellow-950">
       {/* Success Overlay */}
       <AnimatePresence>
         {showSuccess && (
@@ -84,7 +84,7 @@ export function CoinShopPage() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0 }}
-              className="bg-white rounded-2xl p-6 text-center mx-4"
+              className="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center mx-4"
             >
               <motion.div
                 initial={{ scale: 0 }}
@@ -95,7 +95,7 @@ export function CoinShopPage() {
                 <Check className="w-8 h-8 text-white" />
               </motion.div>
               <h2 className="text-lg font-bold text-gray-800">Purchase Complete!</h2>
-              <p className="text-sm text-gray-500 mt-1">Coins added to your balance</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 dark:text-gray-500 mt-1">Coins added to your balance</p>
             </motion.div>
           </motion.div>
         )}
@@ -131,12 +131,12 @@ export function CoinShopPage() {
       </div>
 
       {/* Content Card */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-hidden">
+      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-hidden">
         <div className="h-full overflow-y-auto">
           {/* Coin Packages */}
           <div className="p-3">
-            <h2 className="text-sm font-bold text-gray-700 mb-2">Purchase Coins</h2>
-            <p className="text-[10px] text-gray-500 mb-2">
+            <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Purchase Coins</h2>
+            <p className="text-[10px] text-gray-500 dark:text-gray-400 dark:text-gray-500 mb-2">
               Use coins to chat with your Pokopia assistant!
             </p>
 
@@ -195,7 +195,7 @@ export function CoinShopPage() {
 
           {/* Daily Rewards */}
           <div className="p-3 border-t border-gray-100">
-            <h2 className="text-sm font-bold text-gray-700 mb-2">Daily Login Rewards</h2>
+            <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Daily Login Rewards</h2>
             <div className="grid grid-cols-7 gap-1">
               {dailyRewards.map((reward) => (
                 <motion.div

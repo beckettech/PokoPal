@@ -39,7 +39,7 @@ export function MapPage() {
   });
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-blue-500 to-blue-600 overflow-hidden">
+    <div className="h-full flex flex-col bg-gradient-to-b from-blue-500 to-blue-600 dark:from-blue-900 dark:to-blue-950 overflow-hidden">
       {/* Header */}
       <div className="pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
@@ -55,13 +55,13 @@ export function MapPage() {
 
         {/* Search */}
         <div className="relative mb-2">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500" />
           <input
             type="text"
             placeholder="Search locations..."
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-2 rounded-xl bg-white shadow text-gray-800 placeholder-gray-400 focus:outline-none text-sm"
+            className="w-full pl-9 pr-3 py-2 rounded-xl bg-white dark:bg-gray-800 shadow text-gray-800 placeholder-gray-400 focus:outline-none text-sm"
           />
         </div>
 
@@ -70,7 +70,7 @@ export function MapPage() {
           <button
             onClick={() => setFilterBy("all")}
             className={`px-3 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap transition-all ${
-              filterBy === "all" ? "bg-white text-blue-600" : "bg-white/20 text-white"
+              filterBy === "all" ? "bg-white dark:bg-gray-800 text-blue-600" : "bg-white/20 text-white"
             }`}
           >
             All
@@ -88,7 +88,7 @@ export function MapPage() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
         <div className="p-3 space-y-3">
           {filteredLocations.map((location, idx) => {
             const colors = LOCATION_COLORS[location.name] || { bg: "from-gray-400 to-gray-600", badge: "bg-gray-500", text: "text-white" };
@@ -101,7 +101,7 @@ export function MapPage() {
               <div
                 key={location.id}
                 className={`rounded-xl overflow-hidden shadow-sm border ${
-                  isVisited ? "border-yellow-200 bg-yellow-50/30" : isEven ? "border-gray-100 bg-white" : "border-gray-100 bg-slate-50"
+                  isVisited ? "border-yellow-200 bg-yellow-50/30" : isEven ? "border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800" : "border-gray-100 dark:border-gray-700 bg-slate-50 dark:bg-gray-900"
                 }`}
               >
                 {/* Location header */}
@@ -149,16 +149,16 @@ export function MapPage() {
 
                 {/* Expanded habitat list */}
                 {isExpanded && (
-                  <div className="bg-gray-50 p-3">
+                  <div className="bg-gray-50 dark:bg-gray-900 p-3">
                     {habitats.length === 0 ? (
-                      <p className="text-gray-400 text-xs text-center py-2">No habitats found</p>
+                      <p className="text-gray-400 dark:text-gray-500 text-xs text-center py-2">No habitats found</p>
                     ) : (
                       <div className="grid grid-cols-2 gap-2">
                         {habitats.map(habitat => (
                           <button
                             key={habitat.id}
                             onClick={() => navigateToHabitat(habitat.id)}
-                            className="flex flex-col overflow-hidden rounded-xl border border-emerald-100 bg-white text-left active:scale-95 transition-transform shadow-sm"
+                            className="flex flex-col overflow-hidden rounded-xl border border-emerald-100 bg-white dark:bg-gray-800 text-left active:scale-95 transition-transform shadow-sm"
                           >
                             {habitat.image && (
                               <div className="w-full h-14 bg-gray-100 overflow-hidden">
@@ -171,7 +171,7 @@ export function MapPage() {
                               </div>
                             )}
                             <div className="p-2">
-                              <p className="text-xs font-semibold text-gray-800 leading-tight">{habitat.name}</p>
+                              <p className="text-xs font-semibold text-gray-800 dark:text-gray-100 leading-tight">{habitat.name}</p>
                               <p className="text-[9px] text-emerald-600 mt-0.5">{habitat.pokemon.length} Pokémon</p>
                             </div>
                           </button>

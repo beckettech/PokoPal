@@ -30,7 +30,7 @@ export function AccountPage() {
   };
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-slate-600 to-slate-800">
+    <div className="h-full flex flex-col bg-gradient-to-b from-slate-600 to-slate-800 dark:from-slate-900 dark:to-slate-950">
       {/* Header */}
       <div className="pt-6 pb-3 px-4 shrink-0">
         <div className="flex items-center gap-3 mb-2">
@@ -48,7 +48,7 @@ export function AccountPage() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
         <div className="p-4 space-y-4">
           
           {/* Dark Mode Toggle */}
@@ -62,15 +62,15 @@ export function AccountPage() {
                 onClick={toggleDarkMode}
                 className={`w-12 h-7 rounded-full transition-colors duration-200 ${darkMode ? 'bg-indigo-500' : 'bg-gray-300'}`}
               >
-                <div className={`w-5 h-5 bg-white rounded-full shadow-sm transition-transform duration-200 ${darkMode ? 'translate-x-6' : 'translate-x-1'}`} />
+                <div className={`w-5 h-5 bg-white dark:bg-gray-800 rounded-full shadow-sm transition-transform duration-200 ${darkMode ? 'translate-x-6' : 'translate-x-1'}`} />
               </button>
             </div>
           </div>
 
           {/* Account Section */}
-          <div className="bg-gray-50 rounded-xl overflow-hidden">
+          <div className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden">
             <div className="px-4 py-3 border-b border-gray-100">
-              <h2 className="font-bold text-gray-900 flex items-center gap-2">
+              <h2 className="font-bold text-gray-900 dark:text-white flex items-center gap-2">
                 <User className="w-4 h-4" />
                 Account
               </h2>
@@ -141,7 +141,7 @@ export function AccountPage() {
               <button
                 onClick={handleRestorePurchases}
                 disabled={isRestoring}
-                className="w-full py-2 bg-white border border-amber-200 text-amber-800 text-sm font-medium rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-transform disabled:opacity-50"
+                className="w-full py-2 bg-white dark:bg-gray-800 border border-amber-200 text-amber-800 text-sm font-medium rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-transform disabled:opacity-50"
               >
                 <RefreshCw className={`w-4 h-4 ${isRestoring ? 'animate-spin' : ''}`} />
                 {isRestoring ? 'Restoring...' : 'Restore Purchases'}
@@ -150,9 +150,9 @@ export function AccountPage() {
           </div>
 
           {/* About */}
-          <div className="bg-gray-50 rounded-xl overflow-hidden">
+          <div className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden">
             <div className="px-4 py-3 border-b border-gray-100">
-              <h2 className="font-bold text-gray-900 flex items-center gap-2">
+              <h2 className="font-bold text-gray-900 dark:text-white flex items-center gap-2">
                 <Info className="w-4 h-4" />
                 About
               </h2>

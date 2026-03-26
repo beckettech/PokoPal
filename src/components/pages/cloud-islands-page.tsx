@@ -85,7 +85,7 @@ export function CloudIslandsPage() {
   });
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-cyan-500 to-blue-600 relative">
+    <div className="h-full flex flex-col bg-gradient-to-b from-cyan-500 to-blue-600 dark:from-cyan-900 dark:to-blue-950 relative">
       {/* Header */}
       <div className="pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
@@ -98,7 +98,7 @@ export function CloudIslandsPage() {
           <h1 className="text-lg font-bold text-white">Cloud Islands</h1>
           <button
             onClick={() => setShowPostModal(true)}
-            className="w-11 h-11 rounded-full bg-white flex items-center justify-center active:scale-90 transition-transform shadow-lg"
+            className="w-11 h-11 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center active:scale-90 transition-transform shadow-lg"
           >
             <Plus className="w-6 h-6 text-cyan-600" />
           </button>
@@ -109,7 +109,7 @@ export function CloudIslandsPage() {
           <button
             onClick={() => setSortBy("popular")}
             className={`flex-1 py-1.5 rounded-lg text-xs font-medium flex items-center justify-center gap-1 transition-all ${
-              sortBy === "popular" ? "bg-white text-cyan-600" : "text-white"
+              sortBy === "popular" ? "bg-white dark:bg-gray-800 text-cyan-600" : "text-white"
             }`}
           >
             <TrendingUp className="w-3.5 h-3.5" />
@@ -118,7 +118,7 @@ export function CloudIslandsPage() {
           <button
             onClick={() => setSortBy("recent")}
             className={`flex-1 py-1.5 rounded-lg text-xs font-medium flex items-center justify-center gap-1 transition-all ${
-              sortBy === "recent" ? "bg-white text-cyan-600" : "text-white"
+              sortBy === "recent" ? "bg-white dark:bg-gray-800 text-cyan-600" : "text-white"
             }`}
           >
             <Clock className="w-3.5 h-3.5" />
@@ -131,7 +131,7 @@ export function CloudIslandsPage() {
           <button
             onClick={() => setFilterBy("all")}
             className={`px-3 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap transition-all ${
-              filterBy === "all" ? "bg-white text-cyan-600" : "bg-white/20 text-white"
+              filterBy === "all" ? "bg-white dark:bg-gray-800 text-cyan-600" : "bg-white/20 text-white"
             }`}
           >
             All
@@ -149,7 +149,7 @@ export function CloudIslandsPage() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
         <div className="p-3 space-y-2">
           {/* How to visit - at top */}
           <div className="bg-cyan-50 border border-cyan-100 rounded-2xl p-4">
@@ -184,11 +184,11 @@ export function CloudIslandsPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-white z-20"
+            className="absolute inset-0 bg-white dark:bg-gray-800 z-20"
           >
             <div className="h-full flex flex-col">
               {/* Header */}
-              <div className="shrink-0 bg-gradient-to-b from-cyan-500 to-blue-600 pt-6 pb-3 px-4">
+              <div className="shrink-0 bg-gradient-to-b from-cyan-500 to-blue-600 dark:from-cyan-900 dark:to-blue-950 pt-6 pb-3 px-4">
                 <div className="flex items-center justify-between">
                   <button
                     onClick={() => setSelectedIsland(null)}
@@ -232,8 +232,8 @@ export function CloudIslandsPage() {
                   )}
 
                   {/* Island Code */}
-                  <div className="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
-                    <code className="flex-1 px-3 py-2 bg-white rounded-lg text-lg font-mono text-gray-800 border border-gray-200">
+                  <div className="flex items-center gap-3 bg-gray-50 dark:bg-gray-900 rounded-xl p-3">
+                    <code className="flex-1 px-3 py-2 bg-white dark:bg-gray-800 rounded-lg text-lg font-mono text-gray-800 border border-gray-200">
                       {selectedIsland.islandCode}
                     </code>
                     <button
@@ -249,7 +249,7 @@ export function CloudIslandsPage() {
                   </div>
 
                   {/* Stats */}
-                  <div className="flex items-center justify-between bg-gray-50 rounded-xl px-4 py-3">
+                  <div className="flex items-center justify-between bg-gray-50 dark:bg-gray-900 rounded-xl px-4 py-3">
                     <div className="flex items-center gap-2 text-gray-600">
                       <Bookmark className="w-4 h-4" />
                       <span className="text-sm font-medium">{selectedIsland.likes.toLocaleString()} saves</span>
@@ -259,8 +259,8 @@ export function CloudIslandsPage() {
 
                   {/* Description */}
                   <div>
-                    <h3 className="font-bold text-gray-800 text-sm mb-2">About</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">{selectedIsland.description}</p>
+                    <h3 className="font-bold text-gray-800 dark:text-gray-100 text-sm mb-2">About</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{selectedIsland.description}</p>
                   </div>
 
                   {/* Save Button */}
@@ -269,7 +269,7 @@ export function CloudIslandsPage() {
                     className={`w-full py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all ${
                       savedIslands.includes(selectedIsland.islandCode)
                         ? "bg-yellow-400 text-yellow-900"
-                        : "bg-gray-100 text-gray-600"
+                        : "bg-gray-100 dark:bg-gray-700 text-gray-600"
                     }`}
                   >
                     {savedIslands.includes(selectedIsland.islandCode) ? (
@@ -305,13 +305,13 @@ export function CloudIslandsPage() {
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
-              className="w-full bg-white rounded-t-[2rem] p-5 max-h-[90vh] overflow-y-auto"
+              className="w-full bg-white dark:bg-gray-800 rounded-t-[2rem] p-5 max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-bold text-gray-800">Share Your Island</h2>
                 <button onClick={() => setShowPostModal(false)}>
-                  <X className="w-6 h-6 text-gray-400" />
+                  <X className="w-6 h-6 text-gray-400 dark:text-gray-500" />
                 </button>
               </div>
 
@@ -321,50 +321,50 @@ export function CloudIslandsPage() {
                     <Check className="w-7 h-7 text-green-500" />
                   </div>
                   <p className="font-bold text-gray-800">Submitted for Review!</p>
-                  <p className="text-xs text-gray-500 mt-1">We'll email you once it's approved</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 dark:text-gray-500 mt-1">We'll email you once it's approved</p>
                 </div>
               ) : (
                 <>
                   {/* Title */}
                   <div className="mb-3">
-                    <label className="block text-xs font-medium text-gray-600 mb-1">Title *</label>
+                    <label className="block text-xs font-medium text-gray-600 dark:text-gray-300 mb-1">Title *</label>
                     <input
                       type="text"
                       value={postForm.title}
                       onChange={(e) => setPostForm({ ...postForm, title: e.target.value })}
                       placeholder="My Awesome Island"
-                      className="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      className="w-full px-3 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
                     />
                   </div>
 
                   {/* Description */}
                   <div className="mb-3">
-                    <label className="block text-xs font-medium text-gray-600 mb-1">Short Description *</label>
+                    <label className="block text-xs font-medium text-gray-600 dark:text-gray-300 mb-1">Short Description *</label>
                     <textarea
                       value={postForm.description}
                       onChange={(e) => setPostForm({ ...postForm, description: e.target.value })}
                       placeholder="What makes your island special?"
                       rows={2}
-                      className="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 resize-none"
+                      className="w-full px-3 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 resize-none"
                     />
                   </div>
 
                   {/* Island Code */}
                   <div className="mb-3">
-                    <label className="block text-xs font-medium text-gray-600 mb-1">Island Code *</label>
+                    <label className="block text-xs font-medium text-gray-600 dark:text-gray-300 mb-1">Island Code *</label>
                     <input
                       type="text"
                       value={postForm.islandCode}
                       onChange={(e) => setPostForm({ ...postForm, islandCode: e.target.value.toUpperCase() })}
                       placeholder="XXXX-0000"
                       maxLength={9}
-                      className="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-cyan-500 uppercase"
+                      className="w-full px-3 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-cyan-500 uppercase"
                     />
                   </div>
 
                   {/* Images */}
                   <div className="mb-5">
-                    <label className="block text-xs font-medium text-gray-600 mb-2">Screenshots * (1-4)</label>
+                    <label className="block text-xs font-medium text-gray-600 dark:text-gray-300 mb-2">Screenshots * (1-4)</label>
                     <div className="flex gap-2 flex-wrap">
                       {postImages.map((img, i) => (
                         <div key={i} className="relative w-20 h-20 rounded-lg overflow-hidden bg-gray-100">
@@ -397,7 +397,7 @@ export function CloudIslandsPage() {
                     />
                   </div>
 
-                  <p className="text-[10px] text-gray-400 mb-3 text-center">
+                  <p className="text-[10px] text-gray-400 dark:text-gray-500 mb-3 text-center">
                     Your post will be reviewed before appearing publicly
                   </p>
 
@@ -408,7 +408,7 @@ export function CloudIslandsPage() {
                     className={`w-full py-3 rounded-xl font-bold text-sm transition-all ${
                       postForm.title && postForm.islandCode && postImages.length > 0 && !submitting
                         ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white"
-                        : "bg-gray-100 text-gray-400"
+                        : "bg-gray-100 dark:bg-gray-700 text-gray-400"
                     }`}
                   >
                     {submitting ? "Submitting..." : "Submit for Review"}
@@ -444,24 +444,24 @@ function IslandCard({
       transition={{ delay: index * 0.03 }}
       className={`rounded-2xl border p-3 transition-all ${
         island.isOfficial ? "bg-purple-50/30 border-purple-100" :
-        isSaved ? "bg-yellow-50/30 border-yellow-200" : "bg-white border-gray-100"
+        isSaved ? "bg-yellow-50/30 border-yellow-200" : "bg-white dark:bg-gray-800 border-gray-100"
       }`}
     >
       {/* Main row - tap to open detail */}
       <button onClick={onSelect} className="w-full flex items-center gap-3">
         {/* Image */}
-        <div className="w-24 h-24 rounded-xl bg-gray-200 shrink-0 overflow-hidden">
+        <div className="w-24 h-24 rounded-xl bg-gray-200 dark:bg-gray-700 shrink-0 overflow-hidden">
           {island.screenshots[0] ? (
             <img src={island.screenshots[0]} alt={island.title} className="w-full h-full object-cover" />
           ) : (
             <div className="w-full h-full flex items-center justify-center">
-              <Image className="w-8 h-8 text-gray-400" />
+              <Image className="w-8 h-8 text-gray-400 dark:text-gray-500" />
             </div>
           )}
         </div>
 
         <div className="flex-1 min-w-0 text-left">
-          <h3 className="font-bold text-sm text-gray-800 truncate">{island.title}</h3>
+          <h3 className="font-bold text-sm text-gray-800 dark:text-gray-100 truncate">{island.title}</h3>
           <code className="text-base text-cyan-600 font-mono font-semibold">{island.islandCode}</code>
           <p className="text-xs text-gray-500 line-clamp-2 mt-0.5">{island.description}</p>
         </div>
@@ -470,7 +470,7 @@ function IslandCard({
         <button
           onClick={(e) => { e.stopPropagation(); onToggleSave(); }}
           className={`shrink-0 w-12 h-12 rounded-full flex flex-col items-center justify-center active:scale-90 transition-all ${
-            isSaved ? "bg-yellow-400 text-yellow-900" : "bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300"
+            isSaved ? "bg-yellow-400 text-yellow-900" : "bg-gray-100 dark:bg-gray-700 text-gray-400 border-2 border-dashed border-gray-300"
           }`}
         >
           {isSaved ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}

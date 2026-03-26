@@ -160,7 +160,7 @@ const DREAM_ISLANDS = [
     textColor: "text-gray-900",
     bgColor: "bg-gray-50",
     borderColor: "border-gray-300",
-    chipColor: "bg-gray-100 text-gray-700",
+    chipColor: "bg-gray-100 dark:bg-gray-700 text-gray-700",
   },
 ];
 
@@ -184,7 +184,7 @@ export function DreamIslandsPage() {
   });
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-purple-600 via-purple-500 to-indigo-500 overflow-hidden">
+    <div className="h-full flex flex-col bg-gradient-to-b from-purple-600 via-purple-500 to-indigo-500 dark:from-purple-900 dark:via-purple-900 dark:to-indigo-950 overflow-hidden">
       {/* Header */}
       <div className="pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
@@ -210,7 +210,7 @@ export function DreamIslandsPage() {
               key={f}
               onClick={() => setSortFilter(f)}
               className={`px-3 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap flex items-center gap-1 transition-all ${
-                sortFilter === f ? "bg-white text-purple-700 shadow" : "bg-white/20 text-white"
+                sortFilter === f ? "bg-white dark:bg-gray-800 text-purple-700 shadow" : "bg-white/20 text-white"
               }`}
               whileTap={{ scale: 0.95 }}
             >
@@ -223,7 +223,7 @@ export function DreamIslandsPage() {
       </div>
 
       {/* Content */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
         {/* Intro */}
         <div className="mx-3 mt-3 mb-2 p-3 bg-purple-50 border border-purple-200 rounded-xl">
           <div className="flex items-start gap-2">
@@ -264,8 +264,8 @@ export function DreamIslandsPage() {
                   </button>
 
                   <button className="flex-1 text-left min-w-0" onClick={() => toggleExpand(island.id)}>
-                    <h3 className="font-bold text-gray-800 text-sm">{island.name}</h3>
-                    <p className="text-gray-400 text-xs">Use: {island.doll.name}</p>
+                    <h3 className="font-bold text-gray-800 dark:text-gray-100 text-sm">{island.name}</h3>
+                    <p className="text-gray-400 dark:text-gray-500 text-xs">Use: {island.doll.name}</p>
                     {/* Legendary previews in list */}
                     {island.legendaries.length > 0 && (
                       <div className="flex items-center gap-1 mt-1">
@@ -295,7 +295,7 @@ export function DreamIslandsPage() {
                     className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-transform ${
                       visited
                         ? 'bg-yellow-400 text-yellow-900'
-                        : 'bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300'
+                        : 'bg-gray-100 dark:bg-gray-700 text-gray-400 border-2 border-dashed border-gray-300'
                     }`}
                   >
                     {visited ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
@@ -312,7 +312,7 @@ export function DreamIslandsPage() {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                     >
-                      <div className={`${island.bgColor} border-t border-gray-100 px-4 py-3 space-y-3`}>
+                      <div className={`${island.bgColor} border-t border-gray-100 dark:border-gray-700 px-4 py-3 space-y-3`}>
 
                         {/* Note */}
                         {island.note && (
@@ -329,7 +329,7 @@ export function DreamIslandsPage() {
                               {island.legendaries.map(leg => (
                                 <div key={leg.name} className="flex items-start gap-3">
                                   <div className="shrink-0 flex flex-col items-center gap-1">
-                                    <div className="w-16 h-16 bg-white rounded-xl border-2 border-amber-200 shadow flex items-center justify-center">
+                                    <div className="w-16 h-16 bg-white dark:bg-gray-800 rounded-xl border-2 border-amber-200 shadow flex items-center justify-center">
                                       <img src={leg.image} alt={leg.name} className="w-14 h-14 object-contain"
                                         onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                                     </div>
@@ -355,7 +355,7 @@ export function DreamIslandsPage() {
                           <div className="flex gap-2 flex-wrap">
                             {island.materials.map(item => (
                               <div key={item.name} className="flex flex-col items-center gap-1">
-                                <div className="w-11 h-11 bg-white rounded-lg border border-gray-200 shadow-sm flex items-center justify-center">
+                                <div className="w-11 h-11 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 shadow-sm flex items-center justify-center">
                                   <img src={item.image} alt={item.name} className="w-9 h-9 object-contain"
                                     onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                                 </div>
@@ -374,7 +374,7 @@ export function DreamIslandsPage() {
                             <div className="flex gap-2 flex-wrap">
                               {island.rareItems.map(item => (
                                 <div key={item.name} className="flex flex-col items-center gap-1">
-                                  <div className="w-11 h-11 bg-white rounded-lg border-2 border-amber-200 shadow-sm flex items-center justify-center">
+                                  <div className="w-11 h-11 bg-white dark:bg-gray-800 rounded-lg border-2 border-amber-200 shadow-sm flex items-center justify-center">
                                     <img src={item.image} alt={item.name} className="w-9 h-9 object-contain"
                                       onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                                   </div>

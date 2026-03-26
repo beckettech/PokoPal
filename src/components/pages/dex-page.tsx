@@ -46,16 +46,16 @@ type WeatherVal = "Any" | "Sunny" | "Rainy" | "Snowy" | "Foggy" | "Cloudy";
 function TimeIcon({ time }: { time: TimeVal }) {
   if (time === "Day")  return <Sun className="w-4 h-4 text-yellow-500" />;
   if (time === "Night") return <Moon className="w-4 h-4 text-indigo-400" />;
-  return <Sun className="w-4 h-4 text-gray-400" />;
+  return <Sun className="w-4 h-4 text-gray-400 dark:text-gray-500" />;
 }
 
 function WeatherIcon({ weather }: { weather: WeatherVal }) {
   if (weather === "Sunny")  return <Sun className="w-4 h-4 text-yellow-500" />;
   if (weather === "Rainy")  return <CloudRain className="w-4 h-4 text-blue-500" />;
   if (weather === "Snowy")  return <CloudSnow className="w-4 h-4 text-sky-400" />;
-  if (weather === "Cloudy") return <Cloud className="w-4 h-4 text-gray-400" />;
+  if (weather === "Cloudy") return <Cloud className="w-4 h-4 text-gray-400 dark:text-gray-500" />;
   if (weather === "Foggy")  return <Cloud className="w-4 h-4 text-gray-300" />;
-  return <Sun className="w-4 h-4 text-gray-400" />;
+  return <Sun className="w-4 h-4 text-gray-400 dark:text-gray-500" />;
 }
 
 function ConditionsBlock({ pokemon }: { pokemon: Pokemon }) {
@@ -64,16 +64,16 @@ function ConditionsBlock({ pokemon }: { pokemon: Pokemon }) {
 
   return (
     <div className="bg-orange-50 rounded-2xl p-4 border border-orange-100">
-      <h3 className="font-bold text-gray-700 text-sm mb-3">Conditions to Find</h3>
+      <h3 className="font-bold text-gray-700 dark:text-gray-300 text-sm mb-3">Conditions to Find</h3>
       <div className="grid grid-cols-2 gap-3">
         {/* Time */}
-        <div className="flex flex-col items-center gap-1.5 bg-white rounded-xl p-3 border border-orange-100">
+        <div className="flex flex-col items-center gap-1.5 bg-white dark:bg-gray-800 rounded-xl p-3 border border-orange-100">
           <TimeIcon time={time} />
           <span className="text-[10px] text-gray-500 uppercase tracking-wide font-semibold">Time</span>
           <span className="text-sm font-bold text-gray-800">{time}</span>
         </div>
         {/* Weather */}
-        <div className="flex flex-col items-center gap-1.5 bg-white rounded-xl p-3 border border-orange-100">
+        <div className="flex flex-col items-center gap-1.5 bg-white dark:bg-gray-800 rounded-xl p-3 border border-orange-100">
           <WeatherIcon weather={weather} />
           <span className="text-[10px] text-gray-500 uppercase tracking-wide font-semibold">Weather</span>
           <span className="text-sm font-bold text-gray-800">{weather}</span>
@@ -130,19 +130,19 @@ export function DexPage() {
   if (selectedPokemon) {
     const isFriend = capturedPokemon.includes(selectedPokemon.id);
     return (
-      <div className="h-full flex flex-col bg-gray-50 overflow-hidden">
+      <div className="h-full flex flex-col bg-gray-50 dark:bg-gray-900 overflow-hidden">
         {/* Clean white top bar */}
-        <div className="shrink-0 bg-white px-4 pt-4 pb-3 border-b border-gray-100">
+        <div className="shrink-0 bg-white dark:bg-gray-800 px-4 pt-4 pb-3 border-b border-gray-100">
           <div className="flex items-center gap-3">
             <button
               onClick={() => setSelectedPokemon(null)}
-              className="w-11 h-11 rounded-full bg-gray-100 flex items-center justify-center active:scale-90 transition-transform shrink-0"
+              className="w-11 h-11 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center active:scale-90 transition-transform shrink-0"
             >
-              <ArrowLeft className="w-5 h-5 text-gray-600" />
+              <ArrowLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />
             </button>
             <div className="flex-1">
-              <p className="text-xs text-gray-400 font-mono">#{String(selectedPokemon.id).padStart(3, '0')}</p>
-              <h2 className="text-xl font-bold text-gray-900 leading-tight">{selectedPokemon.name}</h2>
+              <p className="text-xs text-gray-400 dark:text-gray-500 font-mono">#{String(selectedPokemon.id).padStart(3, '0')}</p>
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white leading-tight">{selectedPokemon.name}</h2>
             </div>
             <span className={`text-xs font-bold px-3 py-1 rounded-full shrink-0 ${getRarityButtonStyle(selectedPokemon.rarity)}`}>
               {selectedPokemon.rarity}
@@ -192,7 +192,7 @@ export function DexPage() {
         <div className="flex-1 overflow-y-auto">
           <div className="pt-4 px-4 pb-8 space-y-3">
             {/* Image card — image left, habitats right (no redundant specialty/type tags) */}
-            <div className="bg-white rounded-2xl p-4 flex items-start gap-4 shadow-sm">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 flex items-start gap-4 shadow-sm">
               <div className={`w-24 h-24 shrink-0 rounded-2xl ${getRarityBg(selectedPokemon.rarity)} p-2`}>
                 <img
                   src={isFriend ? selectedPokemon.image.replace('/pokemon/', '/pokemon-original/') : selectedPokemon.image}
@@ -235,7 +235,7 @@ export function DexPage() {
             <button
               onClick={() => toggleCapturedPokemon(selectedPokemon.id)}
               className={`w-full py-3 rounded-2xl flex items-center justify-center gap-2 font-medium active:scale-95 transition-transform shadow-sm ${
-                isFriend ? 'bg-yellow-400 text-yellow-900' : 'bg-white text-gray-500 border-2 border-dashed border-gray-200'
+                isFriend ? 'bg-yellow-400 text-yellow-900' : 'bg-white dark:bg-gray-800 text-gray-500 border-2 border-dashed border-gray-200'
               }`}
             >
               {isFriend ? <><Check className="w-5 h-5" /><span>Friend!</span></> : <><Plus className="w-5 h-5" /><span>Add as Friend</span></>}
@@ -246,7 +246,7 @@ export function DexPage() {
             {/* Specialties */}
             {selectedPokemon.specialties && selectedPokemon.specialties.length > 0 && (
               <div>
-                <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
+                <h3 className="font-bold text-gray-700 dark:text-gray-300 text-sm mb-2 flex items-center gap-1">
                   <Zap className="w-4 h-4 text-yellow-500" /> Specialties
                 </h3>
                 <div className="space-y-2">
@@ -254,7 +254,7 @@ export function DexPage() {
                     const info = specialtyMap[specialty.toLowerCase()];
                     return (
                       <div key={i} className="flex items-start gap-3 bg-green-50 rounded-xl p-3 border border-green-100">
-                        <div className="w-10 h-10 rounded-lg bg-white border border-green-200 flex items-center justify-center shrink-0">
+                        <div className="w-10 h-10 rounded-lg bg-white dark:bg-gray-800 border border-green-200 flex items-center justify-center shrink-0">
                           {info?.icon ? (
                             <img src={info.icon} alt={specialty} className="w-8 h-8 object-contain"
                               onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
@@ -276,7 +276,7 @@ export function DexPage() {
             {/* Map Locations */}
             {selectedPokemon.locations && selectedPokemon.locations.length > 0 && (
               <div>
-                <h3 className="font-bold text-gray-700 text-sm mb-2 flex items-center gap-1">
+                <h3 className="font-bold text-gray-700 dark:text-gray-300 text-sm mb-2 flex items-center gap-1">
                   <MapPin className="w-4 h-4 text-blue-500" /> Map Locations
                 </h3>
                 <div className="space-y-1.5">
@@ -286,7 +286,7 @@ export function DexPage() {
                       <button
                         key={location}
                         onClick={() => { setSelectedPokemon(null); setCurrentPage("map"); }}
-                        className={`w-full flex items-center gap-2 px-3 py-2 rounded-xl border text-left active:scale-95 transition-transform ${LOCATION_COLORS[location] || 'bg-gray-100 text-gray-700 border-gray-200'}`}
+                        className={`w-full flex items-center gap-2 px-3 py-2 rounded-xl border text-left active:scale-95 transition-transform ${LOCATION_COLORS[location] || 'bg-gray-100 dark:bg-gray-700 text-gray-700 border-gray-200'}`}
                       >
                         <MapPin className="w-3.5 h-3.5 shrink-0" />
                         <span className="text-sm font-medium flex-1">{location}</span>
@@ -302,8 +302,8 @@ export function DexPage() {
             {/* Notes */}
             {selectedPokemon.comfortNotes && (
               <div>
-                <h3 className="font-bold text-gray-700 text-sm mb-2">Notes</h3>
-                <p className="text-xs text-gray-600 bg-gray-50 rounded-xl p-3 border border-gray-100">{selectedPokemon.comfortNotes}</p>
+                <h3 className="font-bold text-gray-700 dark:text-gray-300 text-sm mb-2">Notes</h3>
+                <p className="text-xs text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-gray-900 rounded-xl p-3 border border-gray-100">{selectedPokemon.comfortNotes}</p>
               </div>
             )}
 
@@ -317,7 +317,7 @@ export function DexPage() {
 
   // ── Pokemon List ──
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-red-500 to-red-600">
+    <div className="h-full flex flex-col bg-gradient-to-b from-red-500 to-red-600 dark:from-gray-800 dark:to-gray-900">
       {/* Header */}
       <div className="pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
@@ -337,13 +337,13 @@ export function DexPage() {
 
         {/* Search */}
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500" />
           <input
             type="text"
             placeholder="Search Pokémon..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-2.5 rounded-xl bg-white shadow-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm"
+            className="w-full pl-9 pr-3 py-2.5 rounded-xl bg-white dark:bg-gray-800 shadow-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm"
           />
         </div>
 
@@ -361,7 +361,7 @@ export function DexPage() {
                 friendFilter === val
                   ? val === "friends" ? "bg-yellow-400 text-yellow-900"
                   : val === "unseen"  ? "bg-gray-600 text-white"
-                  : "bg-white text-red-600"
+                  : "bg-white dark:bg-gray-800 text-red-600"
                   : "bg-white/20 text-white"
               }`}
             >
@@ -375,7 +375,7 @@ export function DexPage() {
         <div className="flex gap-1.5 mt-2">
           <button
             onClick={() => setSelectedRarity(null)}
-            className={`flex-1 px-2.5 py-1.5 rounded-full text-xs font-medium active:scale-95 transition-transform ${!selectedRarity ? "bg-white text-red-600" : "bg-white/20 text-white"}`}
+            className={`flex-1 px-2.5 py-1.5 rounded-full text-xs font-medium active:scale-95 transition-transform ${!selectedRarity ? "bg-white dark:bg-gray-800 text-red-600" : "bg-white/20 text-white"}`}
           >
             All
           </button>
@@ -392,7 +392,7 @@ export function DexPage() {
       </div>
 
       {/* List */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
         {filteredPokemon.map((pokemon, listIdx) => {
           const isFriend = capturedPokemon.includes(pokemon.id);
           const isEven = listIdx % 2 === 0;
@@ -404,7 +404,7 @@ export function DexPage() {
           return (
             <div
               key={`${pokemon.id}-${pokemon.name}`}
-              className={`flex items-center gap-3 px-3 py-2.5 border-b border-gray-100 active:brightness-95 ${isEven ? 'bg-white' : 'bg-slate-50'}`}
+              className={`flex items-center gap-3 px-3 py-2.5 border-b border-gray-100 dark:border-gray-700 active:brightness-95 ${isEven ? 'bg-white' : 'bg-slate-50 dark:bg-gray-900'}`}
               onClick={() => setSelectedPokemon(pokemon)}
             >
               {/* Pokemon Image */}
@@ -421,8 +421,8 @@ export function DexPage() {
               <div className="flex-1 min-w-0">
                 {/* Name row */}
                 <div className="flex items-center gap-1.5 mb-0.5">
-                  <span className="text-[9px] text-gray-400 font-mono">#{String(pokemon.id).padStart(3, '0')}</span>
-                  <h3 className="font-bold text-gray-800 text-sm truncate">{pokemon.name}</h3>
+                  <span className="text-[9px] text-gray-400 dark:text-gray-500 font-mono">#{String(pokemon.id).padStart(3, '0')}</span>
+                  <h3 className="font-bold text-gray-800 dark:text-gray-100 text-sm truncate">{pokemon.name}</h3>
                   <span className={`text-[9px] font-semibold shrink-0 ${getRarityColor(pokemon.rarity)}`}>{pokemon.rarity}</span>
                 </div>
 
@@ -448,7 +448,7 @@ export function DexPage() {
               <button
                 onClick={(e) => { e.stopPropagation(); toggleCapturedPokemon(pokemon.id); }}
                 className={`w-11 h-11 rounded-full flex items-center justify-center shrink-0 active:scale-90 transition-transform ${
-                  isFriend ? 'bg-yellow-400 text-yellow-900' : 'bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300'
+                  isFriend ? 'bg-yellow-400 text-yellow-900' : 'bg-gray-100 dark:bg-gray-700 text-gray-400 border-2 border-dashed border-gray-300'
                 }`}
               >
                 {isFriend ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}

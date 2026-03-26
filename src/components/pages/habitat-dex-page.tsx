@@ -104,7 +104,7 @@ export function HabitatDexPage() {
     if (habitatPokemon.length === 0) return null;
     const total = habitatPokemon.length;
     const caught = habitatPokemon.filter(p => capturedNames.has(p.name.toLowerCase())).length;
-    if (caught === 0) return { label: "Not Started", icon: <Circle className="w-3 h-3" />, color: "bg-gray-200 text-gray-600" };
+    if (caught === 0) return { label: "Not Started", icon: <Circle className="w-3 h-3" />, color: "bg-gray-200 text-gray-600 dark:text-gray-300" };
     if (caught === total) return { label: "Complete!", icon: <CheckCircle className="w-3 h-3" />, color: "bg-green-100 text-green-700" };
     return { label: `${caught}/${total}`, icon: <Clock className="w-3 h-3" />, color: "bg-yellow-100 text-yellow-700" };
   };
@@ -137,7 +137,7 @@ export function HabitatDexPage() {
   };
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-green-500 to-green-600 overflow-hidden relative">
+    <div className="h-full flex flex-col bg-gradient-to-b from-green-500 to-green-600 dark:from-green-900 dark:to-green-950 overflow-hidden relative">
       {/* Header */}
       <div className="pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
@@ -156,13 +156,13 @@ export function HabitatDexPage() {
 
         {/* Search */}
         <div className="relative mb-2">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500" />
           <input
             type="text"
             placeholder="Search habitats..."
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-2 rounded-xl bg-white shadow text-gray-800 placeholder-gray-400 focus:outline-none text-sm"
+            className="w-full pl-9 pr-3 py-2 rounded-xl bg-white dark:bg-gray-800 shadow text-gray-800 placeholder-gray-400 focus:outline-none text-sm"
           />
         </div>
 
@@ -174,7 +174,7 @@ export function HabitatDexPage() {
               onClick={() => handleFilterChange(f)}
               className={`px-3 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap transition-all flex items-center gap-1 ${
                 sortFilter === f
-                  ? "bg-white text-green-700 shadow"
+                  ? "bg-white dark:bg-gray-800 text-green-700 shadow"
                   : "bg-white/20 text-white"
               }`}
               whileTap={{ scale: 0.95 }}
@@ -188,7 +188,7 @@ export function HabitatDexPage() {
       </div>
 
       {/* Content — List */}
-      <div className="flex-1 bg-white rounded-t-[2rem] overflow-y-auto">
+      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
         <div className="p-3 space-y-2">
             {filteredHabitats.map((habitat, index) => {
               const status = getCompletionStatus(habitat.pokemon);
@@ -200,12 +200,12 @@ export function HabitatDexPage() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: Math.min(index * 0.02, 0.3) }}
-                  className={`bg-gray-50 rounded-xl overflow-hidden border transition-colors ${isDiscovered ? 'border-green-200 bg-green-50/30' : 'border-gray-100'}`}
+                  className={`bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden border transition-colors ${isDiscovered ? 'border-green-200 bg-green-50/30' : 'border-gray-100'}`}
                 >
                   <div className="flex items-center gap-3 p-3">
                     {/* Tap image or name → fullscreen detail */}
                     <button
-                      className="w-16 h-16 rounded-lg overflow-hidden bg-gray-200 shrink-0 active:scale-95 transition-transform"
+                      className="w-16 h-16 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700 shrink-0 active:scale-95 transition-transform"
                       onClick={() => setSelectedHabitat(habitat)}
                     >
                       <img
@@ -222,7 +222,7 @@ export function HabitatDexPage() {
                     >
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-[10px] text-gray-400">#{String(habitat.id).padStart(3,'0')}</span>
-                        <h3 className="font-bold text-gray-800 text-sm truncate">{habitat.name}</h3>
+                        <h3 className="font-bold text-gray-800 dark:text-gray-100 text-sm truncate">{habitat.name}</h3>
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="text-xs text-gray-500">{habitat.pokemon.length} Pokémon</span>
@@ -241,7 +241,7 @@ export function HabitatDexPage() {
                       className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-transform ${
                         isDiscovered
                           ? 'bg-yellow-400 text-yellow-900'
-                          : 'bg-gray-100 text-gray-400 border-2 border-dashed border-gray-300'
+                          : 'bg-gray-100 dark:bg-gray-700 text-gray-400 border-2 border-dashed border-gray-300'
                       }`}
                     >
                       {isDiscovered ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
@@ -265,24 +265,24 @@ export function HabitatDexPage() {
         const habitat = selectedHabitat;
         const isDiscovered = discoveredSet.has(habitat.id);
         return (
-          <div className="absolute inset-0 bg-gray-50 flex flex-col overflow-hidden z-10">
+          <div className="absolute inset-0 bg-gray-50 dark:bg-gray-900 flex flex-col overflow-hidden z-10">
             {/* Header */}
-            <div className="shrink-0 bg-white px-4 pt-4 pb-3 border-b border-gray-100">
+            <div className="shrink-0 bg-white dark:bg-gray-800 px-4 pt-4 pb-3 border-b border-gray-100">
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => setSelectedHabitat(null)}
-                  className="w-11 h-11 rounded-full bg-gray-100 flex items-center justify-center active:scale-90 transition-transform shrink-0"
+                  className="w-11 h-11 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center active:scale-90 transition-transform shrink-0"
                 >
-                  <ArrowLeft className="w-5 h-5 text-gray-600" />
+                  <ArrowLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />
                 </button>
                 <div className="flex-1">
-                  <p className="text-xs text-gray-400 font-mono">#{String(habitat.id).padStart(3,'0')}</p>
-                  <h2 className="text-xl font-bold text-gray-900 leading-tight">{habitat.name}</h2>
+                  <p className="text-xs text-gray-400 dark:text-gray-500 font-mono">#{String(habitat.id).padStart(3,'0')}</p>
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white leading-tight">{habitat.name}</h2>
                 </div>
                 <button
                   onClick={() => toggleDiscoveredHabitat(habitat.id)}
                   className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-transform ${
-                    isDiscovered ? 'bg-yellow-400 text-yellow-900' : 'bg-gray-100 text-gray-400'
+                    isDiscovered ? 'bg-yellow-400 text-yellow-900' : 'bg-gray-100 dark:bg-gray-700 text-gray-400'
                   }`}
                 >
                   {isDiscovered ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
@@ -294,7 +294,7 @@ export function HabitatDexPage() {
             <div className="flex-1 overflow-y-auto">
               <div className="pt-4 px-4 pb-8 space-y-4">
                 {/* Hero image */}
-                <div className="w-full h-40 bg-gray-200 rounded-2xl overflow-hidden">
+                <div className="w-full h-40 bg-gray-200 dark:bg-gray-700 rounded-2xl overflow-hidden">
                   <img
                     src={habitat.image}
                     alt={habitat.name}
@@ -317,7 +317,7 @@ export function HabitatDexPage() {
                     <div className="flex gap-2 flex-wrap">
                       {(habitat as any).buildItems.map((item: any, idx: number) => (
                         <div key={`${habitat.id}-${item.slug}-${idx}`} className="flex flex-col items-center gap-1">
-                          <div className="w-14 h-14 bg-white rounded-xl border border-amber-200 shadow-sm flex items-center justify-center relative">
+                          <div className="w-14 h-14 bg-white dark:bg-gray-800 rounded-xl border border-amber-200 shadow-sm flex items-center justify-center relative">
                             <img
                               src={getItemImage(item.slug, item.image)}
                               alt={item.name}
@@ -338,8 +338,8 @@ export function HabitatDexPage() {
                 {/* Pokémon Residents */}
                 {habitat.pokemon.length > 0 && (
                   <div>
-                    <p className="text-sm font-bold text-gray-700 mb-3">
-                      Residents <span className="text-gray-400 font-normal text-xs">({habitat.pokemon.length})</span>
+                    <p className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-3">
+                      Residents <span className="text-gray-400 dark:text-gray-500 font-normal text-xs">({habitat.pokemon.length})</span>
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {habitat.pokemon.map(poke => {
@@ -352,10 +352,10 @@ export function HabitatDexPage() {
                             onClick={() => handlePokemonClick(poke.slug, poke.name)}
                             whileTap={{ scale: 0.95 }}
                             className={`flex flex-col items-center gap-1 p-2 rounded-xl border transition-colors w-[72px] ${
-                              isCaught ? "bg-green-50 border-green-200" : "bg-white border-gray-200"
+                              isCaught ? "bg-green-50 border-green-200" : "bg-white dark:bg-gray-800 border-gray-200"
                             }`}
                           >
-                            <div className="relative w-11 h-11 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden">
+                            <div className="relative w-11 h-11 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
                               {img && (
                                 <img src={img} alt={poke.name} className="w-full h-full object-contain"
                                   onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
