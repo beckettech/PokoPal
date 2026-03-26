@@ -1,6 +1,8 @@
 'use client'
 
+import { useEffect } from "react";
 import { useAppStore } from "@/lib/store";
+import { hapticTap } from "@/lib/haptics";
 import { HomePage } from "@/components/pages/home-page";
 import { DexPage } from "@/components/pages/dex-page";
 import { HabitatDexPage } from "@/components/pages/habitat-dex-page";
@@ -20,6 +22,18 @@ export default function Home() {
   const currentPage = useAppStore((state) => state.currentPage);
   const darkMode = useAppStore((state) => state.darkMode);
   const markPageVisited = useAppStore((state) => state.markPageVisited);
+
+  // Global haptic on all button clicks
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const target = e.target as HTMLElement;
+      if (target.closest('button') || target.closest('[role="button"]')) {
+        hapticTap();
+      }
+    };
+    window.addEventListener('click', handler, { passive: true });
+    return () => window.removeEventListener('click', handler);
+  }, []);
 
   // Track page visits for notification badges
   if (currentPage !== "home") {

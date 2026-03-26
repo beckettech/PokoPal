@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { ArrowLeft, Send, Coins, Sparkles, Loader2 } from "lucide-react";
 import { useAppStore } from "@/lib/store";
+import { hapticBuzz } from "@/lib/haptics";
 import { motion, AnimatePresence } from "framer-motion";
 import { pokemonList } from "@/lib/pokemon-data";
 import { getApiUrl } from "@/lib/api-config";
@@ -82,6 +83,7 @@ export function ChatPage() {
 
       // Add assistant message
       addChatMessage({ role: "assistant", content: fullContent });
+      hapticBuzz();
     } catch (error) {
       console.error("Chat error:", error);
       addChatMessage({ role: "assistant", content: "Hmm, I couldn't reach my knowledge base. Please try again!" });
