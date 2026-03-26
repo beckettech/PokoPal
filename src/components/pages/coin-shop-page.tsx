@@ -44,12 +44,15 @@ const coinPackages = [
   },
 ];
 
+// Random Pokémon sprites for daily stamp collection
+const STAMP_POKEMON = [1, 4, 7, 25, 39, 54, 63, 92, 129, 133, 143, 147, 150, 151, 155, 196, 248, 384, 448, 658];
+
 const dailyRewards = [
-  { day: 1, coins: 20, claimed: false },
-  { day: 2, coins: 30, claimed: false },
-  { day: 3, coins: 40, claimed: false },
-  { day: 4, coins: 50, claimed: false },
-  { day: 5, coins: 100, claimed: false },
+  { day: 1, coins: 50, claimed: false },
+  { day: 2, coins: 100, claimed: false },
+  { day: 3, coins: 150, claimed: false },
+  { day: 4, coins: 200, claimed: false },
+  { day: 5, coins: 250, claimed: false },
 ];
 
 export function CoinShopPage() {
@@ -188,21 +191,34 @@ export function CoinShopPage() {
           </div>
 
           {/* Daily Rewards */}
-          <div className="p-3 border-t border-gray-100">
+          <div className="p-3 border-t border-gray-100 dark:border-gray-700">
             <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Daily Login Rewards</h2>
-            <div className="grid grid-cols-5 gap-1">
-              {dailyRewards.map((reward) => (
-                <motion.div
-                  key={reward.day}
-                  className="text-center p-1.5 rounded-lg bg-amber-50"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <p className="text-[10px] text-gray-500">Day {reward.day}</p>
-                  <Coins className="w-4 h-4 mx-auto text-yellow-500" />
-                  <p className="text-[10px] font-bold text-amber-600">+{reward.coins}</p>
-                </motion.div>
-              ))}
+            <div className="grid grid-cols-5 gap-2">
+              {dailyRewards.map((reward) => {
+                const stampPokemon = STAMP_POKEMON[(reward.day - 1) % STAMP_POKEMON.length];
+                return (
+                  <motion.button
+                    key={reward.day}
+                    className="text-center p-2 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800 relative overflow-hidden"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => { addCoins(reward.coins); }}
+                  >
+                    <p className="text-[10px] text-gray-500 dark:text-gray-400 mb-1">Day {reward.day}</p>
+                    <img
+                      src={`/pokemon/${String(stampPokemon).padStart(3, '0')}.png`}
+                      alt="Stamp"
+                      className="w-10 h-10 mx-auto object-contain drop-shadow-sm"
+                      onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                    />
+                    <p className="text-[10px] font-bold text-amber-600 dark:text-amber-400 mt-1">+{reward.coins}</p>
+                  </motion.button>
+                );
+              })}
             </div>
+            <p className="text-[10px] text-gray-400 dark:text-gray-500 text-center mt-2">
+              Tap to claim! Resets daily • 800 coins total
+            </p>
           </div>
 
           {/* Info */}
