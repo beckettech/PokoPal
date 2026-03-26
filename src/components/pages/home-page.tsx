@@ -91,14 +91,6 @@ const menuItems = [
     shadowColor: "shadow-pink-500/30",
     hasNotification: true 
   },
-  { 
-    id: "legendaries", 
-    icon: Sparkles, 
-    label: "Legendaries",
-    color: "bg-gradient-to-br from-purple-500 to-indigo-600",
-    shadowColor: "shadow-purple-500/30",
-    hasNotification: false 
-  },
 ];
 
 const TOTAL_POKEMON = 300;

@@ -161,6 +161,33 @@ export function DexPage() {
           </div>
         )}
 
+        {/* Legendary Habitat - for Pokemon that can be housed */}
+        {(selectedPokemon as any).habitatBuilt && (
+          <div className="mx-4 mt-2 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 rounded-xl p-3">
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-lg">🏠</span>
+              <h3 className="font-bold text-emerald-800 text-sm">Can Be Housed In</h3>
+            </div>
+            <button
+              onClick={() => {
+                const hab = habitatMap[(selectedPokemon as any).habitatBuilt.toLowerCase()];
+                if (hab) navigateToHabitat(hab.id);
+                else setCurrentPage("habitat-dex");
+              }}
+              className="flex items-center gap-2 bg-emerald-100 rounded-xl border border-emerald-200 active:scale-95 transition-transform text-left w-full overflow-hidden mt-2"
+            >
+              {habitatMap[(selectedPokemon as any).habitatBuilt?.toLowerCase()]?.image && (
+                <img
+                  src={habitatMap[(selectedPokemon as any).habitatBuilt.toLowerCase()].image}
+                  alt={(selectedPokemon as any).habitatBuilt}
+                  className="w-14 h-14 object-cover shrink-0"
+                />
+              )}
+              <span className="text-xs font-semibold text-emerald-800 leading-tight pr-3">{(selectedPokemon as any).habitatBuilt}</span>
+            </button>
+          </div>
+        )}
+
         {/* Scrollable content */}
         <div className="flex-1 overflow-y-auto">
           <div className="pt-4 px-4 pb-8 space-y-3">

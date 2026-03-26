@@ -13,7 +13,6 @@ import { ItemsPage } from "@/components/pages/items-page";
 import { MysteryGiftsPage } from "@/components/pages/mystery-gifts-page";
 import { ChatPage } from "@/components/pages/chat-page";
 import { CoinShopPage } from "@/components/pages/coin-shop-page";
-import { LegendariesPage } from "@/components/pages/legendaries-page";
 import { MobileAdBanner } from "@/components/MobileAdBanner";
 
 export default function Home() {
@@ -45,8 +44,6 @@ export default function Home() {
         return <ChatPage />;
       case "coin-shop":
         return <CoinShopPage />;
-      case "legendaries":
-        return <LegendariesPage />;
       default:
         return <HomePage />;
     }
