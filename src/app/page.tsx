@@ -13,6 +13,7 @@ import { ItemsPage } from "@/components/pages/items-page";
 import { MysteryGiftsPage } from "@/components/pages/mystery-gifts-page";
 import { ChatPage } from "@/components/pages/chat-page";
 import { CoinShopPage } from "@/components/pages/coin-shop-page";
+import { MobileAdBanner } from "@/components/MobileAdBanner";
 
 export default function Home() {
   const currentPage = useAppStore((state) => state.currentPage);
@@ -53,6 +54,7 @@ export default function Home() {
       <div key={currentPage} className="h-full">
         {renderPage()}
       </div>
+      <MobileAdBanner />
     </main>
   );
 }

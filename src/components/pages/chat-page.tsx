@@ -5,6 +5,7 @@ import { ArrowLeft, Send, Coins, Sparkles, Loader2 } from "lucide-react";
 import { useAppStore } from "@/lib/store";
 import { motion, AnimatePresence } from "framer-motion";
 import { pokemonList } from "@/lib/pokemon-data";
+import { getApiUrl } from "@/lib/api-config";
 import habitatsData from "@/data/scraped/habitats.json";
 
 // Dexter avatar
@@ -51,7 +52,7 @@ export function ChatPage() {
 
     let coinDeducted = false;
     try {
-      const response = await fetch("/api/chat", {
+      const response = await fetch(getApiUrl("/api/chat"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

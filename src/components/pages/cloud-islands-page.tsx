@@ -2,6 +2,7 @@
 
 import { useAppStore } from "@/lib/store";
 import { cloudIslandsPosts, CloudIslandPost } from "@/lib/pokemon-data";
+import { getApiUrl } from "@/lib/api-config";
 import { ArrowLeft, Copy, Check, Bookmark, Plus, X, Upload, Image, Key, BadgeCheck, TrendingUp, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
@@ -48,7 +49,7 @@ export function CloudIslandsPage() {
     setSubmitting(true);
     
     try {
-      await fetch("/api/submit-island", {
+      await fetch(getApiUrl("/api/submit-island"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
