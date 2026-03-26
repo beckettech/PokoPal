@@ -12,7 +12,8 @@ import {
   Gift, 
   MessageCircle,
   Coins,
-  Sparkles
+  Sparkles,
+  Settings
 } from "lucide-react";
 
 // Pokedex/Calculator icon for Dex
@@ -110,13 +111,12 @@ export function HomePage() {
         <div className="flex items-start justify-between">
           {/* Left Side: Large Blue Button + Circles */}
           <div className="flex items-center gap-3">
-            {/* Large Blue Indicator Button */}
+            {/* Settings Button */}
             <button
+              onClick={() => setCurrentPage("settings")}
               className="w-14 h-14 rounded-full shadow-xl flex items-center justify-center border-4 border-white/50 bg-gradient-to-br from-sky-400 to-sky-500 active:scale-90 transition-transform"
             >
-              <div className="w-8 h-8 rounded-full bg-white/30 flex items-center justify-center">
-                <div className="w-3 h-3 rounded-full bg-white/60" />
-              </div>
+              <Settings className="w-7 h-7 text-white" />
             </button>
             
             {/* Three Small Colored Circles */}

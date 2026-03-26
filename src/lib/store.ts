@@ -14,7 +14,8 @@ export type Page =
   | "items"
   | "mystery-gifts" 
   | "chat"
-  | "coin-shop";
+  | "coin-shop"
+  | "settings";
 
 interface Pokemon {
   id: number;
@@ -28,6 +29,15 @@ interface ChatMessage {
   role: "user" | "assistant";
   content: string;
   timestamp: number;
+}
+
+// User/Account system
+interface UserState {
+  userId: string;
+  isPremium: boolean;
+  premiumPurchaseDate: string | null;
+  adsRemoved: boolean;
+  lastPurchaseRestore: string | null;
 }
 
 interface AppState {
@@ -78,6 +88,11 @@ interface AppState {
   toggleInProgressRequest: (id: string) => void;
   claimedGifts: string[];
   toggleClaimedGift: (id: string) => void;
+  // User/Account
+  user: UserState;
+  setPremium: (isPremium: boolean) => void;
+  setAdsRemoved: (removed: boolean) => void;
+  restorePurchases: () => void;
 }
 
 export const useAppStore = create<AppState>()(
@@ -214,6 +229,34 @@ export const useAppStore = create<AppState>()(
           ? state.inProgressRequests.filter(r => r !== id)
           : [...state.inProgressRequests, id]
       })),
+      // User/Account state
+      user: {
+        userId: typeof window !== 'undefined' ? (localStorage.getItem('pokopia_user_id') || crypto.randomUUID()) : crypto.randomUUID(),
+        isPremium: false,
+        premiumPurchaseDate: null,
+        adsRemoved: false,
+        lastPurchaseRestore: null,
+      },
+      setPremium: (isPremium) => set((state) => ({
+        user: {
+          ...state.user,
+          isPremium,
+          premiumPurchaseDate: isPremium ? new Date().toISOString() : null,
+          adsRemoved: isPremium,
+        }
+      })),
+      setAdsRemoved: (removed) => set((state) => ({
+        user: {
+          ...state.user,
+          adsRemoved: removed,
+        }
+      })),
+      restorePurchases: () => set((state) => ({
+        user: {
+          ...state.user,
+          lastPurchaseRestore: new Date().toISOString(),
+        }
+      })),
     }),
     {
       name: "pokopia-storage",
@@ -241,6 +284,7 @@ export const useAppStore = create<AppState>()(
         completedRequests: state.completedRequests,
         inProgressRequests: state.inProgressRequests,
         claimedGifts: state.claimedGifts,
+        user: state.user,
       }),
     }
   )

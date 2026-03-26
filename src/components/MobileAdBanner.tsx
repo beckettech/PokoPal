@@ -4,14 +4,11 @@ import { useState, useEffect } from 'react';
 import { AdMob, BannerAdOptions, BannerAdSize, BannerAdPosition } from '@capacitor-community/admob';
 import { Purchases } from '@revenuecat/purchases-capacitor';
 import { ADMOB_CONFIG, REVENUECAT_CONFIG } from '@/lib/purchases';
+import { useAppStore } from '@/lib/store';
 
-interface MobileAdBannerProps {
-  onRemoveAds?: () => void;
-}
-
-export function MobileAdBanner({ onRemoveAds }: MobileAdBannerProps) {
+export function MobileAdBanner() {
+  const { user, setPremium, setAdsRemoved } = useAppStore();
   const [isMobile, setIsMobile] = useState(false);
-  const [adsRemoved, setAdsRemoved] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showRemoveOption, setShowRemoveOption] = useState(false);
 
@@ -37,18 +34,13 @@ export function MobileAdBanner({ onRemoveAds }: MobileAdBannerProps) {
                 REVENUECAT_CONFIG.entitlements.pro
               );
 
-              if (hasPro) {
-                setAdsRemoved(true);
-                localStorage.setItem('adsRemoved', 'true');
+              if (hasPro && !user.isPremium) {
+                setPremium(true);
               }
             } catch (e) {
               console.log('RevenueCat not configured or purchase check failed');
             }
           }
-
-          // Check localStorage fallback
-          const removed = localStorage.getItem('adsRemoved') === 'true';
-          setAdsRemoved(removed);
 
           // Initialize AdMob
           await AdMob.initialize({
@@ -56,7 +48,7 @@ export function MobileAdBanner({ onRemoveAds }: MobileAdBannerProps) {
             testingMode: process.env.NODE_ENV === 'development',
           });
 
-          if (!removed) {
+          if (!user.adsRemoved) {
             await showBannerAd();
           }
         }
@@ -114,18 +106,14 @@ export function MobileAdBanner({ onRemoveAds }: MobileAdBannerProps) {
           );
 
           if (hasPro) {
-            setAdsRemoved(true);
-            localStorage.setItem('adsRemoved', 'true');
+            setPremium(true);
             await hideBannerAd();
-            onRemoveAds?.();
           }
         }
       } else {
-        // Fallback: simulate purchase for development
-        localStorage.setItem('adsRemoved', 'true');
-        setAdsRemoved(true);
+        // Fallback: simulate purchase for development/testing
+        setPremium(true);
         await hideBannerAd();
-        onRemoveAds?.();
       }
     } catch (error: any) {
       // User cancelled
@@ -143,7 +131,7 @@ export function MobileAdBanner({ onRemoveAds }: MobileAdBannerProps) {
   if (!isMobile) return null;
 
   // Don't render if ads are removed
-  if (adsRemoved) return null;
+  if (user.adsRemoved) return null;
 
   return (
     <div
