@@ -8,7 +8,7 @@ import { useState } from "react";
 const coinPackages = [
   { 
     id: 1, 
-    coins: 50, 
+    coins: 1000, 
     price: "$0.99", 
     bonus: 0,
     icon: Coins,
@@ -17,27 +17,27 @@ const coinPackages = [
   },
   { 
     id: 2, 
-    coins: 150, 
+    coins: 3500, 
     price: "$2.99", 
-    bonus: 20,
+    bonus: 0,
     icon: Zap,
     color: "from-yellow-400 to-orange-500",
     popular: true 
   },
   { 
     id: 3, 
-    coins: 500, 
-    price: "$9.99", 
-    bonus: 100,
+    coins: 7500, 
+    price: "$4.99", 
+    bonus: 0,
     icon: Sparkles,
     color: "from-purple-400 to-pink-500",
     popular: false 
   },
   { 
     id: 4, 
-    coins: 1200, 
-    price: "$19.99", 
-    bonus: 300,
+    coins: 20000, 
+    price: "$9.99", 
+    bonus: 0,
     icon: Crown,
     color: "from-amber-400 to-yellow-500",
     popular: false 
@@ -45,13 +45,11 @@ const coinPackages = [
 ];
 
 const dailyRewards = [
-  { day: 1, coins: 10, claimed: false },
-  { day: 2, coins: 15, claimed: false },
-  { day: 3, coins: 20, claimed: false },
-  { day: 4, coins: 25, claimed: false },
-  { day: 5, coins: 30, claimed: false },
-  { day: 6, coins: 40, claimed: false },
-  { day: 7, coins: 50, claimed: false },
+  { day: 1, coins: 20, claimed: false },
+  { day: 2, coins: 30, claimed: false },
+  { day: 3, coins: 40, claimed: false },
+  { day: 4, coins: 50, claimed: false },
+  { day: 5, coins: 100, claimed: false },
 ];
 
 export function CoinShopPage() {
@@ -62,12 +60,11 @@ export function CoinShopPage() {
   const handlePurchase = (pkg: typeof coinPackages[0]) => {
     setSelectedPackage(pkg.id);
     setTimeout(() => {
-      addCoins(pkg.coins + pkg.bonus);
+      addCoins(pkg.coins);
       setSelectedPackage(null);
       setShowSuccess(true);
       setTimeout(() => setShowSuccess(false), 2000);
-    }, 1500);
-  };
+    }, 1500);  };
 
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-amber-500 to-yellow-600 dark:from-amber-900 dark:to-yellow-950">
@@ -151,7 +148,7 @@ export function CoinShopPage() {
                     onClick={() => handlePurchase(pkg)}
                     disabled={selectedPackage !== null}
                     className={`relative p-3 rounded-xl text-white overflow-hidden bg-gradient-to-br ${pkg.color} ${
-                      pkg.popular || pkg.id === 1 ? 'col-span-2' : ''
+                      pkg.popular ? 'col-span-2' : ''
                     }`}
                     whileHover={{ scale: selectedPackage ? 1 : 1.02 }}
                     whileTap={{ scale: selectedPackage ? 1 : 0.98 }}
@@ -179,10 +176,7 @@ export function CoinShopPage() {
                       </div>
                       <div className="text-left">
                         <div className="flex items-center gap-1">
-                          <span className="font-bold text-lg">{pkg.coins}</span>
-                          {pkg.bonus > 0 && (
-                            <span className="text-xs text-white/80">+{pkg.bonus} bonus</span>
-                          )}
+                          <span className="font-bold text-lg">{pkg.coins.toLocaleString()}</span>
                         </div>
                         <span className="text-xs opacity-80">{pkg.price}</span>
                       </div>
@@ -196,7 +190,7 @@ export function CoinShopPage() {
           {/* Daily Rewards */}
           <div className="p-3 border-t border-gray-100">
             <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Daily Login Rewards</h2>
-            <div className="grid grid-cols-7 gap-1">
+            <div className="grid grid-cols-5 gap-1">
               {dailyRewards.map((reward) => (
                 <motion.div
                   key={reward.day}
@@ -216,8 +210,8 @@ export function CoinShopPage() {
             <div className="bg-amber-50 rounded-xl p-3">
               <h3 className="text-xs font-bold text-amber-800 mb-1">What are Coins?</h3>
               <p className="text-xs text-amber-700">
-                Coins let you chat with Dexter, your Pokopia assistant. Each message costs 1 coin. 
-                You started with 100 coins for free!
+                Coins let you chat with Dexter, your Pokopia assistant. Each question costs 150 coins. 
+                You started with 250 coins for free!
               </p>
             </div>
           </div>

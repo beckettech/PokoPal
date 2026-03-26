@@ -76,8 +76,8 @@ export function ChatPage() {
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
-    if (coins < 100) {
-      alert("Not enough coins! You need 100 coins per question.");
+    if (coins < 150) {
+      alert("Not enough coins! You need 150 coins per question.");
       return;
     }
 
@@ -110,7 +110,7 @@ export function ChatPage() {
       }
 
       // Only deduct coins on success
-      spendCoins(100);
+      spendCoins(150);
       coinDeducted = true;
 
       // Parse JSON response
@@ -126,7 +126,7 @@ export function ChatPage() {
       console.error("Chat error:", error);
       addChatMessage({ role: "assistant", content: "Hmm, I couldn't reach my knowledge base. Please try again!" });
       // Refund coins if we already deducted but got no response
-      if (coinDeducted) addCoins(100);
+      if (coinDeducted) addCoins(150);
     } finally {
       setIsLoading(false);
     }
@@ -217,7 +217,7 @@ export function ChatPage() {
         {/* Cost indicator */}
         <div className="flex items-center justify-center gap-1 text-white/60 text-xs">
           <Sparkles className="w-3 h-3" />
-          <span>100 coins per question</span>
+          <span>150 coins per question</span>
         </div>
       </div>
 
@@ -305,7 +305,7 @@ export function ChatPage() {
           />
           <button
             onClick={handleSend}
-            disabled={!input.trim() || isLoading || coins < 100}
+            disabled={!input.trim() || isLoading || coins < 150}
             className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all ${
               input.trim() && !isLoading && coins >= 100
                 ? "bg-cyan-500 text-white"
@@ -315,7 +315,7 @@ export function ChatPage() {
             <Send className="w-5 h-5" />
           </button>
         </div>
-        {coins < 100 && (
+        {coins < 150 && (
           <p className="text-xs text-red-500 text-center mt-2">Not enough coins! Visit the shop to get more.</p>
         )}
       </div>

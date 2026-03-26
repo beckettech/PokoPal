@@ -136,7 +136,7 @@ export const useAppStore = create<AppState>()(
       navigateToHabitat: (habitatId) => set({ currentPage: "habitat-dex", focusedHabitatId: habitatId, focusedPokemonId: null, focusedLocationId: null }),
       navigateToLocation: (locationId) => set({ currentPage: "map", focusedLocationId: locationId, focusedPokemonId: null, focusedHabitatId: null }),
       clearFocus: () => set({ focusedPokemonId: null, focusedHabitatId: null, focusedLocationId: null }),
-      coins: 1000, // Start with 1000 coins
+      coins: 250, // Start with 250 coins
       addCoins: (amount) => set((state) => ({ coins: state.coins + amount })),
       spendCoins: (amount) => {
         const current = get().coins;
@@ -396,7 +396,7 @@ export const useAppStore = create<AppState>()(
       version: 3,
       migrate: (persistedState: any, version: number) => {
         // Migrate: give users 1000 coins if they have less than 100 (old default was 0 or 100)
-        if (persistedState.coins < 100) {
+        if (persistedState.coins < 150) {
           persistedState.coins = 1000;
         }
         return persistedState;
