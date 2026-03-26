@@ -19,7 +19,7 @@ interface Message {
 }
 
 export function ChatPage() {
-  const { setCurrentPage, coins, chatMessages, addChatMessage, spendCoins, addCoins, capturedPokemon, ownedItems, discoveredHabitats, navigateToPokemon, navigateToHabitat } = useAppStore();
+  const { setCurrentPage, coins, chatMessages, addChatMessage, spendCoins, addCoins, capturedPokemon, ownedItems, discoveredHabitats, navigateToPokemon, navigateToHabitat, handle } = useAppStore();
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -37,6 +37,10 @@ export function ChatPage() {
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
+    if (!handle) {
+      alert("Please set your @handle in Account settings first!");
+      return;
+    }
     if (coins < 100) {
       alert("Not enough coins! You need 100 coins per question.");
       return;

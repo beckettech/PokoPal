@@ -91,10 +91,12 @@ interface AppState {
   // User/Account
   user: UserState;
   darkMode: boolean;
+  handle: string; // User's @handle for community features
   setPremium: (isPremium: boolean) => void;
   setAdsRemoved: (removed: boolean) => void;
   restorePurchases: () => void;
   toggleDarkMode: () => void;
+  setHandle: (handle: string) => void;
 }
 
 export const useAppStore = create<AppState>()(
@@ -240,6 +242,8 @@ export const useAppStore = create<AppState>()(
         lastPurchaseRestore: null,
       },
       darkMode: false,
+      handle: "",
+      setHandle: (handle) => set({ handle }),
       toggleDarkMode: () => set((state) => {
         const next = !state.darkMode;
         if (typeof document !== 'undefined') {
@@ -296,6 +300,7 @@ export const useAppStore = create<AppState>()(
         claimedGifts: state.claimedGifts,
         user: state.user,
         darkMode: state.darkMode,
+        handle: state.handle,
       }),
     }
   )

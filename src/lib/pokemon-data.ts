@@ -435,7 +435,7 @@ export const cloudIslandsPosts: CloudIslandPost[] = [
   { id: 1, islandCode: "MGL483P4", title: "SASHIHARA Island", description: "Official developer showcase island with unique furniture, statues, fountains, and a special Ditto bathtub! Great for reference photos.", author: "Official", screenshots: ["/islands/MGL483P4.png"], likes: 186, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
   { id: 2, islandCode: "QBRK7FVM", title: "EIKO City", description: "Features rare Plusle & Minun habitats, urban design inspiration, and unique garden ornaments. Take reference photos for 3D printing!", author: "Official", screenshots: ["/islands/QBRK7FVM.png"], likes: 142, isDream: false, isFeatured: true, isOfficial: true, createdAt: "2026-03-05" },
   // Community islands
-  { id: 3, islandCode: "6DXLPD6F", title: "Community Resource Island", description: "60 special patterns (Smeargle and Vespiquen), all flowers, hedges, fruits, biomes, rare items, and Gimmighoul stones!", author: "Community", screenshots: ["/islands/6DXLPD6F.jpg", "/islands/6DXLPD6F-1.jpg", "/islands/6DXLPD6F-2.jpg"], likes: 218, isDream: false, isFeatured: false, isOfficial: false, createdAt: "2026-03-25" },
+  { id: 3, islandCode: "6DXLPD6F", title: "Community Resource Island", description: "60 special patterns (Smeargle and Vespiquen), all flowers, hedges, fruits, biomes, rare items, and Gimmighoul stones!", author: "@Mel_shota", screenshots: ["/islands/6DXLPD6F.jpg", "/islands/6DXLPD6F-1.jpg", "/islands/6DXLPD6F-2.jpg"], likes: 218, isDream: false, isFeatured: false, isOfficial: false, createdAt: "2026-03-25" },
 ];
 
 // Mystery Gifts

@@ -5,7 +5,7 @@ import { ArrowLeft, User, Crown, RefreshCw, Info, Moon, Sun } from "lucide-react
 import { useState } from "react";
 
 export function AccountPage() {
-  const { setCurrentPage, user, setPremium, restorePurchases, darkMode, toggleDarkMode } = useAppStore();
+  const { setCurrentPage, user, setPremium, restorePurchases, darkMode, toggleDarkMode, handle, setHandle } = useAppStore();
   const [isRestoring, setIsRestoring] = useState(false);
 
   const handleRestorePurchases = async () => {
@@ -99,6 +99,20 @@ export function AccountPage() {
                   </span>
                 </div>
               )}
+              <div className="pt-2 border-t border-gray-100 dark:border-gray-700">
+                <span className="text-sm text-gray-600 dark:text-gray-400 block mb-2">@Handle</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-400">@</span>
+                  <input
+                    type="text"
+                    value={handle}
+                    onChange={(e) => setHandle(e.target.value.replace("@", "").replace(/\s/g, ""))}
+                    placeholder="your_name"
+                    className="flex-1 px-3 py-2 bg-white dark:bg-gray-800 rounded-lg text-sm text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                  />
+                </div>
+                <p className="text-[10px] text-gray-400 dark:text-gray-500 mt-1">Required to post islands and use chat</p>
+              </div>
             </div>
           </div>
 

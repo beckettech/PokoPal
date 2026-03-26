@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
 
 export function CloudIslandsPage() {
-  const { setCurrentPage, savedIslands = [], toggleSavedIsland } = useAppStore() as any;
+  const { setCurrentPage, savedIslands = [], toggleSavedIsland, handle } = useAppStore() as any;
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<"popular" | "recent">("popular");
   const [filterBy, setFilterBy] = useState<"all" | "saved">("all");
@@ -46,10 +46,14 @@ export function CloudIslandsPage() {
 
   const handleSubmitPost = async () => {
     if (!postForm.title || !postForm.islandCode || postImages.length === 0) return;
+    if (!handle) {
+      alert("Please set your @handle in Account settings first!");
+      return;
+    }
     setSubmitting(true);
     
     try {
-      await fetch(getApiUrl("/api/submit-island"), {
+      const res = await fetch(getApiUrl("/api/submit-island"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -57,8 +61,15 @@ export function CloudIslandsPage() {
           description: postForm.description,
           islandCode: postForm.islandCode.toUpperCase(),
           images: postImages,
+          author: handle,
         }),
       });
+      const data = await res.json();
+      if (!res.ok) {
+        alert(data.error || "Submission failed");
+        setSubmitting(false);
+        return;
+      }
       setSubmitted(true);
       setTimeout(() => {
         setShowPostModal(false);
@@ -443,7 +454,6 @@ function IslandCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.03 }}
       className={`rounded-2xl border p-3 transition-all ${
-        island.isOfficial ? "bg-purple-50/30 dark:bg-purple-900/20 border-purple-100 dark:border-purple-700" :
         isSaved ? "bg-yellow-50/30 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-700" : "bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700"
       }`}
     >
@@ -461,7 +471,12 @@ function IslandCard({
         </div>
 
         <div className="flex-1 min-w-0 text-left">
-          <h3 className="font-bold text-sm text-gray-800 dark:text-gray-100 truncate">{island.title}</h3>
+          <div className="flex items-center gap-1.5">
+            <h3 className="font-bold text-sm text-gray-800 dark:text-gray-100 truncate">{island.title}</h3>
+            {island.isOfficial && (
+              <span className="text-[9px] font-bold bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300 px-1.5 py-0.5 rounded-full shrink-0">Official</span>
+            )}
+          </div>
           <code className="text-base text-cyan-600 dark:text-cyan-400 font-mono font-semibold">{island.islandCode}</code>
           <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mt-0.5">{island.description}</p>
         </div>
