@@ -152,7 +152,7 @@ export function CloudIslandsPage() {
       <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
         <div className="p-3 space-y-2">
           {/* How to visit - at top */}
-          <div className="bg-cyan-50 border border-cyan-100 rounded-2xl p-4">
+          <div className="bg-cyan-50 dark:bg-cyan-900/30 border border-cyan-100 dark:border-cyan-700 rounded-2xl p-4">
             <div className="flex items-center gap-2 mb-2">
               <Key className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
               <h3 className="font-bold text-cyan-900 dark:text-cyan-300 text-sm">How to Visit Islands</h3>
