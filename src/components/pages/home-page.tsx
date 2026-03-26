@@ -32,7 +32,7 @@ const menuItems = [
     id: "dex", 
     icon: PokedexIcon, 
     label: "Dex",
-    color: "bg-gradient-to-br from-red-500 to-red-600 dark:from-gray-800 dark:to-gray-900",
+    color: "bg-gradient-to-br from-red-500 to-red-600",
     shadowColor: "shadow-red-500/30",
     hasNotification: false 
   },

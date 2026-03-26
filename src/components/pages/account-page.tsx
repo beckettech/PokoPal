@@ -69,7 +69,7 @@ export function AccountPage() {
 
           {/* Account Section */}
           <div className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden">
-            <div className="px-4 py-3 border-b border-gray-100">
+            <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-700">
               <h2 className="font-bold text-gray-900 dark:text-white flex items-center gap-2">
                 <User className="w-4 h-4" />
                 Account
@@ -77,11 +77,11 @@ export function AccountPage() {
             </div>
             <div className="p-4 space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">User ID</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">User ID</span>
                 <span className="text-xs font-mono text-gray-400">{user.userId?.slice(0, 8) || '---'}...</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">Premium Status</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">Premium Status</span>
                 {user.isPremium ? (
                   <span className="flex items-center gap-1 text-xs font-medium text-amber-600 bg-amber-50 px-2 py-1 rounded-full">
                     <Crown className="w-3 h-3" />
@@ -93,8 +93,8 @@ export function AccountPage() {
               </div>
               {user.premiumPurchaseDate && (
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-600">Purchased</span>
-                  <span className="text-xs text-gray-400">
+                  <span className="text-sm text-gray-600 dark:text-gray-400">Purchased</span>
+                  <span className="text-xs text-gray-400 dark:text-gray-500">
                     {new Date(user.premiumPurchaseDate).toLocaleDateString()}
                   </span>
                 </div>
@@ -151,7 +151,7 @@ export function AccountPage() {
 
           {/* About */}
           <div className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden">
-            <div className="px-4 py-3 border-b border-gray-100">
+            <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-700">
               <h2 className="font-bold text-gray-900 dark:text-white flex items-center gap-2">
                 <Info className="w-4 h-4" />
                 About
@@ -159,12 +159,12 @@ export function AccountPage() {
             </div>
             <div className="p-4 space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">Version</span>
-                <span className="text-xs text-gray-400">1.0.0</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">Version</span>
+                <span className="text-xs text-gray-400 dark:text-gray-500">1.0.0</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-600">Developer</span>
-                <span className="text-xs text-gray-400">BEK Tech</span>
+                <span className="text-sm text-gray-600 dark:text-gray-400">Developer</span>
+                <span className="text-xs text-gray-400 dark:text-gray-500">BEK Tech</span>
               </div>
             </div>
           </div>

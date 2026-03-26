@@ -195,17 +195,17 @@ export function ChatPage() {
                 <img src={DEXTER_AVATAR} alt="Dexter" className="w-12 h-12 object-contain" />
               </div>
               <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-2">Hi, I'm Dexter!</h2>
-              <p className="text-sm text-gray-500 max-w-xs mx-auto">
+              <p className="text-sm text-gray-500 dark:text-gray-400 max-w-xs mx-auto">
                 Ask me about Pokémon locations, habitats, items, or anything Pokopia!
               </p>
               <div className="mt-4 space-y-2">
-                <p className="text-xs text-gray-400">Try asking:</p>
+                <p className="text-xs text-gray-400 dark:text-gray-500">Try asking:</p>
                 <div className="flex flex-wrap gap-2 justify-center">
                   {["Where do I find tomatoes?", "How to rebuild pokemon center?", "Where can I find Pikachu?"].map(q => (
                     <button
                       key={q}
                       onClick={() => setInput(q)}
-                      className="text-xs bg-gray-100 dark:bg-gray-700 px-3 py-1.5 rounded-full text-gray-600 hover:bg-gray-200"
+                      className="text-xs bg-gray-100 dark:bg-gray-700 px-3 py-1.5 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
                     >
                       {q}
                     </button>
@@ -228,7 +228,7 @@ export function ChatPage() {
                   className={`max-w-[80%] rounded-2xl px-4 py-2 ${
                     msg.role === "user"
                       ? "bg-cyan-500 text-white"
-                      : "bg-gray-100 dark:bg-gray-700 text-gray-800"
+                      : "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100"
                   }`}
                 >
                   <p className="text-sm whitespace-pre-wrap">{renderMessage(msg.content)}</p>
@@ -261,7 +261,7 @@ export function ChatPage() {
             onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && handleSend()}
             placeholder="Ask Dexter anything..."
             disabled={isLoading}
-            className="flex-1 px-4 py-3 rounded-xl bg-gray-100 dark:bg-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 disabled:opacity-50"
+            className="flex-1 px-4 py-3 rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 disabled:opacity-50"
           />
           <button
             onClick={handleSend}

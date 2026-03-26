@@ -69,14 +69,14 @@ function ConditionsBlock({ pokemon }: { pokemon: Pokemon }) {
         {/* Time */}
         <div className="flex flex-col items-center gap-1.5 bg-white dark:bg-gray-800 rounded-xl p-3 border border-orange-100">
           <TimeIcon time={time} />
-          <span className="text-[10px] text-gray-500 uppercase tracking-wide font-semibold">Time</span>
-          <span className="text-sm font-bold text-gray-800">{time}</span>
+          <span className="text-[10px] text-gray-500 dark:text-gray-400 uppercase tracking-wide font-semibold">Time</span>
+          <span className="text-sm font-bold text-gray-800 dark:text-gray-100">{time}</span>
         </div>
         {/* Weather */}
         <div className="flex flex-col items-center gap-1.5 bg-white dark:bg-gray-800 rounded-xl p-3 border border-orange-100">
           <WeatherIcon weather={weather} />
-          <span className="text-[10px] text-gray-500 uppercase tracking-wide font-semibold">Weather</span>
-          <span className="text-sm font-bold text-gray-800">{weather}</span>
+          <span className="text-[10px] text-gray-500 dark:text-gray-400 uppercase tracking-wide font-semibold">Weather</span>
+          <span className="text-sm font-bold text-gray-800 dark:text-gray-100">{weather}</span>
         </div>
       </div>
     </div>
@@ -132,7 +132,7 @@ export function DexPage() {
     return (
       <div className="h-full flex flex-col bg-gray-50 dark:bg-gray-900 overflow-hidden">
         {/* Clean white top bar */}
-        <div className="shrink-0 bg-white dark:bg-gray-800 px-4 pt-4 pb-3 border-b border-gray-100">
+        <div className="shrink-0 bg-white dark:bg-gray-800 px-4 pt-4 pb-3 border-b border-gray-100 dark:border-gray-700">
           <div className="flex items-center gap-3">
             <button
               onClick={() => setSelectedPokemon(null)}
@@ -343,7 +343,7 @@ export function DexPage() {
             placeholder="Search Pokémon..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-2.5 rounded-xl bg-white dark:bg-gray-800 shadow-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm"
+            className="w-full pl-9 pr-3 py-2.5 rounded-xl bg-white dark:bg-gray-800 shadow-lg text-gray-800 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-sm"
           />
         </div>
 
@@ -404,7 +404,7 @@ export function DexPage() {
           return (
             <div
               key={`${pokemon.id}-${pokemon.name}`}
-              className={`flex items-center gap-3 px-3 py-2.5 border-b border-gray-100 dark:border-gray-700 active:brightness-95 ${isEven ? 'bg-white' : 'bg-slate-50 dark:bg-gray-900'}`}
+              className={`flex items-center gap-3 px-3 py-2.5 border-b border-gray-100 dark:border-gray-700 active:brightness-95 ${isEven ? 'bg-white dark:bg-gray-800' : 'bg-slate-50 dark:bg-gray-900'}`}
               onClick={() => setSelectedPokemon(pokemon)}
             >
               {/* Pokemon Image */}

@@ -94,8 +94,8 @@ export function CoinShopPage() {
               >
                 <Check className="w-8 h-8 text-white" />
               </motion.div>
-              <h2 className="text-lg font-bold text-gray-800">Purchase Complete!</h2>
-              <p className="text-sm text-gray-500 dark:text-gray-400 dark:text-gray-500 mt-1">Coins added to your balance</p>
+              <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100">Purchase Complete!</h2>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Coins added to your balance</p>
             </motion.div>
           </motion.div>
         )}
@@ -136,7 +136,7 @@ export function CoinShopPage() {
           {/* Coin Packages */}
           <div className="p-3">
             <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Purchase Coins</h2>
-            <p className="text-[10px] text-gray-500 dark:text-gray-400 dark:text-gray-500 mb-2">
+            <p className="text-[10px] text-gray-500 dark:text-gray-400 mb-2">
               Use coins to chat with your Pokopia assistant!
             </p>
 
