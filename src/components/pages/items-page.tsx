@@ -255,7 +255,7 @@ export function ItemsPage() {
                     className={`absolute top-1 right-1 w-8 h-8 rounded-full flex items-center justify-center transition-all ${
                       owned
                         ? "bg-orange-500 text-white"
-                        : "bg-gray-200 text-gray-500"
+                        : "bg-gray-200 dark:bg-gray-600 text-gray-500 dark:text-gray-300"
                     }`}
                   >
                     {owned ? <Check className="w-4 h-4" /> : <Plus className="w-4 h-4" />}

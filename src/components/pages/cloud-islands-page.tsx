@@ -221,7 +221,7 @@ export function CloudIslandsPage() {
                       "grid-cols-2"
                     }`}>
                       {selectedIsland.screenshots.map((img, i) => (
-                        <div key={i} className={`rounded-xl overflow-hidden bg-gray-100 ${
+                        <div key={i} className={`rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 ${
                           (selectedIsland.screenshots.length === 3 && i === 0) ? "col-span-2" :
                           (selectedIsland.screenshots.length === 4 && i === 0) ? "col-span-2" : ""
                         }`}>
@@ -367,7 +367,7 @@ export function CloudIslandsPage() {
                     <label className="block text-xs font-medium text-gray-600 dark:text-gray-300 mb-2">Screenshots * (1-4)</label>
                     <div className="flex gap-2 flex-wrap">
                       {postImages.map((img, i) => (
-                        <div key={i} className="relative w-20 h-20 rounded-lg overflow-hidden bg-gray-100">
+                        <div key={i} className="relative w-20 h-20 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
                           <img src={img} className="w-full h-full object-cover" />
                           <button
                             onClick={() => setPostImages(postImages.filter((_, idx) => idx !== i))}
@@ -443,8 +443,8 @@ function IslandCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.03 }}
       className={`rounded-2xl border p-3 transition-all ${
-        island.isOfficial ? "bg-purple-50/30 border-purple-100" :
-        isSaved ? "bg-yellow-50/30 border-yellow-200" : "bg-white dark:bg-gray-800 border-gray-100"
+        island.isOfficial ? "bg-purple-50/30 dark:bg-purple-900/20 border-purple-100 dark:border-purple-700" :
+        isSaved ? "bg-yellow-50/30 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-700" : "bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700"
       }`}
     >
       {/* Main row - tap to open detail */}

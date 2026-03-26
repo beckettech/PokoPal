@@ -60,36 +60,46 @@ export function MysteryGiftsPage() {
             <p className="text-[10px] text-white/70">Unclaimed</p>
           </div>
         </div>
-
-        {/* How to claim note */}
-        <p className="text-center text-white/60 text-[10px] mt-2">
-          Claim at the PC outside any Pokémon Center → Get Items
-        </p>
       </div>
 
       {/* Content */}
       <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
         <div className="p-4 space-y-3">
+
+          {/* How to Redeem - moved to top */}
+          <div className="bg-purple-50 dark:bg-purple-900/30 border border-purple-100 dark:border-purple-700 rounded-2xl p-4">
+            <p className="text-xs font-bold text-purple-800 dark:text-purple-300 mb-2">📋 How to Redeem</p>
+            <ul className="space-y-1 text-xs text-purple-700 dark:text-purple-300">
+              <li>1. Play for ~30 min to unlock Pokémon Center access</li>
+              <li>2. Go to the PC outside any Pokémon Center</li>
+              <li>3. Select <strong>Get Items</strong></li>
+              <li>4. Choose <strong>Via Internet</strong> or <strong>Via Serial Code</strong></li>
+              <li>5. Nintendo account required (no Online subscription needed)</li>
+            </ul>
+          </div>
+
           {GIFTS.map((gift) => {
             const isClaimed = claimedGifts.includes(gift.id);
             return (
               <div
                 key={gift.id}
                 className={`rounded-2xl border p-4 transition-all ${
-                  isClaimed ? "bg-green-50 border-green-200" : "bg-white dark:bg-gray-800 border-gray-100 shadow-sm"
+                  isClaimed ? "bg-green-50 dark:bg-green-900/30 border-green-200 dark:border-green-700" : "bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 shadow-sm"
                 }`}
               >
                 {/* Top row */}
                 <div className="flex items-start gap-3">
                   {/* Gift icon */}
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${
-                    isClaimed ? "bg-green-100" : "bg-gradient-to-br from-pink-400 to-purple-500"
+                    isClaimed ? "bg-green-100 dark:bg-green-800" : "bg-gradient-to-br from-pink-400 to-purple-500"
                   }`}>
                     <Gift className={`w-6 h-6 ${isClaimed ? "text-green-500" : "text-white"}`} />
                   </div>
 
                   <div className="flex-1 min-w-0">
-                    <h3 className={`font-bold text-sm leading-tight ${isClaimed ? "text-gray-500 dark:text-gray-400 dark:text-gray-500" : "text-gray-800"}`}>
+                    <h3 className={`font-bold text-sm leading-tight ${
+                      isClaimed ? "text-gray-500 dark:text-gray-400" : "text-gray-800 dark:text-gray-100"
+                    }`}>
                       {gift.name}
                     </h3>
 
@@ -100,7 +110,9 @@ export function MysteryGiftsPage() {
                         : <Wifi className="w-3 h-3 text-purple-500" />
                       }
                       <span className={`text-[11px] font-medium ${
-                        gift.methodType === "code" ? "text-blue-600" : "text-purple-600"
+                        gift.methodType === "code"
+                          ? "text-blue-600 dark:text-blue-400"
+                          : "text-purple-600 dark:text-purple-400"
                       }`}>
                         {gift.method}
                       </span>
@@ -123,7 +135,7 @@ export function MysteryGiftsPage() {
                 {/* Items */}
                 <div className="mt-3 flex flex-wrap gap-2">
                   {gift.items.map((item, i) => (
-                    <div key={i} className="flex items-center gap-1.5 bg-gray-50 dark:bg-gray-900 border border-gray-100 rounded-xl px-2.5 py-1.5">
+                    <div key={i} className="flex items-center gap-1.5 bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-700 rounded-xl px-2.5 py-1.5">
                       {gift.itemImages[i] && (
                         <img
                           src={gift.itemImages[i]}
@@ -149,17 +161,7 @@ export function MysteryGiftsPage() {
             );
           })}
 
-          {/* Info card */}
-          <div className="bg-purple-50 border border-purple-100 rounded-2xl p-4">
-            <p className="text-xs font-bold text-purple-800 mb-2">📋 How to Redeem</p>
-            <ul className="space-y-1 text-xs text-purple-700">
-              <li>1. Play for ~30 min to unlock Pokémon Center access</li>
-              <li>2. Go to the PC outside any Pokémon Center</li>
-              <li>3. Select <strong>Get Items</strong></li>
-              <li>4. Choose <strong>Via Internet</strong> or <strong>Via Serial Code</strong></li>
-              <li>5. Nintendo account required (no Online subscription needed)</li>
-            </ul>
-          </div>
+          <div className="h-2" />
         </div>
       </div>
     </div>

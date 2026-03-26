@@ -134,9 +134,9 @@ export function RequestsPage() {
               <div
                 key={request.id}
                 className={`rounded-2xl border transition-all ${
-                  isCompleted  ? "bg-green-50 border-green-200" :
-                  isInProgress ? "bg-yellow-50 border-yellow-200" :
-                                 "bg-white dark:bg-gray-800 border-gray-100"
+                  isCompleted  ? "bg-green-50 dark:bg-green-900/30 border-green-200 dark:border-green-700" :
+                  isInProgress ? "bg-yellow-50 dark:bg-yellow-900/30 border-yellow-200 dark:border-yellow-700" :
+                                 "bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700"
                 }`}
               >
                 {/* Collapsed row — tap to expand */}
@@ -179,7 +179,7 @@ export function RequestsPage() {
                         disabled={isCompleted}
                         className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-semibold transition-all ${
                           isCompleted  ? "bg-gray-100 dark:bg-gray-700 text-gray-300" :
-                          isInProgress ? "bg-yellow-400 text-white" :
+                          isInProgress ? "bg-yellow-400 dark:bg-yellow-500 text-white" :
                                          "bg-gray-100 dark:bg-gray-700 text-gray-600 active:scale-95"
                         }`}
                       >
