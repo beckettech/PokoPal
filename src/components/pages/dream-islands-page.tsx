@@ -225,10 +225,10 @@ export function DreamIslandsPage() {
       {/* Content */}
       <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
         {/* Intro */}
-        <div className="mx-3 mt-3 mb-2 p-3 bg-purple-50 border border-purple-200 rounded-xl">
+        <div className="mx-3 mt-3 mb-2 p-3 bg-purple-50 dark:bg-purple-900/30 border border-purple-200 dark:border-purple-700 rounded-xl">
           <div className="flex items-start gap-2">
-            <Info className="w-4 h-4 text-purple-500 mt-0.5 shrink-0" />
-            <p className="text-xs text-purple-700">
+            <Info className="w-4 h-4 text-purple-500 dark:text-purple-400 mt-0.5 shrink-0" />
+            <p className="text-xs text-purple-700 dark:text-purple-300">
               <b>Befriend Drifloon</b> to unlock Dream Islands. Visit once per day for materials & rare finds. Resets daily — don't leave items behind!
             </p>
           </div>
@@ -246,7 +246,7 @@ export function DreamIslandsPage() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
-                className={`rounded-xl border overflow-hidden bg-white ${visited ? island.borderColor : 'border-gray-100'}`}
+                className={`rounded-xl border overflow-hidden bg-white dark:bg-gray-800 ${visited ? island.borderColor : 'border-gray-100 dark:border-gray-700'}`}
               >
                 {/* Row — always visible */}
                 <div className="flex items-center gap-3 p-3">
@@ -281,7 +281,7 @@ export function DreamIslandsPage() {
                               onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
                             />
                           ))}
-                          <span className="text-[10px] text-amber-600 font-semibold self-center">
+                          <span className="text-[10px] text-amber-600 dark:text-amber-400 font-semibold self-center">
                             {island.legendaries.map(l => `${l.name} (~${l.chance}%)`).join(", ")}
                           </span>
                         </div>
@@ -312,17 +312,17 @@ export function DreamIslandsPage() {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                     >
-                      <div className={`${island.bgColor} border-t border-gray-100 dark:border-gray-700 px-4 py-3 space-y-3`}>
+                      <div className={`${island.bgColor} dark:bg-gray-900 border-t border-gray-100 dark:border-gray-700 px-4 py-3 space-y-3`}>
 
                         {/* Note */}
                         {island.note && (
-                          <p className="text-xs text-gray-500 italic">{island.note}</p>
+                          <p className="text-xs text-gray-500 dark:text-gray-400 italic">{island.note}</p>
                         )}
 
                         {/* Legendary encounters */}
                         {island.legendaries.length > 0 && (
                           <div>
-                            <p className={`text-[10px] font-bold uppercase tracking-wide mb-2 flex items-center gap-1 ${island.textColor} opacity-70`}>
+                            <p className={`text-[10px] font-bold uppercase tracking-wide mb-2 flex items-center gap-1 ${island.textColor} dark:text-gray-300 opacity-70`}>
                               <Star className="w-3 h-3 text-amber-500" /> Legendary Encounter
                             </p>
                             <div className="space-y-2">
@@ -333,12 +333,12 @@ export function DreamIslandsPage() {
                                       <img src={leg.image} alt={leg.name} className="w-14 h-14 object-contain"
                                         onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                                     </div>
-                                    <span className={`text-[9px] font-bold ${island.textColor}`}>{leg.name}</span>
-                                    <span className="text-[8px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full font-semibold">~{leg.chance}%</span>
+                                    <span className={`text-[9px] font-bold ${island.textColor} dark:text-gray-200`}>{leg.name}</span>
+                                    <span className="text-[8px] bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300 px-1.5 py-0.5 rounded-full font-semibold">~{leg.chance}%</span>
                                   </div>
                                   {(leg as any).tip && (
-                                    <div className="flex-1 bg-white/60 rounded-xl p-2.5 border border-amber-100">
-                                      <p className="text-[10px] text-amber-800 leading-relaxed">💡 {(leg as any).tip}</p>
+                                    <div className="flex-1 bg-white/60 dark:bg-gray-800/60 rounded-xl p-2.5 border border-amber-100 dark:border-amber-800">
+                                      <p className="text-[10px] text-amber-800 dark:text-amber-300 leading-relaxed">💡 {(leg as any).tip}</p>
                                     </div>
                                   )}
                                 </div>
@@ -349,17 +349,17 @@ export function DreamIslandsPage() {
 
                         {/* Materials found here */}
                         <div>
-                          <p className={`text-[10px] font-bold uppercase tracking-wide mb-2 ${island.textColor} opacity-70`}>
+                          <p className={`text-[10px] font-bold uppercase tracking-wide mb-2 ${island.textColor} dark:text-gray-300 opacity-70`}>
                             Materials Found Here
                           </p>
                           <div className="flex gap-2 flex-wrap">
                             {island.materials.map(item => (
                               <div key={item.name} className="flex flex-col items-center gap-1">
-                                <div className="w-11 h-11 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 shadow-sm flex items-center justify-center">
+                                <div className="w-11 h-11 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-600 shadow-sm flex items-center justify-center">
                                   <img src={item.image} alt={item.name} className="w-9 h-9 object-contain"
                                     onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                                 </div>
-                                <span className={`text-[8px] text-center max-w-[44px] leading-tight ${island.textColor} opacity-80`}>{item.name}</span>
+                                <span className={`text-[8px] text-center max-w-[44px] leading-tight ${island.textColor} dark:text-gray-300 opacity-80`}>{item.name}</span>
                               </div>
                             ))}
                           </div>
@@ -368,17 +368,17 @@ export function DreamIslandsPage() {
                         {/* Rare items */}
                         {island.rareItems.length > 0 && (
                           <div>
-                            <p className={`text-[10px] font-bold uppercase tracking-wide mb-2 ${island.textColor} opacity-70`}>
+                            <p className={`text-[10px] font-bold uppercase tracking-wide mb-2 ${island.textColor} dark:text-gray-300 opacity-70`}>
                               ✨ Rare Finds
                             </p>
                             <div className="flex gap-2 flex-wrap">
                               {island.rareItems.map(item => (
                                 <div key={item.name} className="flex flex-col items-center gap-1">
-                                  <div className="w-11 h-11 bg-white dark:bg-gray-800 rounded-lg border-2 border-amber-200 shadow-sm flex items-center justify-center">
+                                  <div className="w-11 h-11 bg-white dark:bg-gray-800 rounded-lg border-2 border-amber-200 dark:border-amber-700 shadow-sm flex items-center justify-center">
                                     <img src={item.image} alt={item.name} className="w-9 h-9 object-contain"
                                       onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                                   </div>
-                                  <span className={`text-[8px] text-center max-w-[44px] leading-tight ${island.textColor} opacity-80`}>{item.name}</span>
+                                  <span className={`text-[8px] text-center max-w-[44px] leading-tight ${island.textColor} dark:text-gray-300 opacity-80`}>{item.name}</span>
                                 </div>
                               ))}
                             </div>
@@ -393,7 +393,7 @@ export function DreamIslandsPage() {
           })}
         </div>
 
-        <p className="text-center text-[10px] text-gray-400 pb-4">
+        <p className="text-center text-[10px] text-gray-400 dark:text-gray-500 pb-4">
           Tap an island to see details · Mark as visited to track progress
         </p>
       </div>

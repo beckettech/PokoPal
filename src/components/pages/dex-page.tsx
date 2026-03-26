@@ -29,12 +29,12 @@ const LOCATION_ORDER = [
 ];
 
 const LOCATION_COLORS: Record<string, string> = {
-  "Withered Wastelands": "bg-amber-100 text-amber-800 border-amber-300",
-  "Bleak Beach":         "bg-blue-100 text-blue-800 border-blue-300",
-  "Rocky Ridges":        "bg-stone-100 text-stone-800 border-stone-300",
-  "Sparkling Skylands":  "bg-sky-100 text-sky-800 border-sky-300",
-  "Palette Town":        "bg-red-100 text-red-800 border-red-300",
-  "Cloud Island":        "bg-purple-100 text-purple-800 border-purple-300",
+  "Withered Wastelands": "bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-700",
+  "Bleak Beach":         "bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 border-blue-300 dark:border-blue-700",
+  "Rocky Ridges":        "bg-stone-100 dark:bg-stone-900/40 text-stone-800 dark:text-stone-300 border-stone-300 dark:border-stone-700",
+  "Sparkling Skylands":  "bg-sky-100 dark:bg-sky-900/40 text-sky-800 dark:text-sky-300 border-sky-300 dark:border-sky-700",
+  "Palette Town":        "bg-red-100 dark:bg-red-900/40 text-red-800 dark:text-red-300 border-red-300 dark:border-red-700",
+  "Cloud Island":        "bg-purple-100 dark:bg-purple-900/40 text-purple-800 dark:text-purple-300 border-purple-300 dark:border-purple-700",
 };
 
 const rarities = ["Common", "Rare", "Legendary"] as const;
@@ -109,9 +109,9 @@ export function DexPage() {
   });
 
   const getRarityColor = (rarity: string) => {
-    if (rarity === "Legendary") return "text-amber-500";
-    if (rarity === "Rare") return "text-purple-500";
-    return "text-gray-400";
+    if (rarity === "Legendary") return "text-amber-500 dark:text-amber-400";
+    if (rarity === "Rare") return "text-purple-500 dark:text-purple-400";
+    return "text-gray-400 dark:text-gray-500";
   };
 
   const getRarityBg = (rarity: string) => {
@@ -155,9 +155,9 @@ export function DexPage() {
           <div className="mx-4 mt-3 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-3">
             <div className="flex items-center gap-2 mb-1">
               <span className="text-lg">✨</span>
-              <h3 className="font-bold text-amber-800 text-sm">How to Obtain</h3>
+              <h3 className="font-bold text-amber-800 dark:text-amber-300 text-sm">How to Obtain</h3>
             </div>
-            <p className="text-xs text-amber-900 leading-relaxed">{(selectedPokemon as any).obtainMethod}</p>
+            <p className="text-xs text-amber-900 dark:text-amber-200 leading-relaxed">{(selectedPokemon as any).obtainMethod}</p>
           </div>
         )}
 
@@ -166,7 +166,7 @@ export function DexPage() {
           <div className="mx-4 mt-2 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 rounded-xl p-3">
             <div className="flex items-center gap-2 mb-1">
               <span className="text-lg">🏠</span>
-              <h3 className="font-bold text-emerald-800 text-sm">Can Be Housed In</h3>
+              <h3 className="font-bold text-emerald-800 dark:text-emerald-300 text-sm">Can Be Housed In</h3>
             </div>
             <button
               onClick={() => {
@@ -183,7 +183,7 @@ export function DexPage() {
                   className="w-14 h-14 object-cover shrink-0"
                 />
               )}
-              <span className="text-xs font-semibold text-emerald-800 leading-tight pr-3">{(selectedPokemon as any).habitatBuilt}</span>
+              <span className="text-xs font-semibold text-emerald-800 dark:text-emerald-300 leading-tight pr-3">{(selectedPokemon as any).habitatBuilt}</span>
             </button>
           </div>
         )}
@@ -204,7 +204,7 @@ export function DexPage() {
                 {/* Habitats — name above image */}
                 {selectedPokemon.habitats && selectedPokemon.habitats.length > 0 && (
                   <div>
-                    <p className="text-[10px] font-bold text-emerald-700 uppercase tracking-wide mb-1.5">Habitats</p>
+                    <p className="text-[10px] font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wide mb-1.5">Habitats</p>
                     <div className="flex flex-col gap-1.5">
                       {selectedPokemon.habitats.map((habitat: string, i: number) => {
                         const hab = habitatMap[habitat.toLowerCase()];
@@ -221,7 +221,7 @@ export function DexPage() {
                               <img src={hab.image} alt={habitat} className="w-14 h-14 object-cover shrink-0"
                                 onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                             )}
-                            <span className="text-xs font-semibold text-emerald-800 leading-tight pr-1">{habitat}</span>
+                            <span className="text-xs font-semibold text-emerald-800 dark:text-emerald-300 leading-tight pr-1">{habitat}</span>
                           </button>
                         );
                       })}
@@ -263,8 +263,8 @@ export function DexPage() {
                           )}
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="font-semibold text-green-800 text-sm">{specialty}</p>
-                          {info?.description && <p className="text-xs text-green-700 mt-0.5 leading-relaxed">{info.description}</p>}
+                          <p className="font-semibold text-green-800 dark:text-green-400 text-sm">{specialty}</p>
+                          {info?.description && <p className="text-xs text-green-700 dark:text-green-400 mt-0.5 leading-relaxed">{info.description}</p>}
                         </div>
                       </div>
                     );
@@ -435,7 +435,7 @@ export function DexPage() {
                       <div key={idx} className="flex items-center gap-0.5">
                         {h.image && <img src={h.image} alt={h.name} className="w-3.5 h-3.5 object-cover rounded-sm"
                           onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />}
-                        <span className="text-[8px] text-blue-600 truncate max-w-[60px]">{h.name}</span>
+                        <span className="text-[8px] text-blue-600 dark:text-blue-400 truncate max-w-[60px]">{h.name}</span>
                         {idx < habitatImages.length - 1 && <span className="text-gray-300 text-[8px]">·</span>}
                       </div>
                     ))}

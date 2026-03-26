@@ -104,9 +104,9 @@ export function HabitatDexPage() {
     if (habitatPokemon.length === 0) return null;
     const total = habitatPokemon.length;
     const caught = habitatPokemon.filter(p => capturedNames.has(p.name.toLowerCase())).length;
-    if (caught === 0) return { label: "Not Started", icon: <Circle className="w-3 h-3" />, color: "bg-gray-200 text-gray-600 dark:text-gray-300" };
-    if (caught === total) return { label: "Complete!", icon: <CheckCircle className="w-3 h-3" />, color: "bg-green-100 text-green-700" };
-    return { label: `${caught}/${total}`, icon: <Clock className="w-3 h-3" />, color: "bg-yellow-100 text-yellow-700" };
+    if (caught === 0) return { label: "Not Started", icon: <Circle className="w-3 h-3" />, color: "bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300" };
+    if (caught === total) return { label: "Complete!", icon: <CheckCircle className="w-3 h-3" />, color: "bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-400" };
+    return { label: `${caught}/${total}`, icon: <Clock className="w-3 h-3" />, color: "bg-yellow-100 dark:bg-yellow-900/40 text-yellow-700 dark:text-yellow-400" };
   };
 
   // Snapshot of discovered habitats when filter was last changed
@@ -221,11 +221,11 @@ export function HabitatDexPage() {
                       onClick={() => setSelectedHabitat(habitat)}
                     >
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-[10px] text-gray-400">#{String(habitat.id).padStart(3,'0')}</span>
+                        <span className="text-[10px] text-gray-400 dark:text-gray-500">#{String(habitat.id).padStart(3,'0')}</span>
                         <h3 className="font-bold text-gray-800 dark:text-gray-100 text-sm truncate">{habitat.name}</h3>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-xs text-gray-500">{habitat.pokemon.length} Pokémon</span>
+                        <span className="text-xs text-gray-500 dark:text-gray-400">{habitat.pokemon.length} Pokémon</span>
                         {status && (
                           <span className={`flex items-center gap-1 text-[10px] px-2 py-0.5 rounded-full font-medium ${status.color}`}>
                             {status.icon}
@@ -305,7 +305,7 @@ export function HabitatDexPage() {
 
                 {/* Description */}
                 {habitat.description && (
-                  <p className="text-sm text-gray-600 italic"
+                  <p className="text-sm text-gray-600 dark:text-gray-300 italic"
                     dangerouslySetInnerHTML={{ __html: habitat.description }}
                   />
                 )}
@@ -313,7 +313,7 @@ export function HabitatDexPage() {
                 {/* Build Requirements */}
                 {(habitat as any).buildItems && (habitat as any).buildItems.length > 0 && (
                   <div className="bg-amber-50 rounded-2xl p-3 border border-amber-100">
-                    <p className="text-xs font-bold text-amber-800 uppercase tracking-wide mb-3">🔨 Build Requirements</p>
+                    <p className="text-xs font-bold text-amber-800 dark:text-amber-300 uppercase tracking-wide mb-3">🔨 Build Requirements</p>
                     <div className="flex gap-2 flex-wrap">
                       {(habitat as any).buildItems.map((item: any, idx: number) => (
                         <div key={`${habitat.id}-${item.slug}-${idx}`} className="flex flex-col items-center gap-1">
@@ -328,7 +328,7 @@ export function HabitatDexPage() {
                               {item.quantity}
                             </span>
                           </div>
-                          <span className="text-[9px] text-center text-amber-900 font-medium max-w-[56px] leading-tight">{item.name}</span>
+                          <span className="text-[9px] text-center text-amber-900 dark:text-amber-300 font-medium max-w-[56px] leading-tight">{item.name}</span>
                         </div>
                       ))}
                     </div>
@@ -366,7 +366,7 @@ export function HabitatDexPage() {
                                 </div>
                               )}
                             </div>
-                            <span className={`text-[9px] text-center leading-tight font-medium ${isCaught ? "text-green-700" : "text-gray-600"}`}>
+                            <span className={`text-[9px] text-center leading-tight font-medium ${isCaught ? "text-green-700 dark:text-green-400" : "text-gray-600 dark:text-gray-300"}`}>
                               {poke.name}
                             </span>
                           </motion.button>

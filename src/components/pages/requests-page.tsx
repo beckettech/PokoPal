@@ -8,11 +8,11 @@ import requestsJson from "../../../public/requests.json";
 type Request = typeof requestsJson[0];
 
 const AREA_COLORS: Record<string, string> = {
-  "Withered Wastelands": "bg-amber-100 text-amber-800 border-amber-200",
-  "Bleak Beach":         "bg-blue-100 text-blue-800 border-blue-200",
-  "Rocky Ridges":        "bg-stone-100 text-stone-800 border-stone-200",
-  "Sparkling Skylands":  "bg-sky-100 text-sky-800 border-sky-200",
-  "All Areas":           "bg-gray-100 dark:bg-gray-700 text-gray-700 border-gray-200",
+  "Withered Wastelands": "bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 border-amber-200 dark:border-amber-700",
+  "Bleak Beach":         "bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 border-blue-200 dark:border-blue-700",
+  "Rocky Ridges":        "bg-stone-100 dark:bg-stone-900/40 text-stone-800 dark:text-stone-300 border-stone-200 dark:border-stone-700",
+  "Sparkling Skylands":  "bg-sky-100 dark:bg-sky-900/40 text-sky-800 dark:text-sky-300 border-sky-200 dark:border-sky-700",
+  "All Areas":           "bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-600",
 };
 
 const REWARD_ICONS: Record<string, string> = {
@@ -113,7 +113,7 @@ export function RequestsPage() {
                 key={area}
                 onClick={() => setAreaFilter(area)}
                 className={`shrink-0 text-xs px-3 py-1.5 rounded-full font-medium transition-all ${
-                  areaFilter === area ? "bg-yellow-500 text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600"
+                  areaFilter === area ? "bg-yellow-500 text-white" : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
                 }`}
               >
                 {area.split(" ").slice(-1)[0]}
@@ -145,14 +145,14 @@ export function RequestsPage() {
                   onClick={() => setExpandedId(isExpanded ? null : request.id)}
                 >
                   <div className="flex-1 min-w-0">
-                    <p className={`text-sm font-semibold truncate ${isCompleted ? "line-through text-gray-400 dark:text-gray-500" : "text-gray-800"}`}>
+                    <p className={`text-sm font-semibold truncate ${isCompleted ? "line-through text-gray-400 dark:text-gray-500" : "text-gray-800 dark:text-gray-100"}`}>
                       {request.name}
                     </p>
                     <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
                       <span className={`text-[10px] px-2 py-0.5 rounded-full border ${AREA_COLORS[request.area] || "bg-gray-100 dark:bg-gray-700 text-gray-600"}`}>
                         {request.area}
                       </span>
-                      <span className="text-[10px] text-gray-400">
+                      <span className="text-[10px] text-gray-400 dark:text-gray-500">
                         {REWARD_ICONS[request.rewardType]} {request.reward}
                       </span>
                     </div>
@@ -169,7 +169,7 @@ export function RequestsPage() {
 
                     {/* Giver */}
                     {request.giver && request.giver !== "Unknown" && (
-                      <p className="text-[11px] text-gray-400">👤 Given by: <span className="text-gray-600 font-medium">{request.giver}</span></p>
+                      <p className="text-[11px] text-gray-400 dark:text-gray-500">👤 Given by: <span className="text-gray-600 dark:text-gray-300 font-medium">{request.giver}</span></p>
                     )}
 
                     {/* Action buttons */}
