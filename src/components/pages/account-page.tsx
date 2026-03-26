@@ -1,7 +1,7 @@
 'use client';
 
 import { useAppStore } from "@/lib/store";
-import { ArrowLeft, User, Crown, RefreshCw, Info, Moon, Sun, Mail, AtSign, LogOut, Lock, Eye, EyeOff, Bug, Shield, Eye as EyeIcon, EyeOff as EyeOffIcon } from "lucide-react";
+import { ArrowLeft, User, Crown, RefreshCw, Info, Moon, Sun, Mail, AtSign, LogOut, Lock, Eye, EyeOff, Bug, Shield } from "lucide-react";
 import { useState, useRef } from "react";
 import { ReportIssueModal } from "@/components/ReportIssueModal";
 
@@ -15,10 +15,8 @@ export function AccountPage() {
   const [authTab, setAuthTab] = useState<"signup" | "login">("signup");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [authHandle, setAuthHandle] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [authError, setAuthError] = useState("");
   const [authLoading, setAuthLoading] = useState(false);
   const [editingHandle, setEditingHandle] = useState(false);
@@ -49,14 +47,15 @@ export function AccountPage() {
 
     if (authTab === "signup") {
       if (!authHandle) { setAuthError("Please choose a handle"); return; }
-      if (password !== confirmPassword) { setAuthError("Passwords don't match"); return; }
       if (password.length < 6) { setAuthError("Password must be at least 6 characters"); return; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setAuthError("Please enter a valid email"); return; }
       setAuthLoading(true);
       const ok = await signUp(email, password, authHandle);
       setAuthLoading(false);
-      if (ok) { setAuthError(""); setEmail(""); setPassword(""); setConfirmPassword(""); setAuthHandle(""); }
-      else setAuthError("Sign up failed. Email may already be in use.");
+      if (ok) { setAuthError(""); setEmail(""); setPassword(""); setAuthHandle(""); }
+      else setAuthError("Sign up failed. Please try again.");
     } else {
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setAuthError("Please enter a valid email"); return; }
       setAuthLoading(true);
       const ok = await signIn(email, password);
       setAuthLoading(false);
@@ -217,15 +216,6 @@ export function AccountPage() {
                         {showPassword ? <EyeOff className="w-4 h-4 text-gray-400" /> : <Eye className="w-4 h-4 text-gray-400" />}
                       </button>
                     </div>
-                    {authTab === "signup" && (
-                      <div className="relative">
-                        <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-                        <input type={showConfirmPassword ? "text" : "password"} value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} placeholder="Confirm Password" className={`${inputClass} pl-10 pr-10`} />
-                        <button onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="absolute right-3 top-1/2 -translate-y-1/2">
-                          {showConfirmPassword ? <EyeOffIcon className="w-4 h-4 text-gray-400" /> : <EyeIcon className="w-4 h-4 text-gray-400" />}
-                        </button>
-                      </div>
-                    )}
                     <button
                       onClick={handleAuthSubmit}
                       disabled={authLoading}
