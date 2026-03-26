@@ -155,7 +155,7 @@ export function ItemsPage() {
             placeholder="Search items..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-white dark:bg-gray-800 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50"
+            className="w-full pl-9 pr-9 py-2.5 rounded-xl bg-white dark:bg-gray-800 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
           />
           {searchQuery && (
             <button
@@ -242,7 +242,7 @@ export function ItemsPage() {
                   onClick={() => setSelectedItem(item)}
                   className={`relative flex flex-col items-center p-3 rounded-xl border transition-all active:scale-[0.98] ${
                     owned
-                      ? "bg-orange-50 border-orange-200"
+                      ? "bg-orange-50 dark:bg-orange-900/30 border-orange-200 dark:border-orange-700"
                       : "bg-gray-50 dark:bg-gray-900 border-gray-100"
                   }`}
                 >
