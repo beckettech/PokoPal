@@ -111,12 +111,13 @@ export function HomePage() {
         <div className="flex items-start justify-between">
           {/* Left Side: Large Blue Button + Circles */}
           <div className="flex items-center gap-3">
-            {/* Settings Button */}
+            {/* Large Blue Indicator Button */}
             <button
-              onClick={() => setCurrentPage("settings")}
               className="w-14 h-14 rounded-full shadow-xl flex items-center justify-center border-4 border-white/50 bg-gradient-to-br from-sky-400 to-sky-500 active:scale-90 transition-transform"
             >
-              <Settings className="w-7 h-7 text-white" />
+              <div className="w-8 h-8 rounded-full bg-white/30 flex items-center justify-center">
+                <div className="w-3 h-3 rounded-full bg-white/60" />
+              </div>
             </button>
             
             {/* Three Small Colored Circles */}
@@ -127,14 +128,22 @@ export function HomePage() {
             </div>
           </div>
           
-          {/* Right Side: Coins Display */}
-          <button
-            onClick={() => setCurrentPage("coin-shop")}
-            className="flex items-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 px-3 py-1.5 rounded-full shadow-lg active:scale-95 transition-transform"
-          >
-            <Coins className="w-4 h-4 text-yellow-900" />
-            <span className="font-bold text-yellow-900 text-sm">{coins}</span>
-          </button>
+          {/* Right Side: Coins + Account */}
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setCurrentPage("coin-shop")}
+              className="flex items-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 px-3 py-1.5 rounded-full shadow-lg active:scale-95 transition-transform"
+            >
+              <Coins className="w-4 h-4 text-yellow-900" />
+              <span className="font-bold text-yellow-900 text-sm">{coins}</span>
+            </button>
+            <button
+              onClick={() => setCurrentPage("account")}
+              className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center active:scale-90 transition-transform"
+            >
+              <Settings className="w-5 h-5 text-white" />
+            </button>
+          </div>
         </div>
       </div>
 

@@ -15,7 +15,7 @@ export type Page =
   | "mystery-gifts" 
   | "chat"
   | "coin-shop"
-  | "settings";
+  | "account";
 
 interface Pokemon {
   id: number;
