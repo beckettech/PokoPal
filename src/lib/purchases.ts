@@ -31,9 +31,9 @@ export const ADMOB_CONFIG = {
     rewarded: 'ca-app-pub-3940256099942544/1712485313',
   },
 
-  // Production ad unit IDs (replace with your own from AdMob dashboard)
+  // Production ad unit IDs (from AdMob dashboard)
   production: {
-    banner: 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX',
+    banner: 'ca-app-pub-8733903111878090/2737711764',
     interstitial: 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX',
     rewarded: 'ca-app-pub-XXXXXXXXXXXXXXXX/XXXXXXXXXX',
   },
