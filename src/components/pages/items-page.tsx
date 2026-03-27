@@ -380,12 +380,21 @@ export function ItemsPage() {
             )}
 
             {/* Recipe Requirements */}
-            {selectedItem && recipes[selectedItem.slug] && (
+            {selectedItem && recipes[selectedItem.slug] && selectedItem.methods?.some((m: string) => m.includes('Craft from recipe')) && (
               <div className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-3 border border-amber-100 dark:border-amber-800 mb-4">
                 <p className="text-xs font-bold text-amber-800 dark:text-amber-300 uppercase tracking-wide mb-3">🔨 Recipe</p>
                 <div className="flex gap-2 flex-wrap">
                   {recipes[selectedItem.slug].requirements.map((req, idx) => {
-                    const imgSlug = req.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    // Normalize: lowercase, strip non-alphanumeric (handles accented chars by removing them)
+                    let imgSlug = req.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    // Fix known slug mismatches (accented chars stripped, typos)
+                    const slugOverrides: Record<string, string> = {
+                      pokmetal: 'pokemetal',
+                      rarepokmetal: 'rarepokemetal',
+                      ironignot: 'ironingot',
+                      linestone: 'limestone',
+                    };
+                    imgSlug = slugOverrides[imgSlug] || imgSlug;
                     return (
                       <div key={idx} className="flex flex-col items-center gap-1">
                         <div className="w-14 h-14 bg-white dark:bg-gray-800 rounded-xl border border-amber-200 dark:border-amber-700 shadow-sm flex items-center justify-center relative">
@@ -393,8 +402,15 @@ export function ItemsPage() {
                             src={`/items/${imgSlug}.png`}
                             alt={req.name}
                             className="w-11 h-11 object-contain"
-                            onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                            onError={e => {
+                              const el = e.target as HTMLImageElement;
+                              el.style.display = 'none';
+                              // Show a placeholder text when image fails
+                              const placeholder = el.nextElementSibling;
+                              if (placeholder) placeholder.style.display = 'flex';
+                            }}
                           />
+                          <span className="absolute inset-0 items-center justify-center text-lg hidden" style={{ display: 'none' }}>📦</span>
                           <span className="absolute -bottom-1 -right-1 bg-amber-500 text-white text-[9px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
                             {req.quantity}
                           </span>

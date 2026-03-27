@@ -24039,18 +24039,6 @@
         "methods": [
           "Pokémon Center Exchange"
         ]
-      },
-      {
-        "slug": "picnicblanket",
-        "name": "Picnic blanket",
-        "description": "Spread this blanket out on the ground and picnic with Hoppip, Skiploom and other friends!",
-        "tag": null,
-        "note": null,
-        "image": "/items/picnicblanket.png",
-        "locations": [],
-        "methods": [
-          "Pokémon Center Exchange"
-        ]
       }
     ]
   },
