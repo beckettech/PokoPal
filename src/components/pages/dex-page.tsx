@@ -135,7 +135,7 @@ export function DexPage() {
         <div className="shrink-0 bg-white dark:bg-gray-800 px-4 pt-4 pb-3 border-b border-gray-100 dark:border-gray-700">
           <div className="flex items-center gap-3">
             <button
-              onClick={() => setSelectedPokemon(null)}
+              onClick={() => { if (previousPage) navigateBack(); else setSelectedPokemon(null); }}
               className="w-11 h-11 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center active:scale-90 transition-transform shrink-0"
             >
               <ArrowLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />
