@@ -12,6 +12,7 @@ let itemData: any[] = [];
 let locationData: any[] = [];
 let recipeData: any[] = [];
 let cookingRecipeData: any[] = [];
+let requestData: any[] = [];
 
 try {
   const basePath = path.join(process.cwd(), "public");
@@ -22,6 +23,7 @@ try {
     locations: "locations.json",
     recipes: "recipes.json",
     cookingRecipes: "cooking-recipes.json",
+    requests: "requests.json",
   };
 
   for (const [key, file] of Object.entries(files)) {
@@ -37,11 +39,12 @@ try {
           case "locations": locationData = raw; break;
           case "recipes": recipeData = raw; break;
           case "cookingRecipes": cookingRecipeData = raw; break;
+          case "requests": requestData = raw; break;
         }
       }
     }
   }
-  console.log(`Loaded: ${pokemonData.length} pokemon, ${habitatData.length} habitats, ${itemData.length} items, ${locationData.length} locations, ${recipeData.length} recipes, ${cookingRecipeData.length} cooking recipes`);
+  console.log(`Loaded: ${pokemonData.length} pokemon, ${habitatData.length} habitats, ${itemData.length} items, ${locationData.length} locations, ${recipeData.length} recipes, ${cookingRecipeData.length} cooking recipes, ${requestData.length} requests`);
 } catch (e) {
   console.error("Failed to load data files:", e);
 }
@@ -50,6 +53,8 @@ try {
 const SYSTEM_PROMPT = `You are Dexter, a friendly Pokédex assistant for the game Pokémon Pokopia.
 
 CRITICAL: You will be given game data below. You MUST ONLY use information from the provided data. NEVER invent locations, items, Pokémon, or details that are not in the data. If the data does not contain the answer, say "I don't have that information in my current data."
+
+The data includes Pokémon, habitats, locations, items, recipes, and quests/requests (story missions, NPC requests). When users ask about story progression, quests, or NPC tasks, check the requests data.
 
 Guidelines:
 - Be concise (2-4 sentences for simple questions, more for complex ones)
@@ -245,6 +250,17 @@ function buildContext(query: string): string {
         return `${r.name}: ${reqs}. Effect: ${r.effect || 'unknown'}.`;
       });
       parts.push(`Relevant Cooking Recipes:\n${summaries.join('\n')}`);
+    }
+  }
+
+  // Request/Quest matches
+  if (requestData.length > 0) {
+    const requestMatches = topMatches(requestData, queryWords, 5);
+    if (requestMatches.length > 0) {
+      const summaries = requestMatches.map(r => {
+        return `Quest "${r.name}" (given by ${r.giver || 'unknown'} in ${r.area || 'unknown'}): ${r.task || ''}. Reward: ${r.reward || 'unknown'}.`;
+      });
+      parts.push(`Relevant Quests/Requests:\n${summaries.join('\n')}`);
     }
   }
 
