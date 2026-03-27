@@ -72,7 +72,7 @@ for (const p of pokemonList) {
 
 
 export function HabitatDexPage() {
-  const { setCurrentPage, navigateToPokemon, navigateBack, previousPage, capturedPokemon, focusedHabitatId, clearFocus, discoveredHabitats, toggleDiscoveredHabitat } = useAppStore();
+  const { setCurrentPage, navigateToPokemon, navigateBack, previousPage, capturedPokemon, focusedHabitatId, setFocusedHabitatId, clearFocus, discoveredHabitats, toggleDiscoveredHabitat } = useAppStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [sortFilter, setSortFilter] = useState<"all" | "discovered" | "undiscovered">("all");
   const [selectedHabitat, setSelectedHabitat] = useState<typeof habitatsData[0] | null>(null);
@@ -206,7 +206,7 @@ export function HabitatDexPage() {
                     {/* Tap image or name → fullscreen detail */}
                     <button
                       className="w-16 h-16 rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-700 shrink-0 active:scale-95 transition-transform"
-                      onClick={() => setSelectedHabitat(habitat)}
+                      onClick={() => { setSelectedHabitat(habitat); setFocusedHabitatId(habitat.id); }}
                     >
                       <img
                         src={habitat.image}
@@ -218,7 +218,7 @@ export function HabitatDexPage() {
 
                     <button
                       className="flex-1 text-left min-w-0"
-                      onClick={() => setSelectedHabitat(habitat)}
+                      onClick={() => { setSelectedHabitat(habitat); setFocusedHabitatId(habitat.id); }}
                     >
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-[10px] text-gray-400 dark:text-gray-500">#{String(habitat.id).padStart(3,'0')}</span>
@@ -270,7 +270,7 @@ export function HabitatDexPage() {
             <div className="shrink-0 bg-white dark:bg-gray-800 px-4 pt-4 pb-3 border-b border-gray-100 dark:border-gray-700">
               <div className="flex items-center gap-3">
                 <button
-                  onClick={() => { if (previousPage) navigateBack(); else setSelectedHabitat(null); }}
+                  onClick={() => { if (previousPage) navigateBack(); else { setSelectedHabitat(null); setFocusedHabitatId(null); } }}
                   className="w-11 h-11 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center active:scale-90 transition-transform shrink-0"
                 >
                   <ArrowLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />

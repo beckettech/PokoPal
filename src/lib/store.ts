@@ -62,6 +62,7 @@ interface AppState {
   navigateToItem: (slug: string) => void;
   focusedPokemonId: number | null;
   focusedHabitatId: number | null;
+  setFocusedHabitatId: (id: number | null) => void;
   focusedLocationId: string | null;
   focusedItemSlug: string | null;
   clearFocus: () => void;
@@ -207,6 +208,7 @@ export const useAppStore = create<AppState>()(
         };
       }),
       clearFocus: () => set({ focusedPokemonId: null, focusedHabitatId: null, focusedLocationId: null, focusedItemSlug: null }),
+      setFocusedHabitatId: (id) => set({ focusedHabitatId: id }),
       previousPage: null,
       previousFocus: null,
       navigateBack: () => {
