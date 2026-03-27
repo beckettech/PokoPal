@@ -84,7 +84,7 @@ function ConditionsBlock({ pokemon }: { pokemon: Pokemon }) {
 }
 
 export function DexPage() {
-  const { setCurrentPage, navigateToHabitat, capturedPokemon, toggleCapturedPokemon, focusedPokemonId, clearFocus } = useAppStore();
+  const { setCurrentPage, navigateToHabitat, navigateToLocation, navigateBack, previousPage, capturedPokemon, toggleCapturedPokemon, focusedPokemonId, clearFocus } = useAppStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedRarity, setSelectedRarity] = useState<string | null>(null);
   const [friendFilter, setFriendFilter] = useState<"all" | "friends" | "unseen">("all");
@@ -163,7 +163,7 @@ export function DexPage() {
 
         {/* Legendary Habitat - for Pokemon that can be housed */}
         {(selectedPokemon as any).habitatBuilt && (
-          <div className="mx-4 mt-2 bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 rounded-xl p-3">
+          <div className="mx-4 mt-2 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30 border border-emerald-200 dark:border-emerald-700 rounded-xl p-3">
             <div className="flex items-center gap-2 mb-1">
               <span className="text-lg">🏠</span>
               <h3 className="font-bold text-emerald-800 dark:text-emerald-300 text-sm">Can Be Housed In</h3>
@@ -174,7 +174,7 @@ export function DexPage() {
                 if (hab) navigateToHabitat(hab.id);
                 else setCurrentPage("habitat-dex");
               }}
-              className="flex items-center gap-2 bg-emerald-100 rounded-xl border border-emerald-200 active:scale-95 transition-transform text-left w-full overflow-hidden mt-2"
+              className="flex items-center gap-2 bg-emerald-100 dark:bg-emerald-900/50 rounded-xl border border-emerald-200 dark:border-emerald-700 active:scale-95 transition-transform text-left w-full overflow-hidden mt-2"
             >
               {habitatMap[(selectedPokemon as any).habitatBuilt?.toLowerCase()]?.image && (
                 <img
@@ -215,7 +215,7 @@ export function DexPage() {
                               if (hab) navigateToHabitat(hab.id);
                               else setCurrentPage("habitat-dex");
                             }}
-                            className="flex items-center gap-2 bg-emerald-50 rounded-xl border border-emerald-100 active:scale-95 transition-transform text-left w-full overflow-hidden"
+                            className="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/30 rounded-xl border border-emerald-100 dark:border-emerald-700 active:scale-95 transition-transform text-left w-full overflow-hidden"
                           >
                             {hab?.image && (
                               <img src={hab.image} alt={habitat} className="w-14 h-14 object-cover shrink-0"

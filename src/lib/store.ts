@@ -63,6 +63,10 @@ interface AppState {
   focusedLocationId: string | null;
   focusedItemSlug: string | null;
   clearFocus: () => void;
+  // One-level back navigation
+  previousPage: Page | null;
+  previousFocus: { pokemonId?: number; habitatId?: number; locationId?: string; itemSlug?: string } | null;
+  navigateBack: () => void;
   coins: number;
   addCoins: (amount: number) => void;
   spendCoins: (amount: number) => boolean;
@@ -143,10 +147,30 @@ export const useAppStore = create<AppState>()(
       focusedLocationId: null,
       focusedItemSlug: null,
       navigateToPokemon: (pokemonId) => set({ currentPage: "dex", focusedPokemonId: pokemonId, focusedHabitatId: null, focusedLocationId: null }),
-      navigateToHabitat: (habitatId) => set({ currentPage: "habitat-dex", focusedHabitatId: habitatId, focusedPokemonId: null, focusedLocationId: null }),
-      navigateToLocation: (locationId) => set({ currentPage: "map", focusedLocationId: locationId, focusedPokemonId: null, focusedHabitatId: null, focusedItemSlug: null }),
+      navigateToHabitat: (habitatId) => set((state) => ({
+        currentPage: "habitat-dex", focusedHabitatId: habitatId, focusedPokemonId: null, focusedLocationId: null,
+        previousPage: state.currentPage === "dex" && state.focusedPokemonId ? "dex" : null,
+        previousFocus: state.currentPage === "dex" && state.focusedPokemonId ? { pokemonId: state.focusedPokemonId } : null,
+      })),
+      navigateToLocation: (locationId) => set((state) => ({
+        currentPage: "map", focusedLocationId: locationId, focusedPokemonId: null, focusedHabitatId: null, focusedItemSlug: null,
+        previousPage: state.currentPage === "dex" && state.focusedPokemonId ? "dex" : null,
+        previousFocus: state.currentPage === "dex" && state.focusedPokemonId ? { pokemonId: state.focusedPokemonId } : null,
+      })),
       navigateToItem: (slug) => set({ currentPage: "items", focusedItemSlug: slug, focusedPokemonId: null, focusedHabitatId: null }),
       clearFocus: () => set({ focusedPokemonId: null, focusedHabitatId: null, focusedLocationId: null, focusedItemSlug: null }),
+      previousPage: null,
+      previousFocus: null,
+      navigateBack: () => {
+        const { previousPage, previousFocus } = get();
+        if (!previousPage) { set({ currentPage: "home" }); return; }
+        const update: any = { currentPage: previousPage, previousPage: null, previousFocus: null };
+        if (previousFocus?.pokemonId != null) update.focusedPokemonId = previousFocus.pokemonId;
+        if (previousFocus?.habitatId != null) update.focusedHabitatId = previousFocus.habitatId;
+        if (previousFocus?.locationId != null) update.focusedLocationId = previousFocus.locationId;
+        if (previousFocus?.itemSlug != null) update.focusedItemSlug = previousFocus.itemSlug;
+        set(update);
+      },
       coins: 250, // Start with 250 coins
       addCoins: (amount) => set((state) => ({ coins: state.coins + amount })),
       spendCoins: (amount) => {
