@@ -149,13 +149,23 @@ export const useAppStore = create<AppState>()(
       navigateToPokemon: (pokemonId) => set({ currentPage: "dex", focusedPokemonId: pokemonId, focusedHabitatId: null, focusedLocationId: null }),
       navigateToHabitat: (habitatId) => set((state) => ({
         currentPage: "habitat-dex", focusedHabitatId: habitatId, focusedPokemonId: null, focusedLocationId: null,
-        previousPage: state.currentPage === "dex" && state.focusedPokemonId ? "dex" : null,
-        previousFocus: state.currentPage === "dex" && state.focusedPokemonId ? { pokemonId: state.focusedPokemonId } : null,
+        previousPage: state.currentPage,
+        previousFocus: {
+          pokemonId: state.focusedPokemonId || undefined,
+          habitatId: state.focusedHabitatId || undefined,
+          locationId: state.focusedLocationId || undefined,
+          itemSlug: state.focusedItemSlug || undefined,
+        },
       })),
       navigateToLocation: (locationId) => set((state) => ({
         currentPage: "map", focusedLocationId: locationId, focusedPokemonId: null, focusedHabitatId: null, focusedItemSlug: null,
-        previousPage: state.currentPage === "dex" && state.focusedPokemonId ? "dex" : null,
-        previousFocus: state.currentPage === "dex" && state.focusedPokemonId ? { pokemonId: state.focusedPokemonId } : null,
+        previousPage: state.currentPage,
+        previousFocus: {
+          pokemonId: state.focusedPokemonId || undefined,
+          habitatId: state.focusedHabitatId || undefined,
+          locationId: state.focusedLocationId || undefined,
+          itemSlug: state.focusedItemSlug || undefined,
+        },
       })),
       navigateToItem: (slug) => set({ currentPage: "items", focusedItemSlug: slug, focusedPokemonId: null, focusedHabitatId: null }),
       clearFocus: () => set({ focusedPokemonId: null, focusedHabitatId: null, focusedLocationId: null, focusedItemSlug: null }),
