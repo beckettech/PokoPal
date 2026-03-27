@@ -24,6 +24,9 @@ export default function Home() {
   const currentPage = useAppStore((state) => state.currentPage);
   const darkMode = useAppStore((state) => state.darkMode);
   const markPageVisited = useAppStore((state) => state.markPageVisited);
+  const user = useAppStore((s) => s.user);
+  const adminForceAds = useAppStore((s) => s.adminForceAds);
+  const showAds = adminForceAds !== 'hide' && !(adminForceAds === 'default' && (user.isPremium || user.adsRemoved));
 
   // Global haptic on all button clicks
   useEffect(() => {
@@ -77,7 +80,7 @@ export default function Home() {
 
   return (
     <main className={`h-screen overflow-hidden ${darkMode ? 'dark bg-gray-900' : 'bg-gradient-to-b from-red-500 to-red-700'}`}>
-      <div key={currentPage} className="h-full pb-[50px]">
+      <div key={currentPage} className={`h-full ${showAds ? 'pb-[50px]' : ''}`}>
         {renderPage()}
       </div>
       <MobileAdBanner />
