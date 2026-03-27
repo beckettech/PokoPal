@@ -149,7 +149,19 @@ export const useAppStore = create<AppState>()(
       focusedHabitatId: null,
       focusedLocationId: null,
       focusedItemSlug: null,
-      navigateToPokemon: (pokemonId) => set({ currentPage: "dex", focusedPokemonId: pokemonId, focusedHabitatId: null, focusedLocationId: null }),
+      navigateToPokemon: (pokemonId) => set((state) => {
+        const prevFocus: any = {
+          pokemonId: state.focusedPokemonId || undefined,
+          habitatId: state.focusedHabitatId || undefined,
+          locationId: state.focusedLocationId || undefined,
+          itemSlug: state.focusedItemSlug || undefined,
+        };
+        return {
+          currentPage: "dex", focusedPokemonId: pokemonId, focusedHabitatId: null, focusedLocationId: null,
+          previousPage: state.currentPage,
+          previousFocus: prevFocus,
+        };
+      }),
       navigateToHabitat: (habitatId) => set((state) => {
         const prevFocus: any = {
           pokemonId: state.focusedPokemonId || undefined,
@@ -181,7 +193,19 @@ export const useAppStore = create<AppState>()(
         previousPage: state.currentPage,
         previousFocus: { pokemonId },
       })),
-      navigateToItem: (slug) => set({ currentPage: "items", focusedItemSlug: slug, focusedPokemonId: null, focusedHabitatId: null }),
+      navigateToItem: (slug) => set((state) => {
+        const prevFocus: any = {
+          pokemonId: state.focusedPokemonId || undefined,
+          habitatId: state.focusedHabitatId || undefined,
+          locationId: state.focusedLocationId || undefined,
+          itemSlug: state.focusedItemSlug || undefined,
+        };
+        return {
+          currentPage: "items", focusedItemSlug: slug, focusedPokemonId: null, focusedHabitatId: null,
+          previousPage: state.currentPage,
+          previousFocus: prevFocus,
+        };
+      }),
       clearFocus: () => set({ focusedPokemonId: null, focusedHabitatId: null, focusedLocationId: null, focusedItemSlug: null }),
       previousPage: null,
       previousFocus: null,
