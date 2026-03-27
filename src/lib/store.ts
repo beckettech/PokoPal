@@ -445,6 +445,12 @@ export const useAppStore = create<AppState>()(
               handle: handle.toLowerCase().replace("@", ""),
               isAdmin: email.toLowerCase() === "becketthoefling@gmail.com",
             });
+            // Send welcome email in background
+            fetch(getApiUrl("/api/welcome-email"), {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ email: email.toLowerCase(), handle: handle.toLowerCase().replace("@", "") }),
+            }).catch(() => {});
             return true;
           }
           return false;
