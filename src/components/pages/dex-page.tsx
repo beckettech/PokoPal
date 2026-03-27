@@ -63,17 +63,17 @@ function ConditionsBlock({ pokemon }: { pokemon: Pokemon }) {
   const weather: WeatherVal = pokemon.weather ?? "Any";
 
   return (
-    <div className="bg-orange-50 rounded-2xl p-4 border border-orange-100">
+    <div className="bg-orange-50 dark:bg-orange-900/20 rounded-2xl p-4 border border-orange-100 dark:border-orange-700">
       <h3 className="font-bold text-gray-700 dark:text-gray-300 text-sm mb-3">Conditions to Find</h3>
       <div className="grid grid-cols-2 gap-3">
         {/* Time */}
-        <div className="flex flex-col items-center gap-1.5 bg-white dark:bg-gray-800 rounded-xl p-3 border border-orange-100">
+        <div className="flex flex-col items-center gap-1.5 bg-white dark:bg-gray-800 rounded-xl p-3 border border-orange-100 dark:border-orange-700">
           <TimeIcon time={time} />
           <span className="text-[10px] text-gray-500 dark:text-gray-400 uppercase tracking-wide font-semibold">Time</span>
           <span className="text-sm font-bold text-gray-800 dark:text-gray-100">{time}</span>
         </div>
         {/* Weather */}
-        <div className="flex flex-col items-center gap-1.5 bg-white dark:bg-gray-800 rounded-xl p-3 border border-orange-100">
+        <div className="flex flex-col items-center gap-1.5 bg-white dark:bg-gray-800 rounded-xl p-3 border border-orange-100 dark:border-orange-700">
           <WeatherIcon weather={weather} />
           <span className="text-[10px] text-gray-500 dark:text-gray-400 uppercase tracking-wide font-semibold">Weather</span>
           <span className="text-sm font-bold text-gray-800 dark:text-gray-100">{weather}</span>
@@ -152,7 +152,7 @@ export function DexPage() {
 
         {/* Legendary Obtain Method - special callout */}
         {(selectedPokemon as any).obtainMethod && (
-          <div className="mx-4 mt-3 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-3">
+          <div className="mx-4 mt-3 bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/30 dark:to-orange-900/30 border border-amber-200 dark:border-amber-700 rounded-xl p-3">
             <div className="flex items-center gap-2 mb-1">
               <span className="text-lg">✨</span>
               <h3 className="font-bold text-amber-800 dark:text-amber-300 text-sm">How to Obtain</h3>
@@ -235,7 +235,7 @@ export function DexPage() {
             <button
               onClick={() => toggleCapturedPokemon(selectedPokemon.id)}
               className={`w-full py-3 rounded-2xl flex items-center justify-center gap-2 font-medium active:scale-95 transition-transform shadow-sm ${
-                isFriend ? 'bg-yellow-400 text-yellow-900' : 'bg-white dark:bg-gray-800 text-gray-500 border-2 border-dashed border-gray-200'
+                isFriend ? 'bg-yellow-400 dark:bg-yellow-500 text-yellow-900 dark:text-yellow-100' : 'bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 border-2 border-dashed border-gray-200 dark:border-gray-600'
               }`}
             >
               {isFriend ? <><Check className="w-5 h-5" /><span>Friend!</span></> : <><Plus className="w-5 h-5" /><span>Add as Friend</span></>}
@@ -253,8 +253,8 @@ export function DexPage() {
                   {selectedPokemon.specialties.map((specialty, i) => {
                     const info = specialtyMap[specialty.toLowerCase()];
                     return (
-                      <div key={i} className="flex items-start gap-3 bg-green-50 rounded-xl p-3 border border-green-100">
-                        <div className="w-10 h-10 rounded-lg bg-white dark:bg-gray-800 border border-green-200 flex items-center justify-center shrink-0">
+                      <div key={i} className="flex items-start gap-3 bg-green-50 dark:bg-green-900/20 rounded-xl p-3 border border-green-100 dark:border-green-700">
+                        <div className="w-10 h-10 rounded-lg bg-white dark:bg-gray-800 border border-green-200 dark:border-green-700 flex items-center justify-center shrink-0">
                           {info?.icon ? (
                             <img src={info.icon} alt={specialty} className="w-8 h-8 object-contain"
                               onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
@@ -303,7 +303,7 @@ export function DexPage() {
             {selectedPokemon.comfortNotes && (
               <div>
                 <h3 className="font-bold text-gray-700 dark:text-gray-300 text-sm mb-2">Notes</h3>
-                <p className="text-xs text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-gray-900 rounded-xl p-3 border border-gray-100">{selectedPokemon.comfortNotes}</p>
+                <p className="text-xs text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-gray-900 rounded-xl p-3 border border-gray-100 dark:border-gray-700">{selectedPokemon.comfortNotes}</p>
               </div>
             )}
 

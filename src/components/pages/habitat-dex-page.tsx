@@ -312,7 +312,7 @@ export function HabitatDexPage() {
 
                 {/* Build Requirements */}
                 {(habitat as any).buildItems && (habitat as any).buildItems.length > 0 && (
-                  <div className="bg-amber-50 rounded-2xl p-3 border border-amber-100">
+                  <div className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-3 border border-amber-100 dark:border-amber-700">
                     <p className="text-xs font-bold text-amber-800 dark:text-amber-300 uppercase tracking-wide mb-3">🔨 Build Requirements</p>
                     <div className="flex gap-2 flex-wrap">
                       {(habitat as any).buildItems.map((item: any, idx: number) => (
