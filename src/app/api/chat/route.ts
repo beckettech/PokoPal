@@ -3,46 +3,104 @@ import fs from "fs";
 import path from "path";
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY?.trim();
-const MODEL = "openai/gpt-4o-mini";
+const MODEL = "google/gemini-2.0-flash-001";
 
 // Load data files at startup
 let pokemonData: any[] = [];
 let habitatData: any[] = [];
 let itemData: any[] = [];
+let locationData: any[] = [];
+let recipeData: any[] = [];
+let cookingRecipeData: any[] = [];
 
 try {
-  const pokemonPath = path.join(process.cwd(), "public", "pokemon.json");
-  const habitatPath = path.join(process.cwd(), "public", "habitats.json");
-  const itemsPath = path.join(process.cwd(), "public", "items.json");
-  
-  if (fs.existsSync(pokemonPath)) {
-    pokemonData = JSON.parse(fs.readFileSync(pokemonPath, "utf-8"));
+  const basePath = path.join(process.cwd(), "public");
+  const files: Record<string, string> = {
+    pokemon: "pokemon.json",
+    habitats: "habitats.json",
+    items: "items.json",
+    locations: "locations.json",
+    recipes: "recipes.json",
+    cookingRecipes: "cooking-recipes.json",
+  };
+
+  for (const [key, file] of Object.entries(files)) {
+    const filePath = path.join(basePath, file);
+    if (fs.existsSync(filePath)) {
+      const raw = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      if (key === "items") {
+        itemData = raw.flatMap((cat: any) => cat.items || []);
+      } else {
+        switch (key) {
+          case "pokemon": pokemonData = raw; break;
+          case "habitats": habitatData = raw; break;
+          case "locations": locationData = raw; break;
+          case "recipes": recipeData = raw; break;
+          case "cookingRecipes": cookingRecipeData = raw; break;
+        }
+      }
+    }
   }
-  if (fs.existsSync(habitatPath)) {
-    habitatData = JSON.parse(fs.readFileSync(habitatPath, "utf-8"));
-  }
-  if (fs.existsSync(itemsPath)) {
-    const itemsJson = JSON.parse(fs.readFileSync(itemsPath, "utf-8"));
-    itemData = itemsJson.flatMap((cat: any) => cat.items || []);
-  }
+  console.log(`Loaded: ${pokemonData.length} pokemon, ${habitatData.length} habitats, ${itemData.length} items, ${locationData.length} locations, ${recipeData.length} recipes, ${cookingRecipeData.length} cooking recipes`);
 } catch (e) {
   console.error("Failed to load data files:", e);
 }
 
 // Dexter's system prompt
-const SYSTEM_PROMPT = `You are Dexter, a friendly but neutral Pokédex assistant for the game Pokémon Pokopia. You help trainers with:
-
-- Finding where to catch specific Pokémon
-- How to build habitats and what items they need
-- Item locations and how to get them
-- Game mechanics and tips
+const SYSTEM_PROMPT = `You are Dexter, a friendly Pokédex assistant for the game Pokémon Pokopia. You have access to comprehensive game data including:
+- All 300+ Pokémon with their types, locations, habitats, obtain methods, and specialties
+- All habitats with required items and Pokémon that appear in them
+- All locations/areas and which Pokémon appear there
+- All items with descriptions and how to obtain them
+- All crafting and cooking recipes
 
 Guidelines:
-- Be concise but helpful (1-3 sentences for simple questions, more for complex ones)
+- Be concise but thorough (2-4 sentences for simple questions, more for complex ones)
 - When mentioning something the user can view in-app, use this format: [[Dex: Pikachu]] or [[Habitat: Mossy Hot Spring]] or [[Items: Honey]]
-- Use the provided data to give accurate, specific answers
-- Never mention LLMs, tokens, or AI - you're just Dexter the Pokédex assistant
-- If you don't know something from the data, say so honestly`;
+- Use the provided data to give accurate, specific answers — if you have the data, use it
+- For questions about building habitats, list the exact items needed
+- For questions about finding Pokémon, mention the specific location and any requirements
+- For questions about quests/story events, provide what you know from the data
+- Never mention LLMs, tokens, or AI — you're just Dexter the Pokédex assistant
+- If you truly don't have information about something, say so honestly rather than guessing`;
+
+const STOP_WORDS = new Set([
+  "how", "to", "at", "the", "a", "is", "do", "i", "can", "what", "where",
+  "why", "for", "in", "of", "and", "or", "on", "with", "it", "its",
+  "an", "are", "be", "this", "that", "from", "by", "my", "me", "you",
+  "get", "find", "catch", "make", "build", "need", "have", "has", "was",
+]);
+
+function getQueryWords(query: string): string[] {
+  return query.toLowerCase().split(/\s+/).filter(w => w.length > 1 && !STOP_WORDS.has(w));
+}
+
+function textToSearchStr(obj: any): string {
+  const parts: string[] = [];
+  for (const val of Object.values(obj)) {
+    if (typeof val === "string") parts.push(val);
+    else if (Array.isArray(val)) parts.push(val.join(" "));
+  }
+  return parts.join(" ").toLowerCase();
+}
+
+function scoreEntry(entry: any, queryWords: string[]): number {
+  const text = textToSearchStr(entry);
+  return queryWords.reduce((score, word) => score + (text.includes(word) ? 1 : 0), 0);
+}
+
+function topMatches(data: any[], queryWords: string[], limit: number = 5): any[] {
+  const scored = data.map(entry => ({ entry, score: scoreEntry(entry, queryWords) }));
+  return scored.filter(s => s.score > 0).sort((a, b) => b.score - a.score).slice(0, limit).map(s => s.entry);
+}
+
+function findLocationByName(query: string): any | undefined {
+  const q = query.toLowerCase();
+  return locationData.find((loc: any) => {
+    const name = (loc.name || "").toLowerCase();
+    return name.length > 3 && q.includes(name);
+  });
+}
 
 interface ChatMessage {
   role: "user" | "assistant" | "system";
@@ -60,13 +118,9 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Get the last user message to search for relevant context
     const lastUserMessage = [...messages].reverse().find((m: ChatMessage) => m.role === "user")?.content || "";
-    
-    // Build context based on the query
     const contextString = buildContext(lastUserMessage);
 
-    // Prepare messages for OpenRouter
     const apiMessages: ChatMessage[] = [
       { role: "system", content: SYSTEM_PROMPT },
       { role: "system", content: `User's progress: ${userProgress}\n\n${contextString}` },
@@ -84,7 +138,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         model: MODEL,
         messages: apiMessages,
-        max_tokens: 500,
+        max_tokens: 800,
       }),
     });
 
@@ -116,94 +170,62 @@ export async function POST(req: NextRequest) {
 }
 
 function buildContext(query: string): string {
-  const q = query.toLowerCase();
+  const queryWords = getQueryWords(query);
+  if (queryWords.length === 0) {
+    return `Available data: ${pokemonData.length} Pokemon, ${habitatData.length} habitats, ${itemData.length} items, ${locationData.length} locations, ${recipeData.length} recipes, ${cookingRecipeData.length} cooking recipes.`;
+  }
+
   const parts: string[] = [];
-  
-  // Search for relevant Pokemon
-  if (pokemonData.length > 0) {
-    const relevantPokemon = pokemonData.filter((p: any) => {
-      const name = (p.name || "").toLowerCase();
-      const locations = (p.locations || []).join(" ").toLowerCase();
-      const obtainMethod = (p.obtainMethod || "").toLowerCase();
-      return q.includes(name) || name.includes(q.split(" ")[0]) || 
-             (q.includes("where") && locations.length > 0 && q.split(" ").some(w => locations.includes(w))) ||
-             obtainMethod.includes(q);
-    }).slice(0, 3);
-    
-    if (relevantPokemon.length > 0) {
-      parts.push(`Relevant Pokemon:\n${JSON.stringify(relevantPokemon, null, 2)}`);
-    }
-    
-    // If asking "where is X" or "how to get X", search for that Pokemon
-    const whereMatch = q.match(/where (?:can i find |is |are )?(?:a )?(\w+)/);
-    const howToMatch = q.match(/how (?:do i |to )?(?:get |find |obtain |catch )?(?:a )?(\w+)/);
-    const legendaryMatch = q.match(/(?:articuno|zapdos|moltres|mewtwo|mew|lugia|ho-?oh|raikou|entei|suicune)/);
-    
-    if (whereMatch || howToMatch || legendaryMatch) {
-      const searchName = (whereMatch?.[1] || howToMatch?.[1] || legendaryMatch?.[0] || "").toLowerCase();
-      const found = pokemonData.find((p: any) => 
-        (p.name || "").toLowerCase().includes(searchName) ||
-        (p.obtainMethod || "").toLowerCase().includes(searchName)
-      );
-      if (found && !relevantPokemon.includes(found)) {
-        parts.push(`Pokemon "${found.name}":\n${JSON.stringify(found, null, 2)}`);
-      }
-    }
-    
-    // Special handling for legendary queries
-    if (q.includes("legendary") || q.includes("how to get") || q.includes("how do i get")) {
-      const legendaries = pokemonData.filter((p: any) => p.rarity === "Legendary");
-      parts.push(`All Legendary Pokemon:\n${JSON.stringify(legendaries.map((p: any) => ({
-        name: p.name,
-        obtainMethod: p.obtainMethod,
-        habitatBuilt: p.habitatBuilt
-      })), null, 2)}`);
+
+  // Location name match
+  const namedLocation = findLocationByName(query);
+  if (namedLocation) {
+    parts.push(`Location "${namedLocation.name}":\n${JSON.stringify(namedLocation, null, 2)}`);
+  }
+
+  // Pokemon matches
+  const pokemonMatches = topMatches(pokemonData, queryWords, 5);
+  if (pokemonMatches.length > 0) {
+    parts.push(`Relevant Pokemon:\n${JSON.stringify(pokemonMatches, null, 2)}`);
+  }
+
+  // Habitat matches
+  const habitatMatches = topMatches(habitatData, queryWords, 5);
+  if (habitatMatches.length > 0) {
+    parts.push(`Relevant Habitats:\n${JSON.stringify(habitatMatches, null, 2)}`);
+  }
+
+  // Item matches
+  const itemMatches = topMatches(itemData, queryWords, 5);
+  if (itemMatches.length > 0) {
+    parts.push(`Relevant Items:\n${JSON.stringify(itemMatches, null, 2)}`);
+  }
+
+  // Location matches
+  const locationMatches = topMatches(locationData, queryWords, 5);
+  if (locationMatches.length > 0) {
+    parts.push(`Relevant Locations:\n${JSON.stringify(locationMatches, null, 2)}`);
+  }
+
+  // Recipe matches
+  if (recipeData.length > 0) {
+    const recipeMatches = topMatches(recipeData, queryWords, 5);
+    if (recipeMatches.length > 0) {
+      parts.push(`Relevant Recipes:\n${JSON.stringify(recipeMatches, null, 2)}`);
     }
   }
-  
-  // Search for relevant Habitats
-  if (habitatData.length > 0) {
-    const relevantHabitats = habitatData.filter((h: any) => {
-      const name = (h.name || "").toLowerCase();
-      const pokemon = (h.pokemon || []).join(" ").toLowerCase();
-      return q.includes(name) || name.includes(q.split(" ")[0]) ||
-             (q.includes("habitat") && pokemon.length > 0) ||
-             (q.includes("build") && name.length > 0);
-    }).slice(0, 2);
-    
-    if (relevantHabitats.length > 0) {
-      parts.push(`Relevant Habitats:\n${JSON.stringify(relevantHabitats, null, 2)}`);
+
+  // Cooking recipe matches
+  if (cookingRecipeData.length > 0) {
+    const cookingMatches = topMatches(cookingRecipeData, queryWords, 5);
+    if (cookingMatches.length > 0) {
+      parts.push(`Relevant Cooking Recipes:\n${JSON.stringify(cookingMatches, null, 2)}`);
     }
   }
-  
-  // Search for relevant Items
-  if (itemData.length > 0) {
-    const relevantItems = itemData.filter((item: any) => {
-      const name = (item.name || item.slug || "").toLowerCase();
-      const source = (item.source || "").toLowerCase();
-      return q.includes(name) || name.includes(q.split(" ")[0]) ||
-             (q.includes("how to get") && source.length > 0);
-    }).slice(0, 5);
-    
-    if (relevantItems.length > 0) {
-      parts.push(`Relevant Items:\n${JSON.stringify(relevantItems, null, 2)}`);
-    }
-    
-    // Search for feathers specifically
-    if (q.includes("feather")) {
-      const feathers = itemData.filter((item: any) => 
-        (item.name || "").toLowerCase().includes("feather")
-      );
-      if (feathers.length > 0) {
-        parts.push(`Feathers:\n${JSON.stringify(feathers, null, 2)}`);
-      }
-    }
-  }
-  
+
   if (parts.length === 0) {
-    // Return a sample of data for general queries
-    return `Available data summary:\n- ${pokemonData.length} Pokemon in database\n- ${habitatData.length} Habitats\n- ${itemData.length} Items\n\nAsk about specific Pokemon, habitats, or items for detailed info.`;
+    return `Available data: ${pokemonData.length} Pokemon, ${habitatData.length} habitats, ${itemData.length} items, ${locationData.length} locations, ${recipeData.length} recipes, ${cookingRecipeData.length} cooking recipes. No specific matches found — try asking about a specific Pokemon, location, item, or recipe.`;
   }
-  
+
   return parts.join("\n\n");
 }
