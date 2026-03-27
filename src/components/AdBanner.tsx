@@ -6,8 +6,11 @@ import { useAppStore } from "@/lib/store";
 export function AdBanner() {
   const { user, adminForceAds } = useAppStore();
 
-  // Hide ads for premium users unless admin forces them
-  if ((user.isPremium || user.adsRemoved) && adminForceAds !== 'show') {
+  const shouldHide =
+    adminForceAds === 'hide' ||
+    (adminForceAds === 'default' && (user.isPremium || user.adsRemoved));
+
+  if (shouldHide) {
     return null;
   }
 
