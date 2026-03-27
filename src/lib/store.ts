@@ -193,7 +193,7 @@ export const useAppStore = create<AppState>()(
         if (previousFocus?.itemSlug != null) update.focusedItemSlug = previousFocus.itemSlug;
         set(update);
       },
-      coins: 250, // Start with 250 coins
+      coins: 1000, // Start with 250 coins
       addCoins: (amount) => set((state) => ({ coins: state.coins + amount })),
       spendCoins: (amount) => {
         const current = get().coins;
