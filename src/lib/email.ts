@@ -68,17 +68,18 @@ export async function sendWelcomeEmail({ email, handle }: { email: string; handl
     subject: 'Welcome to Pokopia Guide! 🎮',
     html: `
       <div style="font-family: sans-serif; max-width: 480px; margin: 0 auto;">
-        <h1 style="color: #EF4444;">🎮 Welcome, ${handle}!</h1>
-        <p>Thanks for joining Pokopia Guide — your ultimate Pokémon companion!</p>
-        <p>You've started with <strong>1,000 free coins</strong> to spend in the coin shop. 🪙</p>
+        <h1 style="color: #EF4444;">🎮 Welcome to Pokopia Guide!</h1>
+        <p>Thanks for joining — your ultimate Pokémon Pokopia companion!</p>
         <h3>What you can do:</h3>
         <ul>
-          <li>📖 Browse the Pokédex</li>
+          <li>📖 Browse the full Pokédex with 300+ Pokémon</li>
           <li>🗺️ Explore habitats & locations</li>
-          <li>🛒 Buy coins & remove ads</li>
-          <li>💬 Chat with Dexter AI</li>
+          <li>🏠 Discover habitat requirements & recipes</li>
+          <li>💬 Chat with Dexter AI for instant help</li>
+          <li>🔍 Track captured & discovered Pokémon</li>
+          <li>🎭 View all forms, rarities & specialties</li>
         </ul>
-        <p style="color: #666; font-size: 14px;">Happy training!</p>
+        <p style="color: #666;">More features coming soon — stay tuned!</p>
         <p style="color: #999; font-size: 12px;">Pokopia Guide — <a href="https://pokopal.com">pokopal.com</a></p>
       </div>
     `,
