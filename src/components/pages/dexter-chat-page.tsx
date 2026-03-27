@@ -116,16 +116,7 @@ export function DexterChatPage() {
       {/* Messages Card */}
       <div className="flex-1 bg-white rounded-t-[2rem] flex flex-col overflow-hidden min-h-0">
         {/* New Chat */}
-        <div className="flex justify-end px-4 pt-2 shrink-0">
-          {showClearConfirm ? (
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] text-gray-500">Start a new chat?</span>
-              <button onClick={() => { setMessages([{ id: 0, role: "assistant", content: "Hey there, Trainer! 👋 I'm Dexter, your Pokopia assistant! What would you like to know?" }]); setShowClearConfirm(false); }} className="text-[10px] bg-red-500 text-white px-2.5 py-0.5 rounded-full font-medium">Yes</button>
-              <button onClick={() => setShowClearConfirm(false)} className="text-[10px] bg-gray-200 text-gray-600 px-2.5 py-0.5 rounded-full">Cancel</button>
-            </div>
-          ) : (
-            <button onClick={() => setShowClearConfirm(true)} className="text-[10px] text-gray-400 hover:text-gray-600 underline">New Chat</button>
-          )}
+        <div className="flex justify-end px-4 pt-2 pb-1 shrink-0">
         </div>
         {/* Messages Area */}
         <div className="flex-1 overflow-y-auto p-3 space-y-3">
@@ -222,7 +213,20 @@ export function DexterChatPage() {
 
         {/* Input Area */}
         <div className="p-3 border-t border-gray-100 bg-white shrink-0">
+          {showClearConfirm ? (
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <span className="text-xs text-gray-500">Start a new chat?</span>
+              <button onClick={() => { setMessages([{ id: 0, role: "assistant", content: "Hey there, Trainer! 👋 I'm Dexter, your Pokopia assistant! What would you like to know?" }]); setShowClearConfirm(false); }} className="text-xs bg-red-500 text-white px-3 py-1 rounded-full font-medium">Yes</button>
+              <button onClick={() => setShowClearConfirm(false)} className="text-xs bg-gray-200 text-gray-600 px-3 py-1 rounded-full">Cancel</button>
+            </div>
+          ) : null}
           <div className="flex items-center gap-2">
+            <button
+              onClick={() => setShowClearConfirm(true)}
+              className="text-xs text-gray-400 hover:text-gray-600 active:text-gray-700 font-medium shrink-0 px-1"
+            >
+              New Chat
+            </button>
             <input
               type="text"
               placeholder="Ask Dexter anything..."
