@@ -545,7 +545,7 @@ export const useAppStore = create<AppState>()(
       migrate: (persistedState: any, version: number) => {
         // v3: give users coins if they have less than 150
         if (persistedState.coins < 150) {
-          persistedState.coins = 250;
+          persistedState.coins = 1000;
         }
         // v4: ensure user state exists
         if (!persistedState.user) {
