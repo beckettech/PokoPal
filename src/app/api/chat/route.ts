@@ -78,7 +78,7 @@ export async function POST(req: NextRequest) {
       headers: {
         "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
         "Content-Type": "application/json",
-        "HTTP-Referer": process.env.NEXT_PUBLIC_SITE_URL || "https://pokopia-guide.vercel.app",
+        "HTTP-Referer": process.env.NEXT_PUBLIC_SITE_URL || "https://pokopal.com",
         "X-Title": "Pokopia Guide - Dexter Chat",
       },
       body: JSON.stringify({

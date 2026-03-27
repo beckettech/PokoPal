@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   description: "A comprehensive Pokémon guide and companion app for trainers. Browse Pokédex, manage inventory, explore maps, and more!",
   keywords: ["Pokemon", "Pokopia", "Pokédex", "Guide", "Companion", "Trainer", "Gaming"],
   authors: [{ name: "Pokopia Team" }],
+  metadataBase: new URL("https://pokopal.com"),
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",
