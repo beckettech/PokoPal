@@ -342,10 +342,6 @@ const _rawPokemonList: RawPokemon[] = [
 ];
 
 // Location → pokemon mapping (populated from habitats data)
-function getLocationsForPokemon(_name: string): string[] {
-  return [];
-}
-
 export const pokemonList: Pokemon[] = _rawPokemonList.map(pokemon => ({
   ...pokemon,
 }));
