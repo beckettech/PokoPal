@@ -2,6 +2,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { getApiUrl } from "./api-config";
+import { supabase } from "./supabase";
 
 export type Page = 
   | "home" 
@@ -126,6 +127,7 @@ interface AppState {
   signUp: (email: string, password: string, handle: string) => Promise<boolean>;
   signIn: (email: string, password: string) => Promise<boolean>;
   signOut: () => void;
+  restoreSession: () => void;
   // Admin (not persisted)
   isAdmin: boolean;
   adminConfig: AdminConfig;
@@ -398,42 +400,83 @@ export const useAppStore = create<AppState>()(
       })),
       signUp: async (email, password, handle) => {
         if (!email || !password || !handle) return false;
-        const state = get();
-        set({
-          user: { ...state.user, email: email.toLowerCase(), isLoggedIn: true, authToken: crypto.randomUUID() },
-          handle: handle.toLowerCase().replace("@", ""),
-          isAdmin: email.toLowerCase() === "becketthoefling@gmail.com",
-        });
-        return true;
+        try {
+          const { data, error } = await supabase.auth.signUp({
+            email: email.toLowerCase(),
+            password,
+            options: { data: { handle: handle.toLowerCase().replace("@", "") } },
+          });
+          if (error) throw new Error(error.message);
+          if (data.user) {
+            await supabase.from('profiles').upsert({
+              id: data.user.id,
+              email: email.toLowerCase(),
+              handle: handle.toLowerCase().replace("@", ""),
+              coins: get().coins || 1000,
+              is_premium: false,
+            });
+            const state = get();
+            set({
+              user: { ...state.user, userId: data.user.id, email: email.toLowerCase(), isLoggedIn: true, authToken: data.session?.access_token || null },
+              handle: handle.toLowerCase().replace("@", ""),
+              isAdmin: email.toLowerCase() === "becketthoefling@gmail.com",
+            });
+            return true;
+          }
+          return false;
+        } catch (e: any) {
+          throw new Error(e.message || "Sign up failed");
+        }
       },
       signIn: async (email, password) => {
         if (!email || !password) return false;
-        const state = get();
-        set({
-          user: { ...state.user, email: email.toLowerCase(), isLoggedIn: true, authToken: crypto.randomUUID() },
-          isAdmin: email.toLowerCase() === "becketthoefling@gmail.com",
-        });
-        if (isAdmin) {
-          // Fetch admin config in background
-          try {
-            const res = await fetch(getApiUrl("/api/admin/config"), {
-              headers: { Authorization: `Bearer ${get().user.authToken}` },
+        try {
+          const { data, error } = await supabase.auth.signInWithPassword({
+            email: email.toLowerCase(),
+            password,
+          });
+          if (error) throw new Error(error.message);
+          if (data.user) {
+            const { data: profile } = await supabase.from('profiles').select('*').eq('id', data.user.id).single();
+            const state = get();
+            set({
+              user: { ...state.user, userId: data.user.id, email: email.toLowerCase(), isLoggedIn: true, authToken: data.session?.access_token || null, isPremium: profile?.is_premium || false, adsRemoved: profile?.is_premium || false },
+              handle: profile?.handle || email.toLowerCase().split("@")[0],
+              isAdmin: email.toLowerCase() === "becketthoefling@gmail.com",
+              coins: profile?.coins ?? state.coins,
             });
-            if (res.ok) {
-              const config = await res.json();
-              set({ adminConfig: { broadcastMessage: config.broadcastMessage, dataVersion: config.dataVersion } });
-            }
-          } catch { /* ignore */ }
+            return true;
+          }
+          return false;
+        } catch (e: any) {
+          throw new Error(e.message || "Login failed");
         }
-        return true;
       },
-      signOut: () => set((state) => ({
-        user: { ...state.user, email: null, isLoggedIn: false, authToken: null },
-        chatMessages: [],
-        handle: "",
-        isAdmin: false,
-        godMode: false,
-      })),
+      signOut: async () => {
+        try { await supabase.auth.signOut(); } catch { /* ignore */ }
+        set((state) => ({
+          user: { ...state.user, email: null, isLoggedIn: false, authToken: null },
+          chatMessages: [],
+          handle: "",
+          isAdmin: false,
+          godMode: false,
+        }));
+      },
+      restoreSession: async () => {
+        try {
+          const { data: { session } } = await supabase.auth.getSession();
+          if (session?.user) {
+            const { data: profile } = await supabase.from('profiles').select('*').eq('id', session.user.id).single();
+            const state = get();
+            set({
+              user: { ...state.user, userId: session.user.id, email: session.user.email?.toLowerCase() || null, isLoggedIn: true, authToken: session.access_token, isPremium: profile?.is_premium || false, adsRemoved: profile?.is_premium || false },
+              handle: profile?.handle || session.user.email?.split("@")[0] || "",
+              isAdmin: session.user.email?.toLowerCase() === "becketthoefling@gmail.com" || false,
+              coins: profile?.coins ?? state.coins,
+            });
+          }
+        } catch { /* ignore */ }
+      },
       // Admin
       isAdmin: false,
       adminConfig: { broadcastMessage: null, dataVersion: 1 },
@@ -509,8 +552,10 @@ export const useAppStore = create<AppState>()(
         return { ...current, ...persisted };
       },
       onRehydrateStorage: () => (state) => {
-        // After rehydration, ensure login state isn't lost
-        // This handles the case where persist overwrites a fresh login
+        // Restore Supabase session after rehydration
+        if (state) {
+          state.restoreSession();
+        }
       },
     }
   )

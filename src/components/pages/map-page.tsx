@@ -32,6 +32,7 @@ export function MapPage() {
 
   // Filter locations
   const filteredLocations = locationsData.filter(loc => {
+    if (loc.name === "Cloud Island") return false;
     const matchSearch = loc.name.toLowerCase().includes(searchQuery.toLowerCase());
     const isVisited = visitedLocations.includes(loc.id);
     if (filterBy === "visited") return matchSearch && isVisited;

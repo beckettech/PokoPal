@@ -25,7 +25,7 @@ for (const h of habitatsData) {
 
 const LOCATION_ORDER = [
   "Withered Wastelands", "Bleak Beach", "Rocky Ridges",
-  "Sparkling Skylands", "Palette Town", "Cloud Island",
+  "Sparkling Skylands", "Palette Town",
 ];
 
 const LOCATION_COLORS: Record<string, string> = {

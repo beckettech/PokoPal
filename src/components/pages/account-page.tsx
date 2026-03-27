@@ -62,14 +62,14 @@ export function AccountPage() {
       try {
         const ok = await signUp(email, password, authHandle);
         if (ok) {
-          setAuthSuccess("Account created — signing in...");
+          setAuthSuccess("Account created!");
           setEmail(""); setPassword(""); setAuthHandle("");
           setTimeout(() => setAuthSuccess(""), 3000);
         } else {
           setAuthError("Sign up failed. Please try again.");
         }
-      } catch (e) {
-        setAuthError("Something went wrong. Please try again.");
+      } catch (e: any) {
+        setAuthError(e.message || "Something went wrong.");
       }
       setAuthLoading(false);
     } else {
@@ -82,10 +82,10 @@ export function AccountPage() {
           setEmail(""); setPassword("");
           setTimeout(() => setAuthSuccess(""), 3000);
         } else {
-          setAuthError("Invalid email/username or password");
+          setAuthError("Invalid email or password");
         }
-      } catch (e) {
-        setAuthError("Something went wrong. Please try again.");
+      } catch (e: any) {
+        setAuthError(e.message || "Invalid email or password");
       }
       setAuthLoading(false);
     }
