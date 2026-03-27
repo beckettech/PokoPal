@@ -55,7 +55,7 @@ const menuItems = [
     id: "requests", 
     icon: ClipboardList, 
     label: "Requests",
-    color: "bg-gradient-to-br from-yellow-400 to-yellow-500 dark:from-yellow-300 dark:to-yellow-400",
+    color: "bg-gradient-to-br from-yellow-400 to-yellow-500",
     shadowColor: "shadow-yellow-500/30",
   },
   { 
@@ -76,7 +76,7 @@ const menuItems = [
     id: "items", 
     icon: Package, 
     label: "Items",
-    color: "bg-gradient-to-br from-orange-400 to-orange-500 dark:from-orange-300 dark:to-orange-400",
+    color: "bg-gradient-to-br from-orange-400 to-orange-500",
     shadowColor: "shadow-orange-500/30",
   },
   { 
@@ -136,7 +136,7 @@ export function HomePage() {
             {/* Three Small Colored Circles */}
             <div className="flex gap-2">
               <div className="w-4 h-4 rounded-full bg-pink-400 shadow-md" />
-              <div className="w-4 h-4 rounded-full bg-yellow-400 dark:bg-yellow-300 shadow-md" />
+              <div className="w-4 h-4 rounded-full bg-yellow-400 shadow-md" />
               <div className="w-4 h-4 rounded-full bg-green-400 shadow-md" />
             </div>
           </div>
@@ -145,7 +145,7 @@ export function HomePage() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setCurrentPage("coin-shop")}
-              className="flex items-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 dark:from-amber-400 dark:to-yellow-400 px-3 py-1.5 rounded-full shadow-lg active:scale-95 transition-transform"
+              className="flex items-center gap-2 bg-gradient-to-r from-amber-500 to-yellow-500 px-3 py-1.5 rounded-full shadow-lg active:scale-95 transition-transform"
             >
               <Coins className="w-4 h-4 text-yellow-900" />
               <span className="font-bold text-yellow-900 text-sm">{coins}</span>
