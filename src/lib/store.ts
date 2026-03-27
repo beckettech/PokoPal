@@ -66,6 +66,13 @@ interface AppState {
   coins: number;
   addCoins: (amount: number) => void;
   spendCoins: (amount: number) => boolean;
+  // Daily Stamp Rewards
+  coinStamps: number[];
+  coinLastStampDate: string | null;
+  claimCoinStamp: (totalDays: number, coinsPerDay: number[]) => { day: number; coins: number } | null;
+  dexterStamps: number[];
+  dexterLastStampDate: string | null;
+  claimDexterStamp: (totalDays: number, coinsPerDay: number[]) => { day: number; coins: number } | null;
   // Login streak
   loginStreak: number;
   lastLoginDate: string | null;
@@ -149,6 +156,40 @@ export const useAppStore = create<AppState>()(
           return true;
         }
         return false;
+      },
+      // Daily Stamp Rewards (per shop)
+      coinStamps: [] as number[],
+      coinLastStampDate: null as string | null,
+      claimCoinStamp: (totalDays: number, coinsPerDay: number[]) => {
+        const today = new Date().toDateString();
+        const { coinStamps, coinLastStampDate, coins } = get();
+        if (coinLastStampDate === today) return null; // already stamped today
+        if (coinStamps.length >= totalDays) {
+          // reset cycle
+          set({ coinStamps: [], coinLastStampDate: null });
+          return null;
+        }
+        const nextDay = coinStamps.length + 1;
+        const reward = coinsPerDay[nextDay - 1];
+        set({ coinStamps: [...coinStamps, nextDay], coinLastStampDate: today, coins: coins + reward });
+        return { day: nextDay, coins: reward };
+      },
+      dexterStamps: [] as number[],
+      dexterLastStampDate: null as string | null,
+      claimDexterStamp: (totalDays: number, coinsPerDay: number[]) => {
+        const today = new Date().toDateString();
+        const { dexterStamps, dexterLastStampDate } = get();
+        if (dexterLastStampDate === today) return null;
+        if (dexterStamps.length >= totalDays) {
+          set({ dexterStamps: [], dexterLastStampDate: null });
+          return null;
+        }
+        const nextDay = dexterStamps.length + 1;
+        const reward = coinsPerDay[nextDay - 1];
+        // We need addDexterCoins from the store — but it's in a different store slice.
+        // We'll just return the reward and let the component handle adding coins.
+        set({ dexterStamps: [...dexterStamps, nextDay], dexterLastStampDate: today });
+        return { day: nextDay, coins: reward };
       },
       // Login streak rewards: Day 1=100, Day 2=150, Day 3=200, Day 4=250, Day 5=300, Day 6=400, Day 7=500
       loginStreak: 0,
@@ -398,6 +439,10 @@ export const useAppStore = create<AppState>()(
         coins: state.coins,
         loginStreak: state.loginStreak,
         lastLoginDate: state.lastLoginDate,
+        coinStamps: state.coinStamps,
+        coinLastStampDate: state.coinLastStampDate,
+        dexterStamps: state.dexterStamps,
+        dexterLastStampDate: state.dexterLastStampDate,
         chatMessages: state.chatMessages,
         completedRequests: state.completedRequests,
         inProgressRequests: state.inProgressRequests,

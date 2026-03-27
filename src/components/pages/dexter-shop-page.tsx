@@ -45,17 +45,17 @@ const coinPackages = [
 ];
 
 const dailyRewards = [
-  { day: 1, coins: 10, claimed: false },
-  { day: 2, coins: 15, claimed: false },
-  { day: 3, coins: 20, claimed: false },
-  { day: 4, coins: 25, claimed: false },
-  { day: 5, coins: 30, claimed: false },
-  { day: 6, coins: 40, claimed: false },
-  { day: 7, coins: 50, claimed: false },
+  { day: 1, coins: 10 },
+  { day: 2, coins: 15 },
+  { day: 3, coins: 20 },
+  { day: 4, coins: 25 },
+  { day: 5, coins: 30 },
+  { day: 6, coins: 40 },
+  { day: 7, coins: 50 },
 ];
 
 export function DexterShopPage() {
-  const { setCurrentPage, dexterCoins, addDexterCoins } = useAppStore();
+  const { setCurrentPage, dexterCoins, addDexterCoins, dexterStamps, dexterLastStampDate, claimDexterStamp } = useAppStore();
   const [selectedPackage, setSelectedPackage] = useState<number | null>(null);
   const [showSuccess, setShowSuccess] = useState(false);
 
@@ -193,22 +193,58 @@ export function DexterShopPage() {
             </div>
           </div>
 
-          {/* Daily Rewards */}
+          {/* Daily Stamp Rewards */}
           <div className="p-3 border-t border-gray-100">
-            <h2 className="text-sm font-bold text-gray-700 mb-2">Daily Login Rewards</h2>
-            <div className="grid grid-cols-7 gap-1">
-              {dailyRewards.map((reward) => (
-                <motion.div
-                  key={reward.day}
-                  className="text-center p-1.5 rounded-lg bg-purple-50"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <p className="text-[10px] text-gray-500">Day {reward.day}</p>
-                  <Coins className="w-4 h-4 mx-auto text-yellow-500" />
-                  <p className="text-[10px] font-bold text-purple-600">+{reward.coins}</p>
-                </motion.div>
-              ))}
+            <h2 className="text-sm font-bold text-gray-700 mb-2">Daily Stamp Rewards</h2>
+            <div className="flex justify-center gap-2">
+              {dailyRewards.map((reward) => {
+                const isClaimed = dexterStamps.includes(reward.day);
+                const nextDay = dexterStamps.length + 1;
+                const isCurrent = reward.day === nextDay;
+                const isLocked = reward.day > nextDay;
+                const alreadyToday = dexterLastStampDate === new Date().toDateString();
+
+                return (
+                  <motion.button
+                    key={reward.day}
+                    className={`relative flex flex-col items-center ${isLocked ? 'opacity-40 cursor-not-allowed' : isCurrent && !alreadyToday ? 'cursor-pointer' : isClaimed ? 'cursor-default' : 'cursor-default'}`}
+                    whileHover={!isLocked && isCurrent && !alreadyToday ? { scale: 1.08 } : {}}
+                    whileTap={!isLocked && isCurrent && !alreadyToday ? { scale: 0.92 } : {}}
+                    onClick={() => {
+                      const result = claimDexterStamp(7, dailyRewards.map(r => r.coins));
+                      if (result && addDexterCoins) addDexterCoins(result.coins);
+                    }}
+                    disabled={isLocked || isClaimed || alreadyToday}
+                  >
+                    <div
+                      className={`w-11 h-11 rounded-full border-2 flex items-center justify-center overflow-hidden transition-all ${
+                        isClaimed
+                          ? 'border-green-400 bg-green-50'
+                          : isCurrent && !alreadyToday
+                          ? 'border-purple-400 bg-purple-50 animate-pulse'
+                          : 'border-gray-300 bg-gray-100'
+                      }`}
+                    >
+                      {isClaimed ? (
+                        <span className="text-lg">⭐</span>
+                      ) : (
+                        <span className="text-xl font-bold text-gray-400">?</span>
+                      )}
+                      {isClaimed && (
+                        <div className="absolute top-0 right-0 w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                          <span className="text-white text-[9px]">✓</span>
+                        </div>
+                      )}
+                    </div>
+                    <p className="text-[9px] text-gray-500 mt-1">D{reward.day}</p>
+                    <p className="text-[9px] font-bold text-purple-600">+{reward.coins}</p>
+                  </motion.button>
+                );
+              })}
             </div>
+            <p className="text-[10px] text-gray-400 text-center mt-2">
+              Tap once per day! • 190 coins total
+            </p>
           </div>
 
           {/* Info */}

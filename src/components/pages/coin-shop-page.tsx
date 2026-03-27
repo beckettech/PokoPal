@@ -48,15 +48,15 @@ const coinPackages = [
 const STAMP_POKEMON = [1, 4, 7, 25, 39, 54, 63, 92, 129, 133, 143, 147, 150, 151, 155, 196, 248, 384, 448, 658];
 
 const dailyRewards = [
-  { day: 1, coins: 50, claimed: false },
-  { day: 2, coins: 100, claimed: false },
-  { day: 3, coins: 150, claimed: false },
-  { day: 4, coins: 200, claimed: false },
-  { day: 5, coins: 250, claimed: false },
+  { day: 1, coins: 50 },
+  { day: 2, coins: 100 },
+  { day: 3, coins: 150 },
+  { day: 4, coins: 200 },
+  { day: 5, coins: 250 },
 ];
 
 export function CoinShopPage() {
-  const { setCurrentPage, coins, addCoins } = useAppStore();
+  const { setCurrentPage, coins, addCoins, coinStamps, coinLastStampDate, claimCoinStamp } = useAppStore();
   const [selectedPackage, setSelectedPackage] = useState<number | null>(null);
   const [showSuccess, setShowSuccess] = useState(false);
 
@@ -190,34 +190,60 @@ export function CoinShopPage() {
             </div>
           </div>
 
-          {/* Daily Rewards */}
+          {/* Daily Stamp Rewards */}
           <div className="p-3 border-t border-gray-100 dark:border-gray-700">
-            <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Daily Login Rewards</h2>
-            <div className="grid grid-cols-5 gap-2">
+            <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Daily Stamp Rewards</h2>
+            <div className="flex justify-center gap-3">
               {dailyRewards.map((reward) => {
                 const stampPokemon = STAMP_POKEMON[(reward.day - 1) % STAMP_POKEMON.length];
+                const isClaimed = coinStamps.includes(reward.day);
+                const nextDay = coinStamps.length + 1;
+                const isCurrent = reward.day === nextDay;
+                const isLocked = reward.day > nextDay;
+                const alreadyToday = coinLastStampDate === new Date().toDateString();
+
                 return (
                   <motion.button
                     key={reward.day}
-                    className="text-center p-2 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800 relative overflow-hidden"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => { addCoins(reward.coins); }}
+                    className={`relative flex flex-col items-center ${isLocked ? 'opacity-40 cursor-not-allowed' : isCurrent && !alreadyToday ? 'cursor-pointer' : isClaimed ? 'cursor-default' : 'cursor-default'}`}
+                    whileHover={!isLocked && isCurrent && !alreadyToday ? { scale: 1.08 } : {}}
+                    whileTap={!isLocked && isCurrent && !alreadyToday ? { scale: 0.92 } : {}}
+                    onClick={() => { claimCoinStamp(5, dailyRewards.map(r => r.coins)); }}
+                    disabled={isLocked || isClaimed || alreadyToday}
                   >
-                    <p className="text-[10px] text-gray-500 dark:text-gray-400 mb-1">Day {reward.day}</p>
-                    <img
-                      src={`/pokemon/${String(stampPokemon).padStart(3, '0')}.png`}
-                      alt="Stamp"
-                      className="w-10 h-10 mx-auto object-contain drop-shadow-sm"
-                      onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
-                    />
-                    <p className="text-[10px] font-bold text-amber-600 dark:text-amber-400 mt-1">+{reward.coins}</p>
+                    <div
+                      className={`w-14 h-14 rounded-full border-3 flex items-center justify-center overflow-hidden transition-all ${
+                        isClaimed
+                          ? 'border-green-400 bg-green-50 dark:bg-green-900/30'
+                          : isCurrent && !alreadyToday
+                          ? 'border-amber-400 bg-amber-50 dark:bg-amber-900/20 animate-pulse'
+                          : 'border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800'
+                      }`}
+                    >
+                      {isClaimed ? (
+                        <img
+                          src={`/pokemon/${String(stampPokemon).padStart(3, '0')}.png`}
+                          alt="Stamp"
+                          className="w-10 h-10 object-contain"
+                          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                        />
+                      ) : (
+                        <span className="text-2xl font-bold text-gray-400 dark:text-gray-500">?</span>
+                      )}
+                      {isClaimed && (
+                        <div className="absolute top-0 right-0 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs">✓</span>
+                        </div>
+                      )}
+                    </div>
+                    <p className="text-[10px] text-gray-500 dark:text-gray-400 mt-1">Day {reward.day}</p>
+                    <p className="text-[10px] font-bold text-amber-600 dark:text-amber-400">+{reward.coins}</p>
                   </motion.button>
                 );
               })}
             </div>
             <p className="text-[10px] text-gray-400 dark:text-gray-500 text-center mt-2">
-              Tap to claim! Resets daily • 800 coins total
+              Tap once per day! • 800 coins total
             </p>
           </div>
 
