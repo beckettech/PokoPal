@@ -348,7 +348,6 @@ function getLocationsForPokemon(_name: string): string[] {
 
 export const pokemonList: Pokemon[] = _rawPokemonList.map(pokemon => ({
   ...pokemon,
-  locations: getLocationsForPokemon(pokemon.name),
 }));
 
 // Habitat detailed info (simplified - no icons)
