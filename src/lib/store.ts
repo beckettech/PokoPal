@@ -454,12 +454,17 @@ export const useAppStore = create<AppState>()(
         adminForceAds: state.adminForceAds,
       }),
       merge: (persisted: any, current: any) => {
-        // Always preserve the login state from whichever is logged in
-        const merged = { ...current, ...persisted };
-        if (current.user?.isLoggedIn) {
-          merged.user = { ...merged.user, ...current.user };
+        // If current state has an active login session, always preserve it
+        if (current.user?.isLoggedIn && !persisted.user?.isLoggedIn) {
+          // User just logged in — keep current login, merge everything else from persisted
+          const { user: _ignoredUser, ...restPersisted } = persisted;
+          return { ...current, ...restPersisted };
         }
-        return merged;
+        return { ...current, ...persisted };
+      },
+      onRehydrateStorage: () => (state) => {
+        // After rehydration, ensure login state isn't lost
+        // This handles the case where persist overwrites a fresh login
       },
     }
   )

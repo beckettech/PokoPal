@@ -6,7 +6,8 @@ import { useState, useRef } from "react";
 import { ReportIssueModal } from "@/components/ReportIssueModal";
 
 export function AccountPage() {
-  const { setCurrentPage, user, setPremium, restorePurchases, darkMode, toggleDarkMode, handle, setHandle, signUp, signIn, signOut, isLoggedIn, isAdmin, godMode, setGodMode, adminForceAds, setAdminForceAds } = useAppStore();
+  const { setCurrentPage, user, setPremium, restorePurchases, darkMode, toggleDarkMode, handle, setHandle, signUp, signIn, signOut, isAdmin, godMode, setGodMode, adminForceAds, setAdminForceAds } = useAppStore();
+  const isLoggedIn = user.isLoggedIn;
   const [isRestoring, setIsRestoring] = useState(false);
   const [adminRevealed, setAdminRevealed] = useState(false);
   const tapCount = useRef(0);
