@@ -10,7 +10,7 @@ import { getApiUrl } from "@/lib/api-config";
 import habitatsData from "@/data/scraped/habitats.json";
 
 // Dexter avatar
-const DEXTER_AVATAR = "/logo.svg";
+const DEXTER_AVATAR = "/logo.png";
 
 interface Message {
   id: string;

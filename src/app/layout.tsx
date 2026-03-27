@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   keywords: ["Pokemon", "Pokopia", "Pokédex", "Guide", "Companion", "Trainer", "Gaming"],
   authors: [{ name: "Pokopia Team" }],
   icons: {
-    icon: "/icon.svg",
-    apple: "/icon.svg",
+    icon: "/icon.png",
+    apple: "/icon.png",
   },
   manifest: "/manifest.json",
   openGraph: {
