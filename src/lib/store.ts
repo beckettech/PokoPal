@@ -408,6 +408,13 @@ export const useAppStore = create<AppState>()(
         visitedPages: state.visitedPages,
         adminForceAds: state.adminForceAds,
       }),
+      merge: (persisted: any, current: any) => {
+        // If user just logged in (current isLoggedIn true), keep it over persisted false
+        if (current.user?.isLoggedIn && !persisted.user?.isLoggedIn) {
+          persisted.user = { ...persisted.user, ...current.user };
+        }
+        return { ...current, ...persisted };
+      },
     }
   )
 );

@@ -29,7 +29,7 @@ export default function Home() {
   useEffect(() => {
     const handler = (e: Event) => {
       const target = e.target as HTMLElement;
-      if (target.closest('button') || target.closest('[role="button"]')) {
+      if (target.closest('button') || target.closest('[role="button"]') || target.closest('a')) {
         hapticTap();
       }
     };
