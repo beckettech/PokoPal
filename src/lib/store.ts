@@ -222,11 +222,30 @@ export const useAppStore = create<AppState>()(
         set(update);
       },
       coins: 1000, // Start with 250 coins
-      addCoins: (amount) => set((state) => ({ coins: state.coins + amount })),
+      addCoins: (amount) => {
+        set((state) => ({ coins: state.coins + amount }));
+        // Sync to server
+        const { user } = get();
+        if (user.userId) {
+          fetch(getApiUrl("/api/coins"), {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ userId: user.userId, action: "add", amount }),
+          }).catch(() => {});
+        }
+      },
       spendCoins: (amount) => {
         const current = get().coins;
         if (current >= amount) {
           set({ coins: current - amount });
+          const { user } = get();
+          if (user.userId) {
+            fetch(getApiUrl("/api/coins"), {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ userId: user.userId, action: "spend", amount }),
+            }).catch(() => {});
+          }
           return true;
         }
         return false;
