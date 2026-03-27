@@ -1,0 +1,378 @@
+{
+  "simplesalad": {
+    "ingredients": [
+      {
+        "name": "Leaf",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredient",
+        "quantity": 1
+      }
+    ],
+    "specialty": null
+  },
+  "leppasalad": {
+    "ingredients": [
+      {
+        "name": "Leaf",
+        "quantity": 1
+      },
+      {
+        "name": "Leppa Berry",
+        "quantity": 1
+      }
+    ],
+    "specialty": null
+  },
+  "seaweedsalad": {
+    "ingredients": [
+      {
+        "name": "Leaf",
+        "quantity": 1
+      },
+      {
+        "name": "Seaweed",
+        "quantity": 1
+      }
+    ],
+    "specialty": null
+  },
+  "shreddedsalad": {
+    "ingredients": [
+      {
+        "name": "Leaf",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredient",
+        "quantity": 1
+      }
+    ],
+    "specialty": null
+  },
+  "crushed-berrysalad": {
+    "ingredients": [
+      {
+        "name": "Leaf",
+        "quantity": 1
+      },
+      {
+        "name": "Chesto Berry",
+        "quantity": 1
+      }
+    ],
+    "specialty": "Crush"
+  },
+  "croutonsalad": {
+    "ingredients": [
+      {
+        "name": "Leaf",
+        "quantity": 1
+      },
+      {
+        "name": "Any Type of Bread",
+        "quantity": 1
+      }
+    ],
+    "specialty": null
+  },
+  "simplesoup": {
+    "ingredients": [
+      {
+        "name": "Fresh Water",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredients",
+        "quantity": 2
+      }
+    ],
+    "specialty": null
+  },
+  "seaweedsoup": {
+    "ingredients": [
+      {
+        "name": "Fresh Water",
+        "quantity": 1
+      },
+      {
+        "name": "Seaweed",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredient",
+        "quantity": 1
+      }
+    ],
+    "specialty": null
+  },
+  "mushroomsoup": {
+    "ingredients": [
+      {
+        "name": "Fresh Water",
+        "quantity": 1
+      },
+      {
+        "name": "Cave Mushrooms",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredient",
+        "quantity": 1
+      }
+    ],
+    "specialty": null
+  },
+  "electrifyingsoup": {
+    "ingredients": [
+      {
+        "name": "Fresh Water",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredients",
+        "quantity": 2
+      }
+    ],
+    "specialty": "Generate"
+  },
+  "healthysoup": {
+    "ingredients": [
+      {
+        "name": "Fresh Water",
+        "quantity": 1
+      },
+      {
+        "name": "Bean",
+        "quantity": 1
+      },
+      {
+        "name": "Leaf",
+        "quantity": 1
+      }
+    ],
+    "specialty": null
+  },
+  "flavorfulsoup": {
+    "ingredients": [
+      {
+        "name": "Fresh Water",
+        "quantity": 1
+      },
+      {
+        "name": "Any Type of Burger Steak",
+        "quantity": 1
+      },
+      {
+        "name": "Aspear Berry",
+        "quantity": 1
+      }
+    ],
+    "specialty": null
+  },
+  "simplebread": {
+    "ingredients": [
+      {
+        "name": "Wheat",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredients",
+        "quantity": 2
+      }
+    ],
+    "specialty": null
+  },
+  "leppabread": {
+    "ingredients": [
+      {
+        "name": "Wheat",
+        "quantity": 1
+      },
+      {
+        "name": "Leppa Berry",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredient",
+        "quantity": 1
+      }
+    ],
+    "specialty": null
+  },
+  "carrotbread": {
+    "ingredients": [
+      {
+        "name": "Wheat",
+        "quantity": 1
+      },
+      {
+        "name": "Fresh Carrot",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredient",
+        "quantity": 1
+      }
+    ],
+    "specialty": null
+  },
+  "recycledbread": {
+    "ingredients": [
+      {
+        "name": "Wheat",
+        "quantity": 1
+      },
+      {
+        "name": "Any Type of Bread",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredient",
+        "quantity": 1
+      }
+    ],
+    "specialty": "Recycle"
+  },
+  "fluffybread": {
+    "ingredients": [
+      {
+        "name": "Wheat",
+        "quantity": 1
+      },
+      {
+        "name": "Pecha Berry",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredient",
+        "quantity": 1
+      }
+    ],
+    "specialty": "Water"
+  },
+  "breadbowl": {
+    "ingredients": [
+      {
+        "name": "Wheat",
+        "quantity": 1
+      },
+      {
+        "name": "Any Type of Soup",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredient",
+        "quantity": 1
+      }
+    ],
+    "specialty": "Burn"
+  },
+  "simplehamburgersteak": {
+    "ingredients": [
+      {
+        "name": "Bean",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredients",
+        "quantity": 3
+      }
+    ],
+    "specialty": null
+  },
+  "mushroomhamburgersteak": {
+    "ingredients": [
+      {
+        "name": "Bean",
+        "quantity": 1
+      },
+      {
+        "name": "Cave Mushrooms",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredients",
+        "quantity": 2
+      }
+    ],
+    "specialty": null
+  },
+  "tomatohamburgersteak": {
+    "ingredients": [
+      {
+        "name": "Bean",
+        "quantity": 1
+      },
+      {
+        "name": "Tomato",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredients",
+        "quantity": 2
+      }
+    ],
+    "specialty": null
+  },
+  "potatohamburgersteak": {
+    "ingredients": [
+      {
+        "name": "Bean",
+        "quantity": 1
+      },
+      {
+        "name": "Potato",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredients",
+        "quantity": 2
+      }
+    ],
+    "specialty": null
+  },
+  "bitterhamburgersteak": {
+    "ingredients": [
+      {
+        "name": "Bean",
+        "quantity": 1
+      },
+      {
+        "name": "Rawst Berry",
+        "quantity": 1
+      },
+      {
+        "name": "Lum Berry",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredient",
+        "quantity": 1
+      }
+    ],
+    "specialty": null
+  },
+  "vibranthamburgersteak": {
+    "ingredients": [
+      {
+        "name": "Bean",
+        "quantity": 1
+      },
+      {
+        "name": "Any Type of Salad",
+        "quantity": 1
+      },
+      {
+        "name": "Potato",
+        "quantity": 1
+      },
+      {
+        "name": "Any Ingredient",
+        "quantity": 1
+      }
+    ],
+    "specialty": null
+  }
+}

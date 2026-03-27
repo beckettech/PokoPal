@@ -6,6 +6,7 @@ import { useAppStore } from "@/lib/store";
 
 type RecipeRequirement = { name: string; quantity: number };
 type Recipe = { name: string; category: string; locations: string; requirements: RecipeRequirement[] };
+type CookingRecipe = { ingredients: RecipeRequirement[]; specialty: string | null };
 
 type Item = {
   slug: string;
@@ -53,6 +54,7 @@ export function ItemsPage() {
   const [ownedFilter, setOwnedFilter] = useState<"all" | "owned" | "unowned">("all");
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
   const [recipes, setRecipes] = useState<Record<string, Recipe>>({});
+  const [cookingRecipes, setCookingRecipes] = useState<Record<string, CookingRecipe>>({});
 
   // Fetch items at runtime
   useEffect(() => {
@@ -87,6 +89,14 @@ export function ItemsPage() {
     fetch("/recipes.json")
       .then(res => res.json())
       .then((data: Record<string, Recipe>) => setRecipes(data))
+      .catch(() => {});
+  }, []);
+
+  // Fetch cooking recipes
+  useEffect(() => {
+    fetch("/cooking-recipes.json")
+      .then(res => res.json())
+      .then((data: Record<string, CookingRecipe>) => setCookingRecipes(data))
       .catch(() => {});
   }, []);
 
@@ -416,6 +426,53 @@ export function ItemsPage() {
                           </span>
                         </div>
                         <span className="text-[9px] text-center text-amber-900 dark:text-amber-300 font-medium max-w-[56px] leading-tight">{req.name}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Cooking Recipe */}
+            {selectedItem && cookingRecipes[selectedItem.slug] && selectedItem.methods?.some((m: string) => m.includes('Cook')) && (
+              <div className="bg-orange-50 dark:bg-orange-900/20 rounded-2xl p-3 border border-orange-100 dark:border-orange-800 mb-4">
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-xs font-bold text-orange-800 dark:text-orange-300 uppercase tracking-wide">🍳 Cooking Recipe</p>
+                  {cookingRecipes[selectedItem.slug].specialty && (
+                    <span className="text-[10px] font-semibold bg-orange-200 dark:bg-orange-700 text-orange-900 dark:text-orange-100 px-2 py-0.5 rounded-full">
+                      Required: {cookingRecipes[selectedItem.slug].specialty}
+                    </span>
+                  )}
+                </div>
+                <div className="flex gap-2 flex-wrap">
+                  {cookingRecipes[selectedItem.slug].ingredients.map((ing, idx) => {
+                    const isGeneric = ing.name.startsWith('Any');
+                    return (
+                      <div key={idx} className="flex flex-col items-center gap-1">
+                        <div className="w-14 h-14 bg-white dark:bg-gray-800 rounded-xl border border-orange-200 dark:border-orange-700 shadow-sm flex items-center justify-center relative">
+                          {isGeneric ? (
+                            <span className="text-2xl">🥘</span>
+                          ) : (
+                            <>
+                              <img
+                                src={`/items/${ing.name.toLowerCase().replace(/[^a-z0-9]/g, '')}.png`}
+                                alt={ing.name}
+                                className="w-11 h-11 object-contain"
+                                onError={e => {
+                                  const el = e.target as HTMLImageElement;
+                                  el.style.display = 'none';
+                                  const placeholder = el.nextElementSibling;
+                                  if (placeholder) placeholder.style.display = 'flex';
+                                }}
+                              />
+                              <span className="absolute inset-0 items-center justify-center text-lg hidden" style={{ display: 'none' }}>🥘</span>
+                            </>
+                          )}
+                          <span className="absolute -bottom-1 -right-1 bg-orange-500 text-white text-[9px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                            {ing.quantity}
+                          </span>
+                        </div>
+                        <span className="text-[9px] text-center text-orange-900 dark:text-orange-300 font-medium max-w-[64px] leading-tight">{ing.name}</span>
                       </div>
                     );
                   })}
