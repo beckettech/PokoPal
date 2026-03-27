@@ -461,8 +461,15 @@ export const useAppStore = create<AppState>()(
       signIn: async (email, password) => {
         if (!email || !password) return false;
         try {
+          // If input looks like a username (no @), look up email from profiles
+          let loginEmail = email.toLowerCase();
+          if (!loginEmail.includes('@')) {
+            const { data: profile } = await supabase.from('profiles').select('email').ilike('handle', loginEmail).single();
+            if (profile?.email) loginEmail = profile.email;
+            else throw new Error("Username not found");
+          }
           const { data, error } = await supabase.auth.signInWithPassword({
-            email: email.toLowerCase(),
+            email: loginEmail,
             password,
           });
           if (error) throw new Error(error.message);
