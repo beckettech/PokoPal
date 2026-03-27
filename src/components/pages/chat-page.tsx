@@ -20,7 +20,7 @@ interface Message {
 }
 
 export function ChatPage() {
-  const { setCurrentPage, coins, chatMessages, addChatMessage, spendCoins, addCoins, capturedPokemon, ownedItems, discoveredHabitats, navigateToPokemon, navigateToHabitat, handle } = useAppStore();
+  const { setCurrentPage, coins, chatMessages, addChatMessage, spendCoins, addCoins, capturedPokemon, ownedItems, discoveredHabitats, navigateToPokemon, navigateToHabitat, navigateToItem, handle } = useAppStore();
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -127,7 +127,9 @@ export function ChatPage() {
             setCurrentPage("habitat-dex");
           }
         } else if (type === "Items") {
-          setCurrentPage("items");
+          // Navigate to item by slug (name → slug conversion)
+          const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+          navigateToItem(slug);
         }
       };
       

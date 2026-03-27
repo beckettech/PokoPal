@@ -42,7 +42,7 @@ const CATEGORY_ICONS: Record<string, string> = {
 };
 
 export function ItemsPage() {
-  const { setCurrentPage, ownedItems, toggleOwnedItem } = useAppStore();
+  const { setCurrentPage, ownedItems, toggleOwnedItem, focusedItemSlug, clearFocus } = useAppStore();
   const [itemsData, setItemsData] = useState<ItemCategory[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
@@ -84,6 +84,15 @@ export function ItemsPage() {
       cat.items.map(item => ({ ...item, category: cat.name, categorySlug: cat.slug }))
     );
   }, [itemsData]);
+
+  // Focus item from chat link
+  useEffect(() => {
+    if (focusedItemSlug && itemsData.length > 0) {
+      const item = allItems.find(i => i.slug === focusedItemSlug);
+      if (item) setSelectedItem(item);
+      clearFocus();
+    }
+  }, [focusedItemSlug, itemsData]);
 
   // Filter items by category, search, and owned status
   const filteredItems = useMemo(() => {

@@ -57,9 +57,11 @@ interface AppState {
   navigateToPokemon: (pokemonId: number) => void;
   navigateToHabitat: (habitatId: number) => void;
   navigateToLocation: (locationId: string) => void;
+  navigateToItem: (slug: string) => void;
   focusedPokemonId: number | null;
   focusedHabitatId: number | null;
   focusedLocationId: string | null;
+  focusedItemSlug: string | null;
   clearFocus: () => void;
   coins: number;
   addCoins: (amount: number) => void;
@@ -132,10 +134,12 @@ export const useAppStore = create<AppState>()(
       focusedPokemonId: null,
       focusedHabitatId: null,
       focusedLocationId: null,
+      focusedItemSlug: null,
       navigateToPokemon: (pokemonId) => set({ currentPage: "dex", focusedPokemonId: pokemonId, focusedHabitatId: null, focusedLocationId: null }),
       navigateToHabitat: (habitatId) => set({ currentPage: "habitat-dex", focusedHabitatId: habitatId, focusedPokemonId: null, focusedLocationId: null }),
-      navigateToLocation: (locationId) => set({ currentPage: "map", focusedLocationId: locationId, focusedPokemonId: null, focusedHabitatId: null }),
-      clearFocus: () => set({ focusedPokemonId: null, focusedHabitatId: null, focusedLocationId: null }),
+      navigateToLocation: (locationId) => set({ currentPage: "map", focusedLocationId: locationId, focusedPokemonId: null, focusedHabitatId: null, focusedItemSlug: null }),
+      navigateToItem: (slug) => set({ currentPage: "items", focusedItemSlug: slug, focusedPokemonId: null, focusedHabitatId: null }),
+      clearFocus: () => set({ focusedPokemonId: null, focusedHabitatId: null, focusedLocationId: null, focusedItemSlug: null }),
       coins: 250, // Start with 250 coins
       addCoins: (amount) => set((state) => ({ coins: state.coins + amount })),
       spendCoins: (amount) => {
