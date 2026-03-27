@@ -21,6 +21,7 @@ const suggestedPrompts = [
 
 export function DexterChatPage() {
   const { setCurrentPage, dexterCoins } = useAppStore();
+  const [showClearConfirm, setShowClearConfirm] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 0,
@@ -109,16 +110,20 @@ export function DexterChatPage() {
             <Coins className="w-3.5 h-3.5 text-yellow-400" />
             <span className="text-xs font-bold text-white">{dexterCoins}</span>
           </motion.button>
-          <motion.button
-            onClick={() => setMessages([{ id: 0, role: "assistant", content: "Hey there, Trainer! 👋 I'm Dexter, your Pokopia assistant! What would you like to know?" }])}
-            className="flex items-center justify-center w-8 h-8 bg-white/20 rounded-full"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            title="Clear chat"
-          >
-            <Trash2 className="w-3.5 h-3.5 text-white/70" />
-          </motion.button>
         </div>
+      </div>
+
+      {/* Clear Chat */}
+      <div className="flex justify-center px-3 pb-1">
+        {showClearConfirm ? (
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] text-white/80">Clear all messages?</span>
+            <button onClick={() => { setMessages([{ id: 0, role: "assistant", content: "Hey there, Trainer! 👋 I'm Dexter, your Pokopia assistant! What would you like to know?" }]); setShowClearConfirm(false); }} className="text-[10px] bg-red-500 text-white px-2.5 py-0.5 rounded-full font-medium">Yes, clear</button>
+            <button onClick={() => setShowClearConfirm(false)} className="text-[10px] bg-white/20 text-white px-2.5 py-0.5 rounded-full">Cancel</button>
+          </div>
+        ) : (
+          <button onClick={() => setShowClearConfirm(true)} className="text-[10px] text-white/50 hover:text-white/80 underline">Clear Chat</button>
+        )}
       </div>
 
       {/* Messages Card */}
