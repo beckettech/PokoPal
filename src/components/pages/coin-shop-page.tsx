@@ -5,6 +5,14 @@ import { ArrowLeft, Coins, Check, Sparkles, Zap, Crown, Gift } from "lucide-reac
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
+const PAYMENT_LINKS: Record<number, string> = {
+  1: process.env.NEXT_PUBLIC_STRIPE_LINK_1000 || '#',
+  2: process.env.NEXT_PUBLIC_STRIPE_LINK_3500 || '#',
+  3: process.env.NEXT_PUBLIC_STRIPE_LINK_7500 || '#',
+  4: process.env.NEXT_PUBLIC_STRIPE_LINK_20000 || '#',
+  5: process.env.NEXT_PUBLIC_STRIPE_LINK_NOADS || '#',
+};
+
 const coinPackages = [
   { 
     id: 1, 
@@ -59,18 +67,16 @@ const dailyRewards = [
 ];
 
 export function CoinShopPage() {
-  const { setCurrentPage, coins, addCoins, coinStamps, coinLastStampDate, claimCoinStamp } = useAppStore();
+  const { setCurrentPage, coins, addCoins, coinStamps, coinLastStampDate, claimCoinStamp, user } = useAppStore();
   const [selectedPackage, setSelectedPackage] = useState<number | null>(null);
   const [showSuccess, setShowSuccess] = useState(false);
 
   const handlePurchase = (pkg: typeof coinPackages[0]) => {
-    setSelectedPackage(pkg.id);
-    setTimeout(() => {
-      addCoins(pkg.coins);
-      setSelectedPackage(null);
-      setShowSuccess(true);
-      setTimeout(() => setShowSuccess(false), 2000);
-    }, 1500);  };
+    const link = PAYMENT_LINKS[pkg.id];
+    if (link && link !== '#') {
+      window.open(link, '_blank');
+    }
+  };
 
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-amber-500 to-yellow-600 dark:from-amber-500 dark:to-yellow-600">
@@ -134,6 +140,27 @@ export function CoinShopPage() {
       {/* Content Card */}
       <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-hidden">
         <div className="h-full overflow-y-auto">
+          {/* Remove Ads */}
+          <div className="p-3 border-b border-gray-100 dark:border-gray-700">
+            {user.isPremium || user.adsRemoved ? (
+              <div className="bg-gradient-to-r from-purple-100 to-indigo-100 dark:from-purple-900/30 dark:to-indigo-900/30 rounded-xl p-3 text-center border border-purple-200 dark:border-purple-700">
+                <span className="text-2xl">✅</span>
+                <p className="font-bold text-purple-900 dark:text-purple-300 mt-1">Ads Removed ✓</p>
+              </div>
+            ) : (
+              <button
+                onClick={() => {
+                  const link = PAYMENT_LINKS[5];
+                  if (link && link !== '#') window.open(link, '_blank');
+                }}
+                className="w-full py-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold rounded-xl active:scale-95 transition-transform flex items-center justify-center gap-2"
+              >
+                <span className="text-lg">🚫</span>
+                Remove Ads — $2.99
+              </button>
+            )}
+          </div>
+
           {/* Daily Stamp Rewards */}
           <div className="p-3">
             <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Daily Stamp Rewards</h2>

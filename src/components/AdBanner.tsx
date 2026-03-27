@@ -1,8 +1,16 @@
 'use client'
 
 import { useEffect } from 'react'
+import { useAppStore } from "@/lib/store";
 
 export function AdBanner() {
+  const { user, adminForceAds } = useAppStore();
+
+  // Hide ads for premium users unless admin forces them
+  if ((user.isPremium || user.adsRemoved) && adminForceAds !== 'show') {
+    return null;
+  }
+
   useEffect(() => {
     try {
       (window as any).adsbygoogle = (window as any).adsbygoogle || []

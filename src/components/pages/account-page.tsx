@@ -305,7 +305,10 @@ export function AccountPage() {
               ) : (
                 <>
                   <button
-                    onClick={() => setPremium(true)}
+                    onClick={() => {
+                      const link = process.env.NEXT_PUBLIC_STRIPE_LINK_NOADS || '#';
+                      if (link !== '#') window.open(link, '_blank');
+                    }}
                     className="w-full py-3 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold rounded-xl active:scale-95 transition-transform"
                   >
                     Remove Ads - $2.99
