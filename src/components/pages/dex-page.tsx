@@ -84,7 +84,7 @@ function ConditionsBlock({ pokemon }: { pokemon: Pokemon }) {
 }
 
 export function DexPage() {
-  const { setCurrentPage, navigateToHabitat, navigateToLocation, navigateBack, previousPage, capturedPokemon, toggleCapturedPokemon, focusedPokemonId, clearFocus } = useAppStore();
+  const { setCurrentPage, navigateToHabitat, navigateToHabitatWithPokemon, navigateToLocation, navigateBack, previousPage, capturedPokemon, toggleCapturedPokemon, focusedPokemonId, clearFocus } = useAppStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedRarity, setSelectedRarity] = useState<string | null>(null);
   const [friendFilter, setFriendFilter] = useState<"all" | "friends" | "unseen">("all");
@@ -171,7 +171,7 @@ export function DexPage() {
             <button
               onClick={() => {
                 const hab = habitatMap[(selectedPokemon as any).habitatBuilt.toLowerCase()];
-                if (hab) navigateToHabitat(hab.id);
+                if (hab) navigateToHabitatWithPokemon(hab.id, selectedPokemon.id);
                 else setCurrentPage("habitat-dex");
               }}
               className="flex items-center gap-2 bg-emerald-100 dark:bg-emerald-900/50 rounded-xl border border-emerald-200 dark:border-emerald-700 active:scale-95 transition-transform text-left w-full overflow-hidden mt-2"
@@ -212,7 +212,7 @@ export function DexPage() {
                           <button
                             key={i}
                             onClick={() => {
-                              if (hab) navigateToHabitat(hab.id);
+                              if (hab) navigateToHabitatWithPokemon(hab.id, selectedPokemon.id);
                               else setCurrentPage("habitat-dex");
                             }}
                             className="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-900/30 rounded-xl border border-emerald-100 dark:border-emerald-700 active:scale-95 transition-transform text-left w-full overflow-hidden"

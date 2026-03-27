@@ -142,7 +142,7 @@ export function HabitatDexPage() {
       <div className="pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
           <motion.button
-            onClick={() => setCurrentPage("home")}
+            onClick={() => { if (previousPage) navigateBack(); else setCurrentPage("home"); }}
             className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center"
             whileTap={{ scale: 0.9 }}
           >
