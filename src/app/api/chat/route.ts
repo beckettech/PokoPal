@@ -47,22 +47,16 @@ try {
 }
 
 // Dexter's system prompt
-const SYSTEM_PROMPT = `You are Dexter, a friendly Pokédex assistant for the game Pokémon Pokopia. You have access to comprehensive game data including:
-- All 300+ Pokémon with their types, locations, habitats, obtain methods, and specialties
-- All habitats with required items and Pokémon that appear in them
-- All locations/areas and which Pokémon appear there
-- All items with descriptions and how to obtain them
-- All crafting and cooking recipes
+const SYSTEM_PROMPT = `You are Dexter, a friendly Pokédex assistant for the game Pokémon Pokopia.
+
+CRITICAL: You will be given game data below. You MUST ONLY use information from the provided data. NEVER invent locations, items, Pokémon, or details that are not in the data. If the data does not contain the answer, say "I don't have that information in my current data."
 
 Guidelines:
-- Be concise but thorough (2-4 sentences for simple questions, more for complex ones)
-- When mentioning something the user can view in-app, use this format: [[Dex: Pikachu]] or [[Habitat: Mossy Hot Spring]] or [[Items: Honey]]
-- Use the provided data to give accurate, specific answers — if you have the data, use it
-- For questions about building habitats, list the exact items needed
-- For questions about finding Pokémon, mention the specific location and any requirements
-- For questions about quests/story events, provide what you know from the data
-- Never mention LLMs, tokens, or AI — you're just Dexter the Pokédex assistant
-- If you truly don't have information about something, say so honestly rather than guessing`;
+- Be concise (2-4 sentences for simple questions, more for complex ones)
+- When mentioning something the user can view in-app, use: [[Dex: Pikachu]] or [[Habitat: Mossy Hot Spring]] or [[Items: Honey]]
+- For habitat questions, list the exact items needed
+- For Pokémon location questions, mention the specific habitat/location from the data — never make up location names
+- Never mention LLMs, tokens, or AI — you're just Dexter the Pokédex assistant`;
 
 const STOP_WORDS = new Set([
   "how", "to", "at", "the", "a", "is", "do", "i", "can", "what", "where",
@@ -180,38 +174,65 @@ function buildContext(query: string): string {
   // Location name match
   const namedLocation = findLocationByName(query);
   if (namedLocation) {
-    parts.push(`Location "${namedLocation.name}":\n${JSON.stringify(namedLocation, null, 2)}`);
+    const pokemon = (namedLocation.pokemon || []).map((p: any) => p.name || p).join(', ');
+    parts.push(`Location "${namedLocation.name}": Pokemon: ${pokemon}.`);
   }
 
   // Pokemon matches
   const pokemonMatches = topMatches(pokemonData, queryWords, 5);
   if (pokemonMatches.length > 0) {
-    parts.push(`Relevant Pokemon:\n${JSON.stringify(pokemonMatches, null, 2)}`);
+    const summaries = pokemonMatches.map(p => {
+      const h = (p.habitats || []).join(', ');
+      const t = (p.time || []).join(', ');
+      const w = (p.weather || []).join(', ');
+      const s = (p.specialties || []).join(', ');
+      const m = (p.methods || []).join(', ');
+      return `${p.name} (#${p.pokopiaId || '?'}): Habitats: ${h || 'none listed'}. Time: ${t || 'any'}. Weather: ${w || 'any'}. Specialty: ${s || 'none'}. Obtain: ${m || 'see habitats'}.`;
+    });
+    parts.push(`Relevant Pokemon (ONLY use this data, do not invent locations):\n${summaries.join('\n')}`);
   }
 
   // Habitat matches
   const habitatMatches = topMatches(habitatData, queryWords, 5);
   if (habitatMatches.length > 0) {
-    parts.push(`Relevant Habitats:\n${JSON.stringify(habitatMatches, null, 2)}`);
+    const summaries = habitatMatches.map(h => {
+      const items = (h.items || []).map((i: any) => `${i.name} x${i.quantity}`).join(', ');
+      const pokemon = (h.pokemon || []).map((p: any) => p.name || p).join(', ');
+      return `${h.name} (#${h.id || '?'}): Items needed: ${items || 'none'}. Pokemon: ${pokemon}.`;
+    });
+    parts.push(`Relevant Habitats:\n${summaries.join('\n')}`);
   }
 
   // Item matches
   const itemMatches = topMatches(itemData, queryWords, 5);
   if (itemMatches.length > 0) {
-    parts.push(`Relevant Items:\n${JSON.stringify(itemMatches, null, 2)}`);
+    const summaries = itemMatches.map(i => {
+      const locs = (i.locations || []).map((l: any) => `${l.name} (${l.method})`).join(', ');
+      const meths = (i.methods || []).join('; ');
+      return `${i.name}: ${i.description || ''} Locations: ${locs || 'see methods'}. Methods: ${meths || 'none listed'}.`;
+    });
+    parts.push(`Relevant Items:\n${summaries.join('\n')}`);
   }
 
   // Location matches
   const locationMatches = topMatches(locationData, queryWords, 5);
   if (locationMatches.length > 0) {
-    parts.push(`Relevant Locations:\n${JSON.stringify(locationMatches, null, 2)}`);
+    const summaries = locationMatches.map(l => {
+      const pokemon = (l.pokemon || []).map((p: any) => p.name || p).join(', ');
+      return `${l.name}: Pokemon: ${pokemon}.`;
+    });
+    parts.push(`Relevant Locations:\n${summaries.join('\n')}`);
   }
 
   // Recipe matches
   if (recipeData.length > 0) {
     const recipeMatches = topMatches(recipeData, queryWords, 5);
     if (recipeMatches.length > 0) {
-      parts.push(`Relevant Recipes:\n${JSON.stringify(recipeMatches, null, 2)}`);
+      const summaries = recipeMatches.map(r => {
+        const reqs = (r.requirements || []).map((rq: any) => `${rq.name} x${rq.quantity}`).join(', ');
+        return `${r.name} (${r.category}): ${reqs}. Found at: ${r.locations || 'unknown'}.`;
+      });
+      parts.push(`Relevant Recipes:\n${summaries.join('\n')}`);
     }
   }
 
@@ -219,7 +240,11 @@ function buildContext(query: string): string {
   if (cookingRecipeData.length > 0) {
     const cookingMatches = topMatches(cookingRecipeData, queryWords, 5);
     if (cookingMatches.length > 0) {
-      parts.push(`Relevant Cooking Recipes:\n${JSON.stringify(cookingMatches, null, 2)}`);
+      const summaries = cookingMatches.map(r => {
+        const reqs = (r.requirements || []).map((rq: any) => `${rq.name} x${rq.quantity}`).join(', ');
+        return `${r.name}: ${reqs}. Effect: ${r.effect || 'unknown'}.`;
+      });
+      parts.push(`Relevant Cooking Recipes:\n${summaries.join('\n')}`);
     }
   }
 
