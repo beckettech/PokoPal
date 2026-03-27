@@ -49,7 +49,7 @@ export function RequestsPage() {
   const totalTodo = requestsJson.length - totalCompleted - totalInProgress;
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-yellow-500 to-orange-500 dark:from-yellow-900 dark:to-orange-950">
+    <div className="h-full flex flex-col bg-gradient-to-b from-yellow-500 to-orange-500 dark:from-yellow-500 dark:to-orange-600">
       {/* Header */}
       <div className="pt-6 pb-3 px-4 shrink-0">
         <div className="flex items-center justify-between mb-3">

@@ -117,7 +117,7 @@ export function ItemsPage() {
 
   if (loading) {
     return (
-      <div className="h-full flex flex-col bg-gradient-to-b from-orange-500 to-orange-600 dark:from-orange-900 dark:to-orange-950 overflow-hidden">
+      <div className="h-full flex flex-col bg-gradient-to-b from-orange-500 to-orange-600 dark:from-orange-600 dark:to-orange-700 overflow-hidden">
         <div className="pt-6 pb-3 px-4 shrink-0">
           <div className="flex items-center justify-between mb-3">
             <button
@@ -140,7 +140,7 @@ export function ItemsPage() {
   }
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-orange-500 to-orange-600 dark:from-orange-900 dark:to-orange-950 overflow-hidden">
+    <div className="h-full flex flex-col bg-gradient-to-b from-orange-500 to-orange-600 dark:from-orange-600 dark:to-orange-700 overflow-hidden">
       {/* Header */}
       <div className="pt-6 pb-3 px-4 shrink-0">
         <div className="flex items-center justify-between mb-3">

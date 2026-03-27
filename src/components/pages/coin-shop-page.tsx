@@ -70,7 +70,7 @@ export function CoinShopPage() {
     }, 1500);  };
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-amber-500 to-yellow-600 dark:from-amber-900 dark:to-yellow-950">
+    <div className="h-full flex flex-col bg-gradient-to-b from-amber-500 to-yellow-600 dark:from-amber-500 dark:to-yellow-600">
       {/* Success Overlay */}
       <AnimatePresence>
         {showSuccess && (

@@ -42,7 +42,7 @@ export function RelicsPage() {
   const fossilProgress = `${foundFossils.length}/${FOSSILS.length}`;
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-b from-amber-700 to-amber-800 dark:from-amber-900 dark:to-amber-950 overflow-hidden">
+    <div className="h-full flex flex-col bg-gradient-to-b from-amber-700 to-amber-800 dark:from-amber-600 dark:to-amber-700 overflow-hidden">
       {/* Header */}
       <div className="pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-3">
