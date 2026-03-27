@@ -113,21 +113,20 @@ export function DexterChatPage() {
         </div>
       </div>
 
-      {/* Clear Chat */}
-      <div className="flex justify-center px-3 pb-1">
-        {showClearConfirm ? (
-          <div className="flex items-center gap-2">
-            <span className="text-[10px] text-white/80">Clear all messages?</span>
-            <button onClick={() => { setMessages([{ id: 0, role: "assistant", content: "Hey there, Trainer! 👋 I'm Dexter, your Pokopia assistant! What would you like to know?" }]); setShowClearConfirm(false); }} className="text-[10px] bg-red-500 text-white px-2.5 py-0.5 rounded-full font-medium">Yes, clear</button>
-            <button onClick={() => setShowClearConfirm(false)} className="text-[10px] bg-white/20 text-white px-2.5 py-0.5 rounded-full">Cancel</button>
-          </div>
-        ) : (
-          <button onClick={() => setShowClearConfirm(true)} className="text-[10px] text-white/50 hover:text-white/80 underline">Clear Chat</button>
-        )}
-      </div>
-
       {/* Messages Card */}
       <div className="flex-1 bg-white rounded-t-[2rem] flex flex-col overflow-hidden min-h-0">
+        {/* New Chat */}
+        <div className="flex justify-end px-4 pt-2 shrink-0">
+          {showClearConfirm ? (
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] text-gray-500">Start a new chat?</span>
+              <button onClick={() => { setMessages([{ id: 0, role: "assistant", content: "Hey there, Trainer! 👋 I'm Dexter, your Pokopia assistant! What would you like to know?" }]); setShowClearConfirm(false); }} className="text-[10px] bg-red-500 text-white px-2.5 py-0.5 rounded-full font-medium">Yes</button>
+              <button onClick={() => setShowClearConfirm(false)} className="text-[10px] bg-gray-200 text-gray-600 px-2.5 py-0.5 rounded-full">Cancel</button>
+            </div>
+          ) : (
+            <button onClick={() => setShowClearConfirm(true)} className="text-[10px] text-gray-400 hover:text-gray-600 underline">New Chat</button>
+          )}
+        </div>
         {/* Messages Area */}
         <div className="flex-1 overflow-y-auto p-3 space-y-3">
           <AnimatePresence>
