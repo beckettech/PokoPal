@@ -18,6 +18,7 @@ export function AccountPage() {
   const [authHandle, setAuthHandle] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [authError, setAuthError] = useState("");
+  const [authSuccess, setAuthSuccess] = useState("");
   const [authLoading, setAuthLoading] = useState(false);
   const [editingHandle, setEditingHandle] = useState(false);
   const [handleDraft, setHandleDraft] = useState("");
@@ -47,24 +48,45 @@ export function AccountPage() {
 
   const handleAuthSubmit = async () => {
     setAuthError("");
+    setAuthSuccess("");
+
     if (!email || !password) { setAuthError("Please fill in all fields"); return; }
 
     if (authTab === "signup") {
-      if (!authHandle) { setAuthError("Please choose a handle"); return; }
+      if (!authHandle) { setAuthError("Please choose a username"); return; }
+      if (authHandle.length < 2) { setAuthError("Username must be at least 2 characters"); return; }
       if (password.length < 6) { setAuthError("Password must be at least 6 characters"); return; }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setAuthError("Please enter a valid email"); return; }
       setAuthLoading(true);
-      const ok = await signUp(email, password, authHandle);
+      try {
+        const ok = await signUp(email, password, authHandle);
+        if (ok) {
+          setAuthSuccess("Account created — signing in...");
+          setEmail(""); setPassword(""); setAuthHandle("");
+          setTimeout(() => setAuthSuccess(""), 3000);
+        } else {
+          setAuthError("Sign up failed. Please try again.");
+        }
+      } catch (e) {
+        setAuthError("Something went wrong. Please try again.");
+      }
       setAuthLoading(false);
-      if (ok) { setAuthError(""); setEmail(""); setPassword(""); setAuthHandle(""); }
-      else setAuthError("Sign up failed. Please try again.");
     } else {
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setAuthError("Please enter a valid email"); return; }
+      // Login accepts email or username
       setAuthLoading(true);
-      const ok = await signIn(email, password);
+      try {
+        const ok = await signIn(email, password);
+        if (ok) {
+          setAuthSuccess("Signed in successfully!");
+          setEmail(""); setPassword("");
+          setTimeout(() => setAuthSuccess(""), 3000);
+        } else {
+          setAuthError("Invalid email/username or password");
+        }
+      } catch (e) {
+        setAuthError("Something went wrong. Please try again.");
+      }
       setAuthLoading(false);
-      if (ok) { setAuthError(""); setEmail(""); setPassword(""); }
-      else setAuthError("Invalid email or password");
     }
   };
 
@@ -163,7 +185,7 @@ export function AccountPage() {
                     </div>
                   )}
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-600 dark:text-gray-400">@Handle</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-400">Username</span>
                     {editingHandle ? (
                       <div className="flex items-center gap-2">
                         <span className="text-sm text-gray-400">@</span>
@@ -227,11 +249,16 @@ export function AccountPage() {
                       <p className="text-[11px] text-red-600 dark:text-red-400">{authError}</p>
                     </div>
                   )}
+                  {authSuccess && (
+                    <div className="bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-700 rounded-lg px-3 py-2">
+                      <p className="text-[11px] text-green-600 dark:text-green-400">{authSuccess}</p>
+                    </div>
+                  )}
 
                   <div className="space-y-2">
                     <div className="relative">
                       <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-                      <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" className={`${inputClass} pl-10`} />
+                      <input type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder={authTab === "signup" ? "Email" : "Email or Username"} className={`${inputClass} pl-10`} />
                     </div>
                     {authTab === "signup" && (
                       <div className="relative">
