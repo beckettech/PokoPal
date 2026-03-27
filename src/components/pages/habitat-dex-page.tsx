@@ -200,7 +200,7 @@ export function HabitatDexPage() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: Math.min(index * 0.02, 0.3) }}
-                  className={`bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden border transition-colors ${isDiscovered ? 'border-green-200 bg-green-50/30' : 'border-gray-100'}`}
+                  className={`bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden border transition-colors ${isDiscovered ? 'border-green-200 dark:border-green-700 bg-green-50/30 dark:bg-green-900/20' : 'border-gray-100 dark:border-gray-700'}`}
                 >
                   <div className="flex items-center gap-3 p-3">
                     {/* Tap image or name → fullscreen detail */}
@@ -267,7 +267,7 @@ export function HabitatDexPage() {
         return (
           <div className="absolute inset-0 bg-gray-50 dark:bg-gray-900 flex flex-col overflow-hidden z-10">
             {/* Header */}
-            <div className="shrink-0 bg-white dark:bg-gray-800 px-4 pt-4 pb-3 border-b border-gray-100">
+            <div className="shrink-0 bg-white dark:bg-gray-800 px-4 pt-4 pb-3 border-b border-gray-100 dark:border-gray-700">
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => setSelectedHabitat(null)}
@@ -282,7 +282,7 @@ export function HabitatDexPage() {
                 <button
                   onClick={() => toggleDiscoveredHabitat(habitat.id)}
                   className={`shrink-0 w-11 h-11 rounded-full flex items-center justify-center active:scale-90 transition-transform ${
-                    isDiscovered ? 'bg-yellow-400 text-yellow-900' : 'bg-gray-100 dark:bg-gray-700 text-gray-400'
+                    isDiscovered ? 'bg-yellow-400 dark:bg-yellow-500 text-yellow-900 dark:text-yellow-100' : 'bg-gray-100 dark:bg-gray-700 text-gray-400'
                   }`}
                 >
                   {isDiscovered ? <Check className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
@@ -317,7 +317,7 @@ export function HabitatDexPage() {
                     <div className="flex gap-2 flex-wrap">
                       {(habitat as any).buildItems.map((item: any, idx: number) => (
                         <div key={`${habitat.id}-${item.slug}-${idx}`} className="flex flex-col items-center gap-1">
-                          <div className="w-14 h-14 bg-white dark:bg-gray-800 rounded-xl border border-amber-200 shadow-sm flex items-center justify-center relative">
+                          <div className="w-14 h-14 bg-white dark:bg-gray-800 rounded-xl border border-amber-200 dark:border-amber-700 shadow-sm flex items-center justify-center relative">
                             <img
                               src={getItemImage(item.slug, item.image)}
                               alt={item.name}
@@ -352,7 +352,7 @@ export function HabitatDexPage() {
                             onClick={() => handlePokemonClick(poke.slug, poke.name)}
                             whileTap={{ scale: 0.95 }}
                             className={`flex flex-col items-center gap-1 p-2 rounded-xl border transition-colors w-[72px] ${
-                              isCaught ? "bg-green-50 border-green-200" : "bg-white dark:bg-gray-800 border-gray-200"
+                              isCaught ? "bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-700" : "bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700"
                             }`}
                           >
                             <div className="relative w-11 h-11 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
