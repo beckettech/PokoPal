@@ -1,52 +1,25 @@
 // Haptic feedback utility for Pokopia Guide
-// Uses Vibration API on mobile, AudioContext fallback on desktop
+// Uses web-haptics package (Vibration API + AudioContext fallback)
 
-let audioCtx: AudioContext | null = null;
+import { WebHaptics } from "web-haptics";
+
+const haptics = new WebHaptics();
+
 let lastHaptic = 0;
 
-function audioFeedback(duration: number) {
-  try {
-    if (!audioCtx) audioCtx = new AudioContext();
-    if (audioCtx.state === 'suspended') audioCtx.resume();
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-    osc.connect(gain);
-    gain.connect(audioCtx.destination);
-    osc.frequency.value = 150;
-    gain.gain.value = 0.08;
-    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + Math.min(duration, 150) / 1000);
-    osc.start();
-    osc.stop(audioCtx.currentTime + Math.min(duration, 200) / 1000);
-  } catch {}
-}
-
-export function haptic(type: 'success' | 'notification' = 'success') {
-  // Throttle to 50ms minimum between haptics
+function throttledTrigger(input: Parameters<typeof haptics.trigger>[0]) {
   const now = Date.now();
   if (now - lastHaptic < 50) return;
   lastHaptic = now;
-
-  if (type === 'success') {
-    // Short tap — 15ms
-    if (typeof navigator !== 'undefined' && navigator.vibrate) {
-      navigator.vibrate(15);
-    } else {
-      audioFeedback(15);
-    }
-  } else {
-    // Buzz pattern — two pulses
-    if (typeof navigator !== 'undefined' && navigator.vibrate) {
-      navigator.vibrate([20, 30, 30]);
-    } else {
-      audioFeedback(80);
-    }
-  }
+  haptics.trigger(input);
 }
 
 export function hapticTap() {
-  haptic('success');
+  // Light tap — short single vibration
+  throttledTrigger(15);
 }
 
 export function hapticBuzz() {
-  haptic('notification');
+  // Buzz pattern — two pulses
+  throttledTrigger([20, 30, 30]);
 }
