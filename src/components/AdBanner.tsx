@@ -1,25 +1,29 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { useAppStore } from "@/lib/store";
 
 export function AdBanner() {
-  const { user, adminForceAds } = useAppStore();
+  const user = useAppStore((s) => s.user);
+  const adminForceAds = useAppStore((s) => s.adminForceAds);
 
-  const shouldHide =
+  const shouldHide = useMemo(() =>
     adminForceAds === 'hide' ||
-    (adminForceAds === 'default' && (user.isPremium || user.adsRemoved));
-
-  if (shouldHide) {
-    return null;
-  }
+    (adminForceAds === 'default' && (user.isPremium || user.adsRemoved)),
+    [adminForceAds, user.isPremium, user.adsRemoved]
+  );
 
   useEffect(() => {
+    if (shouldHide) return;
     try {
       (window as any).adsbygoogle = (window as any).adsbygoogle || []
       (window as any).adsbygoogle.push({})
     } catch {}
-  }, [])
+  }, [shouldHide])
+
+  if (shouldHide) {
+    return null;
+  }
 
   return (
     <div className="w-full flex justify-center py-1 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
