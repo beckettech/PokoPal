@@ -310,23 +310,22 @@ export const useAppStore = create<AppState>()(
         }
       })),
       signUp: async (email, password, handle) => {
-        // Client-side auth (Vercel serverless has ephemeral filesystem)
-        // Simple email format validation
         if (!email || !password || !handle) return false;
-        set((state) => ({
+        const state = get();
+        set({
           user: { ...state.user, email: email.toLowerCase(), isLoggedIn: true, authToken: crypto.randomUUID() },
           handle: handle.toLowerCase().replace("@", ""),
           isAdmin: email.toLowerCase() === "becketthoefling@gmail.com",
-        }));
+        });
         return true;
       },
       signIn: async (email, password) => {
         if (!email || !password) return false;
-        const isAdmin = email.toLowerCase() === "becketthoefling@gmail.com";
-        set((state) => ({
+        const state = get();
+        set({
           user: { ...state.user, email: email.toLowerCase(), isLoggedIn: true, authToken: crypto.randomUUID() },
-          isAdmin,
-        }));
+          isAdmin: email.toLowerCase() === "becketthoefling@gmail.com",
+        });
         if (isAdmin) {
           // Fetch admin config in background
           try {
@@ -375,11 +374,15 @@ export const useAppStore = create<AppState>()(
     }),
     {
       name: "pokopia-storage",
-      version: 3,
+      version: 4,
       migrate: (persistedState: any, version: number) => {
-        // Migrate: give users 1000 coins if they have less than 100 (old default was 0 or 100)
+        // v3: give users coins if they have less than 150
         if (persistedState.coins < 150) {
-          persistedState.coins = 1000;
+          persistedState.coins = 250;
+        }
+        // v4: ensure user state exists
+        if (!persistedState.user) {
+          persistedState.user = { userId: null, isLoggedIn: false, isPremium: false, adsRemoved: false };
         }
         return persistedState;
       },
