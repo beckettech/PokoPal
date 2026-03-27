@@ -454,11 +454,12 @@ export const useAppStore = create<AppState>()(
         adminForceAds: state.adminForceAds,
       }),
       merge: (persisted: any, current: any) => {
-        // If user just logged in (current isLoggedIn true), keep it over persisted false
-        if (current.user?.isLoggedIn && !persisted.user?.isLoggedIn) {
-          persisted.user = { ...persisted.user, ...current.user };
+        // Always preserve the login state from whichever is logged in
+        const merged = { ...current, ...persisted };
+        if (current.user?.isLoggedIn) {
+          merged.user = { ...merged.user, ...current.user };
         }
-        return { ...current, ...persisted };
+        return merged;
       },
     }
   )
