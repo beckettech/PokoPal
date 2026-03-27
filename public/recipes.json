@@ -1,0 +1,4061 @@
+{
+  "wallstoragebox": {
+    "name": "Wall storage box",
+    "category": "furniture",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "bigstoragebox": {
+    "name": "Big Storage Box",
+    "category": "furniture",
+    "locations": "Register 30 Pok\u00e9mon",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 3
+      }
+    ]
+  },
+  "gamingfridge": {
+    "name": "Gaming fridge",
+    "category": "furniture",
+    "locations": "Shop - Sparkling Skylands Lv. 10",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "pokeballchest": {
+    "name": "Pok\u00e9 Ball Chest",
+    "category": "furniture",
+    "locations": "Shop - Palette Town Lv. 10",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "strawtable": {
+    "name": "Straw table",
+    "category": "furniture",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Leaf",
+        "quantity": 1
+      }
+    ]
+  },
+  "logtable": {
+    "name": "Log table",
+    "category": "furniture",
+    "locations": "Beginning",
+    "requirements": [
+      {
+        "name": "Small log",
+        "quantity": 1
+      }
+    ]
+  },
+  "pokemoncentercounter": {
+    "name": "Pok\u00e9mon Center counter",
+    "category": "furniture",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "plainstand": {
+    "name": "Plain stand",
+    "category": "furniture",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "ironstand": {
+    "name": "Iron Stand",
+    "category": "furniture",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  "foodcounter": {
+    "name": "Food counter",
+    "category": "furniture",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "studydesk": {
+    "name": "Study desk",
+    "category": "furniture",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "cutetable": {
+    "name": "Cute table",
+    "category": "furniture",
+    "locations": "Shop - Bleak Beach Lv. 10",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "pokeballtable": {
+    "name": "Pok\u00e9 Ball table",
+    "category": "furniture",
+    "locations": "Shop - Palette Town Lv. 10",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "berrytable": {
+    "name": "Berry table",
+    "category": "furniture",
+    "locations": "Shop - Withered Wastelands Lv. 10",
+    "requirements": [
+      {
+        "name": "Aspear Berry",
+        "quantity": 2
+      }
+    ]
+  },
+  "strawstool": {
+    "name": "Straw stool",
+    "category": "furniture",
+    "locations": "Withered Wasteland (Item)",
+    "requirements": [
+      {
+        "name": "Leaf",
+        "quantity": 1
+      }
+    ]
+  },
+  "logchair": {
+    "name": "Log chair",
+    "category": "furniture",
+    "locations": "Beginning",
+    "requirements": [
+      {
+        "name": "Small log",
+        "quantity": 1
+      }
+    ]
+  },
+  "resortstool": {
+    "name": "Resort stool",
+    "category": "furniture",
+    "locations": "Shop - Bleak Beach Lv. 6",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 1
+      }
+    ]
+  },
+  "waterproofseat": {
+    "name": "Waterproof seat",
+    "category": "furniture",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "publicseat": {
+    "name": "Public seat",
+    "category": "furniture",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "softseat": {
+    "name": "Soft seat",
+    "category": "furniture",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "boxsofa": {
+    "name": "Box sofa",
+    "category": "furniture",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 1
+      }
+    ]
+  },
+  "resortchair": {
+    "name": "Resort chair",
+    "category": "furniture",
+    "locations": "Shop - Bleak Beach Lv. 7",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 1
+      }
+    ]
+  },
+  "fancychair": {
+    "name": "Fancy chair",
+    "category": "furniture",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 1
+      }
+    ]
+  },
+  "antiquechair": {
+    "name": "Antique chair",
+    "category": "furniture",
+    "locations": "Shop - Palette Town Lv. 5",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 1
+      }
+    ]
+  },
+  "luxurychair": {
+    "name": "Luxury chair",
+    "category": "furniture",
+    "locations": "Shop - Rocky Ridges Lv. 9",
+    "requirements": [
+      {
+        "name": "Linestone",
+        "quantity": 2
+      }
+    ]
+  },
+  "cutechair": {
+    "name": "Cute chair",
+    "category": "furniture",
+    "locations": "Shop - Bleak Beach Lv. 9",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "gamingchair": {
+    "name": "Gaming chair",
+    "category": "furniture",
+    "locations": "Shop - Sparkling Skylands Lv. 9",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "ironbench": {
+    "name": "Iron bench",
+    "category": "furniture",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  "cutesofa": {
+    "name": "Cute sofa",
+    "category": "furniture",
+    "locations": "Shop - Bleak Beach Lv. 10",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "pokeballsofa": {
+    "name": "Pok\u00e9 Ball sofa",
+    "category": "furniture",
+    "locations": "Shop - Palette Town Lv. 9",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "logbed": {
+    "name": "Log bed",
+    "category": "furniture",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Small log",
+        "quantity": 2
+      }
+    ]
+  },
+  "miniplainbed": {
+    "name": "Mini plain bed",
+    "category": "furniture",
+    "locations": "Bleak Beach (Item)",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 1
+      }
+    ]
+  },
+  "resortbed": {
+    "name": "Resort bed",
+    "category": "furniture",
+    "locations": "Shop - Bleak Beach Lv. 8",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "popartbed": {
+    "name": "Pop art bed",
+    "category": "furniture",
+    "locations": "Shop - Sparkling Skylands Lv. 6",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "berrybed": {
+    "name": "Berry bed",
+    "category": "furniture",
+    "locations": "Shop - Withered Wastelands Lv. 10",
+    "requirements": [
+      {
+        "name": "Pecha Berry",
+        "quantity": 2
+      }
+    ]
+  },
+  "woodenbed": {
+    "name": "Wooden bed",
+    "category": "furniture",
+    "locations": "Withered Wasteland (Item)",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "resorthammock": {
+    "name": "Resort hammock",
+    "category": "furniture",
+    "locations": "Shop - Bleak Beach Lv. 6",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "antiquebed": {
+    "name": "Antique bed",
+    "category": "furniture",
+    "locations": "Shop - Palette Town Lv. 5",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "industrialbed": {
+    "name": "Industrial bed",
+    "category": "furniture",
+    "locations": "Rocky Ridges (Item)",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  "luxurybed": {
+    "name": "Luxury bed",
+    "category": "furniture",
+    "locations": "Shop - Rocky Ridges Lv. 10",
+    "requirements": [
+      {
+        "name": "Limestone",
+        "quantity": 4
+      }
+    ]
+  },
+  "cutebed": {
+    "name": "Cute bed",
+    "category": "furniture",
+    "locations": "Shop - Bleak Beach Lv. 10",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 3
+      }
+    ]
+  },
+  "gamingbed": {
+    "name": "Gaming bed",
+    "category": "furniture",
+    "locations": "Shop",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "luxurydresser": {
+    "name": "Luxury dresser",
+    "category": "furniture",
+    "locations": "Shop - Rocky Ridges Lv.",
+    "requirements": [
+      {
+        "name": "Limestone",
+        "quantity": 4
+      }
+    ]
+  },
+  "cutedresser": {
+    "name": "Cute dresser",
+    "category": "furniture",
+    "locations": "Shop - Bleak Beach Lv. 10",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "partyplatter": {
+    "name": "Party platter",
+    "category": "misc",
+    "locations": "From Chef Dente during the story",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 1
+      }
+    ]
+  },
+  "picnicbasket": {
+    "name": "Picnic basket",
+    "category": "misc",
+    "locations": "Obtain a Vine rope",
+    "requirements": [
+      {
+        "name": "Sturdy stick",
+        "quantity": 1
+      }
+    ]
+  },
+  "tablesetting": {
+    "name": "Table setting",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Squishy clay",
+        "quantity": 1
+      }
+    ]
+  },
+  "paperpartycups": {
+    "name": "Paper party cups",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "pizza": {
+    "name": "Pizza",
+    "category": "misc",
+    "locations": "In Daily Specials in shop after finishing Palette Town Challenge",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "friedpotatoes": {
+    "name": "Fried potatoes",
+    "category": "misc",
+    "locations": "In Daily Specials in shop after finishing Palette Town Challenge",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "sodafloat": {
+    "name": "Soda float",
+    "category": "misc",
+    "locations": "In Daily Specials in shop after finishing Palette Town Challenge",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "afternoonteaset": {
+    "name": "Afternoon tea set",
+    "category": "misc",
+    "locations": "In Daily Specials in shop after finishing Palette Town Challenge",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "chocolatecookies": {
+    "name": "Chocolate cookies",
+    "category": "misc",
+    "locations": "In Daily Specials in shop after finishing Palette Town Challenge",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "sandwiches": {
+    "name": "Sandwiches",
+    "category": "misc",
+    "locations": "In Daily Specials in shop after finishing Palette Town Challenge",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "shavedice": {
+    "name": "Shaved ice",
+    "category": "misc",
+    "locations": "In Daily Specials in shop after finishing Palette Town Challenge",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "ribboncake": {
+    "name": "Ribbon cake",
+    "category": "misc",
+    "locations": "In Daily Specials in shop after finishing Palette Town Challenge",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "berrybasket": {
+    "name": "Berry basket",
+    "category": "misc",
+    "locations": "Shop - Withering Wastelands Lv. 4",
+    "requirements": [
+      {
+        "name": "Chesto Berry",
+        "quantity": 1
+      }
+    ]
+  },
+  "pencilholder": {
+    "name": "Pencil holder",
+    "category": "misc",
+    "locations": "Register 150 Pok\u00e9mon",
+    "requirements": [
+      {
+        "name": "Squishy clay",
+        "quantity": 1
+      }
+    ]
+  },
+  "letter": {
+    "name": "Letter",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "notepad": {
+    "name": "Notepad",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "book": {
+    "name": "Book",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "openbook": {
+    "name": "Open book",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "newspaper": {
+    "name": "Newspaper",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "photoframe": {
+    "name": "Photo frame",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "wallphotoframe": {
+    "name": "Wall photo frame",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "diningcabinet": {
+    "name": "Dining cabinet",
+    "category": "misc",
+    "locations": "Register 250 Pok\u00e9mon",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 1
+      }
+    ]
+  },
+  "microwaveoven": {
+    "name": "Microwave oven",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "refrigerator": {
+    "name": "Refrigerator",
+    "category": "misc",
+    "locations": "Shop - Rocky Ridges Lv. 5",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "fan": {
+    "name": "Fan",
+    "category": "misc",
+    "locations": "Register 170 Pok\u00e9mon",
+    "requirements": [
+      {
+        "name": "Iron ignot",
+        "quantity": 1
+      }
+    ]
+  },
+  "washingmachine": {
+    "name": "Washing Machine",
+    "category": "misc",
+    "locations": "Shop - Bleak Beach Lv. 5",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "bathtimeset": {
+    "name": "Bathtime set",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "tablet": {
+    "name": "Tablet",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "cellphone": {
+    "name": "Cell phone",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "gamingpc": {
+    "name": "Gaming PC",
+    "category": "misc",
+    "locations": "Shop - Sparkling Skylands Lv. 10",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "alarmclock": {
+    "name": "Alarm clock",
+    "category": "misc",
+    "locations": "Bleak Beach (Item)",
+    "requirements": [
+      {
+        "name": "Iron ore",
+        "quantity": 1
+      }
+    ]
+  },
+  "pinwheels": {
+    "name": "Pinwheels",
+    "category": "misc",
+    "locations": "Obtain Wastepaper",
+    "requirements": [
+      {
+        "name": "Sturdy stick",
+        "quantity": 1
+      }
+    ]
+  },
+  "gameboysystem": {
+    "name": "Game Boy system",
+    "category": "misc",
+    "locations": "Shop - Sparkling Skylands Lv. 5",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "crystalball": {
+    "name": "Crystal ball",
+    "category": "misc",
+    "locations": "Complete Poliwrath's request",
+    "requirements": [
+      {
+        "name": "Glass",
+        "quantity": 3
+      }
+    ]
+  },
+  "bigdrum": {
+    "name": "Big drum",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "coolelectricguitar": {
+    "name": "Cool electric guitar",
+    "category": "misc",
+    "locations": "After first finding Strange Strings",
+    "requirements": [
+      {
+        "name": "Strange strings",
+        "quantity": 1
+      }
+    ]
+  },
+  "coolbassguitar": {
+    "name": "Cool bass guitar",
+    "category": "misc",
+    "locations": "After first finding Strange Strings",
+    "requirements": [
+      {
+        "name": "Strange strings",
+        "quantity": 1
+      }
+    ]
+  },
+  "audiomixer": {
+    "name": "Audio mixer",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 1
+      }
+    ]
+  },
+  "punchinggame": {
+    "name": "Punching game",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "auspiciousarmor": {
+    "name": "Auspicious Armor",
+    "category": "misc",
+    "locations": "After first finding Armor Fragments",
+    "requirements": [
+      {
+        "name": "Armor fragment",
+        "quantity": 1
+      }
+    ]
+  },
+  "maliciousarmor": {
+    "name": "Malicious Armor",
+    "category": "misc",
+    "locations": "After first finding Armor Fragments",
+    "requirements": [
+      {
+        "name": "Armor fragment",
+        "quantity": 1
+      }
+    ]
+  },
+  "clearbell": {
+    "name": "Clear Bell",
+    "category": "misc",
+    "locations": "After befriending Raikou, Entei & Suicune",
+    "requirements": [
+      {
+        "name": "Rare Pok\u00e9metal",
+        "quantity": 5
+      }
+    ]
+  },
+  "tidalbell": {
+    "name": "Tidal Bell",
+    "category": "misc",
+    "locations": "After befriending Articuno, Zapdos & Moltres",
+    "requirements": [
+      {
+        "name": "Rare Pok\u00e9metal",
+        "quantity": 5
+      }
+    ]
+  },
+  "ship'swheel": {
+    "name": "Ship's wheel",
+    "category": "misc",
+    "locations": "Inside the chimney of the S.S. Anne in Bleak Beach",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 1
+      }
+    ]
+  },
+  "wallcalendar": {
+    "name": "Wall calendar",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "wreath": {
+    "name": "Wreath",
+    "category": "misc",
+    "locations": "Register 65 Pok\u00e9mon",
+    "requirements": [
+      {
+        "name": "Leaf",
+        "quantity": 1
+      }
+    ]
+  },
+  "decorativebookshelf": {
+    "name": "Decorative bookshelf",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 1
+      }
+    ]
+  },
+  "decorativeplantshelf": {
+    "name": "Decorative plant shelf",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 1
+      }
+    ]
+  },
+  "partybunting": {
+    "name": "Party bunting",
+    "category": "misc",
+    "locations": "Shop - Rocky Ridges Lv. 3",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "vinewalldecoration": {
+    "name": "Vine wall decoration",
+    "category": "misc",
+    "locations": "Register 45 Pok\u00e9mon",
+    "requirements": [
+      {
+        "name": "Leaf",
+        "quantity": 1
+      }
+    ]
+  },
+  "berrywalldecoration": {
+    "name": "Berry wall decoration",
+    "category": "misc",
+    "locations": "Shop - Withered Wastelands Lv. 10",
+    "requirements": [
+      {
+        "name": "Lum Berry",
+        "quantity": 1
+      }
+    ]
+  },
+  "ceilingfan": {
+    "name": "Ceiling fan",
+    "category": "misc",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "slendercandle": {
+    "name": "Slender candle",
+    "category": "outdoor",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Sturdy stick",
+        "quantity": 1
+      }
+    ]
+  },
+  "firepit": {
+    "name": "Firepit",
+    "category": "outdoor",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 1
+      }
+    ]
+  },
+  "bonfire": {
+    "name": "Bonfire",
+    "category": "outdoor",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 8
+      }
+    ]
+  },
+  "sandbox": {
+    "name": "Sandbox",
+    "category": "outdoor",
+    "locations": "Bleak Beach (Item)",
+    "requirements": [
+      {
+        "name": "Beach sand",
+        "quantity": 1
+      }
+    ]
+  },
+  "concretepipe": {
+    "name": "Concrete pipe",
+    "category": "outdoor",
+    "locations": "Obtain concrete",
+    "requirements": [
+      {
+        "name": "Concrete",
+        "quantity": 2
+      }
+    ]
+  },
+  "wall-mountedflowers": {
+    "name": "Wall-mounted flowers",
+    "category": "outdoor",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 1
+      }
+    ]
+  },
+  "chanseyplant": {
+    "name": "Chansey plant",
+    "category": "outdoor",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Leaf",
+        "quantity": 3
+      }
+    ]
+  },
+  "gardenflowers": {
+    "name": "Garden flowers",
+    "category": "outdoor",
+    "locations": "Shop - Withering Wastelands Lv. 8",
+    "requirements": [
+      {
+        "name": "Iron ore",
+        "quantity": 2
+      }
+    ]
+  },
+  "perch": {
+    "name": "Perch",
+    "category": "outdoor",
+    "locations": "Rocky Ridges (Item)",
+    "requirements": [
+      {
+        "name": "Small log",
+        "quantity": 2
+      }
+    ]
+  },
+  "woodenbirdhouse": {
+    "name": "Wooden birdhouse",
+    "category": "outdoor",
+    "locations": "Register 55 Pok\u00e9mon",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "mailbox": {
+    "name": "Mailbox",
+    "category": "outdoor",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  "weathervane": {
+    "name": "Weather vane",
+    "category": "outdoor",
+    "locations": "Register 180 Pok\u00e9mon",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 1
+      }
+    ]
+  },
+  "blankcanvas": {
+    "name": "Blank canvas",
+    "category": "outdoor",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "cannon": {
+    "name": "Cannon",
+    "category": "outdoor",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 1
+      }
+    ]
+  },
+  "bell": {
+    "name": "Bell",
+    "category": "outdoor",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Copper ingot",
+        "quantity": 1
+      }
+    ]
+  },
+  "smallstage": {
+    "name": "Small stage",
+    "category": "outdoor",
+    "locations": "Shop - Rocky Ridges Lv. 5",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  "hot-springspout": {
+    "name": "Hot-spring spout",
+    "category": "outdoor",
+    "locations": "Register 90 Pok\u00e9mon",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 1
+      }
+    ]
+  },
+  "canoe": {
+    "name": "Canoe",
+    "category": "outdoor",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "inflatableboat": {
+    "name": "Inflatable boat",
+    "category": "outdoor",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "arrowsign": {
+    "name": "Arrow sign",
+    "category": "outdoor",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 1
+      }
+    ]
+  },
+  "signpost": {
+    "name": "Signpost",
+    "category": "outdoor",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 1
+      }
+    ]
+  },
+  "informationboard": {
+    "name": "Information board",
+    "category": "outdoor",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "dittoflag": {
+    "name": "Ditto flag",
+    "category": "utilities",
+    "locations": "During quest to make a picnic",
+    "requirements": [
+      {
+        "name": "Sturdy stick",
+        "quantity": 1
+      }
+    ]
+  },
+  "communitybox": {
+    "name": "Community box",
+    "category": "utilities",
+    "locations": "Shop - Withering Wastelands Lv. 4",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "frame": {
+    "name": "Frame",
+    "category": "utilities",
+    "locations": "Appraise a lost relic",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 1
+      }
+    ]
+  },
+  "stylishfryingpan": {
+    "name": "Stylish frying pan",
+    "category": "utilities",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "cookingpot": {
+    "name": "Cooking pot",
+    "category": "utilities",
+    "locations": "Rocky Ridges (Item)",
+    "requirements": [
+      {
+        "name": "Copper ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  "minifloodgate": {
+    "name": "Mini floodgate",
+    "category": "utilities",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ore",
+        "quantity": 1
+      }
+    ]
+  },
+  "wirelesspower-transmitterswitch": {
+    "name": "Wireless power-transmitter switch",
+    "category": "utilities",
+    "locations": "From Porygon Request in Sparkling Skylands",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "wirelesspowertransmitter": {
+    "name": "Wireless power transmitter",
+    "category": "utilities",
+    "locations": "From Porygon Request in Sparkling Skylands",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "minigenerator": {
+    "name": "Mini generator",
+    "category": "utilities",
+    "locations": "Shop - Sparkling Skylands Lv. 6",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "floorswitch": {
+    "name": "Floor switch",
+    "category": "utilities",
+    "locations": "Shop - Withering Wastelands Lv. 6",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "wallswitch": {
+    "name": "Wall switch",
+    "category": "utilities",
+    "locations": "Shop - Bleak Beach Lv. 6",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "lasersensor": {
+    "name": "Laser sensor",
+    "category": "utilities",
+    "locations": "Shop - Rocky Ridges Lv. 6",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "mushroomlamp": {
+    "name": "Mushroom lamp",
+    "category": "utilities",
+    "locations": "Obtain a Glowing mushroom",
+    "requirements": [
+      {
+        "name": "Glowing mushrooms",
+        "quantity": 1
+      }
+    ]
+  },
+  "plainlamp": {
+    "name": "Plain lamp",
+    "category": "utilities",
+    "locations": "Shop - Bleak Beach Lv. 4",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 1
+      }
+    ]
+  },
+  "desklight": {
+    "name": "Desk light",
+    "category": "utilities",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "pokeballlight": {
+    "name": "Pok\u00e9 Ball light",
+    "category": "utilities",
+    "locations": "Shop - Palette Town Lv. 9",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "berrytablelamp": {
+    "name": "Berry table lamp",
+    "category": "utilities",
+    "locations": "Shop - Withered Wastelands Lv. 9",
+    "requirements": [
+      {
+        "name": "Rawst Berry",
+        "quantity": 1
+      }
+    ]
+  },
+  "cutelamp": {
+    "name": "Cute lamp",
+    "category": "utilities",
+    "locations": "Shop - Bleak Beach Lv. 9",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "resortlight": {
+    "name": "Resort light",
+    "category": "utilities",
+    "locations": "Bleak Beach (Item)",
+    "requirements": [
+      {
+        "name": "Iron ore",
+        "quantity": 1
+      }
+    ]
+  },
+  "musicmat(lowdo)": {
+    "name": "Music mat (low do)",
+    "category": "utilities",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "musicmat(re)": {
+    "name": "Music mat (Re)",
+    "category": "utilities",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "musicmat(fa)": {
+    "name": "Music mat (Fa)",
+    "category": "utilities",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "musicmat(la)": {
+    "name": "Music mat (La)",
+    "category": "utilities",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "musicmat(ti)": {
+    "name": "Music mat (Ti)",
+    "category": "utilities",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "musicmat(highdo)": {
+    "name": "Music mat (High do)",
+    "category": "utilities",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "concretesteps": {
+    "name": "Concrete steps",
+    "category": "buildings",
+    "locations": "Shop - Sparkling Skylands Lv. 2",
+    "requirements": [
+      {
+        "name": "Concrete",
+        "quantity": 2
+      }
+    ]
+  },
+  "bricksteps": {
+    "name": "Brick steps",
+    "category": "buildings",
+    "locations": "Shop - Bleak Beach Lv. 2",
+    "requirements": [
+      {
+        "name": "Brick",
+        "quantity": 2
+      }
+    ]
+  },
+  "metalchain": {
+    "name": "Metal chain",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  "rusticdoor": {
+    "name": "Rustic door",
+    "category": "buildings",
+    "locations": "Withered Wasteland (Item)",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "brainydoor": {
+    "name": "Brainy door",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Glass",
+        "quantity": 1
+      }
+    ]
+  },
+  "automaticdoors": {
+    "name": "Automatic doors",
+    "category": "buildings",
+    "locations": "Shop (as bundle) - Sparkling Skylands",
+    "requirements": [
+      {
+        "name": "Glass",
+        "quantity": 1
+      }
+    ]
+  },
+  "irongate": {
+    "name": "Iron gate",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  "undergroundhatch": {
+    "name": "Underground hatch",
+    "category": "buildings",
+    "locations": "Shop - Withered Wastelands Lv. 5",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "sashwindow": {
+    "name": "Sash window",
+    "category": "buildings",
+    "locations": "Shop - Bleak Beach Lv. 5",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "tiledroofvalley": {
+    "name": "Tiled roof valley",
+    "category": "buildings",
+    "locations": "Shop (as bundle) - Withering Wastelands Lv. 5",
+    "requirements": [
+      {
+        "name": "Squish clay",
+        "quantity": 2
+      }
+    ]
+  },
+  "tiledroofdecoration": {
+    "name": "Tiled roof decoration",
+    "category": "buildings",
+    "locations": "Shop (as bundle) - Withering Wastelands Lv. 5",
+    "requirements": [
+      {
+        "name": "Squish clay",
+        "quantity": 2
+      }
+    ]
+  },
+  "magikarpdecoration": {
+    "name": "Magikarp decoration",
+    "category": "buildings",
+    "locations": "Shop (as bundle) - Withering Wastelands Lv. 5",
+    "requirements": [
+      {
+        "name": "Gold ingot",
+        "quantity": 1
+      }
+    ]
+  },
+  "stonehippedroof": {
+    "name": "Stone hipped roof",
+    "category": "buildings",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Stone",
+        "quantity": 2
+      }
+    ]
+  },
+  "stoneroofvalley": {
+    "name": "Stone roof valley",
+    "category": "buildings",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Stone",
+        "quantity": 2
+      }
+    ]
+  },
+  "stoneroofdecoration": {
+    "name": "Stone roof decoration",
+    "category": "buildings",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Stone",
+        "quantity": 2
+      }
+    ]
+  },
+  "brickroofdecoration": {
+    "name": "Brick roof decoration",
+    "category": "buildings",
+    "locations": "Shop (as bundle) - Bleak Beach Lv. 5",
+    "requirements": [
+      {
+        "name": "Brick",
+        "quantity": 2
+      }
+    ]
+  },
+  "slopedtentroof": {
+    "name": "Sloped tent roof",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "tenthippedroof": {
+    "name": "Tent hipped roof",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "tentroofvalley": {
+    "name": "Tent roof valley",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "flattentroof": {
+    "name": "Flat tent roof",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "curvedeave": {
+    "name": "Curved eave",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 4
+      }
+    ]
+  },
+  "ironenclosure": {
+    "name": "Iron enclosure",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  "concreteslab": {
+    "name": "Concrete slab",
+    "category": "buildings",
+    "locations": "Shop - Sparkling Skylands Lv. 4",
+    "requirements": [
+      {
+        "name": "Concrete",
+        "quantity": 2
+      }
+    ]
+  },
+  "archbridge": {
+    "name": "Arch bridge",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Stone",
+        "quantity": 2
+      }
+    ]
+  },
+  "woodenborder(line)": {
+    "name": "Wooden border (line)",
+    "category": "buildings",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "woodenborder(single)": {
+    "name": "Wooden border (single)",
+    "category": "buildings",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "woodenborder(corner)": {
+    "name": "Wooden border (corner)",
+    "category": "buildings",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "concreteborder(line)": {
+    "name": "Concrete border (line)",
+    "category": "buildings",
+    "locations": "Shop as bundle (Sparkling Skylands Lv. 6)",
+    "requirements": [
+      {
+        "name": "Concrete",
+        "quantity": 2
+      }
+    ]
+  },
+  "concreteborder(single)": {
+    "name": "Concrete border (single)",
+    "category": "buildings",
+    "locations": "Shop as bundle (Sparkling Skylands Lv. 6)",
+    "requirements": [
+      {
+        "name": "Concrete",
+        "quantity": 2
+      }
+    ]
+  },
+  "concreteborder(corner)": {
+    "name": "Concrete border (corner)",
+    "category": "buildings",
+    "locations": "Shop as bundle (Sparkling Skylands Lv. 6)",
+    "requirements": [
+      {
+        "name": "Concrete",
+        "quantity": 2
+      }
+    ]
+  },
+  "brickborder(line)": {
+    "name": "Brick border (line)",
+    "category": "buildings",
+    "locations": "Shop (as bundle) - Bleak Beach Lv. 6",
+    "requirements": [
+      {
+        "name": "Brick",
+        "quantity": 2
+      }
+    ]
+  },
+  "brickborder(single)": {
+    "name": "Brick border (single)",
+    "category": "buildings",
+    "locations": "Shop (as bundle) - Bleak Beach Lv. 7",
+    "requirements": [
+      {
+        "name": "Brick",
+        "quantity": 2
+      }
+    ]
+  },
+  "brickborder(corner)": {
+    "name": "Brick border (corner)",
+    "category": "buildings",
+    "locations": "Shop (as bundle) - Bleak Beach Lv. 8",
+    "requirements": [
+      {
+        "name": "Brick",
+        "quantity": 2
+      }
+    ]
+  },
+  "ironpillar": {
+    "name": "Iron pillar",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  "roundpillar(upper)": {
+    "name": "Round pillar (upper)",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Limestone",
+        "quantity": 4
+      }
+    ]
+  },
+  "roundpillar(middle)": {
+    "name": "Round pillar (middle)",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Limestone",
+        "quantity": 4
+      }
+    ]
+  },
+  "roundpillar(lower)": {
+    "name": "Round pillar (lower)",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Limestone",
+        "quantity": 4
+      }
+    ]
+  },
+  "housepartition": {
+    "name": "House partition",
+    "category": "buildings",
+    "locations": "Shop - Withering Wastelands Lv. 4",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 1
+      }
+    ]
+  },
+  "simplepillarquarter": {
+    "name": "Simple pillar quarter",
+    "category": "buildings",
+    "locations": "Shop",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 1
+      }
+    ]
+  },
+  "waterpillarquarter": {
+    "name": "Water pillar quarter",
+    "category": "buildings",
+    "locations": "Register 290 Pok\u00e9mon",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "ironpipe(horizontalcurve)": {
+    "name": "Iron pipe (horizontal curve)",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ore",
+        "quantity": 2
+      }
+    ]
+  },
+  "ironpipe(horizontalt)": {
+    "name": "Iron pipe (horizontal T)",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ore",
+        "quantity": 2
+      }
+    ]
+  },
+  "ironpipe(horizontalcross)": {
+    "name": "Iron pipe (horizontal cross)",
+    "category": "buildings",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ore",
+        "quantity": 2
+      }
+    ]
+  },
+  "woodenwall": {
+    "name": "Wooden wall",
+    "category": "blocks",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "modernwall": {
+    "name": "Modern wall",
+    "category": "blocks",
+    "locations": "Shop - Withered Wastelands Lv. 9",
+    "requirements": [
+      {
+        "name": "Stone",
+        "quantity": 2
+      }
+    ]
+  },
+  "bronzewall": {
+    "name": "Bronze wall",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Copper ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  "stylishbronzewall": {
+    "name": "Stylish bronze wall",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Copper ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  "ironwall": {
+    "name": "Iron wall",
+    "category": "blocks",
+    "locations": "Shop - Rocky Ridges Lv. 7",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  "stylishironwall": {
+    "name": "Stylish iron wall",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Iron ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  "pokeballwall": {
+    "name": "Pok\u00e9 Ball Wall",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Stone",
+        "quantity": 1
+      }
+    ]
+  },
+  "stylishwall(middle)": {
+    "name": "Stylish wall (middle)",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Seashell",
+        "quantity": 1
+      }
+    ]
+  },
+  "stylishwall(lower)": {
+    "name": "Stylish wall (lower)",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Seashell",
+        "quantity": 1
+      }
+    ]
+  },
+  "lightantiquewall(middle)": {
+    "name": "Light antique wall (middle)",
+    "category": "blocks",
+    "locations": "Shop (as bundle) - Palette Town Lv. 8",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 1
+      }
+    ]
+  },
+  "lightantiquewall(lower)": {
+    "name": "Light antique wall (lower)",
+    "category": "blocks",
+    "locations": "Shop (as bundle) - Palette Town Lv. 8",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 1
+      }
+    ]
+  },
+  "confectionerywall(upper)": {
+    "name": "Confectionery wall (upper)",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "confectionerywall(middle)": {
+    "name": "Confectionery wall (middle)",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Lumber",
+        "quantity": 2
+      }
+    ]
+  },
+  "pokemoncenterwall(upper)": {
+    "name": "Pok\u00e9mon Center wall (upper)",
+    "category": "blocks",
+    "locations": "Shop (as bundle) - Withered Wastlands Lv. 3",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "pokemoncenterwall(middle)": {
+    "name": "Pok\u00e9mon Center wall (middle)",
+    "category": "blocks",
+    "locations": "Shop (as bundle) - Withered Wastlands Lv. 3",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "pokemoncenterwall(lower)": {
+    "name": "Pok\u00e9mon Center wall (lower)",
+    "category": "blocks",
+    "locations": "Shop (as bundle) - Withered Wastlands Lv. 3",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "fluffyflooring": {
+    "name": "Fluffy flooring",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Fluff",
+        "quantity": 2
+      }
+    ]
+  },
+  "tatamimat": {
+    "name": "Tatami mat",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Leaf",
+        "quantity": 1
+      }
+    ]
+  },
+  "feltmat": {
+    "name": "Felt mat",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Fluff",
+        "quantity": 1
+      }
+    ]
+  },
+  "puffy-treepillar": {
+    "name": "Puffy-tree pillar",
+    "category": "blocks",
+    "locations": "Register 40 Pok\u00e9mon",
+    "requirements": [
+      {
+        "name": "Leaf",
+        "quantity": 1
+      }
+    ]
+  },
+  "shopflooring": {
+    "name": "Shop flooring",
+    "category": "blocks",
+    "locations": "Shop - Sparkling Skylands Lv. 8",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "triangle-designflooring": {
+    "name": "Triangle-design flooring",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 2
+      }
+    ]
+  },
+  "markedroad(vertical)": {
+    "name": "Marked road (vertical)",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Concrete",
+        "quantity": 2
+      }
+    ]
+  },
+  "polka-dotprint": {
+    "name": "Polka-dot print",
+    "category": "blocks",
+    "locations": "Shop - Withered Wastelands Lv. 10",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "bubbleprint": {
+    "name": "Bubble print",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "vertical-stripeprint": {
+    "name": "Vertical-stripe print",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "horizontal-stripeprint": {
+    "name": "Horizontal-stripe print",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "ginghamprint": {
+    "name": "Gingham print",
+    "category": "blocks",
+    "locations": "Shop - Bleak Beach Lv. 10",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "tartanprint": {
+    "name": "Tartan print",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "argyleprint": {
+    "name": "Argyle print",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "houndstoothprint": {
+    "name": "Houndstooth print",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "vineprint": {
+    "name": "Vine print",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "swirlprint": {
+    "name": "Swirl print",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "winterprint": {
+    "name": "Winter print",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "zig-zagprint": {
+    "name": "Zig-zag print",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "leafprint": {
+    "name": "Leaf print",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "flowerprint": {
+    "name": "Flower print",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "starprint": {
+    "name": "Star print",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "curryprint": {
+    "name": "Curry print",
+    "category": "blocks",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "berryprint": {
+    "name": "Berry print",
+    "category": "blocks",
+    "locations": "Shop - Sparkling Skylands Lv. 10",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "pokeballprint": {
+    "name": "Pok\u00e9 Ball Print",
+    "category": "blocks",
+    "locations": "Shop - Palette Town Lv. 10",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "stylishpokeballprint": {
+    "name": "Stylish Pok\u00e9 Ball Print",
+    "category": "blocks",
+    "locations": "Shop - Rocky Ridges Lv. 10",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "carvedwhiterock": {
+    "name": "Carved white rock",
+    "category": "blocks",
+    "locations": "Shop - Palette Town Lv. 9",
+    "requirements": [
+      {
+        "name": "White rock",
+        "quantity": 1
+      }
+    ]
+  },
+  "carvedcoarserock": {
+    "name": "Carved coarse rock",
+    "category": "blocks",
+    "locations": "Shop - Palette Town Lv. 9",
+    "requirements": [
+      {
+        "name": "Coarse rock",
+        "quantity": 1
+      }
+    ]
+  },
+  "carvedlight-brownrock": {
+    "name": "Carved light-brown rock",
+    "category": "blocks",
+    "locations": "Shop - Palette Town Lv. 9",
+    "requirements": [
+      {
+        "name": "Light-brown rock",
+        "quantity": 1
+      }
+    ]
+  },
+  "carvedredrock": {
+    "name": "Carved red rock",
+    "category": "blocks",
+    "locations": "Shop - Palette Town Lv. 9",
+    "requirements": [
+      {
+        "name": "Red rock",
+        "quantity": 1
+      }
+    ]
+  },
+  "dowsingmachine": {
+    "name": "Dowsing Machine",
+    "category": "other",
+    "locations": "Shop - Palette Town Lv. 2",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "neodowsingmachine": {
+    "name": "Neo Dowsing Machine",
+    "category": "other",
+    "locations": "Register 300 Pok\u00e9mon",
+    "requirements": [
+      {
+        "name": "Dowsing Machine",
+        "quantity": 1
+      }
+    ]
+  },
+  "partypopper": {
+    "name": "Party popper",
+    "category": "other",
+    "locations": "Shop - Withered Wastelands Lv. 5",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "starpiece": {
+    "name": "Star Piece",
+    "category": "other",
+    "locations": "After first picking up stardust",
+    "requirements": [
+      {
+        "name": "Stardust",
+        "quantity": 99
+      }
+    ]
+  },
+  "paintballoon(white)": {
+    "name": "Paint balloon (white)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "White paint",
+        "quantity": 2
+      }
+    ]
+  },
+  "paintballoon(red)": {
+    "name": "Paint balloon (red)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Red paint",
+        "quantity": 2
+      }
+    ]
+  },
+  "paintballoon(yellow)": {
+    "name": "Paint balloon (yellow)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Yellow paint",
+        "quantity": 2
+      }
+    ]
+  },
+  "paintballoon(green)": {
+    "name": "Paint balloon (green)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Green paint",
+        "quantity": 2
+      }
+    ]
+  },
+  "paintballoon(rose)": {
+    "name": "Paint balloon (rose)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Red paint",
+        "quantity": 1
+      }
+    ]
+  },
+  "paintballoon(pink)": {
+    "name": "Paint balloon (pink)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Pink paint",
+        "quantity": 2
+      }
+    ]
+  },
+  "paintballoon(orange)": {
+    "name": "Paint balloon (orange)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Red paint",
+        "quantity": 1
+      }
+    ]
+  },
+  "paintballoon(purple)": {
+    "name": "Paint balloon (purple)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Pink paint",
+        "quantity": 1
+      }
+    ]
+  },
+  "paintballoon(brown)": {
+    "name": "Paint balloon (brown)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Red paint",
+        "quantity": 1
+      }
+    ]
+  },
+  "paintballoon(beige)": {
+    "name": "Paint balloon (beige)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "White paint",
+        "quantity": 1
+      }
+    ]
+  },
+  "paintballoon(black)": {
+    "name": "Paint balloon (black)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Black paint",
+        "quantity": 2
+      }
+    ]
+  },
+  "paintballoon(lime)": {
+    "name": "Paint balloon (lime)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Green paint",
+        "quantity": 1
+      }
+    ]
+  },
+  "paintballoon(plum)": {
+    "name": "Paint balloon (plum)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Red paint",
+        "quantity": 1
+      }
+    ]
+  },
+  "paintballoon(navy)": {
+    "name": "Paint balloon (navy)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Blue paint",
+        "quantity": 1
+      }
+    ]
+  },
+  "paintballoon(blue)": {
+    "name": "Paint balloon (blue)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Blue paint",
+        "quantity": 2
+      }
+    ]
+  },
+  "paintballoon(cyan)": {
+    "name": "Paint balloon (cyan)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Cyan paint",
+        "quantity": 2
+      }
+    ]
+  },
+  "paintballoon(gray)": {
+    "name": "Paint balloon (gray)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Blue paint",
+        "quantity": 1
+      }
+    ]
+  },
+  "paintballoon(aquamarine)": {
+    "name": "Paint balloon (aquamarine)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Green paint",
+        "quantity": 1
+      }
+    ]
+  },
+  "firework(white)": {
+    "name": "Firework (white)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "firework(red)": {
+    "name": "Firework (red)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "firework(green)": {
+    "name": "Firework (green)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "firework(yellow)": {
+    "name": "Firework (yellow)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "firework(blue)": {
+    "name": "Firework (blue)",
+    "category": "other",
+    "locations": "After first getting paint",
+    "requirements": [
+      {
+        "name": "Pok\u00e9metal",
+        "quantity": 1
+      }
+    ]
+  },
+  "stonetiling(wallpaper)": {
+    "name": "Stone tiling (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "woodenwall(wallpaper)": {
+    "name": "Wooden wall (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "woodenflooring(wallpaper)": {
+    "name": "Wooden flooring (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "fluffyflooring(wallpaper)": {
+    "name": "Fluffy flooring (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "archedtiling(wallpaper)": {
+    "name": "Arched tiling (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "mosaictiling(wallpaper)": {
+    "name": "Mosaic tiling (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "wovencarpeting(wallpaper)": {
+    "name": "Woven carpeting (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "goldwall(wallpaper)": {
+    "name": "Gold wall (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "stylishgoldwall(wallpaper)": {
+    "name": "Stylish gold wall (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "aged-stonewall(wallpaper)": {
+    "name": "Aged-stone wall (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "aged-stoneflooring(wallpaper)": {
+    "name": "Aged-stone flooring (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "warningwall(wallpaper)": {
+    "name": "Warning wall (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "crystalwall(wallpaper)": {
+    "name": "Crystal wall (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "moderncarpeting(wallpaper)": {
+    "name": "Modern carpeting (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "iron-plateflooring(wallpaper)": {
+    "name": "Iron-plate flooring (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "shoptiling(wallpaper)": {
+    "name": "Shop tiling (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "brickwall(wallpaper)": {
+    "name": "Brick wall (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "concretewall(wallpaper)": {
+    "name": "Concrete wall (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "stoneflooring(wallpaper)": {
+    "name": "Stone flooring (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "lined-stoneflooring(wallpaper)": {
+    "name": "Lined-stone flooring (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "plasterwall(wallpaper)": {
+    "name": "Plaster wall (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "stonebrickwall(wallpaper)": {
+    "name": "Stone brick wall (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "diagonalwoodenflooring(wallpaper)": {
+    "name": "Diagonal wooden flooring (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "stylishtiling(wallpaper)": {
+    "name": "Stylish tiling (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "brickflooring(wallpaper)": {
+    "name": "Brick flooring (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "clothwall(wallpaper)": {
+    "name": "Cloth wall (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "squaretiling(wallpaper)": {
+    "name": "Square tiling (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "levee(wallpaper)": {
+    "name": "Levee (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "cubelight(wallpaper)": {
+    "name": "Cube light (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "irontiling(wallpaper)": {
+    "name": "Iron tiling (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "darkmarbleflooring(wallpaper)": {
+    "name": "Dark marble flooring (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "simpleflooring(wallpaper)": {
+    "name": "Simple flooring (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "hardwoodflooring(wallpaper)": {
+    "name": "Hardwood flooring (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "fish-scaletiling(wallpaper)": {
+    "name": "Fish-scale tiling (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "cobblestonewall(wallpaper)": {
+    "name": "Cobblestone wall (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "haypile(wallpaper)": {
+    "name": "Hay pile (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "broken-tilingwall(wallpaper)": {
+    "name": "Broken-tiling wall (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "paintedwall(wallpaper)": {
+    "name": "Painted wall (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "stripedwall(wallpaper)": {
+    "name": "Striped wall (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "cyberflooring(wallpaper)": {
+    "name": "Cyber flooring (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "neonflooring(wallpaper)": {
+    "name": "Neon flooring (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "roughwall(wallpaper)": {
+    "name": "Rough wall (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "modernwall(wallpaper)": {
+    "name": "Modern wall (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "ironplating(wallpaper)": {
+    "name": "Iron plating (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "hexagonalflooring(wallpaper)": {
+    "name": "Hexagonal flooring (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "scrapcube(wallpaper)": {
+    "name": "Scrap cube (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "simplesquaretiling(wallpaper)": {
+    "name": "Simple square tiling (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "puffy-treepillar(wallpaper)": {
+    "name": "Puffy-tree pillar (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "feltmat(wallpaper)": {
+    "name": "Felt mat (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "triangle-designflooring(wallpaper)": {
+    "name": "Triangle-design flooring (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "crisscrosswoodenflooring(wallpaper)": {
+    "name": "Crisscross wooden flooring (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "lightwoodenwall(wallpaper)": {
+    "name": "Light wooden wall (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "lightmarbleflooring(wallpaper)": {
+    "name": "Light marble flooring (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "bronzewall(wallpaper)": {
+    "name": "Bronze wall (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "stylishbronzewall(wallpaper)": {
+    "name": "Stylish bronze wall (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "ironwall(wallpaper)": {
+    "name": "Iron wall (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "stylishironwall(wallpaper)": {
+    "name": "Stylish iron wall (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "grassflooring(wallpaper)": {
+    "name": "Grass flooring (wallpaper)",
+    "category": "other",
+    "locations": "Shop (as bundle)",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "pokeballwall(wallpaper)": {
+    "name": "Pok\u00e9 Ball wall (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "polka-dotprint(wallpaper)": {
+    "name": "Polka-dot Print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "vertical-stripeprint(wallpaper)": {
+    "name": "Vertical-stripe print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "horizontal-stripeprint(wallpaper)": {
+    "name": "Horizontal-stripe print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "ginghamprint(wallpaper)": {
+    "name": "Gingham print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "tartanprint(wallpaper)": {
+    "name": "Tartan print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "argyleprint(wallpaper)": {
+    "name": "Argyle print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "berryprint(wallpaper)": {
+    "name": "Berry print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "pokeballprint(wallpaper)": {
+    "name": "Pok\u00e9 Ball print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "stylishpokeballprint(wallpaper)": {
+    "name": "Stylish Pok\u00e9 Ball print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "marble(wallpaper)": {
+    "name": "Marble (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "bubbleprint(wallpaper)": {
+    "name": "Bubble print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "houndstoothprint(wallpaper)": {
+    "name": "Houndstooth print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "vineprint(wallpaper)": {
+    "name": "Vine print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "swirlprint(wallpaper)": {
+    "name": "Swirl print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "winterprint(wallpaper)": {
+    "name": "Winter print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "leafprint(wallpaper)": {
+    "name": "Leaf print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "flowerprint(wallpaper)": {
+    "name": "Flower print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "starprint(wallpaper)": {
+    "name": "Star print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "curryprint(wallpaper)": {
+    "name": "Curry print (wallpaper)",
+    "category": "other",
+    "locations": "Sparkling ripples in water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 6
+      }
+    ]
+  },
+  "smallnarrowrug": {
+    "name": "Small narrow rug",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 1
+      }
+    ]
+  },
+  "smallroundrug": {
+    "name": "Small round rug",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "smallsquarerug": {
+    "name": "Small square rug",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 2
+      }
+    ]
+  },
+  "dittorug": {
+    "name": "Ditto rug",
+    "category": "other",
+    "locations": "Shop - Withering Wastelands Lv. 7",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 3
+      }
+    ]
+  },
+  "oblongrug": {
+    "name": "Oblong rug",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 3
+      }
+    ]
+  },
+  "ratanrug": {
+    "name": "Ratan rug",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 3
+      }
+    ]
+  },
+  "largeroundrug": {
+    "name": "Large round rug",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 3
+      }
+    ]
+  },
+  "lacerug": {
+    "name": "Lace rug",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 3
+      }
+    ]
+  },
+  "pokeballmat": {
+    "name": "Pok\u00e9 Ball mat",
+    "category": "other",
+    "locations": "Shop - Bleak Beach Lv. 7",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 1
+      }
+    ]
+  },
+  "largenarrowrug": {
+    "name": "Large narrow rug",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 3
+      }
+    ]
+  },
+  "largesquarerug": {
+    "name": "Large square rug",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 3
+      }
+    ]
+  },
+  "softmat": {
+    "name": "Soft mat",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Twine",
+        "quantity": 4
+      }
+    ]
+  },
+  "balloonposter": {
+    "name": "Balloon Poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "moonlightposter": {
+    "name": "Moonlight poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "danceposter": {
+    "name": "Dance poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "oilpaintingposter": {
+    "name": "Oil painting poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "sunnyposter": {
+    "name": "Sunny poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "icecreamposter": {
+    "name": "Ice cream poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "windmillposter": {
+    "name": "Windmill poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "townscapeposter": {
+    "name": "Townscape poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "mountainposter": {
+    "name": "Mountain poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "acrylicposter": {
+    "name": "Acrylic poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "watercolorposter": {
+    "name": "Watercolor poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "passionateposter": {
+    "name": "Passionate poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "growthposter": {
+    "name": "Growth poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "drinkposter": {
+    "name": "Drink poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "foodposter": {
+    "name": "Food poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "technologyposter": {
+    "name": "Technology poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "goldenposter": {
+    "name": "Golden poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "oceanposter": {
+    "name": "Ocean poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "meadowposter": {
+    "name": "Meadow poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  },
+  "ninjaposter": {
+    "name": "Ninja poster",
+    "category": "other",
+    "locations": "Daily Shop Special Sparkling Water",
+    "requirements": [
+      {
+        "name": "Paper",
+        "quantity": 1
+      }
+    ]
+  }
+}

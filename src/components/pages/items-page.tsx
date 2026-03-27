@@ -4,6 +4,9 @@ import { useState, useMemo, useEffect } from "react";
 import { ArrowLeft, Plus, Check, Search, X, Filter } from "lucide-react";
 import { useAppStore } from "@/lib/store";
 
+type RecipeRequirement = { name: string; quantity: number };
+type Recipe = { name: string; category: string; locations: string; requirements: RecipeRequirement[] };
+
 type Item = {
   slug: string;
   name: string;
@@ -49,6 +52,7 @@ export function ItemsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [ownedFilter, setOwnedFilter] = useState<"all" | "owned" | "unowned">("all");
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
+  const [recipes, setRecipes] = useState<Record<string, Recipe>>({});
 
   // Fetch items at runtime
   useEffect(() => {
@@ -76,6 +80,14 @@ export function ItemsPage() {
         console.error("Failed to load items:", err);
         setLoading(false);
       });
+  }, []);
+
+  // Fetch recipes
+  useEffect(() => {
+    fetch("/recipes.json")
+      .then(res => res.json())
+      .then((data: Record<string, Recipe>) => setRecipes(data))
+      .catch(() => {});
   }, []);
 
   // Flatten all items with category info
@@ -363,6 +375,34 @@ export function ItemsPage() {
                   {selectedItem.methods.map((method, i) => (
                     <p key={i} className="text-xs text-gray-600 dark:text-gray-300">• {method}</p>
                   ))}
+                </div>
+              </div>
+            )}
+
+            {/* Recipe Requirements */}
+            {selectedItem && recipes[selectedItem.slug] && (
+              <div className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-3 border border-amber-100 dark:border-amber-800 mb-4">
+                <p className="text-xs font-bold text-amber-800 dark:text-amber-300 uppercase tracking-wide mb-3">🔨 Recipe</p>
+                <div className="flex gap-2 flex-wrap">
+                  {recipes[selectedItem.slug].requirements.map((req, idx) => {
+                    const imgSlug = req.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    return (
+                      <div key={idx} className="flex flex-col items-center gap-1">
+                        <div className="w-14 h-14 bg-white dark:bg-gray-800 rounded-xl border border-amber-200 dark:border-amber-700 shadow-sm flex items-center justify-center relative">
+                          <img
+                            src={`/items/${imgSlug}.png`}
+                            alt={req.name}
+                            className="w-11 h-11 object-contain"
+                            onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                          />
+                          <span className="absolute -bottom-1 -right-1 bg-amber-500 text-white text-[9px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                            {req.quantity}
+                          </span>
+                        </div>
+                        <span className="text-[9px] text-center text-amber-900 dark:text-amber-300 font-medium max-w-[56px] leading-tight">{req.name}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             )}
