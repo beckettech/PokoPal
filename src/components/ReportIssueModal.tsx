@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useCallback } from 'react';
-import { X, Bug, Camera, ImagePlus, Film, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { X, Bug, ImagePlus, Film, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useAppStore } from '@/lib/store';
 import { getApiUrl } from '@/lib/api-config';
 
@@ -20,7 +20,6 @@ export function ReportIssueModal({ open, onClose }: { open: boolean; onClose: ()
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const cameraInputRef = useRef<HTMLInputElement>(null);
 
   const platform = typeof navigator !== 'undefined'
     ? /iPhone|iPad|iPod/.test(navigator.userAgent) ? 'iOS'
@@ -54,21 +53,6 @@ export function ReportIssueModal({ open, onClose }: { open: boolean; onClose: ()
     if (newAttachments.length) setAttachments(prev => [...prev, ...newAttachments]);
   };
 
-  const openCamera = async () => {
-    try {
-      const { Camera, CameraResultType, CameraSource } = await import('@capacitor/camera');
-      const photo = await Camera.getPicture({
-        resultType: CameraResultType.DataUrl,
-        source: CameraSource.Camera,
-        quality: 80,
-      });
-      if (photo && attachments.length < 5) {
-        setAttachments(prev => [...prev, { base64: photo, type: 'image/jpeg', name: 'camera.jpg' }]);
-      }
-    } catch {
-      cameraInputRef.current?.click();
-    }
-  };
 
   const handleSubmit = async () => {
     if (description.length < 10 || submitting) return;
@@ -165,26 +149,13 @@ export function ReportIssueModal({ open, onClose }: { open: boolean; onClose: ()
             {/* Upload buttons */}
             <div className="flex gap-2">
               <button
-                onClick={openCamera}
-                className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium active:scale-95 transition-transform"
-              >
-                <Camera className="w-4 h-4" /> Camera
-              </button>
-              <button
                 onClick={() => fileInputRef.current?.click()}
                 className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium active:scale-95 transition-transform"
               >
-                <ImagePlus className="w-4 h-4" /> Photos
-              </button>
-              <button
-                onClick={() => fileInputRef.current?.click()}
-                className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium active:scale-95 transition-transform"
-              >
-                <Film className="w-4 h-4" /> Video
+                <ImagePlus className="w-4 h-4" /> Photos / Video
               </button>
             </div>
             <input ref={fileInputRef} type="file" accept="image/*,video/mp4,video/quicktime" multiple className="hidden" onChange={e => handleFiles(e.target.files)} />
-            <input ref={cameraInputRef} type="file" accept="image/*" capture="environment" className="hidden" onChange={e => handleFiles(e.target.files)} />
 
             {/* Thumbnails */}
             {attachments.length > 0 && (

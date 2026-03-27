@@ -21,6 +21,10 @@ export function AccountPage() {
   const [authLoading, setAuthLoading] = useState(false);
   const [editingHandle, setEditingHandle] = useState(false);
   const [handleDraft, setHandleDraft] = useState("");
+  const [editingEmail, setEditingEmail] = useState(false);
+  const [emailDraft, setEmailDraft] = useState("");
+  const [editingPassword, setEditingPassword] = useState(false);
+  const [passwordDraft, setPasswordDraft] = useState("");
   const [reportModalOpen, setReportModalOpen] = useState(false);
 
   const handleRestorePurchases = async () => {
@@ -104,15 +108,6 @@ export function AccountPage() {
             </div>
           </div>
 
-          {/* Report Issue */}
-          <button
-            onClick={() => setReportModalOpen(true)}
-            className="w-full bg-gray-50 dark:bg-gray-800 rounded-xl p-4 flex items-center gap-3 active:scale-[0.98] transition-transform"
-          >
-            <Bug className="w-5 h-5 text-red-500" />
-            <span className="font-medium text-gray-900 dark:text-white text-sm">Report an Issue</span>
-          </button>
-
           {/* Account Section */}
           <div className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden">
             <div className="px-4 py-3 border-b border-gray-100 dark:border-gray-700">
@@ -127,11 +122,46 @@ export function AccountPage() {
                   {/* Logged in info */}
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-600 dark:text-gray-400">Email</span>
-                    <span className="text-xs text-gray-800 dark:text-gray-200 flex items-center gap-1">
-                      <Mail className="w-3 h-3" />
-                      {user.email}
-                    </span>
+                    {editingEmail ? (
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="email"
+                          value={emailDraft}
+                          onChange={(e) => setEmailDraft(e.target.value)}
+                          className="px-2 py-1 bg-white dark:bg-gray-800 rounded-lg text-xs text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-400 w-36"
+                          autoFocus
+                        />
+                        <button onClick={() => { if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailDraft)) { set((s: any) => ({ user: { ...s.user, email: emailDraft.toLowerCase() } })); setEditingEmail(false); } }} className="text-xs text-purple-600 font-medium">Save</button>
+                        <button onClick={() => setEditingEmail(false)} className="text-xs text-gray-400">Cancel</button>
+                      </div>
+                    ) : (
+                      <button onClick={() => { setEmailDraft(user.email || ""); setEditingEmail(true); }} className="text-xs text-gray-800 dark:text-gray-200 font-medium hover:text-purple-600 transition-colors flex items-center gap-1">
+                        <Mail className="w-3 h-3" />
+                        {user.email}
+                      </button>
+                    )}
                   </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600 dark:text-gray-400">Password</span>
+                    <button onClick={() => { setPasswordDraft(""); setEditingPassword(true); }} className="text-xs text-gray-800 dark:text-gray-200 font-medium hover:text-purple-600 transition-colors flex items-center gap-1">
+                      <Lock className="w-3 h-3" />
+                      Change
+                    </button>
+                  </div>
+                  {editingPassword && (
+                    <div className="flex items-center gap-2 pl-2">
+                      <input
+                        type="password"
+                        value={passwordDraft}
+                        onChange={(e) => setPasswordDraft(e.target.value)}
+                        placeholder="New password (6+ chars)"
+                        className="flex-1 px-2 py-1 bg-white dark:bg-gray-800 rounded-lg text-xs text-gray-900 dark:text-gray-100 border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                        autoFocus
+                      />
+                      <button onClick={() => { if (passwordDraft.length >= 6) { setEditingPassword(false); } }} className="text-xs text-purple-600 font-medium">Save</button>
+                      <button onClick={() => setEditingPassword(false)} className="text-xs text-gray-400">Cancel</button>
+                    </div>
+                  )}
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-600 dark:text-gray-400">@Handle</span>
                     {editingHandle ? (
@@ -270,6 +300,15 @@ export function AccountPage() {
               </button>
             </div>
           </div>
+
+          {/* Report Issue */}
+          <button
+            onClick={() => setReportModalOpen(true)}
+            className="w-full bg-gray-50 dark:bg-gray-800 rounded-xl p-4 flex items-center gap-3 active:scale-[0.98] transition-transform"
+          >
+            <Bug className="w-5 h-5 text-red-500" />
+            <span className="font-medium text-gray-900 dark:text-white text-sm">Report an Issue</span>
+          </button>
 
           {/* About */}
           <div className="bg-gray-50 dark:bg-gray-900 rounded-xl overflow-hidden">
