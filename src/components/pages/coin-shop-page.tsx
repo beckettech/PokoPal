@@ -44,6 +44,9 @@ const coinPackages = [
   },
 ];
 
+// All packages except the popular one should be full width (col-span-2) to match the popular button
+const fullSpanIds = [1, 3, 4];
+
 // Random Pokémon sprites for daily stamp collection
 const STAMP_POKEMON = [1, 4, 7, 25, 39, 54, 63, 92, 129, 133, 143, 147, 150, 151, 155, 196, 248, 384, 448, 658];
 
@@ -151,7 +154,7 @@ export function CoinShopPage() {
                     onClick={() => handlePurchase(pkg)}
                     disabled={selectedPackage !== null}
                     className={`relative p-3 rounded-xl text-white overflow-hidden bg-gradient-to-br ${pkg.color} ${
-                      pkg.popular ? 'col-span-2' : ''
+                      pkg.popular || fullSpanIds.includes(pkg.id) ? 'col-span-2' : ''
                     }`}
                     whileHover={{ scale: selectedPackage ? 1 : 1.02 }}
                     whileTap={{ scale: selectedPackage ? 1 : 0.98 }}

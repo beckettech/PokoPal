@@ -59,15 +59,15 @@ export function ItemsPage() {
     fetch("/items.json")
       .then(res => res.json())
       .then((data: ItemCategory[]) => {
-        // Sort: Lost Relics (L), Lost Relics (S), Fossils first, then alphabetically
-        const priorityCategories = ['lost-relics-l', 'lost-relics-s', 'fossils'];
+        // Sort: food first, utilities second, Lost Relics (L), Lost Relics (S), Fossils, then rest
+        const priorityOrder = ['food', 'utilities', 'lost-relics-l', 'lost-relics-s', 'fossils'];
         const sorted = data.sort((a, b) => {
-          const aPriority = priorityCategories.indexOf(a.slug);
-          const bPriority = priorityCategories.indexOf(b.slug);
+          const aPriority = priorityOrder.indexOf(a.slug);
+          const bPriority = priorityOrder.indexOf(b.slug);
           if (aPriority !== -1 && bPriority !== -1) return aPriority - bPriority;
           if (aPriority !== -1) return -1;
           if (bPriority !== -1) return 1;
-          return 0; // keep original order for others
+          return 0;
         });
         setItemsData(sorted);
         // Default to first category
