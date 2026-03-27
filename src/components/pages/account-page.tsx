@@ -303,12 +303,6 @@ export function AccountPage() {
                 </div>
               ) : (
                 <>
-                  <p className="text-sm text-amber-800 dark:text-amber-300">Remove all ads and support development!</p>
-                  <ul className="text-xs text-amber-700 dark:text-amber-400 space-y-1">
-                    <li>✓ No banner ads</li>
-                    <li>✓ No interstitial ads</li>
-                    <li>✓ Support future updates</li>
-                  </ul>
                   <button
                     onClick={() => setPremium(true)}
                     className="w-full py-3 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold rounded-xl active:scale-95 transition-transform"

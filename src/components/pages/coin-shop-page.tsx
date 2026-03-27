@@ -105,15 +105,15 @@ export function CoinShopPage() {
       </AnimatePresence>
 
       {/* Header */}
-      <div className="pt-12 pb-4 px-4">
-        <div className="flex items-center justify-between mb-4">
+      <div className="pt-10 pb-2 px-4">
+        <div className="flex items-center justify-between mb-3">
           <motion.button
             onClick={() => setCurrentPage("home")}
-            className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center"
+            className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <ArrowLeft className="w-6 h-6 text-white" />
+            <ArrowLeft className="w-5 h-5 text-white" />
           </motion.button>
           <h1 className="text-lg font-bold text-white">Coin Shop</h1>
           <div className="w-9" />
@@ -136,65 +136,8 @@ export function CoinShopPage() {
       {/* Content Card */}
       <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-hidden">
         <div className="h-full overflow-y-auto">
-          {/* Coin Packages */}
-          <div className="p-3">
-            <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Purchase Coins</h2>
-            <p className="text-[10px] text-gray-500 dark:text-gray-400 mb-2">
-              Use coins to chat with your Pokopia assistant!
-            </p>
-
-            <div className="grid grid-cols-2 gap-2">
-              {coinPackages.map((pkg) => {
-                const Icon = pkg.icon;
-                const isLoading = selectedPackage === pkg.id;
-
-                return (
-                  <motion.button
-                    key={pkg.id}
-                    onClick={() => handlePurchase(pkg)}
-                    disabled={selectedPackage !== null}
-                    className={`relative p-3 rounded-xl text-white overflow-hidden bg-gradient-to-br ${pkg.color} ${
-                      pkg.popular || fullSpanIds.includes(pkg.id) ? 'col-span-2' : ''
-                    }`}
-                    whileHover={{ scale: selectedPackage ? 1 : 1.02 }}
-                    whileTap={{ scale: selectedPackage ? 1 : 0.98 }}
-                  >
-                    {pkg.popular && (
-                      <div className="absolute top-1 right-1">
-                        <span className="text-[8px] px-1.5 py-0.5 bg-white/30 rounded-full font-bold">
-                          BEST VALUE
-                        </span>
-                      </div>
-                    )}
-
-                    <div className="flex items-center gap-2">
-                      <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-                        {isLoading ? (
-                          <motion.div
-                            animate={{ rotate: 360 }}
-                            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                          >
-                            <Icon className="w-5 h-5" />
-                          </motion.div>
-                        ) : (
-                          <Icon className="w-5 h-5" />
-                        )}
-                      </div>
-                      <div className="text-left">
-                        <div className="flex items-center gap-1">
-                          <span className="font-bold text-lg">{pkg.coins.toLocaleString()}</span>
-                        </div>
-                        <span className="text-xs opacity-80">{pkg.price}</span>
-                      </div>
-                    </div>
-                  </motion.button>
-                );
-              })}
-            </div>
-          </div>
-
           {/* Daily Stamp Rewards */}
-          <div className="p-3 border-t border-gray-100 dark:border-gray-700">
+          <div className="p-3">
             <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Daily Stamp Rewards</h2>
             <div className="flex justify-center gap-3">
               {dailyRewards.map((reward) => {
@@ -251,13 +194,70 @@ export function CoinShopPage() {
           </div>
 
           {/* Info */}
-          <div className="p-3">
+          <div className="px-3 pb-3">
             <div className="bg-amber-50 rounded-xl p-3">
               <h3 className="text-xs font-bold text-amber-800 mb-1">What are Coins?</h3>
               <p className="text-xs text-amber-700">
                 Coins let you chat with Dexter, your Pokopia assistant. Each question costs 150 coins. 
                 You started with 250 coins for free!
               </p>
+            </div>
+          </div>
+
+          {/* Coin Packages */}
+          <div className="p-3 border-t border-gray-100 dark:border-gray-700">
+            <h2 className="text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Purchase Coins</h2>
+            <p className="text-[10px] text-gray-500 dark:text-gray-400 mb-2">
+              Use coins to chat with your Pokopia assistant!
+            </p>
+
+            <div className="grid grid-cols-2 gap-2">
+              {coinPackages.map((pkg) => {
+                const Icon = pkg.icon;
+                const isLoading = selectedPackage === pkg.id;
+
+                return (
+                  <motion.button
+                    key={pkg.id}
+                    onClick={() => handlePurchase(pkg)}
+                    disabled={selectedPackage !== null}
+                    className={`relative p-3 rounded-xl text-white overflow-hidden bg-gradient-to-br ${pkg.color} ${
+                      pkg.popular || fullSpanIds.includes(pkg.id) ? 'col-span-2' : ''
+                    }`}
+                    whileHover={{ scale: selectedPackage ? 1 : 1.02 }}
+                    whileTap={{ scale: selectedPackage ? 1 : 0.98 }}
+                  >
+                    {pkg.popular && (
+                      <div className="absolute top-1 right-1">
+                        <span className="text-[8px] px-1.5 py-0.5 bg-white/30 rounded-full font-bold">
+                          BEST VALUE
+                        </span>
+                      </div>
+                    )}
+
+                    <div className="flex items-center gap-2">
+                      <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                        {isLoading ? (
+                          <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                          >
+                            <Icon className="w-5 h-5" />
+                          </motion.div>
+                        ) : (
+                          <Icon className="w-5 h-5" />
+                        )}
+                      </div>
+                      <div className="text-left">
+                        <div className="flex items-center gap-1">
+                          <span className="font-bold text-lg">{pkg.coins.toLocaleString()}</span>
+                        </div>
+                        <span className="text-xs opacity-80">{pkg.price}</span>
+                      </div>
+                    </div>
+                  </motion.button>
+                );
+              })}
             </div>
           </div>
         </div>
