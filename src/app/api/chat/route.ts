@@ -66,7 +66,7 @@ const STOP_WORDS = new Set([
 ]);
 
 function getQueryWords(query: string): string[] {
-  return query.toLowerCase().split(/\s+/).filter(w => w.length > 1 && !STOP_WORDS.has(w));
+  return query.toLowerCase().replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter(w => w.length > 1 && !STOP_WORDS.has(w));
 }
 
 function textToSearchStr(obj: any): string {
