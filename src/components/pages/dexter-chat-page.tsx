@@ -1,7 +1,7 @@
 'use client'
 
 import { useAppStore } from "@/lib/store";
-import { ArrowLeft, Send, Coins, Sparkles, Lightbulb, MapPin, HelpCircle, Bot, User } from "lucide-react";
+import { ArrowLeft, Send, Coins, Sparkles, Lightbulb, MapPin, HelpCircle, Bot, User, Trash2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 
@@ -108,6 +108,15 @@ export function DexterChatPage() {
           >
             <Coins className="w-3.5 h-3.5 text-yellow-400" />
             <span className="text-xs font-bold text-white">{dexterCoins}</span>
+          </motion.button>
+          <motion.button
+            onClick={() => setMessages([{ id: 0, role: "assistant", content: "Hey there, Trainer! 👋 I'm Dexter, your Pokopia assistant! What would you like to know?" }])}
+            className="flex items-center justify-center w-8 h-8 bg-white/20 rounded-full"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            title="Clear chat"
+          >
+            <Trash2 className="w-3.5 h-3.5 text-white/70" />
           </motion.button>
         </div>
       </div>
