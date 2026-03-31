@@ -1,0 +1,763 @@
+[
+  {
+    "name": "Rebuild the Pokemon Center",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wasteland, Bleak Beach, Rocky Ridges, Sparkling Skylands",
+    "task": "Buy a Pokemon Center rebuilding kit from the shop and rebuild the Pokemon Center in each area. Requires raising Environment Level to 3, gathering specific materials for each area, and bringing required Pokemon to the construction site. Withered Wasteland: 20 Lumber, 20 Stones, 10 Leaves, 10 Vine Ropes — need Onix (Bulldoze) from Yawn Up a Storm. Bleak Beach: Twine x10, Seaglass Fragments x10, Bricks x30, Iron Ore x5. Rocky Ridges: Iron Ingots x25, Copper Ingots x25, Crystal Fragments x5, Stones x25. Sparkling Skylands: Pokemetals x25, Glass x25, Gold Ingots x25, Concrete x25.",
+    "reward": "Pokemon Center in each area",
+    "steps": [
+      "Raise Environment Level to 3 to unlock the Pokemon Center rebuilding kit in the PC shop (costs 1000 Life Coins).",
+      "Gather the required materials for each area's Pokemon Center.",
+      "Withered Wasteland: Gather 20 Lumber, 20 Stones, 10 Leaves, 10 Vine Ropes. Get Onix (Bulldoze specialty) by completing Yawn Up a Storm to clear rubble.",
+      "Bleak Beach: Raise environment to Level 3. Make yellow tall grass habitat for Spinarak/Ariados to get Twine. Clean mud with Piplup to find Seaglass Fragments. Use Torchic to burn Squishy Clay into Bricks. Get Iron Ore from Trubbish recycling non-burnable garbage.",
+      "Rocky Ridges: Save Chef Dente first to unlock Torkoal/Dartrix. Get Copper Ingots and Iron Ingots from Smelting Furnace. Find Crystal Fragments in the mine's magma area.",
+      "Sparkling Skylands: Get Pokemetals from eastern area (befriend Gardevoir). Glass from volcanic ash in Rocky Ridges. Gold Ingots from Gold Blocks near DJ Rotom. Concrete from Make Concrete request.",
+      "Once all materials are gathered, assemble team, submit materials, and start construction. Wait until next day for completion (or advance system clock)."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/584812",
+    "type": "important"
+  },
+  {
+    "name": "Yawn Up a Storm",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wasteland",
+    "task": "Use Slowpoke's yawn to make it rain and rescue Onix. Make the environment humid enough for Slowpoke to give a 100-point yawn. Moisten soil with Water Gun, make ponds/springs, place Horsea fountains, grow fields of flowers, revive 10 trees, build a Rain Dance site with 2 Castform Weather Charms. After the 100-point yawn, find Kyogre at the fishing docks north, rebuild the docks with bridge planks, talk to Kyogre about rain. Then return to free Onix from the cave using Rock Smash.",
+    "reward": "Onix recruited (Bulldoze specialty unlocked), story progression",
+    "steps": [
+      "Use Water Gun to moisten soil and grass tiles all over the area.",
+      "Find low areas with clogged water sources and use Rock Smash to unblock them — fills ponds and springs.",
+      "Speak to Slowpoke to learn it's not enough. Purchase Horsea Fountains from PC shop and place inside ponds.",
+      "Speak to Bulbasaur: plant wildflower seeds close together (use Rototiller to rearrange existing flowers). Use Water Gun to revive 10 withered trees.",
+      "Speak to Squirtle: build a Hydrated Tall Grass habitat (find the basin east of the map, smash the clog, grow tall grass along the edge with Leafage). Move Squirtle in.",
+      "Squirtle gives idea: make a Rain Dance Site (2 Castform Weather Charms, wooden plate, food offering). Castform Weather Charms can be found in Professor Tangrowth's old home or purchased from PC shop.",
+      "Speak to Slowpoke to trigger the 100-point yawn. Rain starts briefly then stops.",
+      "Head to fishing docks north of the map. Craft bridge planks at workbench to rebuild docks. Reach Kyogre and speak to it about rain.",
+      "Return to Onix's cave and use Rock Smash to free Onix. Return to Pokemon Center to report to everyone."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/584766",
+    "type": "important"
+  },
+  {
+    "name": "Brighten Things Up",
+    "giver": "Professor Tangrowth",
+    "area": "Bleak Beach",
+    "task": "Illuminate the town to wake up Mosslax. Reach 100 brightness points. Use Generate specialty Pokemon to light streetlights. Set up Resort Meal Prep habitat with Torchic. Find Peakychu (a pale Pikachu). Set up windmills, waterwheels, lighthouse, furnaces, and seashell lamps. Charge up Peakychu at the charging station (5 bulbs lit). Peakychu unleashes power. Raikou strikes the cave with thunder, sunlight floods in, awakening Mosslax.",
+    "reward": "Mosslax awakened, Raikou encountered and added to Pokedex, story progression to Rocky Ridges",
+    "steps": [
+      "Speak to Meowth: use a Pokemon with Generate specialty to light the streetlights around the area.",
+      "Run to Mosslax's cave — flowers bloom on its head showing progress. Professor Tangrowth counts the brightness (need 100 points).",
+      "Speak to Torchic: set up the Resort Meal Prep habitat (chair + campfire + plate with food under a palm tree along the shore).",
+      "Professor Tangrowth mentions needing electricity. A commotion outside reveals Peakychu — a pale Pikachu with no memory and no electricity powers.",
+      "Speak to Peakychu and Professor Tangrowth: talk to other Pokemon for ideas.",
+      "Find Peakychu and Tangrowth at the windmill — learn about power sources and utility poles.",
+      "Speak to Piplup at the waterwheel east of Mosslax's cave — find water source that connects to canal, carve a channel to make the wheel turn.",
+      "Speak to Trubbish: check the large building east of the cave — activate all four spotlights using Generate Pokemon or utility poles.",
+      "Speak to Torchic: use the furnace — connect light bulb atop furnace to utility poles.",
+      "Craft seashell lamps, plant them in Mosslax's cave, connect to utility poles.",
+      "Charge up Peakychu: connect the charging device (west of cave) to power sources via utility poles — need all 5 bulbs lit.",
+      "Speak to Peakychu to unleash its power and fully brighten the area.",
+      "Return to Mosslax's cave — still won't wake. Raikou strikes from above, carving open the cave roof and letting in sunlight.",
+      "Find Raikou at the hut above the cave. Speak to it. Then tell Professor Tangrowth and speak to awakened Mosslax."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585589",
+    "type": "important"
+  },
+  {
+    "name": "Do the...Team Initiation Challenge",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wasteland",
+    "task": "Gather a series of items/achievements to earn badges and reach the postgame. 9 tasks: (1) Gather 5 Leppa Berries → Bouldery Badge. (2) Gather 10 Beans, 10 Tomatoes, 10 Wheat → Cascade-like Badge. (3) Gather 20 Lumber, 5 Fluff, 10 Paper → Thunderish Badge. (4) Make 40 Bricks, 20 Gold Ingots, 50 Concrete → Rainbowish Badge. (5) Generate 50 Electricity, gather 10 Crystal Fragments and 5 Tinkagears → Soul-like Badge. (6) Craft 4 Industrial Beds, 4 Resort Lights, 4 Office Desks → Marshy Badge. (7) Obtain Refrigerator, Game Boy System, Washing Machine → Volcanoey Badge. (8) Submit Favorite Photo → Earth Badge. (9) Get Party Poppers → Memories Photo Frame. Completing all steps triggers the credits and unlocks the postgame.",
+    "reward": "8 Badges + Memories Photo Frame, credits roll, Postgame unlocked",
+    "steps": [
+      "Task 1: Gather 5 Leppa Berries (headbutt Leppa Berry trees, abundant in Withered Wasteland). Reward: Bouldery Badge.",
+      "Task 2: Grow and gather 10 Beans (Withered Wasteland), 10 Tomatoes (Bleak Beach), 10 Wheat (Rocky Ridges). Need Rototiller to plant seeds and Grow specialty to speed growth. Reward: Cascade-like Badge.",
+      "Task 3: Gather 20 Lumber (use Scyther's Chop on Small Logs), 5 Fluff (from Mareep/Jumpluff with Litter specialty), 10 Paper (give Wastepaper to Trubbish with Recycle specialty). Reward: Thunderish Badge.",
+      "Task 4: Make 40 Bricks (Torchic burns Squishy Clay), 20 Gold Ingots (Magmar smelts Gold Ore in Smelting Furnace — find Gold Ore in Rocky Ridges), 50 Concrete (needs Sparkling Skylands unlocked — use Onix's Crush with Concrete Mixer and Limestones). Reward: Rainbowish Badge.",
+      "Task 5: Generate 50 Electricity (build 2 Furnaces or Windmills, each produces 30). Gather 10 Crystal Fragments (Rocky Ridges mine magma area). Get 5 Tinkagears (ask Tinkmaster to convert Iron Ingots — only available in Sparkling Skylands). Reward: Soul-like Badge.",
+      "Task 6: Craft 4 Industrial Beds (Iron Ingot x2, Fluff x2, Lumber x2), 4 Resort Lights (Iron Ore x1, Sea Glass Fragments x1, Vine Rope x1), 4 Office Desks (Pokemetal x2). Reward: Marshy Badge.",
+      "Task 7: Obtain Refrigerator (Pokemetal x2), Washing Machine (Pokemetal x1), Game Boy System (Pokemetal x1). Can get for free as rewards for raising Environment Level to 5 in Bleak Beach, Rocky Ridges, and Sparkling Skylands. Reward: Volcanoey Badge.",
+      "Task 8: Take any photo with the camera and submit it. Reward: Earth Badge.",
+      "Task 9: Craft 2 Party Poppers (Paper x1 + Vine Rope x1 each). Can also get by raising Environment Level to 5 in Withered Wasteland or buy recipe at PC. Reward: Memories Photo Frame + Credits Roll + Postgame."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585929",
+    "type": "important"
+  },
+  {
+    "name": "Time to Party",
+    "giver": "DJ Rotom",
+    "area": "Rocky Ridges",
+    "task": "Increase the mood by 100 points in Rocky Ridges. Get Party Cooking Pot from Chef Dente. Clear volcanic ashes and stones, place the Party Cooking Pot. Find a CD from bookshelf for Rotom. Have Professor Tangrowth appraise a Large Lost Relic and place appraised relics to increase mood. Create Uplifting Duckweed habitat (4 Duckweeds near water) to befriend Ludicolo, bring Ludicolo to Rotom. Get Party Platter recipe from Chef Dente, make 5 using Iron Ingots, make 5 Simple Salads, fill platters with food. Place balloons, stage stands, and party wall decorations. Once mood reaches 100: gather 15 Leppa Berries, 15 Wheat, 15 Beans, 15 Honey, bring Chef Dente and 4 other Pokemon to cook curry. Talk to Volcanion at the top of the mountain (use Water Gun on lava to create blocks to cross). Talk to Professor Tangrowth to complete.",
+    "reward": "Sparkling Skylands unlocked (if Bleak Beach completed), Volcanion encountered",
+    "steps": [
+      "Talk to Chef Dente to receive the Party Cooking Pot.",
+      "Remove volcanic ashes and stones from the area. Place the Party Cooking Pot.",
+      "Talk to Chef Dente, then talk to Rotom.",
+      "Find the CD from the bookshelf near the Party Cooking Pot. Give it to Rotom.",
+      "Talk to Professor Tangrowth: find a Large Lost Relic and have him appraise it. Place appraised relics to increase mood.",
+      "Talk to Rotom for Uplifting Duckweed habitat hint. Place 4 Duckweeds near water to befriend Ludicolo. Bring Ludicolo to Rotom.",
+      "Get Party Platter recipe from Chef Dente. Use 5 Iron Ingots to craft 5 Party Platters. Make 5 Simple Salads. Place platters and fill with food.",
+      "Place decorations: balloons and stage stands from Shop, party wall decorations from workbench.",
+      "Once mood reaches 100 points: gather 15 Leppa Berries, 15 Wheat, 15 Beans, 15 Honey. Bring Chef Dente and 4 other Pokemon to the Party Cooking Pot to cook curry.",
+      "Go to top of mountain: use Water Gun on lava to turn it into blocks, cross to reach Volcanion. Talk to Volcanion.",
+      "Return and talk to Professor Tangrowth to complete."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585947",
+    "type": "important"
+  },
+  {
+    "name": "Rebuild the Huge Building",
+    "giver": "Tinkmaster",
+    "area": "Sparkling Skylands",
+    "task": "Restore three floors of the ruins of Celadon Department Store at the northern floating island. Floor 2: 25 Concrete, 10 Glass, 5 Pokemetal, 10 Iron Ingots, 6 Pokemon. Floor 3: 25 Concrete, 10 Glass, 10 Shiny Stones, 10 Copper Ingots — also need Chef Dente from Rocky Ridges. Floor 4: 40 Concrete, 15 Glass, 10 Paper, 10 Bricks, 20 Lumber, 15 Pokemon — also need Peakychu from Bleak Beach. For Paper: build Professor's Apprentice Program habitat (Whiteboard, Jumbled Cords, Table, Laptop — find these in the area). Metang appears and converts Wastepaper to Paper. After completing 4th floor, take elevator to rooftop and examine the Master Ball to become Master Rank. Speak to Professor Tangrowth to complete.",
+    "reward": "Trainer Rank raised to Master, story completion",
+    "steps": [
+      "Gather materials for Floor 2: 25 Concrete, 10 Glass, 5 Pokemetal, 10 Iron Ingots. Bring 6 Pokemon to help build.",
+      "Gather materials for Floor 3: 25 Concrete, 10 Glass, 10 Shiny Stones, 10 Copper Ingots. Go to Rocky Ridges and have Chef Dente follow you back.",
+      "Gather materials for Floor 4: 40 Concrete, 15 Glass, 10 Paper, 10 Bricks, 20 Lumber. Need 15 Pokemon to help.",
+      "Go to Bleak Beach and ask Peakychu to follow you to Sparkling Skylands.",
+      "For Paper: build Professor's Apprentice Program habitat. Collect Whiteboard and Jumbled Cords from the cliff east of building entrance, Laptop from first floor of building. Place habitat in front of building entrance. Wait for Metang to appear, then have Metang convert Wastepaper (found scattered all over the area) into Paper.",
+      "Complete the fourth floor.",
+      "Take the elevator inside to reach the rooftop. Examine the Master Ball to become Master Rank.",
+      "Return to building entrance and speak with Professor Tangrowth to complete."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585962",
+    "type": "important"
+  },
+  {
+    "name": "Water Dry Grass",
+    "giver": "Bulbasaur",
+    "area": "Withered Wasteland",
+    "task": "Use Water Gun to revive 10 patches of dry tall grass. Water the dry grass patches you find around the area. After watering 10, talk to Bulbasaur to receive the Leafage move.",
+    "reward": "Leafage move (grow tall grass)",
+    "steps": [
+      "Look for dry grass patches and use Water Gun on them. Plenty available at the start of the game.",
+      "Water 10 dry grass patches total.",
+      "Talk to Bulbasaur — they will teach you Leafage, which lets you grow tall grass."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/584663",
+    "type": "general"
+  },
+  {
+    "name": "Help Me Make a Home",
+    "giver": "Squirtle",
+    "area": "Withered Wasteland",
+    "task": "Make a Tall Grass habitat, then invite Squirtle to live there. Use the Leafage move to create a Tall Grass habitat. Squirtle will approach and ask to move in.",
+    "reward": "Squirtle joins",
+    "steps": [
+      "Use the Leafage move to make a Tall Grass habitat. Water the tiles first if they're dry.",
+      "Squirtle will approach the new habitat and ask to move there. Agree to complete the request."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/584796",
+    "type": "general"
+  },
+  {
+    "name": "Leppa Berries, Please",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wasteland",
+    "task": "Pick up a Leppa Berry and give it to Squirtle or Bulbasaur. Headbutt a Leppa Berry tree to knock berries down. Give to Squirtle or Bulbasaur (they may also approach you when hungry). Afterward, Professor Tangrowth gives you a chair — place it nearby and sit on it.",
+    "reward": "Log Chair",
+    "steps": [
+      "Find a nearby tree with Leppa Berries on its branches. Headbutt it to knock them down and pick them up.",
+      "Give the Leppa Berry to either Squirtle or Bulbasaur (they may approach asking for food).",
+      "Professor Tangrowth rewards you with a chair. Place the chair nearby and sit on it."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/584769",
+    "type": "general"
+  },
+  {
+    "name": "Follow Bulbasaur",
+    "giver": "Bulbasaur",
+    "area": "Withered Wasteland",
+    "task": "Follow Bulbasaur to the workbench. Receive Simple Wooden DIY Recipes. Craft a Campfire (2 Sturdy Sticks + 1 Stone) and place it near Professor Tangrowth.",
+    "reward": "Simple Wooden DIY Recipes",
+    "steps": [
+      "Follow Bulbasaur to the workbench. You will receive Simple Wooden DIY Recipes and be asked to craft a Campfire for Professor Tangrowth.",
+      "Gather 2 Sturdy Sticks and 1 Stone (found on the ground near the workbench).",
+      "Craft the Campfire at the workbench.",
+      "Go to Professor Tangrowth's location and place the Campfire near him."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/584768",
+    "type": "general"
+  },
+  {
+    "name": "Light the Campfire",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wasteland",
+    "task": "Use Follow Me on Charmander to light the campfire. Place the crafted campfire near Professor Tangrowth. Use Leafage to grow high grass to attract Charmander. Talk to Charmander and select Follow Me. Lead Charmander to the campfire to light it.",
+    "reward": "Charmander recruited (fire ability)",
+    "steps": [
+      "Place the Campfire crafted in the previous quest near Professor Tangrowth.",
+      "Use Leafage ability to grow high grass — Charmander will appear.",
+      "Talk to Charmander and select the 'Follow Me' option.",
+      "Lead Charmander to the campfire to light it."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/584767",
+    "type": "general"
+  },
+  {
+    "name": "Raise the Comfort Level",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wasteland",
+    "task": "Raise Bulbasaur's comfort level to unlock new challenges. Talk to Bulbasaur with 'Do you need anything?' option. Craft a Straw Bed (2 Leaves). Place it near Bulbasaur's habitat. Check the PC in the Pokemon Center — raising Bulbasaur's comfort raises Environment Level to 2.",
+    "reward": "Environment Level 2 (unlocks more items in Shop)",
+    "steps": [
+      "Talk to Bulbasaur near their habitat and select 'Do you need anything?'",
+      "Go to workbench and craft a Straw Bed (requires 2 Leaves, found in the fields).",
+      "Place the Straw Bed near Bulbasaur's habitat. This also completes 'A Bed for a Buddy'.",
+      "Check the PC in the Pokemon Center to confirm Environment Level raised to 2."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/584810",
+    "type": "general"
+  },
+  {
+    "name": "A Bed for a Buddy",
+    "giver": "Bulbasaur",
+    "area": "Withered Wasteland",
+    "task": "Make a straw bed out of leaves for Bulbasaur. Gather 2 Leaves (Bulbasaur gives you one, get another by using Cut on grass patches). Craft the Straw Bed at a workbench. Place the bed near Bulbasaur's home and wait for them to rest on it.",
+    "reward": "Straw Bed Recipe",
+    "steps": [
+      "Gather materials for the Straw Bed: 2 Leaves. Bulbasaur gives you one; use Cut on grass patches to get another.",
+      "Craft the Straw Bed at a workbench.",
+      "Place the Straw Bed near Bulbasaur's home. Wait for Bulbasaur to rest on it.",
+      "Talk to Bulbasaur to complete the request."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/584798",
+    "type": "general"
+  },
+  {
+    "name": "Build a Leaf Den",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wasteland",
+    "task": "Buy the Leaf Den kit from the PC Shop (requires Environment Level 2). Place the Leaf Den somewhere suitable. Requires 3 Sturdy Sticks, 3 Leaves, and a Pokemon with the Build specialty (Timburr is the earliest). Build time is 15 minutes.",
+    "reward": "Leaf Den built, habitat unlocked",
+    "steps": [
+      "Buy the Leaf Den from the PC Shop (requires Environment Level 2).",
+      "Go to Inventory and select the Leaf Den to place it somewhere suitable.",
+      "Gather 3 Sturdy Sticks and 3 Leaves. Bring a Pokemon with Build specialty (Timburr is earliest).",
+      "Wait 15 minutes for the Leaf Den to build. Tip: use Bulldoze specialty (Onix) to relocate it later."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/584809",
+    "type": "general"
+  },
+  {
+    "name": "To the Other Side of the Wall",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wasteland",
+    "task": "Use Rock Smash to break through the stone wall, then bring Professor Tangrowth to the other side. Speak to Professor Tangrowth about the wall of rocks. Use Rock Smash to open the path. Follow him to a lighthouse-like structure. Interact with the console at the base. Speak to Professor Tangrowth to unlock the Team Initiation Challenge.",
+    "reward": "Do the...Team Initiation Challenge request unlocked",
+    "steps": [
+      "Speak to Professor Tangrowth about the wall of rocks — he asks you to break through it.",
+      "Use Rock Smash on the rocks to open a path.",
+      "Follow Professor Tangrowth to a tall lighthouse-like structure. Interact with the console at the base and listen to the first set of instructions.",
+      "Speak to Professor Tangrowth one last time — this unlocks the Do the...Team Initiation Challenge request."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585112",
+    "type": "general"
+  },
+  {
+    "name": "Find Slowpoke",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wasteland",
+    "task": "Find Slowpoke and bring them to Professor Tangrowth. Discuss with Tangrowth by the ruined Pokemon Center about needing rain. Create a Seaside Tall Grass habitat at the fishing dock area to attract Slowpoke. Slowpoke is very slow — craft wooden stairs, moisturize the dirt road, match their pace and speak to them during breaks. Lead Slowpoke back to Professor Tangrowth to trigger the Yawn Up a Storm important request.",
+    "reward": "Yawn Up a Storm request unlocked",
+    "steps": [
+      "Talk to Professor Tangrowth by the ruined Pokemon Center — decide to find a Slowpoke to change the weather.",
+      "Go to the fishing dock area near the lighthouse. Create a Seaside Tall Grass habitat to attract Slowpoke.",
+      "Once you get Slowpoke's attention, discover they are slow-moving. Craft wooden stairs and set them up.",
+      "Moisturize the dirt road to make it easy for Slowpoke to walk on. Match their pace and speak to them during breaks.",
+      "Lead Slowpoke back to Professor Tangrowth to complete the request and begin Yawn Up a Storm."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585113",
+    "type": "general"
+  },
+  {
+    "name": "Help Me Make a Home (Magikarp)",
+    "giver": "Professor Tangrowth / Magikarp",
+    "area": "Withered Wasteland",
+    "task": "Make an ocean fishing spot habitat, then invite Magikarp to live there.",
+    "reward": "Magikarp joins",
+    "steps": ["Make an ocean fishing spot habitat near a water source.", "Invite Magikarp to live there."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585124",
+    "type": "general"
+  },
+  {
+    "name": "Check What's Up There",
+    "giver": "Hitmonchan",
+    "area": "Withered Wasteland",
+    "task": "Check what's on top of the hill and report findings to Hitmonchan.",
+    "reward": "Comfort level increase",
+    "steps": ["Climb to the top of the hill.", "Report findings back to Hitmonchan."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585123",
+    "type": "general"
+  },
+  {
+    "name": "Investigate the Cave",
+    "giver": "Unknown",
+    "area": "Withered Wasteland",
+    "task": "Investigate the cave by the beach.",
+    "reward": "Unknown",
+    "steps": ["Find and enter the cave near the beach.", "Investigate what's inside."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/584812",
+    "type": "general"
+  },
+  {
+    "name": "Honey, Please",
+    "giver": "Vespiquen",
+    "area": "Withered Wasteland",
+    "task": "Give 3 jars of honey to Vespiquen.",
+    "reward": "Comfort level increase for Vespiquen",
+    "steps": ["Collect 3 jars of Honey.", "Give them to Vespiquen."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585128",
+    "type": "general"
+  },
+  {
+    "name": "Grow Some Beans",
+    "giver": "Hitmonchan",
+    "area": "Withered Wasteland",
+    "task": "Grow 3 bean pods for Hitmonchan. Plant bean seeds and harvest them.",
+    "reward": "Comfort level increase for Hitmonchan",
+    "steps": ["Get bean seeds.", "Plant and grow 3 bean pods using Rototiller and Grow specialty.", "Deliver to Hitmonchan."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585129",
+    "type": "general"
+  },
+  {
+    "name": "Place the Ditto Flag",
+    "giver": "Ditto",
+    "area": "Withered Wasteland",
+    "task": "Place a Ditto flag on a house to make it yours.",
+    "reward": "Personalized house",
+    "steps": ["Obtain a Ditto flag.", "Place it on a house."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585117",
+    "type": "general"
+  },
+  {
+    "name": "Fresh Carrots, Please",
+    "giver": "Gulpin",
+    "area": "Withered Wasteland",
+    "task": "Give 1 fresh carrot to Gulpin.",
+    "reward": "Comfort level increase for Gulpin",
+    "steps": ["Grow or find a fresh carrot.", "Give it to Gulpin."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585507",
+    "type": "general"
+  },
+  {
+    "name": "Find a Pokemon Who Can Use Fire",
+    "giver": "Unknown",
+    "area": "Withered Wasteland",
+    "task": "Make a tall grass habitat and find a Pokemon who can use fire.",
+    "reward": "Fire Pokemon recruited",
+    "steps": ["Make a tall grass habitat.", "Find and recruit a Pokemon with a fire ability."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/588476",
+    "type": "general"
+  },
+  {
+    "name": "Soak the Soil",
+    "giver": "Drilbur",
+    "area": "Withered Wasteland",
+    "task": "Water the dry ground near Drilbur.",
+    "reward": "Comfort level increase for Drilbur",
+    "steps": ["Use Water Gun on the dry ground near Drilbur's area."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/588475",
+    "type": "general"
+  },
+  {
+    "name": "Help Make a Home (Magnemite)",
+    "giver": "Magnemite",
+    "area": "Withered Wasteland",
+    "task": "Make a factory habitat, then invite Magnemite to live there.",
+    "reward": "Magnemite joins",
+    "steps": ["Create a factory habitat.", "Invite Magnemite to move in."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/588805",
+    "type": "general"
+  },
+  {
+    "name": "Help Make a Home (Professor Tangrowth)",
+    "giver": "Professor Tangrowth",
+    "area": "Withered Wasteland",
+    "task": "Make a professor's treasure trove habitat, then invite Professor Tangrowth to live there.",
+    "reward": "Professor Tangrowth comfort level increase",
+    "steps": ["Build the Professor's Treasure Trove habitat with required items.", "Invite Professor Tangrowth to move in."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/588804",
+    "type": "general"
+  },
+  {
+    "name": "Clean Up the Mud",
+    "giver": "Meowth",
+    "area": "Bleak Beach",
+    "task": "Wash away the muddy mess near Meowth's shack. Use Piplup's water ability to clean the mud. Underneath the mud are Seaglass Fragments useful for the Pokemon Center.",
+    "reward": "Comfort level increase, Seaglass Fragments revealed",
+    "steps": [
+      "Find the muddy area near Meowth's shack on Bleak Beach.",
+      "Use Piplup (or Water Gun) to wash away all the mud.",
+      "Collect Seaglass Fragments from underneath."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585506",
+    "type": "general"
+  },
+  {
+    "name": "Flowers in the Planter",
+    "giver": "Unknown",
+    "area": "Bleak Beach",
+    "task": "Make flowers bloom in a planter you made.",
+    "reward": "Comfort level increase",
+    "steps": ["Craft and place a planter.", "Plant flower seeds in the planter and make them bloom using Bulbasaur or watering."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585505",
+    "type": "general"
+  },
+  {
+    "name": "Swimming Time",
+    "giver": "Piplup",
+    "area": "Bleak Beach",
+    "task": "Learn from Lapras how to swim, then go swimming with Piplup.",
+    "reward": "Swimming/Surf ability",
+    "steps": ["Find Lapras and learn how to swim.", "Go swimming with Piplup."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585575",
+    "type": "general"
+  },
+  {
+    "name": "Show Off Some Toy Blocks",
+    "giver": "Zorua",
+    "area": "Bleak Beach",
+    "task": "Make toy blocks and show them to Zorua.",
+    "reward": "Comfort level increase for Zorua",
+    "steps": ["Craft toy blocks at the workbench.", "Show them to Zorua."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585576",
+    "type": "general"
+  },
+  {
+    "name": "Find a Doll",
+    "giver": "Drifloon",
+    "area": "Withered Wasteland",
+    "task": "Find a doll and show it to Drifloon.",
+    "reward": "Comfort level increase for Drifloon",
+    "steps": ["Search the area for a doll item.", "Show it to Drifloon."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585586",
+    "type": "general"
+  },
+  {
+    "name": "What Made Those Mysterious Noises",
+    "giver": "Trubbish",
+    "area": "Bleak Beach",
+    "task": "Figure out the source of those mysterious noises Trubbish heard.",
+    "reward": "Story beats on Bleak Beach, comfort level increase",
+    "steps": ["Speak to Trubbish about the mysterious noises.", "Investigate the source of the noise.", "Report back to Trubbish."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585735",
+    "type": "general"
+  },
+  {
+    "name": "Househunting",
+    "giver": "Charmander",
+    "area": "Withered Wasteland",
+    "task": "Build a leaf den, then invite Charmander to move in.",
+    "reward": "Charmander gets a home",
+    "steps": ["Build a Leaf Den (or use existing one).", "Invite Charmander to move in."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585738",
+    "type": "general"
+  },
+  {
+    "name": "Brighter is Better",
+    "giver": "Meowth",
+    "area": "Bleak Beach",
+    "task": "Brighten up Meowth's home by placing 2 mushroom lamps.",
+    "reward": "Comfort level increase for Meowth",
+    "steps": ["Craft or obtain 2 Mushroom Lamps.", "Place them in or near Meowth's home."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585749",
+    "type": "general"
+  },
+  {
+    "name": "Build an Orange Hut",
+    "giver": "Unknown",
+    "area": "Bleak Beach",
+    "task": "Use a building kit to build an orange hut.",
+    "reward": "Comfort level increase",
+    "steps": ["Purchase the orange hut building kit from the shop.", "Build it by gathering required materials and using a Pokemon with Build specialty."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585750",
+    "type": "general"
+  },
+  {
+    "name": "Make a Waterfall",
+    "giver": "Unknown",
+    "area": "Bleak Beach",
+    "task": "Suck up water and pour it from the top of the cliff into the pond below to create a waterfall.",
+    "reward": "Waterfall created, comfort level increase",
+    "steps": ["Find water source.", "Use a Water-type Pokemon ability to suck up water.", "Go to the top of the cliff and pour it down into the pond below."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585825",
+    "type": "general"
+  },
+  {
+    "name": "Move Over, Boulder",
+    "giver": "Unknown",
+    "area": "Rocky Ridges",
+    "task": "Use Strength to move the huge rock to the designated location.",
+    "reward": "Path cleared, comfort level increase",
+    "steps": ["Find the huge rock blocking the path.", "Use Strength (requires befriending a Pokemon with Strength specialty) to push it to the designated location."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585585",
+    "type": "general"
+  },
+  {
+    "name": "Make a Hamburger Steak",
+    "giver": "Chef Dente",
+    "area": "Rocky Ridges",
+    "task": "Use a frying pan to make hamburger steak and eat it. Requires a Copper Ingot to craft the frying pan. Copper Ingot requires access to the Smelting Furnace (unlocked via Cut Down That Fence request). Make Iron Ingots and Copper Ingots at the Smelting Furnace.",
+    "reward": "Cooking skill expanded, story progression with Chef Dente",
+    "steps": [
+      "Complete Cut Down That Fence request to access the mine and Smelting Furnace.",
+      "Gather Copper Ore (found on rocky blocks) and smelt it into a Copper Ingot.",
+      "Craft a frying pan using the Copper Ingot.",
+      "Use the frying pan to make hamburger steak.",
+      "Eat the hamburger steak to complete the request."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/586289",
+    "type": "general"
+  },
+  {
+    "name": "Make a Salad",
+    "giver": "Unknown",
+    "area": "Rocky Ridges",
+    "task": "Use a cutting board to make a salad.",
+    "reward": "Cooking skill, comfort level increase",
+    "steps": ["Obtain a cutting board.", "Gather salad ingredients.", "Use the cutting board to make a salad."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585927",
+    "type": "general"
+  },
+  {
+    "name": "Cut Down that Fence",
+    "giver": "Machoke",
+    "area": "Rocky Ridges",
+    "task": "Power up Cut and destroy the fence blocking the path. Leads deeper into the mine to find the Smelting Furnace. Rearrange items in the mine to form the Digging and Burning habitat, causing Magmar to appear.",
+    "reward": "Path to Smelting Furnace opened, Magmar recruited",
+    "steps": [
+      "Power up your Cut move.",
+      "Use Cut to destroy the fence blocking the path deeper into the mine.",
+      "Head deeper into the mine to find the Smelting Furnace.",
+      "Rearrange items in the area to form the Digging and Burning habitat.",
+      "Magmar will appear after the habitat is formed."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585926",
+    "type": "general"
+  },
+  {
+    "name": "Make Bread",
+    "giver": "Unknown",
+    "area": "Rocky Ridges",
+    "task": "Use a bread oven to make bread, then eat it.",
+    "reward": "Cooking skill, comfort level increase",
+    "steps": ["Obtain or place a bread oven.", "Gather bread ingredients (wheat).", "Use the bread oven to bake bread.", "Eat the bread."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585925",
+    "type": "general"
+  },
+  {
+    "name": "Bring Back Some Alarm Clocks",
+    "giver": "Dragonite",
+    "area": "Sparkling Skylands",
+    "task": "Place five alarm clocks for Dragonite.",
+    "reward": "Comfort level increase for Dragonite",
+    "steps": ["Obtain 5 alarm clocks (craft or purchase).", "Place them in designated spots for Dragonite."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585989",
+    "type": "general"
+  },
+  {
+    "name": "Bread Bowl, Please",
+    "giver": "Gyarados",
+    "area": "Sparkling Skylands",
+    "task": "Make a bread bowl for Gyarados.",
+    "reward": "Comfort level increase for Gyarados",
+    "steps": ["Gather bread bowl ingredients.", "Craft a bread bowl at the bread oven.", "Give it to Gyarados."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/585992",
+    "type": "general"
+  },
+  {
+    "name": "Wanted - Perch",
+    "giver": "Dartrix",
+    "area": "Rocky Ridges",
+    "task": "Place a perch near Dartrix's home.",
+    "reward": "Comfort level increase for Dartrix",
+    "steps": ["Obtain or craft a perch.", "Place it near Dartrix's home."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/584812",
+    "type": "general"
+  },
+  {
+    "name": "Build a House",
+    "giver": "Unknown",
+    "area": "All Areas",
+    "task": "Build a house and put three different pieces of furniture inside.",
+    "reward": "House built",
+    "steps": ["Obtain a house building kit from the PC shop.", "Build the house using required materials and a Pokemon with Build specialty.", "Place 3 different pieces of furniture inside the house."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/586271",
+    "type": "general"
+  },
+  {
+    "name": "Make a Shredded Salad",
+    "giver": "Dartrix",
+    "area": "Rocky Ridges",
+    "task": "Make 1 shredded salad for Dartrix.",
+    "reward": "Comfort level increase for Dartrix",
+    "steps": ["Gather shredded salad ingredients.", "Use the cutting board to make a shredded salad.", "Give it to Dartrix."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/586272",
+    "type": "general"
+  },
+  {
+    "name": "Investigate the Source of Music",
+    "giver": "Unknown",
+    "area": "Rocky Ridges",
+    "task": "Go deeper into the mountain to find the source of music. Leads to finding DJ Rotom.",
+    "reward": "DJ Rotom found, Time to Party request unlocked",
+    "steps": ["Head deeper into the mountain following the sound of music.", "Discover the source — DJ Rotom."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/586290",
+    "type": "general"
+  },
+  {
+    "name": "Show Off a Rainbow Feather",
+    "giver": "Gimmighoul",
+    "area": "Rocky Ridges",
+    "task": "Pick up a Rainbow Feather and show it to Gimmighoul.",
+    "reward": "Comfort level increase for Gimmighoul",
+    "steps": ["Find a Rainbow Feather in the area.", "Show it to Gimmighoul."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/586288",
+    "type": "general"
+  },
+  {
+    "name": "Talk to Graveler",
+    "giver": "Graveler",
+    "area": "Rocky Ridges",
+    "task": "Make a mossy boulder habitat, then talk to Graveler.",
+    "reward": "Graveler joins, comfort level increase",
+    "steps": ["Build a mossy boulder habitat.", "Talk to Graveler."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/586400",
+    "type": "general"
+  },
+  {
+    "name": "Follow Dragonite",
+    "giver": "Dragonite",
+    "area": "Sparkling Skylands",
+    "task": "Use Glide to follow Dragonite to the neighboring island.",
+    "reward": "New island accessible",
+    "steps": ["Unlock Glide move.", "Find Dragonite and follow them using Glide to the neighboring island."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/586943",
+    "type": "general"
+  },
+  {
+    "name": "Make Concrete",
+    "giver": "Tinkmaster",
+    "area": "Sparkling Skylands",
+    "task": "Make six bricks of concrete and show them to Tinkmaster. Requires befriending Conkeldurr and using a Concrete Mixer with Limestones and the Crush specialty.",
+    "reward": "Concrete crafting unlocked (needed for Rebuild the Huge Building and Do the Team Initiation Challenge)",
+    "steps": [
+      "Meet Tinkmaster in Sparkling Skylands.",
+      "Befriend Conkeldurr (Crush specialty).",
+      "Obtain a Concrete Mixer.",
+      "Gather Limestones.",
+      "Use Conkeldurr's Crush specialty with the Concrete Mixer and Limestones to create 6 concrete bricks.",
+      "Show them to Tinkmaster."
+    ],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/586942",
+    "type": "general"
+  },
+  {
+    "name": "Spelunking Time",
+    "giver": "Gardevoir",
+    "area": "Sparkling Skylands",
+    "task": "Go with Gardevoir into the cave and find out what's in there. Leads to discovering Pokemetal blocks needed for Pokemon Center.",
+    "reward": "Pokemetal source discovered",
+    "steps": ["Find and befriend Gardevoir in Sparkling Skylands.", "Follow Gardevoir into the cave.", "Explore the cave and find what's inside (Pokemetal blocks)."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/587493",
+    "type": "general"
+  },
+  {
+    "name": "To the Big Building",
+    "giver": "Tinkmaster",
+    "area": "Sparkling Skylands",
+    "task": "Go with Tinkmaster to the huge building on the center island. This is the ruined Celadon Department Store, kicking off the Rebuild the Huge Building request.",
+    "reward": "Rebuild the Huge Building request unlocked",
+    "steps": ["Find Tinkmaster.", "Follow them to the huge building on the center island.", "Inspect the building — this kicks off the Rebuild the Huge Building important request."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/587492",
+    "type": "general"
+  },
+  {
+    "name": "What's at the Top of the Ladder",
+    "giver": "Unknown",
+    "area": "Sparkling Skylands",
+    "task": "Climb the ladder and check out the elevator platform at the top.",
+    "reward": "Elevator access",
+    "steps": ["Find the ladder in Sparkling Skylands.", "Climb to the top.", "Check out the elevator platform."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/587498",
+    "type": "general"
+  },
+  {
+    "name": "Crush a Leppa Berry",
+    "giver": "Smearguru",
+    "area": "Bleak Beach",
+    "task": "Show Smearguru a crushed Leppa Berry.",
+    "reward": "Comfort level increase for Smearguru",
+    "steps": ["Obtain a Leppa Berry.", "Find a way to crush it (possibly using a Pokemon with Crush specialty or specific tool).", "Show the crushed Leppa Berry to Smearguru."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/587497",
+    "type": "general"
+  },
+  {
+    "name": "Make a Mini Bookcase",
+    "giver": "Unknown",
+    "area": "Sparkling Skylands",
+    "task": "Make four mini bookcases and place them wherever you like.",
+    "reward": "Comfort level increase",
+    "steps": ["Craft 4 mini bookcases at the workbench.", "Place them anywhere you like."],
+    "source": "game8",
+    "url": "https://game8.co/games/Pokemon-Pokopia/archives/586017",
+    "type": "general"
+  }
+]

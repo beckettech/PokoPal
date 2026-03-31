@@ -13,6 +13,7 @@ let locationData: any[] = [];
 let recipeData: any[] = [];
 let cookingRecipeData: any[] = [];
 let requestData: any[] = [];
+let game8RequestData: any[] = [];
 let itemDetailsData: any[] = [];
 
 try {
@@ -25,6 +26,7 @@ try {
     recipes: "recipes.json",
     cookingRecipes: "cooking-recipes.json",
     requests: "requests.json",
+    game8Requests: "game8-requests.json",
     itemDetails: "game8-item-details.json",
   };
 
@@ -42,12 +44,13 @@ try {
           case "recipes": recipeData = raw; break;
           case "cookingRecipes": cookingRecipeData = raw; break;
           case "requests": requestData = raw; break;
+          case "game8Requests": game8RequestData = raw; break;
           case "itemDetails": itemDetailsData = raw; break;
         }
       }
     }
   }
-  console.log(`Loaded: ${pokemonData.length} pokemon, ${habitatData.length} habitats, ${itemData.length} items, ${locationData.length} locations, ${recipeData.length} recipes, ${cookingRecipeData.length} cooking recipes, ${requestData.length} requests, ${itemDetailsData.length} item details`);
+  console.log(`Loaded: ${pokemonData.length} pokemon, ${habitatData.length} habitats, ${itemData.length} items, ${locationData.length} locations, ${recipeData.length} recipes, ${cookingRecipeData.length} cooking recipes, ${requestData.length} requests, ${game8RequestData.length} game8 requests, ${itemDetailsData.length} item details`);
 } catch (e) {
   console.error("Failed to load data files:", e);
 }
@@ -256,12 +259,18 @@ function buildContext(query: string): string {
     }
   }
 
-  // Request/Quest matches
-  if (requestData.length > 0) {
-    const requestMatches = topMatches(requestData, queryWords, 5);
+  // Request/Quest matches — game8 data is priority, fall back to legacy requests.json
+  const combinedRequests = game8RequestData.length > 0
+    ? [...game8RequestData, ...requestData.filter(r => !game8RequestData.find((g: any) => g.name === r.name))]
+    : requestData;
+  if (combinedRequests.length > 0) {
+    const requestMatches = topMatches(combinedRequests, queryWords, 5);
     if (requestMatches.length > 0) {
       const summaries = requestMatches.map(r => {
-        return `Quest "${r.name}" (given by ${r.giver || 'unknown'} in ${r.area || 'unknown'}): ${r.task || ''}. Reward: ${r.reward || 'unknown'}.`;
+        const steps = (r.steps || []).slice(0, 3).join(' → ');
+        const stepsStr = steps ? ` Steps: ${steps}` : '';
+        const typeStr = r.type === 'important' ? ' [IMPORTANT/STORY QUEST]' : '';
+        return `Quest "${r.name}"${typeStr} (given by ${r.giver || 'unknown'} in ${r.area || 'unknown'}): ${r.task || ''} Reward: ${r.reward || 'unknown'}.${stepsStr}`;
       });
       parts.push(`Relevant Quests/Requests:\n${summaries.join('\n')}`);
     }
