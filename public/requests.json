@@ -1,42 +1,42 @@
 [
   {
     "id": "rebuild-pokemon-center-ww",
-    "name": "Rebuild the Pokémon Center",
+    "name": "Rebuild the Pok\u00e9mon Center",
     "giver": "Professor Tangrowth",
     "area": "Withered Wastelands",
-    "task": "Raise Environment Level to 3 → buy rebuilding kit from shop (1000 Life Coins). Gather: 20 Lumber, 20 Stones, 10 Leaves, 10 Vine Ropes. Befriend Scyther for lumber/Cut. Complete Yawn Up a Storm first to get Onix (Bulldoze). Submit materials + Pokémon at site → wait one day.",
+    "task": "Raise Environment Level to 3 \u2192 buy rebuilding kit from shop (1000 Life Coins). Gather: 20 Lumber, 20 Stones, 10 Leaves, 10 Vine Ropes. Befriend Scyther for lumber/Cut. Complete Yawn Up a Storm first to get Onix (Bulldoze). Submit materials + Pok\u00e9mon at site \u2192 wait one day.",
     "rewardType": "unlock",
-    "reward": "Pokémon Center restored",
+    "reward": "Pok\u00e9mon Center restored",
     "isImportant": true
   },
   {
     "id": "rebuild-pokemon-center-bb",
-    "name": "Rebuild the Pokémon Center",
+    "name": "Rebuild the Pok\u00e9mon Center",
     "giver": "Professor Tangrowth",
     "area": "Bleak Beach",
-    "task": "Raise Environment Level to 3 → buy rebuilding kit from shop (1000 Life Coins). Gather: 20 Lumber, 20 Stones, 10 Leaves, 10 Vine Ropes. Submit materials + Pokémon at site → wait one day.",
+    "task": "Raise Environment Level to 3 \u2192 buy rebuilding kit from shop (1000 Life Coins). Gather: 20 Lumber, 20 Stones, 10 Leaves, 10 Vine Ropes. Submit materials + Pok\u00e9mon at site \u2192 wait one day.",
     "rewardType": "unlock",
-    "reward": "Pokémon Center restored",
+    "reward": "Pok\u00e9mon Center restored",
     "isImportant": true
   },
   {
     "id": "rebuild-pokemon-center-rr",
-    "name": "Rebuild the Pokémon Center",
+    "name": "Rebuild the Pok\u00e9mon Center",
     "giver": "Professor Tangrowth",
     "area": "Rocky Ridges",
-    "task": "Raise Environment Level to 3 → buy rebuilding kit from shop (1000 Life Coins). Gather: 20 Lumber, 20 Stones, 10 Leaves, 10 Vine Ropes. Submit materials + Pokémon at site → wait one day.",
+    "task": "Raise Environment Level to 3 \u2192 buy rebuilding kit from shop (1000 Life Coins). Gather: 20 Lumber, 20 Stones, 10 Leaves, 10 Vine Ropes. Submit materials + Pok\u00e9mon at site \u2192 wait one day.",
     "rewardType": "unlock",
-    "reward": "Pokémon Center restored",
+    "reward": "Pok\u00e9mon Center restored",
     "isImportant": true
   },
   {
     "id": "rebuild-pokemon-center-ss",
-    "name": "Rebuild the Pokémon Center",
+    "name": "Rebuild the Pok\u00e9mon Center",
     "giver": "Professor Tangrowth",
     "area": "Sparkling Skylands",
-    "task": "Raise Environment Level to 3 → buy rebuilding kit from shop (1000 Life Coins). Gather: 20 Lumber, 20 Stones, 10 Leaves, 10 Vine Ropes. Submit materials + Pokémon at site → wait one day.",
+    "task": "Raise Environment Level to 3 \u2192 buy rebuilding kit from shop (1000 Life Coins). Gather: 20 Lumber, 20 Stones, 10 Leaves, 10 Vine Ropes. Submit materials + Pok\u00e9mon at site \u2192 wait one day.",
     "rewardType": "unlock",
-    "reward": "Pokémon Center restored",
+    "reward": "Pok\u00e9mon Center restored",
     "isImportant": true
   },
   {
@@ -44,7 +44,7 @@
     "name": "Yawn Up a Storm",
     "giver": "Professor Tangrowth",
     "area": "Withered Wastelands",
-    "task": "Raise humidity to 100 for Slowpoke's yawn: 1) Use Water Gun on grass/soil tiles. 2) Use Rock Smash to unblock water sources and create rivers. 3) Buy Horsea Fountains from PC shop and place in ponds. 4) Plant wildflower fields (use Bulbasaur to grow instantly). 5) Revive 10 withered trees with Water Gun. 6) Move Squirtle into Hydrated Tall Grass habitat. 7) Set up Rain Dance Site (2 Castform Weather Charms + wooden plate + food). Then get Slowpoke to yawn → follow roar north → rebuild docks to reach Kyogre → rescue Onix!",
+    "task": "Raise humidity to 100 for Slowpoke's yawn: 1) Use Water Gun on grass/soil tiles. 2) Use Rock Smash to unblock water sources and create rivers. 3) Buy Horsea Fountains from PC shop and place in ponds. 4) Plant wildflower fields (use Bulbasaur to grow instantly). 5) Revive 10 withered trees with Water Gun. 6) Move Squirtle into Hydrated Tall Grass habitat. 7) Set up Rain Dance Site (2 Castform Weather Charms + wooden plate + food). Then get Slowpoke to yawn \u2192 follow roar north \u2192 rebuild docks to reach Kyogre \u2192 rescue Onix!",
     "rewardType": "story",
     "reward": "Rain event + Kyogre encounter + Onix rescued",
     "isImportant": true
@@ -54,7 +54,7 @@
     "name": "Brighten Things Up",
     "giver": "Professor Tangrowth",
     "area": "Bleak Beach",
-    "task": "Wake up Mosslax by reaching 100 brightness points: 1) Light streetlights with Generate Pokémon (Pawmi/Pawmo). 2) Set up Resort Meal Prep habitat for Torchic (chair + campfire + food plate under palm). 3) Activate windmill by the cave. 4) Connect waterwheel to east of cave via utility poles. 5) Light up lighthouse (4 spotlights + Generate Pokémon). 6) Connect furnace via utility poles. 7) Place Seashell Lamps in Mosslax's cave, connect to power. 8) Charge up Peakychu at charging station (5 bulbs lit). Peakychu uses Illuminate → Raikou's thunder wakes Mosslax!",
+    "task": "Wake up Mosslax by reaching 100 brightness points: 1) Light streetlights with Generate Pok\u00e9mon (Pawmi/Pawmo). 2) Set up Resort Meal Prep habitat for Torchic (chair + campfire + food plate under palm). 3) Activate windmill by the cave. 4) Connect waterwheel to east of cave via utility poles. 5) Light up lighthouse (4 spotlights + Generate Pok\u00e9mon). 6) Connect furnace via utility poles. 7) Place Seashell Lamps in Mosslax's cave, connect to power. 8) Charge up Peakychu at charging station (5 bulbs lit). Peakychu uses Illuminate \u2192 Raikou's thunder wakes Mosslax!",
     "rewardType": "story",
     "reward": "Mosslax awakens + Raikou encounter",
     "isImportant": true
@@ -74,7 +74,7 @@
     "name": "Time to Party!",
     "giver": "DJ Rotom",
     "area": "Rocky Ridges",
-    "task": "Increase the mood by 100 points. Find a CD for Rotom, appraise a Lost Relic for Tangrowth, bring Ludicolo to Rotom, make 5 Party Platters with Chef Dente. Cook curry (15 Leppa Berry, 15 Wheat, 15 Beans, 5 Honey) with 5 Pokémon. Volcanion appears!",
+    "task": "Increase the mood by 100 points. Find a CD for Rotom, appraise a Lost Relic for Tangrowth, bring Ludicolo to Rotom, make 5 Party Platters with Chef Dente. Cook curry (15 Leppa Berry, 15 Wheat, 15 Beans, 5 Honey) with 5 Pok\u00e9mon. Volcanion appears!",
     "rewardType": "story",
     "reward": "Story progression + Volcanion appears",
     "isImportant": true
@@ -84,7 +84,7 @@
     "name": "Rebuild the Huge Building",
     "giver": "Tinkaton / Tinkamaster",
     "area": "Sparkling Skylands",
-    "task": "Rebuild all three floors of the destroyed Celadon Department Store. 2F: 25 Concrete, 10 Glass, 5 Pokémetal, 10 Iron Ingots + 6 Pokémon (incl. Tangrowth). 3F: 25 Concrete, 10 Glass, 10 Glowing Stone, 15 Copper Ingots + 10 Pokémon (incl. Chef Dente). 4F: 40 Concrete, 10 Glass, 10 Paper, 10 Brick, 10 Lumber + 15 Pokémon (incl. Peakychu). Mewtwo appears on rooftop!",
+    "task": "Rebuild all three floors of the destroyed Celadon Department Store. 2F: 25 Concrete, 10 Glass, 5 Pok\u00e9metal, 10 Iron Ingots + 6 Pok\u00e9mon (incl. Tangrowth). 3F: 25 Concrete, 10 Glass, 10 Glowing Stone, 15 Copper Ingots + 10 Pok\u00e9mon (incl. Chef Dente). 4F: 40 Concrete, 10 Glass, 10 Paper, 10 Brick, 10 Lumber + 15 Pok\u00e9mon (incl. Peakychu). Mewtwo appears on rooftop!",
     "rewardType": "story",
     "reward": "Mewtwo encounter on rooftop",
     "isImportant": true
@@ -220,7 +220,7 @@
     "name": "Show Off a Rainbow Feather",
     "giver": "Gimmighoul",
     "area": "Rocky Ridges",
-    "task": "Pick up a Rainbow Feather and show it to Gimmighoul. (Rainbow Feathers dropped by Ho-Oh — use Water Gun to collect.)",
+    "task": "Pick up a Rainbow Feather and show it to Gimmighoul. (Rainbow Feathers dropped by Ho-Oh \u2014 use Water Gun to collect.)",
     "rewardType": "comfort",
     "reward": "Comfort increase"
   },
@@ -479,11 +479,11 @@
   {
     "id": "help-me-make-home",
     "name": "Help Me Make a Home",
-    "giver": "Various Pokémon",
+    "giver": "Various Pok\u00e9mon",
     "area": "Withered Wastelands",
     "task": "Make a habitat, then invite the requester to live there.",
     "rewardType": "comfort",
-    "reward": "Pokémon moves in"
+    "reward": "Pok\u00e9mon moves in"
   },
   {
     "id": "leppa-berries-please",
@@ -541,20 +541,29 @@
   },
   {
     "id": "find-fire-pokemon",
-    "name": "Find a Pokémon Who Can Use Fire",
+    "name": "Find a Pok\u00e9mon Who Can Use Fire",
     "giver": "Unknown",
     "area": "Withered Wastelands",
-    "task": "Make a tall grass habitat and find a Pokémon who can use fire!",
+    "task": "Make a tall grass habitat and find a Pok\u00e9mon who can use fire!",
     "rewardType": "unlock",
-    "reward": "Fire Pokémon found"
+    "reward": "Fire Pok\u00e9mon found"
   },
   {
     "id": "raise-environment-level-3",
     "name": "Raise the Environment Level to 3",
     "giver": "System",
     "area": "Withered Wastelands",
-    "task": "Raise the environment level to 3 so you can buy the Pokémon Center rebuilding kit.",
+    "task": "Raise the environment level to 3 so you can buy the Pok\u00e9mon Center rebuilding kit.",
     "rewardType": "unlock",
     "reward": "PC shop + rebuilding kit available"
+  },
+  {
+    "id": "cds-please",
+    "name": "CDs, please",
+    "giver": "DJ Rotom",
+    "area": "Rocky Ridges",
+    "task": "Find 10 unique CDs hidden in glowing spots scattered across Pokopia. Break glowing spots using Rock Smash or Rollout. Use the Dowsing Machine (requires Search specialty Pok\u00e9mon in party) to locate nearby glowing spots. Avoid duplicates \u2014 10 distinct CDs are required. Once collected, speak to DJ Rotom to complete the request and unlock new music options for the town.",
+    "rewardType": "story",
+    "reward": "New music options for the town"
   }
 ]
