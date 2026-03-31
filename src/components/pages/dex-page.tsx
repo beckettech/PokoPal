@@ -110,7 +110,7 @@ export function DexPage() {
     let matchesFriendFilter = true;
     if (friendFilter === "friends") matchesFriendFilter = capturedPokemon.includes(pokemon.id);
     else if (friendFilter === "unseen") matchesFriendFilter = !capturedPokemon.includes(pokemon.id);
-    return matchesSearch && matchesRarity && matchesArea && matchesSpecialty && matchesFriendFilter;
+    return matchesSearch && matchesRarity && matchesSpecialty && matchesFriendFilter;
   });
 
   const getRarityColor = (rarity: string) => {
