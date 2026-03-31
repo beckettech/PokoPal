@@ -15,6 +15,18 @@ const GIFTS = [
     availability: "Mar 5, 2026 – Jan 31, 2027",
     active: true,
   },
+  {
+    id: "chansey-plant",
+    name: "Chansey Plant",
+    method: "Serial Code",
+    methodType: "code" as const,
+    code: "P0K0P1AGARDENS",
+    items: ["Chansey Plant (decorative item)"],
+    itemImages: [],
+    codeNote: "Enter the code at the in-game PC → Get Items → Via Serial Code",
+    availability: "Available Oct 7, 2026",
+    active: true,
+  },
 ];
 
 export function MysteryGiftsPage() {
@@ -137,6 +149,22 @@ export function MysteryGiftsPage() {
                     </div>
                   ))}
                 </div>
+
+                {/* Serial Code (for code-type gifts) */}
+                {"code" in gift && gift.code && (
+                  <div className="mt-3 flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-xl px-3 py-2">
+                    <Hash className="w-4 h-4 text-blue-500 shrink-0" />
+                    <code className="text-xs font-mono font-bold text-blue-800 dark:text-blue-300 flex-1 tracking-wider">
+                      {gift.code}
+                    </code>
+                    <button
+                      onClick={() => navigator.clipboard.writeText(gift.code)}
+                      className="text-[10px] font-semibold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-800 px-2 py-1 rounded-lg active:scale-95 transition-transform"
+                    >
+                      Copy
+                    </button>
+                  </div>
+                )}
 
                 {/* Details */}
                 <div className="mt-3 space-y-1.5">
