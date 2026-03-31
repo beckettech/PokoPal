@@ -277,7 +277,14 @@
         "slug": "venomoth"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Tall Grass",
@@ -362,9 +369,6 @@
     ],
     "locations": [
       "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
       "Palette Town"
     ],
     "buildItems": [
@@ -398,7 +402,14 @@
         "slug": "illumise"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Wildflowers",
@@ -458,7 +469,14 @@
         "slug": "parasect"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Wildflowers",
@@ -485,7 +503,14 @@
         "slug": "marowak"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Wildflowers",
@@ -518,7 +543,14 @@
         "slug": "parasect"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Hedge",
@@ -606,7 +638,14 @@
         "slug": "charmeleon"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Campfire",
@@ -641,7 +680,14 @@
         "slug": "tyrogue"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Seat",
@@ -758,7 +804,14 @@
         "slug": "victreebel"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Seat (any)",
@@ -837,7 +890,14 @@
         "slug": "venomoth"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Seat (wide)",
@@ -897,7 +957,14 @@
         "slug": "hitmonlee"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Seat",
@@ -932,7 +999,14 @@
         "slug": "hitmontop"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Table (any)",
@@ -971,7 +1045,14 @@
         "slug": "shelloseastsea"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Arrow sign",
@@ -1047,7 +1128,14 @@
         "slug": "haxorus"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Log chair",
@@ -1136,7 +1224,14 @@
         "slug": "noctowl"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Bed",
@@ -1175,7 +1270,14 @@
         "slug": "lampent"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Gravestone",
@@ -1218,7 +1320,14 @@
         "slug": "chandelure"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Eerie candle",
@@ -1251,7 +1360,14 @@
         "slug": "bellossom"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Hedge",
@@ -1290,7 +1406,14 @@
         "slug": "victreebel"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pitcher-plant pot",
@@ -1325,7 +1448,14 @@
         "slug": "blastoise"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Inflatable boat",
@@ -1391,7 +1521,14 @@
         "slug": "magnemite"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Streetlight",
@@ -1432,7 +1569,14 @@
         "slug": "pidgeot"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Wooden birdhouse",
@@ -1461,7 +1605,14 @@
         "slug": "charizard"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Castform weather charm (sun)",
@@ -1502,7 +1653,14 @@
         "slug": "goomy"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Castform weather charm (rain)",
@@ -1531,7 +1689,14 @@
         "slug": "cacnea"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Castform weather charm (sun)",
@@ -1605,7 +1770,14 @@
         "slug": "haxorus"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Log chair",
@@ -1640,7 +1812,14 @@
         "slug": "goodra"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Berry chair",
@@ -1681,7 +1860,14 @@
         "slug": "venusaur"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Wildflowers",
@@ -1849,7 +2035,14 @@
         "slug": "ariados"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Yellow tall grass",
@@ -1923,7 +2116,14 @@
         "slug": "crobat"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Yellow tall grass",
@@ -1999,7 +2199,14 @@
         "slug": "clodsire"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Yellow tall grass",
@@ -2100,7 +2307,14 @@
         "slug": "exeggutor"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Large palm tree",
@@ -2133,7 +2347,14 @@
         "slug": "pelipper"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Windmill",
@@ -2166,7 +2387,14 @@
         "slug": "exeggutor"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Large palm tree",
@@ -2267,7 +2495,14 @@
         "slug": "azurill"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Carboad boxes",
@@ -2354,7 +2589,14 @@
         "slug": "magnezone"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Garbage bin",
@@ -2377,7 +2619,14 @@
         "slug": "crobat"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Utility pole",
@@ -2492,7 +2741,14 @@
         "slug": "empoleon"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Chic chair",
@@ -2584,7 +2840,14 @@
         "slug": "pawmot"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Seat (any)",
@@ -2639,7 +2902,14 @@
         "slug": "tatsugiristretchyform"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Beach chair",
@@ -2678,7 +2948,14 @@
         "slug": "electivire"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Spotlight",
@@ -2715,7 +2992,14 @@
         "slug": "gengar"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Balloons",
@@ -2744,7 +3028,14 @@
         "slug": "flaaffy"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Balloons",
@@ -2773,7 +3064,14 @@
         "slug": "minccino"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Closet",
@@ -2806,7 +3104,14 @@
         "slug": "cinccino"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Partition",
@@ -2886,7 +3191,14 @@
         "slug": "golduck"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Shower",
@@ -3089,7 +3401,14 @@
         "slug": "charjabug"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Vending machine",
@@ -3157,7 +3476,14 @@
         "slug": "magnezone"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Arcade Machine",
@@ -3196,7 +3522,14 @@
         "slug": "empoleon"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Waterwheel",
@@ -3235,7 +3568,14 @@
         "slug": "blaziken"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Metal drum",
@@ -3268,7 +3608,14 @@
         "slug": "azumarill"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Walkway",
@@ -3307,7 +3654,14 @@
         "slug": "haunter"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Bookcase",
@@ -3352,7 +3706,14 @@
         "slug": "electrode"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Barrel",
@@ -3487,7 +3848,14 @@
         "slug": "mimikyu"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pikachu sofa",
@@ -3516,7 +3884,14 @@
         "slug": "blissey"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Cute sofa",
@@ -3563,7 +3938,14 @@
         "slug": "absol"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Resort sofa",
@@ -3604,7 +3986,14 @@
         "slug": "ampharos"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Plain bed",
@@ -3698,7 +4087,14 @@
         "slug": "sudowoodo"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Red tall grass",
@@ -3772,7 +4168,14 @@
         "slug": "lombre"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Red tall grass",
@@ -3805,7 +4208,14 @@
         "slug": "chatot"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Red tall grass",
@@ -3885,7 +4295,14 @@
         "slug": "dachsbun"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Mountain flowers",
@@ -3916,7 +4333,9 @@
         "slug": "volcarona"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Rocky Ridges"
+    ],
     "buildItems": [
       {
         "name": "Pointyt ree",
@@ -3953,7 +4372,14 @@
         "slug": "politoed"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Mountain flowers",
@@ -3990,7 +4416,14 @@
         "slug": "politoed"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Mountain flowers",
@@ -4025,7 +4458,14 @@
         "slug": "tyranitar"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Vegetable field",
@@ -4097,7 +4537,14 @@
         "slug": "tyranitar"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Moss",
@@ -4217,7 +4664,14 @@
         "slug": "politoed"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Hot-spring spout",
@@ -4336,7 +4790,14 @@
         "slug": "machamp"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Iron beam or column",
@@ -4381,7 +4842,14 @@
         "slug": "glimmora"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Stalagmites",
@@ -4430,7 +4898,14 @@
         "slug": "glimmora"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Barrel",
@@ -4471,7 +4946,14 @@
         "slug": "swalot"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Seat (wide)",
@@ -4510,7 +4992,14 @@
         "slug": "dachsbun"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Bread oven",
@@ -4545,7 +5034,14 @@
         "slug": "magmortar"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Kitchen table",
@@ -4590,7 +5086,14 @@
         "slug": "sudowoodo"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Food counter",
@@ -4660,7 +5163,14 @@
         "slug": "honchkrow"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Perch",
@@ -4693,7 +5203,14 @@
         "slug": "wigglytuff"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Speaker",
@@ -4910,7 +5427,14 @@
         "slug": "clefable"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Hedge",
@@ -5039,7 +5563,14 @@
         "slug": "gholdengo"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Luxury lamp",
@@ -5080,7 +5611,14 @@
         "slug": "coalossal"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Iron bed",
@@ -5121,7 +5659,14 @@
         "slug": "decidueye"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Industrial bed",
@@ -5172,7 +5717,14 @@
         "slug": "flygon"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pink tall grass",
@@ -5289,7 +5841,14 @@
         "slug": "corviknight"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pink tall grass",
@@ -5316,7 +5875,14 @@
         "slug": "quilava"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Concrete Pipe",
@@ -5398,7 +5964,14 @@
         "slug": "serperior"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Large tree",
@@ -5435,7 +6008,14 @@
         "slug": "dragonair"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Skyland flowers",
@@ -5464,7 +6044,14 @@
         "slug": "dragonite"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Canoe",
@@ -5505,7 +6092,14 @@
         "slug": "gyarados"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Stepping stones",
@@ -5546,7 +6140,14 @@
         "slug": "altaria"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Stylish hedge",
@@ -5579,7 +6180,14 @@
         "slug": "dragonair"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Shower",
@@ -5608,7 +6216,14 @@
         "slug": "beldum"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Bike",
@@ -5641,7 +6256,14 @@
         "slug": "typhlosion"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Stone fireplace",
@@ -5674,7 +6296,14 @@
         "slug": "alakazam"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Simple cushion",
@@ -5707,7 +6336,14 @@
         "slug": "kadabra"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Seat (any)",
@@ -5746,7 +6382,14 @@
         "slug": "dusknoir"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Garbage bags",
@@ -5916,7 +6559,14 @@
     "image": "/habitats/157.png",
     "description": "Washing your face and drying it off with a towel feels refreshing. Check out how you look in the mirror!",
     "pokemon": [],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Towel Rack",
@@ -5951,7 +6601,14 @@
         "slug": "mismagius"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Speaker",
@@ -5990,7 +6647,14 @@
         "slug": "kirlia"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Bookcase",
@@ -6035,7 +6699,14 @@
         "slug": "noivern"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Speaker",
@@ -6070,7 +6741,14 @@
         "slug": "poliwag"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Bathtub",
@@ -6183,7 +6861,14 @@
         "slug": "porygon-z"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Arcade Machine",
@@ -6243,7 +6928,14 @@
         "slug": "porygon2"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Office desk",
@@ -6296,7 +6988,14 @@
         "slug": "dragapult"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Office shelf",
@@ -6331,7 +7030,14 @@
         "slug": "alakazam"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Science Experiment",
@@ -6440,7 +7146,14 @@
         "slug": "serperior"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Magazine rack",
@@ -6469,7 +7182,14 @@
         "slug": "meowscarada"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Spotlight",
@@ -6508,7 +7228,14 @@
         "slug": "greninja"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Floor switch",
@@ -6541,7 +7268,14 @@
         "slug": "minun"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Photo cutout board",
@@ -6613,7 +7347,14 @@
         "slug": "raichu"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Large tree",
@@ -6654,7 +7395,14 @@
         "slug": "conkeldurr"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Furnace",
@@ -6693,7 +7441,14 @@
         "slug": "gallade"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Hanging scroll",
@@ -6722,7 +7477,14 @@
         "slug": "persian"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Potted plant (any)",
@@ -6757,7 +7519,14 @@
         "slug": "ninetales"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Firepit",
@@ -6827,7 +7596,14 @@
         "slug": "metagross"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Gaming bed",
@@ -6874,7 +7650,14 @@
         "slug": "typhlosion"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pop art bed",
@@ -6903,7 +7686,14 @@
         "slug": "slowking"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Fishing Rod",
@@ -6991,7 +7781,14 @@
         "slug": "clodsire"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Fishing Rod",
@@ -7030,7 +7827,14 @@
         "slug": "lombre"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Fishing Rod",
@@ -7096,7 +7900,14 @@
         "slug": "toxtricityampedform"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Speaker",
@@ -7137,7 +7948,14 @@
         "slug": "toxtricitylowkeyform"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Speaker",
@@ -7178,7 +7996,14 @@
         "slug": "ceruledge"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pedastal",
@@ -7219,7 +8044,14 @@
         "slug": "armarouge"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pedastal",
@@ -7260,7 +8092,14 @@
         "slug": "aerodactyl"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pedestal",
@@ -7313,7 +8152,14 @@
         "slug": "cranidos"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pedestal",
@@ -7342,7 +8188,14 @@
         "slug": "rampardos"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pedestal",
@@ -7383,7 +8236,14 @@
         "slug": "shieldon"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pedestal",
@@ -7412,7 +8272,14 @@
         "slug": "bastiodon"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pedestal",
@@ -7453,7 +8320,14 @@
         "slug": "tyrunt"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pedestal",
@@ -7482,7 +8356,14 @@
         "slug": "tyrantrum"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pedestal",
@@ -7529,7 +8410,14 @@
         "slug": "amaura"
       }
     ],
-    "locations": [],
+    "locations": [
+      "Withered Wastelands",
+      "Bleak Beach",
+      "Rocky Ridges",
+      "Sparkling Skylands",
+      "Palette Town",
+      "Cloud Island"
+    ],
     "buildItems": [
       {
         "name": "Pedestal",
