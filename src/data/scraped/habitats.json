@@ -7884,7 +7884,7 @@
     ]
   },
   {
-    "id": 1,
+    "id": 210,
     "slug": "yellowcarpet",
     "name": "Yellow carpet",
     "image": "/habitats/e1.png",
@@ -7921,7 +7921,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 211,
     "slug": "field-tripfriends",
     "name": "Field-trip friends",
     "image": "/habitats/e2.png",
@@ -7962,7 +7962,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 212,
     "slug": "dandelionlunchtime",
     "name": "Dandelion lunchtime",
     "image": "/habitats/e3.png",
