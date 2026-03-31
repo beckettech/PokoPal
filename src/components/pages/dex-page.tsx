@@ -286,7 +286,7 @@ export function DexPage() {
                 </h3>
                 <div className="space-y-1.5">
                   {LOCATION_ORDER
-                    .filter(loc => selectedPokemon.locations!.includes(loc))
+                    .filter(loc => (selectedPokemon.locations || []).includes(loc))
                     .map(location => (
                       <button
                         key={location}
