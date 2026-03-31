@@ -75,7 +75,7 @@ export function HabitatDexPage() {
   const { setCurrentPage, navigateToPokemon, navigateBack, previousPage, capturedPokemon, focusedHabitatId, setFocusedHabitatId, clearFocus, discoveredHabitats, toggleDiscoveredHabitat } = useAppStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [sortFilter, setSortFilter] = useState<"all" | "discovered" | "undiscovered">("all");
-  const [selectedArea, setSelectedArea] = useState<string | null>(null);
+  const [selectedArea, setSelectedArea] = useState<string>("Withered Wastelands");
   const [selectedHabitat, setSelectedHabitat] = useState<typeof habitatsData[0] | null>(null);
 
   const allHabitatAreas = [...new Set(habitatsData.flatMap(h => h.locations || []))];
@@ -125,11 +125,12 @@ export function HabitatDexPage() {
   const filteredHabitats = useMemo(() => {
     return habitatsData.filter(hab => {
       const matchesSearch = hab.name.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesArea = !selectedArea || (hab.locations || []).includes(selectedArea);
+      const matchesArea = (hab.locations || []).includes(selectedArea);
+      if (!matchesArea) return false;
       const isDiscovered = filterSnapshot.has(hab.id);
       if (sortFilter === "discovered" && !isDiscovered) return false;
       if (sortFilter === "undiscovered" && isDiscovered) return false;
-      return matchesSearch && matchesArea;
+      return matchesSearch;
     });
   }, [searchQuery, sortFilter, filterSnapshot, selectedArea]);
 
@@ -192,12 +193,6 @@ export function HabitatDexPage() {
 
         {/* Area Filter */}
         <div className="flex gap-1.5 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide">
-          <button
-            onClick={() => setSelectedArea(null)}
-            className={`shrink-0 px-2.5 py-1 rounded-full text-[10px] font-medium active:scale-95 transition-transform ${!selectedArea ? "bg-white dark:bg-gray-800 text-green-700" : "bg-white/20 text-white"}`}
-          >
-            All Areas
-          </button>
           {allHabitatAreas.map(area => (
             <button
               key={area}
