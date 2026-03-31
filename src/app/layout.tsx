@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { AdBanner } from "@/components/AdBanner";
+import { OfflineGuard } from "@/components/OfflineGuard";
 import { SessionProvider } from "@/components/SessionProvider";
 
 const geistSans = Geist({
@@ -61,7 +62,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground h-full`}
       >
         <SessionProvider>
-          {children}
+          <OfflineGuard>
+            {children}
+          </OfflineGuard>
         </SessionProvider>
         <AdBanner />
         <Toaster />
