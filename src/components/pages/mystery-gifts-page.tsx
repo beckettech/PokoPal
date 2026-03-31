@@ -14,6 +14,7 @@ const GIFTS = [
     codeNote: "Early purchase bonus — also obtainable through normal gameplay",
     availability: "Mar 5, 2026 – Jan 31, 2027",
     active: true,
+    expiresAt: "2027-01-31",
   },
   {
     id: "chansey-plant",
@@ -22,12 +23,13 @@ const GIFTS = [
     methodType: "code" as const,
     code: "P0K0P1AGARDENS",
     items: ["Chansey Plant (decorative item)"],
-    itemImages: [],
+    itemImages: ["/items/chanseyplant.png"],
     codeNote: "Enter the code at the in-game PC → Get Items → Via Serial Code",
     availability: "Available Oct 7, 2026",
     active: true,
+    expiresAt: "2026-10-07",
   },
-];
+].sort((a, b) => new Date(a.expiresAt).getTime() - new Date(b.expiresAt).getTime());
 
 export function MysteryGiftsPage() {
   const { setCurrentPage, claimedGifts = [], toggleClaimedGift } = useAppStore() as any;
