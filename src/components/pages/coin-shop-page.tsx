@@ -1,17 +1,10 @@
 'use client'
 
 import { useAppStore } from "@/lib/store";
-import { ArrowLeft, Coins, Check, Sparkles, Zap, Crown, Gift } from "lucide-react";
+import { purchaseCoins, purchaseRemoveAds, restorePurchases, isNativePlatform } from "@/lib/purchases";
+import { ArrowLeft, Coins, Check, Sparkles, Zap, Crown, Gift, RotateCcw } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-
-const PAYMENT_LINKS: Record<number, string> = {
-  1: process.env.NEXT_PUBLIC_STRIPE_LINK_1000 || '#',
-  2: process.env.NEXT_PUBLIC_STRIPE_LINK_3500 || '#',
-  3: process.env.NEXT_PUBLIC_STRIPE_LINK_7500 || '#',
-  4: process.env.NEXT_PUBLIC_STRIPE_LINK_20000 || '#',
-  5: process.env.NEXT_PUBLIC_STRIPE_LINK_NOADS || '#',
-};
+import { useState, useEffect } from "react";
 
 const coinPackages = [
   { 
@@ -67,19 +60,80 @@ const dailyRewards = [
 ];
 
 export function CoinShopPage() {
-  const { setCurrentPage, coins, addCoins, coinStamps, coinLastStampDate, claimCoinStamp, user } = useAppStore();
+  const { setCurrentPage, coins, addCoins, coinStamps, coinLastStampDate, claimCoinStamp, user, setPremium, setAdsRemoved } = useAppStore();
   const [selectedPackage, setSelectedPackage] = useState<number | null>(null);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState<string | null>(null);
+  const [isNative, setIsNative] = useState(false);
+  const [restoring, setRestoring] = useState(false);
 
-  const handlePurchase = (pkg: typeof coinPackages[0]) => {
-    const link = PAYMENT_LINKS[pkg.id];
-    if (link && link !== '#') {
-      window.open(link, '_blank');
+  useEffect(() => {
+    isNativePlatform().then(setIsNative);
+  }, []);
+
+  const handlePurchase = async (pkg: typeof coinPackages[0]) => {
+    setSelectedPackage(pkg.id);
+    const result = await purchaseCoins(
+      pkg.coins,
+      () => {
+        addCoins(pkg.coins);
+        setShowSuccess(true);
+        setTimeout(() => setShowSuccess(false), 2000);
+      },
+      (err) => {
+        setShowError(err);
+        setTimeout(() => setShowError(null), 3000);
+      }
+    );
+    setSelectedPackage(null);
+  };
+
+  const handleRemoveAds = async () => {
+    const result = await purchaseRemoveAds(
+      () => {
+        setPremium(true);
+        setShowSuccess(true);
+        setTimeout(() => setShowSuccess(false), 2000);
+      },
+      (err) => {
+        setShowError(err);
+        setTimeout(() => setShowError(null), 3000);
+      }
+    );
+  };
+
+  const handleRestore = async () => {
+    setRestoring(true);
+    const result = await restorePurchases();
+    if (result.adsRemoved) {
+      setAdsRemoved(true);
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 2000);
+    } else if (result.error) {
+      setShowError(result.error);
+      setTimeout(() => setShowError(null), 3000);
     }
+    setRestoring(false);
   };
 
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-amber-500 to-yellow-600 dark:from-amber-500 dark:to-yellow-600">
+      {/* Error Toast */}
+      <AnimatePresence>
+        {showError && (
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            className="absolute bottom-24 left-4 right-4 z-50"
+          >
+            <div className="bg-red-500 text-white rounded-xl px-4 py-3 text-center text-sm font-medium shadow-lg">
+              {showError}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Success Overlay */}
       <AnimatePresence>
         {showSuccess && (
@@ -149,14 +203,22 @@ export function CoinShopPage() {
               </div>
             ) : (
               <button
-                onClick={() => {
-                  const link = PAYMENT_LINKS[5];
-                  if (link && link !== '#') window.open(link, '_blank');
-                }}
+                onClick={handleRemoveAds}
                 className="w-full py-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold rounded-xl active:scale-95 transition-transform flex items-center justify-center gap-2"
               >
                 <span className="text-lg">🚫</span>
                 Remove Ads — $2.99
+              </button>
+            )}
+            {/* Restore Purchases (iOS only) */}
+            {isNative && (
+              <button
+                onClick={handleRestore}
+                disabled={restoring}
+                className="w-full mt-2 py-2 text-xs text-purple-600 dark:text-purple-400 flex items-center justify-center gap-1 opacity-70"
+              >
+                <RotateCcw className="w-3 h-3" />
+                {restoring ? 'Restoring...' : 'Restore Purchases'}
               </button>
             )}
           </div>
