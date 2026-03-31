@@ -362,9 +362,6 @@
     ],
     "locations": [
       "Withered Wastelands",
-      "Bleak Beach",
-      "Rocky Ridges",
-      "Sparkling Skylands",
       "Palette Town"
     ],
     "buildItems": [
@@ -1164,7 +1161,7 @@
     "slug": "graveoffering",
     "name": "Grave offering",
     "image": "/habitats/32.png",
-    "description": "Candles and plated food placed silently before a gravestone. Pretty creepyâ¦",
+    "description": "Candles and plated food placed silently before a gravestone. Pretty creepy\u00e2\u0080\u00a6",
     "pokemon": [
       {
         "name": "Litwick",
@@ -1633,7 +1630,7 @@
     "slug": "very-berryspace",
     "name": "Very-berry space",
     "image": "/habitats/45.png",
-    "description": "A berry table, a berry bedâ¦Everything's a berry! Just looking at them makes you hungry",
+    "description": "A berry table, a berry bed\u00e2\u0080\u00a6Everything's a berry! Just looking at them makes you hungry",
     "pokemon": [
       {
         "name": "Goodra",
@@ -1791,7 +1788,7 @@
     "slug": "nothin'butpokeballs",
     "name": "Nothin' but Poke Balls",
     "image": "/habitats/49.png",
-    "description": "All Pok&eacute;  Ballsâ¦or so you thought! Living here is oddly comforting somehow",
+    "description": "All Pok&eacute;  Balls\u00e2\u0080\u00a6or so you thought! Living here is oddly comforting somehow",
     "pokemon": [
       {
         "name": "Tangela",
@@ -2399,7 +2396,7 @@
     "slug": "parkbench",
     "name": "Park bench",
     "image": "/habitats/66.png",
-    "description": "After eating a snack, put your trash in the trash can. â¦Think Pok&eacute;mon can remember to do that?",
+    "description": "After eating a snack, put your trash in the trash can. \u00e2\u0080\u00a6Think Pok&eacute;mon can remember to do that?",
     "pokemon": [
       {
         "name": "Zubat",
@@ -2914,7 +2911,7 @@
     "slug": "resortmealprep",
     "name": "Resort meal prep",
     "image": "/habitats/79.png",
-    "description": "Sitting by a campfire underneat a palm treeâ¦Let's kick back and cook some food",
+    "description": "Sitting by a campfire underneat a palm tree\u00e2\u0080\u00a6Let's kick back and cook some food",
     "pokemon": [
       {
         "name": "Growlithe",
@@ -3463,7 +3460,7 @@
       }
     ],
     "locations": [
-      "Rocky Ridges"
+      "Bleak Beach"
     ],
     "buildItems": [
       {
@@ -4938,7 +4935,7 @@
     "slug": "railroadcrossing",
     "name": "Railroad crossing",
     "image": "/habitats/132.png",
-    "description": "Absolutely no crossing while the bar is lowered! Butâ¦will Pok&eacute;mon actually sotp and wait?",
+    "description": "Absolutely no crossing while the bar is lowered! But\u00e2\u0080\u00a6will Pok&eacute;mon actually sotp and wait?",
     "pokemon": [
       {
         "name": "Carkol",
@@ -5663,7 +5660,7 @@
     "slug": "surgingpsychicpower",
     "name": "Surging psychic power",
     "image": "/habitats/151.png",
-    "description": "Sit in front of the crystal ball and focus to gain mastery over your psychic powersâ¦maybe.",
+    "description": "Sit in front of the crystal ball and focus to gain mastery over your psychic powers\u00e2\u0080\u00a6maybe.",
     "pokemon": [
       {
         "name": "Abra",
@@ -5696,7 +5693,7 @@
     "slug": "fortune-teller'stable",
     "name": "Fortune-teller's table",
     "image": "/habitats/152.png",
-    "description": "Maybe using psychic power to peer into the crystal ball will give you a glimpse of the futureâ¦",
+    "description": "Maybe using psychic power to peer into the crystal ball will give you a glimpse of the future\u00e2\u0080\u00a6",
     "pokemon": [
       {
         "name": "Abra",
@@ -5816,7 +5813,7 @@
     "slug": "interrogationdesk",
     "name": "Interrogation desk",
     "image": "/habitats/155.png",
-    "description": "You and Arcanine, interrogating perps side by sideâ¦ The tension in the air is palpable",
+    "description": "You and Arcanine, interrogating perps side by side\u00e2\u0080\u00a6 The tension in the air is palpable",
     "pokemon": [
       {
         "name": "Sprigatito",
@@ -6205,7 +6202,7 @@
     "slug": "playland",
     "name": "Playland",
     "image": "/habitats/165.png",
-    "description": "To play on the big slide or with the toysâ¦ Now that's a hard choice",
+    "description": "To play on the big slide or with the toys\u00e2\u0080\u00a6 Now that's a hard choice",
     "pokemon": [
       {
         "name": "Snivy",
@@ -6462,7 +6459,7 @@
     "slug": "heart-poundingsurprisebox",
     "name": "Heart-pounding surprise box",
     "image": "/habitats/172.png",
-    "description": "The rhythm of the big drum, the spotlights on the boo-in-the-boxâ¦ The suspense is palpable!",
+    "description": "The rhythm of the big drum, the spotlights on the boo-in-the-box\u00e2\u0080\u00a6 The suspense is palpable!",
     "pokemon": [
       {
         "name": "Meowscarada",
@@ -6569,7 +6566,7 @@
     "slug": "tirepark",
     "name": "Tire Park",
     "image": "/habitats/175.png",
-    "description": "For some reason, the tires are more enticing than the big slideâ¦ Yeah! Let's play with all the different tires!",
+    "description": "For some reason, the tires are more enticing than the big slide\u00e2\u0080\u00a6 Yeah! Let's play with all the different tires!",
     "pokemon": [
       {
         "name": "Dedenne",
@@ -8020,7 +8017,9 @@
         "slug": "articuno"
       }
     ],
-    "locations": ["Palette Town"],
+    "locations": [
+      "Palette Town"
+    ],
     "buildItems": [
       {
         "name": "Stone",
@@ -8041,14 +8040,14 @@
         "image": "/items/crystalfragments.png"
       },
       {
-        "name": "Pokémetal",
+        "name": "Pok\u00e9metal",
         "slug": "pokemetal",
         "quantity": 10,
         "image": "/items/pokemetal.png"
       }
     ],
-    "requirements": "Build and Water specialty Pokémon",
-    "legendaryInfo": "Get the kit from the eastern island (Yellow Poké Ball on a plinth). Articuno appears inside once built."
+    "requirements": "Build and Water specialty Pok\u00e9mon",
+    "legendaryInfo": "Get the kit from the eastern island (Yellow Pok\u00e9 Ball on a plinth). Articuno appears inside once built."
   },
   {
     "id": 211,
@@ -8062,7 +8061,9 @@
         "slug": "zapdos"
       }
     ],
-    "locations": ["Palette Town"],
+    "locations": [
+      "Palette Town"
+    ],
     "buildItems": [
       {
         "name": "Copper Ingots",
@@ -8089,14 +8090,14 @@
         "image": "/items/bricks.png"
       },
       {
-        "name": "Pokémetal",
+        "name": "Pok\u00e9metal",
         "slug": "pokemetal",
         "quantity": 10,
         "image": "/items/pokemetal.png"
       }
     ],
-    "requirements": "Build, Crush, Fly, and Generate specialty Pokémon",
-    "legendaryInfo": "Get the kit from the southern island mountain top (Yellow Poké Ball on a plinth). Zapdos appears inside once built."
+    "requirements": "Build, Crush, Fly, and Generate specialty Pok\u00e9mon",
+    "legendaryInfo": "Get the kit from the southern island mountain top (Yellow Pok\u00e9 Ball on a plinth). Zapdos appears inside once built."
   },
   {
     "id": 212,
@@ -8110,7 +8111,9 @@
         "slug": "moltres"
       }
     ],
-    "locations": ["Palette Town"],
+    "locations": [
+      "Palette Town"
+    ],
     "buildItems": [
       {
         "name": "Copper Ingots",
@@ -8131,13 +8134,13 @@
         "image": "/items/lavarocks.png"
       },
       {
-        "name": "Pokémetal",
+        "name": "Pok\u00e9metal",
         "slug": "pokemetal",
         "quantity": 10,
         "image": "/items/pokemetal.png"
       }
     ],
-    "requirements": "Build specialty Pokémon",
-    "legendaryInfo": "Get the kit from the northwestern island (Yellow Poké Ball on a plinth). Moltres appears inside once built."
+    "requirements": "Build specialty Pok\u00e9mon",
+    "legendaryInfo": "Get the kit from the northwestern island (Yellow Pok\u00e9 Ball on a plinth). Moltres appears inside once built."
   }
 ]
