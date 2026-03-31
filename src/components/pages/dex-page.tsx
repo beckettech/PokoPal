@@ -87,14 +87,12 @@ export function DexPage() {
   const { setCurrentPage, navigateToHabitat, navigateToHabitatWithPokemon, navigateToLocation, navigateBack, previousPage, capturedPokemon, toggleCapturedPokemon, focusedPokemonId, clearFocus } = useAppStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedRarity, setSelectedRarity] = useState<string | null>(null);
-  const [selectedArea, setSelectedArea] = useState<string | null>(null);
   const [selectedSpecialty, setSelectedSpecialty] = useState<string | null>(null);
   const [friendFilter, setFriendFilter] = useState<"all" | "friends" | "unseen">("all");
   const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(null);
 
   // Collect unique areas and specialties
-  const allAreas = [...new Set(pokemonData.flatMap(p => p.locations || []))];
-  const allSpecialties = [...new Set(pokemonData.flatMap(p => p.specialties || []))].sort();
+  const allSpecialties = [...new Set(pokemonData.flatMap(p => p.specialties || []))].filter(s => s !== "???").sort();
 
   // Auto-open a Pokemon if navigated to via deep-link
   useEffect(() => {
@@ -108,7 +106,6 @@ export function DexPage() {
   const filteredPokemon = pokemonData.filter(pokemon => {
     const matchesSearch = pokemon.name.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesRarity = !selectedRarity || pokemon.rarity === selectedRarity;
-    const matchesArea = !selectedArea || (pokemon.locations || []).includes(selectedArea);
     const matchesSpecialty = !selectedSpecialty || (pokemon.specialties || []).includes(selectedSpecialty);
     let matchesFriendFilter = true;
     if (friendFilter === "friends") matchesFriendFilter = capturedPokemon.includes(pokemon.id);
@@ -394,25 +391,6 @@ export function DexPage() {
               className={`flex-1 px-2.5 py-1.5 rounded-full text-xs font-medium active:scale-95 transition-transform ${selectedRarity === rarity ? getRarityButtonStyle(rarity) : "bg-white/20 text-white"}`}
             >
               {rarity}
-            </button>
-          ))}
-        </div>
-
-        {/* Area Filter */}
-        <div className="flex gap-1.5 mt-2 overflow-x-auto pb-1 -mx-1 px-1 scrollbar-hide">
-          <button
-            onClick={() => setSelectedArea(null)}
-            className={`shrink-0 px-2.5 py-1 rounded-full text-[10px] font-medium active:scale-95 transition-transform ${!selectedArea ? "bg-white dark:bg-gray-800 text-red-600" : "bg-white/20 text-white"}`}
-          >
-            All Areas
-          </button>
-          {allAreas.map(area => (
-            <button
-              key={area}
-              onClick={() => setSelectedArea(selectedArea === area ? null : area)}
-              className={`shrink-0 px-2.5 py-1 rounded-full text-[10px] font-medium active:scale-95 transition-transform ${selectedArea === area ? (LOCATION_COLORS[area] || "bg-white dark:bg-gray-800 text-red-600") : "bg-white/20 text-white"}`}
-            >
-              {area}
             </button>
           ))}
         </div>
