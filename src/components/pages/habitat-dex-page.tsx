@@ -78,7 +78,7 @@ export function HabitatDexPage() {
   const [selectedArea, setSelectedArea] = useState<string>("Withered Wastelands");
   const [selectedHabitat, setSelectedHabitat] = useState<typeof habitatsData[0] | null>(null);
 
-  const allHabitatAreas = [...new Set(habitatsData.flatMap(h => h.locations || []))];
+  const allHabitatAreas = ["Withered Wastelands", "Bleak Beach", "Rocky Ridges", "Sparkling Skylands", "Palette Town", "Cloud Island"];
 
   // Convert array to Set for quick lookup
   const discoveredSet = useMemo(() => new Set(discoveredHabitats), [discoveredHabitats]);
@@ -196,7 +196,7 @@ export function HabitatDexPage() {
           {allHabitatAreas.map(area => (
             <button
               key={area}
-              onClick={() => setSelectedArea(selectedArea === area ? null : area)}
+              onClick={() => setSelectedArea(area)}
               className={`shrink-0 px-2.5 py-1 rounded-full text-[10px] font-medium active:scale-95 transition-transform ${selectedArea === area ? "bg-emerald-500 text-white" : "bg-white/20 text-white"}`}
             >
               {area}
