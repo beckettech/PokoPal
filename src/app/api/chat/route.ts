@@ -15,6 +15,7 @@ let cookingRecipeData: any[] = [];
 let requestData: any[] = [];
 let game8RequestData: any[] = [];
 let itemDetailsData: any[] = [];
+let game8KnowledgeBase: any[] = [];
 
 try {
   const basePath = path.join(process.cwd(), "public");
@@ -28,6 +29,7 @@ try {
     requests: "requests.json",
     game8Requests: "game8-requests.json",
     itemDetails: "game8-item-details.json",
+    game8KnowledgeBase: "game8-knowledge-base.json",
   };
 
   for (const [key, file] of Object.entries(files)) {
@@ -46,11 +48,12 @@ try {
           case "requests": requestData = raw; break;
           case "game8Requests": game8RequestData = raw; break;
           case "itemDetails": itemDetailsData = raw; break;
+          case "game8KnowledgeBase": game8KnowledgeBase = raw; break;
         }
       }
     }
   }
-  console.log(`Loaded: ${pokemonData.length} pokemon, ${habitatData.length} habitats, ${itemData.length} items, ${locationData.length} locations, ${recipeData.length} recipes, ${cookingRecipeData.length} cooking recipes, ${requestData.length} requests, ${game8RequestData.length} game8 requests, ${itemDetailsData.length} item details`);
+  console.log(`Loaded: ${pokemonData.length} pokemon, ${habitatData.length} habitats, ${itemData.length} items, ${locationData.length} locations, ${recipeData.length} recipes, ${cookingRecipeData.length} cooking recipes, ${requestData.length} requests, ${game8RequestData.length} game8 requests, ${itemDetailsData.length} item details, ${game8KnowledgeBase.length} knowledge base entries`);
 } catch (e) {
   console.error("Failed to load data files:", e);
 }
