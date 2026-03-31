@@ -13,6 +13,7 @@ let locationData: any[] = [];
 let recipeData: any[] = [];
 let cookingRecipeData: any[] = [];
 let requestData: any[] = [];
+let itemDetailsData: any[] = [];
 
 try {
   const basePath = path.join(process.cwd(), "public");
@@ -24,6 +25,7 @@ try {
     recipes: "recipes.json",
     cookingRecipes: "cooking-recipes.json",
     requests: "requests.json",
+    itemDetails: "game8-item-details.json",
   };
 
   for (const [key, file] of Object.entries(files)) {
@@ -40,11 +42,12 @@ try {
           case "recipes": recipeData = raw; break;
           case "cookingRecipes": cookingRecipeData = raw; break;
           case "requests": requestData = raw; break;
+          case "itemDetails": itemDetailsData = raw; break;
         }
       }
     }
   }
-  console.log(`Loaded: ${pokemonData.length} pokemon, ${habitatData.length} habitats, ${itemData.length} items, ${locationData.length} locations, ${recipeData.length} recipes, ${cookingRecipeData.length} cooking recipes, ${requestData.length} requests`);
+  console.log(`Loaded: ${pokemonData.length} pokemon, ${habitatData.length} habitats, ${itemData.length} items, ${locationData.length} locations, ${recipeData.length} recipes, ${cookingRecipeData.length} cooking recipes, ${requestData.length} requests, ${itemDetailsData.length} item details`);
 } catch (e) {
   console.error("Failed to load data files:", e);
 }
@@ -261,6 +264,17 @@ function buildContext(query: string): string {
         return `Quest "${r.name}" (given by ${r.giver || 'unknown'} in ${r.area || 'unknown'}): ${r.task || ''}. Reward: ${r.reward || 'unknown'}.`;
       });
       parts.push(`Relevant Quests/Requests:\n${summaries.join('\n')}`);
+    }
+  }
+
+  // Item details (how to get) from Game8 scrape
+  if (itemDetailsData.length > 0) {
+    const detailMatches = topMatches(itemDetailsData, queryWords, 5);
+    if (detailMatches.length > 0) {
+      const summaries = detailMatches.map(d => {
+        return `${d.name} [${d.category || 'item'}]: How to get: ${d.howToGet}`;
+      });
+      parts.push(`Item How-To-Get Details (use this for accurate sourcing info):\n${summaries.join('\n')}`);
     }
   }
 
