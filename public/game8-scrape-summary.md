@@ -3,147 +3,192 @@
 **Date:** March 31, 2026
 **Source:** https://game8.co/games/Pokemon-Pokopia
 
-## Total Pages Scraped: 18
+## Total Pages Scraped: 57
 
 ## Categories Covered:
 
 ### 1. Index & Overview (1 page)
 - Main Wiki Page - Complete overview of all guides and content
 
-### 2. Walkthrough (5 pages)
-- Full Walkthrough Guide
-- Withered Wasteland Area Guide
-- Bleak Beach Area Guide
-- Rocky Ridges Area Guide
-- Sparkling Skylands Area Guide
+### 2. Walkthroughs (8 pages)
+- Full Walkthrough Guide (all areas combined)
+- Withered Wasteland Area Walkthrough
+- Bleak Beach Area Walkthrough
+- Rocky Ridges Area Walkthrough
+- Sparkling Skylands Area Walkthrough
+- Do the Team Initiation Challenge (all 9 steps)
 - Postgame Guide
+- Ending Explained (story spoilers)
 
-### 3. Pokemon (1 page)
+### 3. Area Completion Guides (4 pages)
+- Withered Wasteland Completion Guide (all Pokemon, requests, artifacts)
+- Bleak Beach Completion Guide
+- Rocky Ridges Completion Guide
+- Sparkling Skylands Completion Guide
+
+### 4. Pokemon Guides (5 pages)
 - Full Pokedex: List of All Pokemon
-- Including info on specialties, comfort levels, habitat preferences
+- List of Legendary and Mythical Pokemon
+- List of All Palette Town Pokemon
+- How to Get All of the Eeveelutions
+- List of All Fossil Pokemon
 
-### 4. Habitat Guide (1 page)
-- Habitat Dex: How to Build Every Type of Habitat
-- 140+ habitat recipes with requirements and Pokemon
+### 5. Habitat Guide (1 page)
+- Habitat Dex: How to Build Every Type of Habitat (140+ habitats)
 
-### 5. Moves (1 page)
-- List of All Moves
-- Water Gun, Leafage, Cut, Rock Smash, Strength, Surf, Rollout, Glide, Magnet Rise
-- Power-up foods and PP recovery
+### 6. Moves (1 page)
+- List of All Moves (all 9 moves with power-ups)
 
-### 6. Materials (1 page)
-- List of All Materials
-- Basic materials, crafting materials, food materials, special materials
+### 7. Materials (1 page)
+- List of All Materials (all crafting, food, and special materials)
 
-### 7. Specialties (1 page)
+### 8. Specialties (2 pages)
 - List of Pokemon by Specialties
-- Construction, Processing, Exploration, Utility specialties
-- Key NPC Pokemon with their roles
+- Best Pokemon Specialty to Follow You
 
-### 8. Requests/Quests (1 page)
-- List of All Requests
-- Important story requests and side quests
-- How to find and complete requests
+### 9. Requests/Quests (1 page)
+- List of All Requests (important + general requests)
 
-### 9. NPCs (1 page)
-- List of Unique Pokemon NPCs
-- Professor Tangrowth, DJ Rotom, Chef Dente, Smearguru, Peakychu, Mosslax, Tinkmaster
-- Their specialties, habitats, and preferences
+### 10. NPCs (1 page)
+- List of Unique Pokemon NPCs (7 unique NPCs)
 
-### 10. Areas and Biomes (1 page)
-- All 5 biomes: Withered Wasteland, Bleak Beach, Rocky Ridges, Sparkling Skylands, Palette Town
-- Unlock requirements and key features
+### 11. Areas and Biomes (1 page)
+- List of Areas and Biomes (all 5 biomes)
 
-### 11. Tips and Tricks (1 page)
-- Beginner's Guide with 9 essential tips
-- Complete list of all building, habitat, and gameplay guides
+### 12. Tips and Tricks (22 pages)
+- Beginner's Guide to Pokopia
+- How to Increase Comfort Level
+- How to Raise Environment Level
+- Time Traveling Guide
+- All Daily Activities
+- Money Farming Guide (Life Coins)
+- Cloud Island Guide
+- Mysterious Mural Guide
+- How Long to Beat
+- All Missables and One-Time Events
+- Should You Go to Bleak Beach or Rocky Ridges?
+- How to Increase Trainer Rank
+- How to Raise Humidity
+- How to Change the Weather
+- How to Plant Seeds and Grow Crops
+- Best Pokemon Specialty to Follow You Around
+- How to Have Pokemon Follow You
+- How to Fast Travel
+- How to Use the Smelting Furnace
+- How to Unlock Palette Town
+- How to GameShare Pokopia
+- How to Rebuild the Pokemon Center
 
-### 12. Ancient Artifacts (1 page)
-- Large Lost Relics (L)
-- Small Lost Relics (S) - hold items from mainline games
-- Fossils by biome
-- How to find, appraise, and trade artifacts
+### 13. Ancient Artifacts (1 page)
+- List of Ancient Artifacts (Large + Small relics, Fossils by biome)
 
-### 13. Human Records (1 page)
+### 14. Human Records (1 page)
 - All Human Record Locations
-- 9 categories: Announcements, Diaries, Magazines, Team Rocket docs, Development docs, Notes, Letters, Reports, Photos
-- Organized by biome
 
-### 14. Items (1 page)
-- Complete list of all items
-- Categories: Furniture, Miscellaneous, Outdoor Items, Utilities
-- 200+ items listed
+### 15. Items (1 page)
+- List of All Items (200+ items)
 
-### 15. Crafting (1 page)
+### 16. Crafting (1 page)
 - Crafting Guide
-- Basic recipes and how to craft
-- Tips for efficient crafting
 
-### 16. Highlight Reels (1 page)
-- List of all photo ops
-- Requirements and rewards for each
+### 17. Highlight Reels (1 page)
+- List of Highlight Reels
 
-### 17. Events (1 page)
-- Current and upcoming events calendar
-- Event mechanics and how to participate
+### 18. Events (1 page)
+- List of All Events
+
+### 19. Special Features (3 pages)
+- Dream Island Guide
+- Best Mosslax Offerings
+- How to Get Electricity to Power Your Island
+
+### 20. Location Guides (2 pages)
+- How to Go to the S.S. Anne
+- List of All Fossil Pokemon
+
+### 21. Lore (1 page)
+- Pokopia Ending Explained
 
 ## Key Content Highlights:
 
 ### Story Progression
-- Complete walkthroughs for all 4 main areas
-- Step-by-step instructions for important requests
-- Postgame content including Magnet Rise unlock
+- Complete step-by-step walkthroughs for all 4 main areas
+- Team Initiation Challenge (9 steps, all 8 badges)
+- Postgame content (Magnet Rise, Team Rocket hideout, Palette Town)
+- Story explained (humans went to space, Pokemon released from PCs)
 
 ### Game Mechanics
-- All 9 moves with their uses and power-ups
-- Environment and comfort level systems
-- Electricity and weather systems
-- Time-based mechanics
+- All 9 moves with power-up food
+- Environment Level system (max 10, need 5 for endgame)
+- Comfort Level system (6 tiers)
+- Trainer Rank system (No Rank → Great → Ultra → Master)
+- Electricity system (Windmill, Waterwheel, Furnace)
+- Smelting Furnace (10+ ore types → ingots/materials)
+- Pokemon following system (max 5 at once)
+- Fast travel (Return Home, Fly/Teleport specialties)
+- Time travel mechanics
+- Weather system (Sunny, Rainy, Cloudy)
+- Humidity system
+- Farming/crops system
 
 ### Collectibles
-- 140+ habitats
+- 140+ habitat recipes
 - 200+ items
-- 60+ ancient artifacts
+- 60+ ancient artifacts (Large + Small relics, Fossils)
 - 50+ human records
 - Photo highlight reels
+- 9 fossil Pokemon with complete fossil display requirements
 
-### Pokemon Info
-- 300+ Pokemon available
-- Specialty system
-- Comfort level preferences
-- Habitat requirements
+### Pokemon
+- 300+ Pokemon total
+- 12 Legendary/Mythical Pokemon with how-to
+- 9 Fossil Pokemon with all habitats
+- 8 Eeveelutions with unique tasks
+- Unique NPCs (Tangrowth, Rotom, Chef Dente, Smearguru, Peakychu, Mosslax, Tinkmaster)
+- Nighttime-exclusive Pokemon list
+- Weather-exclusive Pokemon list
+
+### Areas (All 5)
+- Withered Wasteland: Full Pokemon/habitat/request list
+- Bleak Beach: Full Pokemon/habitat/request list
+- Rocky Ridges: Full Pokemon/habitat/request list
+- Sparkling Skylands: Full Pokemon/habitat/request list
+- Palette Town: Sandbox area with Eeveelutions and Legendary Birds
 
 ### Events
-- 4 events scheduled for March-May 2026
-- Hoppip event (current)
-- Bulbasaur Jump Rope Contest
-- Sableye mining event
-- Special Quizzes
+- More Spores for Hoppip (March 10-25)
+- Special Quizzes Event (April 1)
+- Bulbasaur's Jump Rope Contest (April 19-27)
+- Sableye Event (April 29 - May 13)
 
-## What's New vs Previous Data:
+## Files Created/Updated:
 
-This scrape captured comprehensive content from Game8.co including:
-
-1. **Complete Walkthroughs** - Detailed step-by-step guides for all areas
-2. **Habitat Recipes** - 140+ habitat combinations with requirements
-3. **NPC Details** - Full info on unique Pokemon NPCs with preferences
-4. **Human Records** - Complete list with locations and unlock requirements
-5. **Items Database** - 200+ furniture, decorations, and utility items
-6. **Event Calendar** - Current and upcoming limited-time events
-7. **Postgame Content** - Magnet Rise unlock, Palette Town access
-
-## Files Created:
-
-1. `public/game8-knowledge-base.json` - Complete JSON database with all scraped content
+1. `public/game8-knowledge-base.json` - Complete JSON database (57 entries)
 2. `public/game8-scrape-summary.md` - This summary file
 
 ## Technical Notes:
 
 - Used web_fetch with maxChars=50000 per page
-- Followed 1-2 second delays between requests
-- All content extracted via readability extractor in markdown format
-- Content organized by category for easy chatbot querying
+- Content extracted via readability extractor
+- Organized by category for chatbot querying
+- Each entry has title, url, category, and full content
 
 ## Failed Pages:
 
 None - all requested pages were successfully scraped.
+
+## Previously Existing Data:
+
+The repository already had:
+- cooking-recipes.json
+- game8-item-details.json
+- game8-requests.json
+- habitats.json
+- items.json
+- locations.json
+- pokemon.json
+- recipes.json
+- requests.json
+- specialties/ folder
+
+The new game8-knowledge-base.json is a comprehensive text-based knowledge base specifically designed for the chatbot, covering all guide content from Game8.co.
