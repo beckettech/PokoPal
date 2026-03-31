@@ -450,6 +450,17 @@ export const mysteryGifts: MysteryGift[] = [
   { id: 3, name: "Rare Habitat Pack", description: "Contains materials for building a Mossy Rest Spot habitat.", type: "item", expiresAt: "March 20, 2026", claimed: true },
 ];
 
+// Specialty icon lookup built from scraped data
+import specialtiesDataRaw from "@/data/scraped/specialties.json";
+const _specialtyIconMap: Record<string, string> = {};
+for (const s of specialtiesDataRaw as any[]) {
+  _specialtyIconMap[s.name.toLowerCase()] = s.icon;
+}
+
+export function getSpecialtyIcon(name: string): string {
+  return _specialtyIconMap[name.toLowerCase()] || "";
+}
+
 /**
  * Get all specialty icon URLs for a list of specialties
  * @param specialties - Array of specialty names
