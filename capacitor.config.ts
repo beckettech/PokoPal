@@ -4,6 +4,12 @@ const config: CapacitorConfig = {
   appId: 'com.bektech.pokopiaguide',
   appName: 'Pokopia Guide',
   webDir: 'out',
+  plugins: {
+    AdMob: {
+      testDeviceIds: [],
+      initializeForTesting: true,
+    },
+  },
   ios: {
     contentInset: 'automatic',
   },
