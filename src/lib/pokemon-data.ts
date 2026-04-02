@@ -399,6 +399,7 @@ export interface Request {
   rewards: string[];
   unlocks: string[];
   status: "available" | "in_progress" | "completed";
+  items?: string[];
 }
 
 export const requests: Request[] = [
@@ -406,7 +407,15 @@ export const requests: Request[] = [
   { id: 2, name: "Brighten Things Up!", category: "Story", description: "Bring light to the dark caves of Pokopia.", rewards: ["Flash ability", "Lantern recipe"], unlocks: ["Cave exploration"], status: "available" },
   { id: 3, name: "Time to Party!", category: "Event", description: "Set up the perfect party for the Pokémon celebration.", rewards: ["Party items", "Special Pikachu"], unlocks: ["Party habitat decorations"], status: "in_progress" },
   { id: 4, name: "Rebuild the Huge Building!", category: "Story", description: "Help restore the abandoned building to its former glory.", rewards: ["New shop", "Gym access"], unlocks: ["Urban habitat types"], status: "available" },
-  { id: 5, name: "Do the Team Initiation Challenge?", category: "Battle", description: "Prove your worth to join the exploration team.", rewards: ["Team membership", "Special badge"], unlocks: ["Boulder-shaded Tall Grass", "Seaside Tall Grass"], status: "completed" },
+  { id: 5, name: "Team Initiation Challenge 1", category: "Initiation", description: "Insert items into the machine at the strange building on the coast of the Withered Wastelands.", rewards: ["Bouldery Badge"], unlocks: ["Challenge 2"], status: "completed", items: ["5 Leppa Berry"] },
+  { id: 6, name: "Team Initiation Challenge 2", category: "Initiation", description: "Continue the initiation by bringing more resources to the machine.", rewards: ["Cascade-like Badge"], unlocks: ["Challenge 3"], status: "completed", items: ["10 Beans", "10 Tomatoes", "10 Wheat"] },
+  { id: 7, name: "Team Initiation Challenge 3", category: "Initiation", description: "Gather building materials for the machine. Fluff can be obtained around Pokémon like Swablu and Mareep. Paper is obtained from giving Pokémon with Recycle Wastepaper.", rewards: ["Thunderish Badge"], unlocks: ["Challenge 4"], status: "completed", items: ["20 Lumber", "5 Fluff", "10 Paper"] },
+  { id: 8, name: "Team Initiation Challenge 4", category: "Initiation", description: "Heavy materials needed. Bricks from giving Pokémon with Burn Solid Clay. Gold requires processing. Concrete requires processing.", rewards: ["Rainbowish Badge"], unlocks: ["Challenge 5"], status: "completed", items: ["40 Bricks", "20 Gold Ingots", "50 Concrete"] },
+  { id: 9, name: "Team Initiation Challenge 5", category: "Initiation", description: "Power up the building. Electricity is needed to be connected — a Furnace provides 30, a Windmill provides 10. Tinkagears are made by giving the Tinkmaster Iron Ingots.", rewards: ["Soul-like Badge"], unlocks: ["Challenge 6"], status: "completed", items: ["50 Electricity", "10 Crystal Fragments", "5 Tinkagears"] },
+  { id: 10, name: "Team Initiation Challenge 6", category: "Initiation", description: "Furnish the building with furniture items.", rewards: ["Marshy Badge"], unlocks: ["Challenge 7"], status: "completed", items: ["4 Industrial Beds", "4 Resort Lights", "4 Office Desks"] },
+  { id: 11, name: "Team Initiation Challenge 7", category: "Initiation", description: "Deliver appliances and reach max environment levels in three areas.", rewards: ["Volcanoey Badge"], unlocks: ["Challenge 8"], status: "completed", items: ["Washing Machine", "Refrigerator", "Game Boy", "Bleak Beach Env. Level 5", "Rocky Ridges Env. Level 5", "Sparkling Skylands Env. Level 5"] },
+  { id: 12, name: "Team Initiation Challenge 8", category: "Initiation", description: "Deposit a photo into the machine — any photo will do.", rewards: ["Earth Badge"], unlocks: ["Challenge 9"], status: "completed", items: ["Cherished Photo"] },
+  { id: 13, name: "Team Initiation Challenge 9", category: "Initiation", description: "Final challenge — reach max environment level in the starting area.", rewards: ["Final Badge", "Rocket Launch Event"], unlocks: ["Team Rocket Hideout"], status: "completed", items: ["2 Party Poppers", "Withered Wastelands Env. Level 5"] },
 ];
 
 // Cloud Islands posts

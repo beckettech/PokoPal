@@ -60,16 +60,6 @@
     "isImportant": true
   },
   {
-    "id": "team-initiation-challenge",
-    "name": "Do the...Team Initiation Challenge",
-    "giver": "Machine (Sand-Covered Building)",
-    "area": "Withered Wastelands",
-    "task": "Complete 9 fetch quest challenges from the machine on the coast. Requires completing all 4 Raise the Environment Level requests first. Bring various items to the building for each challenge.",
-    "rewardType": "story",
-    "reward": "9 badges + story completion",
-    "isImportant": true
-  },
-  {
     "id": "time-to-party",
     "name": "Time to Party!",
     "giver": "DJ Rotom",
@@ -565,5 +555,95 @@
     "task": "Find 10 unique CDs hidden in glowing spots scattered across Pokopia. Break glowing spots using Rock Smash or Rollout. Use the Dowsing Machine (requires Search specialty Pok\u00e9mon in party) to locate nearby glowing spots. Avoid duplicates \u2014 10 distinct CDs are required. Once collected, speak to DJ Rotom to complete the request and unlock new music options for the town.",
     "rewardType": "story",
     "reward": "New music options for the town"
+  },
+  {
+    "id": "initiation-1",
+    "name": "Team Initiation Challenge 1",
+    "giver": "Machine (Sand-Covered Building)",
+    "area": "Withered Wastelands",
+    "task": "Insert items into the machine. Bring 5 Leppa Berries.",
+    "rewardType": "item",
+    "reward": "Bouldery Badge",
+    "isImportant": true
+  },
+  {
+    "id": "initiation-2",
+    "name": "Team Initiation Challenge 2",
+    "giver": "Machine (Sand-Covered Building)",
+    "area": "Withered Wastelands",
+    "task": "Bring 10 Beans, 10 Tomatoes, and 10 Wheat to the machine.",
+    "rewardType": "item",
+    "reward": "Cascade-like Badge",
+    "isImportant": true
+  },
+  {
+    "id": "initiation-3",
+    "name": "Team Initiation Challenge 3",
+    "giver": "Machine (Sand-Covered Building)",
+    "area": "Withered Wastelands",
+    "task": "Bring 20 Lumber, 5 Fluff, and 10 Paper. Fluff can be obtained around Pok\u00e9mon like Swablu and Mareep. Paper is obtained from giving Pok\u00e9mon with Recycle Wastepaper.",
+    "rewardType": "item",
+    "reward": "Thunderish Badge",
+    "isImportant": true
+  },
+  {
+    "id": "initiation-4",
+    "name": "Team Initiation Challenge 4",
+    "giver": "Machine (Sand-Covered Building)",
+    "area": "Withered Wastelands",
+    "task": "Bring 40 Bricks, 20 Gold Ingots, and 50 Concrete. Bricks from giving Pok\u00e9mon with Burn Solid Clay. Gold and Concrete require processing.",
+    "rewardType": "item",
+    "reward": "Rainbowish Badge",
+    "isImportant": true
+  },
+  {
+    "id": "initiation-5",
+    "name": "Team Initiation Challenge 5",
+    "giver": "Machine (Sand-Covered Building)",
+    "area": "Withered Wastelands",
+    "task": "Bring 50 Electricity, 10 Crystal Fragments, and 5 Tinkagears. Electricity must be connected \u2014 a Furnace provides 30, a Windmill provides 10. Tinkagears are made by giving the Tinkmaster Iron Ingots.",
+    "rewardType": "item",
+    "reward": "Soul-like Badge",
+    "isImportant": true
+  },
+  {
+    "id": "initiation-6",
+    "name": "Team Initiation Challenge 6",
+    "giver": "Machine (Sand-Covered Building)",
+    "area": "Withered Wastelands",
+    "task": "Bring 4 Industrial Beds, 4 Resort Lights, and 4 Office Desks.",
+    "rewardType": "item",
+    "reward": "Marshy Badge",
+    "isImportant": true
+  },
+  {
+    "id": "initiation-7",
+    "name": "Team Initiation Challenge 7",
+    "giver": "Machine (Sand-Covered Building)",
+    "area": "Withered Wastelands",
+    "task": "Bring a Washing Machine, Refrigerator, and Game Boy. Also reach Environment Level 5 in Bleak Beach, Rocky Ridges, and Sparkling Skylands.",
+    "rewardType": "item",
+    "reward": "Volcanoey Badge",
+    "isImportant": true
+  },
+  {
+    "id": "initiation-8",
+    "name": "Team Initiation Challenge 8",
+    "giver": "Machine (Sand-Covered Building)",
+    "area": "Withered Wastelands",
+    "task": "Deposit a photo into the machine \u2014 any photo will work.",
+    "rewardType": "item",
+    "reward": "Earth Badge",
+    "isImportant": true
+  },
+  {
+    "id": "initiation-9",
+    "name": "Team Initiation Challenge 9 (Finale)",
+    "giver": "Machine (Sand-Covered Building)",
+    "area": "Withered Wastelands",
+    "task": "Bring 2 Party Poppers and reach Environment Level 5 in Withered Wastelands. Completing this launches the Rocket and reveals Team Rocket's hideout underneath.",
+    "rewardType": "story",
+    "reward": "Final Badge + Rocket Launch",
+    "isImportant": true
   }
 ]
