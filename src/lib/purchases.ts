@@ -1,8 +1,14 @@
 // Ad/Purchases stubs — placeholder until AdMob is re-added for Capacitor 8
 
 export const ADMOB_CONFIG = {
-  production: { banner: '', rewarded: '' },
-  test: { banner: '', rewarded: '' },
+  production: {
+    banner: process.env.NEXT_PUBLIC_ADMOB_BANNER_ID || 'ca-app-pub-3940256099942544/2934735716',
+    rewarded: process.env.NEXT_PUBLIC_ADMOB_REWARDED_ID || 'ca-app-pub-3940256099942544/5224354917',
+  },
+  test: {
+    banner: 'ca-app-pub-3940256099942544/2934735716',
+    rewarded: 'ca-app-pub-3940256099942544/5224354917',
+  },
 };
 
 export const REVENUECAT_CONFIG = {
