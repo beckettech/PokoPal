@@ -5,9 +5,8 @@ import { ArrowLeft, Send, Coins, Sparkles, Loader2 } from "lucide-react";
 import { useAppStore } from "@/lib/store";
 import { hapticBuzz } from "@/lib/haptics";
 import { motion, AnimatePresence } from "framer-motion";
-import { pokemonList } from "@/lib/pokemon-data";
+import { useLazyData, fetchPokemonList, fetchHabitats } from "@/lib/lazy-data";
 import { getApiUrl } from "@/lib/api-config";
-import habitatsData from "@/data/scraped/habitats.json";
 
 // Dexter avatar
 const DEXTER_AVATAR = "/logo.png";
@@ -25,6 +24,9 @@ export function ChatPage() {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const { data: pokemonList } = useLazyData(fetchPokemonList);
+  const { data: habitatsData } = useLazyData(fetchHabitats);
 
   // Chat history is stored locally via Zustand (persisted to localStorage)
   // Server-side sync will be added when we have a real database
@@ -113,14 +115,14 @@ export function ChatPage() {
       const [full, type, name] = match;
       const handleClick = () => {
         if (type === "Dex") {
-          const pokemon = pokemonList.find(p => p.name.toLowerCase() === name.toLowerCase());
+          const pokemon = (pokemonList || []).find(p => p.name.toLowerCase() === name.toLowerCase());
           if (pokemon) {
             navigateToPokemon(pokemon.id);
           } else {
             setCurrentPage("dex");
           }
         } else if (type === "Habitat") {
-          const habitat = habitatsData.find(h => h.name.toLowerCase() === name.toLowerCase());
+          const habitat = (habitatsData || []).find(h => h.name.toLowerCase() === name.toLowerCase());
           if (habitat) {
             navigateToHabitat(habitat.id);
           } else {

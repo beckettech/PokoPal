@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { cloudIslandsPosts } from "@/lib/pokemon-data";
+import fs from "fs";
+import path from "path";
 
 export async function POST(req: NextRequest) {
   try {
@@ -15,8 +16,10 @@ export async function POST(req: NextRequest) {
     }
 
     // Check for duplicate island code
+    const cloudIslandsPath = path.join(process.cwd(), "public", "cloud-islands.json");
+    const cloudIslandsPosts = JSON.parse(fs.readFileSync(cloudIslandsPath, "utf8"));
     const existing = cloudIslandsPosts.find(
-      (post) => post.islandCode.toUpperCase() === islandCode.toUpperCase()
+      (post: any) => post.islandCode.toUpperCase() === islandCode.toUpperCase()
     );
 
     if (existing) {

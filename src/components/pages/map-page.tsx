@@ -1,10 +1,9 @@
 'use client'
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useAppStore } from "@/lib/store";
+import { useLazyData, fetchLocations, fetchHabitats } from "@/lib/lazy-data";
 import { ArrowLeft, Search, MapPin, ChevronDown, ChevronUp, TreePine, Plus, Check, Bookmark } from "lucide-react";
-import locationsData from "@/data/scraped/locations.json";
-import habitatsData from "@/data/scraped/habitats.json";
 
 const LOCATION_COLORS: Record<string, { bg: string; badge: string; text: string }> = {
   "Withered Wastelands": { bg: "from-green-600 to-green-800", badge: "bg-green-700", text: "text-green-100" },
@@ -15,23 +14,37 @@ const LOCATION_COLORS: Record<string, { bg: string; badge: string; text: string 
   "Cloud Island":        { bg: "from-purple-400 to-purple-600", badge: "bg-purple-500", text: "text-white" },
 };
 
-// Build a map from location name -> list of habitats in that location
-const locationHabitats: Record<string, typeof habitatsData> = {};
-for (const habitat of habitatsData) {
-  for (const loc of (habitat.locations || [])) {
-    if (!locationHabitats[loc]) locationHabitats[loc] = [];
-    locationHabitats[loc].push(habitat);
-  }
-}
-
 export function MapPage() {
   const { setCurrentPage, navigateToHabitat, visitedLocations = [], toggleVisitedLocation } = useAppStore() as any;
   const [searchQuery, setSearchQuery] = useState("");
   const [expandedLocation, setExpandedLocation] = useState<string | null>(null);
   const [filterBy, setFilterBy] = useState<"all" | "visited">("all");
 
+  const { data: locationsData, loading } = useLazyData(fetchLocations);
+  const { data: habitatsData } = useLazyData(fetchHabitats);
+
+  // Build a map from location name -> list of habitats in that location
+  const locationHabitats = useMemo(() => {
+    const map: Record<string, any[]> = {};
+    if (habitatsData) for (const habitat of habitatsData) {
+      for (const loc of (habitat.locations || [])) {
+        if (!map[loc]) map[loc] = [];
+        map[loc].push(habitat);
+      }
+    }
+    return map;
+  }, [habitatsData]);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-full">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-500"></div>
+      </div>
+    );
+  }
+
   // Filter locations
-  const filteredLocations = locationsData.filter(loc => {
+  const filteredLocations = (locationsData || []).filter(loc => {
     if (loc.name === "Cloud Island") return false;
     const matchSearch = loc.name.toLowerCase().includes(searchQuery.toLowerCase());
     const isVisited = visitedLocations.includes(loc.id);
