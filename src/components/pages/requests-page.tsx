@@ -35,13 +35,12 @@ export function RequestsPage() {
 
   const filtered = requests.filter((r: any) => {
     const matchSearch = !search || r.name.toLowerCase().includes(search.toLowerCase());
-    const matchArea = r.area === areaFilter || r.area === "All Areas";
     const isCompleted = completedRequests.includes(r.id);
     const isInProgress = inProgressRequests.includes(r.id);
-    if (statusFilter === "todo") return matchSearch && matchArea && !isCompleted && !isInProgress;
-    if (statusFilter === "in-progress") return matchSearch && matchArea && isInProgress && !isCompleted;
-    if (statusFilter === "done") return matchSearch && matchArea && isCompleted;
-    return matchSearch && matchArea;
+    if (statusFilter === "todo") return matchSearch && !isCompleted && !isInProgress;
+    if (statusFilter === "in-progress") return matchSearch && isInProgress && !isCompleted;
+    if (statusFilter === "done") return matchSearch && isCompleted;
+    return matchSearch;
   });
 
   const totalCompleted = completedRequests.length;
