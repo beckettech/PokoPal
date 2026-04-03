@@ -196,3 +196,9 @@ html {
 .animate-slide-up {
   animation: slide-up 0.3s ease-out;
 }
+
+
+/* iOS native safe area top padding */
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}

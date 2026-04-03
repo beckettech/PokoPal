@@ -97,6 +97,17 @@ const TOTAL = TOTAL_POKEMON + TOTAL_HABITATS + TOTAL_REQUESTS + TOTAL_LOCATIONS;
 export function HomePage() {
   const { setCurrentPage, coins, capturedPokemon, discoveredHabitats, completedRequests, visitedLocations } = useAppStore();
   const isLoggedIn = useAppStore((s) => s.user.isLoggedIn);
+  const [isNative, setIsNative] = useState(false);
+
+  useEffect(() => {
+    const check = async () => {
+      try {
+        const { Capacitor } = await import('@capacitor/core');
+        setIsNative(Capacitor.isNativePlatform());
+      } catch {}
+    };
+    check();
+  }, []);
   const visitedPages = useAppStore((s) => s.visitedPages);
   const [showAccountNudge, setShowAccountNudge] = useState(false);
 
@@ -119,7 +130,7 @@ export function HomePage() {
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-red-500 via-red-600 to-red-700">
       {/* Header Section */}
-      <div className="pt-6 pb-2 px-4">
+      <div className={`pb-2 px-4 ${isNative ? 'pt-safe' : 'pt-6'}`}>
         {/* Top Row - Blue Button, Circles, and Coins */}
         <div className="flex items-start justify-between">
           {/* Left Side: Large Blue Button + Circles */}
