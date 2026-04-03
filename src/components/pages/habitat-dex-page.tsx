@@ -283,7 +283,7 @@ export function HabitatDexPage() {
         const habitat = selectedHabitat;
         const isDiscovered = discoveredSet.has(habitat.id);
         return (
-          <div className="absolute inset-0 bg-gray-50 dark:bg-gray-900 flex flex-col overflow-hidden z-10">
+          <div className="fixed inset-0 bg-gray-50 dark:bg-gray-900 flex flex-col overflow-hidden z-50">
             {/* Header */}
             <div className="shrink-0 bg-white dark:bg-gray-800 px-4 pt-4 pb-3 border-b border-gray-100 dark:border-gray-700">
               <div className="flex items-center gap-3">
