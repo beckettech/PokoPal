@@ -586,12 +586,12 @@
       {
         "name": "Beans",
         "qty": 10,
-        "slug": "beans"
+        "slug": "bean"
       },
       {
         "name": "Tomatoes",
         "qty": 10,
-        "slug": "tomatoes"
+        "slug": "tomato"
       },
       {
         "name": "Wheat",
@@ -640,7 +640,7 @@
       {
         "name": "Bricks",
         "qty": 40,
-        "slug": "bricks"
+        "slug": "brick"
       },
       {
         "name": "Gold Ingot",
@@ -667,7 +667,7 @@
       {
         "name": "Electricity",
         "qty": 50,
-        "slug": "electricity"
+        "slug": "minigenerator"
       },
       {
         "name": "Crystal Fragment",
