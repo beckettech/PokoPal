@@ -324,7 +324,7 @@ export function DexPage() {
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-red-500 to-red-600">
       {/* Header */}
-      <div className="pt-6 pb-2 px-4 shrink-0">
+      <div className="pt-safe-top pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
           <button
             onClick={() => { if (previousPage) navigateBack(); else setCurrentPage("home"); }}

@@ -144,7 +144,7 @@ export function HabitatDexPage() {
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-green-500 to-green-600 dark:from-green-900 dark:to-green-950 overflow-hidden relative">
       {/* Header */}
-      <div className="pt-6 pb-2 px-4 shrink-0">
+      <div className="pt-safe-top pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
           <motion.button
             onClick={() => { if (previousPage) navigateBack(); else setCurrentPage("home"); }}

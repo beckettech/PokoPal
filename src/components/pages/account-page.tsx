@@ -96,7 +96,7 @@ export function AccountPage() {
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-slate-600 to-slate-800 dark:from-slate-900 dark:to-slate-950">
       {/* Header */}
-      <div className="pt-6 pb-3 px-4 shrink-0">
+      <div className="pt-safe-top pt-6 pb-3 px-4 shrink-0">
         <div className="flex items-center gap-3 mb-2">
           <button
             onClick={() => setCurrentPage("home")}

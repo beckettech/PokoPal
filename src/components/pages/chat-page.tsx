@@ -158,7 +158,7 @@ export function ChatPage() {
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-cyan-600 to-blue-700 dark:from-cyan-900 dark:to-blue-950">
       {/* Header */}
-      <div className="pt-6 pb-3 px-4 shrink-0">
+      <div className="pt-safe-top pt-6 pb-3 px-4 shrink-0">
         <div className="flex items-center justify-between mb-3">
           <button
             onClick={() => setCurrentPage("home")}

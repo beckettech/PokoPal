@@ -32,7 +32,7 @@ export function MovesPage() {
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-orange-500 to-orange-600">
       {/* Header */}
-      <div className="pt-6 pb-2 px-4">
+      <div className="pt-safe-top pt-6 pb-2 px-4">
         <div className="flex items-center justify-between mb-2">
           <motion.button
             onClick={() => setCurrentPage("home")}

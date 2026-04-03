@@ -44,7 +44,7 @@ export function RelicsPage() {
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-amber-700 to-amber-800 dark:from-amber-600 dark:to-amber-700 overflow-hidden">
       {/* Header */}
-      <div className="pt-6 pb-2 px-4 shrink-0">
+      <div className="pt-safe-top pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-3">
           <button
             onClick={() => setCurrentPage("home")}

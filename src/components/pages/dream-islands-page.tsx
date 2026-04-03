@@ -186,7 +186,7 @@ export function DreamIslandsPage() {
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-purple-600 via-purple-500 to-indigo-500 dark:from-purple-900 dark:via-purple-900 dark:to-indigo-950 overflow-hidden">
       {/* Header */}
-      <div className="pt-6 pb-2 px-4 shrink-0">
+      <div className="pt-safe-top pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
           <motion.button
             onClick={() => setCurrentPage("home")}

@@ -55,7 +55,7 @@ export function MapPage() {
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-blue-500 to-blue-600 dark:from-blue-900 dark:to-blue-950 overflow-hidden">
       {/* Header */}
-      <div className="pt-6 pb-2 px-4 shrink-0">
+      <div className="pt-safe-top pt-6 pb-2 px-4 shrink-0">
         <div className="flex items-center justify-between mb-2">
           <button
             onClick={() => setCurrentPage("home")}

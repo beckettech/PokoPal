@@ -51,7 +51,7 @@ export function RequestsPage() {
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-yellow-500 to-orange-500 dark:from-yellow-500 dark:to-orange-600">
       {/* Header */}
-      <div className="pt-6 pb-3 px-4 shrink-0">
+      <div className="pt-safe-top pt-6 pb-3 px-4 shrink-0">
         <div className="flex items-center justify-between mb-3">
           <button
             onClick={() => setCurrentPage("home")}
