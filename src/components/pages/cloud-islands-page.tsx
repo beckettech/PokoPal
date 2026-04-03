@@ -1,8 +1,7 @@
 'use client'
 
 import { useAppStore } from "@/lib/store";
-import { CloudIslandPost } from "@/lib/pokemon-data";
-import { useLazyData, fetchCloudIslands } from "@/lib/lazy-data";
+import { cloudIslandsPosts, CloudIslandPost } from "@/lib/pokemon-data";
 import { getApiUrl } from "@/lib/api-config";
 import { ArrowLeft, Copy, Check, Bookmark, Plus, X, Upload, Image, Key, BadgeCheck, TrendingUp, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -14,8 +13,6 @@ export function CloudIslandsPage() {
   const [sortBy, setSortBy] = useState<"popular" | "recent">("popular");
   const [filterBy, setFilterBy] = useState<"all" | "saved">("all");
   const [selectedIsland, setSelectedIsland] = useState<CloudIslandPost | null>(null);
-
-  const { data: cloudIslandsPosts, loading } = useLazyData(fetchCloudIslands);
   const [showPostModal, setShowPostModal] = useState(false);
   const [postForm, setPostForm] = useState({ title: "", description: "", islandCode: "" });
   const [postImages, setPostImages] = useState<string[]>([]);
@@ -89,7 +86,7 @@ export function CloudIslandsPage() {
 
   // Filter: all or saved only
   const filteredIslands = filterBy === "saved" 
-    ? (cloudIslandsPosts || []).filter(i => savedIslands.includes(i.islandCode))
+    ? cloudIslandsPosts.filter(i => savedIslands.includes(i.islandCode))
     : cloudIslandsPosts;
 
   // Sort: popular (saves) or recent (createdAt)
@@ -97,14 +94,6 @@ export function CloudIslandsPage() {
     if (sortBy === "popular") return b.likes - a.likes;
     return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
   });
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-full">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-500"></div>
-      </div>
-    );
-  }
 
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-cyan-500 to-blue-600 dark:from-cyan-900 dark:to-blue-950 relative">
