@@ -167,6 +167,37 @@ export function RequestsPage() {
                     {/* Task description */}
                     <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">{request.task}</p>
 
+                    {/* Required Items Preview */}
+                    {request.requiredItems && request.requiredItems.length > 0 && (
+                      <div className="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-3 border border-amber-100 dark:border-amber-800">
+                        <p className="text-xs font-bold text-amber-800 dark:text-amber-300 uppercase tracking-wide mb-3">📦 Required Items</p>
+                        <div className="flex gap-2 flex-wrap">
+                          {request.requiredItems.map((item: any, idx: number) => (
+                            <div key={idx} className="flex flex-col items-center gap-1">
+                              <div className="w-14 h-14 bg-white dark:bg-gray-800 rounded-xl border border-amber-200 dark:border-amber-700 shadow-sm flex items-center justify-center relative">
+                                <img
+                                  src={`/items/${item.slug}.png`}
+                                  alt={item.name}
+                                  className="w-11 h-11 object-contain"
+                                  onError={e => {
+                                    const el = e.target as HTMLImageElement;
+                                    el.style.display = 'none';
+                                    const ph = el.nextElementSibling;
+                                    if (ph) ph.style.display = 'flex';
+                                  }}
+                                />
+                                <span className="absolute inset-0 items-center justify-center text-lg hidden" style={{ display: 'none' }}>📦</span>
+                                <span className="absolute -bottom-1 -right-1 bg-amber-500 text-white text-[9px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                                  {item.qty}
+                                </span>
+                              </div>
+                              <span className="text-[9px] text-center text-amber-900 dark:text-amber-300 font-medium max-w-[56px] leading-tight">{item.name}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
                     {/* Giver */}
                     {request.giver && request.giver !== "Unknown" && (
                       <p className="text-[11px] text-gray-400 dark:text-gray-500">👤 Given by: <span className="text-gray-600 dark:text-gray-300 font-medium">{request.giver}</span></p>
