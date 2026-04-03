@@ -178,6 +178,14 @@ input, textarea, select {
   font-size: 16px !important; /* Minimum 16px prevents iOS zoom on focus */
 }
 
+/* Capacitor iOS safe area support */
+html {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
 @keyframes slide-up {
   from { transform: translateY(100%); }
   to { transform: translateY(0); }
