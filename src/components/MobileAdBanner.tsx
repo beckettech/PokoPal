@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { AdMob, BannerAdSize, BannerAdPosition } from '@capacitor-community/admob';
+import { ADMOB_CONFIG } from '@/lib/purchases';
 import { useAppStore } from '@/lib/store';
-
-// AdMob stub — ads will be re-added when Capacitor 8 compatible plugin is available
 
 export function MobileAdBanner() {
   const { user, isAdmin, adminForceAds } = useAppStore();
@@ -20,15 +20,36 @@ export function MobileAdBanner() {
     const init = async () => {
       try {
         const { Capacitor } = await import('@capacitor/core');
-        setIsNative(Capacitor.isNativePlatform());
-      } catch {}
+        const native = Capacitor.isNativePlatform();
+        setIsNative(native);
+
+        if (!native) return;
+
+        const adId = ADMOB_CONFIG.production.banner;
+        await AdMob.initialize({
+          requestTrackingAuthorization: true,
+          testingMode: false,
+        });
+
+        await AdMob.showBanner({
+          adId,
+          adSize: BannerAdSize.ADAPTIVE_BANNER,
+          position: BannerAdPosition.BOTTOM_CENTER,
+          margin: 0,
+        });
+      } catch (error) {
+        console.log('AdMob init failed:', error);
+      }
     };
 
     init();
+
+    return () => {
+      AdMob.hideBanner().catch(() => {});
+    };
   }, [shouldShow]);
 
   if (!shouldShow || !isNative) return null;
 
-  // Placeholder — AdMob banner will be added here when plugin is compatible with Capacitor 8
   return null;
 }
