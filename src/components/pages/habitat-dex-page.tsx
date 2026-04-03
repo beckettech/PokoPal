@@ -2,10 +2,9 @@
 
 import { useState, useMemo, useEffect } from "react";
 import { useAppStore } from "@/lib/store";
-import { pokemonList } from "@/lib/pokemon-data";
+import { useLazyData, fetchPokemonList, fetchHabitats } from "@/lib/lazy-data";
 import { ArrowLeft, Search, CheckCircle, Clock, Circle, Eye, EyeOff, Plus, Check } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import habitatsData from "@/data/scraped/habitats.json";
 
 // Fallback images for generic "any X" build items that don't have their own Serebii slug
 // Generic "any X" items map to a representative real item image
@@ -55,53 +54,58 @@ const ITEM_FALLBACKS: Record<string, string> = {
 };
 
 function getItemImage(slug: string, fallbackImage: string): string {
-  // Normalize: lowercase, strip spaces, hyphens, parens
   const key = slug.toLowerCase().replace(/[\s\-()]/g, '');
   return ITEM_FALLBACKS[key] || ITEM_FALLBACKS[slug.toLowerCase()] || fallbackImage;
 }
-
-// Build pokemon name -> image URL map for previews
-const pokemonImageMap: Record<string, string> = {};
-for (const p of pokemonList) {
-  pokemonImageMap[p.name.toLowerCase()] = p.image;
-  // Also map by slug (lowercase, no spaces/punctuation)
-  const slug = p.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-  pokemonImageMap[slug] = p.image;
-}
-
-
 
 export function HabitatDexPage() {
   const { setCurrentPage, navigateToPokemon, navigateBack, previousPage, capturedPokemon, focusedHabitatId, setFocusedHabitatId, clearFocus, discoveredHabitats, toggleDiscoveredHabitat } = useAppStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [sortFilter, setSortFilter] = useState<"all" | "discovered" | "undiscovered">("all");
   const [selectedArea, setSelectedArea] = useState<string>("Withered Wastelands");
-  const [selectedHabitat, setSelectedHabitat] = useState<typeof habitatsData[0] | null>(null);
+  const [selectedHabitat, setSelectedHabitat] = useState<any>(null);
+
+  // Lazy load data
+  const { data: pokemonList, loading } = useLazyData(fetchPokemonList);
+  const { data: habitatsData } = useLazyData(fetchHabitats);
 
   const allHabitatAreas = ["Withered Wastelands", "Bleak Beach", "Rocky Ridges", "Sparkling Skylands", "Palette Town", "Cloud Island"];
-
-  // Convert array to Set for quick lookup
   const discoveredSet = useMemo(() => new Set(discoveredHabitats), [discoveredHabitats]);
+
+  const pokemonImageMap = useMemo(() => {
+    const map: Record<string, string> = {};
+    if (pokemonList) for (const p of pokemonList) {
+      map[p.name.toLowerCase()] = p.image;
+      const slug = p.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+      map[slug] = p.image;
+    }
+    return map;
+  }, [pokemonList]);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-full">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-500"></div>
+      </div>
+    );
+  }
 
   // Auto-open fullscreen if navigated to via deep-link
   useEffect(() => {
-    if (focusedHabitatId) {
-      const hab = habitatsData.find(h => h.id === focusedHabitatId);
+    if (focusedHabitatId && habitatsData) {
+      const hab = habitatsData.find((h: any) => h.id === focusedHabitatId);
       if (hab) setSelectedHabitat(hab);
       clearFocus();
     }
-  }, [focusedHabitatId]);
+  }, [focusedHabitatId, habitatsData]);
 
-  // Build a set of captured Pokemon names for quick lookup
   const capturedNames = useMemo(() => {
     const names = new Set<string>();
-    pokemonList.forEach(p => {
-      if (capturedPokemon.includes(p.id)) {
-        names.add(p.name.toLowerCase());
-      }
+    (pokemonList || []).forEach(p => {
+      if (capturedPokemon.includes(p.id)) names.add(p.name.toLowerCase());
     });
     return names;
-  }, [capturedPokemon]);
+  }, [capturedPokemon, pokemonList]);
 
   const getCompletionStatus = (habitatPokemon: Array<{ name: string; slug: string }>) => {
     if (habitatPokemon.length === 0) return null;
@@ -123,7 +127,7 @@ export function HabitatDexPage() {
   };
 
   const filteredHabitats = useMemo(() => {
-    return habitatsData.filter(hab => {
+    return (habitatsData || []).filter(hab => {
       const matchesSearch = hab.name.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesArea = (hab.locations || []).includes(selectedArea);
       if (!matchesArea) return false;
@@ -136,7 +140,7 @@ export function HabitatDexPage() {
 
   const handlePokemonClick = (slug: string, name: string) => {
     // Find the Pokemon by name and deep-link to it in dex
-    const p = pokemonList.find(p => p.name.toLowerCase() === name.toLowerCase() || p.name.toLowerCase().replace(/[^a-z0-9]/g, '') === slug.toLowerCase());
+    const p = (pokemonList || []).find(p => p.name.toLowerCase() === name.toLowerCase() || p.name.toLowerCase().replace(/[^a-z0-9]/g, '') === slug.toLowerCase());
     if (p) navigateToPokemon(p.id);
     else setCurrentPage("dex");
   };
@@ -155,7 +159,7 @@ export function HabitatDexPage() {
           </motion.button>
           <h1 className="text-lg font-bold text-white">Habitat Dex</h1>
           <div className="flex items-center gap-1 bg-white/20 px-2 py-1 rounded-full">
-            <span className="text-white text-xs font-bold">{discoveredSet.size}/{habitatsData.length}</span>
+            <span className="text-white text-xs font-bold">{discoveredSet.size}/{(habitatsData || []).length}</span>
           </div>
         </div>
 

@@ -2,26 +2,10 @@
 
 // Dex Page - v2.0.1 (cache-bust)
 import { useAppStore } from "@/lib/store";
-import { pokemonList as pokemonData, Pokemon, getSpecialtyIcon } from "@/lib/pokemon-data";
+import { Pokemon, preloadSpecialtyIcons } from "@/lib/pokemon-data";
+import { useLazyData, fetchPokemonList, fetchSpecialties, fetchHabitats } from "@/lib/lazy-data";
 import { ArrowLeft, Search, Plus, Eye, EyeOff, Check, Zap, MapPin, Home, Sun, Moon, Cloud, CloudRain, CloudSnow } from "lucide-react";
-import { useState, useEffect } from "react";
-import specialtiesData from "@/data/scraped/specialties.json";
-import habitatsData from "@/data/scraped/habitats.json";
-
-// Build specialty lookup: name -> {description, icon}
-const specialtyMap: Record<string, { description: string; icon: string }> = {};
-for (const s of specialtiesData) {
-  specialtyMap[s.name.toLowerCase()] = {
-    description: s.description.replace(/Pok&eacute;mon/g, 'Pokémon').replace(/&eacute;/g, 'é'),
-    icon: s.icon,
-  };
-}
-
-// Habitat lookup: name -> {image, slug, id}
-const habitatMap: Record<string, { image: string; slug: string; id: number }> = {};
-for (const h of habitatsData) {
-  habitatMap[h.name.toLowerCase()] = { image: h.image, slug: h.slug, id: h.id };
-}
+import { useState, useEffect, useMemo } from "react";
 
 const LOCATION_ORDER = [
   "Withered Wastelands", "Bleak Beach", "Rocky Ridges",
@@ -91,19 +75,55 @@ export function DexPage() {
   const [friendFilter, setFriendFilter] = useState<"all" | "friends" | "unseen">("all");
   const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(null);
 
+  // Lazy load data
+  const { data: pokemonData, loading } = useLazyData(fetchPokemonList);
+  const { data: specsData } = useLazyData(fetchSpecialties);
+  const { data: habsData } = useLazyData(fetchHabitats);
+
+  // Preload specialty icons
+  useEffect(() => { preloadSpecialtyIcons(); }, []);
+
+  // Build lookup maps from lazy data
+  const specialtyMap = useMemo(() => {
+    const map: Record<string, { description: string; icon: string }> = {};
+    if (specsData) for (const s of specsData) {
+      map[s.name.toLowerCase()] = {
+        description: s.description.replace(/Pok&eacute;mon/g, 'Pokémon').replace(/&eacute;/g, 'é'),
+        icon: s.icon,
+      };
+    }
+    return map;
+  }, [specsData]);
+
+  const habitatMap = useMemo(() => {
+    const map: Record<string, { image: string; slug: string; id: number }> = {};
+    if (habsData) for (const h of habsData) {
+      map[h.name.toLowerCase()] = { image: h.image, slug: h.slug, id: h.id };
+    }
+    return map;
+  }, [habsData]);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-full">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-500"></div>
+      </div>
+    );
+  }
+
   // Collect unique areas and specialties
-  const allSpecialties = [...new Set(pokemonData.flatMap(p => p.specialties || []))].filter(s => s !== "???").sort();
+  const allSpecialties = [...new Set((pokemonData || []).flatMap(p => p.specialties || []))].filter(s => s !== "???").sort();
 
   // Auto-open a Pokemon if navigated to via deep-link
   useEffect(() => {
     if (focusedPokemonId) {
-      const p = pokemonData.find(p => p.id === focusedPokemonId);
+      const p = (pokemonData || []).find(p => p.id === focusedPokemonId);
       if (p) setSelectedPokemon(p);
       clearFocus();
     }
-  }, [focusedPokemonId]);
+  }, [focusedPokemonId, pokemonData]);
 
-  const filteredPokemon = pokemonData.filter(pokemon => {
+  const filteredPokemon = (pokemonData || []).filter(pokemon => {
     const matchesSearch = pokemon.name.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesRarity = !selectedRarity || pokemon.rarity === selectedRarity;
     const matchesSpecialty = !selectedSpecialty || (pokemon.specialties || []).includes(selectedSpecialty);
