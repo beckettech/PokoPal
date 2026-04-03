@@ -78,7 +78,7 @@ export function HabitatDexPage() {
   const [selectedArea, setSelectedArea] = useState<string>("Withered Wastelands");
   const [selectedHabitat, setSelectedHabitat] = useState<typeof habitatsData[0] | null>(null);
 
-  const allHabitatAreas = ["Withered Wastelands", "Bleak Beach", "Rocky Ridges", "Sparkling Skylands", "Palette Town", "Cloud Island"];
+  const allHabitatAreas = ["Withered Wastelands", "Bleak Beach", "Rocky Ridges", "Sparkling Skylands", "Palette Town"];
 
   // Convert array to Set for quick lookup
   const discoveredSet = useMemo(() => new Set(discoveredHabitats), [discoveredHabitats]);

@@ -3,7 +3,7 @@
 import { useAppStore } from "@/lib/store";
 import { ArrowLeft, Search, Check, Plus, Clock, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
-import { useLazyData, fetchRequestsList } from "@/lib/lazy-data";
+import { requests } from "@/lib/pokemon-data";
 
 type Request = { id: number; name: string; category: string; description: string; rewards: string[]; unlocks: string[]; status: string; items?: string[]; area?: string };
 
@@ -33,17 +33,7 @@ export function RequestsPage() {
   const [statusFilter, setStatusFilter] = useState<"all" | "todo" | "in-progress" | "done">("all");
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
-  const { data: requestsJson, loading } = useLazyData(fetchRequestsList);
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-full">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-500"></div>
-      </div>
-    );
-  }
-
-  const filtered = (requestsJson || []).filter((r: any) => {
+  const filtered = requests.filter((r: any) => {
     const matchSearch = !search || r.name.toLowerCase().includes(search.toLowerCase());
     const matchArea = r.area === areaFilter || r.area === "All Areas";
     const isCompleted = completedRequests.includes(r.id);
@@ -56,7 +46,7 @@ export function RequestsPage() {
 
   const totalCompleted = completedRequests.length;
   const totalInProgress = inProgressRequests.filter((id: string) => !completedRequests.includes(id)).length;
-  const totalTodo = (requestsJson || []).length - totalCompleted - totalInProgress;
+  const totalTodo = requests.length - totalCompleted - totalInProgress;
 
   return (
     <div className="h-full flex flex-col bg-gradient-to-b from-yellow-500 to-orange-500 dark:from-yellow-500 dark:to-orange-600">
@@ -95,10 +85,10 @@ export function RequestsPage() {
         <div className="h-1.5 bg-white/20 rounded-full overflow-hidden">
           <div
             className="h-full bg-white dark:bg-gray-800 rounded-full transition-all"
-            style={{ width: `${(totalCompleted / (requestsJson || []).length) * 100}%` }}
+            style={{ width: `${(totalCompleted / (requests).length) * 100}%` }}
           />
         </div>
-        <p className="text-white/60 text-[10px] text-right mt-1">{totalCompleted}/{(requestsJson || []).length} completed</p>
+        <p className="text-white/60 text-[10px] text-right mt-1">{totalCompleted}/{(requests).length} completed</p>
       </div>
 
       {/* Content */}
