@@ -3,16 +3,12 @@
 import { useEffect, useState } from 'react';
 import { useAppStore } from '@/lib/store';
 
-// Dynamic import with template literal to prevent Turbopack/webpack from resolving at build time
-const admobModule = '@capacitor-community/admob';
-
 export function MobileAdBanner() {
   const user = useAppStore((s) => s.user);
   const adminForceAds = useAppStore((s) => s.adminForceAds);
   const isAdmin = useAppStore((s) => s.isAdmin);
-  const [isNative, setIsNative] = useState(false);
+  const [showPlaceholder, setShowPlaceholder] = useState(false);
   const [adReady, setAdReady] = useState(false);
-  const [adFailed, setAdFailed] = useState(false);
 
   const shouldShow = !(
     (isAdmin && adminForceAds === "hide") ||
@@ -22,52 +18,44 @@ export function MobileAdBanner() {
   useEffect(() => {
     const init = async () => {
       try {
-        const { Capacitor } = await import('@capacitor/core');
-        if (!Capacitor.isNativePlatform()) return;
-        setIsNative(true);
+        const { Capacitor, registerPlugin } = await import('@capacitor/core');
 
-        const { AdMob } = await import(/* webpackIgnore: true */ admobModule);
+        if (!Capacitor.isNativePlatform()) return;
+        setShowPlaceholder(true);
+
+        // Register AdMob plugin via Capacitor bridge (no npm import needed)
+        const AdMob = registerPlugin<any>('AdMob');
+
         await AdMob.initialize();
         setAdReady(true);
-      } catch (e) {
-        console.error('AdMob init failed:', e);
-        setAdFailed(true);
-      }
-    };
-    if (shouldShow) init();
-  }, [shouldShow]);
 
-  useEffect(() => {
-    if (!isNative || !adReady) return;
-
-    let cleanup = false;
-    const showAd = async () => {
-      try {
-        const { AdMob } = await import(/* webpackIgnore: true */ admobModule);
         await AdMob.showBanner({
           adId: 'ca-app-pub-8733903111878090/2737711764',
           adSize: 'ADAPTIVE_BANNER',
           position: 'BOTTOM_CENTER',
         });
       } catch (e) {
-        console.error('Banner show failed:', e);
-        if (!cleanup) setAdFailed(true);
+        console.error('AdMob init failed:', e);
       }
     };
-    showAd();
+    if (shouldShow) init();
+  }, [shouldShow]);
 
+  useEffect(() => {
     return () => {
-      cleanup = true;
-      import(/* webpackIgnore: true */ admobModule).then(({ AdMob }) => {
-        AdMob.removeBanner().catch(() => {});
-      });
+      if (adReady) {
+        import('@capacitor/core').then(({ registerPlugin }) => {
+          const AdMob = registerPlugin<any>('AdMob');
+          AdMob.removeBanner().catch(() => {});
+        });
+      }
     };
-  }, [isNative, adReady]);
+  }, [adReady]);
 
-  if (!shouldShow || !isNative) return null;
+  if (!shouldShow || !showPlaceholder) return null;
 
-  // Show placeholder while ad loads or if it fails
-  if (!adReady || adFailed) {
+  // Show placeholder while ad loads
+  if (!adReady) {
     return (
       <div className="w-full bg-gradient-to-r from-red-500 to-red-600 flex items-center justify-center"
         style={{ height: '50px' }}>
@@ -76,6 +64,6 @@ export function MobileAdBanner() {
     );
   }
 
-  // AdMob manages the banner natively, return minimal spacer
+  // AdMob banner is rendered natively, minimal spacer
   return <div style={{ height: '50px' }} />;
 }
