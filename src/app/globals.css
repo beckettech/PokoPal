@@ -180,7 +180,7 @@ input, textarea, select {
 
 /* Capacitor iOS safe area support */
 html {
-  padding-bottom: 0;
+  padding-bottom: env(safe-area-inset-bottom);
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
   overflow: hidden;
@@ -200,16 +200,10 @@ html {
 
 /* Safe area top padding: pt-6 on web, safe area on native */
 .pt-safe-top {
-  padding-top: 1.5rem;
-}
-html.capacitor .pt-safe-top {
-  padding-top: env(safe-area-inset-top, 0px);
+  padding-top: max(1.5rem, env(safe-area-inset-top));
 }
 
 /* Safe area bottom padding for bottom nav/stats bar */
 .pb-safe-bottom {
-  padding-bottom: 1rem;
-}
-html.capacitor .pb-safe-bottom {
   padding-bottom: max(1rem, env(safe-area-inset-bottom));
 }
