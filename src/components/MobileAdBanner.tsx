@@ -45,7 +45,7 @@ export function MobileAdBanner() {
         const { AdMob } = await import('@capacitor-community/admob');
 
         await AdMob.showBanner({
-          adId: 'ca-app-pub-8733903111878090/UNKNOWN', // Replace with real ad unit ID
+          adId: 'ca-app-pub-8733903111878090/2737711764',
           adSize: 'ADAPTIVE_BANNER',
           position: 'BOTTOM_CENTER',
         });
