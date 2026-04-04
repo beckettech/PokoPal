@@ -2,6 +2,7 @@
 
 // Pokopia Guide - Main Home Page
 import { useAppStore } from "@/lib/store";
+import { MobileAdBanner } from "@/components/MobileAdBanner";
 import { useState, useEffect } from "react";
 import { 
   TreePine, 
@@ -219,6 +220,9 @@ export function HomePage() {
           </div>
         </div>
       </div>
+
+      {/* Ad Banner placeholder — only visible on native when ads enabled */}
+      <MobileAdBanner />
 
       {/* Red Bottom Tab with Stats and Chat Button */}
       <div className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 pb-safe-bottom">

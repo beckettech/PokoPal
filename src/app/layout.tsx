@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { AdBanner } from "@/components/AdBanner";
+import { MobileAdBanner } from "@/components/MobileAdBanner";
 import { OfflineGuard } from "@/components/OfflineGuard";
 import { SessionProvider } from "@/components/SessionProvider";
 
