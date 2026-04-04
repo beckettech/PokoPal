@@ -57,6 +57,8 @@ export default function RootLayout({
       <head>
         {/* Google AdSense */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8733903111878090" crossOrigin="anonymous" />
+        {/* Detect Capacitor native for CSS targeting */}
+        <script dangerouslySetInnerHTML={{ __html: 'if(/capacitor/i.test(navigator.userAgent)||location.protocol==="capacitor:")document.documentElement.classList.add("capacitor")' }} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground h-full`}

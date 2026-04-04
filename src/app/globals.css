@@ -198,20 +198,10 @@ html {
 }
 
 
-/* iOS native safe area top padding */
-.pt-safe {
-  padding-top: env(safe-area-inset-top, 0px);
-}
-
-
-/* Add safe area inset to the first element with pt-6 inside the app shell */
-/* Safe area top padding — only in Capacitor native (capacitor:// protocol), not web browsers */
+/* Safe area top padding: pt-6 on web, safe area on native */
 .pt-safe-top {
   padding-top: 1.5rem;
 }
-
-@supports (padding-top: env(safe-area-inset-top)) {
-  body.capacitor .pt-safe-top {
-    padding-top: max(1.5rem, env(safe-area-inset-top));
-  }
+html.capacitor .pt-safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
 }
