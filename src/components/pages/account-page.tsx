@@ -35,7 +35,7 @@ export function AccountPage() {
       await new Promise(resolve => setTimeout(resolve, 1500));
       restorePurchases();
       try {
-        const { Purchases } = await import('@revenuecat/purchases-capacitor');
+        const { Purchases } = await import(/* webpackIgnore: true */ '@revenuecat/purchases-capacitor');
         const { customerInfo } = await Purchases.getCustomerInfo();
         const hasPro = customerInfo.activeSubscriptions.includes('pro');
         if (hasPro) setPremium(true);

@@ -3,6 +3,9 @@
 import { useEffect, useState } from 'react';
 import { useAppStore } from '@/lib/store';
 
+// Dynamic import with template literal to prevent Turbopack/webpack from resolving at build time
+const admobModule = '@capacitor-community/admob';
+
 export function MobileAdBanner() {
   const user = useAppStore((s) => s.user);
   const adminForceAds = useAppStore((s) => s.adminForceAds);
@@ -23,12 +26,9 @@ export function MobileAdBanner() {
         if (!Capacitor.isNativePlatform()) return;
         setIsNative(true);
 
-        const { AdMob, BannerAdSize, BannerAdPosition } = await import('@capacitor-community/admob');
-
+        const { AdMob } = await import(/* webpackIgnore: true */ admobModule);
         await AdMob.initialize();
         setAdReady(true);
-
-        const { AdSize, Position } = await import('@capacitor-community/admob');
       } catch (e) {
         console.error('AdMob init failed:', e);
         setAdFailed(true);
@@ -40,10 +40,10 @@ export function MobileAdBanner() {
   useEffect(() => {
     if (!isNative || !adReady) return;
 
+    let cleanup = false;
     const showAd = async () => {
       try {
-        const { AdMob } = await import('@capacitor-community/admob');
-
+        const { AdMob } = await import(/* webpackIgnore: true */ admobModule);
         await AdMob.showBanner({
           adId: 'ca-app-pub-8733903111878090/2737711764',
           adSize: 'ADAPTIVE_BANNER',
@@ -51,21 +51,18 @@ export function MobileAdBanner() {
         });
       } catch (e) {
         console.error('Banner show failed:', e);
-        setAdFailed(true);
+        if (!cleanup) setAdFailed(true);
       }
     };
     showAd();
-  }, [isNative, adReady]);
 
-  useEffect(() => {
     return () => {
-      if (isNative) {
-        import('@capacitor-community/admob').then(({ AdMob }) => {
-          AdMob.removeBanner().catch(() => {});
-        });
-      }
+      cleanup = true;
+      import(/* webpackIgnore: true */ admobModule).then(({ AdMob }) => {
+        AdMob.removeBanner().catch(() => {});
+      });
     };
-  }, [isNative]);
+  }, [isNative, adReady]);
 
   if (!shouldShow || !isNative) return null;
 
