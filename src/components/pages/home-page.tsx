@@ -221,7 +221,7 @@ export function HomePage() {
       </div>
 
       {/* Red Bottom Tab with Stats and Chat Button */}
-      <div className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 pb-2">
+      <div className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 pb-safe-bottom">
         {/* Stats Row */}
         <div className="h-20 flex items-center relative">
           {/* Left stats — evenly spaced from left edge to center */}
