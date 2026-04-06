@@ -35,6 +35,18 @@ export async function restorePurchases() {
   return { success: false, error: 'Purchases not configured yet' };
 }
 
-export function isNativePlatform() {
-  return false;
+export function isNativePlatform(): Promise<boolean> {
+  if (typeof window === 'undefined') return Promise.resolve(false);
+  try {
+    // Dynamic check - won't crash on web
+    return Promise.resolve(
+      typeof navigator !== 'undefined' && (
+        /capacitor/i.test(navigator.userAgent) ||
+        location.protocol === 'capacitor:' ||
+        (window as any).Capacitor?.isNativePlatform?.() === true
+      )
+    );
+  } catch {
+    return Promise.resolve(false);
+  }
 }
