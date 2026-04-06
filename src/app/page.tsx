@@ -23,6 +23,7 @@ import { AdminToolbar } from "@/components/AdminToolbar";
 
 export default function Home() {
   const currentPage = useAppStore((state) => state.currentPage);
+  const setCurrentPage = useAppStore((state) => state.setCurrentPage);
   const darkMode = useAppStore((state) => state.darkMode);
   const markPageVisited = useAppStore((state) => state.markPageVisited);
   const user = useAppStore((s) => s.user);
@@ -90,8 +91,28 @@ export default function Home() {
         {renderPage()}
       </div>
       <MobileAdBanner />
+      {/* Remove Ads CTA — pulsing button below ad banner */}
+      {showAds && !user.isPremium && !user.adsRemoved && (
+        <button
+          onClick={() => setCurrentPage("coins")}
+          className="fixed bottom-0 left-0 right-0 z-40 py-2 text-center font-bold text-sm tracking-wide text-white animate-pulse"
+          style={{
+            background: 'linear-gradient(90deg, #f59e0b, #ef4444, #8b5cf6, #06b6d4, #f59e0b)',
+            backgroundSize: '200% 100%',
+            animation: 'pulse 2s ease-in-out infinite, rainbow 3s linear infinite',
+          }}
+        >
+          🚫 Remove Ads — Go Premium!
+        </button>
+      )}
       <BroadcastBanner />
       <AdminToolbar />
+      <style>{`
+        @keyframes rainbow {
+          0% { background-position: 0% 50%; }
+          100% { background-position: 200% 50%; }
+        }
+      `}</style>
     </main>
   );
 }
