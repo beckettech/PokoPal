@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useAppStore } from "@/lib/store";
 import { hapticTap } from "@/lib/haptics";
+import { setPageBackground } from "@/lib/page-bg";
 import { HomePage } from "@/components/pages/home-page";
 import { DexPage } from "@/components/pages/dex-page";
 import { HabitatDexPage } from "@/components/pages/habitat-dex-page";
@@ -39,6 +40,11 @@ export default function Home() {
     window.addEventListener('click', handler, { passive: true });
     return () => window.removeEventListener('click', handler);
   }, []);
+
+  // Set native background color to match current page
+  useEffect(() => {
+    setPageBackground(currentPage);
+  }, [currentPage]);
 
   // Track page visits for notification badges
   if (currentPage !== "home") {
