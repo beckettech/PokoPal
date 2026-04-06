@@ -221,9 +221,6 @@ export function HomePage() {
         </div>
       </div>
 
-      {/* Ad Banner placeholder — only visible on native when ads enabled */}
-      <MobileAdBanner />
-
       {/* Red Bottom Tab with Stats and Chat Button */}
       <div className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 pb-safe-bottom">
         {/* Stats Row */}
