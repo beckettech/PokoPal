@@ -86,7 +86,7 @@ export default function Home() {
 
   return (
     <main className={`h-screen overflow-hidden ${darkMode ? 'dark bg-gray-900' : 'bg-gradient-to-b from-red-500 to-red-700'}`}>
-      <div key={currentPage} className="h-full">
+      <div key={currentPage} className={`h-full ${showAds ? 'pb-[60px]' : ''}`}>
         {renderPage()}
       </div>
       <MobileAdBanner />
