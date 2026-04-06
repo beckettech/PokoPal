@@ -16,19 +16,41 @@ export function MobileAdBanner() {
     (user.isPremium && !(isAdmin && adminForceAds === "show"))
   );
 
-  // Show/hide banner based on ad state
+  // Initialize AdMob after a delay so it doesn't block launch
   useEffect(() => {
-    const updateBanner = async () => {
+    if (!shouldShow) return;
+
+    const timer = setTimeout(async () => {
       try {
         const { Capacitor, registerPlugin } = await import('@capacitor/core');
         if (!Capacitor.isNativePlatform()) return;
 
         const AdMob = registerPlugin<any>('AdMob');
+        initialized.current = true;
+        await AdMob.initialize();
 
-        if (!initialized.current) {
-          initialized.current = true;
-          await AdMob.initialize();
-        }
+        await AdMob.showBanner({
+          adId: 'ca-app-pub-8733903111878090/2737711764',
+          adSize: 'ADAPTIVE_BANNER',
+          position: 'BOTTOM_CENTER',
+        });
+        adShown.current = true;
+      } catch (e) {
+        console.error('AdMob:', e);
+      }
+    }, 3000); // Wait 3 seconds after launch
+
+    return () => clearTimeout(timer);
+  }, [shouldShow]);
+
+  // Hide/show based on premium status
+  useEffect(() => {
+    if (!initialized.current) return;
+
+    const update = async () => {
+      try {
+        const { registerPlugin } = await import('@capacitor/core');
+        const AdMob = registerPlugin<any>('AdMob');
 
         if (shouldShow && !adShown.current) {
           await AdMob.showBanner({
@@ -41,14 +63,11 @@ export function MobileAdBanner() {
           await AdMob.hideBanner();
           adShown.current = false;
         }
-      } catch (e) {
-        console.error('AdMob:', e);
-      }
+      } catch {}
     };
-    updateBanner();
+    update();
   }, [shouldShow]);
 
-  // Cleanup on unmount
   useEffect(() => {
     return () => {
       if (initialized.current) {
@@ -59,6 +78,5 @@ export function MobileAdBanner() {
     };
   }, []);
 
-  // This component renders nothing — AdMob handles banner natively
   return null;
 }

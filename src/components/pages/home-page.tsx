@@ -105,10 +105,12 @@ export function HomePage() {
       try {
         const { Capacitor } = await import('@capacitor/core');
         setIsNative(Capacitor.isNativePlatform());
-        // Check for remote data updates on native
+        // Check for remote data updates (deferred to not block launch)
         if (Capacitor.isNativePlatform()) {
-          const { checkForUpdates } = await import('@/lib/remote-data');
-          checkForUpdates('https://pokopal.com');
+          setTimeout(async () => {
+            const { checkForUpdates } = await import('@/lib/remote-data');
+            checkForUpdates('https://pokopal.com');
+          }, 5000);
         }
       } catch {}
     };
