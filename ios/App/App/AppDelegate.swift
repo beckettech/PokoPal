@@ -1,6 +1,5 @@
 import UIKit
 import Capacitor
-import WebKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -8,39 +7,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Set window background to red
-        window?.backgroundColor = UIColor(red: 0.86, green: 0.16, blue: 0.15, alpha: 1.0)
-
-        // Find and color the WKWebView after a short delay
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.colorWebViewRed()
-        }
+        // Transparent window — let web content show through status bar
+        window?.backgroundColor = .clear
         return true
     }
 
-    var statusBarView: UIView?
-
     func applicationWillResignActive(_ application: UIApplication) {}
-
     func applicationDidEnterBackground(_ application: UIApplication) {}
-
     func applicationWillEnterForeground(_ application: UIApplication) {}
-
     func applicationDidBecomeActive(_ application: UIApplication) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.setStatusBarColor()
-            self.colorWebViewRed()
+        // Make WKWebView background transparent on each activation
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.makeWebViewTransparent()
         }
     }
-
     func applicationWillTerminate(_ application: UIApplication) {}
 
-    func colorWebViewRed() {
-        let red = UIColor(red: 0.86, green: 0.16, blue: 0.15, alpha: 1.0)
-
-        // Find WKWebView in the view hierarchy
-        func findWebView(in view: UIView) -> WKWebView? {
-            if let wv = view as? WKWebView { return wv }
+    func makeWebViewTransparent() {
+        func findWebView(in view: UIView) -> UIView? {
+            // WKWebView or its internal scroll view
+            if String(describing: type(of: view)).contains("WebView") || String(describing: type(of: view)).contains("WK") {
+                return view
+            }
             for subview in view.subviews {
                 if let found = findWebView(in: subview) { return found }
             }
@@ -50,23 +38,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let window = self.window,
               let webView = findWebView(in: window) else { return }
 
-        webView.backgroundColor = red
-        webView.scrollView.backgroundColor = red
+        webView.backgroundColor = .clear
         webView.isOpaque = false
-    }
 
-    func setStatusBarColor() {
-        guard let window = self.window,
-              let frame = window.windowScene?.statusBarManager?.statusBarFrame else { return }
-
-        statusBarView?.removeFromSuperview()
-
-        let view = UIView(frame: frame)
-        view.backgroundColor = UIColor(red: 0.86, green: 0.16, blue: 0.15, alpha: 1.0)
-        view.tag = 9999
-        window.addSubview(view)
-        window.bringSubviewToFront(view)
-        statusBarView = view
+        // Also clear the scroll view background
+        if let scrollView = webView.subviews.first(where: { $0 is UIScrollView }) as? UIScrollView {
+            scrollView.backgroundColor = .clear
+        }
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
