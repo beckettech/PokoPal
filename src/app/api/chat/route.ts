@@ -3,6 +3,13 @@ import fs from "fs";
 import path from "path";
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY?.trim();
+
+const cors = (req: NextRequest, res: NextResponse) => {
+  const o = req.headers.get("origin");
+  if (o) { res.headers.set("Access-Control-Allow-Origin", o); res.headers.set("Access-Control-Allow-Methods", "GET,POST,OPTIONS"); res.headers.set("Access-Control-Allow-Headers", "Content-Type"); }
+  return res;
+};
+export async function OPTIONS(req: NextRequest) { return cors(req, new NextResponse(null, { status: 204 })); }
 const MODEL = "google/gemini-2.0-flash-001";
 
 // Load data files at startup
@@ -120,10 +127,10 @@ export async function POST(req: NextRequest) {
     const { messages, userProgress } = await req.json();
 
     if (!OPENROUTER_API_KEY) {
-      return NextResponse.json(
+      return cors(req, NextResponse.json(
         { error: "API key not configured" },
         { status: 500 }
-      );
+      ));
     }
 
     const lastUserMessage = [...messages].reverse().find((m: ChatMessage) => m.role === "user")?.content || "";
@@ -153,10 +160,10 @@ export async function POST(req: NextRequest) {
     if (!response.ok) {
       const error = await response.text();
       console.error("OpenRouter error:", response.status, error);
-      return NextResponse.json(
+      return cors(req, NextResponse.json(
         { error: `OpenRouter error: ${response.status}` },
         { status: response.status }
-      );
+      ));
     }
 
     const data = await response.json();
@@ -164,16 +171,16 @@ export async function POST(req: NextRequest) {
     
     if (!content) {
       console.error("No content in response:", data);
-      return NextResponse.json({ error: "No response content" }, { status: 500 });
+      return cors(req, NextResponse.json({ error: "No response content" }, { status: 500 }));
     }
 
-    return NextResponse.json({ content });
+    return cors(req, NextResponse.json({ content }));
   } catch (error) {
     console.error("Chat API error:", error);
-    return NextResponse.json(
+    return cors(req, NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }
-    );
+    ));
   }
 }
 

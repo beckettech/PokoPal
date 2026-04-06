@@ -58,7 +58,7 @@ export function ChatPage() {
 
     let coinDeducted = false;
     try {
-      const response = await fetch(getApiUrl("/api/chat"), {
+      const response = await fetch(getApiUrl("/api/chat/"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
