@@ -41,7 +41,9 @@
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<true/>
+	<false/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-8733903111878090~3083394373</string>
 	<key>GADSimulationIdentifier</key>
