@@ -91,7 +91,8 @@
 			);
 			name = App;
 			packageProductDependencies = (
-				4D22ABE82AF431CB00220026 /* CapApp-SPM */,
+									B710164AB6172132E065A060 /* CapacitorCommunityAdmob */,
+4D22ABE82AF431CB00220026 /* CapApp-SPM */,
 			);
 			productName = App;
 			productReference = 504EC3041FED79650016851F /* App.app */;
@@ -123,7 +124,7 @@
 			);
 			mainGroup = 504EC2FB1FED79650016851F;
 			packageReferences = (
-		4C0431976654C67D65B2BE07 /* XCRemoteSwiftPackageReference CapacitorCommunityAdmob */ = {
+		65D5628639EE53257AD2BCAB /* XCRemoteSwiftPackageReference CapacitorCommunityAdmob */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "file:../../../node_modules/@capacitor-community/admob";
 			requirement = {
@@ -377,9 +378,9 @@
 			package = D4C12C0A2AAA248700AAC8A2 /* XCLocalSwiftPackageReference "CapApp-SPM" */;
 			productName = "CapApp-SPM";
 		};
-		DC4E8773D02EE95E703B5AE8 /* CapacitorCommunityAdmob */ = {
+		B710164AB6172132E065A060 /* CapacitorCommunityAdmob */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4C0431976654C67D65B2BE07 /* XCRemoteSwiftPackageReference CapacitorCommunityAdmob */;
+			package = 65D5628639EE53257AD2BCAB /* XCRemoteSwiftPackageReference CapacitorCommunityAdmob */;
 			productName = CapacitorCommunityAdmob;
 		};
 		/* End XCSwiftPackageProductDependency section */
