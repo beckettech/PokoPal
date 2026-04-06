@@ -12,9 +12,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Red status bar background
     var statusBarView: UIView?
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
 
     func applicationWillResignActive(_ application: UIApplication) {}
 
