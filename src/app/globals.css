@@ -208,4 +208,8 @@ html {
 /* Safe area bottom padding for bottom nav/stats bar */
 .pb-safe-bottom {
   padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  background-color: var(--color-background, #ffffff);
+}
+.dark .pb-safe-bottom {
+  background-color: #111827;
 }
