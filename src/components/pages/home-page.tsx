@@ -222,7 +222,7 @@ export function HomePage() {
       </div>
 
       {/* Red Bottom Tab with Stats and Chat Button */}
-      <div className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 pb-safe-bottom">
+      <div className="bg-gradient-to-r from-red-500 via-red-600 to-red-500 pb-safe-bottom" style={{ paddingBottom: 'max(4rem, calc(env(safe-area-inset-bottom, 0px) + 60px))' }}>
         {/* Stats Row */}
         <div className="h-20 flex items-center relative">
           {/* Left stats — evenly spaced from left edge to center */}
