@@ -7,6 +7,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Set window background to red (eliminates white flash/gap)
+        window?.backgroundColor = UIColor(red: 0.86, green: 0.16, blue: 0.15, alpha: 1.0)
         return true
     }
 
