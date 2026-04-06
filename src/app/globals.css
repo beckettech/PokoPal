@@ -207,5 +207,5 @@ html {
 
 /* Safe area bottom padding for bottom nav/stats bar */
 .pb-safe-bottom {
-  padding-bottom: max(3.5rem, calc(env(safe-area-inset-bottom, 0px) + 50px));
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
 }
