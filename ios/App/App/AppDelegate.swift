@@ -7,7 +7,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Red status bar
+        if #available(iOS 13.0, *) {
+            let statusBarStyle: UIUserInterfaceStyle = .light
+            window?.overrideUserInterfaceStyle = statusBarStyle
+        }
+
+        // Set status bar background to red
+        if let window = self.window {
+            let statusBarView = UIView(frame: window.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero)
+            statusBarView.backgroundColor = UIColor.systemRed
+            statusBarView.tag = 999
+            window.addSubview(statusBarView)
+        }
+
         return true
     }
 
