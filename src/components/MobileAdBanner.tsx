@@ -35,7 +35,7 @@ export function MobileAdBanner() {
         await AdMob.showBanner({
           adId: 'ca-app-pub-8733903111878090/2737711764',
           adSize: 'ADAPTIVE_BANNER',
-          position: 'BOTTOM_CENTER',
+          position: 'TOP_CENTER',
         });
         if (!cleanup) setAdReady(true);
       } catch (e) {
