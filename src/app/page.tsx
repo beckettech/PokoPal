@@ -94,7 +94,7 @@ export default function Home() {
       {/* Remove Ads CTA — pulsing button below ad banner */}
       {showAds && !user.isPremium && !user.adsRemoved && (
         <button
-          onClick={() => setCurrentPage("coins")}
+          onClick={() => setCurrentPage("account")}
           className="fixed bottom-0 left-0 right-0 z-40 py-2 text-center font-bold text-sm tracking-wide text-white animate-pulse"
           style={{
             background: 'linear-gradient(90deg, #f59e0b, #ef4444, #8b5cf6, #06b6d4, #f59e0b)',
@@ -102,7 +102,7 @@ export default function Home() {
             animation: 'pulse 2s ease-in-out infinite, rainbow 3s linear infinite',
           }}
         >
-          🚫 Remove Ads — Go Premium!
+          🚫 Remove Ads
         </button>
       )}
       <BroadcastBanner />
