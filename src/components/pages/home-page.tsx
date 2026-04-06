@@ -143,10 +143,10 @@ export function HomePage() {
           <div className="flex items-center gap-3">
             {/* Large Blue Indicator Button */}
             <button
-              className="w-14 h-14 rounded-full shadow-xl flex items-center justify-center border-4 border-white/50 bg-gradient-to-br from-sky-400 to-sky-500 active:scale-90 transition-transform"
+              className="w-12 h-12 rounded-full shadow-xl flex items-center justify-center border-4 border-white/50 bg-gradient-to-br from-sky-400 to-sky-500 active:scale-90 transition-transform"
             >
-              <div className="w-8 h-8 rounded-full bg-white/30 flex items-center justify-center">
-                <div className="w-3 h-3 rounded-full bg-white/60" />
+              <div className="w-7 h-7 rounded-full bg-white/30 flex items-center justify-center">
+                <div className="w-2.5 h-2.5 rounded-full bg-white/60" />
               </div>
             </button>
             
