@@ -77,6 +77,16 @@ export function HabitatDexPage() {
   const [sortFilter, setSortFilter] = useState<"all" | "discovered" | "undiscovered">("all");
   const [selectedArea, setSelectedArea] = useState<string>("Withered Wastelands");
   const [selectedHabitat, setSelectedHabitat] = useState<typeof habitatsData[0] | null>(null);
+  const [visibleCount, setVisibleCount] = useState(20);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const el = e.currentTarget;
+    if (el.scrollHeight - el.scrollTop - el.clientHeight < 200) {
+      setVisibleCount(prev => Math.min(prev + 20, filteredHabitats.length));
+    }
+  };
+
+  useEffect(() => { setVisibleCount(20); }, [searchQuery, sortFilter, selectedArea]);
 
   const allHabitatAreas = ["Withered Wastelands", "Bleak Beach", "Rocky Ridges", "Sparkling Skylands", "Palette Town"];
 
@@ -206,9 +216,9 @@ export function HabitatDexPage() {
       </div>
 
       {/* Content — List */}
-      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
+      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto" onScroll={handleScroll}>
         <div className="p-3 space-y-2">
-            {filteredHabitats.map((habitat, index) => {
+            {filteredHabitats.slice(0, visibleCount).map((habitat, index) => {
               const status = getCompletionStatus(habitat.pokemon);
               const isDiscovered = discoveredSet.has(habitat.id);
 
