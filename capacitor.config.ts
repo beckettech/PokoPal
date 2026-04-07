@@ -13,6 +13,13 @@ const config: CapacitorConfig = {
   ios: {
     contentInset: 'never',
   },
+  android: {
+    // Not targeting Android yet
+  },
+  keyboard: {
+    resize: 'none',
+    resizeOnFullScreen: true,
+  },
 };
 
 export default config;
