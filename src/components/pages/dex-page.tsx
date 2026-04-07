@@ -90,6 +90,20 @@ export function DexPage() {
   const [selectedSpecialty, setSelectedSpecialty] = useState<string | null>(null);
   const [friendFilter, setFriendFilter] = useState<"all" | "friends" | "unseen">("all");
   const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(null);
+  const [visibleCount, setVisibleCount] = useState(20);
+
+  // Load more on scroll
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const el = e.currentTarget;
+    if (el.scrollHeight - el.scrollTop - el.clientHeight < 200) {
+      setVisibleCount(prev => Math.min(prev + 20, filteredPokemon.length));
+    }
+  };
+
+  // Reset visible count when filters change
+  useEffect(() => {
+    setVisibleCount(20);
+  }, [searchQuery, selectedRarity, selectedSpecialty, friendFilter]);
 
   // Collect unique areas and specialties
   const allSpecialties = [...new Set(pokemonData.flatMap(p => p.specialties || []))].filter(s => s !== "???").sort();
@@ -416,8 +430,8 @@ export function DexPage() {
       </div>
 
       {/* List */}
-      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto">
-        {filteredPokemon.map((pokemon, listIdx) => {
+      <div className="flex-1 bg-white dark:bg-gray-800 rounded-t-[2rem] overflow-y-auto" onScroll={handleScroll}>
+        {filteredPokemon.slice(0, visibleCount).map((pokemon, listIdx) => {
           const isFriend = capturedPokemon.includes(pokemon.id);
           const isEven = listIdx % 2 === 0;
           // Find habitat images from habitatsData
