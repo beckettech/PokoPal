@@ -116,10 +116,12 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    background-color: var(--page-bg, transparent);
+  }
   body {
     @apply bg-background text-foreground;
     overscroll-behavior: none;
-    background-color: var(--page-bg, transparent);
   }
 }
 

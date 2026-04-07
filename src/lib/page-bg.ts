@@ -22,6 +22,7 @@ const PAGE_COLORS: Record<string, string> = {
 export function setPageBackground(pageId: string) {
   if (typeof document === 'undefined') return;
   const color = PAGE_COLORS[pageId] || '#dc2626';
-  document.body.style.setProperty('--page-bg', color);
-  document.body.style.backgroundColor = color;
+  document.documentElement.style.setProperty('--page-bg', color);
+  // Only set html background (status bar area), not body (to avoid colored bar behind keyboard)
+  document.documentElement.style.backgroundColor = color;
 }
