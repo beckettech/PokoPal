@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Pokopia Guide",
-  description: "Privacy policy for the Pokopia Guide app.",
+  title: "Privacy Policy - PokoPal",
+  description: "Privacy policy for the PokoPal app.",
 };
 
 export default function PrivacyPolicy() {
@@ -32,7 +32,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-lg font-semibold text-gray-900 mb-2">2. How We Use Your Information</h2>
             <ul className="list-disc list-inside space-y-1">
-              <li>To provide and maintain the Pokopia Guide app</li>
+              <li>To provide and maintain the PokoPal app</li>
               <li>To process your account and provide customer support</li>
               <li>To improve the app through anonymous usage analytics</li>
               <li>To send you important updates about the app (rarely, and only if necessary)</li>

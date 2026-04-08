@@ -26,7 +26,7 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Pokopia Guide - Your Pokémon Companion",
+  title: "PokoPal - Your Pokémon Companion",
   description: "A comprehensive Pokémon guide and companion app for trainers. Browse Pokédex, manage inventory, explore maps, and more!",
   keywords: ["Pokemon", "Pokopia", "Pokédex", "Guide", "Companion", "Trainer", "Gaming"],
   authors: [{ name: "Pokopia Team" }],
@@ -37,13 +37,13 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   openGraph: {
-    title: "Pokopia Guide",
+    title: "PokoPal",
     description: "Your ultimate Pokémon companion app",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pokopia Guide",
+    title: "PokoPal",
     description: "Your ultimate Pokémon companion app",
   },
 };

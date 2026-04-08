@@ -1,4 +1,4 @@
-// Haptic feedback utility for Pokopia Guide
+// Haptic feedback utility for PokoPal
 // Uses web-haptics package (Vibration API + AudioContext fallback)
 
 import { WebHaptics } from "web-haptics";

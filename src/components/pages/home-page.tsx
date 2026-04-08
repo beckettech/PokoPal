@@ -1,6 +1,6 @@
 'use client'
 
-// Pokopia Guide - Main Home Page
+// PokoPal - Main Home Page
 import { useAppStore } from "@/lib/store";
 import { MobileAdBanner } from "@/components/MobileAdBanner";
 import { useState, useEffect } from "react";

@@ -148,7 +148,7 @@ export async function POST(req: NextRequest) {
         "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
         "Content-Type": "application/json",
         "HTTP-Referer": process.env.NEXT_PUBLIC_SITE_URL || "https://pokopal.com",
-        "X-Title": "Pokopia Guide - Dexter Chat",
+        "X-Title": "PokoPal - Dexter Chat",
       },
       body: JSON.stringify({
         model: MODEL,

@@ -357,7 +357,7 @@ export function AccountPage() {
                     setTimeout(() => { if (tapCount.current < 5) tapCount.current = 0; }, 2000);
                   }}
                 >
-                  Pokopia Guide v1.0.0
+                  PokoPal v1.0.0
                 </span>
               </div>
               <div className="flex items-center justify-between">

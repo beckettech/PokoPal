@@ -10,7 +10,7 @@ export async function sendEmail({
   to,
   subject,
   html,
-  from = 'Pokopia Guide <noreply@pokopal.com>',
+  from = 'PokoPal <noreply@pokopal.com>',
 }: {
   to: string;
   subject: string;
@@ -51,7 +51,7 @@ export async function sendBugReport({
     to: 'becketthoefling@gmail.com',
     subject: `🐛 Bug Report: ${page || 'Unknown Page'}`,
     html: `
-      <h2>Pokopia Guide Bug Report</h2>
+      <h2>PokoPal Bug Report</h2>
       <p><strong>Page:</strong> ${page || 'Unknown'}</p>
       <p><strong>User:</strong> ${userId || 'Not logged in'}</p>
       <p><strong>Version:</strong> ${appVersion || 'Unknown'}</p>
@@ -65,10 +65,10 @@ export async function sendBugReport({
 export async function sendWelcomeEmail({ email, handle }: { email: string; handle: string }) {
   return sendEmail({
     to: email,
-    subject: 'Welcome to Pokopia Guide! 🎮',
+    subject: 'Welcome to PokoPal! 🎮',
     html: `
       <div style="font-family: sans-serif; max-width: 480px; margin: 0 auto;">
-        <h1 style="color: #EF4444;">🎮 Welcome to Pokopia Guide!</h1>
+        <h1 style="color: #EF4444;">🎮 Welcome to PokoPal!</h1>
         <p>Thanks for joining — your ultimate Pokémon Pokopia companion!</p>
         <h3>What you can do:</h3>
         <ul>
@@ -80,7 +80,7 @@ export async function sendWelcomeEmail({ email, handle }: { email: string; handl
           <li>🎭 View all forms, rarities & specialties</li>
         </ul>
         <p style="color: #666;">More features coming soon — stay tuned!</p>
-        <p style="color: #999; font-size: 12px;">Pokopia Guide — <a href="https://pokopal.com">pokopal.com</a></p>
+        <p style="color: #999; font-size: 12px;">PokoPal — <a href="https://pokopal.com">pokopal.com</a></p>
       </div>
     `,
   });
