@@ -165,7 +165,7 @@ export function CoinShopPage() {
       </AnimatePresence>
 
       {/* Header */}
-      <div className="pt-8 pb-1 px-4">
+      <div className="pt-2 pb-1 px-4 pt-safe-top">
         <div className="flex items-center justify-between mb-2">
           <motion.button
             onClick={() => setCurrentPage("home")}
