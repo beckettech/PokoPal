@@ -50,7 +50,7 @@ export function ItemsPage() {
   const [itemsData, setItemsData] = useState<ItemCategory[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [ownedFilter, setOwnedFilter] = useState<"all" | "owned" | "unowned">("all");
   const [selectedItem, setSelectedItem] = useState<Item | null>(null);
   const [recipes, setRecipes] = useState<Record<string, Recipe>>({});
@@ -72,10 +72,6 @@ export function ItemsPage() {
           return 0;
         });
         setItemsData(sorted);
-        // Default to first category
-        if (sorted.length > 0 && !selectedCategory) {
-          setSelectedCategory(sorted[0].slug);
-        }
         setLoading(false);
       })
       .catch(err => {
@@ -119,7 +115,7 @@ export function ItemsPage() {
   // Filter items by category, search, and owned status
   const filteredItems = useMemo(() => {
     return allItems.filter(item => {
-      const matchesCategory = selectedCategory === item.categorySlug;
+      const matchesCategory = selectedCategory === "all" || selectedCategory === item.categorySlug;
       const matchesSearch = !searchQuery || 
         item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -200,6 +196,16 @@ export function ItemsPage() {
 
         {/* Category Tabs */}
         <div className="flex gap-1.5 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide">
+          <button
+            onClick={() => setSelectedCategory("all")}
+            className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
+              selectedCategory === "all"
+                ? "bg-white dark:bg-gray-800 text-orange-600"
+                : "bg-white/20 text-white"
+            }`}
+          >
+            📦 All
+          </button>
           {itemsData.map(cat => {
             const icon = CATEGORY_ICONS[cat.slug] || "📦";
             const count = cat.items.length;
