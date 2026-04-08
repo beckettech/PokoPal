@@ -369,7 +369,7 @@ export function DreamIslandsPage() {
                         {island.rareItems.length > 0 && (
                           <div>
                             <p className={`text-[10px] font-bold uppercase tracking-wide mb-2 ${island.textColor} dark:text-gray-300 opacity-70`}>
-                              ✨ Rare Finds
+                              📦 Common Finds
                             </p>
                             <div className="flex gap-2 flex-wrap">
                               {island.rareItems.map(item => (
