@@ -298,6 +298,9 @@ export function CoinShopPage() {
               Use coins to chat with your Pokopia assistant!
             </p>
 
+            {/* Hide coin purchases on iOS — only one IAP allowed (Remove Ads) */}
+            {!isNative && (
+            <>
             <div className="grid grid-cols-2 gap-2">
               {coinPackages.map((pkg) => {
                 const Icon = pkg.icon;
@@ -346,6 +349,7 @@ export function CoinShopPage() {
                 );
               })}
             </div>
+            </>)}
           </div>
         </div>
       </div>
