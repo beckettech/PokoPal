@@ -115,11 +115,14 @@ pokopia-guide/
 │   │   └── privacy/      # Privacy policy
 │   ├── components/       # React components
 │   │   └── pages/        # Page-level components
-│   ├── lib/              # Utilities, store, AI, scrapers
+│   ├── lib/              # Utilities, store, AI helpers
 │   └── data/             # Game data JSON files
+├── scrapers/             # Data scraping scripts
+├── scripts/              # Build & utility scripts
 ├── public/               # Static assets (sprites, habitats, maps)
-├── screenshots/          # App screenshots for README
-└── ios/                  # Capacitor iOS project
+├── screenshots/          # App screenshots
+├── ios/                  # Capacitor iOS project
+└── AppIcons/             # App icon assets
 ```
 
 ---

@@ -55,3 +55,10 @@ data/reports.json
 /skills/
 # Mobile build output
 /out/
+
+# More junk
+dev.log
+*.tsbuildinfo
+next-env.d.ts
+Caddyfile
+worklog.md
