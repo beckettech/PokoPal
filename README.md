@@ -5,7 +5,11 @@
   <img src="https://img.shields.io/badge/Framework-Next.js%20%2B%20Capacitor-black?style=for-the-badge" />
 </p>
 
-<h1 align="center">PokoPal 🧢</h1>
+<p align="center">
+  <img src="public/logo.png" alt="PokoPal Logo" width="120" />
+</p>
+
+<h1 align="center">PokoPal</h1>
 <p align="center"><strong>The companion app for Pokémon Pokopia on Nintendo Switch</strong></p>
 <p align="center">Track your collection • Build habitats • Chat with AI • Share your island</p>
 
