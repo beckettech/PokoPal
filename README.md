@@ -124,7 +124,7 @@ pokopia-guide/
 
 ---
 
-## 💰 Monetization
+## 💰 Monetization Plan
 
 - **Free tier:** Full app with ads (Google AdSense)
 - **Premium:** Remove ads via subscription or one-time purchase (RevenueCat)
