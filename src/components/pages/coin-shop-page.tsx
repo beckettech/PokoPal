@@ -89,17 +89,16 @@ export function CoinShopPage() {
   };
 
   const handleRemoveAds = async () => {
-    const result = await purchaseRemoveAds(
-      () => {
-        setPremium(true);
-        setShowSuccess(true);
-        setTimeout(() => setShowSuccess(false), 2000);
-      },
-      (err) => {
-        setShowError(err);
-        setTimeout(() => setShowError(null), 3000);
-      }
-    );
+    const result = await purchaseRemoveAds();
+    if (result.success) {
+      setPremium(true);
+      useAppStore.getState().set((s) => { s.user.adsRemoved = true; });
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 2000);
+    } else if (result.error !== 'Cancelled') {
+      setShowError(result.error || 'Purchase failed');
+      setTimeout(() => setShowError(null), 3000);
+    }
   };
 
   const handleRestore = async () => {

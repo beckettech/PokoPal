@@ -12,7 +12,6 @@ const nextConfig: NextConfig = {
     turbopack: {
       resolveAlias: {
         '@capacitor-community/admob': './src/lib/empty-module.ts',
-        '@revenuecat/purchases-capacitor': './src/lib/empty-module.ts',
       },
     },
   } : {}),

@@ -32,15 +32,11 @@ export function AccountPage() {
   const handleRestorePurchases = async () => {
     setIsRestoring(true);
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      restorePurchases();
-      try {
-        const { Purchases } = await import(/* webpackIgnore: true */ '@revenuecat/purchases-capacitor');
-        const { customerInfo } = await Purchases.getCustomerInfo();
-        const hasPro = customerInfo.activeSubscriptions.includes('pro');
-        if (hasPro) setPremium(true);
-      } catch (e) {
-        console.log('RevenueCat not available');
+      const { restorePurchases: rcRestore } = await import('@/lib/purchases');
+      const result = await rcRestore();
+      if (result.success && result.adsRemoved) {
+        setPremium(true);
+        useAppStore.getState().set((s) => { s.user.adsRemoved = true; });
       }
     } finally {
       setIsRestoring(false);
