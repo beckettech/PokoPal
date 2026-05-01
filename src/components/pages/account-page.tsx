@@ -305,9 +305,21 @@ export function AccountPage() {
               ) : (
                 <>
                   <button
-                    onClick={() => {
-                      const link = process.env.NEXT_PUBLIC_STRIPE_LINK_NOADS || '#';
-                      if (link !== '#') window.open(link, '_blank');
+                    onClick={async () => {
+                      try {
+                        const { purchaseRemoveAds } = await import('@/lib/purchases');
+                        const result = await purchaseRemoveAds();
+                        if (result.success) {
+                          setPremium(true);
+                          useAppStore.getState().set((s) => { s.user.adsRemoved = true; });
+                        } else if (result.error !== 'Cancelled') {
+                          alert('Purchase failed: ' + result.error);
+                        }
+                      } catch {
+                        // Fallback: open Stripe link on web
+                        const link = process.env.NEXT_PUBLIC_STRIPE_LINK_NOADS || '#';
+                        if (link !== '#') window.open(link, '_blank');
+                      }
                     }}
                     className="w-full py-3 bg-gradient-to-r from-amber-400 to-orange-400 text-white font-bold rounded-xl active:scale-95 transition-transform"
                   >

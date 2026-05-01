@@ -49,6 +49,14 @@ export default function Home() {
     setPageBackground(currentPage);
   }, [currentPage]);
 
+  // Configure RevenueCat on native
+  useEffect(() => {
+    (async () => {
+      const { isNativePlatform, configurePurchases } = await import('@/lib/purchases');
+      if (await isNativePlatform()) configurePurchases();
+    })();
+  }, []);
+
   // Track page visits for notification badges
   if (currentPage !== "home") {
     markPageVisited(currentPage);
