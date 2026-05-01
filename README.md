@@ -13,6 +13,13 @@
 <p align="center"><strong>The companion app for Pokémon Pokopia on Nintendo Switch</strong></p>
 <p align="center">Track your collection • Build habitats • Chat with AI • Share your island</p>
 
+<p align="center">
+  <a href="https://pokopal.com">
+    <img src="https://img.shields.io/badge/Web%20App-Live%20Now-brightgreen?style=for-the-badge&logo=globe" />
+  </a>
+  <img src="https://img.shields.io/badge/App%20Store-Coming%20Soon-orange?style=for-the-badge&logo=apple" />
+</p>
+
 ---
 
 ## ✨ Features
